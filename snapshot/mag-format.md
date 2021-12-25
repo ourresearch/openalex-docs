@@ -1,0 +1,2 @@
+# MAG format
+
