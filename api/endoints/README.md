@@ -1,8 +1,6 @@
 # Endoints
 
-## Overview
-
-The OpenAlex API is a free way to read and use our data. There's no registration required. It's read-only; there are only `GET` methods. There are five main types of API endpoints, one for each type of entity in OpenAlex:
+There are five main types of API endpoints, one for each type of entity in OpenAlex:
 
 * Works (papers, books, datasets, etc)
 * Authors (people who create Works)
@@ -10,15 +8,15 @@ The OpenAlex API is a free way to read and use our data. There's no registration
 * Institutions (universities and other orgs that employ Authors)
 * Concepts (things that Works are about)
 
-## Endpoint types
+For each type of entity, there are two endpoints: a singleton endpoint and a list endpoint.
 
-### Singleton endpoints
+## Singleton endpoints
 
 There's one singleton endpoint for each type of entity. Each singleton endpoint gets you exactly one specific entity, based on its ID. You call it using a URL like this: `/:entity_name/:entity_id.`&#x20;
 
 For example, to get the Venue whose ISSN is 2167-8359, you would call [`https://api.openalex.org/venues/issn:2167-8359`](https://api.openalex.org/venues/issn:2167-8359)(for more on how to format IDs, see below). Singleton endpoints don't have any paging or support any query parameters. You just give us an ID, and we give you an entity.
 
-### List endpoints
+## List endpoints
 
 List endpoints are more complicated and more powerful. Each list endpoint gives you a list of entities that you can filter, search, sort, and group. You call it using a URL like `/:entity_name`, and then adding parameters.&#x20;
 
@@ -26,15 +24,15 @@ For example, if you wanted to see  <mark style="color:red;">**example here**</ma
 
 Here are the parameters that you can add:
 
-#### filter
+### filter
 
-#### search
+### search
 
-#### sort
+### sort
 
-#### group\_by
+### group\_by
 
-#### page
+### page
 
 ####
 

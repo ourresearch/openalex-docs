@@ -6,6 +6,8 @@
 
 the works object is blah blah
 
+example: [https://api.openalex.org/works/W2741809807](https://api.openalex.org/works/W2741809807)&#x20;
+
 ### `id`
 
 _String:_ The OpenAlex ID for this work.
@@ -31,6 +33,16 @@ _String:_ The title of this work.
 ```json
 title: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
 ```
+
+### `display_name`
+
+_String:_ Exactly the same as Work.title. It's included as a bit of [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic\_sugar): all the other types of entities have a `display_name` property, so it'd be weird for the Work to not have one.
+
+```json
+title: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
+```
+
+``
 
 ### `publication_year`
 
@@ -60,19 +72,26 @@ _Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/
 
 * `openalex` (_String_; The OpenAlex ID, which is also found at [`Work.id`](work.md#id))
 * `doi` (_String_; The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). This is most likely, but not necessarily, a [Crossref](https://www.crossref.org) DOI)
+* `mag`  (_Integer_; the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `pmid` (_String_; The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
 
 ```json
 ids: {
     openalex: "https://openalex.org/W2741809807",
     doi: "https://doi.org/10.7717/peerj.4375",
+    mag: 2741809807,
     pmid: "https://pubmed.ncbi.nlm.nih.gov/29456894"
 }
 ```
 
-### venue
+### `host_venue`
 
-_Object:_ This work's publication venue--generally a journal, but could also be a preprint repository like [ArXiv](https://arxiv.org), or some other place that publishes works.&#x20;
+_Object:_ The venue where you can get this work. Generally that means a journal, but could also be a preprint repository like [ArXiv](https://arxiv.org), or some other place that publishes works. This is formatted as a dehydrated Venue object, and you can see the Venue docs for more info on each property. It also has a few additional properties that are specific to this particular work at this particular venue:
+
+* `url` (_String_): the URL where this work lives
+* `is_oa` (_Boolean_): `True` if you can read this work at this URL for free, without registration.
+* `version` (_String_): the URL
+* `license` (_String_): the URL
 
 @todo finish this one.
 
