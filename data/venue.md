@@ -128,19 +128,21 @@ Each listed concept is an abridged Concept object, with one additional attribute
 ```json
 x_concepts: [
     {
-        year: 2021,
-        works_count: 4211,
-        cited_by_count: 120939
+        id: "https://openalex.org/C86803240",
+        wikidata: null,
+        display_name: "Biology",
+        level: 0,
+        score: 86.7
+    },
+    {
+        id: "https://openalex.org/C185592680",
+        wikidata: null,
+        display_name: "Chemistry",
+        level: 0,
+        score: 51.4
     },
     
-    
-    {
-        id: "https://openalex.org/C17744445",
-        wikidata: null,
-        display_name: "Political science",
-        level: 0,
-        score: 78.9
-    }
+    // and so forth...
 ]
 ```
 
@@ -160,6 +162,7 @@ counts_by_year: [
     works_count: 4363,
     cited_by_count: 119531
     },
+    
     // and so forth....
 ]
 ```
