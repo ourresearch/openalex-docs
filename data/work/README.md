@@ -86,15 +86,11 @@ ids: {
 
 ### `host_venue`
 
-_Object:_ The venue where you can get this work. Generally that means a journal, but could also be a preprint repository like [ArXiv](https://arxiv.org), or some other place that publishes works. This is formatted as a dehydrated Venue object, and you can see the Venue docs for more info on each property. It also has a few additional properties that are specific to this particular work at this particular venue:
-
-* `url` (_String_): the URL where this work lives
-* `is_oa` (_Boolean_): `True` if you can read this work here for free, without registration.
-* `version` (_String_): The version of the work as hosted at this venue.
-* `license` (_String_): The license of the work as hosted at this venue.
+_Object:_ A [HostVenue](hostvenue.md) object describing how and where this work is being hosted online.
 
 ```json
 host_venue: {
+    // this top stuff is the same as a dehydreated Venue object
     id: "https://openalex.org/V1983995261",
     issn_l: "2167-8359",
     issn: [
@@ -103,6 +99,8 @@ host_venue: {
     display_name: "PeerJ",
     publisher: "PeerJ",
     type: "journal",
+    
+    // this stuff is extra, and relates this work at this venue.
     url: "https://doi.org/10.7717/peerj.4375",
     is_oa: null,
     version: null,
@@ -112,89 +110,64 @@ host_venue: {
 
 
 
-### `url`
+### `type`
 
-_String:_ The best URL where you can find this work.
+_String:_ The type or genre of the work.&#x20;
 
-The "best" URL is generally the one closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record). Other URLs for the work (often preprints or author manuscripts) are listed in the [alternate\_locations](./#alternate\_locations) field.
+This field uses Crossref's "type" controlled vocabulary; you can see all possible values via the Crossref api here: [https://api.crossref.org/types](https://api.crossref.org/types).&#x20;
+
+Where possible, we just pass along Crossref's `type` value for each work. When that's impossible (eg the work isn't in Crossref), we do our best to figure out the `type` ourselves. Unfortunately the accuracy of Crossref's data for this isn't great, and ours isn't better. We're working to develop better type classification.
 
 ```json
-url: "https://doi.org/10.7717/peerj.4375"
+type: "journal-article"
 ```
 
-### `genre`
+### `open_access`
 
-_String:_ The genre of the work--for instance, `journal-article`, `monograph`, `dataset`, etcetera.&#x20;
-
-These are largely sourced from [Crossref](https://api.crossref.org/swagger-ui/index.html#/Types), with others coming from MAG. Unfortunately the accuracy of this openly-available genre metadata is not great, and so we're working to develop better genre classification.
+_Object:_ Information about the access status of this work, as an [OpenAccess object](openaccess.md).
 
 ```json
-genre: "journal-article"
+open_access: {
+    is_oa: true,
+    oa_status: "gold",
+    oa_url: "https://peerj.com/articles/4375.pdf"
+},
 ```
 
-### `is_oa`
+### `authorships`
 
-_Boolean:_ `True` if this work is Open Access (OA).&#x20;
-
-There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in. You can use the `alternate_locations` and `oa_status` fields to narrow your results further, accommodating any definition of OA you like.
+_List:_ List of [Authorship objects](authorship.md), each representing an author and their institution.&#x20;
 
 ```json
-is_oa: true
-```
-
-### `oa_status`
-
-_String:_ The Open Access (OA) status of this work. Possible values are:
-
-* **`gold`**: Published in an OA journal that is indexed by the [DOAJ](https://doaj.org).
-* **`green`**: Toll-access on the publisher landing page, but there is a free copy in an [OA repository](https://en.wikipedia.org/wiki/Open-access\_repository).
-* **`hybrid`**: Free under an [open license](https://support.unpaywall.org/support/solutions/articles/44002063718-what-is-an-oa-license-) in a toll-access journal.
-* **`bronze`**: Free to read on the publisher landing page, but without any identifiable license.
-* **`closed`**: All other articles.
-
-```json
-oa_status: "gold"
-```
-
-### oa\_url
-
-_String:_ The best Open Access (OA) URL for this work.&#x20;
-
-Although there are [many ways to define OA](https://peerj.com/articles/4375/#literature-review), in this context an OA URL is one where you can read the fulltext of this work without needing to pay money or log in. The "best" such URL is the one closest to the version of record.&#x20;
-
-This URL might be a direct link to a PDF, or it might be to a landing page that links to the free PDF
-
-The value of `Work.oa_status` is related to the values of Work..
-
-* If `Work.oa_status` is `gold`, `hybrid`, or `bronze` than `Work.oa_url` will be the same as `Work.url`, and `Work.is_oa` will be `True.`
-* If `Work.oa_status` is `green`, than `Work.oa_url` will be different from `Work.url`.
-* If `Work.oa_status` is `closed`, `then` `Work.oa_url` will be `null`.
-
-some cases the `Work.oa_url` is the same as `Work.url`--for instance, if the work is published as In other cases, `Work.url` may point to a toll-access page, while `Work.oa_url` points to an OA preprint somewhere else.&#x20;
-
-If `Work.is_oa` is False, then `Work.oa_url` will be `null`.
-
-```json
-oa_url: "https://peerj.com/articles/4375.pdf"
-```
-
-### authorships
-
-_List:_ List of Authorship objects, each representing an author and their institution.&#x20;
-
-### `references_count`
-
-_Integer:_ The number of references from this work. References are citations that point _from_ this work _to_ other works.
-
-```json
-references_count: 34
+authorships: [
+    // first authorship object:
+    {
+        author_position: "first",
+        author: {
+            id: "https://openalex.org/A1969205032",
+            display_name: "Heather A. Piwowar",
+            orcid: "https://orcid.org/0000-0003-1613-5981"
+        },
+        institutions: [
+            {
+                id: null,
+                display_name: "Impactstory, Sanford, NC, USA",
+                ror: null,
+                country_code: null,
+                type: null
+            }
+        ]
+    },
+    
+    // more authorship objects go here, omited for space.
+]
 ```
 
 
 
 ### `cited_by_count`
 
-_Integer:_ The number of citations to this work. Citations point _from_ other works _to_ this work.
+_Integer:_ The number of citations to this work. These are the times that other works have cited this work: Other works ➞ This work.
 
 ```json
 cited_by_count: 367
@@ -202,7 +175,7 @@ cited_by_count: 367
 
 ### `biblio`
 
-_Object:_ Old-fashioned bibliographic info for this work, mostly useful only in citation/reference contexts:
+_Object:_ Old-fashioned bibliographic info for this work. This is mostly useful only in citation/reference contexts. These are all strings because sometimes you'll get fun values like "Spring" and "Inside cover."
 
 * `volume` (_String_)
 * `issue` (_String_)

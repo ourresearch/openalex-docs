@@ -21,6 +21,7 @@
   * [📄 Work](data/work/README.md)
     * [Authorship](data/work/authorship.md)
     * [HostVenue](data/work/hostvenue.md)
+    * [OpenAccess](data/work/openaccess.md)
   * [👩 Author](data/author.md)
   * [📚 Venue](data/venue.md)
   * [🏫 Institution](data/institution.md)
