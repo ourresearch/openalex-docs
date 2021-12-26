@@ -195,7 +195,7 @@ biblio: {
 
 _Boolean:_ True if we know this work has been retracted.&#x20;
 
-This field has high precision but low recall. In other words, if `is_retracted = True`, the article is definitely retracted. But if `is_retracted = False`,  it still might be retracted, and we just don't know. This is because unfortunately, the [open sources for retraction data](https://www.crossref.org/blog/encouraging-even-greater-reporting-of-corrections-and-retractions/) aren't currently very comprehensive, and [the more comprehensive ones](https://retractionwatch.com) aren't very open.
+This field has high precision but low recall. In other words, if `is_retracted` is  `true`, the article is definitely retracted. But if `is_retracted` is `False`,  it still might be retracted, but we just don't know. This is because unfortunately, the [open sources for retraction data](https://www.crossref.org/blog/encouraging-even-greater-reporting-of-corrections-and-retractions/) aren't currently very comprehensive, and [the more comprehensive ones](https://retractionwatch.com) aren't sufficiently open for us to use here.
 
 ```json
 is_retracted: false 
@@ -207,7 +207,14 @@ is_retracted: false
 
 _Boolean:_ True if we think this work is [paratext](https://en.wikipedia.org/wiki/Paratext).&#x20;
 
-@todo more explanation of paratext here. see [https://support.unpaywall.org/support/solutions/articles/44001894783-what-does-is-paratext-mean-in-the-api-](https://support.unpaywall.org/support/solutions/articles/44001894783-what-does-is-paratext-mean-in-the-api-)
+In our context, paratext is stuff that's in scholarly venue (like a journal) but is _about the venue_ rather than a scholarly work properly speaking.  Some examples:
+
+* **paratext**: front cover, back cover, table of contents, editorial board listing, issue information,  masthead.
+* **not paratext**: research paper, dataset, lettersto the editor, figure.
+
+Turns out there is a lot of paratext in registries like Crossref. That's not a bad thing...but we've found that it's good to have a way to filter it out.
+
+We determine `is_paratext` algorithmically using title heuristics.&#x20;
 
 ```json
 is_paratext: false 
@@ -215,12 +222,10 @@ is_paratext: false
 
 ### `concepts`
 
-_List:_ List of abbreviated Concept objects. If you're using concepts, we recommend you read their full documentation on the Concepts page, but here's a quick summary:
+_List:_ List of dehydrated [Concept objects](../concept.md).&#x20;
 
-* `id` (_String_): The OpenAlex ID for this concept.
-* `wikidata` (_String_): The Wikidata URL for this concept.
-* `display_name` (_String_): The name of the concept.
-* `level` (_Integer_): This concept's level on the concept tree. Root concepts are Level 0 (eg: `Biology`). Level 1 concepts (eg: `Microbiology`) are children of level 0, and so forth.&#x20;
+Each Concept object in the list also has one additional property:
+
 * `score` (_Float_): The strength of the connection between the work and this concept (higher is stronger).
 
 ```json
@@ -267,44 +272,38 @@ mesh: [
 
 ``
 
-### `alternate_locations`
+### `alternate_host_venues`
 
-_List:_ List of objects describing other places you can find this work. If you're using concepts, we recommend you read their full documentation on the Concepts page, but here's a quick summary:
-
-* `url` (_String_): Where you can find the article. This might go directly to a PDF, or to a landing page where you can get the PDF.
-* `is_oa` (_Boolean_): `True` if you can read this work at this location without needing to pay or log in.
-* `version` (_String_): @todo document the version field.
-* `license` (_String_): The reuse license (if any) applied to the work at this location.&#x20;
-* `venue_id` (_String_): The OpenAlex ID for the [Venue](../venue.md) that hosts this location.
-* is\_best @todo are we keeping this or not?
-
-@todo update this with objects that don't have these nulls
+_List:_ List of [HostVenue](hostvenue.md) objects describing other places this work lives, beside the main one (shown in [`Work.host_venue`](./#host\_venue)).&#x20;
 
 ```json
-concepts: [
+alternate_host_venues: [
     {
-        url: "https://papyrus.bib.umontreal.ca/xmlui/bitstream/1866/23242/1/peerj-06-4375.pdf",
+        id: null,
+        display_name: null,
+        type: "repository",
+        url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5815332",
         is_oa: true,
-        version: "submittedVersion",
-        license: "cc-by",
-        venue_id: null,
-        is_best: null
+        version: "publishedVersion",
+        license: null
     },
     {
-        url: "https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1143&context=scholcom",
+        id: null,
+        display_name: "Simon Fraser University - Summit",
+        type: "repository",
+        url: "http://summit.sfu.ca/system/files/iritems1/17691/peerj-4375.pdf",
         is_oa: true,
         version: "submittedVersion",
-        license: "cc-by",
-        venue_id: null,
-        is_best: null
+        license: "cc-by"
     },
+    // others omitted for brevity. 
 
 ]
 ```
 
 ### `referenced_works`
 
-_List:_ OpenAlex IDs for works that this work cites. These are citations that go _from_ this work out _to_ another work.
+_List:_ OpenAlex IDs for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.&#x20;
 
 ```json
 referenced_works: [
@@ -318,7 +317,7 @@ referenced_works: [
 
 ### `related_works`
 
-_List:_ OpenAlex IDs for works related to this work. @todo how is relatedness assigned?
+_List:_ OpenAlex IDs for works related to this work.&#x20;
 
 ```json
 related_works: [
