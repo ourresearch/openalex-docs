@@ -111,21 +111,7 @@ ids: {
 }
 ```
 
-### `last_known_institution`
-
-_Object:_ This author's last known institutional affiliation. In this context "last known" means that we took all the [Works](work/) where this author has an institutional affiliation, sorted them by publication date, and selected the most recent one.
-
-This is an abridged [Institution](institution.md) object, and you can find more documentation on the [Institution](institution.md) page.
-
-```json
-last_known_institution: {
-    id: "https://openalex.org/I114027177",
-    ror: "https://ror.org/0130frc33",
-    display_name: "University of North Carolina at Chapel Hill",
-    country_code: "US",
-    type: "education"
-},
-```
+``
 
 ### `x_concepts`
 
@@ -133,21 +119,21 @@ last_known_institution: {
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.&#x20;
 {% endhint %}
 
-_List:_ The top concepts found in this author's Works. We make this list by simply tallying up what percent of this author's Works have any given concept...the more frequently a concept is found, the higher its score. We then apply a cutoff, so low-scoring concepts don't appear.
+_List:_ The top concepts associated with the works hosted in this venue. We make this list by simply tallying up what percent of this venue's works are tagged any given concept...the more frequently a concept is found, the higher its score. We then apply a cutoff, so low-scoring concepts don't appear.
 
 Each listed concept is an abridged Concept object, with one additional attribute:
 
-* `score` (_Float_): The strength of association between this author and this concept; `100` is the highest.
+* `score` (_Float_): The strength of association between this venue and this concept; `100` is the highest.
 
 ```json
 x_concepts: [
     {
-        id: "https://openalex.org/C41008148",
-        wikidata: null,
-        display_name: "Computer science",
-        level: 0,
-        score: 97.4
+        year: 2021,
+        works_count: 4211,
+        cited_by_count: 120939
     },
+    
+    
     {
         id: "https://openalex.org/C17744445",
         wikidata: null,
@@ -160,28 +146,21 @@ x_concepts: [
 
 ### `counts_by_year`
 
-_List:_ [`Author.works_count`](venue.md#works\_count) and [`Author.cited_by_count`](venue.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many works this author published, and how many times they got cited.&#x20;
-
-Any works or citations older than ten years old aren't included.
+_List:_ [`works_count`](venue.md#works\_count) and [`cited_by_count`](venue.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this venue started hosting, and how many times _any_ work in this venue got cited. **todo clarify**
 
 ```json
 counts_by_year: [
     {
-        year: 2022,
-        works_count: 0,
-        cited_by_count: 1
-    },
-    {
         year: 2021,
-        works_count: 1,
-        cited_by_count: 228
+        works_count: 4211,
+        cited_by_count: 120939
     },
-    ...
     {
-        year: 2012,
-        works_count: 7,
-        cited_by_count: 79
-    }
+        year: 2020,
+    works_count: 4363,
+    cited_by_count: 119531
+    },
+    // and so forth....
 ]
 ```
 
