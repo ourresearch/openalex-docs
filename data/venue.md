@@ -4,6 +4,7 @@ this is intro stuff about venues
 
 * the examples are from: [https://api.openalex.org/venues/v1983995261](https://api.openalex.org/venues/v1983995261)
 * you can get a venue in 3 ways: download, API, and website
+* we say "hosts" not "publishes" because the latter can mean different things.
 
 ### `id`
 
@@ -31,47 +32,83 @@ _List:_ The [ISSNs](https://en.wikipedia.org/wiki/International\_Standard\_Seria
 issn:["2167-8359"]
 ```
 
-### `display_name_alternatives`
+### `display_name`
 
-_List:_ Other ways that we've found this author's name displayed.
+_String:_ The name of the venue.
 
 ```json
-display_name_alternatives: [
-    "Jason R Priem"
-]
+display_name: "PeerJ"
 ```
+
+### `publisher`
+
+_String:_ The name of this venue's publisher. Publisher is a tricky category, as journals often changes publishers, publishers merge, publishers have subsidiaries ("imprints"), and of course no one is consistent in their naming. In the future, we plan to roll out to support a more structured publisher field, but for now it's just strings.
+
+```json
+publisher: "Peerj"
+```
+
+
 
 ### `works_count`
 
-_Integer:_ The number of :page\_facing\_up: [Works](work/) this this author has created.
+_Integer:_ The number of [Works](work/) this this venue hosts.
 
 ```json
-works_count: 38 
+works_count: 20184 
 ```
 
 ### `cited_by_count`
 
-_Integer:_ The total number :page\_facing\_up: [Works](work/) that cite a work this author has created.
+_Integer:_ The total number [Works](work/) that cite a work hosted in this venue.
 
 ```json
-cited_by_count: 38 
+cited_by_count: 133702 
 ```
 
 ``
 
+### `is_oa`
+
+_Boolean:_ **todo**&#x20;
+
+```json
+is_oa: true 
+```
+
+### `is_in_doaj`
+
+_Boolean:_ **todo**&#x20;
+
+```json
+is_in_doaj: true 
+```
+
+
+
+### `homepage_url`
+
+_String:_ **todo**&#x20;
+
+```json
+homepage_url: "http://www.peerj.com/" 
+```
+
+
+
 ### `ids`
 
-_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this `author`, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. the `openalex` ID is the same one you'll find at [Author.id](venue.md#id). All the IDs are strings except for  `mag`, which is an integer.
+_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this venue, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible.&#x20;
 
 ```json
 ids: {
-    openalex: "https://openalex.org/A2208157607",
-    orcid: "https://orcid.org/0000-0001-6187-6610",
-    scopus: "http://www.scopus.com/inward/authorDetails.url?authorID=36455008000&partnerID=MN8TOARS",
-    twitter: null,
-    wikipedia: null,
-    mag: 2208157607
-},
+    openalex: "https://openalex.org/V1983995261",
+    issn_l: "2167-8359",
+    issn: [
+        "2167-8359"
+    ],
+    mag: 1983995261
+}
 ```
 
 ### `last_known_institution`
