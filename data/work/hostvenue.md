@@ -1,10 +1,21 @@
 # HostVenue
 
-The HostVenue object describes a given Work (eg, a paper called "All about science") as hosted at a particular Venue (eg a journal called _The Journal of Science_).&#x20;
+The HostVenue object describes a given Work hosted on a given Venue (you can think of it as a WorkVenue bridging table). It's got two parts:
 
-It tells you some of the properties of the host venue, as well as some of the conditions under which  this work is hosted at that venue.
+1. a dehydrated Venue object, and
+2. some extra stuff about the work.
 
-In more concrete terms, a HostVenue is a dehydrated Venue object, plus these additional properties:
+The extra stuff is important because a given work can be hosted in different ways and in different forms, depending on where it's living.&#x20;
+
+To learn more about the dehydrated Venue object part, see the dehydrated Venue page. To learn more about the other stuff, read below:
+
+### `url`
+
+_String:_ The URL where you can access this work.
+
+```json
+id: "https://openalex.org/W2741809807"
+```
 
 ### `is_oa`
 
