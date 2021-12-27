@@ -5,6 +5,8 @@ this is intro stuff about authors
 * the examples are from: [https://api.openalex.org/authors/a2208157607](https://api.openalex.org/authors/a2208157607)
 * you can get an Author in 3 ways: download, API, and website
 
+## The `Author` object
+
 ### `id`
 
 _String:_ The OpenAlex ID for this author.

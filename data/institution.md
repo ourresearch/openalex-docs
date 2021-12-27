@@ -12,7 +12,7 @@ his is intro stuff about venues
 
 
 
-## The Institution object
+## The `Institution` object
 
 ### `id`
 

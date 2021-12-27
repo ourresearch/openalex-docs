@@ -7,7 +7,7 @@ this is intro stuff about venues
 * you can get a venue in 3 ways: download, API, and website
 * we say "hosts" not "publishes" because the latter can mean different things.
 
-## the Venue object
+## the `Venue` object
 
 ### `id`
 

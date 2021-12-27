@@ -9,6 +9,10 @@ The extra stuff is important because a given work can be hosted in different way
 
 To learn more about the dehydrated Venue object part, see the dehydrated Venue page. To learn more about the other stuff, read below:
 
+
+
+## The `HostVenue` object
+
 ### `url`
 
 _String:_ The URL where you can access this work.
