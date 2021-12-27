@@ -3,8 +3,11 @@
 this is intro stuff about venues
 
 * the examples are from: [https://api.openalex.org/venues/v1983995261](https://api.openalex.org/venues/v1983995261)
+* venues include both journals and repositories
 * you can get a venue in 3 ways: download, API, and website
 * we say "hosts" not "publishes" because the latter can mean different things.
+
+## the Venue object
 
 ### `id`
 
@@ -119,11 +122,9 @@ ids: {
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.&#x20;
 {% endhint %}
 
-_List:_ The top concepts associated with the works hosted in this venue. We make this list by simply tallying up what percent of this venue's works are tagged any given concept...the more frequently a concept is found, the higher its score. We then apply a cutoff, so low-scoring concepts don't appear.
+_List:_ The concepts most frequently applied to works hosted by this venue. Each is represented as a dehydrated Concept object, with one additional attribute:
 
-Each listed concept is an abridged Concept object, with one additional attribute:
-
-* `score` (_Float_): The strength of association between this venue and this concept; `100` is the highest.
+`score` (_Float_): The strength of association between this venue and the listed concept, from 0-100.
 
 ```json
 x_concepts: [

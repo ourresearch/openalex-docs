@@ -1,11 +1,18 @@
 # 🏫 Institution
 
+
+
 his is intro stuff about venues
 
 * the examples are from [https://api.openalex.org/institutions/I114027177](https://api.openalex.org/institutions/I114027177)
 * you can get an institution in 3 ways: download, API, and website
+* where do they come from? scraped from pages
+* rely heavily on ror
+*
 
 
+
+## The Institution object
 
 ### `id`
 
@@ -113,7 +120,7 @@ _Integer:_ The total number [Works](work/) that cite a work created by an author
 cited_by_count: 21199844 
 ```
 
-### ``
+``
 
 ### `cited_by_count`
 
@@ -176,6 +183,58 @@ international: {
 }
 ```
 
+### `associated_institutions`
+
+_List:_  Institution related to this one. Each associated institution is represented as a dehydrated Institution object, with one extra property:
+
+* `relationship` (_String_): The type of relationship between this institution and the listed institution. Possible values: `Parent`, `Child`, and `Related`.
+
+```json
+associated_insitutions: [
+    {
+        id: "https://openalex.org/I2802101240",
+        ror: "https://ror.org/0483mr804",
+        display_name: "Carolinas Medical Center",
+        country_code: "US",
+        type: "healthcare",
+        relationship: "related"
+    },
+    {
+        id: "https://openalex.org/I69048370",
+        ror: "https://ror.org/01s91ey96",
+        display_name: "Renaissance Computing Institute",
+        country_code: "US",
+        type: "education",
+        relationship: "related"
+    },
+    
+    // and so forth....
+]
+```
+
+### `counts_by_year`
+
+_List:_ [`works_count`](institution.md#works\_count) and [`cited_by_count`](institution.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this venue started hosting, and how many times _any_ work in this venue got cited. **todo clarify**
+
+_List:_ The values of [`works_count`](institution.md#works\_count) and [`cited_by_count`](institution.md#cited\_by\_count) for _each_ of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works were affiliated with this institution, and how many times _any_ work affiliated with this institution got cited.
+
+```json
+counts_by_year: [
+    {
+        year: 2022,
+        works_count: 133,
+        cited_by_count: 32731
+    },
+    {
+        year: 2021,
+        works_count: 12565,
+        cited_by_count: 2180827
+    },
+    
+    // and so forth....
+]
+```
+
 
 
 ### `x_concepts`
@@ -184,11 +243,9 @@ international: {
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.&#x20;
 {% endhint %}
 
-_List:_ The top concepts associated with the works hosted in this venue. We make this list by simply tallying up what percent of this venue's works are tagged any given concept...the more frequently a concept is found, the higher its score. We then apply a cutoff, so low-scoring concepts don't appear.
+_List:_ The concepts most frequently applied to works affiliated with this institution. Each is represented as a dehydrated Concept object, with one additional attribute:
 
-Each listed concept is an abridged Concept object, with one additional attribute:
-
-* `score` (_Float_): The strength of association between this venue and this concept; `100` is the highest.
+* `score` (_Float_): The strength of association between this institution and the listed concept, from 0-100.
 
 ```json
 x_concepts: [
@@ -211,46 +268,22 @@ x_concepts: [
 ]
 ```
 
-### `counts_by_year`
-
-_List:_ [`works_count`](institution.md#works\_count) and [`cited_by_count`](institution.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this venue started hosting, and how many times _any_ work in this venue got cited. **todo clarify**
-
-```json
-counts_by_year: [
-    {
-        year: 2021,
-        works_count: 4211,
-        cited_by_count: 120939
-    },
-    {
-        year: 2020,
-    works_count: 4363,
-    cited_by_count: 119531
-    },
-    
-    // and so forth....
-]
-```
-
 
 
 ### `works_api_url`
 
-_String:_ An URL that will get you a list of all this author's works.
+_String:_ An URL that will get you a list of all the works affiliated with this institution.
 
-We express this as an API URL (instead of just listing the works themselves) because sometimes an author's publication list is too long to reasonably fit into a single author object.
+We express this as an API URL (instead of just listing the works themselves) because most institutions have way too many works to reasonably fit into a single return object.
 
 ```json
-works_api_url: "https://api.openalex.org/works?filter=author.id:A2208157607",
+works_api_url: "https://api.openalex.org/works?filter=institution.id:I114027177"
 ```
-
-
 
 ### `updated_date`
 
-_String:_ The last time anything in this author object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
+_String:_ The last time anything in this object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
 
 ```json
-updated_date: "2016-06-24T00:00:00"
+updated_date: "2021-12-23T00:45:53.992803"
 ```
-
