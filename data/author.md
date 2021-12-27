@@ -98,11 +98,9 @@ last_known_institution: {
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.&#x20;
 {% endhint %}
 
-_List:_ The top concepts found in this author's Works. We make this list by simply tallying up what percent of this author's Works have any given concept...the more frequently a concept is found, the higher its score. We then apply a cutoff, so low-scoring concepts don't appear.
+_List:_ The concepts most frequently applied to works created by this author. Each is represented as a dehydrated Concept object, with one additional attribute:
 
-Each listed concept is an abridged Concept object, with one additional attribute:
-
-* `score` (_Float_): The strength of association between this author and this concept; `100` is the highest.
+* `score` (_Float_): The strength of association between this author and the listed concept, from 0-100.
 
 ```json
 x_concepts: [
