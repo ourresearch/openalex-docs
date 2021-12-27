@@ -1,2 +1,5 @@
 # API
 
+* authentication
+* rate limits
+*

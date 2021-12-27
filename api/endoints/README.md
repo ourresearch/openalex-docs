@@ -26,11 +26,25 @@ Here are the parameters that you can add:
 
 ### filter
 
+* you can combine filters and it acts like AND
+* format:
+  * for strings: key:value
+  * for dates and numbers, you can also use key:>value. for dates use iso 8601 format.
+* dot filters
+
 ### search
+
+* only searches the display\_name property
+* searches stemmed and lemmatized
 
 ### sort
 
+* you can sort by anything you can filter by.
+* use sort:desc to sort descending
+
 ### group\_by
+
+* returns a list of groups. here's what a group looks like.
 
 ### page
 
