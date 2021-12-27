@@ -66,13 +66,44 @@ _String:_ A brief description of this concept.
 type: "education"
 ```
 
-### `homepage_url`
+### `works_count`
 
-_String:_ The URL for institution's primary homepage.
+_Integer:_ The number of works tagged with this concept.
 
 ```json
-homepage_url: "http://www.unc.edu/"
+works_count: 3055 
 ```
+
+### `cited_by_count`
+
+_Integer:_ The number citations to works that have been tagged with this concept. Or less formally: the number of citations to this concept.
+
+For example, if there are just two works tagged with this concept and one of them has been cited 10 times, and the other has been cited 1 time, `cited_by_count` for this concept would be `11`.
+
+```json
+cited_by_count: 21199844 
+```
+
+### ``
+
+``
+
+### `ids`
+
+_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this venue, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. They're all strings except for `mag`, which is a long integer.
+
+```json
+ids: {
+    openalex: "https://openalex.org/I114027177",
+    ror: "https://ror.org/0130frc33",
+    grid: "grid.10698.36",
+    wikipedia: "https://en.wikipedia.org/wiki/University%20of%20North%20Carolina%20at%20Chapel%20Hill",
+    wikidata: null,
+    mag: 114027177
+}
+```
+
+
 
 ### `image_url`
 
@@ -89,6 +120,18 @@ _String:_ Same as [`image_url`](concept.md#image\_url-1), but it's a smaller ima
 ```json
 image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/University_of_North_Carolina_at_Chapel_Hill_seal.svg/100px-University_of_North_Carolina_at_Chapel_Hill_seal.svg.png"
 ```
+
+``
+
+### `homepage_url`
+
+_String:_ The URL for institution's primary homepage.
+
+```json
+homepage_url: "http://www.unc.edu/"
+```
+
+### ``
 
 ### `display_name_acronyms`
 
@@ -108,22 +151,6 @@ display_name_alternatives: [
 ]
 ```
 
-### `works_count`
-
-_Integer:_ The number of [Works](work/) created by authors affiliated with this institution. Or less formally: the number of works coming out of this institution.
-
-```json
-works_count: 202704 
-```
-
-### `cited_by_count`
-
-_Integer:_ The total number [Works](work/) that cite a work created by an author affiliated with this institution. Or less formally: the number of citations this institution has collected.
-
-```json
-cited_by_count: 21199844 
-```
-
 ### ``
 
 ### `cited_by_count`
@@ -135,21 +162,6 @@ cited_by_count: 21199844
 ```
 
 
-
-### `ids`
-
-_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this venue, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. They're all strings except for `mag`, which is a long integer.
-
-```json
-ids: {
-    openalex: "https://openalex.org/I114027177",
-    ror: "https://ror.org/0130frc33",
-    grid: "grid.10698.36",
-    wikipedia: "https://en.wikipedia.org/wiki/University%20of%20North%20Carolina%20at%20Chapel%20Hill",
-    wikidata: null,
-    mag: 114027177
-}
-```
 
 
 
