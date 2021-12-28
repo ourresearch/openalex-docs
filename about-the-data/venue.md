@@ -55,7 +55,7 @@ publisher: "Peerj"
 
 ### `works_count`
 
-_Integer:_ The number of [Works](work/) this this venue hosts.
+_Integer:_ The number of [Works](work.md) this this venue hosts.
 
 ```json
 works_count: 20184 
@@ -63,7 +63,7 @@ works_count: 20184
 
 ### `cited_by_count`
 
-_Integer:_ The total number [Works](work/) that cite a work hosted in this venue.
+_Integer:_ The total number [Works](work.md) that cite a work hosted in this venue.
 
 ```json
 cited_by_count: 133702 

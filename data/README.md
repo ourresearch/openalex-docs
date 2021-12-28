@@ -1,5 +1,0 @@
-# Data
-
-include:
-
-* dehydrated objects

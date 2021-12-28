@@ -17,7 +17,7 @@ The ID of the work you want to see. We support these IDs and formats:
 
 ### Returns
 
-* `200`: A [**Work**](../../data/work/) object
+* `200`: A [**Work**](../../about-the-data/work.md) object
 * `404`: We couldn't find any work with that ID
 * `500`: Oops we broke
 

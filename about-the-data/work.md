@@ -72,7 +72,7 @@ publication_date: "2018-02-13"
 
 _Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this work, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. ID namespaces currently include:
 
-* `openalex` (_String_; The OpenAlex ID, which is also found at [`Work.id`](./#id))
+* `openalex` (_String_; The OpenAlex ID, which is also found at [`Work.id`](work.md#id))
 * `doi` (_String_; The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). This is most likely, but not necessarily, a [Crossref](https://www.crossref.org) DOI)
 * `mag`  (_Integer_; the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `pmid` (_String_; The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
@@ -90,7 +90,7 @@ ids: {
 
 ### `host_venue`
 
-_Object:_ A [HostVenue](hostvenue.md) object describing how and where this work is being hosted online.
+_Object:_ A [HostVenue](broken-reference) object describing how and where this work is being hosted online.
 
 ```json
 host_venue: {
@@ -128,7 +128,7 @@ type: "journal-article"
 
 ### `open_access`
 
-_Object:_ Information about the access status of this work, as an [OpenAccess object](openaccess.md).
+_Object:_ Information about the access status of this work, as an [OpenAccess object](broken-reference).
 
 ```json
 open_access: {
@@ -140,7 +140,7 @@ open_access: {
 
 ### `authorships`
 
-_List:_ List of [Authorship objects](authorship.md), each representing an author and their institution.&#x20;
+_List:_ List of [Authorship objects](broken-reference), each representing an author and their institution.&#x20;
 
 ```json
 authorships: [
@@ -226,7 +226,7 @@ is_paratext: false
 
 ### `concepts`
 
-_List:_ List of dehydrated [Concept objects](../concept.md).&#x20;
+_List:_ List of dehydrated [Concept objects](concept.md).&#x20;
 
 Each Concept object in the list also has one additional property:
 
@@ -278,7 +278,7 @@ mesh: [
 
 ### `alternate_host_venues`
 
-_List:_ List of [HostVenue](hostvenue.md) objects describing other places this work lives, beside the main one (shown in [`Work.host_venue`](./#host\_venue)).&#x20;
+_List:_ List of [HostVenue](broken-reference) objects describing other places this work lives, beside the main one (shown in [`Work.host_venue`](work.md#host\_venue)).&#x20;
 
 ```json
 alternate_host_venues: [
@@ -365,4 +365,119 @@ abstract_inverted_index: {
     ...
 }
 ```
+
+
+
+## The `Authorship` object
+
+**This is different from the** [**Author object**](author.md)**.** The Author object represents an author. Instead, the Author_ship_ object represents _the act of authoring_, and so it includes both an Author and a [Work](work.md).
+
+some stuff about the authorship object
+
+
+
+
+
+
+
+## The `HostVenue` object
+
+The HostVenue object describes a given Work hosted on a given Venue (you can think of it as a WorkVenue bridging table). It's got two parts:
+
+1. a dehydrated Venue object, and
+2. some extra stuff about the work.
+
+The extra stuff is important because a given work can be hosted in different ways and in different forms, depending on where it's living.&#x20;
+
+To learn more about the dehydrated Venue object part, see the dehydrated Venue page. To learn more about the other stuff, read below:
+
+### `url`
+
+_String:_ The URL where you can access this work.
+
+```json
+id: "https://openalex.org/W2741809807"
+```
+
+### `is_oa`
+
+_Boolean:_ Set to `true` if the work hosted here can be read for free, without registration.
+
+```json
+id: "https://openalex.org/W2741809807"
+```
+
+### `version`
+
+_String:_ The version of the work, based on the [DRIVER Guidelines versioning scheme.](https://wiki.surfnet.nl/display/DRIVERguidelines/DRIVER-VERSION+Mappings) Possible values are:.
+
+* `PublishedVersion`: The document’s version of record. This is the most authoritative version.
+* `AcceptedVersion`: The document after having completed peer review and being officially accepted for publication. It will lack publisher formatting, but the _content_ should be interchangeable with the that of the `PublishedVersion`.
+* `SubmittedVersion`: the document as submitted to the publisher by the authors, but _before_ peer-review. It's content may differ significantly from that of the accepted article.
+
+```json
+id: "https://openalex.org/W2741809807"
+```
+
+### `license`
+
+_String:_ The license applied to this work at this host.  Most toll-access works don't have an explicit license (they're under "all rights reserved" copyright), so this field generally has content only if `is_oa` is `true`.
+
+```json
+id: "https://openalex.org/W2741809807"
+```
+
+
+
+
+
+## The `OpenAccess` object
+
+### `is_oa`
+
+_Boolean:_ `True` if this work is Open Access (OA).&#x20;
+
+There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in. You can use the `alternate_locations` and `oa_status` fields to narrow your results further, accommodating any definition of OA you like.
+
+```json
+is_oa: true
+```
+
+### `oa_status`
+
+_String:_ The Open Access (OA) status of this work. Possible values are:
+
+* **`gold`**: Published in an OA journal that is indexed by the [DOAJ](https://doaj.org).
+* **`green`**: Toll-access on the publisher landing page, but there is a free copy in an [OA repository](https://en.wikipedia.org/wiki/Open-access\_repository).
+* **`hybrid`**: Free under an [open license](https://support.unpaywall.org/support/solutions/articles/44002063718-what-is-an-oa-license-) in a toll-access journal.
+* **`bronze`**: Free to read on the publisher landing page, but without any identifiable license.
+* **`closed`**: All other articles.
+
+```json
+oa_status: "gold"
+```
+
+### oa\_url
+
+_String:_ The best Open Access (OA) URL for this work.&#x20;
+
+Although there are [many ways to define OA](https://peerj.com/articles/4375/#literature-review), in this context an OA URL is one where you can read the fulltext of this work without needing to pay money or log in. The "best" such URL is the one closest to the version of record.&#x20;
+
+This URL might be a direct link to a PDF, or it might be to a landing page that links to the free PDF
+
+The value of `Work.oa_status` is related to the values of Work..
+
+* If `Work.oa_status` is `gold`, `hybrid`, or `bronze` than `Work.oa_url` will be the same as `Work.url`, and `Work.is_oa` will be `True.`
+* If `Work.oa_status` is `green`, than `Work.oa_url` will be different from `Work.url`.
+* If `Work.oa_status` is `closed`, `then` `Work.oa_url` will be `null`.
+
+some cases the `Work.oa_url` is the same as `Work.url`--for instance, if the work is published as In other cases, `Work.url` may point to a toll-access page, while `Work.oa_url` points to an OA preprint somewhere else.&#x20;
+
+If `Work.is_oa` is False, then `Work.oa_url` will be `null`.
+
+```json
+oa_url: "https://peerj.com/articles/4375.pdf"
+```
+
+###
 

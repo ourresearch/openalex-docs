@@ -106,7 +106,7 @@ display_name_alternatives: [
 
 ### `works_count`
 
-_Integer:_ The number of [Works](work/) created by authors affiliated with this institution. Or less formally: the number of works coming out of this institution.
+_Integer:_ The number of [Works](work.md) created by authors affiliated with this institution. Or less formally: the number of works coming out of this institution.
 
 ```json
 works_count: 202704 
@@ -114,7 +114,7 @@ works_count: 202704
 
 ### `cited_by_count`
 
-_Integer:_ The total number [Works](work/) that cite a work created by an author affiliated with this institution. Or less formally: the number of citations this institution has collected.
+_Integer:_ The total number [Works](work.md) that cite a work created by an author affiliated with this institution. Or less formally: the number of citations this institution has collected.
 
 ```json
 cited_by_count: 21199844 
@@ -124,7 +124,7 @@ cited_by_count: 21199844
 
 ### `cited_by_count`
 
-_Integer:_ The total number [Works](work/) that cite a work created by an author affiliated with this institution. Or less formally: the number of citations this institution has collected.
+_Integer:_ The total number [Works](work.md) that cite a work created by an author affiliated with this institution. Or less formally: the number of citations this institution has collected.
 
 ```json
 cited_by_count: 21199844 

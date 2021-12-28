@@ -47,7 +47,7 @@ display_name_alternatives: [
 
 ### `works_count`
 
-_Integer:_ The number of :page\_facing\_up: [Works](work/) this this author has created.
+_Integer:_ The number of :page\_facing\_up: [Works](work.md) this this author has created.
 
 ```json
 works_count: 38 
@@ -55,7 +55,7 @@ works_count: 38
 
 ### `cited_by_count`
 
-_Integer:_ The total number :page\_facing\_up: [Works](work/) that cite a work this author has created.
+_Integer:_ The total number :page\_facing\_up: [Works](work.md) that cite a work this author has created.
 
 ```json
 cited_by_count: 38 
@@ -80,7 +80,7 @@ ids: {
 
 ### `last_known_institution`
 
-_Object:_ This author's last known institutional affiliation. In this context "last known" means that we took all the [Works](work/) where this author has an institutional affiliation, sorted them by publication date, and selected the most recent one.
+_Object:_ This author's last known institutional affiliation. In this context "last known" means that we took all the [Works](work.md) where this author has an institutional affiliation, sorted them by publication date, and selected the most recent one.
 
 This is an abridged [Institution](institution.md) object, and you can find more documentation on the [Institution](institution.md) page.
 
