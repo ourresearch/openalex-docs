@@ -1,8 +1,8 @@
 # 📄 Work
 
+Works are the product of scholarly effort. i
 
-
-the works object is blah blah
+Works are the core building block of OpenAlex; all the other entities are defined in relationship to works. Because of this, works are also the most complicated entity, with lots of links to other things.
 
 example: [https://api.openalex.org/works/W2741809807](https://api.openalex.org/works/W2741809807)&#x20;
 
