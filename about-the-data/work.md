@@ -232,7 +232,7 @@ is_paratext: false
 
 ### `concepts`
 
-_List:_ List of dehydrated [Concept objects](concept.md).&#x20;
+_List:_ List of `dehydratedConcept` dehydrated [Concept objects](concept.md).&#x20;
 
 Each Concept object in the list also has one additional property:
 

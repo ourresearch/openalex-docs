@@ -242,3 +242,19 @@ _String:_ The last time anything in this concept object changed, expressed as an
 updated_date: "2021-12-25T14:04:30.578837"
 ```
 
+
+
+
+
+
+
+
+
+## The `DehydratedConcept` object
+
+The `DehydratedConcept` is stripped-down [`Concept`](concept.md#the-concept-object) object, with most of its properties removed to save weight. Its only remaining properties are:
+
+* [`id`](concept.md#id)``
+* [`wikidata`](concept.md#wikidata)``
+* [`display_name`](concept.md#display\_name)``
+* [`level`](concept.md#level)``
