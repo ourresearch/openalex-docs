@@ -192,3 +192,20 @@ _String:_ The last time anything in this author object changed, expressed as an 
 updated_date: "2016-06-24T00:00:00"
 ```
 
+
+
+
+
+
+
+
+
+## The `DehydratedVenue` object
+
+The `DehydratedVenue` is stripped-down [`Venue`](venue.md#the-venue-object) object, with most of its properties removed to save weight. Its only remaining properties are:
+
+* [`id`](venue.md#id)``
+* [`issn_l`](venue.md#issn\_l)``
+* [`issn`](venue.md#issn)``
+* [`display_name`](venue.md#display\_name)``
+* ``[`publisher`](venue.md#publisher)``
