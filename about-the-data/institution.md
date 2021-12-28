@@ -287,3 +287,24 @@ _String:_ The last time anything in this object changed, expressed as an [ISO 86
 ```json
 updated_date: "2021-12-23T00:45:53.992803"
 ```
+
+
+
+
+
+
+
+
+
+
+
+## The `DehydratedInstitution` object
+
+The `DehydratedInstitution` is stripped-down [`Institution`](institution.md#the-institution-object) object, with most of its properties removed to save weight. Its only remaining properties are:
+
+* [`id`](institution.md#id)``
+* [`display_name`](institution.md#display\_name)``
+* [`ror`](institution.md#ror)``
+* [`country_code`](institution.md#country\_code)``
+* [`type`](institution.md#type)``
+
