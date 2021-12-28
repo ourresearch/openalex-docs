@@ -172,3 +172,18 @@ _String:_ The last time anything in this author object changed, expressed as an 
 updated_date: "2016-06-24T00:00:00"
 ```
 
+
+
+
+
+
+
+## The Dehydrated`Author` object
+
+The `DehydratedAuthor` is stripped-down [`Author`](author.md#the-author-object) object, with most of its properties removed to save weight. Its only remaining properties are:
+
+* ``[`id`](author.md#id)``
+* [`display_name`](author.md#display\_name)``
+* [`orcid`](author.md#orcid)``
+
+### ``
