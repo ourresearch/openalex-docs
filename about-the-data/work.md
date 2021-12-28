@@ -390,8 +390,6 @@ id: "https://openalex.org/W2741809807"
 
 
 
-``
-
 ### `author`
 
 _String:_ An author of this work, as a dehydrated Author object.
@@ -400,13 +398,38 @@ It's not strictly necessary, because author order is already implicitly recorded
 
 ```json
 author: {
-    id: "https://openalex.org/A1969205032",
-    display_name: "Heather A. Piwowar",
-    orcid: "https://orcid.org/0000-0003-1613-5981"
+    id: "https://openalex.org/A2790141563",
+    display_name: "Juan Pablo Alperin",
+    orcid: "https://orcid.org/0000-0002-9344-7439"
 }
 ```
 
 
+
+### `institutions`
+
+_List:_ The institutional affiliations this author claimed in the context of this work, as dehydrated `Institution` objects.
+
+```json
+institutions: [
+    {
+        id: "https://openalex.org/I18014758",
+        display_name: "Simon Fraser University",
+        ror: "https://ror.org/0213rcc28",
+        country_code: "CA",
+        type: "education"
+    },
+    {
+        id: "https://openalex.org/I209863525",
+        display_name: "Public Knowledge Project",
+        ror: null,
+        country_code: null,
+        type: null
+    }
+]
+```
+
+##
 
 ## The `HostVenue` object
 
