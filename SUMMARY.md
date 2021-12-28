@@ -9,7 +9,7 @@
   * [Get groups of entities](api/get-groups-of-entities.md)
   * [How-to](api/how-to.md)
 * [Snapshot](snapshot/README.md)
-  * [Download the data](snapshot/download-the-data.md)
+  * [Download to your machine](snapshot/download-to-your-machine.md)
   * [Upload to your own database](snapshot/upload-to-your-own-database.md)
   * [MAG format](snapshot/mag-format.md)
 * [About the data](about-the-data/README.md)
