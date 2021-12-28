@@ -96,7 +96,7 @@ ids: {
 
 ### `host_venue`
 
-_Object:_ A [HostVenue](broken-reference) object describing how and where this work is being hosted online.
+_Object:_ A [`HostVenue`](work.md#the-hostvenue-object) object describing how and where this work is being hosted online.
 
 ```json
 host_venue: {
@@ -134,7 +134,7 @@ type: "journal-article"
 
 ### `open_access`
 
-_Object:_ Information about the access status of this work, as an [OpenAccess object](broken-reference).
+_Object:_ Information about the access status of this work, as an [`OpenAccess`](work.md#the-openaccess-object) object.
 
 ```json
 open_access: {
@@ -146,7 +146,7 @@ open_access: {
 
 ### `authorships`
 
-_List:_ List of [Authorship objects](broken-reference), each representing an author and their institution.&#x20;
+_List:_ List of [`Authorship`](work.md#the-authorship-object) objects, each representing an author and their institution.&#x20;
 
 ```json
 authorships: [
@@ -284,7 +284,7 @@ mesh: [
 
 ### `alternate_host_venues`
 
-_List:_ List of [HostVenue](broken-reference) objects describing other places this work lives, beside the main one (shown in [`Work.host_venue`](work.md#host\_venue)).&#x20;
+_List:_ List of [`HostVenue`](work.md#the-hostvenue-object) objects describing other places this work lives, beside the main one (the main one is at [`host_venue`](work.md#host\_venue)).&#x20;
 
 ```json
 alternate_host_venues: [
@@ -371,6 +371,12 @@ abstract_inverted_index: {
     ...
 }
 ```
+
+
+
+
+
+
 
 
 
