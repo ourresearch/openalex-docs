@@ -16,11 +16,15 @@ Together, these make a huge web (or more technically, heterogeneous directed [gr
 
 ## The OpenAlex ID
 
-The OpenAlex ID is the primary key for all entities. Its canonical format is as a URL shaped like this: `https://openalex.org/<OpenAlexID>`. Example: [https://openalex.org/W2741809807](https://openalex.org/W2741809807)
+The OpenAlex ID is the primary key for all entities. Its canonical format is a URL shaped like this: `https://openalex.org/<OpenAlexID>`. Here's a real-world example:&#x20;
 
-Following the URL will take you to the resource that the ID is attached to. By default, the resource will be represented by a webpage. But if you append a `.json` to it, you'll get the same resource in JSON via our REST API.
+``[`https://openalex.org/W2741809807`](https://openalex.org/W2741809807)``
 
-Because OpenAlex was originally launched as a replacement for Microsoft Academic Graph (MAG), OpenAlex IDs are designed to be somewhat backwards-compatible with MAG IDs. For&#x20;
+The resource served by that URL is always the same, but its representation depends on what you ask for. By default, you'll get a webpage. If you [append a `.json` to the ID](https://openalex.org/W2741809807.json), you'll get the same resource but in JSON, via our [API](../api/).
+
+The first letter in the unique part of the ID tells you what kind of entity you've got. In the example above, the unique part of the ID is `W2741809807`; the `W` at the front tells us that this is a work. The other possible first letters are `A` (author), `V` (venue), `I` (institution), and `C` (concept). The IDs are not case-sensitive, so `w2741809807` is just as valid as `W2741809807`.
+
+Because OpenAlex was launched as a replacement for [Microsoft Academic Graph (MAG)](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), OpenAlex IDs are designed to be backwards-compatible with MAG IDs. To find the MAG ID, just take the first letter off the front of the unique part of the ID (so in the example above, the MAG ID is `2741809807`). Of course this won't yield anything useful for entities that don't have a MAG ID.
 
 ## Dehydrated entity objects
 
