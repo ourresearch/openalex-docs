@@ -1,12 +1,16 @@
 # About the data
 
-The OpenAlex dataset is a map of the scholarly communications system, describing entities (nodes) and how they are connected to each other (edges). There are five types of entities:
+## Entity objects
 
-* :page\_facing\_up: [Works](work.md) are papers, books, datasets, etc.
+The OpenAlex dataset describes scholarly _entities_ and how those entities are connected to each other. There are five types of entities:
+
+* :page\_facing\_up: [Works](work.md) are papers, books, datasets, etc; they _cite_ other works
 * :woman: [Authors](author.md) are people who _create_ works
 * :books: [Venues](venue.md) are journals and repositories that _host_ works
 * :school: [Institutions](institution.md) are universities and other orgs that are _affiliated with_ works (via authors)
 * :bulb: [Concepts](concept.md) _tag_ Works with a topic
+
+Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of of hundreds of millions of entities and over a billion connections between them all..
 
 ## License
 
