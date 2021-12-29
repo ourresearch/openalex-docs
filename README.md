@@ -18,5 +18,5 @@ There are three ways to access the OpenAlex dataset:
 * the [API](api/), and
 * the [database snapshot](download-snapshot/).
 
-This documentation has sections for each of these three. Finally, there's a section [about the data itself](about-the-data/), and a [FAQ](faq.md).
+This documentation has sections for each of these three. There are also a section about the [entity objects](about-the-data/) that make up OpenAlex, as well as information [about the data](about-the-data.md) more broadly, and of course a [FAQ](faq.md).
 
