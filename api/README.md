@@ -4,7 +4,7 @@ description: Query the OpenAlex dataset using the magic of The Internet
 
 # API
 
-## Endpoints
+## Entity endpoints
 
 There are five entity endpoints, one for each [entity type](../about-the-data/):
 

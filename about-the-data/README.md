@@ -4,7 +4,7 @@ So far we've talked about ways to access the OpenAlex data. Now it's time to dis
 
 ## Entity objects
 
-The OpenAlex dataset describes scholarly _entities_ and how those entities are connected to each other. There are five types of entities:
+The OpenAlex dataset describes scholarly _entities_ and how those entities are connected to each other. There are five types of entities, each with its own object:
 
 * :page\_facing\_up: [Works](work.md) are papers, books, datasets, etc; they _cite_ other works
 * :woman: [Authors](author.md) are people who _create_ works
