@@ -16,7 +16,7 @@ So for example, if you want to get the work with the OpenAlex ID `W2741809807`, 
 
 ``[`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)``
 
-That will return a [Work](../entity-objects/work.md) object, describing everything OpenAlex knows about the work with that ID. Naturally any endpoint will accept an OpenAlex ID, but but many external IDs (eg DOI, ISSN) are accepted as well, in several formats.
+That will return a [Work](../about-the-data/work.md) object, describing everything OpenAlex knows about the work with that ID. Naturally any endpoint will accept an OpenAlex ID, but but many external IDs (eg DOI, ISSN) are accepted as well, in several formats.
 
 ## ID formats
 
