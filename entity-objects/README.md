@@ -1,4 +1,4 @@
-# About the data
+# Entity objects
 
 So far we've talked about ways to access the OpenAlex data. Now it's time to discuss the attributes of that data itself.
 
@@ -21,6 +21,14 @@ All OpenAlex data is made available under the [CC0 license](https://creativecomm
 ## Sources
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+## The OpenAlex ID
+
+The OpenAlex ID is the primary key for all entities. Its canonical format is as a URL shaped like this: `https://openalex.org/<OpenAlexID>`. Example: [https://openalex.org/W2741809807](https://openalex.org/W2741809807)
+
+Following the URL will take you to the resource that the ID is attached to. By default, the resource will be represented by a webpage. But if you append a `.json` to it, you'll get the same resource in JSON via our REST API.
+
+Because OpenAlex was originally launched as a replacement for Microsoft Academic Graph (MAG), OpenAlex IDs are designed to be somewhat backwards-compatible with MAG IDs. For&#x20;
 
 ## Dehydrated objects
 
