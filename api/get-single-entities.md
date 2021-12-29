@@ -1,3 +1,7 @@
+---
+description: Get a single entity, based on an ID
+---
+
 # Get single entities
 
-* returns a single entity, based on an id
+The five entity endpoint can each give you a single entity, if you feed them a single ID.
