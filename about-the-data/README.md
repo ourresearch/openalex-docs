@@ -1,5 +1,7 @@
 # About the data
 
+So far we've talked about ways to access the OpenAlex data. Now it's time to discuss the attributes of that data itself.
+
 ## Entity objects
 
 The OpenAlex dataset describes scholarly _entities_ and how those entities are connected to each other. There are five types of entities:
