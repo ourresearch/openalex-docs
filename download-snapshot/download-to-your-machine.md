@@ -8,20 +8,41 @@ The easiest way to get the files is with the Amazon Web Services Command Line In
 
 You can also browse the snapshot files using the AWS console here: [https://s3.console.aws.amazon.com/s3/buckets/openalex](https://s3.console.aws.amazon.com/s3/buckets/openalex). You need to be logged into an Amazon account to use the console, but it’s still free. The CLI will work without an account.
 
-This command will copy everything in the `openalex` S3 bucket to a local folder named `openalex-snapshot`. It'll take up about 200GB of disk space.
+This shell command will copy everything in the `openalex` S3 bucket to a local folder named `openalex-snapshot`. It'll take up about 200GB of disk space.
 
 ```bash
-aws s3 sync 's3://openalex' 'openalex-snapshot'
+aws s3 sync 's3://openalex' 'openalex-snapshot' --no-sign-request
 ```
 
-\
+You should get a file structure like this (edited for length - there are more objects in the actual bucket):
 
-
-$ aws s3 sync 's3://openalex' openalex-snapshot
-
-
-
-
-
-
+```
+$ tree openalex-snapshot/
+openalex-snapshot/
+├── authors
+│   ├── manifest
+│   └── updated_date=2021-12-28
+│       ├── 0000_part_00.gz
+│       └── 0001_part_00.gz
+├── concepts
+│   ├── manifest
+│   └── updated_date=2021-12-28
+│       ├── 0000_part_00.gz
+│       └── 0001_part_00.gz
+├── institutions
+│   ├── manifest
+│   └── updated_date=2021-12-28
+│       ├── 0000_part_00.gz
+│       └── 0001_part_00.gz
+├── venues
+│   ├── manifest
+│   └── updated_date=2021-12-28
+│       ├── 0000_part_00.gz
+│       └── 0001_part_00.gz
+└── works
+    ├── manifest
+    └── updated_date=2021-12-28
+        ├── 0000_part_00.gz
+        └── 0001_part_00.gz
+```
 
