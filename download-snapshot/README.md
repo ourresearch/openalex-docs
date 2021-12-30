@@ -9,6 +9,8 @@ We’ll assume you’re initializing a fresh snapshot - keeping an existing one 
 
 There’s more than one way to do everything. We’ve tried to pick one reasonable default way to do each step, so if something doesn’t work in your environment or with the tools you have available, let us know.
 
+If you've worked with a dataset like this before, [just the highlights](just-the-highlights.md) may be all you need to get going. If not, we have more detailed instructions for [downloading the data](download-to-your-machine.md) and [getting it into your database](upload-to-your-database/).
+
 
 
 
