@@ -3,7 +3,6 @@
 * [Welcome!](README.md)
 * [Website](website.md)
 * [API](api/README.md)
-  * [Quickstart](api/quickstart.md)
   * [Get single entities](api/get-single-entities.md)
   * [Get lists of entities](api/get-lists-of-entities.md)
   * [Get groups of entities](api/get-groups-of-entities.md)
