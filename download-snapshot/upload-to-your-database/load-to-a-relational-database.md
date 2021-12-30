@@ -28,3 +28,56 @@ CREATE TABLE openalex.concepts (
 );
 ```
 
+But [Concept.related\_concepts](../../about-the-data/concept.md#related\_concepts) isn't so simple. You could store the JSON array intact in a postgres [JSON or JSONB](https://www.postgresql.org/docs/9.4/datatype-json.html) column, but you would lose much of the benefit of a relational database. It would be hard to answer questions about related concepts with more than one degree of separation, for example. So we make a separate table to hold these relationships:
+
+```sql
+CREATE TABLE openalex.concepts_related_concepts (
+    concept_id text,
+    related_concept_id text,
+    score real
+);
+```
+
+We can preserve `score` in this relationship table and look up any other attributes of the [dehydrated](../../about-the-data/#dehydrated-entity-objects) related concepts in the main table `concepts`. Creating indexes on `concept_id` and  `related_concept_id` lets up look up concepts on both sides of the relationship quickly.
+
+## Step 2: Convert the JSON Lines files to CSV
+
+This python script will turn the JSON Lines files you downloaded into CSV files that can be copied to the the tables you created in step 1: [https://gist.github.com/richard-orr/152d828356a7c47ed7e3e22d2253708d](https://gist.github.com/richard-orr/152d828356a7c47ed7e3e22d2253708d)
+
+{% hint style="warning" %}
+The script assumes your downloaded snapshot is in `openalex-snapshot` and you've made a directory `csv-files` to hold the CSV files.
+
+Edit `SNAPSHOT_DIR` and `CSV_DIR` at the top of the script to read or write the files somewhere else.
+{% endhint %}
+
+Copy the script to the directory above your snapshot (if the snapshot is in `/home/yourname/openalex/openalex-snapshot/`, name it something like `/home/yourname/openalex/flatten-openalex-jsonl.py)`
+
+run it like this:
+
+```bash
+mkdir -p csv-files
+python3 flatten-openalex-jsonl.py
+```
+
+You should now have a directory full of nice, flat CSV files:
+
+```
+$ tree csv-files/
+csv-files/
+├── concepts.csv
+├── concepts_ancestors.csv
+├── concepts_counts_by_year.csv
+├── concepts_ids.csv
+└── concepts_related_concepts.csv
+...
+$ cat csv-files/concepts_related_concepts.csv
+concept_id,related_concept_id,score
+https://openalex.org/C41008148,https://openalex.org/C33923547,253.92
+https://openalex.org/C41008148,https://openalex.org/C119599485,153.019
+https://openalex.org/C41008148,https://openalex.org/C121332964,143.935
+...
+```
+
+## Step 3: Load the CSV files to the database
+
+## &#x20;Step 4: Run your queries!
