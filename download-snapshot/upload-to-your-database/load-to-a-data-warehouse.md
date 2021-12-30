@@ -65,7 +65,7 @@ This part of the command may need some explanation:
 
 Bigquery is expecting multiple columns with predefined datatypes (a “schema”). We’re tricking it into accepting a single text column (`--schema 'work:string'`) by specifying [CSV](https://en.wikipedia.org/wiki/Comma-separated\_values) format (`--source_format=CSV`) with a column delimiter that isn’t present in the file (`-F '\t')`  (\t means “tab”).
 
-`bq load` can only handle one file at a time, so you must run this command once per file. But remember that that real dataset will have many more files than this example does, so it's impractical to copy, edit, and rerun the command each time. It's easier to handle all the files in a loop, like this:
+`bq load` can only handle one file at a time, so you must run this command once per file. But remember that the real dataset will have many more files than this example does, so it's impractical to copy, edit, and rerun the command each time. It's easier to handle all the files in a loop, like this:
 
 ```bash
 for data_file in openalex-snapshot/works/*/*.gz;
@@ -79,7 +79,7 @@ done
 
 Do this once per entity type, substituting each entity name for `work`/`works` as needed. When you’re finished, you’ll have five tables that look like this:
 
-![a screenshot of two rows of the works table from the BigQuery console](<../.gitbook/assets/Screen Shot 2021-12-29 at 11.57.21 AM.png>)
+![a screenshot of two rows of the works table from the BigQuery console](<../../.gitbook/assets/Screen Shot 2021-12-29 at 11.57.21 AM.png>)
 
 ## **Step 4: Run your queries!**
 
