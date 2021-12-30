@@ -6,11 +6,18 @@ All OpenAlex data is made available under the [CC0 license](https://creativecomm
 
 ## Sources
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+OpenAlex is not doing this alone! Rather, we're aggregating and standardizing data from a whole bunch of other great projects, like a river fed by many tributaries. Our two most important data sources are [MAG](https://aka.ms/msracad) and [Crossref.](https://www.crossref.org) Other key sources include:
 
-## Coverage
+* [ORCID](https://orcid.org)
+* [ROR](https://ror.org)
+* [DOAJ](https://doaj.org)
+* [Unpaywall](https://unpaywall.org)
+* [Pubmed](https://pubmed.ncbi.nlm.nih.gov)
+* [Pubmed Central](https://www.ncbi.nlm.nih.gov/pmc/)
+* [The ISSN International Centre](https://www.issn.org)
+* Subject-area and institutional repositories from [arXiv](https://arxiv.org) to [Zenodo](https://zenodo.org) and everywhere in between
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 
 ## Reporting bugs
 
