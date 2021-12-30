@@ -7,7 +7,7 @@ If you want to do things with the data that our API can’t do for you, you’ll
 
 We’ll assume you’re initializing a fresh snapshot - keeping an existing one up to date will be covered separately.
 
-There’s more than one way to do everything. We’re tried to pick one reasonable default way to do each step, so if something doesn’t work in your environment or with the tools you have available, let us know.
+There’s more than one way to do everything. We’ve tried to pick one reasonable default way to do each step, so if something doesn’t work in your environment or with the tools you have available, let us know.
 
 
 
