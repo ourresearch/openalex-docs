@@ -11,7 +11,7 @@
   * [Download to your machine](download-snapshot/download-to-your-machine.md)
   * [Upload to your database](download-snapshot/upload-to-your-database/README.md)
     * [Load to a data warehouse](download-snapshot/upload-to-your-database/load-to-a-data-warehouse.md)
-    * [Load to a relational database](download-snapshot/upload-to-your-database/load-to-a-relational-database/README.md)
+    * [Load to a relational database](download-snapshot/upload-to-your-database/load-to-a-relational-database.md)
       * [Postgres schema diagram](download-snapshot/upload-to-your-database/load-to-a-relational-database/postgres-schema-diagram.md)
   * [MAG format](download-snapshot/mag-format.md)
 * [Entity objects](about-the-data/README.md)
