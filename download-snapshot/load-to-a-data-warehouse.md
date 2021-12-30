@@ -77,3 +77,61 @@ do
 done
 ```
 
+Do this once per entity type, substituting each entity name for `work`/`works` as needed. When you’re finished, you’ll have five tables that look like this:
+
+![a screenshot of two rows of the works table from the BigQuery console](<../.gitbook/assets/Screen Shot 2021-12-29 at 11.57.21 AM.png>)
+
+## **Step 4: Run your queries!**
+
+Now you have the all the OpenAlex data in a place where you can do anything you want with it using [BigQuery JSON functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/json\_functions) through [bq query](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_query) or the BigQuery [console](https://console.cloud.google.com/bigquery).&#x20;
+
+Here’s a simple one, extracting the OpenAlex ID and OA status for each work:
+
+```sql
+select 
+    json_value(work, '$.id') as work_id, 
+    json_value(work, '$.open_access.is_oa') as is_oa
+from
+    `openalex-demo.openalex.works`;
+```
+
+It will give you a list of IDs like this:
+
+|                                                                      |       |
+| -------------------------------------------------------------------- | ----- |
+| [https://openalex.org/W2741809807](https://openalex.org/W2741809807) | TRUE  |
+| [https://openalex.org/W1491283979](https://openalex.org/W1491283979) | FALSE |
+| [https://openalex.org/W1491315632](https://openalex.org/W1491315632) | FALSE |
+
+You can run queries like this directly in your shell:
+
+```bash
+bq query \
+--project_id=openalex-demo \
+--use_legacy_sql=false \
+"select json_value(work, '$.id') as work_id, json_value(work, '$.open_access.is_oa') as is_oa from openalex.works;"
+```
+
+But even simple queries are hard to read and edit this way. It’s better to write them in a file than directly on the command line. Here’s an example of a slightly more complex query - finding the author with the most open access works of all time:
+
+```sql
+with work_authorships_oa as (
+   select
+       json_value(work, '$.id') as work_id,
+       json_query_array(work, '$.authorships') as authorships,
+       cast(json_value(work, '$.open_access.is_oa') as BOOL) as is_oa
+   from `openalex-demo.openalex.works`
+), flat_authorships as (
+   select work_id, authorship, is_oa
+   from work_authorships_oa,
+   unnest(authorships) as authorship
+)
+select json_value(authorship, '$.author.id') as author_id
+from flat_authorships
+where is_oa
+group by author_id
+order by count(distinct work_id) desc
+limit 1;
+```
+
+<mark style="color:yellow;">**TODO: update this when the full data is live**</mark> We get one result, [https://openalex.org/A1969205032](https://openalex.org/A1969205032). Checking out [https://api.openalex.org/authors/A1969205032](https://api.openalex.org/authors/A1969205032), we see that this is our own Heather A. Piwowar. Your results may differ slightly when you query the live dataset.
