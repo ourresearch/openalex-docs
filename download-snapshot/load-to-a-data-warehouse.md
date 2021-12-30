@@ -56,5 +56,24 @@ openalex.works \
 ```
 
 {% hint style="info" %}
-Docs: [bq load](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_load)
+See docs: [bq load](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_load)
 {% endhint %}
+
+This part of the command may need some explanation:
+
+> `--source_format=CSV -F '\t' --schema 'work:string'`
+
+Bigquery is expecting multiple columns with predefined datatypes (a “schema”). We’re tricking it into accepting a single text column (`--schema 'work:string'`) by specifying [CSV](https://en.wikipedia.org/wiki/Comma-separated\_values) format (`--source_format=CSV`) with a column delimiter that isn’t present in the file (`-F '\t')`  (\t means “tab”).
+
+`bq load` can only handle one file at a time, so you must run this command once per file. But remember that that real dataset will have many more files than this example does, so it's impractical to copy, edit, and rerun the command each time. It's easier to handle all the files in a loop, like this:
+
+```bash
+for data_file in openalex-snapshot/works/*/*.gz;
+do
+    bq load --source_format=CSV -F '\t' \
+        --schema 'work:string' \
+        --project_id openalex-demo \
+        openalex.works $data_file;
+done
+```
+
