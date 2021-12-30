@@ -1,6 +1,6 @@
 # Just the highlights
 
-If you’ve worked with dataset like this before and have a toolchain picked out, this may be all you need to know. If you want the more detailed steps, start with [download the data](download-to-your-machine.md).
+If you’ve worked with dataset like this before and have a toolchain picked out, this may be all you need to know. If you want the more detailed steps, start with “download the data”.
 
 * All the data is stored in [Amazon S3](https://aws.amazon.com/s3/), in the `openalex` bucket.
 * The bucket contains one prefix (folder) for each entity type: work, author, venue, institution, and concept.
