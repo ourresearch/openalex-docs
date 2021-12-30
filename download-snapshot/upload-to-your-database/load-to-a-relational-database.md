@@ -16,7 +16,7 @@ Running this SQL on your databae (in [psql](https://www.postgresql.org/docs/13/a
 Run it and you'll be set up to follow the next steps. To show you what it's doing, we'll explain some excerpts here, using the [concept](../../about-the-data/concept.md) entity as an example.&#x20;
 
 {% hint style="warning" %}
-SQL in this section isn't anything you need to run. It's part of the schema we already defined above.
+SQL in this section isn't anything additional you need to run. It's part of the schema we already defined in the file above.
 {% endhint %}
 
 The key thing we're doing is "flattening" the nested JSON data. Some parts are easy. [Concept.id](../../about-the-data/concept.md#id) is just a string, so it goes in a text column called "id":
@@ -45,9 +45,13 @@ We can preserve `score` in this relationship table and look up any other attribu
 This python script will turn the JSON Lines files you downloaded into CSV files that can be copied to the the tables you created in step 1: [https://gist.github.com/richard-orr/152d828356a7c47ed7e3e22d2253708d](https://gist.github.com/richard-orr/152d828356a7c47ed7e3e22d2253708d)
 
 {% hint style="warning" %}
-The script assumes your downloaded snapshot is in `openalex-snapshot` and you've made a directory `csv-files` to hold the CSV files.
+This script assumes your downloaded snapshot is in `openalex-snapshot` and you've made a directory `csv-files` to hold the CSV files.
 
 Edit `SNAPSHOT_DIR` and `CSV_DIR` at the top of the script to read or write the files somewhere else.
+{% endhint %}
+
+{% hint style="info" %}
+This script has only been tested using python 3.9.5.
 {% endhint %}
 
 Copy the script to the directory above your snapshot (if the snapshot is in `/home/yourname/openalex/openalex-snapshot/`, name it something like `/home/yourname/openalex/flatten-openalex-jsonl.py)`
@@ -79,5 +83,27 @@ https://openalex.org/C41008148,https://openalex.org/C121332964,143.935
 ```
 
 ## Step 3: Load the CSV files to the database
+
+Now we run one postgres \copy command to load each CSV file to its corresponding table. Each command looks like this:
+
+```
+\copy openalex.concepts from csv-files/concepts.csv csv header
+```
+
+This script will run all the copy commands in the right order: [https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4](https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4)
+
+Copy it to the same place as the python script from step 2 (right above the folder with your CSV files) and run it like this:
+
+{% hint style="info" %}
+Set the environment variable OPENALEX\_SNAPSHOT\_DB to the [connection URI](https://www.postgresql.org/docs/13/libpq-connect.html#LIBPQ-CONNSTRING) for your database.
+
+As with the python script, we assume your files are in `csv-files`. If they aren't, replace each occurence of 'csv-files/' with the correct path.
+{% endhint %}
+
+```
+psql $OPENALEX_SNAPSHOT_DB < copy-openalex-csv.sql
+```
+
+You can also connect in&#x20;
 
 ## &#x20;Step 4: Run your queries!
