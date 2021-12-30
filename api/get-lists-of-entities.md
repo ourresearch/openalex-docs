@@ -111,7 +111,7 @@ You can filter using these attributes of the `Concept` object. You can find more
 
 ## Search
 
-Search is just another kind of filter, one that all five endpoints support. Unlike the other filters, search doesn't require an exact match. To filter using search, append `.search` to the end of the property you're filtering for.&#x20;
+Search is just another kind of filter, one that all five endpoints support. But unlike the other filters, search doesn't require an exact match. To filter using search, append `.search` to the end of the property you're filtering for.&#x20;
 
 Currently, only the `display_name` property supports fulltext search (also the `Work.title` property, which is just an alias for `Work.display_name`). You can't yet do fulltext search on abstract, or any other field.
 
