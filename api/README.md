@@ -4,9 +4,13 @@ description: Query the OpenAlex dataset using the magic of The Internet
 
 # API
 
+The API is the primary way to get OpenAlex data. It's free, requires no authentication, and has generous rate limits; it's also much cheaper and easier than [downloading and using the snapshot](../download-snapshot/). So for most use cases, this is what you're looking for.&#x20;
+
+The API is read-only, supporting just [GET requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET).&#x20;
+
 ## Entity endpoints
 
-There are five entity endpoints, one for each [entity type](../about-the-data/):
+These are the main endpoints for the API. There are five entity endpoints, one for each entity type:
 
 * `/works`&#x20;
 * `/authors`
@@ -14,12 +18,35 @@ There are five entity endpoints, one for each [entity type](../about-the-data/):
 * `/institutions`
 * `/concepts`
 
-Each of these can give you either:
+Each of these can give you either a _single_ entity, or a _list_ of entities. In either case, the entities are returned as [entity objects](../about-the-data/).
 
-* a [single entity](get-single-entities.md) (eg: [https://api.openalex.org/works/W2741809807](https://api.openalex.org/works/W2741809807)), or&#x20;
-* a [list of entities](get-lists-of-entities.md) (eg: [https://api.openalex.org/works?filters=publication\_year:2020](https://api.openalex.org/works?filters=publication\_year:2020)). The lists can be filtered, searched, sorted and [faceted into groups](get-groups-of-entities.md).
+### Get single entities
 
-All the endpoints only respond to HTTP GET requests, all return JSON, and all work over HTTPS.
+To get a single entity, just feed an ID to the relevant endpoint: `/<endpoint_name>/<id>`. Examples:
+
+* Get the work with the OpenAlex ID `https://openalex.org/W2741809807`:\
+  [https://api.openalex.org/works/W2741809807](https://api.openalex.org/works/W2741809807)
+* Get the venue (journal) with the ISSN `2167-8359`:\
+  [https://api.openalex.org/venues/issn:2167-8359](https://api.openalex.org/venues/issn:2167-8359)
+* Get the author with the ORCID `https://orcid.org/0000-0001-6187-6610`:\
+  [https://api.openalex.org/authors/https://orcid.org/0000-0001-6187-6610](https://api.openalex.org/authors/https://orcid.org/0000-0001-6187-6610)
+
+To learn more about which IDs are accepted and in which formats, see [Get Single Entities](get-single-entities.md).
+
+### Get lists of entities
+
+To get a list of entities, just query the relevant endpoint directly: `/<endpoint_name>`. You can add parameters to filter, sort, search, and group results. Examples:
+
+* Get all the works in OpenAlex: \
+  [`https://api.openalex.org/works`](https://api.openalex.org/works)``
+* Get works published in 2020:\
+  [`https://api.openalex.org/works?filter=publication_year:2020`](https://api.openalex.org/works?filter=publication\_year:2020)``
+* Get works with "coffee" in their titles:\
+  [`https://api.openalex.org/works?filter=title.search:coffee`](https://api.openalex.org/works?filter=title.search:coffee)
+* Get _counts_ of works, by institution:\
+  [`https://api.openalex.org/works?group_by=institutions.id`](https://api.openalex.org/works?group\_by=institutions.id)``
+
+These list queries give you a very powerful and fast interface into the OpenAlex dataset. For lots more detail on these, see [Get lists of entities](get-lists-of-entities.md) and [Get groups of entities](get-groups-of-entities.md).&#x20;
 
 ## Authentication
 
