@@ -5,8 +5,10 @@ description: Get a single entity, based on an ID
 # Get single entities
 
 {% hint style="info" %}
-See the [API overview](./) for more information about API usage.
+See the [API overview](./) for info on API rate-limits, authentication, etc.
 {% endhint %}
+
+
 
 It's easy to retrieve a singleton [entity object](https://docs.openalex.org/about-the-data#entity-objects) from any of the five [entity endpoints](https://docs.openalex.org/api#entity-endpoints): just add an ID to the path of any entity endpoint like so:
 

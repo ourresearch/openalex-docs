@@ -1,11 +1,26 @@
 # Get lists of entities
 
+{% hint style="info" %}
+See the [API overview](./) for info on API rate-limits, authentication, etc.
+{% endhint %}
+
+
+
 Any of the five [entity endpoints](https://docs.openalex.org/api#entity-endpoints) can return a list of entities; you simply call the endpoint directly, adn get a list of all the entities we have of that type. For example:
 
 * Get a list of all the concepts in OpenAlex:\
   [`https://api.openalex.org/concepts`](https://api.openalex.org/concepts)
 
-But these lists become a lot more useful when you add parameters to [filter](get-lists-of-entities.md#filter), [search](get-lists-of-entities.md#search), [sort](get-lists-of-entities.md#sort-results), and [group](get-groups-of-entities.md) them.
+Technically this returns not a list but a JSON object, with two properties:
+
+* `meta`, an object with these properties:
+  * `count`, the total number of results
+  * `db_response_time_ms`, the response time of our database (in milliseconds)
+  * `page`, the current results page you're on ([read more about pagination below](get-lists-of-entities.md#pagination))
+  * `per_page`, the number of results per page.
+* `results`, the list of results. Each result in the list is an [entity object.](../about-the-data/)
+
+These entiti lists become a lot more useful when you add parameters to [filter](get-lists-of-entities.md#filter), [search](get-lists-of-entities.md#search), [sort](get-lists-of-entities.md#sort-results), and [group](get-groups-of-entities.md) them.
 
 
 
@@ -127,7 +142,25 @@ When you use a search filter, each returned entity in the results lists gets an 
 
 ## Sort results
 
-sorting stuff
+Use the ?sort parameter to specify the property you want your list sorted by. You can sort by these properties, where they exist:
+
+* `display_name`
+* `cited_by_count`
+* `works_count`
+* `publication_date`
+* `relevance_score` (only exists if there's a [search filter](get-lists-of-entities.md#search) active)
+
+By default, sort direction is ascending. You can reverse this by using `sort:desc` instead of `sort`.  You can sort by multiple properties by providing multiple sort keys, separated by commas.
+
+todo add examples
+
+
+
+## Pagination
+
+To page through results, specify the page you want using the `?page` query parameter. By default there are 25 results per page; you can use the `?per_page` parameter to change that to any number between 0 and 50.
+
+Currently you can only use paging to read the first 10,000 results of any list. To read more, you'll need to use cursor pagination, which we haven't implemented. Yet :smile:.
 
 
 
