@@ -19,7 +19,7 @@ Run it and you'll be set up to follow the next steps. To show you what it's doin
 SQL in this section isn't anything additional you need to run. It's part of the schema we already defined in the file above.
 {% endhint %}
 
-The key thing we're doing is "flattening" the nested JSON data. Some parts are easy. [Concept.id](../../about-the-data/concept.md#id) is just a string, so it goes in a text column called "id":
+The key thing we're doing is "flattening" the nested JSON data. Some parts of this are easy. [Concept.id](../../about-the-data/concept.md#id) is just a string, so it goes in a text column called "id":
 
 ```sql
 CREATE TABLE openalex.concepts (
