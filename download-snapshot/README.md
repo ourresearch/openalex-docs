@@ -1,5 +1,18 @@
 # Download snapshot
 
+If you want to do things with the data that our API can’t do for you, you’ll need your own copy of the dataset. This guide will tell you how to get one. We’ll cover two general approaches:
+
+* Load the intact OpenAlex records to a data warehouse (we’ll use [BigQuery](https://cloud.google.com/bigquery) as an example) and use its native JSON functions to query the [Work](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/work), [Author](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/author), [Venue](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/venue), [Institution](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/institution), and [Concept](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/concept) objects directly.
+* Flatten the records into a normalized schema in a relational database (we’ll use [PostgreSQL](https://www.postgresql.org)) while preserving the relationships between objects.
+
+We’ll assume you’re initializing a fresh snapshot - keeping an existing one up to date will be covered separately.
+
+There’s more than one way to do everything. We’re tried to pick one reasonable default way to do each step, so if something doesn’t work in your environment or with the tools you have available, let us know.
+
+
+
+
+
 <mark style="color:yellow;">vvv old notes here vvv</mark>
 
 notes to mention:

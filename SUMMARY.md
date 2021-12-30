@@ -7,6 +7,7 @@
   * [Get lists of entities](api/get-lists-of-entities.md)
   * [Get groups of entities](api/get-groups-of-entities.md)
 * [Download snapshot](download-snapshot/README.md)
+  * [Just the highlights](download-snapshot/just-the-highlights.md)
   * [Download to your machine](download-snapshot/download-to-your-machine.md)
   * [Upload to your database](download-snapshot/upload-to-your-database/README.md)
     * [Document-oriented approach](download-snapshot/upload-to-your-database/document-oriented-approach.md)
