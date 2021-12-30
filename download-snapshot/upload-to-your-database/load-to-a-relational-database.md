@@ -84,26 +84,23 @@ https://openalex.org/C41008148,https://openalex.org/C121332964,143.935
 
 ## Step 3: Load the CSV files to the database
 
-Now we run one postgres \copy command to load each CSV file to its corresponding table. Each command looks like this:
+Now we run one postgres copy command to load each CSV file to its corresponding table. Each command looks like this:
 
 ```
 \copy openalex.concepts from csv-files/concepts.csv csv header
 ```
 
-This script will run all the copy commands in the right order: [https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4](https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4)
+This script will run all the copy commands in the right order: [https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4](https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4). To run it:
 
-Copy it to the same place as the python script from step 2 (right above the folder with your CSV files) and run it like this:
-
-{% hint style="info" %}
-Set the environment variable OPENALEX\_SNAPSHOT\_DB to the [connection URI](https://www.postgresql.org/docs/13/libpq-connect.html#LIBPQ-CONNSTRING) for your database.
-
-As with the python script, we assume your files are in `csv-files`. If they aren't, replace each occurence of 'csv-files/' with the correct path.
-{% endhint %}
+* Copy it to the same place as the python script from step 2, right above the folder with your CSV files.
+* Set the environment variable OPENALEX\_SNAPSHOT\_DB to the [connection URI](https://www.postgresql.org/docs/13/libpq-connect.html#LIBPQ-CONNSTRING) for your database.
+* If your CSV files aren't in `csv-files`, replace each occurence of 'csv-files/' in the script with the correct path.
+* Run it like this:
 
 ```
 psql $OPENALEX_SNAPSHOT_DB < copy-openalex-csv.sql
 ```
 
-You can also connect in&#x20;
+There are a bunch of ways you can do this - just run the copy commands from the script above in the right order in whatever client you're familiar with.
 
 ## &#x20;Step 4: Run your queries!
