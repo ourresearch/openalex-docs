@@ -1,32 +1,36 @@
 # Get lists of entities
 
-* returns a sorted list of entities, based on filters. Optionally you can collapse the list into groups with counts
-* list the endpoints
+Any of the five [entity endpoints](https://docs.openalex.org/api#entity-endpoints) can return a list of entities; you simply call the endpoint directly, adn get a list of all the entities we have of that type. For example:
+
+* Get a list of all the concepts in OpenAlex:\
+  [`https://api.openalex.org/concepts`](https://api.openalex.org/concepts)
+
+But these lists become a lot more useful when you add parameters to [filter](get-lists-of-entities.md#filter), [search](get-lists-of-entities.md#search), [sort](get-lists-of-entities.md#sort-results), and [group](get-groups-of-entities.md) them.
 
 
 
 ## Filter
 
-Filters narrow the list down to just entities that meet a particular condition.  You describe that condition in this format: `attribute:value` where `attribute` is some property of the entity, and `value` is the value you want it to be. Filters are case-insensitive. Here's an example of a filter in use:
+Filters narrow the list down to just entities that meet a particular condition--specifically, a particular value for a particular attribute. Supported attributes for each endpoints are listed below.&#x20;
+
+Filters are formatted thusly: `attribute:value`. You set them using the `?filter` query parameter. Filters are case-insensitive.&#x20;
+
+Here's an example of a filter in use:
 
 * Get works whose [type](https://docs.openalex.org/entity-objects/work#type) is `book`:\
   [`https://api.openalex.org/works?filter=type:book`](https://api.openalex.org/works?filter=type:book)``
-
-
 
 If the attribute you're filtering is a number or an ISO-formatted date string, you can filter using "less than" or "greater than." Example:
 
 * Get venues that host more than 1000 works:\
   [`https://api.openalex.org/venues?filter=works_count:>1000`](https://api.openalex.org/venues?filter=works\_count:%3E1000)``
 
-``
-
 You can stack filters together, and the list will return entities that satisfy all the filters--in other words, it combines multiple filters using "AND." Separate multiple filter with commas. Example:
 
 * Get US-based authors who've been cited more than 100 times:\
   [`https://api.openalex.org/authors?filter=last_known_institution.country_code:US,cited_by_count:>100`](https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:US,cited\_by\_count:%3E0)``
 
-Each endpoint support its own list of filters. Here they are, by endpoint.&#x20;
+Each endpoint support its own list of filters. Here they are, by endpoint:&#x20;
 
 ### `/works` filters
 
@@ -105,30 +109,6 @@ You can filter using these attributes of the `Concept` object. You can find more
 
 
 
-
-
-
-
-
-
-
-
-``
-
-
-
-
-
-You can stack these filters together with commas,&#x20;
-
-
-
-
-
-
-
-##
-
 ## Search
 
 Search is just another kind of filter, one that all five endpoints support. Unlike the other filters, search doesn't require an exact match. To filter using search, append `.search` to the end of the property you're filtering for.&#x20;
@@ -142,11 +122,7 @@ Currently, only the `display_name` property supports fulltext search (also the `
 * Get works with "cubist" in the title:\
   [https://api.openalex.org/works?filter=title.search:cubist](https://api.openalex.org/works?filter=title.search:cubist)
 
-When you use a search filter, each returned entity in the results lists gets an extra property called `relevance_score`, and the list is by default sorted in descending order of `relevance_score`.
-
-\
-&#x20;
-
+When you use a search filter, each returned entity in the results lists gets an extra property called `relevance_score`, and the list is by default sorted in descending order of `relevance_score`.\
 
 
 ## Sort results
@@ -155,6 +131,3 @@ sorting stuff
 
 
 
-## Endpoints
-
-endpoints stuff
