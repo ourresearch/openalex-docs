@@ -1,5 +1,9 @@
 # Download snapshot
 
+{% hint style="info" %}
+This section is about the [OpenAlex entity](../about-the-data/) objects. If you're using OpenAlex as a replacement for [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), see the docs for the [MAG format](mag-format.md).
+{% endhint %}
+
 If you want to do things with the data that our API can’t do for you, you’ll need your own copy of the dataset. This guide will tell you how to get one. We’ll cover two general approaches:
 
 * Load the intact OpenAlex records to a data warehouse (we’ll use [BigQuery](https://cloud.google.com/bigquery) as an example) and use its native JSON functions to query the [Work](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/work), [Author](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/author), [Venue](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/venue), [Institution](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/institution), and [Concept](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/concept) objects directly.
