@@ -106,3 +106,52 @@ psql $OPENALEX_SNAPSHOT_DB < copy-openalex-csv.sql
 There are a bunch of ways you can do this - just run the copy commands from the script above in the right order in whatever client you're familiar with.
 
 ## &#x20;Step 4: Run your queries!
+
+Now you have all the OpenAlex data in your database and can run queries in your favorite client.
+
+Here’s a simple one, getting the OpenAlex ID and OA status for each work:&#x20;
+
+```
+select w.id, oa.oa_status from openalex.works w join openalex.works_open_access oa on w.id = oa.work_id;// Some code
+```
+
+You'll get results like this (truncated, the actual result will be millions of rows):
+
+| id                                                                   | oa\_status |
+| -------------------------------------------------------------------- | ---------- |
+| [https://openalex.org/W1496190310](https://openalex.org/W1496190310) | closed     |
+| [https://openalex.org/W2741809807](https://openalex.org/W2741809807) | gold       |
+| [https://openalex.org/W1496404095](https://openalex.org/W1496404095) | bronze     |
+
+Here’s an example of a more complex query - finding the author with the most open access works of all time:
+
+```sql
+select 
+    author_id, 
+    count(distinct work_id) as num_oa_works 
+from (
+    select 
+        a.id as author_id, 
+        w.id as work_id, 
+        oa.is_oa  
+    from 
+        openalex.authors a 
+        join openalex.works_authorships wa on a.id = wa.author_id 
+        join openalex.works w on wa.work_id = w.id 
+        join openalex.works_open_access oa on w.id = oa.work_id
+) work_authorships_oa 
+where is_oa 
+group by 1 
+order by 2 desc 
+limit 1;
+```
+
+<mark style="background-color:yellow;">TODO: update with real result</mark>
+
+We get the one row we asked for:
+
+| author\_id                                                           | num\_oa\_works |
+| -------------------------------------------------------------------- | -------------- |
+| [https://openalex.org/A1337983498](https://openalex.org/A1337983498) | 1              |
+
+Checking [https://api.openalex.org/authors/A1337983498](https://api.openalex.org/authors/A1337983498), we see that this is Arthur E. Suffern. We could also have found this directly in the query, through `openalex.authors.display_name`.
