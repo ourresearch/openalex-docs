@@ -4,6 +4,10 @@
 
 Compared to using a data warehouse, loading the dataset into a relational database takes more work up front but lets you write simpler queries on less powerful machines. One important caveat is that this is a _lot_ of data, and exploration will be very slow in most relational databases.
 
+{% hint style="info" %}
+By using a relational database, you trade flexibility for efficiency in certain selected operations. The tables, columns, and indexes we have chosen in this guide represent only one of many ways the entity objects could be stored. It may not be the best way to store them given the queries you want to run. Some queries will be fast, others will be painfully slow.&#x20;
+{% endhint %}
+
 We’re going to use [PostgreSQL](https://www.postgresql.org) as an example and skip the database server setup itself. We’ll assume you have a working postgres 13+ installation on which you can create schemas and tables and run queries. With that as a starting point, we'll take you through these steps:
 
 1. Define the tables the data will be stored in and some key relationships between them (the "schema")
