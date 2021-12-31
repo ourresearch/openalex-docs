@@ -92,12 +92,12 @@ Now we run one postgres copy command to load each CSV file to its corresponding 
 \copy openalex.concepts from csv-files/concepts.csv csv header
 ```
 
-This script will run all the copy commands in the right order: [https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4](https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4). To run it:
+This script will run all the copy commands in the right order: [https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4](https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4). Here's how to run it:
 
-* Copy it to the same place as the python script from step 2, right above the folder with your CSV files.
-* Set the environment variable OPENALEX\_SNAPSHOT\_DB to the [connection URI](https://www.postgresql.org/docs/13/libpq-connect.html#LIBPQ-CONNSTRING) for your database.
-* If your CSV files aren't in `csv-files`, replace each occurence of 'csv-files/' in the script with the correct path.
-* Run it like this:
+1. Copy it to the same place as the python script from step 2, right above the folder with your CSV files.
+2. Set the environment variable OPENALEX\_SNAPSHOT\_DB to the [connection URI](https://www.postgresql.org/docs/13/libpq-connect.html#LIBPQ-CONNSTRING) for your database.
+3. If your CSV files aren't in `csv-files`, replace each occurence of 'csv-files/' in the script with the correct path.
+4. Run it like this:
 
 ```
 psql $OPENALEX_SNAPSHOT_DB < copy-openalex-csv.sql
