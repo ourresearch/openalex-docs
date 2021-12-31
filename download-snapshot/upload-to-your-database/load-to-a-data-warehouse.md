@@ -95,7 +95,7 @@ from
     `openalex-demo.openalex.works`;
 ```
 
-It will give you a list of IDs like this:
+It will give you a list of IDs (this is a truncated sample, the real result will be millions of rows):
 
 |                                                                      |       |
 | -------------------------------------------------------------------- | ----- |
