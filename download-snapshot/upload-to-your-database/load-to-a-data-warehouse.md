@@ -56,7 +56,7 @@ openalex.works \
 ```
 
 {% hint style="info" %}
-See docs: [bq load](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_load)
+See the full documentation for the `bq load` command here: [https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_load](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_load)
 {% endhint %}
 
 This part of the command may need some explanation:
