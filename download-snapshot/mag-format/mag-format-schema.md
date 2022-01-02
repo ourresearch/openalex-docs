@@ -222,47 +222,167 @@ Base table for Journals (mag/Journals.txt)
 
 Inverted index of abstracts (nlp/PaperAbstractsInvertedIndex.txt{\*} split across multiple files)
 
+| Field Name      | Data Type | Description                                                       |
+| --------------- | --------- | ----------------------------------------------------------------- |
+| PaperId         | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                             |
+| IndexedAbstract | varchar   | Inverted index, see https://en.wikipedia.org/wiki/Inverted\_index |
+
 ## PaperAuthorAffiliations&#x20;
 
 Links between papers, authors, and affiliations/institutions. NOTE: It is possible to have multiple rows with same (PaperId, AuthorId, AffiliationId) when an author is associated with multiple affiliations. (mag/PaperAuthorAffiliations.txt)
+
+| Field Name           | Data Type | Description                                                                                                |
+| -------------------- | --------- | ---------------------------------------------------------------------------------------------------------- |
+| PaperId              | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                                                      |
+| AuthorId             | bigint    | FOREIGN KEY REFERENCES Authors.AuthorId                                                                    |
+| AffiliationId        | bigint    | FOREIGN KEY REFERENCES Affiliations.AffiliationId                                                          |
+| AuthorSequenceNumber | integer   | 1-based author sequence number. 1: the 1st author listed on paper, 2: the 2nd author listed on paper, etc. |
+| OriginalAuthor       | varchar   |                                                                                                            |
+| OriginalAffiliation  | varchar   |                                                                                                            |
 
 ## PaperCitationContexts&#x20;
 
 📦️ ARCHIVAL; citation contexts (nlp/PaperCitationContexts.txt)
 
+| Field Name       | Data Type | Description                           |
+| ---------------- | --------- | ------------------------------------- |
+| PaperId          | bigint    | FOREIGN KEY REFERENCES Papers.PaperId |
+| PaperReferenceId | bigint    | FOREIGN KEY REFERENCES Papers.PaperId |
+| CitationContext  | varchar   |                                       |
+
 ## PaperExtendedAttributes&#x20;
 
 Extra paper identifiers (mag/PaperExtendedAttributes.txt)
+
+| Field Name     | Data Type | Description                                                           |
+| -------------- | --------- | --------------------------------------------------------------------- |
+| PaperId        | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                 |
+| AttributeType  | integer   | Possible values: 1=PatentId, 2=PubMedId, 3=PmcId, 4=Alternative Title |
+| AttributeValue | varchar   |                                                                       |
 
 ## PaperFieldsOfStudy&#x20;
 
 Linking table from papers to fields, with score (advanced/PaperFieldsOfStudy.txt)
 
+| Field Name       | Data Type | Description                                                                                   |
+| ---------------- | --------- | --------------------------------------------------------------------------------------------- |
+| PaperId          | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                                         |
+| FieldOfStudyId   | bigint    | FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId                                           |
+| Score            | real      | Confidence range between 0 and 1. Bigger number representing higher confidence.               |
+| AlgorithmVersion | integer   | NEW; version of algorithm to assign fields. Possible values: 1=old MAG (ARCHIVAL), 2=OpenAlex |
+
 ## PaperMeSH&#x20;
 
 MeSH headings assigned to the paper by PubMed (advanced/PaperMeSH.txt)
+
+| Field Name     | Data Type | Description                                                  |
+| -------------- | --------- | ------------------------------------------------------------ |
+| PaperId        | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                        |
+| DescriptorUI   | varchar   | see https://en.wikipedia.org/wiki/Medical\_Subject\_Headings |
+| DescriptorName | varchar   | see https://en.wikipedia.org/wiki/Medical\_Subject\_Headings |
+| QualifierUI    | varchar   | see https://en.wikipedia.org/wiki/Medical\_Subject\_Headings |
+| QualifierName  | varchar   | see https://en.wikipedia.org/wiki/Medical\_Subject\_Headings |
+| IsMajorTopic   | boolean   | see https://en.wikipedia.org/wiki/Medical\_Subject\_Headings |
 
 ## PaperRecommendations&#x20;
 
 Paper recommendations with score (advanced/PaperRecommendations.txt)
 
+| Field Name         | Data Type | Description                                                                     |
+| ------------------ | --------- | ------------------------------------------------------------------------------- |
+| PaperId            | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                           |
+| RecommendedPaperId | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                           |
+| Score              | real      | Confidence range between 0 and 1. Bigger number representing higher confidence. |
+
 ## PaperReferences&#x20;
 
 Paper references and, in reverse, citations (mag/PaperReferences.txt)
+
+| Field Name       | Data Type | Description                           |
+| ---------------- | --------- | ------------------------------------- |
+| PaperId          | bigint    | FOREIGN KEY REFERENCES Papers.PaperId |
+| PaperReferenceId | bigint    | FOREIGN KEY REFERENCES Papers.PaperId |
 
 ## PaperResources&#x20;
 
 📦️ ARCHIVAL; not updated after Jan 3. Data and code urls associated with papers (mag/PaperResources.txt)
 
+| Field Name       | Data Type | Description                                                            |
+| ---------------- | --------- | ---------------------------------------------------------------------- |
+| PaperId          | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                  |
+| ResourceType     | integer   | Bit flags: 1=Project, 2=Data, 4=Code                                   |
+| ResourceUrl      | varchar   | Url of resource                                                        |
+| SourceUrl        | varchar   | List of urls associated with the project, used to derive resource\_url |
+| RelationshipType | integer   | Bit flags: 1=Own, 2=Cite                                               |
+
 ## PaperUrls&#x20;
 
 Urls for the paper (mag/PaperUrls.txt)
+
+| Field Name            | Data Type | Description                                                                                                                                                                          |
+| --------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| PaperId               | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                                                                                                                                |
+| SourceType            | integer   | Possible values: 1=Html, 2=Text, 3=Pdf, 4=Doc, 5=Ppt, 6=Xls, 8=Rtf, 12=Xml, 13=Rss, 20=Swf, 27=Ics, 31=Pub, 33=Ods, 34=Odp, 35=Odt, 36=Zip, 40=Mp3, 0/999/NULL=unknown               |
+| SourceUrl             | varchar   |                                                                                                                                                                                      |
+| LanguageCode          | varchar   |                                                                                                                                                                                      |
+| UrlForLandingPage     | varchar   | NEW; URL for the landing page, when article is free to read                                                                                                                          |
+| UrlForPdf             | varchar   | NEW; URL for the PDF, when article is free to read                                                                                                                                   |
+| HostType              | varchar   | NEW; host type of the free-to-read URL, Possible values: publisher, repository                                                                                                       |
+| Version               | varchar   | NEW; version of the free-to-read URL Possible values: submittedVersion, acceptedVersion, publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792) |
+| License               | varchar   | NEW; license of the free-to-read URL (example: cc0, cc-by, publisher-specific)                                                                                                       |
+| RepositoryInstitution | varchar   | NEW; name of repository host of URL                                                                                                                                                  |
+| OaiPmhId              | varchar   | NEW; OAH-PMH id of the repository record                                                                                                                                             |
 
 ## Papers&#x20;
 
 Main data for papers (mag/Papers.txt)
 
+| Field Name           | Data Type | Description                                                                                                                                               |
+| -------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PaperId              | bigint    | PRIMARY KEY                                                                                                                                               |
+| Rank                 | integer   | ARCHIVAL; no new ranks will be added after Jan 3                                                                                                          |
+| Doi                  | varchar   | Doi values are upper-cased per DOI standard at https://www.doi.org/doi\_handbook/2\_Numbering.html#2.4                                                    |
+| DocType              | varchar   | Possible values: Book, BookChapter, Conference, Dataset, Journal, Patent, Repository, Thesis, NULL : unknown. Patent is REMOVED; no patents are included. |
+| Genre                | varchar   | NEW; Crossref ontology for work type such as journal-article, posted-content, dataset, or book-chapter                                                    |
+| IsParatext           | boolean   | NEW; indicates front-matter. See https://support.unpaywall.org/support/solutions/articles/44001894783                                                     |
+| PaperTitle           | varchar   | UPDATED; slightly different normalization algorithm                                                                                                       |
+| OriginalTitle        | varchar   |                                                                                                                                                           |
+| BookTitle            | varchar   |                                                                                                                                                           |
+| Year                 | integer   |                                                                                                                                                           |
+| Date                 | varchar   |                                                                                                                                                           |
+| OnlineDate           | varchar   |                                                                                                                                                           |
+| Publisher            | varchar   |                                                                                                                                                           |
+| JournalId            | bigint    | FOREIGN KEY references Journals.JournalId                                                                                                                 |
+| ConferenceSeriesId   | bigint    | ARCHIVAL; not updated after Jan 3, no new Conference Series will be added after Jan 3. FOREIGN KEY references ConferenceSeries.ConferenceSeriesId;        |
+| ConferenceInstanceId | bigint    | ARCHIVAL; not updated after Jan 3, no new Conference Instances will be added after Jan 3. FOREIGN KEY references ConferenceInstance.ConferenceInstanceId; |
+| Volume               | varchar   |                                                                                                                                                           |
+| Issue                | varchar   |                                                                                                                                                           |
+| FirstPage            | varchar   |                                                                                                                                                           |
+| LastPage             | varchar   |                                                                                                                                                           |
+| ReferenceCount       | bigint    |                                                                                                                                                           |
+| CitationCount        | bigint    |                                                                                                                                                           |
+| EstimatedCitation    | bigint    | UPDATED; new algorithm                                                                                                                                    |
+| OriginalVenue        | varchar   |                                                                                                                                                           |
+| FamilyId             | bigint    | ARCHIVAL; not updated after Jan 3.                                                                                                                        |
+| FamilyRank           | bigint    | ARCHIVAL; not updated after Jan 3.                                                                                                                        |
+| DocSubTypes          | varchar   | Possible values: Retracted Publication, Retraction Notice                                                                                                 |
+| OaStatus             | varchar   | NEW; Possible values: closed, green, gold, hybrid, bronze (see https://en.wikipedia.org/wiki/Open\_access#Colour\_naming\_system)                         |
+| BestUrl              | varchar   | NEW; An url for the paper (see PaperUrls table for more)                                                                                                  |
+| BestFreeUrl          | varchar   | NEW; Url of best legal free-to-read copy when it exists (see https://support.unpaywall.org/support/solutions/articles/44001943223)                        |
+| BestFreeVersion      | varchar   | NEW; Possible values: submittedVersion, acceptedVersion, publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)      |
+| DoiLower             | varchar   | NEW; lowercase doi for convenience linking to Unpaywall                                                                                                   |
+| CreatedDate          | varchar   |                                                                                                                                                           |
+| UpdatedDate          | timestamp | NEW; set when changes are made going forward                                                                                                              |
+
 ## RelatedFieldOfStudy&#x20;
 
 Relationships between fields of study (advanced/RelatedFieldOfStudy.txt)
+
+| Field Name      | Data Type | Description                                                                    |
+| --------------- | --------- | ------------------------------------------------------------------------------ |
+| FieldOfStudyId1 | bigint    | FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId                            |
+| Type1           | varchar   | Possible values: general, disease, disease\_cause, medical\_treatment, symptom |
+| FieldOfStudyId2 | bigint    | FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId                            |
+| Type2           | varchar   | Possible values: general, disease, disease\_cause, medical\_treatment, symptom |
+| Rank            | real      | ARCHIVAL; no new ranks will be added after Jan 3.                              |
 
