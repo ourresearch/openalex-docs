@@ -11,18 +11,22 @@ Any of the five [entity endpoints](https://docs.openalex.org/api#entity-endpoint
 * Get a list of all the concepts in OpenAlex:\
   [`https://api.openalex.org/concepts`](https://api.openalex.org/concepts)
 
-Technically this returns not a list but a JSON object, with two properties:
+This query returns a `meta` object with details about the query, a `results` list of [entity objects](../about-the-data/), and an empty [`group_by`](get-groups-of-entities.md) list:
 
-* `meta`, an object with these properties:
-  * `count`, the total number of results
-  * `db_response_time_ms`, the response time of our database (in milliseconds)
-  * `page`, the current results page you're on ([read more about pagination below](get-lists-of-entities.md#pagination))
-  * `per_page`, the number of results per page.
-* `results`, the list of results. Each result in the list is an [entity object.](../about-the-data/)
+```json
+meta: {
+    count: 64,843,
+    db_response_time_ms: 11,
+    page: 1,
+    per_page: 25
+    },
+results: [
+    // long list of Concept entities
+ ],
+group_by: [] // empty
+```
 
-These entiti lists become a lot more useful when you add parameters to [filter](get-lists-of-entities.md#filter), [search](get-lists-of-entities.md#search), [sort](get-lists-of-entities.md#sort-results), and [group](get-groups-of-entities.md) them.
-
-
+These responses become a lot more useful when you add parameters to [filter](get-lists-of-entities.md#filter), [search](get-lists-of-entities.md#search), [sort](get-lists-of-entities.md#sort-results), and [group](get-groups-of-entities.md) them.
 
 ## Filter
 
