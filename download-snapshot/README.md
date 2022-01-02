@@ -1,7 +1,7 @@
 # Download snapshot
 
 {% hint style="info" %}
-This section is about the [OpenAlex entity](../about-the-data/) objects. If you're using OpenAlex as a replacement for [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), see the docs for the [MAG format](mag-format.md).
+This section is about the [OpenAlex entity](../about-the-data/) objects. If you're using OpenAlex as a replacement for [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), see the docs for the [MAG format](mag-format/).
 {% endhint %}
 
 If you want to do things with the data that our API can’t do for you, you’ll need your own copy of the dataset. This guide will tell you how to get one. We’ll cover two general approaches:
