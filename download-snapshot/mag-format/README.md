@@ -8,8 +8,6 @@
 This section is still being written.
 {% endhint %}
 
-This will point to the documentation already on the website. some of it may move here though. [https://openalex.org/mag-migration-guide](https://openalex.org/mag-migration-guide)
-
 All the MAG-formatted data is stored in [Amazon S3](https://aws.amazon.com/s3/), in the `openalex-mag-format` bucket.
 
 The easiest way to get the files is with the Amazon Web Services Command Line Interface (AWS CLI). You can find instructions for installing it on your system here: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
