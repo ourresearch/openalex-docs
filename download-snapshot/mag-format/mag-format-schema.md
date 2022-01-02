@@ -1,6 +1,60 @@
+---
+description: >-
+  This page documents each of the columns and tables in the MAG format data
+  dump, as well as how they all connect to one another.
+---
+
 # MAG format schema
 
-### Table Affiliations
+If you're migrating to OpenAlex from MAG, you'll want to check out the [MAG migration guide](https://openalex.org/mag-migration-guide) for more info.
+
+You may also want to pay particular attention to tables and columns marked [📦️ARCHIVAL](https://openalex.org/mag-migration-guide#data-changes-archival) (not updated after Jan 3) and [🔥NEW](https://openalex.org/mag-migration-guide#data-changes-archival) (in OpenAlex, but not MAG).
+
+## Tables&#x20;
+
+Affiliations&#x20;
+
+AuthorExtendedAttributes&#x20;
+
+Authors&#x20;
+
+ConferenceInstances&#x20;
+
+ConferenceSeries&#x20;
+
+EntityRelatedEntities&#x20;
+
+FieldOfStudyChildren&#x20;
+
+FieldOfStudyExtendedAttributes&#x20;
+
+FieldsOfStudy&#x20;
+
+Journals&#x20;
+
+PaperAbstractsInvertedIndex&#x20;
+
+PaperAuthorAffiliations&#x20;
+
+PaperCitationContexts&#x20;
+
+PaperExtendedAttributes&#x20;
+
+PaperFieldsOfStudy&#x20;
+
+PaperMeSH&#x20;
+
+PaperRecommendations&#x20;
+
+PaperReferences&#x20;
+
+PaperResources Papers&#x20;
+
+PaperUrls&#x20;
+
+RelatedFieldOfStudy
+
+## Affiliations
 
 Base table for affiliations/institutions (mag/Affiliations.txt)
 
