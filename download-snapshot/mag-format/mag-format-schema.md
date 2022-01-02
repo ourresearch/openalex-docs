@@ -89,3 +89,79 @@ Additional author name representations (mag/AuthorExtendedAttributes.txt)
 
 Base table for authors (mag/Authors.txt)
 
+## ConferenceInstances&#x20;
+
+📦️ ARCHIVAL; Base table for Conference Instances (mag/ConferenceInstances.txt)
+
+## ConferenceSeries&#x20;
+
+📦️ ARCHIVAL; Base table for Conference Series (mag/ConferenceSeries.txt)
+
+## EntityRelatedEntities&#x20;
+
+📦️ ARCHIVAL;  Relationship between papers, authors, fields of study. (advanced/EntityRelatedEntities.txt)
+
+## FieldOfStudyChildren&#x20;
+
+Relationship between Fields of Study (advanced/FieldOfStudyChildren.txt)
+
+## FieldOfStudyExtendedAttributes&#x20;
+
+Other identifiers for Fields of Study (advanced/FieldOfStudyExtendedAttributes.txt)
+
+## FieldsOfStudy&#x20;
+
+Base table for Fields of Study (advanced/FieldsOfStudy.txt)
+
+## Journals&#x20;
+
+Base table for Journals (mag/Journals.txt)
+
+## PaperAbstractsInvertedIndex&#x20;
+
+Inverted index of abstracts (nlp/PaperAbstractsInvertedIndex.txt{\*} split across multiple files)
+
+## PaperAuthorAffiliations&#x20;
+
+Links between papers, authors, and affiliations/institutions. NOTE: It is possible to have multiple rows with same (PaperId, AuthorId, AffiliationId) when an author is associated with multiple affiliations. (mag/PaperAuthorAffiliations.txt)
+
+## PaperCitationContexts&#x20;
+
+📦️ ARCHIVAL; citation contexts (nlp/PaperCitationContexts.txt)
+
+## PaperExtendedAttributes&#x20;
+
+Extra paper identifiers (mag/PaperExtendedAttributes.txt)
+
+## PaperFieldsOfStudy&#x20;
+
+Linking table from papers to fields, with score (advanced/PaperFieldsOfStudy.txt)
+
+## PaperMeSH&#x20;
+
+MeSH headings assigned to the paper by PubMed (advanced/PaperMeSH.txt)
+
+## PaperRecommendations&#x20;
+
+Paper recommendations with score (advanced/PaperRecommendations.txt)
+
+## PaperReferences&#x20;
+
+Paper references and, in reverse, citations (mag/PaperReferences.txt)
+
+## PaperResources&#x20;
+
+📦️ ARCHIVAL; not updated after Jan 3. Data and code urls associated with papers (mag/PaperResources.txt)
+
+## PaperUrls&#x20;
+
+Urls for the paper (mag/PaperUrls.txt)
+
+## Papers&#x20;
+
+Main data for papers (mag/Papers.txt)
+
+## RelatedFieldOfStudy&#x20;
+
+Relationships between fields of study (advanced/RelatedFieldOfStudy.txt)
+
