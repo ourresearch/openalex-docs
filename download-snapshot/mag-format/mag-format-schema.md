@@ -6,9 +6,9 @@ description: >-
 
 # MAG format schema
 
-The MAG format snapshot is for people migrating to OpenAlex from MAG (Microsoft Academic Graph) —  you'll want to check out the [MAG migration guide](https://openalex.org/mag-migration-guide) for more info.&#x20;
+The MAG format snapshot is for people migrating to OpenAlex from MAG (Microsoft Academic Graph) —  you'll want to check out the [MAG migration guide](mag-migration-guide.md) for more info.&#x20;
 
-You may also want to pay particular attention to tables and columns marked ❄️FROZEN (not updated) and [🔥NEW](https://openalex.org/mag-migration-guide#data-changes-archival) (data was not included in original MAG).
+You may also want to pay particular attention to tables and columns marked ❄️FROZEN (not updated) and 🔥NEW (data was not included in original MAG).
 
 ## ![](../../.gitbook/assets/image.png)
 
