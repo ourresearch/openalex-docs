@@ -14,6 +14,7 @@
     * [Load to a relational database](download-snapshot/upload-to-your-database/load-to-a-relational-database.md)
       * [Postgres schema diagram](download-snapshot/upload-to-your-database/load-to-a-relational-database/postgres-schema-diagram.md)
   * [MAG format](download-snapshot/mag-format/README.md)
+    * [How to download](download-snapshot/mag-format/how-to-download.md)
     * [MAG migration guide](download-snapshot/mag-format/mag-migration-guide.md)
     * [MAG format schema](download-snapshot/mag-format/mag-format-schema.md)
 * [Entity objects](about-the-data/README.md)

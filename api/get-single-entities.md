@@ -5,7 +5,7 @@ description: Get a single entity, based on an ID
 # Get single entities
 
 {% hint style="info" %}
-See the [API overview](./) for info on API rate-limits, authentication, etc.
+See the [API overview](./) for info on rate limiting, authentication, etc.
 {% endhint %}
 
 
