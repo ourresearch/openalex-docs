@@ -77,3 +77,13 @@ Base table for affiliations/institutions (mag/Affiliations.txt)
 | CreatedDate      | varchar   |                                                                             |
 | UpdatedDate      | timestamp | NEW; set values updated from new ror data                                   |
 
+## AuthorExtendedAttributes&#x20;
+
+Additional author name representations (mag/AuthorExtendedAttributes.txt)
+
+
+
+## Authors&#x20;
+
+Base table for authors (mag/Authors.txt)
+
