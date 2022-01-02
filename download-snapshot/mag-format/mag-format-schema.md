@@ -6,7 +6,7 @@ description: >-
 
 # MAG format schema
 
-The MAG format snapsh is for people migrating to OpenAlex from MAG (Microsoft Academic Graph) —  you'll want to check out the [MAG migration guide](https://openalex.org/mag-migration-guide) for more info.&#x20;
+The MAG format snapshot is for people migrating to OpenAlex from MAG (Microsoft Academic Graph) —  you'll want to check out the [MAG migration guide](https://openalex.org/mag-migration-guide) for more info.&#x20;
 
 You may also want to pay particular attention to tables and columns marked ❄️FROZEN (not updated) and [🔥NEW](https://openalex.org/mag-migration-guide#data-changes-archival) (data was not included in original MAG).
 
@@ -63,15 +63,15 @@ Base table for affiliations/institutions (mag/Affiliations.txt)
 | Field Name       | Data Type | Description                                                                 |
 | ---------------- | --------- | --------------------------------------------------------------------------- |
 | AffiliationId    | bigint    | PRIMARY KEY                                                                 |
-| Rank             | integer   | ARCHIVAL; no new ranks will be added after Jan 3.                           |
+| Rank             | integer   | ❄️FROZEN; no new ranks will be added after Jan 3.                           |
 | NormalizedName   | varchar   | UPDATED; slightly different normalization algorithm                         |
 | DisplayName      | varchar   |                                                                             |
-| GridId           | varchar   | ARCHIVAL; RorId is the new standard identifier for organizations            |
+| GridId           | varchar   | ❄️FROZEN; RorId is the new standard identifier for organizations            |
 | RorId            | varchar   | NEW; ROR for this organization, see https://ror.org, https://ror.org/:RorId |
 | OfficialPage     | varchar   |                                                                             |
 | WikiPage         | varchar   |                                                                             |
 | PaperCount       | bigint    |                                                                             |
-| PaperFamilyCount | bigint    | ARCHIVAL; same value as PaperCount after Jan 3                              |
+| PaperFamilyCount | bigint    | ❄️FROZEN; same value as PaperCount after Jan 3                              |
 | CitationCount    | bigint    |                                                                             |
 | Iso3166Code      | varchar   | Two-letter country codes, see https://en.wikipedia.org/wiki/ISO\_3166-2     |
 | Latitude         | real      |                                                                             |
@@ -96,20 +96,20 @@ Base table for authors (mag/Authors.txt)
 | Field Name             | Data Type | Description                                                                                                                                                                      |
 | ---------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AuthorId               | bigint    | PRIMARY KEY                                                                                                                                                                      |
-| Rank                   | integer   | ARCHIVAL; no new ranks will be added after Jan 3                                                                                                                                 |
+| Rank                   | integer   | ❄️FROZEN; no new ranks will be added after Jan 3                                                                                                                                 |
 | NormalizedName         | varchar   | UPDATED; slightly different normalization algorithm                                                                                                                              |
 | DisplayName            | varchar   |                                                                                                                                                                                  |
 | Orcid                  | varchar   | NEW; ORCID identifier for this author (see https://orcid.org). ⚠️ KNOWN ERROR: some ORCIDs are wrong, due to errors in the source Crossref data. Should be fixed before Jan 3rd. |
 | LastKnownAffiliationId | integer   | FOREIGN KEY REFERENCES Affiliations.AffiliationId                                                                                                                                |
 | PaperCount             | bigint    |                                                                                                                                                                                  |
-| PaperFamilyCount       | bigint    | ARCHIVAL; same value as PaperCount after Jan 3                                                                                                                                   |
+| PaperFamilyCount       | bigint    | ❄️FROZEN; same value as PaperCount after Jan 3                                                                                                                                   |
 | CitationCount          | bigint    |                                                                                                                                                                                  |
 | CreatedDate            | varchar   |                                                                                                                                                                                  |
 | UpdatedDate            | timestamp | NEW; set when changes are made going forward                                                                                                                                     |
 
 ## ConferenceInstances&#x20;
 
-📦️ ARCHIVAL; Base table for Conference Instances (mag/ConferenceInstances.txt)
+❄️FROZEN; Base table for Conference Instances (mag/ConferenceInstances.txt)
 
 | Field Name               | Data Type | Description                                                |
 | ------------------------ | --------- | ---------------------------------------------------------- |
@@ -126,7 +126,7 @@ Base table for authors (mag/Authors.txt)
 | NotificationDueDate      | varchar   |                                                            |
 | FinalVersionDueDate      | varchar   |                                                            |
 | PaperCount               | bigint    |                                                            |
-| PaperFamilyCount         | bigint    | ARCHIVAL; same value as PaperCount after Jan 3             |
+| PaperFamilyCount         | bigint    | ❄️FROZEN; same value as PaperCount after Jan 3             |
 | CitationCount            | bigint    |                                                            |
 | Latitude                 | real      |                                                            |
 | Longitude                | real      |                                                            |
@@ -134,22 +134,22 @@ Base table for authors (mag/Authors.txt)
 
 ## ConferenceSeries&#x20;
 
-📦️ ARCHIVAL; Base table for Conference Series (mag/ConferenceSeries.txt)
+❄️FROZEN; Base table for Conference Series (mag/ConferenceSeries.txt)
 
 | Field Name         | Data Type | Description                                         |
 | ------------------ | --------- | --------------------------------------------------- |
 | ConferenceSeriesId | bigint    | PRIMARY KEY                                         |
-| Rank               | integer   | ARCHIVAL; no new ranks will be added after Jan 3    |
+| Rank               | integer   | ❄️FROZEN; no new ranks will be added after Jan 3    |
 | NormalizedName     | varchar   | UPDATED; slightly different normalization algorithm |
 | DisplayName        | varchar   |                                                     |
 | PaperCount         | bigint    |                                                     |
-| PaperFamilyCount   | bigint    | ARCHIVAL; same value as PaperCount after Jan 3      |
+| PaperFamilyCount   | bigint    | ❄️FROZEN; same value as PaperCount after Jan 3      |
 | CitationCount      | bigint    |                                                     |
 | CreatedDate        | varchar   |                                                     |
 
 ## EntityRelatedEntities&#x20;
 
-📦️ ARCHIVAL;  Relationship between papers, authors, fields of study. (advanced/EntityRelatedEntities.txt)
+❄️FROZEN;  Relationship between papers, authors, fields of study. (advanced/EntityRelatedEntities.txt)
 
 | Field Name        | Data Type | Description                                                                                                                                  |
 | ----------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -186,13 +186,13 @@ Base table for Fields of Study (advanced/FieldsOfStudy.txt)
 | Field Name       | Data Type | Description                                         |
 | ---------------- | --------- | --------------------------------------------------- |
 | FieldOfStudyId   | bigint    | PRIMARY KEY                                         |
-| Rank             | varchar   | ARCHIVAL; no new ranks will be added after Jan 3.   |
+| Rank             | varchar   | ❄️FROZEN; no new ranks will be added after Jan 3.   |
 | NormalizedName   | varchar   | UPDATED; slightly different normalization algorithm |
 | DisplayName      | varchar   |                                                     |
 | MainType         | varchar   |                                                     |
 | Level            | integer   | Possible values: 0-5                                |
 | PaperCount       | bigint    |                                                     |
-| PaperFamilyCount | bigint    | ARCHIVAL; same value as PaperCount after Jan 3      |
+| PaperFamilyCount | bigint    | ❄️FROZEN; same value as PaperCount after Jan 3      |
 | CitationCount    | bigint    |                                                     |
 | CreatedDate      | varchar   |                                                     |
 
@@ -203,7 +203,7 @@ Base table for Journals (mag/Journals.txt)
 | Field Name       | Data Type | Description                                                                                                                   |
 | ---------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | JournalId        | bigint    | PRIMARY KEY                                                                                                                   |
-| Rank             | integer   | ARCHIVAL; no new ranks will be added after Jan 3                                                                              |
+| Rank             | integer   | ❄️FROZEN; no new ranks will be added after Jan 3                                                                              |
 | NormalizedName   | varchar   | UPDATED; slightly different normalization algorithm                                                                           |
 | DisplayName      | varchar   |                                                                                                                               |
 | Issn             | varchar   | UPDATED; the ISSN-L for the journal (see https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number#Linking\_ISSN) |
@@ -213,7 +213,7 @@ Base table for Journals (mag/Journals.txt)
 | Publisher        | varchar   |                                                                                                                               |
 | Webpage          | varchar   |                                                                                                                               |
 | PaperCount       | bigint    |                                                                                                                               |
-| PaperFamilyCount | bigint    | ARCHIVAL; same value as PaperCount after Jan 3                                                                                |
+| PaperFamilyCount | bigint    | ❄️FROZEN; same value as PaperCount after Jan 3                                                                                |
 | CitationCount    | bigint    |                                                                                                                               |
 | CreatedDate      | varchar   |                                                                                                                               |
 | UpdatedDate      | timestamp | NEW; set when changes are made going forward                                                                                  |
@@ -242,7 +242,7 @@ Links between papers, authors, and affiliations/institutions. NOTE: It is possib
 
 ## PaperCitationContexts&#x20;
 
-📦️ ARCHIVAL; citation contexts (nlp/PaperCitationContexts.txt)
+❄️FROZEN; citation contexts (nlp/PaperCitationContexts.txt)
 
 | Field Name       | Data Type | Description                           |
 | ---------------- | --------- | ------------------------------------- |
@@ -269,7 +269,7 @@ Linking table from papers to fields, with score (advanced/PaperFieldsOfStudy.txt
 | PaperId          | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                                         |
 | FieldOfStudyId   | bigint    | FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId                                           |
 | Score            | real      | Confidence range between 0 and 1. Bigger number representing higher confidence.               |
-| AlgorithmVersion | integer   | NEW; version of algorithm to assign fields. Possible values: 1=old MAG (ARCHIVAL), 2=OpenAlex |
+| AlgorithmVersion | integer   | NEW; version of algorithm to assign fields. Possible values: 1=old MAG (❄️FROZEN), 2=OpenAlex |
 
 ## PaperMeSH&#x20;
 
@@ -305,7 +305,7 @@ Paper references and, in reverse, citations (mag/PaperReferences.txt)
 
 ## PaperResources&#x20;
 
-📦️ ARCHIVAL; not updated after Jan 3. Data and code urls associated with papers (mag/PaperResources.txt)
+❄️FROZEN; not updated after Jan 3. Data and code urls associated with papers (mag/PaperResources.txt)
 
 | Field Name       | Data Type | Description                                                            |
 | ---------------- | --------- | ---------------------------------------------------------------------- |
@@ -340,7 +340,7 @@ Main data for papers (mag/Papers.txt)
 | Field Name           | Data Type | Description                                                                                                                                               |
 | -------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | PaperId              | bigint    | PRIMARY KEY                                                                                                                                               |
-| Rank                 | integer   | ARCHIVAL; no new ranks will be added after Jan 3                                                                                                          |
+| Rank                 | integer   | ❄️FROZEN; no new ranks will be added after Jan 3                                                                                                          |
 | Doi                  | varchar   | Doi values are upper-cased per DOI standard at https://www.doi.org/doi\_handbook/2\_Numbering.html#2.4                                                    |
 | DocType              | varchar   | Possible values: Book, BookChapter, Conference, Dataset, Journal, Patent, Repository, Thesis, NULL : unknown. Patent is REMOVED; no patents are included. |
 | Genre                | varchar   | NEW; Crossref ontology for work type such as journal-article, posted-content, dataset, or book-chapter                                                    |
@@ -353,8 +353,8 @@ Main data for papers (mag/Papers.txt)
 | OnlineDate           | varchar   |                                                                                                                                                           |
 | Publisher            | varchar   |                                                                                                                                                           |
 | JournalId            | bigint    | FOREIGN KEY references Journals.JournalId                                                                                                                 |
-| ConferenceSeriesId   | bigint    | ARCHIVAL; not updated after Jan 3, no new Conference Series will be added after Jan 3. FOREIGN KEY references ConferenceSeries.ConferenceSeriesId;        |
-| ConferenceInstanceId | bigint    | ARCHIVAL; not updated after Jan 3, no new Conference Instances will be added after Jan 3. FOREIGN KEY references ConferenceInstance.ConferenceInstanceId; |
+| ConferenceSeriesId   | bigint    | ❄️FROZEN; not updated after Jan 3, no new Conference Series will be added after Jan 3. FOREIGN KEY references ConferenceSeries.ConferenceSeriesId;        |
+| ConferenceInstanceId | bigint    | ❄️FROZEN; not updated after Jan 3, no new Conference Instances will be added after Jan 3. FOREIGN KEY references ConferenceInstance.ConferenceInstanceId; |
 | Volume               | varchar   |                                                                                                                                                           |
 | Issue                | varchar   |                                                                                                                                                           |
 | FirstPage            | varchar   |                                                                                                                                                           |
@@ -363,8 +363,8 @@ Main data for papers (mag/Papers.txt)
 | CitationCount        | bigint    |                                                                                                                                                           |
 | EstimatedCitation    | bigint    | UPDATED; new algorithm                                                                                                                                    |
 | OriginalVenue        | varchar   |                                                                                                                                                           |
-| FamilyId             | bigint    | ARCHIVAL; not updated after Jan 3.                                                                                                                        |
-| FamilyRank           | bigint    | ARCHIVAL; not updated after Jan 3.                                                                                                                        |
+| FamilyId             | bigint    | ❄️FROZEN; not updated after Jan 3.                                                                                                                        |
+| FamilyRank           | bigint    | ❄️FROZEN; not updated after Jan 3.                                                                                                                        |
 | DocSubTypes          | varchar   | Possible values: Retracted Publication, Retraction Notice                                                                                                 |
 | OaStatus             | varchar   | NEW; Possible values: closed, green, gold, hybrid, bronze (see https://en.wikipedia.org/wiki/Open\_access#Colour\_naming\_system)                         |
 | BestUrl              | varchar   | NEW; An url for the paper (see PaperUrls table for more)                                                                                                  |
@@ -384,5 +384,5 @@ Relationships between fields of study (advanced/RelatedFieldOfStudy.txt)
 | Type1           | varchar   | Possible values: general, disease, disease\_cause, medical\_treatment, symptom |
 | FieldOfStudyId2 | bigint    | FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId                            |
 | Type2           | varchar   | Possible values: general, disease, disease\_cause, medical\_treatment, symptom |
-| Rank            | real      | ARCHIVAL; no new ranks will be added after Jan 3.                              |
+| Rank            | real      | ❄️FROZEN; no new ranks will be added after Jan 3.                              |
 
