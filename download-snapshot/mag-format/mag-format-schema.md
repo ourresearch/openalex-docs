@@ -10,6 +10,8 @@ If you're migrating to OpenAlex from MAG, you'll want to check out the [MAG migr
 
 You may also want to pay particular attention to tables and columns marked [📦️ARCHIVAL](https://openalex.org/mag-migration-guide#data-changes-archival) (not updated after Jan 3) and [🔥NEW](https://openalex.org/mag-migration-guide#data-changes-archival) (in OpenAlex, but not MAG).
 
+## ![](../../.gitbook/assets/image.png)
+
 ## Tables&#x20;
 
 Affiliations&#x20;
