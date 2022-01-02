@@ -83,39 +83,140 @@ Base table for affiliations/institutions (mag/Affiliations.txt)
 
 Additional author name representations (mag/AuthorExtendedAttributes.txt)
 
-
+| Field Name     | Data Type | Description                             |
+| -------------- | --------- | --------------------------------------- |
+| AuthorId       | bigint    | FOREIGN KEY REFERENCES Authors.AuthorId |
+| AttributeType  | integer   | Possible values: 1=Alternative name     |
+| AttributeValue | varchar   |                                         |
 
 ## Authors&#x20;
 
 Base table for authors (mag/Authors.txt)
 
+| Field Name             | Data Type | Description                                                                                                                                                                      |
+| ---------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AuthorId               | bigint    | PRIMARY KEY                                                                                                                                                                      |
+| Rank                   | integer   | ARCHIVAL; no new ranks will be added after Jan 3                                                                                                                                 |
+| NormalizedName         | varchar   | UPDATED; slightly different normalization algorithm                                                                                                                              |
+| DisplayName            | varchar   |                                                                                                                                                                                  |
+| Orcid                  | varchar   | NEW; ORCID identifier for this author (see https://orcid.org). ⚠️ KNOWN ERROR: some ORCIDs are wrong, due to errors in the source Crossref data. Should be fixed before Jan 3rd. |
+| LastKnownAffiliationId | integer   | FOREIGN KEY REFERENCES Affiliations.AffiliationId                                                                                                                                |
+| PaperCount             | bigint    |                                                                                                                                                                                  |
+| PaperFamilyCount       | bigint    | ARCHIVAL; same value as PaperCount after Jan 3                                                                                                                                   |
+| CitationCount          | bigint    |                                                                                                                                                                                  |
+| CreatedDate            | varchar   |                                                                                                                                                                                  |
+| UpdatedDate            | timestamp | NEW; set when changes are made going forward                                                                                                                                     |
+
 ## ConferenceInstances&#x20;
 
 📦️ ARCHIVAL; Base table for Conference Instances (mag/ConferenceInstances.txt)
+
+| Field Name               | Data Type | Description                                                |
+| ------------------------ | --------- | ---------------------------------------------------------- |
+| ConferenceInstanceId     | bigint    | PRIMARY KEY                                                |
+| NormalizedName           | varchar   | UPDATED; slightly different normalization algorithm        |
+| DisplayName              | varchar   |                                                            |
+| ConferenceSeriesId       | bigint    | FOREIGN KEY REFERENCES ConferenceSeries.ConferenceSeriesId |
+| Location                 | varchar   |                                                            |
+| OfficialUrl              | varchar   |                                                            |
+| StartDate                | varchar   |                                                            |
+| EndDate                  | varchar   |                                                            |
+| AbstractRegistrationDate | varchar   |                                                            |
+| SubmissionDeadlineDate   | varchar   |                                                            |
+| NotificationDueDate      | varchar   |                                                            |
+| FinalVersionDueDate      | varchar   |                                                            |
+| PaperCount               | bigint    |                                                            |
+| PaperFamilyCount         | bigint    | ARCHIVAL; same value as PaperCount after Jan 3             |
+| CitationCount            | bigint    |                                                            |
+| Latitude                 | real      |                                                            |
+| Longitude                | real      |                                                            |
+| CreatedDate              | varchar   |                                                            |
 
 ## ConferenceSeries&#x20;
 
 📦️ ARCHIVAL; Base table for Conference Series (mag/ConferenceSeries.txt)
 
+| Field Name         | Data Type | Description                                         |
+| ------------------ | --------- | --------------------------------------------------- |
+| ConferenceSeriesId | bigint    | PRIMARY KEY                                         |
+| Rank               | integer   | ARCHIVAL; no new ranks will be added after Jan 3    |
+| NormalizedName     | varchar   | UPDATED; slightly different normalization algorithm |
+| DisplayName        | varchar   |                                                     |
+| PaperCount         | bigint    |                                                     |
+| PaperFamilyCount   | bigint    | ARCHIVAL; same value as PaperCount after Jan 3      |
+| CitationCount      | bigint    |                                                     |
+| CreatedDate        | varchar   |                                                     |
+
 ## EntityRelatedEntities&#x20;
 
 📦️ ARCHIVAL;  Relationship between papers, authors, fields of study. (advanced/EntityRelatedEntities.txt)
+
+| Field Name        | Data Type | Description                                                                                                                                  |
+| ----------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| EntityId          | bigint    |                                                                                                                                              |
+| EntityType        | varchar   | Possible values: af (Affiliation), j (Journal), c (Conference)                                                                               |
+| RelatedEntityId   | bigint    |                                                                                                                                              |
+| RelatedEntityType | varchar   | Possible values: af (Affiliation), j (Journal), c (Conference)                                                                               |
+| RelatedType       | integer   | Possible values: 0 (same paper), 1 (common coauthors), 2 (co-cited), 3 (common field of study), 4 (same venue), 5 (A cites B), 6 (B cites A) |
+| Score             | real      | Confidence range between 0 and 1. Larger number representing higher confidence.                                                              |
 
 ## FieldOfStudyChildren&#x20;
 
 Relationship between Fields of Study (advanced/FieldOfStudyChildren.txt)
 
+| Field Name          | Data Type | Description                                         |
+| ------------------- | --------- | --------------------------------------------------- |
+| FieldOfStudyId      | bigint    | FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId |
+| ChildFieldOfStudyId | bigint    | FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId |
+
 ## FieldOfStudyExtendedAttributes&#x20;
 
 Other identifiers for Fields of Study (advanced/FieldOfStudyExtendedAttributes.txt)
+
+| Field Name     | Data Type | Description                                                                                                                                                                                                                            |
+| -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FieldOfStudyId | bigint    | FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId                                                                                                                                                                                    |
+| AttributeType  | bigint    | Possible values: 1 (AUI from UMLS https://www.nlm.nih.gov/research/umls/licensedcontent/umlsarchives04.html#2018AA), 2 (source url), 3 (CUI from UMLS https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html) |
+| AttributeValue | varchar   |                                                                                                                                                                                                                                        |
 
 ## FieldsOfStudy&#x20;
 
 Base table for Fields of Study (advanced/FieldsOfStudy.txt)
 
+| Field Name       | Data Type | Description                                         |
+| ---------------- | --------- | --------------------------------------------------- |
+| FieldOfStudyId   | bigint    | PRIMARY KEY                                         |
+| Rank             | varchar   | ARCHIVAL; no new ranks will be added after Jan 3.   |
+| NormalizedName   | varchar   | UPDATED; slightly different normalization algorithm |
+| DisplayName      | varchar   |                                                     |
+| MainType         | varchar   |                                                     |
+| Level            | integer   | Possible values: 0-5                                |
+| PaperCount       | bigint    |                                                     |
+| PaperFamilyCount | bigint    | ARCHIVAL; same value as PaperCount after Jan 3      |
+| CitationCount    | bigint    |                                                     |
+| CreatedDate      | varchar   |                                                     |
+
 ## Journals&#x20;
 
 Base table for Journals (mag/Journals.txt)
+
+| Field Name       | Data Type | Description                                                                                                                   |
+| ---------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| JournalId        | bigint    | PRIMARY KEY                                                                                                                   |
+| Rank             | integer   | ARCHIVAL; no new ranks will be added after Jan 3                                                                              |
+| NormalizedName   | varchar   | UPDATED; slightly different normalization algorithm                                                                           |
+| DisplayName      | varchar   |                                                                                                                               |
+| Issn             | varchar   | UPDATED; the ISSN-L for the journal (see https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number#Linking\_ISSN) |
+| Issns            | varchar   | NEW; JSON list of all ISSNs for this journal (example: '\["1469-5073","0016-6723"]' )                                         |
+| IsOa             | boolean   | NEW; TRUE when the journal is 100% OA                                                                                         |
+| IsInDoaj         | boolean   | NEW; TRUE when the journal is in DOAJ (see https://doaj.org/)                                                                 |
+| Publisher        | varchar   |                                                                                                                               |
+| Webpage          | varchar   |                                                                                                                               |
+| PaperCount       | bigint    |                                                                                                                               |
+| PaperFamilyCount | bigint    | ARCHIVAL; same value as PaperCount after Jan 3                                                                                |
+| CitationCount    | bigint    |                                                                                                                               |
+| CreatedDate      | varchar   |                                                                                                                               |
+| UpdatedDate      | timestamp | NEW; set when changes are made going forward                                                                                  |
 
 ## PaperAbstractsInvertedIndex&#x20;
 
