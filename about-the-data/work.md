@@ -1,10 +1,10 @@
 # 📄 Work
 
-Works are the outputs produced by scholarship. The include not just journal articles, but also books, datasets, theses, and even figures or images.
+`Work`s are the outputs produced by scholarship. The include not just journal articles, but also books, datasets, theses, and even figures or images.
 
-Works are the core building block of OpenAlex, and all the other entities are defined in relationship to works. Because of this, works are also the most complicated entity, with lots of links to other things.
+`Work`s are the core building block of OpenAlex, and all the other entities are defined in relationship to `Work`. Because of this, `Work` is also the most complicated entity, with lots of links to other things.
 
-It also has three component objects, which are only used as part of a work:&#x20;
+It has three component objects that are only used as part of a `Work`:&#x20;
 
 * [Authorship](work.md#the-authorship-object)
 * [HostVenue](work.md#the-hostvenue-object)
