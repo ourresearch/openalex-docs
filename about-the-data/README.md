@@ -12,7 +12,7 @@ The OpenAlex dataset describes scholarly _entities_ and how those entities are c
 * :school: [Institutions](institution.md) are universities and other orgs that are _affiliated with_ works (via authors)
 * :bulb: [Concepts](concept.md) _tag_ Works with a topic
 
-Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of of hundreds of millions of entities and over a billion connections between them all..
+Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of hundreds of millions of entities and over a billion connections between them all.
 
 ## The OpenAlex ID
 
