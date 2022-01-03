@@ -8,7 +8,7 @@ description: >-
 
 The MAG format snapshot is for people migrating to OpenAlex from MAG (Microsoft Academic Graph) —  you'll want to check out the [MAG migration guide](mag-migration-guide.md) for more info.&#x20;
 
-You may also want to pay particular attention to tables and columns marked ❄️FROZEN (not updated) and 🔥NEW (data was not included in original MAG).
+You may also want to pay particular attention to tables and columns marked ❄️FROZEN (no longer updated) and 🔥NEW (data was not included in original MAG).
 
 ## ![](../../.gitbook/assets/image.png)
 
@@ -275,19 +275,19 @@ Paper references and, in reverse, citations (mag/PaperReferences.txt)
 
 Urls for the paper (mag/PaperUrls.txt)
 
-| Field Name            | Data Type | Description                                                                                                                                                                                   |
-| --------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PaperId               | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                                                                                                                                         |
-| SourceType            | integer   | Possible values: 1=Html, 2=Text, 3=Pdf, 4=Doc, 5=Ppt, 6=Xls, 8=Rtf, 12=Xml, 13=Rss, 20=Swf, 27=Ics, 31=Pub, 33=Ods, 34=Odp, 35=Odt, 36=Zip, 40=Mp3, 0/999/NULL=unknown                        |
-| SourceUrl             | varchar   |                                                                                                                                                                                               |
-| LanguageCode          | varchar   |                                                                                                                                                                                               |
-| UrlForLandingPage     | varchar   | 🔥NEW; URL for the landing page, when article is free to read                                                                                                                                 |
-| UrlForPdf             | varchar   | 🔥NEW; URL for the PDF, when article is free to read                                                                                                                                          |
-| HostType              | varchar   | 🔥NEW; host type of the free-to-read URL, Possible values: publisher, repository                                                                                                              |
-| Version               | varchar   | N🔥NEWEW; version of the free-to-read URL Possible values: submittedVersion, acceptedVersion, publishedVersion ([more](https://support.unpaywall.org/support/solutions/articles/44000708792)) |
-| License               | varchar   | 🔥NEW; license of the free-to-read URL (example: cc0, cc-by, publisher-specific)                                                                                                              |
-| RepositoryInstitution | varchar   | 🔥NEW; name of repository host of URL                                                                                                                                                         |
-| OaiPmhId              | varchar   | 🔥NEW; OAH-PMH id of the repository record                                                                                                                                                    |
+| Field Name            | Data Type | Description                                                                                                                                                                                |
+| --------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| PaperId               | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                                                                                                                                      |
+| SourceType            | integer   | Possible values: 1=Html, 2=Text, 3=Pdf, 4=Doc, 5=Ppt, 6=Xls, 8=Rtf, 12=Xml, 13=Rss, 20=Swf, 27=Ics, 31=Pub, 33=Ods, 34=Odp, 35=Odt, 36=Zip, 40=Mp3, 0/999/NULL=unknown                     |
+| SourceUrl             | varchar   |                                                                                                                                                                                            |
+| LanguageCode          | varchar   |                                                                                                                                                                                            |
+| UrlForLandingPage     | varchar   | 🔥NEW; URL for the landing page, when article is free to read                                                                                                                              |
+| UrlForPdf             | varchar   | 🔥NEW; URL for the PDF, when article is free to read                                                                                                                                       |
+| HostType              | varchar   | 🔥NEW; host type of the free-to-read URL, Possible values: publisher, repository                                                                                                           |
+| Version               | varchar   | 🔥NEW; version of the free-to-read URL Possible values: submittedVersion, acceptedVersion, publishedVersion ([more](https://support.unpaywall.org/support/solutions/articles/44000708792)) |
+| License               | varchar   | 🔥NEW; license of the free-to-read URL (example: cc0, cc-by, publisher-specific)                                                                                                           |
+| RepositoryInstitution | varchar   | 🔥NEW; name of repository host of URL                                                                                                                                                      |
+| OaiPmhId              | varchar   | 🔥NEW; OAH-PMH id of the repository record                                                                                                                                                 |
 
 ## Papers&#x20;
 
