@@ -44,7 +44,7 @@ title: "The state of OA: a large-scale analysis of the prevalence and impact of 
 
 ### `display_name`
 
-_String:_ Exactly the same as [`Work.title`](work.md#title-1). It's useful for Works to include a`display_name` property, since all the other entities have one.
+_String:_ Exactly the same as [`Work.title`](work.md#title-1). It's useful for Works to include a `display_name` property, since all the other entities have one.
 
 ```json
 display_name: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
