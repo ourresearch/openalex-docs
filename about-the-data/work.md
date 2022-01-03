@@ -18,7 +18,7 @@ The examples in this page are all drawn from this work: [https://openalex.org/W2
 
 ### `id`
 
-_String:_ The [OpenAlex ID](https://docs.openalex.org/entity-objects#the-openalex-id) for this work.
+_String:_ The [OpenAlex ID](./#the-openalex-id) for this work.
 
 ```json
 id: "https://openalex.org/W2741809807"
