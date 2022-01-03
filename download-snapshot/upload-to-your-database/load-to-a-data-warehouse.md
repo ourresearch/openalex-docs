@@ -41,8 +41,8 @@ and so on for `venues`, `institutions`, and `concepts`.
 
 We’ll load each table’s data from the JSON Lines files we downloaded earlier. For `works`, the files were:&#x20;
 
-* openalex-snapshot/works/updated\_date=2021-12-28/0000\_part\_00.gz&#x20;
-* openalex-snapshot/works/updated\_date=2021-12-28/0001\_part\_00.gz&#x20;
+* openalex-snapshot/data/works/updated\_date=2021-12-28/0000\_part\_00.gz&#x20;
+* openalex-snapshot/data/works/updated\_date=2021-12-28/0001\_part\_00.gz&#x20;
 
 Here’s a command to load one `works` file (don’t run it yet):
 
@@ -52,7 +52,7 @@ bq load \
 --source_format=CSV -F '\t' \
 --schema 'work:string' \
 openalex.works \
-'openalex-snapshot/works/updated_date=2021-12-28/0000_part_00.gz'
+'openalex-snapshot/data/works/updated_date=2021-12-28/0000_part_00.gz'
 ```
 
 {% hint style="info" %}
@@ -68,7 +68,7 @@ Bigquery is expecting multiple columns with predefined datatypes (a “schema”
 `bq load` can only handle one file at a time, so you must run this command once per file. But remember that the real dataset will have many more files than this example does, so it's impractical to copy, edit, and rerun the command each time. It's easier to handle all the files in a loop, like this:
 
 ```bash
-for data_file in openalex-snapshot/works/*/*.gz;
+for data_file in openalex-snapshot/data/works/*/*.gz;
 do
     bq load --source_format=CSV -F '\t' \
         --schema 'work:string' \
