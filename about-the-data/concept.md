@@ -49,7 +49,7 @@ _String:_ A brief description of this concept.
 **todo**
 
 ```json
-type: "education"
+description: "study of alternative metrics for analyzing and informing scholarship"
 ```
 
 ### `works_count`
@@ -57,7 +57,7 @@ type: "education"
 _Integer:_ The number of works tagged with this concept.
 
 ```json
-works_count: 3055 
+works_count: 3078 
 ```
 
 ### `cited_by_count`
@@ -67,10 +67,8 @@ _Integer:_ The number citations to works that have been tagged with this concept
 For example, if there are just two works tagged with this concept and one of them has been cited 10 times, and the other has been cited 1 time, `cited_by_count` for this concept would be `11`.
 
 ```json
-cited_by_count: 21199844 
+cited_by_count: 20248 
 ```
-
-``
 
 ### `ids`
 
@@ -96,7 +94,7 @@ ids: {
 _String:_ URL where you can get an image representing this concept, where available. Usually this is hosted on Wikipedia.
 
 ```json
-image_url: "https://upload.wikimedia.org/wikipedia/en/5/5c/University_of_North_Carolina_at_Chapel_Hill_seal.svg"
+image_url: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Altmetrics.svg"
 ```
 
 ### `image_thumbnail_url`
@@ -104,7 +102,7 @@ image_url: "https://upload.wikimedia.org/wikipedia/en/5/5c/University_of_North_C
 _String:_ Same as [`image_url`](concept.md#image\_url), but it's a smaller image.
 
 ```json
-image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/University_of_North_Carolina_at_Chapel_Hill_seal.svg/100px-University_of_North_Carolina_at_Chapel_Hill_seal.svg.png"
+image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Altmetrics.svg/100px-Altmetrics.svg.png"
 ```
 
 ### `international`
@@ -113,7 +111,10 @@ _Object:_ **todo**&#x20;
 
 ```json
 international: {
-    display_name: null
+    display_name: {
+        ca: "Altmetrics",
+        ...
+    }
 }
 ```
 
@@ -121,21 +122,21 @@ international: {
 
 ### `ancestors`
 
-_List:_ List of concepts that this concept descends from, as dehydrated Concept objects. See the [concept tree section](concept.md#the-concept-tree) for more details on how the different layers of concepts work together.
+_List:_ List of concepts that this concept descends from, as [dehydrated Concept](concept.md#the-dehydratedconcept-object) objects. See the [concept tree section](concept.md#the-concept-tree) for more details on how the different layers of concepts work together.
 
 ```json
 ancestors: [
     {
-        id: "https://openalex.org/C136764020",
-        wikidata: "https://www.wikidata.org/wiki/Q466",
-        display_name: "World Wide Web",
+        id: "https://openalex.org/C2522767166",
+        wikidata: "https://www.wikidata.org/wiki/Q2374463",
+        display_name: "Data science",
         level: 1
     },
     {
-        id: "https://openalex.org/C41008148",
-        wikidata: "https://www.wikidata.org/wiki/Q21198",
-        display_name: "Computer science",
-        level: 0
+        id: "https://openalex.org/C161191863",
+        wikidata: "https://www.wikidata.org/wiki/Q199655",
+        display_name: "Library science",
+        level: 1
     },
     
     // and so forth
@@ -144,7 +145,7 @@ ancestors: [
 
 ### `related_concepts`
 
-_List:_ Concepts that are similar to this one. Each listed concept is a dehydrated Concept object, with one additional attribute:
+_List:_ Concepts that are similar to this one. Each listed concept is a [dehydrated Concept](concept.md#the-dehydratedconcept-object) object, with one additional attribute:
 
 * `score` (_Float_): The strength of association between this concept and the listed concept, on a scale of 0-100.
 
@@ -165,7 +166,7 @@ related_concepts: [
         score: 4.46396
     }
     
-    // and so forth...
+    // and so forth
 ]
 ```
 
@@ -182,11 +183,11 @@ counts_by_year: [
     },
     {
         year: 2020,
-    works_count: 4363,
-    cited_by_count: 119531
+        works_count: 4363,
+        cited_by_count: 119531
     },
     
-    // and so forth....
+    // and so forth
 ]
 ```
 
