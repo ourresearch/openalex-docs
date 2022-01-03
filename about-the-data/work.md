@@ -292,18 +292,18 @@ _List:_ List of [`HostVenue`](work.md#the-hostvenue-object) objects describing p
 alternate_host_venues: [
     {
         id: null,
-        display_name: null,
+        display_name: "Europe PMC",
         type: "repository",
-        url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5815332",
+        url: "http://europepmc.org/articles/pmc5815332?pdf=render",
         is_oa: true,
         version: "publishedVersion",
-        license: null
+        license: "cc-by"
     },
     {
         id: null,
         display_name: "Simon Fraser University - Summit",
         type: "repository",
-        url: "http://summit.sfu.ca/system/files/iritems1/17691/peerj-4375.pdf",
+        url: "https://summit.sfu.ca/item/17691",
         is_oa: true,
         version: "submittedVersion",
         license: "cc-by"
