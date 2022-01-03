@@ -374,13 +374,17 @@ abstract_inverted_index: {
 }
 ```
 
+### `cited_by_api_url`
 
+{% hint style="warning" %}
+TODO: documentation coming soon!
+{% endhint %}
 
+### `counts_by_year`
 
-
-
-
-
+{% hint style="warning" %}
+TODO: documentation coming soon!
+{% endhint %}
 
 ## The `Authorship` object
 
