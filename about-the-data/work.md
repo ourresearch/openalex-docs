@@ -315,7 +315,7 @@ alternate_host_venues: [
 
 ### `referenced_works`
 
-_List:_ [OpenAlex IDs](https://docs.openalex.org/entity-objects#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.&#x20;
+_List:_ [OpenAlex IDs](./#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.&#x20;
 
 ```json
 referenced_works: [
