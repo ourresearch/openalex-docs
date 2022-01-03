@@ -386,6 +386,14 @@ TODO: documentation coming soon!
 TODO: documentation coming soon!
 {% endhint %}
 
+### `updated_date`
+
+_String:_ The last time anything in this `Work` object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
+
+```json
+updated_date: "2022-01-02T00:22:35.180390"
+```
+
 ## The `Authorship` object
 
 The Authorship object represents a single author and her institutional affiliations in the context of a given work. It is only found as part of a `Work` object.
