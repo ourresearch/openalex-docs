@@ -76,7 +76,7 @@ publication_date: "2018-02-13"
 
 _Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this work, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. ID namespaces currently include:
 
-* `openalex` (_String_; The [OpenAlex ID](https://docs.openalex.org/entity-objects#the-openalex-id), which is also found at [`Work.id`](work.md#id))
+* `openalex` (_String_; The [OpenAlex ID](./#the-openalex-id), which is also found at [`Work.id`](work.md#id))
 * `doi` (_String_; The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). This is most likely, but not necessarily, a [Crossref](https://www.crossref.org) DOI)
 * `mag`  (_Integer_; the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `pmid` (_String_; The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
@@ -329,7 +329,7 @@ referenced_works: [
 
 ### `related_works`
 
-_List:_ [OpenAlex IDs](https://docs.openalex.org/entity-objects#the-openalex-id) for works related to this work.&#x20;
+_List:_ OpenAlex IDs for works related to this work.&#x20;
 
 ```json
 related_works: [
