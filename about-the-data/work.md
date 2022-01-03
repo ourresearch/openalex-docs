@@ -4,7 +4,7 @@ Works are the outputs produced by scholarship. The include not just journal arti
 
 `Work`s are the core building block of OpenAlex, and all the other entities are defined in relationship to `Work`. Because of this, `Work` is also the most complicated entity, with lots of links to other things.
 
-It has three component objects that are only used as part of a `Work`:&#x20;
+There are three component objects that are only used as part of a `Work`:&#x20;
 
 * [Authorship](work.md#the-authorship-object)
 * [HostVenue](work.md#the-hostvenue-object)
