@@ -12,72 +12,28 @@ You may also want to pay particular attention to tables and columns marked ❄�
 
 ## ![](../../.gitbook/assets/image.png)
 
-## Tables&#x20;
-
-Affiliations&#x20;
-
-AuthorExtendedAttributes&#x20;
-
-Authors&#x20;
-
-ConferenceInstances&#x20;
-
-ConferenceSeries&#x20;
-
-EntityRelatedEntities&#x20;
-
-FieldOfStudyChildren&#x20;
-
-FieldOfStudyExtendedAttributes&#x20;
-
-FieldsOfStudy&#x20;
-
-Journals&#x20;
-
-PaperAbstractsInvertedIndex&#x20;
-
-PaperAuthorAffiliations&#x20;
-
-PaperCitationContexts&#x20;
-
-PaperExtendedAttributes&#x20;
-
-PaperFieldsOfStudy&#x20;
-
-PaperMeSH&#x20;
-
-PaperRecommendations&#x20;
-
-PaperReferences&#x20;
-
-PaperResources Papers&#x20;
-
-PaperUrls&#x20;
-
-RelatedFieldOfStudy
-
 ## Affiliations
 
 Base table for affiliations/institutions (mag/Affiliations.txt)
 
-| Field Name       | Data Type | Description                                                                 |
-| ---------------- | --------- | --------------------------------------------------------------------------- |
-| AffiliationId    | bigint    | PRIMARY KEY                                                                 |
-| Rank             | integer   | ❄️FROZEN; no new ranks will be added after Jan 3.                           |
-| NormalizedName   | varchar   | UPDATED; slightly different normalization algorithm                         |
-| DisplayName      | varchar   |                                                                             |
-| GridId           | varchar   | ❄️FROZEN; RorId is the new standard identifier for organizations            |
-| RorId            | varchar   | NEW; ROR for this organization, see https://ror.org, https://ror.org/:RorId |
-| OfficialPage     | varchar   |                                                                             |
-| WikiPage         | varchar   |                                                                             |
-| PaperCount       | bigint    |                                                                             |
-| PaperFamilyCount | bigint    | ❄️FROZEN; same value as PaperCount after Jan 3                              |
-| CitationCount    | bigint    |                                                                             |
-| Iso3166Code      | varchar   | Two-letter country codes, see https://en.wikipedia.org/wiki/ISO\_3166-2     |
-| Latitude         | real      |                                                                             |
-| Longitude        | real      |                                                                             |
-| CreatedDate      | varchar   |                                                                             |
-| UpdatedDate      | timestamp | NEW; set values updated from new ror data                                   |
+| Field Name       | Data Type | Description                                                                   |
+| ---------------- | --------- | ----------------------------------------------------------------------------- |
+| AffiliationId    | bigint    | PRIMARY KEY                                                                   |
+| Rank             | integer   | ❄️FROZEN; no new ranks will be added after Jan 3.                             |
+| NormalizedName   | varchar   | UPDATED; slightly different normalization algorithm                           |
+| DisplayName      | varchar   |                                                                               |
+| GridId           | varchar   | ❄️FROZEN; RorId is the new standard identifier for organizations              |
+| RorId            | varchar   | 🔥NEW; ROR for this organization, see https://ror.org, https://ror.org/:RorId |
+| OfficialPage     | varchar   |                                                                               |
+| WikiPage         | varchar   |                                                                               |
+| PaperCount       | bigint    |                                                                               |
+| PaperFamilyCount | bigint    | ❄️FROZEN; same value as PaperCount after Jan 3                                |
+| CitationCount    | bigint    |                                                                               |
+| Iso3166Code      | varchar   | Two-letter country codes, see https://en.wikipedia.org/wiki/ISO\_3166-2       |
+| Latitude         | real      |                                                                               |
+| Longitude        | real      |                                                                               |
+| CreatedDate      | varchar   |                                                                               |
+| UpdatedDate      | timestamp | 🔥NEW; set values updated from new ror data                                   |
 
 ## AuthorExtendedAttributes&#x20;
 
@@ -93,19 +49,19 @@ Additional author name representations (mag/AuthorExtendedAttributes.txt)
 
 Base table for authors (mag/Authors.txt)
 
-| Field Name             | Data Type | Description                                                                                                                                                                      |
-| ---------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AuthorId               | bigint    | PRIMARY KEY                                                                                                                                                                      |
-| Rank                   | integer   | ❄️FROZEN; no new ranks will be added after Jan 3                                                                                                                                 |
-| NormalizedName         | varchar   | UPDATED; slightly different normalization algorithm                                                                                                                              |
-| DisplayName            | varchar   |                                                                                                                                                                                  |
-| Orcid                  | varchar   | NEW; ORCID identifier for this author (see https://orcid.org). ⚠️ KNOWN ERROR: some ORCIDs are wrong, due to errors in the source Crossref data. Should be fixed before Jan 3rd. |
-| LastKnownAffiliationId | integer   | FOREIGN KEY REFERENCES Affiliations.AffiliationId                                                                                                                                |
-| PaperCount             | bigint    |                                                                                                                                                                                  |
-| PaperFamilyCount       | bigint    | ❄️FROZEN; same value as PaperCount after Jan 3                                                                                                                                   |
-| CitationCount          | bigint    |                                                                                                                                                                                  |
-| CreatedDate            | varchar   |                                                                                                                                                                                  |
-| UpdatedDate            | timestamp | NEW; set when changes are made going forward                                                                                                                                     |
+| Field Name             | Data Type | Description                                                       |
+| ---------------------- | --------- | ----------------------------------------------------------------- |
+| AuthorId               | bigint    | PRIMARY KEY                                                       |
+| Rank                   | integer   | ❄️FROZEN; no new ranks will be added after Jan 3                  |
+| NormalizedName         | varchar   | UPDATED; slightly different normalization algorithm               |
+| DisplayName            | varchar   |                                                                   |
+| Orcid                  | varchar   | 🔥NEW; ORCID identifier for this author (see https://orcid.org).  |
+| LastKnownAffiliationId | integer   | FOREIGN KEY REFERENCES Affiliations.AffiliationId                 |
+| PaperCount             | bigint    |                                                                   |
+| PaperFamilyCount       | bigint    | ❄️FROZEN; same value as PaperCount after Jan 3                    |
+| CitationCount          | bigint    |                                                                   |
+| CreatedDate            | varchar   |                                                                   |
+| UpdatedDate            | timestamp | 🔥NEW; set when changes are made going forward                    |
 
 ## ConferenceInstances&#x20;
 
@@ -207,16 +163,16 @@ Base table for Journals (mag/Journals.txt)
 | NormalizedName   | varchar   | UPDATED; slightly different normalization algorithm                                                                           |
 | DisplayName      | varchar   |                                                                                                                               |
 | Issn             | varchar   | UPDATED; the ISSN-L for the journal (see https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number#Linking\_ISSN) |
-| Issns            | varchar   | NEW; JSON list of all ISSNs for this journal (example: '\["1469-5073","0016-6723"]' )                                         |
-| IsOa             | boolean   | NEW; TRUE when the journal is 100% OA                                                                                         |
-| IsInDoaj         | boolean   | NEW; TRUE when the journal is in DOAJ (see https://doaj.org/)                                                                 |
+| Issns            | varchar   | 🔥NEW; JSON list of all ISSNs for this journal (example: '\["1469-5073","0016-6723"]' )                                       |
+| IsOa             | boolean   | 🔥NEW; TRUE when the journal is 100% OA                                                                                       |
+| IsInDoaj         | boolean   | 🔥NEW; TRUE when the journal is in DOAJ (see https://doaj.org/)                                                               |
 | Publisher        | varchar   |                                                                                                                               |
 | Webpage          | varchar   |                                                                                                                               |
 | PaperCount       | bigint    |                                                                                                                               |
 | PaperFamilyCount | bigint    | ❄️FROZEN; same value as PaperCount after Jan 3                                                                                |
 | CitationCount    | bigint    |                                                                                                                               |
 | CreatedDate      | varchar   |                                                                                                                               |
-| UpdatedDate      | timestamp | NEW; set when changes are made going forward                                                                                  |
+| UpdatedDate      | timestamp | 🔥NEW; set when changes are made going forward                                                                                |
 
 ## PaperAbstractsInvertedIndex&#x20;
 
@@ -264,12 +220,12 @@ Extra paper identifiers (mag/PaperExtendedAttributes.txt)
 
 Linking table from papers to fields, with score (advanced/PaperFieldsOfStudy.txt)
 
-| Field Name       | Data Type | Description                                                                                   |
-| ---------------- | --------- | --------------------------------------------------------------------------------------------- |
-| PaperId          | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                                         |
-| FieldOfStudyId   | bigint    | FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId                                           |
-| Score            | real      | Confidence range between 0 and 1. Bigger number representing higher confidence.               |
-| AlgorithmVersion | integer   | NEW; version of algorithm to assign fields. Possible values: 1=old MAG (❄️FROZEN), 2=OpenAlex |
+| Field Name       | Data Type | Description                                                                                     |
+| ---------------- | --------- | ----------------------------------------------------------------------------------------------- |
+| PaperId          | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                                           |
+| FieldOfStudyId   | bigint    | FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId                                             |
+| Score            | real      | Confidence range between 0 and 1. Bigger number representing higher confidence.                 |
+| AlgorithmVersion | integer   | 🔥NEW; version of algorithm to assign fields. Possible values: 1=old MAG (❄️FROZEN), 2=OpenAlex |
 
 ## PaperMeSH&#x20;
 
@@ -319,19 +275,19 @@ Paper references and, in reverse, citations (mag/PaperReferences.txt)
 
 Urls for the paper (mag/PaperUrls.txt)
 
-| Field Name            | Data Type | Description                                                                                                                                                                          |
-| --------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| PaperId               | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                                                                                                                                |
-| SourceType            | integer   | Possible values: 1=Html, 2=Text, 3=Pdf, 4=Doc, 5=Ppt, 6=Xls, 8=Rtf, 12=Xml, 13=Rss, 20=Swf, 27=Ics, 31=Pub, 33=Ods, 34=Odp, 35=Odt, 36=Zip, 40=Mp3, 0/999/NULL=unknown               |
-| SourceUrl             | varchar   |                                                                                                                                                                                      |
-| LanguageCode          | varchar   |                                                                                                                                                                                      |
-| UrlForLandingPage     | varchar   | NEW; URL for the landing page, when article is free to read                                                                                                                          |
-| UrlForPdf             | varchar   | NEW; URL for the PDF, when article is free to read                                                                                                                                   |
-| HostType              | varchar   | NEW; host type of the free-to-read URL, Possible values: publisher, repository                                                                                                       |
-| Version               | varchar   | NEW; version of the free-to-read URL Possible values: submittedVersion, acceptedVersion, publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792) |
-| License               | varchar   | NEW; license of the free-to-read URL (example: cc0, cc-by, publisher-specific)                                                                                                       |
-| RepositoryInstitution | varchar   | NEW; name of repository host of URL                                                                                                                                                  |
-| OaiPmhId              | varchar   | NEW; OAH-PMH id of the repository record                                                                                                                                             |
+| Field Name            | Data Type | Description                                                                                                                                                                               |
+| --------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PaperId               | bigint    | FOREIGN KEY REFERENCES Papers.PaperId                                                                                                                                                     |
+| SourceType            | integer   | Possible values: 1=Html, 2=Text, 3=Pdf, 4=Doc, 5=Ppt, 6=Xls, 8=Rtf, 12=Xml, 13=Rss, 20=Swf, 27=Ics, 31=Pub, 33=Ods, 34=Odp, 35=Odt, 36=Zip, 40=Mp3, 0/999/NULL=unknown                    |
+| SourceUrl             | varchar   |                                                                                                                                                                                           |
+| LanguageCode          | varchar   |                                                                                                                                                                                           |
+| UrlForLandingPage     | varchar   | 🔥NEW; URL for the landing page, when article is free to read                                                                                                                             |
+| UrlForPdf             | varchar   | 🔥NEW; URL for the PDF, when article is free to read                                                                                                                                      |
+| HostType              | varchar   | 🔥NEW; host type of the free-to-read URL, Possible values: publisher, repository                                                                                                          |
+| Version               | varchar   | N🔥NEWEW; version of the free-to-read URL Possible values: submittedVersion, acceptedVersion, publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792) |
+| License               | varchar   | 🔥NEW; license of the free-to-read URL (example: cc0, cc-by, publisher-specific)                                                                                                          |
+| RepositoryInstitution | varchar   | 🔥NEW; name of repository host of URL                                                                                                                                                     |
+| OaiPmhId              | varchar   | 🔥NEW; OAH-PMH id of the repository record                                                                                                                                                |
 
 ## Papers&#x20;
 
@@ -343,8 +299,8 @@ Main data for papers (mag/Papers.txt)
 | Rank                 | integer   | ❄️FROZEN; no new ranks will be added after Jan 3                                                                                                          |
 | Doi                  | varchar   | Doi values are upper-cased per DOI standard at https://www.doi.org/doi\_handbook/2\_Numbering.html#2.4                                                    |
 | DocType              | varchar   | Possible values: Book, BookChapter, Conference, Dataset, Journal, Patent, Repository, Thesis, NULL : unknown. Patent is REMOVED; no patents are included. |
-| Genre                | varchar   | NEW; Crossref ontology for work type such as journal-article, posted-content, dataset, or book-chapter                                                    |
-| IsParatext           | boolean   | NEW; indicates front-matter. See https://support.unpaywall.org/support/solutions/articles/44001894783                                                     |
+| Genre                | varchar   | 🔥NEW; Crossref ontology for work type such as journal-article, posted-content, dataset, or book-chapter                                                  |
+| IsParatext           | boolean   | 🔥NEW; indicates front-matter. See https://support.unpaywall.org/support/solutions/articles/44001894783                                                   |
 | PaperTitle           | varchar   | UPDATED; slightly different normalization algorithm                                                                                                       |
 | OriginalTitle        | varchar   |                                                                                                                                                           |
 | BookTitle            | varchar   |                                                                                                                                                           |
@@ -366,13 +322,13 @@ Main data for papers (mag/Papers.txt)
 | FamilyId             | bigint    | ❄️FROZEN; not updated after Jan 3.                                                                                                                        |
 | FamilyRank           | bigint    | ❄️FROZEN; not updated after Jan 3.                                                                                                                        |
 | DocSubTypes          | varchar   | Possible values: Retracted Publication, Retraction Notice                                                                                                 |
-| OaStatus             | varchar   | NEW; Possible values: closed, green, gold, hybrid, bronze (see https://en.wikipedia.org/wiki/Open\_access#Colour\_naming\_system)                         |
-| BestUrl              | varchar   | NEW; An url for the paper (see PaperUrls table for more)                                                                                                  |
-| BestFreeUrl          | varchar   | NEW; Url of best legal free-to-read copy when it exists (see https://support.unpaywall.org/support/solutions/articles/44001943223)                        |
-| BestFreeVersion      | varchar   | NEW; Possible values: submittedVersion, acceptedVersion, publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)      |
-| DoiLower             | varchar   | NEW; lowercase doi for convenience linking to Unpaywall                                                                                                   |
+| OaStatus             | varchar   | 🔥NEW; Possible values: closed, green, gold, hybrid, bronze (see https://en.wikipedia.org/wiki/Open\_access#Colour\_naming\_system)                       |
+| BestUrl              | varchar   | 🔥NEW; An url for the paper (see PaperUrls table for more)                                                                                                |
+| BestFreeUrl          | varchar   | 🔥NEW; Url of best legal free-to-read copy when it exists (see https://support.unpaywall.org/support/solutions/articles/44001943223)                      |
+| BestFreeVersion      | varchar   | 🔥NEW; Possible values: submittedVersion, acceptedVersion, publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)    |
+| DoiLower             | varchar   | 🔥NEW; lowercase doi for convenience linking to Unpaywall                                                                                                 |
 | CreatedDate          | varchar   |                                                                                                                                                           |
-| UpdatedDate          | timestamp | NEW; set when changes are made going forward                                                                                                              |
+| UpdatedDate          | timestamp | 🔥NEW; set when changes are made going forward                                                                                                            |
 
 ## RelatedFieldOfStudy&#x20;
 
