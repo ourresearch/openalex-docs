@@ -178,7 +178,7 @@ authorships: [
 _Integer:_ The number of citations to this work. These are the times that other works have cited this work: Other works ➞ This work.
 
 ```json
-cited_by_count: 367
+cited_by_count: 382
 ```
 
 ### `biblio`
@@ -218,9 +218,9 @@ _Boolean:_ True if we think this work is [paratext](https://en.wikipedia.org/wik
 In our context, paratext is stuff that's in scholarly venue (like a journal) but is _about the venue_ rather than a scholarly work properly speaking.  Some examples and nonexamples:
 
 * **yep it's paratext**: front cover, back cover, table of contents, editorial board listing, issue information,  masthead.
-* **no,  not paratext**: research paper, dataset, lettersto the editor, figure.
+* **no,  not paratext**: research paper, dataset, letters to the editor, figures
 
-Turns out there is a lot of paratext in registries like Crossref. That's not a bad thing...but we've found that it's good to have a way to filter it out.
+Turns out there is a lot of paratext in registries like Crossref. That's not a bad thing... but we've found that it's good to have a way to filter it out.
 
 We determine `is_paratext` algorithmically using title heuristics.&#x20;
 
@@ -239,18 +239,18 @@ Each `Concept` object in the list also has one additional property:
 ```json
 concepts: [
     {
-    id: "https://openalex.org/C2778793908",
-    wikidata: "https://www.wikidata.org/wiki/Q5122404",
-    display_name: "Citation impact",
-    level: 3,
-    score: 0.459309
+        id: "https://openalex.org/C2778793908",
+        wikidata: "https://www.wikidata.org/wiki/Q5122404",
+        display_name: "Citation impact",
+        level: 3,
+        score: 0.459309
     },
     {
-    id: "https://openalex.org/C2778805511",
-    wikidata: "https://www.wikidata.org/wiki/Q1713",
-    display_name: "Citation",
-    level: 2,
-    score: 0.447306
+        id: "https://openalex.org/C2778805511",
+        wikidata: "https://www.wikidata.org/wiki/Q1713",
+        display_name: "Citation",
+        level: 2,
+        score: 0.447306
     }
 ]
 ```
