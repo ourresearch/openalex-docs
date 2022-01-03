@@ -150,12 +150,10 @@ order by 2 desc
 limit 1;
 ```
 
-<mark style="background-color:yellow;">TODO: update with real result</mark>
-
 We get the one row we asked for:
 
-| author\_id                                                           | num\_oa\_works |
-| -------------------------------------------------------------------- | -------------- |
-| [https://openalex.org/A1337983498](https://openalex.org/A1337983498) | 1              |
+| author\_id                       | num\_oa\_works |
+| -------------------------------- | -------------- |
+| https://openalex.org/A2798520857 | 3297           |
 
-Checking [https://api.openalex.org/authors/A1337983498](https://api.openalex.org/authors/A1337983498), we see that this is Arthur E. Suffern. We could also have found this directly in the query, through `openalex.authors.display_name`.
+Checking out [https://api.openalex.org/authors/A2798520857](https://api.openalex.org/authors/A2798520857), we see that this is Ashok Kumar at Manipal University Jaipur. We could also have found this directly in the query, through `openalex.authors`.
