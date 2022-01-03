@@ -506,7 +506,7 @@ The `OpenAccess` object describes access options for a given work. It's only fou
 
 _Boolean:_ `True` if this work is Open Access (OA).&#x20;
 
-There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in. You can use the `alternate_locations` and `oa_status` fields to narrow your results further, accommodating any definition of OA you like.
+There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in. You can use the [`alternate_host_venues`](work.md#alternate\_host\_venues) and [`oa_status`](work.md#oa\_status) fields to narrow your results further, accommodating any definition of OA you like.
 
 ```json
 is_oa: true
