@@ -18,7 +18,7 @@ The examples in this page are all drawn from this work: [https://openalex.org/W2
 
 ### `id`
 
-_String:_ The OpenAlex ID for this work.
+_String:_ The [OpenAlex ID](https://docs.openalex.org/entity-objects#the-openalex-id) for this work.
 
 ```json
 id: "https://openalex.org/W2741809807"
@@ -28,7 +28,7 @@ id: "https://openalex.org/W2741809807"
 
 _String:_ The DOI for the work.
 
-Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on bioRxiv, and another DOI for the published version. However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the [`alternate_host_venues`](work.md#alternate\_host\_venues) list.&#x20;
+Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on [bioRxiv](https://www.biorxiv.org), and another DOI for the [published version](work.md#version). However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the [`Work.alternate_host_venues`](work.md#alternate\_host\_venues) list.&#x20;
 
 ```json
 doi: "https://doi.org/10.7717/peerj.4375"
@@ -44,7 +44,7 @@ title: "The state of OA: a large-scale analysis of the prevalence and impact of 
 
 ### `display_name`
 
-_String:_ Exactly the same as Work.title. It's included as a bit of [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic\_sugar): all the other types of entities have a `display_name` property, so it'd be weird for the Work to not have one.
+_String:_ Exactly the same as [`Work.title`](work.md#title-1). It's useful for Works to include a`display_name` property, since all the other entities have one.
 
 ```json
 display_name: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
@@ -54,7 +54,7 @@ display_name: "The state of OA: a large-scale analysis of the prevalence and imp
 
 _Integer:_ The year this work was published.
 
-This year applies to the version found at `Work.url`. The other versions, found in `alternate_locations`, may have been published in different (earlier) years.&#x20;
+This year applies to the version found at [`Work.url`](work.md#url). The other versions, found in [`Work.alternate_host_venues`](work.md#alternate\_host\_venues), may have been published in different (earlier) years.&#x20;
 
 ```json
 publication_year: 2018
@@ -66,7 +66,7 @@ _String:_ The day when this work was published, formatted as an [ISO 8601](https
 
 Where different publication dates exist, we select the earliest available date of electronic publication.&#x20;
 
-This date applies to the version found at `Work.url`. The other versions, found in `alternate_locations`, may have been published at different (earlier) dates.&#x20;
+This date applies to the version found at [`Work.url`](work.md#url). The other versions, found in [`Work.alternate_host_venues`](work.md#alternate\_host\_venues), may have been published at different (earlier) dates.&#x20;
 
 ```json
 publication_date: "2018-02-13"
@@ -76,7 +76,7 @@ publication_date: "2018-02-13"
 
 _Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this work, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. ID namespaces currently include:
 
-* `openalex` (_String_; The OpenAlex ID, which is also found at [`Work.id`](work.md#id))
+* `openalex` (_String_; The [OpenAlex ID](https://docs.openalex.org/entity-objects#the-openalex-id), which is also found at [`Work.id`](work.md#id))
 * `doi` (_String_; The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). This is most likely, but not necessarily, a [Crossref](https://www.crossref.org) DOI)
 * `mag`  (_Integer_; the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `pmid` (_String_; The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
@@ -124,7 +124,7 @@ _String:_ The type or genre of the work.&#x20;
 
 This field uses Crossref's "type" controlled vocabulary; you can see all possible values via the Crossref api here: [https://api.crossref.org/types](https://api.crossref.org/types).&#x20;
 
-Where possible, we just pass along Crossref's `type` value for each work. When that's impossible (eg the work isn't in Crossref), we do our best to figure out the `type` ourselves. Unfortunately the accuracy of Crossref's data for this isn't great, and ours isn't better. We're working to develop better type classification.
+Where possible, we just pass along Crossref's `type` value for each work. When that's impossible (eg the work isn't in Crossref), we do our best to figure out the `type` ourselves. Unfortunately the accuracy of Crossref's data for this isn't great, and ours isn't much better. We're working to develop better type classification.
 
 ```json
 type: "journal-article"
@@ -183,7 +183,7 @@ cited_by_count: 367
 
 ### `biblio`
 
-_Object:_ Old-fashioned bibliographic info for this work. This is mostly useful only in citation/reference contexts. These are all strings because sometimes you'll get fun values like "Spring" and "Inside cover."
+_Object:_ Old-timey bibliographic info for this work. This is mostly useful only in citation/reference contexts. These are all strings because sometimes you'll get fun values like "Spring" and "Inside cover."
 
 * `volume` (_String_)
 * `issue` (_String_)
@@ -215,10 +215,10 @@ is_retracted: false
 
 _Boolean:_ True if we think this work is [paratext](https://en.wikipedia.org/wiki/Paratext).&#x20;
 
-In our context, paratext is stuff that's in scholarly venue (like a journal) but is _about the venue_ rather than a scholarly work properly speaking.  Some examples:
+In our context, paratext is stuff that's in scholarly venue (like a journal) but is _about the venue_ rather than a scholarly work properly speaking.  Some examples and nonexamples:
 
-* **paratext**: front cover, back cover, table of contents, editorial board listing, issue information,  masthead.
-* **not paratext**: research paper, dataset, lettersto the editor, figure.
+* **yep it's paratext**: front cover, back cover, table of contents, editorial board listing, issue information,  masthead.
+* **no,  not paratext**: research paper, dataset, lettersto the editor, figure.
 
 Turns out there is a lot of paratext in registries like Crossref. That's not a bad thing...but we've found that it's good to have a way to filter it out.
 
@@ -230,9 +230,9 @@ is_paratext: false
 
 ### `concepts`
 
-_List:_ List of `dehydratedConcept` dehydrated [Concept objects](concept.md).&#x20;
+_List:_ List of dehydrated [`Concept` objects](concept.md).&#x20;
 
-Each Concept object in the list also has one additional property:
+Each `Concept` object in the list also has one additional property:
 
 * `score` (_Float_): The strength of the connection between the work and this concept (higher is stronger).
 
@@ -282,7 +282,7 @@ mesh: [
 
 ### `alternate_host_venues`
 
-_List:_ List of [`HostVenue`](work.md#the-hostvenue-object) objects describing places this work lives. The primary hosting venue isn't included; it's at [`host_venue`](work.md#host\_venue).&#x20;
+_List:_ List of [`HostVenue`](work.md#the-hostvenue-object) objects describing places this work lives. This work's _primary_ hosting venue isn't in this list; it's at [`host_venue`](work.md#host\_venue).&#x20;
 
 {% hint style="danger" %}
 **Known Issue**: Some venues in this list are missing the `id` field! This should be fixed by February 2022.
@@ -315,7 +315,7 @@ alternate_host_venues: [
 
 ### `referenced_works`
 
-_List:_ OpenAlex IDs for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.&#x20;
+_List:_ [OpenAlex IDs](https://docs.openalex.org/entity-objects#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.&#x20;
 
 ```json
 referenced_works: [
@@ -329,7 +329,7 @@ referenced_works: [
 
 ### `related_works`
 
-_List:_ OpenAlex IDs for works related to this work.&#x20;
+_List:_ [OpenAlex IDs](https://docs.openalex.org/entity-objects#the-openalex-id) for works related to this work.&#x20;
 
 ```json
 related_works: [
@@ -390,19 +390,15 @@ The Authorship object represents a single author and her institutional affiliati
 
 _String:_ A summarized description of this author's position in the work's author list. Possible values are `first`, `middle`, and `last`.&#x20;
 
-It's not strictly necessary, because author order is already implicitly recorded by the list order of `Authorship` objects; however it's useful in some applications to have this as a categorical value.
+It's not strictly necessary, because author order is already implicitly recorded by the list order of `Authorship` objects; however it's useful in some contexts to have this as a categorical value.
 
 ```json
-id: "https://openalex.org/W2741809807"
+author_position: "first"
 ```
-
-
 
 ### `author`
 
-_String:_ An author of this work, as a dehydrated Author object.
-
-It's not strictly necessary, because author order is already implicitly recorded by the list order of `Authorship` objects; however it's useful in some applications to have this as a categorical value.
+_String:_ An author of this work, as a dehydrated [`Author`](author.md) object.
 
 ```json
 author: {

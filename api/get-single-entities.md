@@ -18,11 +18,15 @@ So for example, if you want to get the work with the OpenAlex ID `W2741809807`, 
 
 ``[`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)``
 
-That will return a [Work](../about-the-data/work.md) object, describing everything OpenAlex knows about the work with that ID. Naturally any endpoint will accept an OpenAlex ID, but but many external IDs (eg DOI, ISSN) are accepted as well, in several formats.
+That will return a [`Work`](../about-the-data/work.md) object, describing everything OpenAlex knows about the work with that ID. Naturally any endpoint will accept an OpenAlex ID, but but many external IDs (eg DOI, ISSN) are accepted as well, in several formats.
 
 ## ID formats
 
-The OpenAlex API accepts IDs in one of three formats:
+The OpenAlex API accepts IDs in one of two formats:
+
+{% hint style="info" %}
+For [OpenAlex IDs](https://docs.openalex.org/entity-objects#the-openalex-id), there's a simpler format: you can just use the unique part of the ID (it looks like `w424242`) by itself, without any namespace or URL.
+{% endhint %}
 
 ### **`namespace:id` format**
 
@@ -39,25 +43,13 @@ Many [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_i
 * &#x20;`https://doi.org/10.123`&#x20;
 * `https://openalex.org/w4242`.&#x20;
 
-### ID-only format
+## Supported IDs
 
-{% hint style="info" %}
-This only works for OpenAlex IDs. For all other IDs, you must specify the namespace by using either the [namespace:id](get-single-entities.md#namespace-id) format or [URL format](get-single-entities.md#url).
-{% endhint %}
+For each entity type, you can query by any of the IDs we include in that entity's `ids` property:
 
-Since they're the native IDs for the system, we give OpenAlex IDs special treatment: the unique part of any OpenAlex ID can be used alone, without formatting it as a URL or specifying any namespace.. Example: `w123`
+* ``[`Work.ids`](https://docs.openalex.org/entity-objects/work#ids)``
+* ``[`Author.ids`](https://docs.openalex.org/entity-objects/author#ids)``
+* ``[`Venue.ids`](https://docs.openalex.org/entity-objects/venue#ids)``
+* ``[`Institution.ids`](https://docs.openalex.org/entity-objects/institution#ids)``
+* ``[`Concept.ids`](https://docs.openalex.org/entity-objects/concept#ids)``
 
-
-
-* ## Supported IDs
-
-Here are the IDs and formats supported by each endpoint:
-
-* `/works`&#x20;
-  * `OpenAlex (all formats)`
-  * `DOI (namespace:id, url)`
-  * ``
-* `/authors`
-* `/venues`
-* `/institutions`
-* `/concepts`
