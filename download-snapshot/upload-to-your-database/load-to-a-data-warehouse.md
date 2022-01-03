@@ -126,12 +126,20 @@ with work_authorships_oa as (
    from work_authorships_oa,
    unnest(authorships) as authorship
 )
-select json_value(authorship, '$.author.id') as author_id
+select 
+    json_value(authorship, '$.author.id') as author_id,
+    count(distinct work_id) as num_oa_works
 from flat_authorships
 where is_oa
 group by author_id
-order by count(distinct work_id) desc
+order by num_oa_works desc
 limit 1;
 ```
 
-<mark style="color:yellow;">**TODO: update this when the full data is live**</mark> We get one result, [https://openalex.org/A1969205032](https://openalex.org/A1969205032). Checking out [https://api.openalex.org/authors/A1969205032](https://api.openalex.org/authors/A1969205032), we see that this is our own Heather A. Piwowar. Your results may differ slightly when you query the live dataset.
+We get one result:
+
+| author\_id                       | num\_oa\_works |
+| -------------------------------- | -------------- |
+| https://openalex.org/A2798520857 | 3297           |
+
+Checking out [https://api.openalex.org/authors/A2798520857](https://api.openalex.org/authors/A2798520857), we see that this is Ashok Kumar at Manipal University Jaipur.
