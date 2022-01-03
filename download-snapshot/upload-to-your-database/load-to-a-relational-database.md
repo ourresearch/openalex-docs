@@ -93,7 +93,7 @@ https://openalex.org/C41008148,https://openalex.org/C121332964,143.935
 Now we run one postgres copy command to load each CSV file to its corresponding table. Each command looks like this:
 
 ```
-\copy openalex.concepts from csv-files/concepts.csv csv header
+\copy openalex.concepts_ancestors (concept_id, ancestor_id) from csv-files/concepts_ancestors.csv csv header
 ```
 
 This script will run all the copy commands in the right order: [https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4](https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4). Here's how to run it:
