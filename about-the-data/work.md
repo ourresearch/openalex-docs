@@ -329,7 +329,7 @@ referenced_works: [
 
 ### `related_works`
 
-_List:_ OpenAlex IDs for works related to this work.&#x20;
+_List:_ [OpenAlex IDs](./#the-openalex-id) for works related to this work.&#x20;
 
 ```json
 related_works: [
