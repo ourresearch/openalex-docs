@@ -12,7 +12,7 @@ The OpenAlex dataset describes scholarly _entities_ and how those entities are c
 * :school: [Institutions](institution.md) are universities and other orgs that are _affiliated with_ works (via authors)
 * :bulb: [Concepts](concept.md) _tag_ Works with a topic
 
-Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of of hundreds of millions of entities and over a billion connections between them all..
+Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of hundreds of millions of entities and over a billion connections between them all.
 
 ## The OpenAlex ID
 
@@ -22,13 +22,13 @@ The OpenAlex ID is the primary key for all entities. Its canonical format is a U
 
 The resource served at that URL is always the same, but its representation depends on what you ask for. By default, you'll get a webpage. If you [append a `.json` to the ID](https://openalex.org/W2741809807.json), you'll get the same resource but in JSON, via our [API](../api/).
 
-The first letter in the unique part of the ID tells you what kind of entity you've got. In the example above, the unique part of the ID is `W2741809807`; the `W` at the front tells us that this is a work. The other possible first letters are `A` (author), `V` (venue), `I` (institution), and `C` (concept). The IDs are not case-sensitive, so `w2741809807` is just as valid as `W2741809807`.
+The first letter in the unique part of the ID tells you what kind of entity you've got. In the example above, the unique part of the ID is `W2741809807`; the `W` at the front tells us that this is a `Work`. The other possible first letters are `A` (`Author`), `V` (`Venue`), `I` (`Institution`), and `C` (`Concept`). The IDs are not case-sensitive, so `w2741809807` is just as valid as `W2741809807`.
 
 Because OpenAlex was launched as a replacement for [Microsoft Academic Graph (MAG)](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), OpenAlex IDs are designed to be backwards-compatible with MAG IDs. To find the MAG ID, just take the first letter off the front of the unique part of the ID (so in the example above, the MAG ID is `2741809807`). Of course this won't yield anything useful for entities that don't have a MAG ID.
 
 ## Dehydrated entity objects
 
-The full entity objects can get pretty unwieldy, especially when you're embedding a list of them in another object (for instance, a list of concepts in a work). For these cases, all the entities except works have a dehydrated version. This is a stripped-down representation of the entity that carries only its most essential properties. These properties are documented individually on their respective entity pages.
+The full entity objects can get pretty unwieldy, especially when you're embedding a list of them in another object (for instance, a list of `Concept`s in a `Work`). For these cases, all the entities except `Work`s have a dehydrated version. This is a stripped-down representation of the entity that carries only its most essential properties. These properties are documented individually on their respective entity pages.
 
 ##
 
