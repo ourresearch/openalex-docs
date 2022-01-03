@@ -18,7 +18,7 @@ For the most part, the OpenAlex data dump is formatted just like the MAG one, fo
 
 ## **2. Data changes️**
 
-There are four main relationships between the data/features of OpenAlex and MAG: [Unsupported](https://docs.openalex.org/download-snapshot/mag-format/mag-migration-guide#2.1-unsupported),  [Frozen](https://docs.openalex.org/download-snapshot/mag-format/mag-migration-guide#2.2-frozen)[,](https://openalex.org/mag-migration-guide#data-changes-archival) [Ongoing](https://docs.openalex.org/download-snapshot/mag-format/mag-migration-guide#2.3-ongoing), and [New](https://docs.openalex.org/download-snapshot/mag-format/mag-migration-guide#2.4-new).&#x20;
+There are four main relationships between the data/features of OpenAlex and MAG: [Unsupported](https://docs.openalex.org/download-snapshot/mag-format/mag-migration-guide#2.1-unsupported), [Frozen](https://docs.openalex.org/download-snapshot/mag-format/mag-migration-guide#2.2-frozen)[,](https://openalex.org/mag-migration-guide#data-changes-archival) [Ongoing](https://docs.openalex.org/download-snapshot/mag-format/mag-migration-guide#2.3-ongoing), and [New](https://docs.openalex.org/download-snapshot/mag-format/mag-migration-guide#2.4-new).&#x20;
 
 Below, we dig in to the different data types:
 
@@ -27,7 +27,7 @@ Below, we dig in to the different data types:
 These are MAG data types and functionality that are _not included_ in OpenAlex.
 
 * **Patents:** MAG included data for patents; OpenAlex doesn't.
-* **MAKES:** MAG included code to help you create a private, locally-hosted REST API. This was called [MAKES,](https://docs.microsoft.com/en-us/academic-services/knowledge-exploration-service/?view=makes-3.0) and OpenAlex doesn't support it. Instead, we support a single [centrally-hosted REST API](https://openalex.org/rest-api) that anyone can use, without having to host it or get the code running. Of course, if you want to create your own local API to serve the dataset you can still do that.
+* **MAKES:** MAG included code to help you create a private, locally-hosted REST API. This was called [MAKES,](https://docs.microsoft.com/en-us/academic-services/knowledge-exploration-service/?view=makes-3.0) and OpenAlex doesn't support it. Instead, we support a single [centrally-hosted REST API](https://docs.openalex.org/api) that anyone can use, without having to host it or get the code running. Of course, if you want to create your own local API to serve the dataset you can still do that.
 
 ### **2.2 Frozen ❄️**
 
@@ -35,9 +35,9 @@ This data is included in OpenAlex but is _no longer be updated._
 
 This frozen data will remain useful for many purposes, including backwards compatibility and historical research — but it's important to remember it'll become increasingly stale, and increasingly unsuitable for many use cases.
 
-Please see the [schema docs](https://openalex.org/schema) to get the detailed, column-level documentation for which data will be frozen. But here's a high-level overview:
+Please see the [schema docs](https://docs.openalex.org/download-snapshot/mag-format/mag-format-schema) to get the detailed, column-level documentation for which data will be frozen. But here's a high-level overview:
 
-* **Rank:** MAG computed a "rank" property for lots of things. We won't continue to update this rank after Jan 3.
+* **Rank:** MAG computed a "rank" property for lots of things. We are no longer updating this rank.
 * **Family:** MAG's concept of "family" was used to group a preprint with its associated paper. Instead, OpenAlex treats a preprint and associated paper as the _same work,_ with two different _versions._ That version relationship is enumerated in the new [PaperUrls.version](https://openalex.org/schema#PaperUrls\_Version) column.
 * **GRID IDs:** GRID has now been [officially replaced](https://www.digital-science.com/grid-passes-the-torch-to-ror-faqs/) by [ROR,](https://ror.org) and we'll stop updating GRID IDs, and use ROR IDs instead. Since there's a simple 1-to-1 mapping between them, it's easy to [transition from GRID to ROR.](https://ror.readme.io/docs/gridror-transition-faq)
 * **Conferences:** In an early announcement, we said OpenAlex might not support conference papers. This turns out to be only partly true. We actually will index the vast majority of conference _papers._ However, we won't do a good job of indexing the _conference instances_ and _conference series_ that publish the papers.&#x20;
@@ -53,7 +53,7 @@ For many MAG use cases, you'll be able to ignore this transition, as the data wi
 
 Because we get a lot of questions about a few specific MAG data types, we're listing them below to clear up any confusion — but keep in mind this list is not comprehensive:
 
-* **Updates every two weeks:** Like MAG, we continue to release a new [data dump,](https://openalex.org/data-dump) updated with all the latest data, every two weeks or so.
+* **Updates every two weeks:** Like MAG, we continue to release a [MAG-format data dump](https://docs.openalex.org/download-snapshot/mag-format/how-to-download), updated with all the latest data, every two weeks or so.
 * **Author name disambiguation (AND):** Like MAG, OpenAlex uses document properties (title, topic, journal, etc) to identify and assign unique author IDs, even when authors share a name — so you'll see one ID for the biologist Jane Smith, and a different one for the Jane Smith who's an art historian. Also like MAG, we identify two name strings as referring to the same person even if they are written differently ("J smith" and "Jane Smith").
 * **Work clustering:** Like MAG, we infer that two papers are the same, even when they don't have [PIDs.](https://en.wikipedia.org/wiki/Persistent\_identifier) We use fingerprint-based fuzzy matching that's robust again typos, and can identify different versions of the same paper (preprint and version of record, for example).
 * **Institution identification:** Like MAG, we identify authors' institutions, even there are no [PIDs](https://en.wikipedia.org/wiki/Persistent\_identifier) or other structured metadata to use.
@@ -67,7 +67,7 @@ These data types and functions are included in OpenAlex, but were _not in Micros
 * **Full ISSN support:** OpenAlex provides a comprehensive list of ISSNs associated with each journal, including the [ISSN-L](https://www.issn.org/understanding-the-issn/assignment-rules/the-issn-l-for-publications-on-multiple-media/), the standard for for deduplicating journals.
 * **ORCID:** In addition to disambiguating authors, OpenAlex also matches authors to their [ORCID](https://orcid.org) IDs.
 * **ROR:** We report [ROR](https://ror.org) IDs, the new standard which has replaced the old GRID system. Since there's a simple 1-to-1 mapping between them, it's easy to [transition from GRID to ROR.](https://ror.readme.io/docs/gridror-transition-faq)
-* **REST API:** Because not everyone has the time and money to manage a 500GB dataset, we're launching a free [REST API](https://openalex.org/rest-api) that will support easy, expressive access to the dataset without the need for much technical knowledge.
+* **REST API:** Because not everyone has the time and money to manage a 500GB dataset, we're launching a [free REST AP](https://docs.openalex.org/api)I that will support easy, expressive access to the dataset without the need for much technical knowledge.
 
 ## **3. Coverage comparison**
 
