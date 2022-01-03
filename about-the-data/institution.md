@@ -85,7 +85,7 @@ image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Unive
 _String:_ Acronyms or initialisms that people sometimes use instead of the full [`display_name`](institution.md#display\_name).
 
 ```json
-display_name_acroynyms:["UNC"]
+display_name_acronyms:["UNC"]
 ```
 
 ### `display_name_alternatives`
