@@ -28,11 +28,7 @@ id: "https://openalex.org/W2741809807"
 
 _String:_ The DOI for the work.
 
-Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on bioRxiv, and another DOI for the published version. However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the&#x20;
-
-
-
-&#x20;list.&#x20;
+Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on bioRxiv, and another DOI for the published version. However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the [`alternate_host_venues`](work.md#alternate\_host\_venues) list.&#x20;
 
 ```json
 doi: "https://doi.org/10.7717/peerj.4375"
@@ -51,10 +47,8 @@ title: "The state of OA: a large-scale analysis of the prevalence and impact of 
 _String:_ Exactly the same as Work.title. It's included as a bit of [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic\_sugar): all the other types of entities have a `display_name` property, so it'd be weird for the Work to not have one.
 
 ```json
-title: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
+display_name: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
 ```
-
-``
 
 ### `publication_year`
 
