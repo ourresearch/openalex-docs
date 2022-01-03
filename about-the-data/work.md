@@ -28,7 +28,11 @@ id: "https://openalex.org/W2741809807"
 
 _String:_ The DOI for the work.
 
-Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on bioRxiv, and another DOI for the published version. However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the `alternate_locations` list.&#x20;
+Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on bioRxiv, and another DOI for the published version. However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the&#x20;
+
+
+
+&#x20;list.&#x20;
 
 ```json
 doi: "https://doi.org/10.7717/peerj.4375"
@@ -284,7 +288,11 @@ mesh: [
 
 ### `alternate_host_venues`
 
-_List:_ List of [`HostVenue`](work.md#the-hostvenue-object) objects describing other places this work lives, beside the main one (the main one is at [`host_venue`](work.md#host\_venue)).&#x20;
+_List:_ List of [`HostVenue`](work.md#the-hostvenue-object) objects describing places this work lives. The primary hosting venue isn't included; it's at [`host_venue`](work.md#host\_venue).&#x20;
+
+{% hint style="danger" %}
+**Known Issue**: Some venues in this list are missing the `id` field! This should be fixed by February 2022.
+{% endhint %}
 
 ```json
 alternate_host_venues: [
