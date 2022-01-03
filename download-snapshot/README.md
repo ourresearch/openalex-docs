@@ -1,7 +1,7 @@
 # Download snapshot
 
 {% hint style="info" %}
-This section is about the OpenAlex Standard Format snapshot. If need a drop-in replacement for [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), see the docs for the [MAG format](mag-format/).
+This section is about the OpenAlex Standard Format snapshot. If you need a drop-in replacement for [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), see the docs for the [MAG format](mag-format/).
 {% endhint %}
 
 For most use cases, the REST API is your best option. However, you can also download and install a complete copy of the OpenAlex database on your own server, using the database snapshot. The snapshot consists of five files (split into smaller files for convenience), with one file for each of our five entity types. The files are in the [JSON Lines](https://jsonlines.org) format; each line is a JSON object, exactly the same as [you'd get from our API.](../api/get-single-entities.md) The properties of these JSON objects are documented in the [Entity objects](../about-the-data/) section.
