@@ -1,14 +1,8 @@
 # 🏫 Institution
 
-
-
-his is intro stuff about venues
-
-* the examples are from [https://api.openalex.org/institutions/I114027177](https://api.openalex.org/institutions/I114027177)
-* you can get an institution in 3 ways: download, API, and website
-* where do they come from? scraped from pages
-* rely heavily on ror
-*
+{% hint style="info" %}
+**Documentation in progress**. This page is still being written, and will be complete on January 3, 2022.
+{% endhint %}
 
 
 
@@ -214,9 +208,7 @@ associated_insitutions: [
 
 ### `counts_by_year`
 
-_List:_ [`works_count`](institution.md#works\_count) and [`cited_by_count`](institution.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this venue started hosting, and how many times _any_ work in this venue got cited. **todo clarify**
-
-_List:_ The values of [`works_count`](institution.md#works\_count) and [`cited_by_count`](institution.md#cited\_by\_count) for _each_ of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works were affiliated with this institution, and how many times _any_ work affiliated with this institution got cited.
+_List:_ [`works_count`](institution.md#works\_count) and [`cited_by_count`](institution.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this venue started hosting, and how many times _any_ work in this venue got cited.
 
 ```json
 counts_by_year: [

@@ -1,40 +1,8 @@
 # 💡 Concept
 
-## notes
-
-* these come from wikidata. there are many concept taxonomies but this is ours.
-* there are different levels
-* there are 80k of them
-* they're assigned automatically.
-
-
-
-* `id` (_String_): The OpenAlex ID for this concept.
-* `wikidata` (_String_): The Wikidata URL for this concept.
-* `display_name` (_String_): The name of the concept.
-* `level` (_Integer_): This concept's level on the concept tree. Root concepts are Level 0 (eg: `Biology`). Level 1 concepts (eg: `Microbiology`) are children of level 0, and so forth.&#x20;
-* `score` (_Float_): The strength of the connection between the work and this concept (higher is stronger).
-
-his is intro stuff about venues
-
-* the examples are from [https://api.openalex.org/institutions/I114027177](https://api.openalex.org/institutions/I114027177)
-* you can get an institution in 3 ways: download, API, and website
-
-
-
-## The concept tree
-
-* it's a directed graph
-* there are some orphans
-* there can be more than one parent
-* 0 is the bottom layer
-* there are \_\_ layers
-* see justin's stuff for more details
-* source
-  * based on mag
-  * now wikidata
-
-
+{% hint style="info" %}
+**Documentation in progress**. This page is still being written, and will be complete on January 3, 2022.
+{% endhint %}
 
 ## The `Concept` object
 
