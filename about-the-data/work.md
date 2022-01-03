@@ -44,7 +44,7 @@ title: "The state of OA: a large-scale analysis of the prevalence and impact of 
 
 ### `display_name`
 
-_String:_ Exactly the same as [`Work.title`](work.md#title-1). It's useful for Works to include a `display_name` property, since all the other entities have one.
+_String:_ Exactly the same as [`Work.title`](work.md#title-1). It's useful for `Work`s to include a `display_name` property, since all the other entities have one.
 
 ```json
 display_name: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
@@ -98,7 +98,7 @@ _Object:_ A [`HostVenue`](work.md#the-hostvenue-object) object describing how an
 
 ```json
 host_venue: {
-    // this top stuff is the same as a dehydreated Venue object
+    // this top stuff is the same as a dehydrated Venue object
     id: "https://openalex.org/V1983995261",
     issn_l: "2167-8359",
     issn: [
@@ -108,7 +108,7 @@ host_venue: {
     publisher: "PeerJ",
     type: "journal",
     
-    // this stuff is extra, and relates this work at this venue.
+    // this stuff is extra, and relates to this work at this venue
     url: "https://doi.org/10.7717/peerj.4375",
     is_oa: null,
     version: null,
