@@ -456,14 +456,14 @@ The HostVenue object describes a given work hosted on a given venue (you can thi
 
 The extra stuff is important because a given work can be hosted in different ways and in different forms, depending on where it's living.&#x20;
 
-To learn more about the dehydrated Venue object part, see the dehydrated Venue docs. To learn more about the other stuff, read below:
+To learn more about the dehydrated Venue object part, see the [DehydratedVenue](venue.md#the-dehydratedvenue-object) docs. To learn more about the other stuff, read below:
 
 ### `url`
 
 _String:_ The URL where you can access this work.
 
 ```json
-id: "https://openalex.org/W2741809807"
+id: "https://doi.org/10.7717/peerj.4375"
 ```
 
 ### `is_oa`
@@ -471,19 +471,19 @@ id: "https://openalex.org/W2741809807"
 _Boolean:_ Set to `true` if the work hosted here can be read for free, without registration.
 
 ```json
-id: "https://openalex.org/W2741809807"
+is_oa: true
 ```
 
 ### `version`
 
 _String:_ The version of the work, based on the [DRIVER Guidelines versioning scheme.](https://wiki.surfnet.nl/display/DRIVERguidelines/DRIVER-VERSION+Mappings) Possible values are:.
 
-* `PublishedVersion`: The document’s version of record. This is the most authoritative version.
-* `AcceptedVersion`: The document after having completed peer review and being officially accepted for publication. It will lack publisher formatting, but the _content_ should be interchangeable with the that of the `PublishedVersion`.
-* `SubmittedVersion`: the document as submitted to the publisher by the authors, but _before_ peer-review. It's content may differ significantly from that of the accepted article.
+* `publishedVersion`: The document’s version of record. This is the most authoritative version.
+* `acceptedVersion`: The document after having completed peer review and being officially accepted for publication. It will lack publisher formatting, but the _content_ should be interchangeable with the that of the `publishedVersion`.
+* `submittedVersion`: the document as submitted to the publisher by the authors, but _before_ peer-review. Its content may differ significantly from that of the accepted article.
 
 ```json
-id: "https://openalex.org/W2741809807"
+version: "publishedVersion"
 ```
 
 ### `license`
@@ -491,7 +491,7 @@ id: "https://openalex.org/W2741809807"
 _String:_ The license applied to this work at this host.  Most toll-access works don't have an explicit license (they're under "all rights reserved" copyright), so this field generally has content only if `is_oa` is `true`.
 
 ```json
-id: "https://openalex.org/W2741809807"
+license: "cc-by"
 ```
 
 
