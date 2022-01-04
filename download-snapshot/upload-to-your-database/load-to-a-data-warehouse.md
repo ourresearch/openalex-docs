@@ -77,6 +77,12 @@ do
 done
 ```
 
+{% hint style="info" %}
+This step is slow. _How_ slow depends on your upload speed, but for `Author` and `Work` we're talking hours, not minutes.
+
+You can speed this up by using [`parallel`](https://www.gnu.org/software/parallel/) or other tools to run multiple upload commands at once. If you do, watch out for errors caused by hitting [BigQuery quota](https://cloud.google.com/bigquery/docs/troubleshoot-quotas) limits.
+{% endhint %}
+
 Do this once per entity type, substituting each entity name for `work`/`works` as needed. When you’re finished, you’ll have five tables that look like this:
 
 ![a screenshot of two rows of the works table from the BigQuery console](<../../.gitbook/assets/Screen Shot 2021-12-29 at 11.57.21 AM.png>)
