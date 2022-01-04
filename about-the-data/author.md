@@ -60,7 +60,7 @@ cited_by_count: 38
 
 ### `ids`
 
-_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this `author`, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. the `openalex` ID is the same one you'll find at [Author.id](author.md#id). All the IDs are strings except for  `mag`, which is an integer.
+_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this author, as `key`: `value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. The [`openalex` ID](./#the-openalex-id) is the same one you'll find at [Author.id](author.md#id). All the IDs are strings except for `mag`, which is an integer.
 
 ```json
 ids: {
