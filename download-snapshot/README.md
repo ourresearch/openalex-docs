@@ -21,5 +21,5 @@ This is hard. Working with such a big and complicated dataset hardly ever goes a
 
 There’s more than one way to do everything. We’ve tried to pick one reasonable default way to do each step, so if something doesn’t work in your environment or with the tools you have available, let us know.
 
-Next: [downloading the data](download-to-your-machine.md) and [getting it into your database](upload-to-your-database/).
+Up next: [downloading the data](download-to-your-machine.md) and [getting it into your database](upload-to-your-database/).
 
