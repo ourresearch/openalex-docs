@@ -162,7 +162,7 @@ todo add examples
 
 ## Pagination
 
-To page through results, specify the page you want using the `?page` query parameter. By default there are 25 results per page; you can use the `?per_page` parameter to change that to any number between 0 and 50.
+To page through results, specify the page you want using the `?page` query parameter. By default there are 25 results per page; you can use the `?per-page` parameter to change that to any number between 0 and 50.
 
 Currently you can only use paging to read the first 10,000 results of any list. To read more, you'll need to use cursor pagination, which we haven't implemented. Yet :smile:.
 
