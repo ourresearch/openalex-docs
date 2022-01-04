@@ -63,6 +63,8 @@ So if you made your copy of the snapshot on 2021-12-30, you would only need to d
 To update a snapshot copy that you created or updated on date X, insert or update the records in objects where updated\_date > _X._
 {% endhint %}
 
+You never need to go back for a partition you've already downloaded. Anything that changed isn't there anymore, it's in a new partition.
+
 ### The `manifest` file&#x20;
 
 When we start writing a new `updated_date` partition for an entity, we'll delete that entity's `manifest` file. When we finish writing the partition, we'll recreate the manifest, including the newly-created objects. So if `manifest` is there, all the entities are there too.
@@ -73,6 +75,6 @@ The file is in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/d
 2. Get the file list from the `url` property of each item in the `entries` list.
 3. Download any objects with an `updated_date` you haven't seen before.
 4. Download `s3://data/authors/manifest` again. If it hasn't changed since (1), no records moved around and any date partitions you downloaded are valid.
-5. &#x20;Decompress the files you downloaded parse one JSON `Author` per line. Insert or update into your database of choice, using [each entity's ID](../about-the-data/#the-openalex-id) as a primary key.
+5. Decompress the files you downloaded parse one JSON `Author` per line. Insert or update into your database of choice, using [each entity's ID](../about-the-data/#the-openalex-id) as a primary key.
 
 If you’ve worked with dataset like this before and have a toolchain picked out, this may be all you need to know. If you want more detailed steps, proceed to [download the data](download-to-your-machine.md).
