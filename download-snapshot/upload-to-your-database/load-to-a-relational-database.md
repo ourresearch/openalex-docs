@@ -44,7 +44,7 @@ CREATE TABLE openalex.concepts_related_concepts (
 );
 ```
 
-We can preserve `score` in this relationship table and look up any other attributes of the [dehydrated](../../about-the-data/#dehydrated-entity-objects) related concepts in the main table `concepts`. Creating indexes on `concept_id` and  `related_concept_id` lets up look up concepts on both sides of the relationship quickly.
+We can preserve `score` in this relationship table and look up any other attributes of the [dehydrated](../../about-the-data/#dehydrated-entity-objects) related concepts in the main table `concepts`. Creating indexes on `concept_id` and  `related_concept_id` lets us look up concepts on both sides of the relationship quickly.
 
 ## Step 2: Convert the JSON Lines files to CSV
 
