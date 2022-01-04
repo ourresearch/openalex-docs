@@ -10,4 +10,4 @@ If you’ve worked with dataset like this before and have a toolchain picked out
 * Since you’re making a fresh snapshot, just get all the `.gz` files. The date prefixes aren’t important unless you are doing an incremental update.
 * The data files are gzip-compressed [JSON Lines](https://jsonlines.org), one row per entity.
 
-The structure of each entity type is documented here: [work](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/work), [author](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/author), [venue](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/venue), [institution](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/institution), and [concept](https://app.gitbook.com/o/q9WAeozYo93Avo9VPiOf/s/Sj6S26Opvy3KVj3QQGMc/about-the-data/concept).
+The structure of each entity type is documented here: [Work](../about-the-data/work.md), [Author](../about-the-data/author.md), [Venue](../about-the-data/venue.md), [Institution](../about-the-data/institution.md), and [Concept](../about-the-data/concept.md).
