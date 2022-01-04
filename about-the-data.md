@@ -18,6 +18,12 @@ OpenAlex is not doing this alone! Rather, we're aggregating and standardizing da
 * Web crawls
 * Subject-area and institutional repositories from [arXiv](https://arxiv.org) to [Zenodo](https://zenodo.org) and everywhere in between
 
+## Known issues
+
+{% hint style="info" %}
+This section is currently being written, and will be done on 4 Jan 2022.
+{% endhint %}
+
 
 
 ## Reporting bugs
