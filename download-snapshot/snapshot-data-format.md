@@ -1,0 +1,78 @@
+# Snapshot data format
+
+Here are the details on where the OpenAlex data lives and how it's structured.
+
+* All the data is stored in [Amazon S3](https://aws.amazon.com/s3/), in the `openalex` bucket.
+* The data files are gzip-compressed [JSON Lines](https://jsonlines.org), one row per entity.
+* The bucket contains one prefix (folder) for each entity type: work, author, venue, institution, and concept.
+* Records are partitioned by [updated\_date](../about-the-data/work.md#updated\_date). Within each entity type prefix, each object (file) is further prefixed by this date. For example, if an [`Author`](../about-the-data/author.md) has an updated\_date of 2021-12-30 it will be prefixed`/data/authors/updated_date=2021-12-30/`.
+  * &#x20;If you're initializing a fresh snapshot, the `updated_date` partitions aren't important yet. You need all the entities, so for Works you would get `/data/works/*/*.gz`
+* There are multiple objects under each `updated_date` partition. Each is under 2GB.
+* The manifest file is JSON (in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-files-using-manifest.html) format) and lists all the data files for each object type - `/data/works/manifest` lists all the works.
+
+The structure of each entity type is documented here: [Work](../about-the-data/work.md), [Author](../about-the-data/author.md), [Venue](../about-the-data/venue.md), [Institution](../about-the-data/institution.md), and [Concept](../about-the-data/concept.md).
+
+### Downloading updated records
+
+Once you have a copy of the snapshot, you'll need to keep it up to date. The `updated_date` partitions make this easy, but the way they work may be unfamiliar. Unlike a set of dated snapshots that each contain the full dataset as of a certain date, each partition contains the records that last changed on that date.
+
+If we imagine launching OpenAlex on 2021-12-30 with 1000 `Authors`, each being newly created on that date, `/data/authors/` looks like this:
+
+```
+/data/authors/
+├── manifest
+└── updated_date=2021-12-30 [1000 Authors]
+    ├── 0000_part_00.gz
+    ...
+    └── 0031_part_00.gz
+```
+
+If, on 2022-01-04, we made changes to 50 of those `Authors`, they would go _out of_ one of the files in `/data/authors/updated_date=2021-12-30` and _into_ one in `/data/authors/updated_date=2022-01-04:`
+
+```
+/data/authors/
+├── manifest
+├── updated_date=2021-12-30 [950 Authors]
+│   ├── 0000_part_00.gz
+│   ...
+│   └── 0031_part_00.gz
+└── updated_date=2022-01-04 [50 Authors]
+    ├── 0000_part_00.gz
+    ...
+    └── 0031_part_00.gz
+```
+
+If we also discovered 50 _new_ Authors, they would go in that same partition, so the totals would look like this:
+
+```
+/data/authors/
+├── manifest
+├── updated_date=2021-12-30 [950 Authors]
+│   ├── 0000_part_00.gz
+│   ...
+│   └── 0031_part_00.gz
+└── updated_date=2022-01-04 [100 Authors]
+    ├── 0000_part_00.gz
+    ...
+    └── 0031_part_00.gz
+```
+
+So if you made your copy of the snapshot on 2021-12-30, you would only need to download `/data/authors/updated_date=2022-01-04` to get everything that was changed or added since then.
+
+{% hint style="info" %}
+To update a snapshot copy that you created or updated on date X, insert or update the records in objects where updated\_date > _X._
+{% endhint %}
+
+### The `manifest` file&#x20;
+
+When we start writing a new `updated_date` partition for an entity, we'll delete that entity's `manifest` file. When we finish writing the partition, we'll recreate the manifest, including the newly-created objects. So if `manifest` is there, all the entities are there too.
+
+The file is in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-files-using-manifest.html) format. To use it as part of the update process for an Entity type (we'll keep using Authors as an example):
+
+1. Download `s3://data/authors/manifest.`
+2. Get the file list from the `url` property of each item in the `entries` list.
+3. Download any objects with an `updated_date` you haven't seen before.
+4. Download `s3://data/authors/manifest` again. If it hasn't changed since (1), no records moved around and any date partitions you downloaded are valid.
+5. &#x20;Decompress the files you downloaded parse one JSON `Author` per line. Insert or update into your database of choice, using [each entity's ID](../about-the-data/#the-openalex-id) as a primary key.
+
+If you’ve worked with dataset like this before and have a toolchain picked out, this may be all you need to know. If you want more detailed steps, proceed to [download the data](download-to-your-machine.md).

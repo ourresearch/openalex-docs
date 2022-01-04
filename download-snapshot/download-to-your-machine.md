@@ -6,7 +6,7 @@ First off: anyone can get the data for free. While the files are hosted on [S3](
 Many thanks to the [AWS Open Data program](https://aws.amazon.com/opendata/). They cover the data-transfer fees (about $70 per download!) so users don't have to.
 {% endhint %}
 
-Before you load the snapshot contents to your database, you’ll need to get the files that make it up onto your own computer. There are exceptions, like [loading to redshift from s3](https://docs.aws.amazon.com/redshift/latest/dg/tutorial-loading-data.html) or using an ETL product like [Xplenty](https://xplenty.com) with an S3 connector. If either of these apply to you, try [just the highlights](just-the-highlights.md).
+Before you load the snapshot contents to your database, you’ll need to get the files that make it up onto your own computer. There are exceptions, like [loading to redshift from s3](https://docs.aws.amazon.com/redshift/latest/dg/tutorial-loading-data.html) or using an ETL product like [Xplenty](https://xplenty.com) with an S3 connector. If either of these apply to you, try [just the highlights](snapshot-data-format.md).
 
 The easiest way to get the files is with the Amazon Web Services Command Line Interface (AWS CLI). Sample commands in this documentation will use the AWS CLI. You can find instructions for installing it on your system here: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 

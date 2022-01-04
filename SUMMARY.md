@@ -7,7 +7,7 @@
   * [Get groups of entities](api/get-groups-of-entities.md)
 * [Website](website.md)
 * [Download snapshot](download-snapshot/README.md)
-  * [Just the highlights](download-snapshot/just-the-highlights.md)
+  * [Snapshot data format](download-snapshot/snapshot-data-format.md)
   * [Download to your machine](download-snapshot/download-to-your-machine.md)
   * [Upload to your database](download-snapshot/upload-to-your-database/README.md)
     * [Load to a data warehouse](download-snapshot/upload-to-your-database/load-to-a-data-warehouse.md)
