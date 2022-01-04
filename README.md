@@ -14,8 +14,8 @@ Together, these make a huge web (or more technically, heterogeneous directed [gr
 
 There are three ways to access the OpenAlex dataset:
 
-* The [website](website.md) (launching February 2022)
-* the [API](api/), and
+* the [API](api/)
+* the [website](website.md) (launching February 2022), and
 * the [database snapshot](download-snapshot/).
 
 This documentation has sections for each of these three. There are also a section about the [entity objects](about-the-data/) that make up OpenAlex, as well as information [about the data](about-the-data.md) more broadly, and of course a [FAQ](faq.md).
