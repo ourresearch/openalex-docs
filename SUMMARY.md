@@ -1,11 +1,11 @@
 # Table of contents
 
 * [Welcome!](README.md)
-* [Website](website.md)
 * [API](api/README.md)
   * [Get single entities](api/get-single-entities.md)
   * [Get lists of entities](api/get-lists-of-entities.md)
   * [Get groups of entities](api/get-groups-of-entities.md)
+* [Website](website.md)
 * [Download snapshot](download-snapshot/README.md)
   * [Just the highlights](download-snapshot/just-the-highlights.md)
   * [Download to your machine](download-snapshot/download-to-your-machine.md)
