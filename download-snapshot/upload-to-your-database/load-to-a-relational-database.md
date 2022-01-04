@@ -69,6 +69,17 @@ mkdir -p csv-files
 python3 flatten-openalex-jsonl.py
 ```
 
+{% hint style="info" %}
+This script is slow. Exactly how slow depends on the machine you run it on, but think hours, not minutes.
+
+
+
+If you're familiar with python, there are two big improvements you can make:
+
+* Run [`flatten_authors`](https://gist.github.com/richard-orr/152d828356a7c47ed7e3e22d2253708d#file-flatten-openalex-jsonl-py-L558) and [flatten\_works](https://gist.github.com/richard-orr/152d828356a7c47ed7e3e22d2253708d#file-flatten-openalex-jsonl-py-L559) at the same time, either by using threading in python or just running two copies of the script with the appropriate lines commented out.
+* Flatten multiple `.gz` files within each entity type at the same time. This means parallelizing the `for jsonl_file_name ... loop` in each `flatten_` function and writing multiple CSV files per entity type.
+{% endhint %}
+
 You should now have a directory full of nice, flat CSV files:
 
 ```
