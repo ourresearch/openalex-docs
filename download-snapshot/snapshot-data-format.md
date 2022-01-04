@@ -65,6 +65,15 @@ To update a snapshot copy that you created or updated on date X, insert or updat
 
 You never need to go back for a partition you've already downloaded. Anything that changed isn't there anymore, it's in a new partition.
 
+At the time of writing, these are the `Author` partitions and the number of records in each (in the actual dataset):
+
+* `updated_date=2021-12-30/` - 62,573,099&#x20;
+* `updated_date=2022-12-31/` - 97,559,192&#x20;
+* `updated_date=2022-01-01/` - 46,766,699&#x20;
+* `updated_date=2022-01-02/` - 1,352,773
+
+This reflects the creation of the dataset on 2021-12-30 and 145,678,664 combined updates and inserts on since then - 1,352,773 of which were on 2022-01-02. Over time, the number of partitions will grow. If we make a change that affects all records, the partitions before the date of the change will disappear.
+
 ### The `manifest` file&#x20;
 
 When we start writing a new `updated_date` partition for an entity, we'll delete that entity's `manifest` file. When we finish writing the partition, we'll recreate the manifest, including the newly-created objects. So if `manifest` is there, all the entities are there too.
