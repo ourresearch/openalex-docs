@@ -267,13 +267,15 @@ mesh: [
         descriptor_ui: "D017712",
         descriptor_name: "Peer Review, Research",
         qualifier_ui: "Q000379",
-        qualifier_name: "methods"
+        qualifier_name: "methods",
+        is_major_topic: false
     },
     {
         descriptor_ui: "D017712",
         descriptor_name: "Peer Review, Research",
         qualifier_ui: "Q000592",
-        qualifier_name: "standards"
+        qualifier_name: "standards",
+        is_major_topic: true
     }
 ]
 ```
