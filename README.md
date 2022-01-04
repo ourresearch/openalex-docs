@@ -20,5 +20,5 @@ There are three ways to access the OpenAlex dataset:
 
 This documentation has sections for each of these three. There are also a section about the [entity objects](about-the-data/) that make up OpenAlex, as well as information [about the data](about-the-data.md) more broadly, and of course a [FAQ](faq.md).
 
-OpenAlex is made with ❤︎ by [OurResearch,](https://ourresearch.org) with generous support from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk).
+OpenAlex is made with love by [OurResearch,](https://ourresearch.org) with generous support from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk).
 
