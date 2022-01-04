@@ -10,7 +10,7 @@ There are three component objects that are only used as part of a `Work`:&#x20;
 * [HostVenue](work.md#the-hostvenue-object)
 * [OpenAccess](work.md#the-openaccess-object)
 
-The examples in this page are all drawn from this work: [https://openalex.org/W2741809807](https://openalex.org/W2741809807) (tip: if you want to see this or any other OpenAlex entity in the API, just add a ".json" to the end)
+The examples in this page are all drawn from this work: [https://openalex.org/W2741809807](https://openalex.org/W2741809807) (tip: if you want to see this or any other OpenAlex entity in the API, just add a ".json" to the end like [https://openalex.org/W2741809807.json](https://openalex.org/W2741809807.json) )
 
 
 
