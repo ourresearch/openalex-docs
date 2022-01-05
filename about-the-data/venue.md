@@ -1,7 +1,7 @@
 # 📚 Venue
 
 {% hint style="info" %}
-**Documentation in progress**. This page is still being written, and will be complete in January 2022.
+**Documentation in progress**. This page is still being written, and will be complete on January 3, 2022.
 {% endhint %}
 
 ## the `Venue` object
