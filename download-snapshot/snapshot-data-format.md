@@ -27,7 +27,7 @@ If we imagine launching OpenAlex on 2021-12-30 with 1000 `Authors`, each being n
     └── 0031_part_00.gz
 ```
 
-If, on 2022-01-04, we made changes to 50 of those `Authors`, they would go _out of_ one of the files in `/data/authors/updated_date=2021-12-30` and _into_ one in `/data/authors/updated_date=2022-01-04:`
+If, on 2022-01-04, we made changes to 50 of those `Authors`, they would come _out of_ one of the files in `/data/authors/updated_date=2021-12-30` and go _into_ one in `/data/authors/updated_date=2022-01-04:`
 
 ```
 /data/authors/
