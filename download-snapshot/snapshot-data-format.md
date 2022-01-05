@@ -60,7 +60,7 @@ If we also discovered 50 _new_ Authors, they would go in that same partition, so
 So if you made your copy of the snapshot on 2021-12-30, you would only need to download `/data/authors/updated_date=2022-01-04` to get everything that was changed or added since then.
 
 {% hint style="info" %}
-To update a snapshot copy that you created or updated on date `X`, insert or update the records in objects where `updated_date` > _`X`._
+To update a snapshot copy that you created or updated on date `X`, insert or update the records in objects where `updated_date` > `X`_._
 {% endhint %}
 
 You never need to go back for a partition you've already downloaded. Anything that changed isn't there anymore, it's in a new partition.
