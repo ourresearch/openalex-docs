@@ -56,8 +56,6 @@ _Integer:_ The total number :page\_facing\_up: [Works](work.md) that cite a work
 cited_by_count: 38 
 ```
 
-``
-
 ### `ids`
 
 _Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this author, as `key`: `value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. The [`openalex` ID](./#the-openalex-id) is the same one you'll find at [Author.id](author.md#id). All the IDs are strings except for `mag`, which is an integer.
@@ -81,11 +79,11 @@ This is an abridged [Institution](institution.md) object, and you can find more 
 
 ```json
 last_known_institution: {
-    id: "https://openalex.org/I114027177",
-    ror: "https://ror.org/0130frc33",
-    display_name: "University of North Carolina at Chapel Hill",
-    country_code: "US",
-    type: "education"
+    id: "https://openalex.org/I4200000001",
+    ror: "https://ror.org/02nr0ka47",
+    display_name: "OurResearch",
+    country_code: "CA",
+    type: "nonprofit"
 },
 ```
 
