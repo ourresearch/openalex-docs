@@ -72,7 +72,7 @@ At the time of writing, these are the `Author` partitions and the number of reco
 * `updated_date=2022-01-01/` - 46,766,699&#x20;
 * `updated_date=2022-01-02/` - 1,352,773
 
-This reflects the creation of the dataset on 2021-12-30 and 145,678,664 combined updates and inserts on since then - 1,352,773 of which were on 2022-01-02. Over time, the number of partitions will grow. If we make a change that affects all records, the partitions before the date of the change will disappear.
+This reflects the creation of the dataset on 2021-12-30 and 145,678,664 combined updates and inserts since then - 1,352,773 of which were on 2022-01-02. Over time, the number of partitions will grow. If we make a change that affects all records, the partitions before the date of the change will disappear.
 
 ### The `manifest` file&#x20;
 
