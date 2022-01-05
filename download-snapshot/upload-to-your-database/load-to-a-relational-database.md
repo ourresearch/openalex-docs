@@ -2,7 +2,7 @@
 
 
 
-Compared to using a data warehouse, loading the dataset into a relational database takes more work up front but lets you write simpler queries on less powerful machines. One important caveat is that this is a _lot_ of data, and exploration will be very slow in most relational databases.
+Compared to using a data warehouse, loading the dataset into a relational database takes more work up front but lets you write simpler queries and run them on less powerful machines. One important caveat is that this is a _lot_ of data, and exploration will be very slow in most relational databases.
 
 {% hint style="info" %}
 By using a relational database, you trade flexibility for efficiency in certain selected operations. The tables, columns, and indexes we have chosen in this guide represent only one of many ways the entity objects could be stored. It may not be the best way to store them given the queries you want to run. Some queries will be fast, others will be painfully slow.&#x20;
