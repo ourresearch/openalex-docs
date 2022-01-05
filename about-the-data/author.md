@@ -75,7 +75,7 @@ ids: {
 
 _Object:_ This author's last known institutional affiliation. In this context "last known" means that we took all the [Works](work.md) where this author has an institutional affiliation, sorted them by publication date, and selected the most recent one.
 
-This is an abridged [Institution](institution.md) object, and you can find more documentation on the [Institution](institution.md) page.
+This is a [dehydrated `Institution`](institution.md#the-dehydratedinstitution-object) object, and you can find more documentation on the [Institution](institution.md) page.
 
 ```json
 last_known_institution: {
@@ -93,7 +93,7 @@ last_known_institution: {
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.&#x20;
 {% endhint %}
 
-_List:_ The concepts most frequently applied to works created by this author. Each is represented as a dehydrated Concept object, with one additional attribute:
+_List:_ The concepts most frequently applied to works created by this author. Each is represented as a [dehydrated `Concept`](concept.md#the-dehydratedconcept-object) object, with one additional attribute:
 
 * `score` (_Float_): The strength of association between this author and the listed concept, from 0-100.
 
@@ -127,12 +127,12 @@ counts_by_year: [
     {
         year: 2022,
         works_count: 0,
-        cited_by_count: 1
+        cited_by_count: 8
     },
     {
         year: 2021,
         works_count: 1,
-        cited_by_count: 228
+        cited_by_count: 252
     },
     ...
     {
@@ -143,11 +143,9 @@ counts_by_year: [
 ]
 ```
 
-
-
 ### `works_api_url`
 
-_String:_ An URL that will get you a list of all this author's works.
+_String:_ A URL that will get you a list of all this author's works.
 
 We express this as an API URL (instead of just listing the works themselves) because sometimes an author's publication list is too long to reasonably fit into a single author object.
 
@@ -162,7 +160,7 @@ works_api_url: "https://api.openalex.org/works?filter=author.id:A2208157607",
 _String:_ The last time anything in this author object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
 
 ```json
-updated_date: "2016-06-24T00:00:00"
+updated_date: "2022-01-02T00:00:00"
 ```
 
 
@@ -178,5 +176,3 @@ The `DehydratedAuthor` is stripped-down [`Author`](author.md#the-author-object) 
 * ``[`id`](author.md#id)``
 * [`display_name`](author.md#display\_name)``
 * [`orcid`](author.md#orcid)``
-
-### ``
