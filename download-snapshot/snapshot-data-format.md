@@ -6,7 +6,7 @@ Here are the details on where the OpenAlex data lives and how it's structured.
 * The data files are gzip-compressed [JSON Lines](https://jsonlines.org), one row per entity.
 * The bucket contains one prefix (folder) for each entity type: work, author, venue, institution, and concept.
 * Records are partitioned by [updated\_date](../about-the-data/work.md#updated\_date). Within each entity type prefix, each object (file) is further prefixed by this date. For example, if an [`Author`](../about-the-data/author.md) has an updated\_date of 2021-12-30 it will be prefixed`/data/authors/updated_date=2021-12-30/`.
-  * &#x20;If you're initializing a fresh snapshot, the `updated_date` partitions aren't important yet. You need all the entities, so for Works you would get `/data/works/*/*.gz`
+  * If you're initializing a fresh snapshot, the `updated_date` partitions aren't important yet. You need all the entities, so for `Authors` you would get `/data/authors/*/*.gz`
 * There are multiple objects under each `updated_date` partition. Each is under 2GB.
 * The manifest file is JSON (in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-files-using-manifest.html) format) and lists all the data files for each object type - `/data/works/manifest` lists all the works.
 
