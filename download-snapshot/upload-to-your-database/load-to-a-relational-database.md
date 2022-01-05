@@ -17,7 +17,7 @@ We’re going to use [PostgreSQL](https://www.postgresql.org) as an example and 
 
 ## Step 1: Create the schema
 
-Running this SQL on your databae (in [psql](https://www.postgresql.org/docs/13/app-psql.html) for example) will initialize [this schema](load-to-a-relational-database/postgres-schema-diagram.md) for you: [https://gist.github.com/richard-orr/4c30f52cf5481ac68dc0b282f46f1905](https://gist.github.com/richard-orr/4c30f52cf5481ac68dc0b282f46f1905)
+Running this SQL on your database (in the [psql](https://www.postgresql.org/docs/13/app-psql.html) client, for example) will initialize [this schema](load-to-a-relational-database/postgres-schema-diagram.md) for you: [https://gist.github.com/richard-orr/4c30f52cf5481ac68dc0b282f46f1905](https://gist.github.com/richard-orr/4c30f52cf5481ac68dc0b282f46f1905)
 
 Run it and you'll be set up to follow the next steps. To show you what it's doing, we'll explain some excerpts here, using the [concept](../../about-the-data/concept.md) entity as an example.&#x20;
 
