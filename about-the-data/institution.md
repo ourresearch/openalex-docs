@@ -1,7 +1,7 @@
 # 🏫 Institution
 
 {% hint style="info" %}
-**Documentation in progress**. This page is still being written, and will be complete on January 3, 2022.
+**Documentation in progress**. This page is still being written, and will be complete in January 2022.
 {% endhint %}
 
 
@@ -10,7 +10,7 @@
 
 ### `id`
 
-_String:_ The OpenAlex ID for this institution.
+_String:_ The [OpenAlex ID](./#the-openalex-id) for this institution.
 
 ```json
 id: "https://openalex.org/I114027177"
@@ -26,8 +26,6 @@ The ROR (Research Organization Registry) identifier is a globally unique ID for 
 ror: "https://ror.org/0130frc33"
 ```
 
-
-
 ### `display_name`
 
 _String:_ The primary name of the institution.
@@ -35,8 +33,6 @@ _String:_ The primary name of the institution.
 ```json
 display_name: "University of North Carolina at Chapel Hill"
 ```
-
-
 
 ### `country_code`
 
@@ -82,7 +78,7 @@ image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Unive
 
 ### `display_name_acronyms`
 
-_String:_ Acronyms or initialisms that people sometimes use instead of the full [`display_name`](institution.md#display\_name).
+_List:_ Acronyms or initialisms that people sometimes use instead of the full [`display_name`](institution.md#display\_name).
 
 ```json
 display_name_acronyms:["UNC"]
@@ -90,7 +86,7 @@ display_name_acronyms:["UNC"]
 
 ### `display_name_alternatives`
 
-_String:_ Other names people may use for this institution. &#x20;
+_List:_ Other names people may use for this institution. &#x20;
 
 ```json
 display_name_alternatives: [
@@ -100,7 +96,7 @@ display_name_alternatives: [
 
 ### `works_count`
 
-_Integer:_ The number of [Works](work.md) created by authors affiliated with this institution. Or less formally: the number of works coming out of this institution.
+_Integer:_ The number of [`Works`](work.md) created by authors affiliated with this institution. Or less formally: the number of works coming out of this institution.
 
 ```json
 works_count: 202704 
@@ -108,27 +104,15 @@ works_count: 202704
 
 ### `cited_by_count`
 
-_Integer:_ The total number [Works](work.md) that cite a work created by an author affiliated with this institution. Or less formally: the number of citations this institution has collected.
+_Integer:_ The total number [`Works`](work.md) that cite a work created by an author affiliated with this institution. Or less formally: the number of citations this institution has collected.
 
 ```json
 cited_by_count: 21199844 
 ```
-
-``
-
-### `cited_by_count`
-
-_Integer:_ The total number [Works](work.md) that cite a work created by an author affiliated with this institution. Or less formally: the number of citations this institution has collected.
-
-```json
-cited_by_count: 21199844 
-```
-
-
 
 ### `ids`
 
-_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this venue, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. They're all strings except for `mag`, which is a long integer.
+_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this institution, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. They're all strings except for `mag`, which is a long integer.
 
 ```json
 ids: {
@@ -136,12 +120,10 @@ ids: {
     ror: "https://ror.org/0130frc33",
     grid: "grid.10698.36",
     wikipedia: "https://en.wikipedia.org/wiki/University%20of%20North%20Carolina%20at%20Chapel%20Hill",
-    wikidata: null,
+    wikidata: "https://www.wikidata.org/wiki/Q192334",
     mag: 114027177
-}
+}     
 ```
-
-
 
 ### `geo`
 
@@ -169,19 +151,25 @@ geo: {
 
 ### `international`
 
-_Object:_ **todo**&#x20;
+_Object:_ **todo**
 
 ```json
 international: {
-    display_name: null
+    display_name: {
+        "ar": "جامعة نورث كارولينا في تشابل هيل",
+        "en": "University of North Carolina at Chapel Hill",
+        "es": "Universidad de Carolina del Norte en Chapel Hill",
+        "zh-cn": "北卡罗来纳大学教堂山分校",
+        ...
+    }
 }
 ```
 
 ### `associated_institutions`
 
-_List:_  Institution related to this one. Each associated institution is represented as a dehydrated Institution object, with one extra property:
+_List:_  `Institutions` related to this one. Each associated institution is represented as a [dehydrated Institution](institution.md#the-dehydratedinstitution-object) object, with one extpa property:
 
-* `relationship` (_String_): The type of relationship between this institution and the listed institution. Possible values: `Parent`, `Child`, and `Related`.
+* `relationship` (_String_): The type of relationship between this institution and the listed institution. Possible values: `parent`, `child`, and `related`.
 
 ```json
 associated_insitutions: [
@@ -202,7 +190,7 @@ associated_insitutions: [
         relationship: "related"
     },
     
-    // and so forth....
+    // and so forth
 ]
 ```
 
@@ -223,7 +211,7 @@ counts_by_year: [
         cited_by_count: 2180827
     },
     
-    // and so forth....
+    // and so forth
 ]
 ```
 
@@ -235,7 +223,7 @@ counts_by_year: [
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.&#x20;
 {% endhint %}
 
-_List:_ The concepts most frequently applied to works affiliated with this institution. Each is represented as a dehydrated Concept object, with one additional attribute:
+_List:_ The [`Concepts`](concept.md) most frequently applied to works affiliated with this institution. Each is represented as a [dehydrated Concept](concept.md#the-dehydratedconcept-object) object, with one additional attribute:
 
 * `score` (_Float_): The strength of association between this institution and the listed concept, from 0-100.
 
@@ -256,7 +244,7 @@ x_concepts: [
         score: 51.4
     },
     
-    // and so forth...
+    // and so forth
 ]
 ```
 
@@ -264,20 +252,20 @@ x_concepts: [
 
 ### `works_api_url`
 
-_String:_ An URL that will get you a list of all the works affiliated with this institution.
+_String:_ A URL that will get you a list of all the [`Works`](work.md) affiliated with this institution.
 
-We express this as an API URL (instead of just listing the works themselves) because most institutions have way too many works to reasonably fit into a single return object.
+We express this as an API URL (instead of just listing the `Works` themselves) because most institutions have way too many works to reasonably fit into a single return object.
 
 ```json
-works_api_url: "https://api.openalex.org/works?filter=institution.id:I114027177"
+works_api_url: "https://api.openalex.org/works?filter=institutions.id:I114027177"
 ```
 
 ### `updated_date`
 
-_String:_ The last time anything in this object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
+_String:_ The last time anything in this `Institution` changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
 
 ```json
-updated_date: "2021-12-23T00:45:53.992803"
+updated_date: "2022-01-02T00:27:23.088909"
 ```
 
 

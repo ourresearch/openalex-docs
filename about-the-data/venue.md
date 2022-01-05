@@ -1,14 +1,14 @@
 # 📚 Venue
 
 {% hint style="info" %}
-**Documentation in progress**. This page is still being written, and will be complete in January 2022.
+**Documentation in progress**. This page is still being written, and will be complete on January 3, 2022.
 {% endhint %}
 
-## The `Venue` object
+## the `Venue` object
 
 ### `id`
 
-_String:_ The [OpenAlex ID](./#the-openalex-id) for this venue.
+_String:_ The OpenAlex ID for this venue.
 
 ```json
 id: "https://openalex.org/V1983995261"
@@ -18,7 +18,7 @@ id: "https://openalex.org/V1983995261"
 
 _String:_ The [ISSN-L](https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number#Linking\_ISSN) identifying this venue.
 
-ISSN is a global and unique ID for serial publications. However, different media versions of a given publication (e.g., print and electronic) often have _different_ ISSNs. This is why we can't have nice things. The ISSN-L or Linking ISSN solves the problem by designating a single canonical ISSN for all media versions of the title. It's _usually_ the same as the print ISSN.
+ISSN is a global and unique ID for serial publications. However, different media versions of a given publication (ie, print and electronic) often have _different_ ISSNs. This is why we can't have nice things. The ISSN-L or Linking ISSN solves the problem by designating a single canonical ISSN for all media versions of the title. It's _usually_ the same as the print ISSN.
 
 ```json
 issn_l: "2167-8359"
@@ -42,15 +42,17 @@ display_name: "PeerJ"
 
 ### `publisher`
 
-_String:_ The name of this venue's publisher. Publisher is a tricky category, as journals often change publishers, publishers merge, publishers have subsidiaries ("imprints"), and of course no one is consistent in their naming. In the future, we plan to roll out support for a more structured publisher field, but for now it's just a string.
+_String:_ The name of this venue's publisher. Publisher is a tricky category, as journals often changes publishers, publishers merge, publishers have subsidiaries ("imprints"), and of course no one is consistent in their naming. In the future, we plan to roll out to support a more structured publisher field, but for now it's just strings.
 
 ```json
 publisher: "Peerj"
 ```
 
+
+
 ### `works_count`
 
-_Integer:_ The number of [`Works`](work.md) this this venue hosts.
+_Integer:_ The number of [Works](work.md) this this venue hosts.
 
 ```json
 works_count: 20184 
@@ -58,11 +60,13 @@ works_count: 20184
 
 ### `cited_by_count`
 
-_Integer:_ The total number of [`Works`](work.md) that cite a `Work` hosted in this venue.
+_Integer:_ The total number [Works](work.md) that cite a work hosted in this venue.
 
 ```json
 cited_by_count: 133702 
 ```
+
+``
 
 ### `is_oa`
 
@@ -80,6 +84,8 @@ _Boolean:_ **todo**&#x20;
 is_in_doaj: true 
 ```
 
+
+
 ### `homepage_url`
 
 _String:_ **todo**&#x20;
@@ -87,6 +93,8 @@ _String:_ **todo**&#x20;
 ```json
 homepage_url: "http://www.peerj.com/" 
 ```
+
+
 
 ### `ids`
 
@@ -103,13 +111,15 @@ ids: {
 }
 ```
 
+``
+
 ### `x_concepts`
 
 {% hint style="danger" %}
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.&#x20;
 {% endhint %}
 
-_List:_ The `Concepts` most frequently applied to works hosted by this venue. Each is represented as a [dehydrated Concept](concept.md#the-dehydratedconcept-object) object, with one additional attribute:
+_List:_ The concepts most frequently applied to works hosted by this venue. Each is represented as a dehydrated Concept object, with one additional attribute:
 
 `score` (_Float_): The strength of association between this venue and the listed concept, from 0-100.
 
@@ -130,7 +140,7 @@ x_concepts: [
         score: 51.4
     },
     
-    // and so forth
+    // and so forth...
 ]
 ```
 
@@ -144,16 +154,16 @@ If the venue was founded less than ten years ago, there will naturally be fewer 
 counts_by_year: [
     {
         year: 2021,
-        works_count: 4338,
-        cited_by_count: 127268
+        works_count: 4211,
+        cited_by_count: 120939
     },
     {
         year: 2020,
-        works_count: 4363,
-        cited_by_count: 119531
+    works_count: 4363,
+    cited_by_count: 119531
     },
     
-    // and so forth
+    // and so forth. 
 ]
 ```
 
@@ -161,22 +171,22 @@ counts_by_year: [
 
 ### `works_api_url`
 
-_String:_ A URL that will get you a list of all this venue's `Works`.
+_String:_ An URL that will get you a list of all this author's works.
 
-We express this as an API URL (instead of just listing the works themselves) because sometimes a venue's publication list is too long to reasonably fit into a single `Venue` object.
+We express this as an API URL (instead of just listing the works themselves) because sometimes an author's publication list is too long to reasonably fit into a single author object.
 
 ```json
-works_api_url: "https://api.openalex.org/works?filter=host_venue.id:V1983995261",
+works_api_url: "https://api.openalex.org/works?filter=author.id:A2208157607",
 ```
 
 
 
 ### `updated_date`
 
-_String:_ The last time anything in this `Venue` object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
+_String:_ The last time anything in this author object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
 
 ```json
-updated_date: "2022-01-02T00:00:00"
+updated_date: "2016-06-24T00:00:00"
 ```
 
 
