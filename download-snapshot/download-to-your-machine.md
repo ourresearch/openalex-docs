@@ -22,30 +22,34 @@ You should get a file structure like this (edited for length - there are more ob
 
 ```
 openalex-snapshot/
-├── authors
-│   ├── manifest
-│   └── updated_date=2021-12-28
-│       ├── 0000_part_00.gz
-│       └── 0001_part_00.gz
-├── concepts
-│   ├── manifest
-│   └── updated_date=2021-12-28
-│       ├── 0000_part_00.gz
-│       └── 0001_part_00.gz
-├── institutions
-│   ├── manifest
-│   └── updated_date=2021-12-28
-│       ├── 0000_part_00.gz
-│       └── 0001_part_00.gz
-├── venues
-│   ├── manifest
-│   └── updated_date=2021-12-28
-│       ├── 0000_part_00.gz
-│       └── 0001_part_00.gz
-└── works
-    ├── manifest
-    └── updated_date=2021-12-28
-        ├── 0000_part_00.gz
-        └── 0001_part_00.gz
+├── LICENSE.txt
+├── README.txt
+├── RELEASE_NOTES.txt
+└── data
+    ├── authors
+    │   ├── manifest
+    │   └── updated_date=2021-12-28
+    │       ├── 0000_part_00.gz
+    │       └── 0001_part_00.gz
+    ├── concepts
+    │   ├── manifest
+    │   └── updated_date=2021-12-28
+    │       ├── 0000_part_00.gz
+    │       └── 0001_part_00.gz
+    ├── institutions
+    │   ├── manifest
+    │   └── updated_date=2021-12-28
+    │       ├── 0000_part_00.gz
+    │       └── 0001_part_00.gz
+    ├── venues
+    │   ├── manifest
+    │   └── updated_date=2021-12-28
+    │       ├── 0000_part_00.gz
+    │       └── 0001_part_00.gz
+    └── works
+        ├── manifest
+        └── updated_date=2021-12-28
+            ├── 0000_part_00.gz
+            └── 0001_part_00.gz
 ```
 
