@@ -80,10 +80,10 @@ When we start writing a new `updated_date` partition for an entity, we'll delete
 
 The file is in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-files-using-manifest.html) format. To use it as part of the update process for an Entity type (we'll keep using Authors as an example):
 
-1. Download `s3://data/authors/manifest.`
+1. Download `s3://openalex/data/authors/manifest.`
 2. Get the file list from the `url` property of each item in the `entries` list.
 3. Download any objects with an `updated_date` you haven't seen before.
-4. Download `s3://data/authors/manifest` again. If it hasn't changed since (1), no records moved around and any date partitions you downloaded are valid.
+4. Download `s3://openalex/data/authors/manifest` again. If it hasn't changed since (1), no records moved around and any date partitions you downloaded are valid.
 5. Decompress the files you downloaded and parse one JSON `Author` per line. Insert or update into your database of choice, using [each entity's ID](../about-the-data/#the-openalex-id) as a primary key.
 
 If you’ve worked with dataset like this before and have a toolchain picked out, this may be all you need to know. If you want more detailed steps, proceed to [download the data](download-to-your-machine.md).

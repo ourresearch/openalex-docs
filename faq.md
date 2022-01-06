@@ -1,5 +1,13 @@
 # FAQ
 
+## Are OpenAlex IDs stable?
+
+Several people have asked if OpenAlex IDs are stable (MAG's were not).
+
+Yes! The work associated with ID W1234 will keep the ID W1234.
+
+At some point we might merge duplicated works, authors, etc that already have assigned IDs. At that point we will expand the schema to include synonym ID data.
+
 ## Do you disambiguate authors?
 
 Yes. Using coauthors, references, and other features of the data, we can tell that the same Jane Smith wrote both "Frog behavior" and "Frogs: A retrospective," but it's a different Jane Smith who wrote "Oats before boats: The breakfast customs of 17th-Century Dutch bargemen."
