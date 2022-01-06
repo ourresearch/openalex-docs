@@ -37,6 +37,10 @@ The Standard format is currently missing some strings that aren't associated wit
 
 Sorry about that!  They got missed on the initial release.  We'll be adding them in in the next few weeks.
 
+### Misspelled associated\_insitutions
+
+We misspelled associated\_institutions key in the Institutions entity as associated\_insitutions. It is currently fixed in some places but not others.  Sorry about that! Will fix everywhere soon.
+
 ### MAG format snapshot has a few duplicate rows and escaping issues.
 
 We're continuing to improve our processes to make sure the data in the MAG format is clean and easy to pull in to a relational database. This current release still has a few issues, but we'll try to fix these by the next release.
