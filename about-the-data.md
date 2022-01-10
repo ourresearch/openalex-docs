@@ -35,9 +35,9 @@ The native-format snapshot is currently _missing_ the "stub entities [described 
 
 These are however still available via the API, and in the MAG Format snapshot. The native-format snapshot will be updated in the next week to fix this inconsistency.
 
-### Standard format snapshot doesn't include the inverted abstract indices.&#x20;
+### The native-format snapshot doesn't include the inverted abstract indices.&#x20;
 
-Sorry about that!  They got missed on the initial release.  We'll be adding them in in the next few weeks.
+Sorry about that!  They got missed on the initial release.  We'll be adding them in in the next few weeks. They are live in the API now.
 
 ### Misspelled associated\_insitutions
 
