@@ -24,4 +24,6 @@
   * [🏫 Institution](about-the-data/institution.md)
   * [💡 Concept](about-the-data/concept.md)
 * [About the data](about-the-data.md)
+* [Known issues](known-issues.md)
 * [FAQ](faq.md)
+* [License](license.md)
