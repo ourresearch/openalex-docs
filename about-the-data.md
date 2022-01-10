@@ -29,9 +29,11 @@ We've got a lot of strings floating around for venues and institutions that have
 
 These ID-less objects are tricky because they can't do most of the things a regular entity can. They're just a suitcase for a name, right now.  They are inherited from MAG, and we plan to fix them. Over the next month or so, we'll be processing all these stub entities, clustering them together, and minting tens of millions of new entities from them.
 
-### Standard format snapshot missing some strings.&#x20;
+### The download snapshot missing some strings.&#x20;
 
-The Standard format is currently missing some strings that aren't associated with Venues or Institutions -- these stub entities described in the issue "Some strings not yet matched to entities" above are displayed in the API but are missing from the current snapshot. The snapshot will be updated in the next week to fix this inconsistency (and then, as described above, these sub entities will be expanded in the next month or so).
+The native-format snapshot is currently _missing_ the "stub entities [described above](about-the-data.md#some-strings-not-yet-matched-to-entities.): dehydrated `Venue` and `Institution` objects that don't have IDs, only strings.
+
+These are however still available via the API, and in the MAG Format snapshot. The native-format snapshot will be updated in the next week to fix this inconsistency.
 
 ### Standard format snapshot doesn't include the inverted abstract indices.&#x20;
 
