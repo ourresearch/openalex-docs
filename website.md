@@ -22,9 +22,9 @@ If you'd like to be notified of when the full website launches, please [join our
 
 ## Content negotiation
 
-When you request an [Entity](about-the-data/) from openalex.org using its [OpenAlex ID](about-the-data/#the-openalex-id), you can specify the format you want its record in. Two formats are supported:
+When you request an [Entity](about-the-data/) from openalex.org using its [OpenAlex ID](about-the-data/#the-openalex-id), you can specify the format you want it to be returned in. Two formats are supported:
 
-### A web page, easy for people to read ([`text/html`](https://www.iana.org/assignments/media-types/text/html)).
+### A web page, easy for people to read ([`text/html`](https://www.iana.org/assignments/media-types/text/html))
 
 Entity information can be displayed on a web page, like [https://explore.openalex.org/works/W2741809807](https://explore.openalex.org/works/W2741809807).
 
@@ -33,7 +33,7 @@ Entity information can be displayed on a web page, like [https://explore.openale
 * In a web browser, click an OpenAlex ID or paste it into your location bar. Try clicking [https://openalex.org/W2741809807](https://openalex.org/W2741809807), for example.
 * If using a client like [cURL](https://curl.se) or Python's [Requests](https://docs.python-requests.org/en/latest/), don't ask for JSON in any of the ways outlined below.
 
-### A [JSON](https://json.org) object, easy for computers to read ([`application/json`](https://www.iana.org/assignments/media-types/application/json)).
+### A [JSON](https://json.org) object, easy for computers to read ([`application/json`](https://www.iana.org/assignments/media-types/application/json))
 
 Entity information can be returned in JSON format, as from [https://api.openalex.org/W2741809807](https://api.openalex.org/W2741809807).
 
