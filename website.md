@@ -22,7 +22,7 @@ If you'd like to be notified of when the full website launches, please [join our
 
 ## Content negotiation
 
-When you request an [Entity](about-the-data/) from the openalex.org using its [OpenAlex ID](about-the-data/#the-openalex-id), you can specify the format you want its record in. Two formats are supported:
+When you request an [Entity](about-the-data/) from openalex.org using its [OpenAlex ID](about-the-data/#the-openalex-id), you can specify the format you want its record in. Two formats are supported:
 
 ### A web page, easy for people to read ([`text/html`](https://www.iana.org/assignments/media-types/text/html)).
 
