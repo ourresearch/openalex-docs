@@ -20,7 +20,7 @@ The OpenAlex ID is the primary key for all entities. Its canonical format is a U
 
 ``[`https://openalex.org/W2741809807`](https://openalex.org/W2741809807)``
 
-The resource served at that URL is always the same, but its representation depends on what you ask for. By default, you'll get a webpage. If you [append a `.json` to the ID](https://openalex.org/W2741809807.json), you'll get the same resource but in JSON, via our [API](../api/).
+The resource served at that URL is always the same, but its representation depends on what you ask for. By default, you'll get a webpage. You can use [content negotiation](../website.md#content-negotiation) to get the same resource in JSON, via our [API](../api/).
 
 The first letter in the unique part of the ID tells you what kind of entity you've got. In the example above, the unique part of the ID is `W2741809807`; the `W` at the front tells us that this is a `Work`. The other possible first letters are `A` (`Author`), `V` (`Venue`), `I` (`Institution`), and `C` (`Concept`). The IDs are not case-sensitive, so `w2741809807` is just as valid as `W2741809807`.
 
