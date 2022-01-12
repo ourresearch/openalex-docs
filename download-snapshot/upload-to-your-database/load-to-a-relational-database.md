@@ -130,8 +130,11 @@ Now you have all the OpenAlex data in your database and can run queries in your 
 
 Here’s a simple one, getting the OpenAlex ID and OA status for each work:&#x20;
 
-```
-select w.id, oa.oa_status from openalex.works w join openalex.works_open_access oa on w.id = oa.work_id;// Some code
+```sql
+select w.id, oa.oa_status
+from openalex.works w 
+join openalex.works_open_access oa 
+on w.id = oa.work_id;
 ```
 
 You'll get results like this (truncated, the actual result will be millions of rows):
