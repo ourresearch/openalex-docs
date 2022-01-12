@@ -47,7 +47,7 @@ CREATE TABLE openalex.concepts_related_concepts (
 We can preserve `score` in this relationship table and look up any other attributes of the [dehydrated](../../about-the-data/#dehydrated-entity-objects) related concepts in the main table `concepts`. Creating indexes on `concept_id` and  `related_concept_id` lets us look up concepts on both sides of the relationship quickly.
 
 {% hint style="info" %}
-We're working on an issue where [some nested objects don't have IDs](../../about-the-data.md#some-strings-not-yet-matched-to-entities.). For example [`Work.host_venue`](../../about-the-data/work.md#host\_venue) may have a [`display_name`](../../about-the-data/venue.md#display\_name) but also a null [`id`](../../about-the-data/venue.md#id).  This is a problem when flattening a parent `Entity`, because we need non-null `ids` to refer to its children. For now, we're skipping objects without ids when flattening their containing `Entities`.
+We're working on an issue where [some nested objects don't have IDs](../../known-issues.md#some-strings-not-yet-matched-to-entities.). For example [`Work.host_venue`](../../about-the-data/work.md#host\_venue) may have a [`display_name`](../../about-the-data/venue.md#display\_name) but also a null [`id`](../../about-the-data/venue.md#id).  This is a problem when flattening a parent `Entity`, because we need non-null `ids` to refer to its children. For now, we're skipping objects without ids when flattening their containing `Entities`.
 {% endhint %}
 
 ## Step 2: Convert the JSON Lines files to CSV
