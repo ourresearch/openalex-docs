@@ -66,6 +66,7 @@ You can filter using these attributes of the `Works` object. You can find more d
 * `open_access.oa_status` (alias: `oa_status`)
 * `open_access.is_oa` (alias: `is_oa`)
 * `authorships.author.id` (alias: `author.id`)
+* `authorships.author.orcid` (alias: `author.orcid`)
 * `authorships.institutions.id` (alias `institutions.id`)
 * `authorships.institutions.ror` (alias: `institutions.ror`)
 * `authorships.institutions.country_code` (alias: `institutions.country_code`)
