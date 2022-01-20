@@ -15,3 +15,7 @@ This shell command will copy the latest snapshot from the `openalex-mag-format` 
 ```
 aws s3 sync 's3://openalex-mag-format/data_dump_v1/2021-12-06/' 'openalex-mag-snapshot' --no-sign-request
 ```
+
+{% hint style="info" %}
+Each dated prefix under s3://openalex-mag-format/data\_dump\_v1/ contains a full copy of the snapshot. Unless you want to look at how the records have changed over time (and you have a lot of extra space) you don't need to download the whole bucket.
+{% endhint %}
