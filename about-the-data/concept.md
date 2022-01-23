@@ -1,9 +1,5 @@
 # 💡 Concept
 
-{% hint style="info" %}
-**Documentation in progress**. This page is still being written, and will be complete on January 3, 2022.
-{% endhint %}
-
 ## The `Concept` object
 
 
