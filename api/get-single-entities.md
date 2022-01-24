@@ -53,3 +53,11 @@ For each entity type, you can query by any of the IDs we include in that entity'
 * ``[`Institution.ids`](https://docs.openalex.org/entity-objects/institution#ids)``
 * ``[`Concept.ids`](https://docs.openalex.org/entity-objects/concept#ids)``
 
+## Random entity
+
+You can get a random entity by using the string random where an ID would normally go. Each time you call this URL you'll get a different entity.  Examples:
+
+* Get a random institution:\
+  [`https://api.openalex.org/institutions/random`](https://api.openalex.org/institutions/random)``
+* Get a random concept:\
+  [`https://api.openalex.org/concepts/random`](https://api.openalex.org/concepts/random)\
