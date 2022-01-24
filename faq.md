@@ -26,7 +26,7 @@ Our dataset is still very young, so there's not a lot of systematic research com
 
 ## How is OpenAlex licensed?&#x20;
 
-See [our license statement here.](https://docs.openalex.org/about-the-data#license)
+See [our license statement here.](license.md)
 
 ## How much does OpenAlex cost?
 
