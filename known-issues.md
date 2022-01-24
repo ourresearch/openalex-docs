@@ -15,10 +15,6 @@ We've got a lot of strings floating around for venues and institutions that have
 
 These ID-less objects are tricky because they can't do most of the things a regular entity can. They're just a suitcase for a name, right now.  They are inherited from MAG, and we plan to fix them. Over the next month or so, we'll be processing all these stub entities, clustering them together, and minting tens of millions of new entities from them
 
-## Misspelled associated\_insitutions
-
-We misspelled associated\_institutions key in the Institutions entity as associated\_insitutions. It is currently fixed in some places but not others.  Sorry about that! Will fix everywhere soon.
-
 ## MAG format snapshot has a few duplicate rows and escaping issues.
 
 We're continuing to improve our processes to make sure the data in the MAG format is clean and easy to pull in to a relational database. This current release still has a few issues, but we'll try to fix these by the next release.
