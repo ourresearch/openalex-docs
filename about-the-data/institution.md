@@ -168,7 +168,7 @@ _List:_  `Institutions` related to this one. Each associated institution is repr
 * `relationship` (_String_): The type of relationship between this institution and the listed institution. Possible values: `parent`, `child`, and `related`.
 
 ```json
-associated_insitutions: [
+associated_institutions: [
     {
         id: "https://openalex.org/I2802101240",
         ror: "https://ror.org/0483mr804",
