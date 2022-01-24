@@ -18,7 +18,7 @@ Yes. We automatically gather and normalize author affiliations from both structu
 
 ## Where does your data come from?
 
-See our list of [sources here](https://docs.openalex.org/about-the-data#sources).
+See our list of [sources here](about-the-data.md#sources).
 
 ## Is your data quality better than \_\_\_\_?
 
