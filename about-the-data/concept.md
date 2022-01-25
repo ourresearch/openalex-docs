@@ -14,7 +14,7 @@ id: "https://openalex.org/C2778407487"
 
 ### `wikidata`
 
-_String:_ The [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main\_Page) ID for this concept.&#x20;
+_String:_ The [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers) for this concept.&#x20;
 
 ```json
 wikidata: "https://www.wikidata.org/wiki/Q14565201"
@@ -68,17 +68,26 @@ cited_by_count: 20248
 
 ### `ids`
 
-_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this venue, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible.&#x20;
+__
 
-`umls_aui` and `umls_cui` refer to the [Unified Medical Language System](https://www.nlm.nih.gov/research/umls/index.html) [Atom Unique Identifier and Concept Unique Identifier](https://www.nlm.nih.gov/research/umls/new\_users/online\_learning/Meta\_005.html) respectively. These are lists. The other IDs are all strings, except except for `mag`, which is a long integer.
+_Object:_ All the external identifiers that we know about for this institution. IDs are expressed as URIs whenever possible. Possible ID types:
+
+* `openalex` (_String:_ this concept's [OpenAlex ID](./#the-openalex-id). Same as [`Concept.id`](concept.md#id))
+* `wikidata` (_String:_ this concept's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers). Same as [`Concept.wikidata`](concept.md#wikidata))
+* `mag`  (_Integer:_ this concept's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
+* `wikipedia` (_String:_ this concept's Wikipedia page URL)
+* `umls_aui` (_List:_ this concept's [Unified Medical Language System](https://www.nlm.nih.gov/research/umls/index.html) [Atom Unique Identifiers](https://www.nlm.nih.gov/research/umls/new\_users/online\_learning/Meta\_005.html))
+* `umls_cui` (_List:_ this concept's [Unified Medical Language System](https://www.nlm.nih.gov/research/umls/index.html) [Concept Unique Identifiers](https://www.nlm.nih.gov/research/umls/new\_users/online\_learning/Meta\_005.html))
+
+{% hint style="info" %}
+Many concepts are missing one or more ID types (either because we don't know the ID, or because it was never assigned). Keys for null IDs are not displayed..
+{% endhint %}
 
 ```json
 ids: {
     openalex: "https://openalex.org/C2778407487",
     wikidata: "https://www.wikidata.org/wiki/Q14565201",
     wikipedia: "https://en.wikipedia.org/wiki/Altmetrics",
-    umls_aui: [ ],
-    umls_cui: [ ],
     mag: 2778407487114027177
 }
 ```

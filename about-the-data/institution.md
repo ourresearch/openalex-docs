@@ -114,8 +114,8 @@ _Object:_ All the external identifiers that we know about for this institution. 
 * `ror` (_String:_ this institution's ROR ID. Same as [`Institution.ror`](institution.md#ror))
 * `mag`  (_Integer:_ this institution's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `grid` (_String:_ this institution's [GRID](https://www.grid.ac) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome))
-* `wikipedia` (_String:_ this institution's Wikipedia page)
-* `wikidata` (_String:_ this institution's [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main\_Page) page)
+* `wikipedia` (_String:_ this institution's Wikipedia page URL)
+* `wikidata` (_String:_ this institution's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers))
 
 {% hint style="info" %}
 Many institution are missing one or more ID types (either because we don't know the ID, or because it was never assigned). Keys for null IDs are not displayed.
