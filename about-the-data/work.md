@@ -74,12 +74,17 @@ publication_date: "2018-02-13"
 
 ### `ids`
 
-_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this work, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. ID namespaces currently include:
+_Object:_ All the external identifiers that we know about for this work. IDs are expressed as URIs whenever possible. Possible ID types:
 
-* `openalex` (_String_; The [OpenAlex ID](./#the-openalex-id), which is also found at [`Work.id`](work.md#id))
-* `doi` (_String_; The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). This is most likely, but not necessarily, a [Crossref](https://www.crossref.org) DOI)
-* `mag`  (_Integer_; the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `pmid` (_String_; The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
+* `openalex` (_String:_ The [OpenAlex ID](./#the-openalex-id), which is also found at [`Work.id`](work.md#id))
+* `doi` (_String:_ The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). This is most likely, but not necessarily, a [Crossref](https://www.crossref.org) DOI)
+* `mag`  (_Integer:_ the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
+* `pmid` (_String:_ The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
+* `pmcid` (_String_: the [Pubmed Central identifier](https://www.ncbi.nlm.nih.gov/pmc/about/public-access-info/#:\~:text=The%20PMCID%20is%20a%20unique,in%20both%20PMC%20and%20PubMed.))
+
+{% hint style="info" %}
+Most works are missing one or more ID types (either because we don't know the ID, or because it was never assigned). Keys for `null` IDs are not displayed.
+{% endhint %}
 
 ```json
 ids: {
