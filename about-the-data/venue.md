@@ -86,7 +86,16 @@ homepage_url: "http://www.peerj.com/"
 
 ### `ids`
 
-_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this venue, as `key: value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible.&#x20;
+_Object:_ All the external identifiers that we know about for this venue. IDs are expressed as URIs whenever possible. Possible ID types:
+
+* `openalex` (_String:_ this venue's [OpenAlex ID](./#the-openalex-id). Same as [`Venue.id`](venue.md#id))
+* `issn_l` (_String:_ this venue's ISSN-L. Same as [`Venue.issn_l`](venue.md#issn\_l))
+* `mag`  (_Integer:_ this venue's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
+* `issn` (_List:_ a list of this venue's ISSNs. Same as [`Venue.issn`](venue.md#issn))
+
+{% hint style="info" %}
+Many venues are missing one or more ID types (either because we don't know the ID, or because it was never assigned). Keys for null IDs are not displayed.
+{% endhint %}
 
 ```json
 ids: {
