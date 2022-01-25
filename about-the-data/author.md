@@ -56,19 +56,26 @@ _Integer:_ The total number :page\_facing\_up: [Works](work.md) that cite a work
 cited_by_count: 38 
 ```
 
-``
-
 ### `ids`
 
-_Object:_ All the [persistent identifiers (PIDs)](https://en.wikipedia.org/wiki/Persistent\_identifier) that we know about for this author, as `key`: `value` pairs, where `key` is the PID namespace, and `value` is the PID. IDs are expressed as URIs where possible. The [`openalex` ID](./#the-openalex-id) is the same one you'll find at [Author.id](author.md#id). All the IDs are strings except for `mag`, which is an integer.
+_Object:_ All the external identifiers that we know about for this author. IDs are expressed as URIs whenever possible. Possible ID types:
+
+* `openalex` (_String:_ this author's [OpenAlex ID](./#the-openalex-id), which is also found at [`Author.id`](author.md#id))
+* `orcid` (_String:_ this author's [ORCID](https://orcid.org) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome))
+* `mag`  (_Integer:_ this author's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
+* `twitter` (_String:_ this author's Twitter handle)
+* `wikipedia` (_String_: this author's Wikipedia page)
+* `scopus` (_String_: this author's [Scopus author ID](https://utas.libguides.com/ManageID/Scopus))
+
+{% hint style="info" %}
+Most authors are missing one or more ID types (either because we don't know the ID, or because it was never assigned). Keys for null IDs are not displayed.
+{% endhint %}
 
 ```json
 ids: {
     openalex: "https://openalex.org/A2208157607",
     orcid: "https://orcid.org/0000-0001-6187-6610",
     scopus: "http://www.scopus.com/inward/authorDetails.url?authorID=36455008000&partnerID=MN8TOARS",
-    twitter: null,
-    wikipedia: null,
     mag: 2208157607
 },
 ```
@@ -77,15 +84,15 @@ ids: {
 
 _Object:_ This author's last known institutional affiliation. In this context "last known" means that we took all the [Works](work.md) where this author has an institutional affiliation, sorted them by publication date, and selected the most recent one.
 
-This is an abridged [Institution](institution.md) object, and you can find more documentation on the [Institution](institution.md) page.
+This is a [dehydrated `Institution`](institution.md#the-dehydratedinstitution-object) object, and you can find more documentation on the [Institution](institution.md) page.
 
 ```json
 last_known_institution: {
-    id: "https://openalex.org/I114027177",
-    ror: "https://ror.org/0130frc33",
-    display_name: "University of North Carolina at Chapel Hill",
-    country_code: "US",
-    type: "education"
+    id: "https://openalex.org/I4200000001",
+    ror: "https://ror.org/02nr0ka47",
+    display_name: "OurResearch",
+    country_code: "CA",
+    type: "nonprofit"
 },
 ```
 
@@ -95,7 +102,7 @@ last_known_institution: {
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.&#x20;
 {% endhint %}
 
-_List:_ The concepts most frequently applied to works created by this author. Each is represented as a dehydrated Concept object, with one additional attribute:
+_List:_ The concepts most frequently applied to works created by this author. Each is represented as a [dehydrated `Concept`](concept.md#the-dehydratedconcept-object) object, with one additional attribute:
 
 * `score` (_Float_): The strength of association between this author and the listed concept, from 0-100.
 
@@ -129,12 +136,12 @@ counts_by_year: [
     {
         year: 2022,
         works_count: 0,
-        cited_by_count: 1
+        cited_by_count: 8
     },
     {
         year: 2021,
         works_count: 1,
-        cited_by_count: 228
+        cited_by_count: 252
     },
     ...
     {
@@ -145,11 +152,9 @@ counts_by_year: [
 ]
 ```
 
-
-
 ### `works_api_url`
 
-_String:_ An URL that will get you a list of all this author's works.
+_String:_ A URL that will get you a list of all this author's works.
 
 We express this as an API URL (instead of just listing the works themselves) because sometimes an author's publication list is too long to reasonably fit into a single author object.
 
@@ -164,7 +169,7 @@ works_api_url: "https://api.openalex.org/works?filter=author.id:A2208157607",
 _String:_ The last time anything in this author object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
 
 ```json
-updated_date: "2016-06-24T00:00:00"
+updated_date: "2022-01-02T00:00:00"
 ```
 
 
@@ -180,5 +185,3 @@ The `DehydratedAuthor` is stripped-down [`Author`](author.md#the-author-object) 
 * ``[`id`](author.md#id)``
 * [`display_name`](author.md#display\_name)``
 * [`orcid`](author.md#orcid)``
-
-### ``
