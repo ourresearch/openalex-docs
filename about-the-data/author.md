@@ -12,7 +12,7 @@ id: "https://openalex.org/A2208157607"
 
 ### `orcid`
 
-_String:_ The [ORCID](https://en.wikipedia.org/wiki/ORCID) for this author. ORCID global and unique ID for authors.
+_String:_ The [ORCID](https://en.wikipedia.org/wiki/ORCID) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome) for this author. ORCID global and unique ID for authors.
 
 ```json
 orcid: "https://orcid.org/0000-0001-6187-6610"
@@ -60,8 +60,8 @@ cited_by_count: 38
 
 _Object:_ All the external identifiers that we know about for this author. IDs are expressed as URIs whenever possible. Possible ID types:
 
-* `openalex` (_String:_ this author's [OpenAlex ID](./#the-openalex-id), which is also found at [`Author.id`](author.md#id))
-* `orcid` (_String:_ this author's [ORCID](https://orcid.org) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome))
+* `openalex` (_String:_ this author's [OpenAlex ID](./#the-openalex-id). Same as [`Author.id`](author.md#id))
+* `orcid` (_String:_ this author's [ORCID](https://orcid.org) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome). Same as [`Author.orcid`](author.md#orcid))
 * `mag`  (_Integer:_ this author's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `twitter` (_String:_ this author's Twitter handle)
 * `wikipedia` (_String_: this author's Wikipedia page)

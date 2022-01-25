@@ -76,8 +76,8 @@ publication_date: "2018-02-13"
 
 _Object:_ All the external identifiers that we know about for this work. IDs are expressed as URIs whenever possible. Possible ID types:
 
-* `openalex` (_String:_ The [OpenAlex ID](./#the-openalex-id), which is also found at [`Work.id`](work.md#id))
-* `doi` (_String:_ The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). This is most likely, but not necessarily, a [Crossref](https://www.crossref.org) DOI)
+* `openalex` (_String:_ The [OpenAlex ID](./#the-openalex-id). Same as [`Work.id`](work.md#id))
+* `doi` (_String:_ The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). Same as [`Work.doi`](work.md#title))
 * `mag`  (_Integer:_ the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `pmid` (_String:_ The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
 * `pmcid` (_String_: the [Pubmed Central identifier](https://www.ncbi.nlm.nih.gov/pmc/about/public-access-info/#:\~:text=The%20PMCID%20is%20a%20unique,in%20both%20PMC%20and%20PubMed.))
