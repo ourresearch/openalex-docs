@@ -44,12 +44,17 @@ If the attribute you're filtering is a number or an ISO-formatted date string, y
 * Get venues that host more than 1000 works:\
   [`https://api.openalex.org/venues?filter=works_count:>1000`](https://api.openalex.org/venues?filter=works\_count:%3E1000)``
 
+If you want to filter for a specific time range of a work you can use `from_publication_date` and `to_publication_date` (the bounds are inclusive). Example:
+
+* Get all publications between 2022-01-01 and 2022-01-26 (including those dates):\
+  [`https://api.openalex.org/works?filter=from_publication_date:2022-01-01,to_publication_date:2022-01-26`](https://api.openalex.org/works?filter=from\_publication\_date:2022-01-01,to\_publication\_date:2022-01-26)``
+
 You can stack filters together, and the list will return entities that satisfy all the filters--in other words, it combines multiple filters using "AND." Separate multiple filter with commas. Example:
 
 * Get US-based authors who've been cited more than 100 times:\
   [`https://api.openalex.org/authors?filter=last_known_institution.country_code:US,cited_by_count:>100`](https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:US,cited\_by\_count:%3E0)``
 
-Each endpoint support its own list of filters. Here they are, by endpoint:&#x20;
+Each endpoint supports its own list of filters. Here they are, by endpoint:&#x20;
 
 ### `/works` filters
 
@@ -58,6 +63,8 @@ You can filter using these attributes of the `Works` object. You can find more d
 * `display_name.search` (alias: `title.search`)
 * `publication_year`
 * `publication_date`
+* `from_publication_date`
+* `to_publication_date`
 * `host_venue.issn`
 * `host_venue.publisher`
 * `host_venue.id`
