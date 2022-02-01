@@ -158,11 +158,12 @@ Use the ?sort parameter to specify the property you want your list sorted by. Yo
 * `publication_date`
 * `relevance_score` (only exists if there's a [search filter](get-lists-of-entities.md#search) active)
 
-By default, sort direction is ascending. You can reverse this by using `sort:desc` instead of `sort`.  You can sort by multiple properties by providing multiple sort keys, separated by commas.
+By default, sort direction is ascending. You can reverse this by appending `:desc` to the sort key like `works_count:desc`.  You can sort by multiple properties by providing multiple sort keys, separated by commas. Examples:
 
-todo add examples
-
-
+* All works, sorted by `cited_by_count` (highest counts first)\
+  [https://api.openalex.org/works?sort=cited\_by\_count:desc](https://api.openalex.org/works?sort=cited\_by\_count:desc)
+* All venues, in alphabetical order by title:\
+  [https://api.openalex.org/venues?sort=display\_name](https://api.openalex.org/venues?sort=display\_name)
 
 ## Pagination
 
