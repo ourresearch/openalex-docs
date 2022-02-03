@@ -1,6 +1,6 @@
 # Welcome!
 
-OpenAlex is a [fully open](https://docs.openalex.org/about-the-data#license) catalog of the global research system. It's named after the [ancient Library of Alexandria.](https://en.wikipedia.org/wiki/Library\_of\_Alexandria)
+OpenAlex is a [fully open](license.md) catalog of the global research system. It's named after the [ancient Library of Alexandria.](https://en.wikipedia.org/wiki/Library\_of\_Alexandria)
 
 The OpenAlex dataset describes scholarly _entities_ and how those entities are connected to each other. There are five types of entities:
 
