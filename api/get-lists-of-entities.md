@@ -4,8 +4,6 @@
 See the [API overview](./) for info on API rate-limits, authentication, etc.
 {% endhint %}
 
-
-
 Any of the five [entity endpoints](https://docs.openalex.org/api#entity-endpoints) can return a list of entities; you simply call the endpoint directly, adn get a list of all the entities we have of that type. For example:
 
 * Get a list of all the concepts in OpenAlex:\
@@ -30,31 +28,31 @@ These responses become a lot more useful when you add parameters to [filter](get
 
 ## Filter
 
-Filters narrow the list down to just entities that meet a particular condition--specifically, a particular value for a particular attribute. Supported attributes for each endpoints are listed below.&#x20;
+Filters narrow the list down to just entities that meet a particular condition--specifically, a particular value for a particular attribute. Supported attributes for each endpoints are listed below.
 
-Filters are formatted thusly: `attribute:value`. You set them using the `?filter` query parameter. Filters are case-insensitive.&#x20;
+Filters are formatted thusly: `attribute:value`. You set them using the `?filter` query parameter. Filters are case-insensitive.
 
 Here's an example of a filter in use:
 
 * Get works whose [type](https://docs.openalex.org/entity-objects/work#type) is `book`:\
-  [`https://api.openalex.org/works?filter=type:book`](https://api.openalex.org/works?filter=type:book)``
+  [`https://api.openalex.org/works?filter=type:book`](https://api.openalex.org/works?filter=type:book)\`\`
 
 If the attribute you're filtering is a number or an ISO-formatted date string, you can filter using "less than" or "greater than." Example:
 
 * Get venues that host more than 1000 works:\
-  [`https://api.openalex.org/venues?filter=works_count:>1000`](https://api.openalex.org/venues?filter=works\_count:%3E1000)``
+  [`https://api.openalex.org/venues?filter=works_count:>1000`](https://api.openalex.org/venues?filter=works\_count:%3E1000)\`\`
 
 If you want to filter for a specific time range of a work you can use `from_publication_date` and `to_publication_date` (the bounds are inclusive). Example:
 
 * Get all publications between 2022-01-01 and 2022-01-26 (including those dates):\
-  [`https://api.openalex.org/works?filter=from_publication_date:2022-01-01,to_publication_date:2022-01-26`](https://api.openalex.org/works?filter=from\_publication\_date:2022-01-01,to\_publication\_date:2022-01-26)``
+  [`https://api.openalex.org/works?filter=from_publication_date:2022-01-01,to_publication_date:2022-01-26`](https://api.openalex.org/works?filter=from\_publication\_date:2022-01-01,to\_publication\_date:2022-01-26)\`\`
 
 You can stack filters together, and the list will return entities that satisfy all the filters--in other words, it combines multiple filters using "AND." Separate multiple filter with commas. Example:
 
 * Get US-based authors who've been cited more than 100 times:\
-  [`https://api.openalex.org/authors?filter=last_known_institution.country_code:US,cited_by_count:>100`](https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:US,cited\_by\_count:%3E0)``
+  [`https://api.openalex.org/authors?filter=last_known_institution.country_code:US,cited_by_count:>100`](https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:US,cited\_by\_count:%3E0)\`\`
 
-Each endpoint supports its own list of filters. Here they are, by endpoint:&#x20;
+Each endpoint supports its own list of filters. Here they are, by endpoint:
 
 ### `/works` filters
 
@@ -77,7 +75,7 @@ You can filter using these attributes of the `Works` object. You can find more d
 * `authorships.institutions.id` (alias `institutions.id`)
 * `authorships.institutions.ror` (alias: `institutions.ror`)
 * `authorships.institutions.country_code` (alias: `institutions.country_code`)
-* `authorships.institutions.type` (alias: `institutions.type`)&#x20;
+* `authorships.institutions.type` (alias: `institutions.type`)
 * `cited_by_count`
 * `is_retracted`
 * `concepts.id`
@@ -91,7 +89,7 @@ You can filter using these attributes of the `Works` object. You can find more d
 
 You can filter using these attributes of the `Authors` object. You can find more documentation about each attribute on the [Author page.](../about-the-data/author.md)
 
-* `display_name.search`&#x20;
+* `display_name.search`
 * `works_count`
 * `cited_by_count`
 * `last_known_institution.id`
@@ -106,7 +104,7 @@ You can filter using these attributes of the `Venue` object. You can find more d
 
 * `display_name.search`
 * `issn`
-* `publisher` (requires exact match)&#x20;
+* `publisher` (requires exact match)
 * `works_count`
 * `cited_by_count`
 * `x_concepts.id`
@@ -119,7 +117,7 @@ You can filter using these attributes of the `Institution` object. You can find 
 
 * `display_name.search`
 * `country_code`
-* `type`&#x20;
+* `type`
 * `works_count`
 * `cited_by_count`
 * `x_concepts.id`
@@ -129,16 +127,14 @@ You can filter using these attributes of the `Institution` object. You can find 
 You can filter using these attributes of the `Concept` object. You can find more documentation about each attribute on the [Concept page.](../about-the-data/concept.md)
 
 * `display_name.search`
-* `level`&#x20;
+* `level`
 * `works_count`
 * `cited_by_count`
 * `ancestors.id`
 
-
-
 ## Search
 
-Search is just another kind of filter, one that all five endpoints support. But unlike the other filters, search doesn't require an exact match. To filter using search, append `.search` to the end of the property you're filtering for.&#x20;
+Search is just another kind of filter, one that all five endpoints support. But unlike the other filters, search doesn't require an exact match. To filter using search, append `.search` to the end of the property you're filtering for.
 
 Currently, only the `display_name` property supports fulltext search (also the `Work.title` property, which is just an alias for `Work.display_name`). You can't yet do fulltext search on abstract, or any other field. Examples:
 
@@ -152,8 +148,7 @@ By default, multi-word searches are treated as separate terms, but given more we
 * Get works with the exact phrase "intensive treatment of diabetes" in the title:\
   [https://api.openalex.org/works?filter=title.search:"intensive treatment of diabetes"](https://api.openalex.org/works?filter=title.search:%22intensive%20treatment%20of%20diabetes%22)
 
-When you use a search filter, each returned entity in the results lists gets an extra property called `relevance_score`, and the list is by default sorted in descending order of `relevance_score`.\
-
+When you use a search filter, each returned entity in the results lists gets an extra property called `relevance_score`, and the list is by default sorted in descending order of `relevance_score`.\\
 
 ## Sort results
 
@@ -165,7 +160,7 @@ Use the ?sort parameter to specify the property you want your list sorted by. Yo
 * `publication_date`
 * `relevance_score` (only exists if there's a [search filter](get-lists-of-entities.md#search) active)
 
-By default, sort direction is ascending. You can reverse this by appending `:desc` to the sort key like `works_count:desc`.  You can sort by multiple properties by providing multiple sort keys, separated by commas. Examples:
+By default, sort direction is ascending. You can reverse this by appending `:desc` to the sort key like `works_count:desc`. You can sort by multiple properties by providing multiple sort keys, separated by commas. Examples:
 
 * All works, sorted by `cited_by_count` (highest counts first)\
   [https://api.openalex.org/works?sort=cited\_by\_count:desc](https://api.openalex.org/works?sort=cited\_by\_count:desc)
@@ -174,9 +169,6 @@ By default, sort direction is ascending. You can reverse this by appending `:des
 
 ## Pagination
 
-To page through results, specify the page you want using the `?page` query parameter. By default there are 25 results per page; you can use the `?per-page` parameter to change that to any number between 0 and 50.
+To page through results, specify the page you want using the `?page` query parameter. By default there are 25 results per page; you can use the `?per-page` parameter to change that to any number between 1 and 200.
 
 Currently you can only use paging to read the first 10,000 results of any list. To read more, you'll need to use cursor pagination, which we haven't implemented. Yet :smile:.
-
-
-
