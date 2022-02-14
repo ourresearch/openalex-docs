@@ -116,10 +116,16 @@ This script will run all the copy commands in the right order: [https://gist.git
 1. Copy it to the same place as the python script from step 2, right above the folder with your CSV files.
 2. Set the environment variable OPENALEX\_SNAPSHOT\_DB to the [connection URI](https://www.postgresql.org/docs/13/libpq-connect.html#LIBPQ-CONNSTRING) for your database.
 3. If your CSV files aren't in `csv-files`, replace each occurence of 'csv-files/' in the script with the correct path.
-4. Run it like this:
+4. Run it like this (from your shell prompt)
+
+```bash
+psql $OPENALEX_SNAPSHOT_DB < copy-openalex-csv.sql
+```
+
+or like this (from psql)
 
 ```
-psql $OPENALEX_SNAPSHOT_DB < copy-openalex-csv.sql
+\i copy-openalex-csv.sql
 ```
 
 There are a bunch of ways you can do this - just run the copy commands from the script above in the right order in whatever client you're familiar with.
