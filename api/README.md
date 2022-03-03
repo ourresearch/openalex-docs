@@ -86,7 +86,7 @@ However, this is _much_ nicer if you install an extension to pretty-print the JS
 
 ![A lot prettier than cURL](https://i.imgur.com/E7mNLph.png)
 
-Client Libraries&#x20;
+## Client Libraries&#x20;
 
 There's no officially-supported client library for the API, for now. However, here's a short list of third-party libraries (and if you know of others, give us a shout):
 
