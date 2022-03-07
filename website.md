@@ -5,7 +5,7 @@ description: Explore OpenAlex without needing to write code
 # Website
 
 {% hint style="info" %}
-The website launches in February 2022
+The website launches in March/April 2022
 {% endhint %}
 
 The easiest way to explore the OpenAlex dataset is via the web interface. It allows you to search, filter, facet, and export OpenAlex entities, just like [the API](api/) does (in fact, it's built on our API), but without needing any technical knowledge.
@@ -31,7 +31,7 @@ Entity information can be displayed on a web page, like [https://explore.openale
 #### **How to get a web page**:&#x20;
 
 * In a web browser, click OpenAlex ID or paste it into your location bar. Try clicking [https://openalex.org/W2741809807](https://openalex.org/W2741809807), for example.
-* In any client  - [cURL](https://curl.se), [Requests](https://docs.python-requests.org/en/latest/), web browsers and so on - don't request JSON in any of the ways outlined below.
+* In any client - [cURL](https://curl.se), [Requests](https://docs.python-requests.org/en/latest/), web browsers and so on - don't request JSON in any of the ways outlined below.
 
 ### 2. A [JSON](https://json.org) object, easy for computers to read ([`application/json`](https://www.iana.org/assignments/media-types/application/json))
 
