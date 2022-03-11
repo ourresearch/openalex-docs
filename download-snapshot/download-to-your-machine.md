@@ -23,7 +23,6 @@ You should get a file structure like this (edited for length - there are more ob
 ```
 openalex-snapshot/
 ├── LICENSE.txt
-├── README.txt
 ├── RELEASE_NOTES.txt
 └── data
     ├── authors
