@@ -30,12 +30,12 @@ These responses become a lot more useful when you add parameters to [filter](get
 
 Filters narrow the list down to just entities that meet a particular condition--specifically, a particular value for a particular attribute. Supported attributes for each endpoints are listed below.
 
-Filters are formatted thusly: `attribute:value`. You set them using the `?filter` query parameter. Filters are case-insensitive.
-
-Here's an example of a filter in use:
+Filters are formatted thusly: `attribute:value`. You set them using the `?filter` query parameter. Filters are case-insensitive. Examples:
 
 * Get works whose [type](https://docs.openalex.org/entity-objects/work#type) is `book`:\
-  [`https://api.openalex.org/works?filter=type:book`](https://api.openalex.org/works?filter=type:book)\`\`
+  [`https://api.openalex.org/works?filter=type:book`](https://api.openalex.org/works?filter=type:book)
+* Get authors whose name is Einstein:\
+  [`https://api.openalex.org/authors?filter=display_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)``
 
 If the attribute you're filtering is a number or an ISO-formatted date string, you can filter using "less than" or "greater than." Example:
 

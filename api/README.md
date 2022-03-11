@@ -33,6 +33,16 @@ To get a single entity, just feed an ID to the relevant endpoint: `/<endpoint_na
 
 To learn more about which IDs are accepted and in which formats, see [Get Single Entities](get-single-entities.md).
 
+{% hint style="info" %}
+To get a single entity, you need a single _unambiguous_ identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name) then it may apply to many entities, and you should filter a _list_ of them. For example, this gets a list of the authors called Einstein: \
+\
+[`https://api.openalex.org/authors?filter=display_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)\
+\
+To learn more, see [Get lists of entities](get-lists-of-entities.md).
+
+
+{% endhint %}
+
 ### Get lists of entities
 
 To get a list of entities, just query the relevant endpoint directly: `/<endpoint_name>`. You can add parameters to filter, sort, search, and group results. Examples:
