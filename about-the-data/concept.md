@@ -216,13 +216,13 @@ _String:_ The last time anything in this concept object changed, expressed as an
 updated_date: "2021-12-25T14:04:30.578837"
 ```
 
+### `created_date`
 
+_String:_ The date this `Concept` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.&#x20;
 
-
-
-
-
-
+```json
+created_date: "2017-08-08"
+```
 
 ## The `DehydratedConcept` object
 

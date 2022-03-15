@@ -275,15 +275,13 @@ _String:_ The last time anything in this `Institution` changed, expressed as an 
 updated_date: "2022-01-02T00:27:23.088909"
 ```
 
+### `created_date`
 
+_String:_ The date this `Institution` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.&#x20;
 
-
-
-
-
-
-
-
+```json
+created_date: "2017-08-08"
+```
 
 ## The `DehydratedInstitution` object
 
