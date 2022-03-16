@@ -171,22 +171,27 @@ By default, sort direction is ascending. You can reverse this by appending `:des
 
 ### Basic paging (up to 10,000 results)
 
-To page through results, specify the page you want using the `?page` query parameter. By default there are 25 results per page; you can use the `?per-page` parameter to change that to any number between 1 and 200.
+To page through results easily, specify the page you want using the `?page` query parameter. By default there are 25 results per page; you can use the `?per-page` parameter to change that to any number between 1 and 200.
 
-Currently you can only use paging to read the first 10,000 results of any list. To read more, you'll need to use cursor pagination.
+* Get the 2nd page of results, with 100 results per page\
+  [https://api.openalex.org/works?per-page=100\&page=2](https://api.openalex.org/works?per-page=100\&page=2)
+
+You can only use paging to read the first 10,000 results of any list. To read more, you'll need to use cursor pagination.
 
 ### Cursor paging
 
-Request a cursor by appending `cursor=*` to any endpoint. Such as:
+Cursor paging is a more advanced method when you need to retrieve results over 10,000 records. Request a cursor by appending `cursor=*` to any endpoint.
 
-[https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*)
+* Get a cursor in order to start cursor pagination\
+  [https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*)
 
 This creates a `next_cursor` value within meta that can be used to page through all results:
 
 `next_cursor: "IlsxNjA5MzcyODAwMDAwXSI="`
 
-To retrieve the next page of results, copy the `next_cursor` value into the cursor field in the URL:
+To retrieve the next page of results, copy the `next_cursor` value into the cursor field in the URL.
 
-[https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwXSI=](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwXSI=)
+* Get the next page of results using a cursor value\
+  [https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwXSI=](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwXSI=)
 
 You can use the `next_cursor` value within that result to continue paging. You will know you reached the end of results when `next_cursor` is null and the results set is empty.
