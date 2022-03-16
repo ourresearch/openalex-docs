@@ -169,6 +169,24 @@ By default, sort direction is ascending. You can reverse this by appending `:des
 
 ## Pagination
 
+### Basic pagination (up to 10,000 results)
+
 To page through results, specify the page you want using the `?page` query parameter. By default there are 25 results per page; you can use the `?per-page` parameter to change that to any number between 1 and 200.
 
-Currently you can only use paging to read the first 10,000 results of any list. To read more, you'll need to use cursor pagination, which we haven't implemented. Yet :smile:.
+Currently you can only use paging to read the first 10,000 results of any list. To read more, you'll need to use cursor pagination.
+
+### Cursor pagination
+
+Request a cursor by appending `cursor=*` to any endpoint. Such as:
+
+[https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*)
+
+This creates a `next_cursor` value within meta that can be used to page through all results:
+
+`next_cursor: "IlsxNjA5MzcyODAwMDAwXSI="`
+
+To retrieve the next page of results, copy the `next_cursor` value into the cursor field in the URL:
+
+[https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwXSI=](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwXSI=)
+
+You can use the new `next_cursor` within that result to continue paging. You will know you reached the end of results when `next_cursor` is null and the results set is empty.
