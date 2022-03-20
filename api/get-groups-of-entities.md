@@ -14,35 +14,42 @@ This returns a `meta` object with details about the query, an empty `results` ob
 ```json
 {
     meta: {
-        count: 85668865,
-        db_response_time_ms: 112,
+        count: 5,
+        db_response_time_ms: 26,
         page: 1,
         per_page: 50
-        },
+    },
     results: [ ],
     group_by: [
         {
-        key: "closed",
-        count: 25629370
+            key: "closed",
+            key_display_name: "closed",
+            count: 66862508
         },
         {
-        key: "bronze",
-        count: 3806644
+            key: "gold",
+            key_display_name: "gold",
+            count: 11087903
         },
         {
-        key: "gold",
-        count: 3608769
+            key: "bronze",
+            key_display_name: "bronze",
+            count: 10499470
         },
         {
-        key: "green",
-        count: 2636551
+            key: "green",
+            key_display_name: "green",
+            count: 6918466
         },
         {
-        key: "hybrid",
-        count: 1109128
+            key: "hybrid",
+            key_display_name: "hybrid",
+            count: 3277958
         }
     ]
 }
 ```
 
-So from this we can see that the majority of works (25,629,370 of them) are `closed`, with another 3,806,644 `bronze` ones, and so forth. &#x20;
+So from this we can see that the majority of works (66,862,508 of them) are `closed`, with another 10,499,470 `bronze` ones, and so forth. &#x20;
+
+You can group by most of the same properties that you can filter by, and you can combine grouping with filtering.&#x20;
