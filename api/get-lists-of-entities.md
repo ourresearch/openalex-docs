@@ -167,6 +167,13 @@ By default, sort direction is ascending. You can reverse this by appending `:des
 * All venues, in alphabetical order by title:\
   [https://api.openalex.org/venues?sort=display\_name](https://api.openalex.org/venues?sort=display\_name)
 
+You can sort by relevance\_score when searching:
+
+* Sort by year, then by relevance\_score when searching for "bioplastics"\
+  [https://api.openalex.org/works?filter=display\_name.search:bioplastics\&sort=publication\_year:desc,relevance\_score:desc](https://api.openalex.org/works?filter=display\_name.search:bioplastics\&sort=publication\_year:desc,relevance\_score:desc)
+
+An error is thrown if attempting to sort by relevane\_score without a search query.
+
 ## Pagination
 
 ### Basic paging (up to 10,000 results)
