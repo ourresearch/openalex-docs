@@ -83,10 +83,17 @@ You can filter using these attributes of the `Works` object. You can find more d
 * `alternate_host_venues.license`
 * `alternate_host_venues.version`
 * `alternate_host_venues.venue_id`
-* `referenced_works` (alias: `cites`)
+
+#### Additional filters
+
+These filters aren't attributes of the [Work entity](../about-the-data/work.md) object, but they're included to address some important use cases:
+
 * `has_doi`
+  * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](get-groups-of-entities.md). Example: [https://api.openalex.org/works?group\_by=has\_doi](https://api.openalex.org/works?group\_by=has\_doi)
+* `cites`
+  * Takes an OpenAlex ID and returns the list of works that cite that work. You can think of this as **incoming citations**. Example: [https://api.openalex.org/works?filter=cites:W2741809807](https://api.openalex.org/works?filter=cites:W2741809807)
 * `cited_by`
-  * Takes an OpenAlex ID and returns the list of works found in that records's `referenced_works` section. Example: [https://api.openalex.org/works?filter=cited\_by:W2766808518](https://api.openalex.org/works?filter=cited\_by:W2766808518)
+  * Takes an OpenAlex ID and returns the list of works found in that records's `referenced_works` section. You can think of this as **outgoing citations**. Example: [https://api.openalex.org/works?filter=cited\_by:W2766808518](https://api.openalex.org/works?filter=cited\_by:W2766808518)
 * `related_to`
   * Takes an OpenAlex ID and returns the list of works found in that records's `related_works` section. Example: [https://api.openalex.org/works?filter=related\_to:W2486144666](https://api.openalex.org/works?filter=related\_to:W2486144666)
 
