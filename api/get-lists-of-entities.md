@@ -84,6 +84,7 @@ You can filter using these attributes of the `Works` object. You can find more d
 * `alternate_host_venues.version`
 * `alternate_host_venues.venue_id`
 * `referenced_works` (alias: `cites`)
+* `has_doi`
 * `cited_by`
   * Takes an OpenAlex ID and returns the list of works found in that records's `referenced_works` section. Example: [https://api.openalex.org/works?filter=cited\_by:W2766808518](https://api.openalex.org/works?filter=cited\_by:W2766808518)
 * `related_to`
@@ -101,6 +102,7 @@ You can filter using these attributes of the `Authors` object. You can find more
 * `last_known_institution.country_code`
 * `last_known_institution.type`
 * `x_concepts.id`
+* `has_orcid`
 
 ### `/venues` filters
 
@@ -112,6 +114,7 @@ You can filter using these attributes of the `Venue` object. You can find more d
 * `works_count`
 * `cited_by_count`
 * `x_concepts.id`
+* `has_issn`
 * `is_oa`
 * `is_in_doaj`
 
@@ -125,6 +128,7 @@ You can filter using these attributes of the `Institution` object. You can find 
 * `works_count`
 * `cited_by_count`
 * `x_concepts.id`
+* `has_ror`
 
 ### `/concepts` filters
 
@@ -135,6 +139,7 @@ You can filter using these attributes of the `Concept` object. You can find more
 * `works_count`
 * `cited_by_count`
 * `ancestors.id`
+* `has_wikidata`
 
 ## Search
 
