@@ -85,9 +85,9 @@ You can filter using these attributes of the `Works` object. You can find more d
 * `alternate_host_venues.venue_id`
 * `referenced_works` (alias: `cites`)
 * `cited_by`
-  * Takes an OpenAlex ID and returns a full list of works found in that records's `referenced_works` section. Example: [https://api.openalex.org/works?filter=cited\_by:W2766808518](https://api.openalex.org/works?filter=cited\_by:W2766808518)
+  * Takes an OpenAlex ID and returns the list of works found in that records's `referenced_works` section. Example: [https://api.openalex.org/works?filter=cited\_by:W2766808518](https://api.openalex.org/works?filter=cited\_by:W2766808518)
 * `related_to`
-  * Takes an OpenAlex ID and returns a full list of works found in that records's `related_works` section. Example: [https://api.openalex.org/works?filter=related\_to:W2486144666](https://api.openalex.org/works?filter=related\_to:W2486144666)
+  * Takes an OpenAlex ID and returns the list of works found in that records's `related_works` section. Example: [https://api.openalex.org/works?filter=related\_to:W2486144666](https://api.openalex.org/works?filter=related\_to:W2486144666)
 
 ### `/authors` filters
 
