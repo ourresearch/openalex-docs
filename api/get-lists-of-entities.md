@@ -88,10 +88,14 @@ You can filter using these attributes of the `Works` object. You can find more d
 
 These filters aren't attributes of the [Work entity](../about-the-data/work.md) object, but they're included to address some important use cases:
 
-* `has_doi`
-  * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](get-groups-of-entities.md). Example: [https://api.openalex.org/works?group\_by=has\_doi](https://api.openalex.org/works?group\_by=has\_doi)
+* `has_doi`&#x20;
+  * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](get-groups-of-entities.md).&#x20;
+  * Example: \
+    Get a count of all the works in OpenAlex that have a DOI, and all the ones that don't:\
+    [`https://api.openalex.org/works?group_by=has_doi`](https://api.openalex.org/works?group\_by=has\_doi)
 * `cites`
-  * Takes an OpenAlex ID and returns the list of works that cite that work. You can think of this as **incoming citations**. Example: [https://api.openalex.org/works?filter=cites:W2741809807](https://api.openalex.org/works?filter=cites:W2741809807)
+  * Takes an OpenAlex ID and returns the list of works that cite that work. You can think of this as **incoming citations**.&#x20;
+  * Example: Get works that cite [https://openalex.org/W2741809807](https://openalex.org/W2741809807) ("The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles")  [`https://api.openalex.org/works?filter=cites:W2741809807`](https://api.openalex.org/works?filter=cites:W2741809807)``
 * `cited_by`
   * Takes an OpenAlex ID and returns the list of works found in that records's `referenced_works` section. You can think of this as **outgoing citations**. Example: [https://api.openalex.org/works?filter=cited\_by:W2766808518](https://api.openalex.org/works?filter=cited\_by:W2766808518)
 * `related_to`
