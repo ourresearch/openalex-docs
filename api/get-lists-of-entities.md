@@ -154,25 +154,34 @@ You can filter using these attributes of the `Concept` object. You can find more
 
 ## Search
 
-Search is just another kind of filter, one that all five endpoints support. But unlike the other filters, search doesn't require an exact match. To filter using search, append `.search` to the end of the property you're filtering for.
+Search is supported on all five endpoints and can be combined with filters. Search does not require an exact match. Use the `?search` parameter to search any endpoint with full-text:
 
-Currently, only the `display_name` property supports fulltext search (also the `Work.title` property, which is just an alias for `Work.display_name`). You can't yet do fulltext search on abstract, or any other field. Examples:
+* Get works with search term "dna"\
+  [https://api.openalex.org/works?search=dna](https://api.openalex.org/works?search=dna)
+
+For `works`, search uses `display_name` and `abstract_inverted_index` fields to find results. The `concepts` endpoint uses `display_name` and `description` to build results. All other endpoints use `display_name` only.
+
+Multi-word searches are treated as separate terms, but given more weight when they appear together. You can also require an exact match for a given phrase by enclosing it with quotes:
+
+* Get works with the exact phrase "intensive treatment of diabetes" in the title:\
+  [https://api.openalex.org/works?search="intensive%20treatment%20of%20diabetes"](https://api.openalex.org/works?search=%22intensive%20treatment%20of%20diabetes%22)
+
+When you using search, each returned entity in the results lists gets an extra property called `relevance_score`, and the list is by default sorted in descending order of `relevance_score`.
+
+### Search as a filter
+
+You can limit search to exact fields by using it as a filter. Append `.search` to the end of the property you are filtering for:
 
 * Get authors who have "Einstein" as part of their name:\
   [https://api.openalex.org/authors?filter=display\_name.search:einstein](https://api.openalex.org/authors?filter=display\_name.search:einstein)
 * Get works with "cubist" in the title:\
   [https://api.openalex.org/works?filter=title.search:cubist](https://api.openalex.org/works?filter=title.search:cubist)
 
-By default, multi-word searches are treated as separate terms, but given more weight when they appear together. You can also require an exact match for a given phrase by enclosing it with quotes. Example:
-
-* Get works with the exact phrase "intensive treatment of diabetes" in the title:\
-  [https://api.openalex.org/works?filter=title.search:"intensive treatment of diabetes"](https://api.openalex.org/works?filter=title.search:%22intensive%20treatment%20of%20diabetes%22)
-
-When you use a search filter, each returned entity in the results lists gets an extra property called `relevance_score`, and the list is by default sorted in descending order of `relevance_score`.\\
+Currently, only the `display_name` property supports full-text search (also the `Work.title` property, which is just an alias for `Work.display_name`). The fields `abstract_inverted_index` from `works` and `description` from `concepts` are coming soon.
 
 ## Sort results
 
-Use the ?sort parameter to specify the property you want your list sorted by. You can sort by these properties, where they exist:
+Use the `?sort` parameter to specify the property you want your list sorted by. You can sort by these properties, where they exist:
 
 * `display_name`
 * `cited_by_count`
