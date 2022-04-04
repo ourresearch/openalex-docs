@@ -58,7 +58,6 @@ Each endpoint supports its own list of filters. Here they are, by endpoint:
 
 You can filter using these attributes of the `Works` object. You can find more documentation about each attribute on the [Work page](../about-the-data/work.md).
 
-* ``[`display_name.search`](../about-the-data/work.md#display\_name) (alias: [`title.search`](../about-the-data/work.md#title-1))
 * ``[`publication_year`](../about-the-data/work.md#publication\_year)``
 * ``[`publication_date`](../about-the-data/work.md#publication\_date)``
 * ``[`host_venue.issn`](../about-the-data/work.md#host\_venue)``
@@ -86,6 +85,8 @@ You can filter using these attributes of the `Works` object. You can find more d
 
 These filters aren't attributes of the [Work entity](../about-the-data/work.md) object, but they're included to address some important use cases:
 
+* [`display_name.search`](get-lists-of-entities.md#search-as-a-filter) (alias: [`title.search`](get-lists-of-entities.md#search-as-a-filter))
+  * Takes a string and returns works with titles containing that string.
 * `has_doi`&#x20;
   * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](get-groups-of-entities.md).&#x20;
   * Example: \
