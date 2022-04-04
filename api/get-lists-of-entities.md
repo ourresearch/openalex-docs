@@ -58,7 +58,7 @@ Each endpoint supports its own list of filters. Here they are, by endpoint:
 
 You can filter using these attributes of the `Works` object. You can find more documentation about each attribute on the [Work page](../about-the-data/work.md).
 
-* `display_name.search` (alias: `title.search`)
+* ``[`display_name.search`](../about-the-data/work.md#display\_name) (alias: [`title.search`](../about-the-data/work.md#title-1))
 * `publication_year`
 * `publication_date`
 * `from_publication_date`
