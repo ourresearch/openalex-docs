@@ -59,30 +59,28 @@ Each endpoint supports its own list of filters. Here they are, by endpoint:
 You can filter using these attributes of the `Works` object. You can find more documentation about each attribute on the [Work page](../about-the-data/work.md).
 
 * ``[`display_name.search`](../about-the-data/work.md#display\_name) (alias: [`title.search`](../about-the-data/work.md#title-1))
-* `publication_year`
-* `publication_date`
-* `from_publication_date`
-* `to_publication_date`
-* `host_venue.issn`
-* `host_venue.publisher`
-* `host_venue.id`
-* `type`
-* `is_paratext`
-* `open_access.oa_status` (alias: `oa_status`)
-* `open_access.is_oa` (alias: `is_oa`)
-* `authorships.author.id` (alias: `author.id`)
-* `authorships.author.orcid` (alias: `author.orcid`)
-* `authorships.institutions.id` (alias `institutions.id`)
-* `authorships.institutions.ror` (alias: `institutions.ror`)
-* `authorships.institutions.country_code` (alias: `institutions.country_code`)
-* `authorships.institutions.type` (alias: `institutions.type`)
-* `cited_by_count`
-* `is_retracted`
-* `concepts.id`
-* `concepts.wikidata`
-* `alternate_host_venues.license`
-* `alternate_host_venues.version`
-* `alternate_host_venues.venue_id`
+* ``[`publication_year`](../about-the-data/work.md#publication\_year)``
+* ``[`publication_date`](../about-the-data/work.md#publication\_date)``
+* ``[`host_venue.issn`](../about-the-data/work.md#host\_venue)``
+* ``[`host_venue.publisher`](../about-the-data/work.md#host\_venue)``
+* ``[`host_venue.id`](../about-the-data/work.md#host\_venue)``
+* ``[`type`](../about-the-data/work.md#type)``
+* ``[`is_paratext`](../about-the-data/work.md#is\_paratext)``
+* ``[`open_access.oa_status`](../about-the-data/work.md#open\_access) (alias: `oa_status`)
+* ``[`open_access.is_oa`](../about-the-data/work.md#open\_access) (alias: `is_oa`)
+* ``[`authorships.author.id`](../about-the-data/work.md#authorships) (alias: `author.id`)
+* ``[`authorships.author.orcid`](../about-the-data/work.md#authorships) (alias: `author.orcid`)
+* ``[`authorships.institutions.id`](../about-the-data/work.md#authorships) (alias `institutions.id`)
+* ``[`authorships.institutions.ror`](../about-the-data/work.md#authorships) (alias: `institutions.ror`)
+* ``[`authorships.institutions.country_code`](../about-the-data/work.md#authorships) (alias: `institutions.country_code`)
+* ``[`authorships.institutions.type`](../about-the-data/work.md#authorships) (alias: `institutions.type`)
+* ``[`cited_by_count`](../about-the-data/work.md#cited\_by\_count)``
+* ``[`is_retracted`](../about-the-data/work.md#is\_retracted)``
+* ``[`concepts.id`](../about-the-data/work.md#concepts)``
+* ``[`concepts.wikidata`](../about-the-data/work.md#concepts)``
+* ``[`alternate_host_venues.license`](../about-the-data/work.md#alternate\_host\_venues)``
+* ``[`alternate_host_venues.version`](../about-the-data/work.md#alternate\_host\_venues)``
+* ``[`alternate_host_venues.venue_id`](../about-the-data/work.md#alternate\_host\_venues)``
 
 #### Additional filters
 
@@ -100,6 +98,10 @@ These filters aren't attributes of the [Work entity](../about-the-data/work.md) 
   * Takes an OpenAlex ID and returns the list of works found in that records's `referenced_works` section. You can think of this as **outgoing citations**. Example: [https://api.openalex.org/works?filter=cited\_by:W2766808518](https://api.openalex.org/works?filter=cited\_by:W2766808518)
 * `related_to`
   * Takes an OpenAlex ID and returns the list of works found in that records's `related_works` section. Example: [https://api.openalex.org/works?filter=related\_to:W2486144666](https://api.openalex.org/works?filter=related\_to:W2486144666)
+* `from_publication_date`
+  * Takes a date (yyyy-mm-dd) and returns a list of works with [`publication_date`](../about-the-data/work.md#publication\_date) greater than or equal to that date.
+* `to_publication_date`
+  * Takes a date (yyyy-mm-dd) and returns a list of works with [`publication_date`](../about-the-data/work.md#publication\_date) less than or equal to that date.
 
 ### `/authors` filters
 
