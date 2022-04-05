@@ -108,7 +108,6 @@ These filters aren't attributes of the [Work entity](../about-the-data/work.md) 
 
 You can filter using these attributes of the `Authors` object. You can find more documentation about each attribute on the [Author page.](../about-the-data/author.md)
 
-* `display_name.search`
 * ``[`works_count`](../about-the-data/author.md#works\_count)``
 * ``[`cited_by_count`](../about-the-data/author.md#cited\_by\_count)``
 * ``[`last_known_institution.id`](../about-the-data/author.md#last\_known\_institution)``
@@ -116,7 +115,17 @@ You can filter using these attributes of the `Authors` object. You can find more
 * ``[`last_known_institution.country_code`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.type`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`x_concepts.id`](../about-the-data/author.md#x\_concepts)``
+
+#### Additional Filters
+
+These filters aren't attributes of the [Author entity](../about-the-data/author.md) object, but they're included to address some important use cases:
+
+* `display_name.search`
+  * Takes a string and returns authors with [display\_names](../about-the-data/author.md#display\_name) exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
 * `has_orcid`
+  * Takes a boolean (`true` or `false`) and returns a list of Authors that have/lack an [orcid](../about-the-data/author.md#orcid).
+  * Example: \
+    Get a count of all the authors in OpenAlex that have an orcid, and all the ones that don't: [https://api.openalex.org/authors?group\_by=has\_orcid](https://api.openalex.org/authors?group\_by=has\_orcid)
 
 ### `/venues` filters
 
