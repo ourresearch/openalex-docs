@@ -109,13 +109,13 @@ These filters aren't attributes of the [Work entity](../about-the-data/work.md) 
 You can filter using these attributes of the `Authors` object. You can find more documentation about each attribute on the [Author page.](../about-the-data/author.md)
 
 * `display_name.search`
-* `works_count`
-* `cited_by_count`
-* `last_known_institution.id`
-* `last_known_institution.ror`
-* `last_known_institution.country_code`
-* `last_known_institution.type`
-* `x_concepts.id`
+* ``[`works_count`](../about-the-data/author.md#works\_count)``
+* ``[`cited_by_count`](../about-the-data/author.md#cited\_by\_count)``
+* ``[`last_known_institution.id`](../about-the-data/author.md#last\_known\_institution)``
+* ``[`last_known_institution.ror`](../about-the-data/author.md#last\_known\_institution)``
+* ``[`last_known_institution.country_code`](../about-the-data/author.md#last\_known\_institution)``
+* ``[`last_known_institution.type`](../about-the-data/author.md#last\_known\_institution)``
+* ``[`x_concepts.id`](../about-the-data/author.md#x\_concepts)``
 * `has_orcid`
 
 ### `/venues` filters
@@ -123,25 +123,25 @@ You can filter using these attributes of the `Authors` object. You can find more
 You can filter using these attributes of the `Venue` object. You can find more documentation about each attribute on the [Venue page](../about-the-data/venue.md).
 
 * `display_name.search`
-* `issn`
-* `publisher` (requires exact match)
-* `works_count`
-* `cited_by_count`
-* `x_concepts.id`
+* ``[`issn`](../about-the-data/venue.md#issn)``
+* ``[`publisher`](../about-the-data/venue.md#publisher) (requires exact match)
+* ``[`works_count`](../about-the-data/venue.md#works\_count)``
+* ``[`cited_by_count`](../about-the-data/venue.md#cited\_by\_count)``
+* ``[`x_concepts.id`](../about-the-data/venue.md#x\_concepts)``
 * `has_issn`
-* `is_oa`
-* `is_in_doaj`
+* ``[`is_oa`](../about-the-data/venue.md#is\_oa)``
+* ``[`is_in_doaj`](../about-the-data/venue.md#is\_in\_doaj)``
 
 ### `/institutions` filters
 
 You can filter using these attributes of the `Institution` object. You can find more documentation about each attribute on the [Institution page](../about-the-data/institution.md).
 
 * `display_name.search`
-* `country_code`
-* `type`
-* `works_count`
-* `cited_by_count`
-* `x_concepts.id`
+* ``[`country_code`](../about-the-data/institution.md#country\_code)``
+* ``[`type`](../about-the-data/institution.md#type)``
+* ``[`works_count`](../about-the-data/institution.md#works\_count)``
+* ``[`cited_by_count`](../about-the-data/institution.md#cited\_by\_count)``
+* ``[`x_concepts.id`](../about-the-data/institution.md#x\_concepts)``
 * `has_ror`
 
 ### `/concepts` filters
@@ -149,10 +149,10 @@ You can filter using these attributes of the `Institution` object. You can find 
 You can filter using these attributes of the `Concept` object. You can find more documentation about each attribute on the [Concept page.](../about-the-data/concept.md)
 
 * `display_name.search`
-* `level`
-* `works_count`
-* `cited_by_count`
-* `ancestors.id`
+* ``[`level`](../about-the-data/concept.md#level)``
+* ``[`works_count`](../about-the-data/concept.md#works\_count)``
+* ``[`cited_by_count`](../about-the-data/concept.md#cited\_by\_count)``
+* ``[`ancestors.id`](../about-the-data/concept.md#ancestors)``
 * `has_wikidata`
 
 ## Search
