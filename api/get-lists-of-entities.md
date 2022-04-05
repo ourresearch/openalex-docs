@@ -4,7 +4,7 @@
 See the [API overview](./) for info on API rate-limits, authentication, etc.
 {% endhint %}
 
-Any of the five [entity endpoints](https://docs.openalex.org/api#entity-endpoints) can return a list of entities; you simply call the endpoint directly, adn get a list of all the entities we have of that type. For example:
+Any of the five [entity endpoints](https://docs.openalex.org/api#entity-endpoints) can return a list of entities; you simply call the endpoint directly, and get a list of all the entities we have of that type. For example:
 
 * Get a list of all the concepts in OpenAlex:\
   [`https://api.openalex.org/concepts`](https://api.openalex.org/concepts)
@@ -85,8 +85,8 @@ You can filter using these attributes of the `Works` object. You can find more d
 
 These filters aren't attributes of the [Work entity](../about-the-data/work.md) object, but they're included to address some important use cases:
 
-* [`display_name.search`](get-lists-of-entities.md#search-as-a-filter) (alias: [`title.search`](get-lists-of-entities.md#search-as-a-filter))
-  * Takes a string and returns works with titles containing that string.
+* `display_name.search` (alias: [`title.search`](get-lists-of-entities.md#search-as-a-filter))
+  * Takes a string and returns works with titles [exactly matching that string](get-lists-of-entities.md#search-as-a-filter). In most cases, the [`search` parameter](get-lists-of-entities.md#search) is better at finding works relevant to your search terms. Unless you're specifically interested in the contents of titles, you probably want the search parameter instead of `display_name.search`.
 * `has_doi`&#x20;
   * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](get-groups-of-entities.md).&#x20;
   * Example: \
@@ -96,9 +96,9 @@ These filters aren't attributes of the [Work entity](../about-the-data/work.md) 
   * Takes an OpenAlex ID and returns the list of works that cite that work. You can think of this as **incoming citations**.&#x20;
   * Example: Get works that cite [https://openalex.org/W2741809807](https://openalex.org/W2741809807) ("The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles")  [`https://api.openalex.org/works?filter=cites:W2741809807`](https://api.openalex.org/works?filter=cites:W2741809807)``
 * `cited_by`
-  * Takes an OpenAlex ID and returns the list of works found in that records's `referenced_works` section. You can think of this as **outgoing citations**. Example: [https://api.openalex.org/works?filter=cited\_by:W2766808518](https://api.openalex.org/works?filter=cited\_by:W2766808518)
+  * Takes an OpenAlex ID and returns the list of works found in that record's `referenced_works` section. You can think of this as **outgoing citations**. Example: [https://api.openalex.org/works?filter=cited\_by:W2766808518](https://api.openalex.org/works?filter=cited\_by:W2766808518)
 * `related_to`
-  * Takes an OpenAlex ID and returns the list of works found in that records's `related_works` section. Example: [https://api.openalex.org/works?filter=related\_to:W2486144666](https://api.openalex.org/works?filter=related\_to:W2486144666)
+  * Takes an OpenAlex ID and returns the list of works found in that record's `related_works` section. Example: [https://api.openalex.org/works?filter=related\_to:W2486144666](https://api.openalex.org/works?filter=related\_to:W2486144666)
 * `from_publication_date`
   * Takes a date (yyyy-mm-dd) and returns a list of works with [`publication_date`](../about-the-data/work.md#publication\_date) greater than or equal to that date.
 * `to_publication_date`
