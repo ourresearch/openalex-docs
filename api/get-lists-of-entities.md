@@ -40,17 +40,17 @@ Filters are formatted thusly: `attribute:value`. You set them using the `?filter
 If the attribute you're filtering is a number or an ISO-formatted date string, you can filter using "less than" or "greater than." Example:
 
 * Get venues that host more than 1000 works:\
-  [`https://api.openalex.org/venues?filter=works_count:>1000`](https://api.openalex.org/venues?filter=works\_count:%3E1000)\`\`
+  [`https://api.openalex.org/venues?filter=works_count:>1000`](https://api.openalex.org/venues?filter=works\_count:%3E1000)
 
 If you want to filter for a specific time range of a work you can use `from_publication_date` and `to_publication_date` (the bounds are inclusive). Example:
 
 * Get all publications between 2022-01-01 and 2022-01-26 (including those dates):\
-  [`https://api.openalex.org/works?filter=from_publication_date:2022-01-01,to_publication_date:2022-01-26`](https://api.openalex.org/works?filter=from\_publication\_date:2022-01-01,to\_publication\_date:2022-01-26)\`\`
+  [`https://api.openalex.org/works?filter=from_publication_date:2022-01-01,to_publication_date:2022-01-26`](https://api.openalex.org/works?filter=from\_publication\_date:2022-01-01,to\_publication\_date:2022-01-26)
 
 You can stack filters together, and the list will return entities that satisfy all the filters--in other words, it combines multiple filters using "AND." Separate multiple filter with commas. Example:
 
 * Get US-based authors who've been cited more than 100 times:\
-  [`https://api.openalex.org/authors?filter=last_known_institution.country_code:US,cited_by_count:>100`](https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:US,cited\_by\_count:%3E0)\`\`
+  [`https://api.openalex.org/authors?filter=last_known_institution.country_code:US,cited_by_count:>100`](https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:US,cited\_by\_count:%3E0)
 
 Each endpoint supports its own list of filters. Here they are, by endpoint:
 
@@ -85,7 +85,7 @@ You can filter using these attributes of the `Works` object. You can find more d
 
 These filters aren't attributes of the [Work entity](../about-the-data/work.md) object, but they're included to address some important use cases:
 
-* `display_name.search` (alias: [`title.search`](get-lists-of-entities.md#search-as-a-filter))
+* `display_name.search` (alias: `title.search`)
   * Takes a string and returns works with titles [exactly matching that string](get-lists-of-entities.md#search-as-a-filter). In most cases, the [`search` parameter](get-lists-of-entities.md#search) is better at finding works relevant to your search terms. Unless you're specifically interested in the contents of titles, you probably want the search parameter instead of `display_name.search`.
 * `has_doi`&#x20;
   * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](get-groups-of-entities.md).&#x20;
