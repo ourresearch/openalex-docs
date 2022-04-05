@@ -146,7 +146,7 @@ These filters aren't attributes of the [Venue entity](../about-the-data/venue.md
 * `display_name.search`
   * Takes a string and returns Venues with [`display_name`](../about-the-data/venue.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
 * `has_issn`
-  * Takes a boolean (`true` or `false`) and returns a list of Venues that have/lack an [orcid](../about-the-data/author.md#orcid).
+  * Takes a boolean (`true` or `false`) and returns a list of Venues that have/lack an [issn](../about-the-data/venue.md#issn).
   * Example: \
     Get a count of all the Venues in OpenAlex that have an issn, and all the ones that don't: [https://api.openalex.org/venues?group\_by=has\_issn](https://api.openalex.org/venues?group\_by=has\_issn)
 
@@ -154,24 +154,42 @@ These filters aren't attributes of the [Venue entity](../about-the-data/venue.md
 
 You can filter using these attributes of the `Institution` object. You can find more documentation about each attribute on the [Institution page](../about-the-data/institution.md).
 
-* `display_name.search`
 * ``[`country_code`](../about-the-data/institution.md#country\_code)``
 * ``[`type`](../about-the-data/institution.md#type)``
 * ``[`works_count`](../about-the-data/institution.md#works\_count)``
 * ``[`cited_by_count`](../about-the-data/institution.md#cited\_by\_count)``
 * ``[`x_concepts.id`](../about-the-data/institution.md#x\_concepts)``
+
+#### Additional Filters
+
+These filters aren't attributes of the [Institution entity](../about-the-data/institution.md) object, but they're included to address some important use cases:
+
+* `display_name.search`
+  * Takes a string and returns Institutions with [`display_name`](../about-the-data/institution.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
 * `has_ror`
+  * Takes a boolean (`true` or `false`) and returns a list of Venues that have/lack a [ror](../about-the-data/institution.md#ror).
+  * Example: \
+    Get a count of all the Institutions in OpenAlex that have a ror, and all the ones that don't: [https://api.openalex.org/institutions?group\_by=has\_ror](https://api.openalex.org/institutions?group\_by=has\_ror)
 
 ### `/concepts` filters
 
 You can filter using these attributes of the `Concept` object. You can find more documentation about each attribute on the [Concept page.](../about-the-data/concept.md)
 
-* `display_name.search`
 * ``[`level`](../about-the-data/concept.md#level)``
 * ``[`works_count`](../about-the-data/concept.md#works\_count)``
 * ``[`cited_by_count`](../about-the-data/concept.md#cited\_by\_count)``
 * ``[`ancestors.id`](../about-the-data/concept.md#ancestors)``
+
+#### Additional Filters
+
+These filters aren't attributes of the [Concept entity](../about-the-data/concept.md) object, but they're included to address some important use cases:
+
+* `display_name.search`
+  * Takes a string and returns Concepts with [`display_name`](../about-the-data/concept.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
 * `has_wikidata`
+  * Takes a boolean (`true` or `false`) and returns a list of Concepts that have/lack a [Wikidata ID](../about-the-data/concept.md#wikidata). For now, all concepts in OpenAlex _do_ have Wikidata IDs.
+  * Example: \
+    Get a count of all the Concepts in OpenAlex that have Wikidata ID, and all the ones that don't: [https://api.openalex.org/concepts?group\_by=has\_wikidata](https://api.openalex.org/concepts?group\_by=has\_wikidata)
 
 ## Search
 
