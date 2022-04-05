@@ -86,7 +86,7 @@ You can filter using these attributes of the `Works` object. You can find more d
 These filters aren't attributes of the [Work entity](../about-the-data/work.md) object, but they're included to address some important use cases:
 
 * `display_name.search` (alias: `title.search`)
-  * Takes a string and returns works with titles [exactly matching that string](get-lists-of-entities.md#search-as-a-filter). In most cases, the [`search` parameter](get-lists-of-entities.md#search) is better at finding works relevant to your search terms. Unless you're specifically interested in the contents of titles, you probably want the search parameter instead of `display_name.search`.
+  * Takes a string and returns Works with [display\_name](../about-the-data/work.md#display\_name)s exactly matching that string. In most cases, the [`search` parameter](get-lists-of-entities.md#search) is better at finding works relevant to your search terms. Unless you're specifically interested in the content of titles, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
 * `has_doi`&#x20;
   * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](get-groups-of-entities.md).&#x20;
   * Example: \
@@ -121,7 +121,7 @@ You can filter using these attributes of the `Authors` object. You can find more
 These filters aren't attributes of the [Author entity](../about-the-data/author.md) object, but they're included to address some important use cases:
 
 * `display_name.search`
-  * Takes a string and returns authors with [display\_names](../about-the-data/author.md#display\_name) exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
+  * Takes a string and returns Authors with [display\_name](../about-the-data/author.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
 * `has_orcid`
   * Takes a boolean (`true` or `false`) and returns a list of Authors that have/lack an [orcid](../about-the-data/author.md#orcid).
   * Example: \
@@ -131,15 +131,24 @@ These filters aren't attributes of the [Author entity](../about-the-data/author.
 
 You can filter using these attributes of the `Venue` object. You can find more documentation about each attribute on the [Venue page](../about-the-data/venue.md).
 
-* `display_name.search`
 * ``[`issn`](../about-the-data/venue.md#issn)``
 * ``[`publisher`](../about-the-data/venue.md#publisher) (requires exact match)
 * ``[`works_count`](../about-the-data/venue.md#works\_count)``
 * ``[`cited_by_count`](../about-the-data/venue.md#cited\_by\_count)``
 * ``[`x_concepts.id`](../about-the-data/venue.md#x\_concepts)``
-* `has_issn`
 * ``[`is_oa`](../about-the-data/venue.md#is\_oa)``
 * ``[`is_in_doaj`](../about-the-data/venue.md#is\_in\_doaj)``
+
+#### Additional Filters
+
+These filters aren't attributes of the [Venue entity](../about-the-data/venue.md) object, but they're included to address some important use cases:
+
+* `display_name.search`
+  * Takes a string and returns Venues with [display\_names](../about-the-data/venue.md#display\_name) exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
+* `has_issn`
+  * Takes a boolean (`true` or `false`) and returns a list of Venues that have/lack an [orcid](../about-the-data/author.md#orcid).
+  * Example: \
+    Get a count of all the authors in OpenAlex that have an orcid, and all the ones that don't: [https://api.openalex.org/authors?group\_by=has\_orcid](https://api.openalex.org/authors?group\_by=has\_orcid)
 
 ### `/institutions` filters
 
