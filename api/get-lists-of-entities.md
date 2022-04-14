@@ -255,18 +255,41 @@ You can only use paging to read the first 10,000 results of any list. To read mo
 
 ### Cursor paging
 
-Cursor paging is a more advanced method when you need to retrieve results over 10,000 records. Request a cursor by appending `cursor=*` to any endpoint.
+Cursor paging is a more advanced method when you need to retrieve results over 10,000 records. The number of results using cursor paging is unlimited.
+
+Request a cursor by appending `cursor=*` to any endpoint.
 
 * Get a cursor in order to start cursor pagination\
   [https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*)
 
 This creates a `next_cursor` value within meta that can be used to page through all results:
 
-`next_cursor: "IlsxNjA5MzcyODAwMDAwXSI="`
+```json
+{
+  "meta": {
+    "count": 8695857,
+    "db_response_time_ms": 28,
+    "page": null,
+    "per_page": 100,
+    "next_cursor": "IlsxNjA5MzcyODAwMDAwLCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzI0ODg0OTk3NjQnXSI="
+  },
+  "results" : [
+    // the first page of results
+  ]
+}
+```
 
 To retrieve the next page of results, copy the `next_cursor` value into the cursor field in the URL.
 
-* Get the next page of results using a cursor value\
-  [https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwXSI=](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwXSI=)
+* Get the next page of results using a cursor value: [https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwLCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzI0ODg0OTk3NjQnXSI=](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwLCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzI0ODg0OTk3NjQnXSI=)
 
 You can use the `next_cursor` value within that result to continue paging. You will know you reached the end of results when `next_cursor` is null and the results set is empty.
+
+{% hint style="warning" %}
+Since the number of results is unlimited, you can use cursor paging to retrieve every Entity of a given type. _Please don't do this._
+
+* It's bad for you because it can easily take several days to page through a long list like _Works_ or _Authors_.
+* It's bad for us (and other users!) because it puts a heavy load on our servers during that time.
+
+Instead, try the [data snapshot](../download-snapshot/). You'll get all the results much faster and in the same format as the API responses.
+{% endhint %}
