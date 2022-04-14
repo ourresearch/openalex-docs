@@ -54,6 +54,16 @@ You can stack filters together, and the list will return entities that satisfy a
 
 Each endpoint supports its own list of filters. Here they are, by endpoint:
 
+### Boolean OR within filter clauses
+
+In the above examples, the comma-separated filter clauses are combined using AND. The query [https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:US,cited\_by\_count:>100](https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:US,cited\_by\_count:%3E100) requests authors where `last_known_institution.country code = US AND cited_by_count > 100`.
+
+Within each clause, you can include multiple values using the pipe character `|` to create multiple filter clauses on that attribute and combine them with OR. IF you change the query above to [https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:FR|DE,cited\_by\_count:>100](https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:FR|DE,cited\_by\_count:%3E100), you're now asking for authors where `(last_known_institution.country code = FR  OR  last_known_institution.country code = DE) AND cited_by_count > 100`.
+
+One application of this feature is to look up multiple entities by ID in the same query: [https://api.openalex.org/works?filter=openalex\_id:W2412437380|W2739898018](https://api.openalex.org/works?filter=openalex\_id:W2412437380|W2739898018)
+
+
+
 ### `/works` filters
 
 You can filter using these attributes of the `Works` object. You can find more documentation about each attribute on the [Work page](../about-the-data/work.md).
