@@ -90,9 +90,9 @@ The fields returned in each result are:
 
 Autocomplete endpoints are also provided for some things that aren't proper OpenAlex `Entities` but are nice to be able to look up.
 
-#### publisher autocomplete : /autocomplete/venues/publisher
+#### Publishers : /autocomplete/venues/publisher
 
-[https://api.openalex.org/autocomplete/venues/publisher?q=science](https://api.openalex.org/autocomplete/venues/publisher?q=science)[ ](https://api.openalex.org/autocomplete/venues/publisher?q=science)will roll up Venues by publisher and give you Venue results with some inapplicable fields nulled out
+[https://api.openalex.org/autocomplete/venues/publisher?q=science](https://api.openalex.org/autocomplete/venues/publisher?q=science)[ ](https://api.openalex.org/autocomplete/venues/publisher?q=science)will find publishers relevant to your query, roll up the citation counts for venues belonging to those publishers, and give you Venue results with `id` and `external_id` nulled out (since the results don't represent single Venues):
 
 ```json
  {
@@ -111,5 +111,24 @@ Autocomplete endpoints are also provided for some things that aren't proper Open
 },
 ```
 
+#### Countries: /autocomplete/institutions/country
 
+[https://api.openalex.org/autocomplete/institutions/country?q=republic](https://api.openalex.org/autocomplete/institutions/country?q=republic) will find countries relevant to your query, roll up the citation counts for institutions in those countries, and give you Institution results with `id` and `external_id` nulled out (since the results don't represent single Institutions):
+
+```json
+{
+  "id": "KR",
+  "display_name": "Korea, Republic of",
+  "cited_by_count": 82790619,
+  "entity_type": "institution",
+  "external_id": null
+},
+{
+  "id": "IR",
+  "display_name": "Iran, Islamic Republic of",
+  "cited_by_count": 24569295,
+  "entity_type": "institution",
+  "external_id": null
+},
+```
 
