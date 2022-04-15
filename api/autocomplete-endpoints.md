@@ -86,3 +86,30 @@ The fields returned in each result are:
   * `Institution`: The institution's location, e.g. "Gainesville, USA"
   * `Concept`: The Concept's [description](../about-the-data/concept.md#description), e.g. "the study of relation between plant species and genera"
 
+## Other autocomplete endpoints
+
+Autocomplete endpoints are also provided for some things that aren't proper OpenAlex `Entities` but are nice to be able to look up.
+
+#### publisher autocomplete : /autocomplete/venues/publisher
+
+[https://api.openalex.org/autocomplete/venues/publisher?q=science](https://api.openalex.org/autocomplete/venues/publisher?q=science)[ ](https://api.openalex.org/autocomplete/venues/publisher?q=science)will roll up Venues by publisher and give you Venue results with some inapplicable fields nulled out
+
+```json
+ {
+  "id": null,
+  "display_name": "American Association for the Advancement of Science (AAAS)",
+  "cited_by_count": 17017749,
+  "entity_type": "venue",
+  "external_id": null
+},
+{
+  "id": null,
+  "display_name": "Proceedings of the National Academy of Sciences",
+  "cited_by_count": 16776995,
+  "entity_type": "venue",
+  "external_id": null
+},
+```
+
+
+
