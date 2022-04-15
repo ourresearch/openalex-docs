@@ -2,7 +2,7 @@
 
 The API endpoints we've described so far work great if you know the Entity IDs you want to work with, or the exact value of a filter that can get you those IDs.
 
-For example, if you want to find the latest works authored by [https://explore.openalex.org/authors/A2907412441](https://explore.openalex.org/authors/A2907412441), that's easy: just call [https://api.openalex.org/works?filter=authorships.author.id:https://openalex.org/A2907412441\&sort=publication\_date:desc](https://api.openalex.org/works?filter=authorships.author.id:https://openalex.org/A2907412441\&sort=publication\_date:desc)
+For example, if you want to find the latest works authored by [https://explore.openalex.org/authors/A2907412441](https://explore.openalex.org/authors/A2907412441), that's easy - just call [https://api.openalex.org/works?filter=authorships.author.id:https://openalex.org/A2907412441\&sort=publication\_date:desc](https://api.openalex.org/works?filter=authorships.author.id:https://openalex.org/A2907412441\&sort=publication\_date:desc)
 
 Want to find the most-cited institutions in Tanzania? Great! [https://api.openalex.org/institutions?filter=country\_code:TZ\&sort=cited\_by\_count:desc](https://api.openalex.org/institutions?filter=country\_code:TZ\&sort=cited\_by\_count:desc)
 
