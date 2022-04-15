@@ -1,4 +1,4 @@
-# Autocomplete Endpoints
+# Autocomplete endpoints
 
 The API endpoints we've described so far work great if you know the Entity IDs you want to work with, or the exact value of a filter that can get you those IDs.
 
@@ -24,7 +24,7 @@ For Entities that support it, you might be tempted to [filter on display\_name.s
 
 ## Entity Autocomplete Endpoints
 
-Entity autocomplete queries all start with `/autocomplete` and have a required parameter `q`, the string to search for. The most basic autocomplete request includes only those parts: [https://api.openalex.org/autocomplete?q=frogs](https://api.openalex.org/autocomplete?q=frogs)
+Entity autocomplete queries all start with `/autocomplete` and have a single required parameter `q`, the string to search for. The most basic autocomplete request includes only those parts: [https://api.openalex.org/autocomplete?q=frogs](https://api.openalex.org/autocomplete?q=frogs)
 
 Each query returns the 10 most relevant results, in descending order of `cited_by_count`.
 
@@ -69,10 +69,18 @@ along with up to 10 matches:
 
 The fields returned in each result are:
 
-* `id`: The [OpenAlex ID](../about-the-data/#the-openalex-id) for this Entity.
-* `display_name`: The entity's display\_name property.
+* `id` (string): The [OpenAlex ID](../about-the-data/#the-openalex-id) for this Entity.
+* `external_id` (string): The gold-standard external ID for this entity. May be null for some entities. Differs by entity type:
+  * Work: [DOI](../about-the-data/work.md#title)
+  * Author: [ORCID](../about-the-data/author.md#orcid)
+  * Venue: [ISSN-L](../about-the-data/venue.md#issn\_l)
+  * Institution: [ROR](../about-the-data/institution.md#ror)
+  * Concept: [Wikidata ID](../about-the-data/concept.md#wikidata)
+* `display_name` (string): The entity's `display_name` property.
+* `entity_type` (string): The entity's type (_work_, _author_, _venue_, _institution_, or _concept_).
+* `cited_by_count` (integer): The entity's `cited_by_count` property.
 * `hint`: Some extra information that can help identify the right item. Differs by entity type.
-  * `Work`: The works author's display names, concatenated. e.g. "R. Alexander Pyron, John J. Wiens"
+  * `Work`: The work's authors' display names, concatenated. e.g. "R. Alexander Pyron, John J. Wiens"
   * `Author`:  The title and year of the Author's most recent work, e.g. "Touch screen car dashboards as serious danger for causing traffic accidents (2019)"
   * `Venue`: The publisher, e.g. "Oxford University Press"
   * `Institution`: The institution's location, e.g. "Gainesville, USA"
