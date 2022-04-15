@@ -10,7 +10,7 @@ The MAG format snapshot is for people migrating to OpenAlex from MAG (Microsoft 
 
 You may also want to pay particular attention to tables and columns marked ❄️FROZEN (no longer updated) and 🔥NEW (data was not included in original MAG).
 
-## ![](../../.gitbook/assets/image.png)
+## <img src="../../.gitbook/assets/image.png" alt="" data-size="original">
 
 ## Affiliations
 
