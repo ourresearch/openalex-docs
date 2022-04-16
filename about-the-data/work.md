@@ -2,7 +2,7 @@
 
 Works are scholarly documents like journal articles, books, datasets, and theses.
 
-OpenAlex indexes about 209 million works, with about 50 thousand added daily. The canonical PID for works is DOI; about half of works have one.
+OpenAlex indexes about 209M works, with about 50,000 added daily. The canonical PID for works is DOI; about half of works have one.
 
 We collect new works from many sources, including Crossref, PubMed, institutional and discipline-specific repositories (eg, arXiv). Many older works come from the now-defunct Microsoft Academic Graph.
 
@@ -17,7 +17,7 @@ There are three component objects that are only used as part of a `Work`:&#x20;
 * ``[`OpenAccess`](work.md#the-openaccess-object)``
 
 {% hint style="info" %}
-Most of the examples below are drawn from a single work, which you can view via the [website](https://openalex.org/W2741809807) or [API](https://openalex.org/W2741809807.json).
+Most of the examples below are drawn from a single work. You can view this work in its entirety via the [website](https://openalex.org/W2741809807) or [API](https://openalex.org/W2741809807.json).
 {% endhint %}
 
 

@@ -1,8 +1,16 @@
 # 💡 Concept
 
+Concepts are abstract ideas that works are about.
+
+OpenAlex indexes about 65k concepts. The [Canonical External ID](./#canonical-external-ids) for OpenAlex concepts is the Wikidata ID, and each of our concepts has one, because all OpenAlex concepts are also Wikidata concepts.
+
+Concepts are hierarchical, like a tree. There are 19 root-level concepts, and six layers of descendents branching out from them, containing about 65 thousand concepts all told. This concept tree is a modified version of [the one created by MAG](https://arxiv.org/abs/1805.12216).
+
+Each work is tagged with multiple concepts, based on its title and abstract. The tagging is done using an automated classifier that was trained on MAG’s corpus; you can read more about the development and operation of this classifier in [Automated concept tagging for OpenAlex, an open index of scholarly articles.](https://docs.google.com/document/d/1OgXSLriHO3Ekz0OYoaoP\_h0sPcuvV4EqX7VgLLblKe4/edit#) You can also implement the classifier yourself using [our models and code](https://github.com/ourresearch/openalex-concept-tagging), which are open.
+
+Concepts are linked to works via the [`concepts`](work.md#concepts) property. They’re also linked to [authors](author.md#x\_concepts), [venues](venue.md#x\_concepts), and [institutions](institution.md#x\_concepts) via the `x_concepts` property, and to other concepts via the [`ancestors`](concept.md#ancestors) and [`related_concepts`](concept.md#related\_concepts) properties.
+
 ## The `Concept` object
-
-
 
 ### `id`
 

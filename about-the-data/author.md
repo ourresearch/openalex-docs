@@ -2,7 +2,7 @@
 
 Authors are people who create works.
 
-OpenAlex indexes about 213 million authors, with thousands added daily. The [Canonical External ID](./#canonical-external-ids) for authors is ORCID; only a small percentage of authors have one, but the percentage is higher for more recent works.
+OpenAlex indexes about 213M authors, with thousands added daily. The [Canonical External ID](./#canonical-external-ids) for authors is ORCID; only a small percentage of authors have one, but the percentage is higher for more recent works.
 
 Our information about authors comes from MAG, Crossref, PubMed, ORCID, and publisher websites. We use an algorithm to [disambiguate](https://en.wikipedia.org/wiki/Author\_name\_disambiguation) authors; this uses an author’s name, their publication record, ther citation patterns, and (where available) their ORCID.
 

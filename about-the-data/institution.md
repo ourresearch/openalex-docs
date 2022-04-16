@@ -1,6 +1,14 @@
 # 🏫 Institution
 
+Institutions are organizations to which authors claim affiliations.
 
+OpenAlex indexes about 109,000 institutions. The [Canonical External ID](./#canonical-external-ids) for institutions is the ROR ID. About 94% of institutions in OpenAlex have ROR IDs.
+
+Our information about institutions comes from metadata found in Crossref, PubMed, ROR, MAG, and publisher websites. In order to link institutions to works, we parse every affiliation listed by every author. These affiliation strings can be quite messy, so we’ve trained an algorithm to interpret them and extract the actual institutions with reasonably high reliability.
+
+For a simple example: we will treat both “MIT, Boston, USA” and “Massachusetts Institute of Technology” as the same institution ([https://ror.org/042nb2s44](https://ror.org/042nb2s44)).
+
+Institutions are linked to works via the [`works.authorships`](work.md#authorships) property.
 
 ## The `Institution` object
 
