@@ -34,7 +34,7 @@ id: "https://openalex.org/W2741809807"
 
 ### `doi` <a href="#title" id="title"></a>
 
-_String:_ The DOI for the work.
+_String:_ The DOI for the work. This is the [Canonical External ID](./#canonical-external-ids) for works.
 
 Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on [bioRxiv](https://www.biorxiv.org), and another DOI for the [published version](work.md#version). However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the [`Work.alternate_host_venues`](work.md#alternate\_host\_venues) list.&#x20;
 

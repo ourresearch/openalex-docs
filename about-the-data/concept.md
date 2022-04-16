@@ -14,7 +14,11 @@ id: "https://openalex.org/C2778407487"
 
 ### `wikidata`
 
-_String:_ The [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers) for this concept.&#x20;
+_String:_ The [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers) for this concept.  This is the [Canonical External ID](./#canonical-external-ids) for concepts.
+
+{% hint style="info" %}
+_All_ OpenAlex concepts have a Wikidata ID, because all OpenAlex concepts are also Wikidata concepts.&#x20;
+{% endhint %}
 
 ```json
 wikidata: "https://www.wikidata.org/wiki/Q14565201"

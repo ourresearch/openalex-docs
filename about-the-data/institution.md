@@ -14,7 +14,7 @@ id: "https://openalex.org/I114027177"
 
 ### `ror`
 
-_String:_ The [ROR](https://ror.org) ID for this institution.&#x20;
+_String:_ The [ROR](https://ror.org) ID for this institution. This is the [Canonical External ID](./#canonical-external-ids) for institutions.
 
 The ROR (Research Organization Registry) identifier is a globally unique ID for research organization. [ROR is the successor to GRiD](https://www.digital-science.com/press-release/grid-passes-torch-to-ror/), which is no longer being updated.&#x20;
 
