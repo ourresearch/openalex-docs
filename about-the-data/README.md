@@ -37,7 +37,19 @@ An OpenAlex ID is a URL that identifies a resource (data about an entity). You c
 * Get a JSON object describing this same work, via our API (note the `.json` at the end):\
   [`https://openalex.org/W2741809807.json`](https://openalex.org/W2741809807.json)``
 
+## Canonical external IDs
 
+Every entity has an OpenAlex ID. Most entities also have IDs in other systems, too. There are hundreds of different ID systems, but we've selected a single external ID system for each entity to provide the **Canonical ID**--this is the ID in the system that's been most fully adopted by the community, and is most frequently used in the wild. We support other external IDs as well, but the canonical ones get a privileged spot in the API and dataset.&#x20;
+
+These are the Canonical IDs:
+
+|              |             |                                                                                                            |
+| ------------ | ----------- | ---------------------------------------------------------------------------------------------------------- |
+| Works        | DOI         | Currently only Crossref DOIs are supported.                                                                |
+| Authors      | ORCID       | ORCID coverage is relatively low due to low author/publisher adoption rates--particularly for older works. |
+| Venues       | ISSN-L      | Many venues have several ISSNs. ISSN-L is a special ISSN that each venue has only one of.                  |
+| Institutions | ROR ID      | ROR is the [successor to GRID](https://www.digital-science.com/grid-passes-the-torch-to-ror-faqs/)         |
+| Concepts     | Wikidata ID | _All_ OpenAlex concepts have Wikidata IDs, because all OpenAlex concepts are also Wikidata concepts.       |
 
 ## Dehydrated entity objects
 
