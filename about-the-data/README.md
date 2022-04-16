@@ -16,15 +16,28 @@ Together, these make a huge web (or more technically, heterogeneous directed [gr
 
 ## The OpenAlex ID
 
-The OpenAlex ID is the primary key for all entities. Its canonical format is a URL shaped like this: `https://openalex.org/<OpenAlexID>`. Here's a real-world example:&#x20;
+The OpenAlex ID is the primary key for all entities. It's a URL shaped like this: `https://openalex.org/<OpenAlex_key>`. Here's a real-world example:&#x20;
 
 ``[`https://openalex.org/W2741809807`](https://openalex.org/W2741809807)``
 
-The resource served at that URL is always the same, but its representation depends on what you ask for. By default, you'll get a webpage. You can use [content negotiation](../website.md#content-negotiation) to get the same resource in JSON, via our [API](../api/).
+### The OpenAlex Key
 
-The first letter in the unique part of the ID tells you what kind of entity you've got. In the example above, the unique part of the ID is `W2741809807`; the `W` at the front tells us that this is a `Work`. The other possible first letters are `A` (`Author`), `V` (`Venue`), `I` (`Institution`), and `C` (`Concept`). The IDs are not case-sensitive, so `w2741809807` is just as valid as `W2741809807`.
+The OpenAlex ID has two parts. The first part is the Base; it's always `https://openalex.org/.` The second part is the Key; it's the unique primary key that identifies a given resource in our database.
 
-Because OpenAlex was launched as a replacement for [Microsoft Academic Graph (MAG)](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), OpenAlex IDs are designed to be backwards-compatible with MAG IDs. To find the MAG ID, just take the first letter off the front of the unique part of the ID (so in the example above, the MAG ID is `2741809807`). Of course this won't yield anything useful for entities that don't have a MAG ID.
+The key starts with a letter; that letter tells you what kind of entity you've got: **W**(ork), **A**(uthor), **V**(enue), **I**(nstitution), or **C**(oncept). The IDs are not case-sensitive, so `w2741809807` is just as valid as `W2741809807`. So in the example above, the Key is `W2741809807`, and the `W` at the front tells us that this is a `Work`. &#x20;
+
+Because OpenAlex was launched as a replacement for [Microsoft Academic Graph (MAG)](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), OpenAlex IDs are designed to be backwards-compatible with MAG IDs, where they exist. To find the MAG ID, just take the first letter off the front of the unique part of the ID (so in the example above, the MAG ID is `2741809807`). Of course this won't yield anything useful for entities that don't have a MAG ID.
+
+### Getting format you want
+
+An OpenAlex ID is a URL that identifies a resource (data about an entity). You can use [content negotiation](../website.md#content-negotiation) to request this same resource in different formats. Currently this means either using the ID in its default form to get a webpage, or appending `.json` to it to get a JSON API response:
+
+* Get a webpage describing this work:\
+  [`https://openalex.org/W2741809807`](https://openalex.org/W2741809807)``
+* Get a JSON object describing this same work, via our API (note the `.json` at the end):\
+  [`https://openalex.org/W2741809807.json`](https://openalex.org/W2741809807.json)``
+
+
 
 ## Dehydrated entity objects
 

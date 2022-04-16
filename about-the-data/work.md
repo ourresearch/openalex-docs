@@ -1,16 +1,24 @@
 # 📄 Work
 
-Works are the outputs produced by scholarship. They include not just journal articles, but also books, datasets, theses, and even figures or images.
+Works are scholarly documents like journal articles, books, datasets, and theses.
 
-`Works` are the core building block of OpenAlex, and all the other entities are defined in relationship to `Work`. Because of this, `Work` is also the most complicated entity, with lots of links to other things.
+OpenAlex indexes about 209 million works, with about 50 thousand added daily. The canonical PID for works is DOI; about half of works have one.
+
+We collect new works from many sources, including Crossref, PubMed, institutional and discipline-specific repositories (eg, arXiv). Many older works come from the now-defunct Microsoft Academic Graph.
+
+The same work can be hosted in multiple venues, often with slight differences. So, we cluster works together, using an algorithm that does fuzzy matching based on each work’s publication date, title, and author list. For example: https://doi.org/10.1364/PRJ.433188 and https://arxiv.org/abs/2102.11388 are two versions of the same paper, so they appear in OpenAlex as one Work, https://openalex.org/W3184470535.
+
+Works are linked to other works via the [`referenced_works`](work.md#referenced\_works) (outgoing citations), [`cited_by_api_url`](work.md#cited\_by\_api\_url) (incoming citations), and [`related_works`](work.md#related\_works) properties.
 
 There are three component objects that are only used as part of a `Work`:&#x20;
 
-* [Authorship](work.md#the-authorship-object)
-* [HostVenue](work.md#the-hostvenue-object)
-* [OpenAccess](work.md#the-openaccess-object)
+* [`Authorship`](work.md#the-authorship-object)``
+* ``[`HostVenue`](work.md#the-hostvenue-object)``
+* ``[`OpenAccess`](work.md#the-openaccess-object)``
 
-The examples in this page are all drawn from this work: [https://openalex.org/W2741809807](https://openalex.org/W2741809807) (tip: if you want to see this or any other OpenAlex entity in the API, just add a ".json" to the end like [https://openalex.org/W2741809807.json](https://openalex.org/W2741809807.json) )
+{% hint style="info" %}
+Most of the examples below are drawn from a single work, which you can view via the [website](https://openalex.org/W2741809807) or [API](https://openalex.org/W2741809807.json).
+{% endhint %}
 
 
 
