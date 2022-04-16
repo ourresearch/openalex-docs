@@ -17,7 +17,7 @@ There are three component objects that are only used as part of a `Work`:&#x20;
 * ``[`OpenAccess`](work.md#the-openaccess-object)``
 
 {% hint style="info" %}
-Most of the examples below are drawn from a single work. You can view this work in its entirety via the [website](https://openalex.org/W2741809807) or [API](https://openalex.org/W2741809807.json).
+Most of the examples below are drawn from a single work, which you can view via the [website](https://openalex.org/W2741809807) or [API](https://openalex.org/W2741809807.json).
 {% endhint %}
 
 
