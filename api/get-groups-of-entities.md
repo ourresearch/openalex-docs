@@ -139,3 +139,5 @@ You can sort grouped by results using `count` or `key`. The default is `count:de
 ### Pagination
 
 You cannot page through grouped results using `page` or `per-page`. You will always receive one page of results and per-page is fixed at 200.
+
+This means 200 is the maximum number of groups that can be returned - [https://api.openalex.org/works?group\_by=host\_venue.publisher](https://api.openalex.org/works?group\_by=host\_venue.publisher) will only provide work counts for the top 200 publishers.
