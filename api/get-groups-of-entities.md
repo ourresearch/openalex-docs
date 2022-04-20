@@ -70,6 +70,65 @@ Each group contains three properties:
 * `count`
   * The number of entities in the group.&#x20;
 
+### Groupable attributes
+
+Each Entity type has a different set of attributes you can group by. These are mostly the same as the [filterable](get-lists-of-entities.md#filter) attributes - excluding two main types of filters:
+
+* Dates like _to\_publication\_date_ that only make sense for filtering because there isn't a single value that belongs to each entity.
+* Wide-ranging numeric attributes like _cited\_by\_count_ with high cardinality. Grouping on these values produces too many groups to be useful.
+
+#### `/works` group\_by attributes
+
+* ``[`alternate_host_venues.id`](../about-the-data/work.md#alternate\_host\_venues)``
+* ``[`alternate_host_venues.license`](../about-the-data/work.md#alternate\_host\_venues)``
+* ``[`alternate_host_venues.version`](../about-the-data/work.md#alternate\_host\_venues)``
+* ``[`authorships.author.id`](../about-the-data/work.md#authorships) (`alias author.id`)
+* ``[`authorships.author.orcid`](../about-the-data/work.md#authorships) (alias `author.orcid`)
+* ``[`authorships.institutions.country_code`](../about-the-data/work.md#authorships) (alias `institutions.country_code`)
+* ``[`authorships.institutions.id`](../about-the-data/work.md#authorships) (alias `institutions.id`)
+* ``[`authorships.institutions.ror`](../about-the-data/work.md#authorships) (alias `institutions.ror`)
+* ``[`authorships.institutions.type`](../about-the-data/work.md#authorships) (alias `institutions.type`)
+* ``[`cites`](get-lists-of-entities.md#additional-filters)``
+* ``[`concepts.id`](../about-the-data/work.md#concepts)``
+* ``[`concepts.wikidata`](../about-the-data/work.md#concepts)``
+* ``[`has_doi`](get-lists-of-entities.md#additional-filters)``
+* ``[`host_venue.id`](../about-the-data/work.md#host\_venue) (alias `journal.id`)
+* ``[`host_venue.issn`](../about-the-data/work.md#host\_venue)``
+* ``[`host_venue.publisher`](../about-the-data/work.md#host\_venue)``
+* ``[`open_access.is_oa`](../about-the-data/work.md#open\_access) (alias `is_oa`)
+* ``[`open_access.oa_status`](../about-the-data/work.md#open\_access) (alias `oa_status`)
+* ``[`is_paratext`](../about-the-data/work.md#is\_paratext)``
+* ``[`is_retracted`](../about-the-data/work.md#is\_retracted)``
+* ``[`publication_year`](../about-the-data/work.md#publication\_year)``
+
+#### `/authors` group\_by attributes
+
+* ``[`has_orcid`](get-lists-of-entities.md#additional-filters-1)``
+* ``[`last_known_institution.country_code`](../about-the-data/author.md#last\_known\_institution)``
+* ``[`last_known_institution.id`](../about-the-data/author.md#last\_known\_institution)``
+* ``[`last_known_institution.ror`](../about-the-data/author.md#last\_known\_institution)``
+* ``[`last_known_institution.type`](../about-the-data/author.md#last\_known\_institution)
+
+#### `/venues` group\_by attributes
+
+* ``[`has_issn`](get-lists-of-entities.md#additional-filters-2)``
+* ``[`is_in_doaj`](../about-the-data/venue.md#is\_in\_doaj)``
+* ``[`is_oa`](../about-the-data/venue.md#is\_oa)``
+* ``[`issn`](../about-the-data/venue.md#issn)``
+* ``[`publisher`](../about-the-data/venue.md#publisher)``
+
+#### `/institutions` group\_by attributes
+
+* [`country_code`](../about-the-data/institution.md#type)``
+* [`has_ror`](get-lists-of-entities.md#additional-filters-3)``
+* [`type`](../about-the-data/institution.md#type)``
+
+#### `/concepts` group\_by __ attributes
+
+* ``[`ancestors.id`](../about-the-data/concept.md#ancestors)``
+* ``[`level`](../about-the-data/concept.md#level)``
+* ``[`has_wikidata`](get-lists-of-entities.md#additional-filters-4)``
+
 ### Sorting groups
 
 You can sort grouped by results using `count` or `key`. The default is `count:desc`.
