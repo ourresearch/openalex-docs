@@ -6,7 +6,7 @@ For example, if you want to find the latest works authored by [https://explore.o
 
 Want to find the most-cited institutions in Tanzania? Great! [https://api.openalex.org/institutions?filter=country\_code:TZ\&sort=cited\_by\_count:desc](https://api.openalex.org/institutions?filter=country\_code:TZ\&sort=cited\_by\_count:desc)
 
-But what if you can't remember Tanzania's country code, or your favorite researcher's OpenAlex ID? What if you're building a website on top of the OpenAlex API, and you want a page that lets a user find the latest works from any author they want? There are lots of scenarios like this, where they'll need a quick way to find the Entities they want with information they do have, like an Author's name.
+But what if you can't remember Tanzania's country code, or your favorite researcher's OpenAlex ID? What if you're building a website on top of the OpenAlex API, and you want a page that lets a user find the latest works from any author they want? There are lots of scenarios like this, where you need a quick way to find the Entity you want with information you do have, like an Author's name.
 
 This is where autocomplete endpoints come in - they can take partial search strings and provide the Entities the user is most likely to be looking for. You've seen autocomplete UIs in action before - here's how one might look on a site that uses OpenAlex:
 
@@ -15,7 +15,7 @@ This is where autocomplete endpoints come in - they can take partial search stri
 This is the query behind that result: [https://api.openalex.org/autocomplete?q=flori](https://api.openalex.org/autocomplete?q=flori)
 
 {% hint style="info" %}
-For Entities that support it, you might be tempted to [filter on display\_name.search](get-lists-of-entities.md#additional-filters-1). Don't! It's much slower than the autocomplete endpoints we're about to get into, returns a lot of information you don't need, and you have to do a lot of extra work with the results. If you want to find the University of Florida:\
+For Entities that support it, you might be tempted to [filter on display\_name.search](get-lists-of-entities.md#additional-filters-1). Don't! It's much slower than the autocomplete endpoints we're about to get into, returns a lot of information you don't need, and you have to do a lot of extra work with the results.\
 \
 👎 [https://api.openalex.org/institutions?filter=display\_name.search:florida](https://api.openalex.org/institutions?filter=display\_name.search:florida) &#x20;
 
@@ -85,50 +85,4 @@ The fields returned in each result are:
   * `Venue`: The publisher, e.g. "Oxford University Press"
   * `Institution`: The institution's location, e.g. "Gainesville, USA"
   * `Concept`: The Concept's [description](../about-the-data/concept.md#description), e.g. "the study of relation between plant species and genera"
-
-## Other autocomplete endpoints
-
-Autocomplete endpoints are also provided for some things that aren't proper OpenAlex `Entities` but are nice to be able to look up.
-
-#### Publishers : /autocomplete/venues/publisher
-
-[https://api.openalex.org/autocomplete/venues/publisher?q=science](https://api.openalex.org/autocomplete/venues/publisher?q=science)[ ](https://api.openalex.org/autocomplete/venues/publisher?q=science)will find publishers relevant to your query, roll up the citation counts for venues belonging to those publishers, and give you Venue results with `id` and `external_id` nulled out (since the results don't represent single Venues):
-
-```json
- {
-  "id": null,
-  "display_name": "American Association for the Advancement of Science (AAAS)",
-  "cited_by_count": 17017749,
-  "entity_type": "venue",
-  "external_id": null
-},
-{
-  "id": null,
-  "display_name": "Proceedings of the National Academy of Sciences",
-  "cited_by_count": 16776995,
-  "entity_type": "venue",
-  "external_id": null
-},
-```
-
-#### Countries: /autocomplete/institutions/country
-
-[https://api.openalex.org/autocomplete/institutions/country?q=republic](https://api.openalex.org/autocomplete/institutions/country?q=republic) will find countries relevant to your query, roll up the citation counts for institutions in those countries, and give you Institution results with `id` and `external_id` nulled out (since the results don't represent single Institutions):
-
-```json
-{
-  "id": "KR",
-  "display_name": "Korea, Republic of",
-  "cited_by_count": 82790619,
-  "entity_type": "institution",
-  "external_id": null
-},
-{
-  "id": "IR",
-  "display_name": "Iran, Islamic Republic of",
-  "cited_by_count": 24569295,
-  "entity_type": "institution",
-  "external_id": null
-},
-```
 
