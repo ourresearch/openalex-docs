@@ -141,3 +141,16 @@ You can sort grouped by results using `count` or `key`. The default is `count:de
 You cannot page through grouped results using `page` or `per-page`. You will always receive one page of results and per-page is fixed at 200.
 
 This means 200 is the maximum number of groups that can be returned - [https://api.openalex.org/works?group\_by=host\_venue.publisher](https://api.openalex.org/works?group\_by=host\_venue.publisher) will only provide work counts for the top 200 publishers.
+
+### Combining grouping with filtering
+
+The _group\_by_ and _filter_ parameters can be used at the same time. If you use both parameters, only the Entities matched by _filter_ will be grouped and counted. For example:
+
+[https://api.openalex.org/works?group\_by=is\_oa](https://api.openalex.org/works?group\_by=is\_oa) gives you the overall count of open and closed Works in OpenAlex. (About 68% are OA at the moment).
+
+Combining this with the filter _type:journal-article_ gives you the same count, but for journal articles only: [https://api.openalex.org/works?group\_by=is\_oa\&filter=type:journal-article](https://api.openalex.org/works?group\_by=is\_oa\&filter=type:journal-article) (about 51% OA).
+
+You can use multiple filters, just as if you weren't grouping: [https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647,type:journal-article\&group\_by=is\_oa](https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647,type:journal-article\&group\_by=is\_oa) gives you open/closed counts for journal articles with at least one author affiliated with the [University of Florida](https://ror.org/02y3ad647).
+
+
+
