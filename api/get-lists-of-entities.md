@@ -62,7 +62,7 @@ Within each clause, you can include multiple values using the pipe character `|`
 
 One application of this feature is to look up multiple entities by ID in the same query: [https://api.openalex.org/works?filter=openalex\_id:W2412437380|W2739898018](https://api.openalex.org/works?filter=openalex\_id:W2412437380|W2739898018)
 
-You can combine up to 50 fiarameter values in this way.
+You can combine up to 50 filter parameter values in this way.
 
 ### `/works` filters
 
