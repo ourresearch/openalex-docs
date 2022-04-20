@@ -82,7 +82,7 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`alternate_host_venues.id`](../about-the-data/work.md#alternate\_host\_venues)``
 * ``[`alternate_host_venues.license`](../about-the-data/work.md#alternate\_host\_venues)``
 * ``[`alternate_host_venues.version`](../about-the-data/work.md#alternate\_host\_venues)``
-* ``[`authorships.author.id`](../about-the-data/work.md#authorships) (`alias author.id`)
+* ``[`authorships.author.id`](../about-the-data/work.md#authorships) (alias `author.id`)
 * ``[`authorships.author.orcid`](../about-the-data/work.md#authorships) (alias `author.orcid`)
 * ``[`authorships.institutions.country_code`](../about-the-data/work.md#authorships) (alias `institutions.country_code`)
 * ``[`authorships.institutions.id`](../about-the-data/work.md#authorships) (alias `institutions.id`)
