@@ -46,7 +46,7 @@ In python:
 The first result looks like the one we want, so we can use that to filter on `institutions.id`.
 
 ```url
-https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144l
+https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144
 ```
 
 Adding our other criteria, we build the the `filter` clause:
