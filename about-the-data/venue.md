@@ -2,7 +2,7 @@
 
 Venues are where works are hosted.
 
-OpenAlex indexes about 124,000 venues. There are several types, including journals, preprint repositories, and institutional repositories. The [Canonical External ID](./#canonical-external-ids) for venues is ISSN-L, which is a special "main" ISSN assigned to every venue (venues tend to have multiple ISSNs). About 90% of venues in OpenAlex have an ISSN-L or ISSN.
+OpenAlex indexes about 124,000 venues. There are several types, including journals, conferences, preprint repositories, and institutional repositories. The [Canonical External ID](./#canonical-external-ids) for venues is ISSN-L, which is a special "main" ISSN assigned to every venue (venues tend to have multiple ISSNs). About 90% of venues in OpenAlex have an ISSN-L or ISSN.
 
 Our information about venues comes from Crossref, the ISSN Network, and MAG. These datasets are joined automatically where possible, but there’s also a lot of manual curation involved.
 
