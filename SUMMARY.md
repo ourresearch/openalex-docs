@@ -6,6 +6,7 @@
   * [Get lists of entities](api/get-lists-of-entities.md)
   * [Get groups of entities](api/get-groups-of-entities.md)
   * [Autocomplete endpoints](api/autocomplete-endpoints.md)
+  * [API Tutorial](api/api-tutorial.md)
 * [Website](website.md)
 * [Download snapshot](download-snapshot/README.md)
   * [Snapshot data format](download-snapshot/snapshot-data-format.md)
