@@ -98,7 +98,7 @@ These filters aren't attributes of the [Work entity](../about-the-data/work.md) 
 * `display_name.search` (alias: `title.search`)
   * Takes a string and returns Works with [`display_name`](../about-the-data/work.md#display\_name)s exactly matching that string. In most cases, the [`search` parameter](get-lists-of-entities.md#search) is better at finding works relevant to your search terms. Unless you're specifically interested in the content of titles, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
 * `raw_affiliation_string.search`
-  * Takes a string and returns Works with at least one [`raw_affiliation_string`](https://docs.openalex.org/about-the-data/work#raw\_affiliation\_string) matching that string.&#x20;
+  * Takes a string and returns Works with at least one [`raw_affiliation_string`](../about-the-data/work.md#raw\_affiliation\_string) matching that string.
 * `has_doi`&#x20;
   * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](get-groups-of-entities.md).&#x20;
   * Example: \
