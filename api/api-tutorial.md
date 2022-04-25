@@ -113,20 +113,27 @@ https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I3321
 In python, we can calculate the fraction of the works that is OA:
 
 ```python
->>> r = requests.get('https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144,is_paratext:false,type:journal-article,from_publication_date:2012-04-20&group_by=is_oa')
->>> groups = r.json()['group_by']
->>> total_works = 0
->>> oa_works = 0
->>> for group in groups:
-...     total_works += group['count']
-...     if group['key'] == 'true':
-...             oa_works += group['count']
-...
->>> print(total_works)
+r = requests.get(
+    'https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144,is_paratext:false,type:journal-article,from_publication_date:2012-04-20&group_by=is_oa'
+)
+
+groups = r.json()['group_by']
+total_works = 0
+oa_works = 0
+for group in groups:
+    total_works += group['count']
+    if group['key'] == 'true':
+            oa_works += group['count']
+
+print('total works: ' + total_works)
+print('oa works: ' + oa_works)
+print('oa percentage: ' + (100 * oa_works/total_works))
+
+```
+
+```
 76247
->>> print(oa_works)
 40949
->>> print(oa_works/total_works)
 0.5370571956929453
 ```
 
