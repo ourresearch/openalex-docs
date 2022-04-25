@@ -125,16 +125,15 @@ for group in groups:
     if group['key'] == 'true':
             oa_works += group['count']
 
-print('total works: ' + total_works)
-print('oa works: ' + oa_works)
-print('oa percentage: ' + (100 * oa_works/total_works))
-
+print('total works: %d' % total_works)
+print('oa works: %d' % oa_works)
+print('oa percentage: %f' % (100 * oa_works/total_works))
 ```
 
 ```
-76247
-40949
-0.5370571956929453
+total works: 76299
+oa works: 40969
+oa percentage: 53.695330
 ```
 
 So from one API call, we know that 53.7% of the journal articles published by authors at the University of Florida in the last 10 years are OA.
