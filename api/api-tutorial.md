@@ -69,9 +69,14 @@ https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I3321
 This will give us a list of about 76,000 works. Again, in python:
 
 ```python
->>> requests.get(
-...     'https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144,is_paratext:false,type:journal-article,from_publication_date:2012-04-20'
-... ).json()['meta']['count']
+response_meta = requests.get(
+    'https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144,is_paratext:false,type:journal-article,from_publication_date:2012-04-20'
+).json()['meta']
+
+print(response_meta['count'])
+```
+
+```
 76247
 ```
 
