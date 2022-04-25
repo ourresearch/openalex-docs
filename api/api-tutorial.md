@@ -37,6 +37,7 @@ In python:
 institution = requests.get(
     'https://api.openalex.org/institutions?filter=display_name.search:university of florida'
 ).json()['results'][0]
+
 print(institution['display_name'])
 print(institution['id'])
 ```
