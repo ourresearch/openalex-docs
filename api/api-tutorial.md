@@ -19,17 +19,11 @@ The first thing we'll need to do is filter [Works](../about-the-data/work.md) by
 
 But what's our institution's ID? First, let's say our institution is the University of Florida. If we want to use `institutions.ror`, we can look that up here: [https://ror.org/search?page=1\&query=university%20of%20florida](https://ror.org/search?page=1\&query=university%20of%20florida)
 
-[https://ror.org/02y3ad647](https://ror.org/02y3ad647) looks right, so we can use that as the first part of our filter:
+[https://ror.org/02y3ad647](https://ror.org/02y3ad647) looks right, so we can use that as the first part of our filter:\
+`https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647`
 
-```url
-https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647
-```
-
-We can also use the institution's [OpenAlex ID](../about-the-data/#the-openalex-id). To get that, we'll have to take a detour and filter Institutions using [`display_name.search`:](get-lists-of-entities.md#additional-filters-3)
-
-```url
-https://api.openalex.org/institutions?filter=display_name.search:university of florida
-```
+We can also use the institution's [OpenAlex ID](../about-the-data/#the-openalex-id). To get that, we'll have to take a detour and filter Institutions using [`display_name.search`:](get-lists-of-entities.md#additional-filters-3)\
+`https://api.openalex.org/institutions?filter=display_name.search:university of florida`
 
 In python:
 
@@ -47,11 +41,8 @@ print(institution['id'])
 'https://openalex.org/I33213144'
 ```
 
-The first result looks like the one we want, so we can use that to filter on `institutions.id`.
-
-```url
-https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144
-```
+The first result looks like the one we want, so we can use that to filter on `institutions.id`.\
+`https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144`
 
 Adding our other criteria, we build the the `filter` clause:
 
@@ -63,9 +54,8 @@ Adding our other criteria, we build the the `filter` clause:
 
 `from_publication_date:2012-04-20`
 
-```
-https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144,is_paratext:false,type:journal-article,from_publication_date:2012-04-20
-```
+Putting it all together:\
+[`https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144,is_paratext:false,type:journal-article,from_publication_date:2012-04-20`](https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144,is\_paratext:false,type:journal-article,from\_publication\_date:2012-04-20)``
 
 This will give us a list of about 76,000 works. Again, in python:
 
@@ -81,11 +71,8 @@ print(response_meta['count'])
 76247
 ```
 
-Now, all we have to do is group by [is\_oa](get-groups-of-entities.md#works-group\_by-attributes):
-
-```url
-https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144,is_paratext:false,type:journal-article,from_publication_date:2012-04-20&group_by=is_oa
-```
+Now, all we have to do is group by [is\_oa](get-groups-of-entities.md#works-group\_by-attributes):\
+[`https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144,is_paratext:false,type:journal-article,from_publication_date:2012-04-20&group_by=is_oa`](https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I33213144,is\_paratext:false,type:journal-article,from\_publication\_date:2012-04-20\&group\_by=is\_oa)
 
 ```json
 {
