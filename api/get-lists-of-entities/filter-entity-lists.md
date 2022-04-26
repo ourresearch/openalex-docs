@@ -56,7 +56,9 @@ This is particularly useful when you want to retrieve a many records by ID all a
 You can combine up to 50 values for a given filter in this way.\
 
 
-### `/works` filters
+## `/works` filters
+
+### Work attribute filters&#x20;
 
 You can filter using these attributes of the `Works` object. You can find more documentation about each attribute on the [Work page](../../about-the-data/work.md).
 
@@ -83,7 +85,7 @@ You can filter using these attributes of the `Works` object. You can find more d
 * ``[`alternate_host_venues.version`](../../about-the-data/work.md#alternate\_host\_venues)``
 * ``[`alternate_host_venues.venue_id`](../../about-the-data/work.md#alternate\_host\_venues)``
 
-#### Additional filters
+### Additional works filters
 
 These filters aren't attributes of the [Work entity](../../about-the-data/work.md) object, but they're included to address some important use cases:
 
@@ -110,7 +112,7 @@ These filters aren't attributes of the [Work entity](../../about-the-data/work.m
 * `to_publication_date`
   * Takes a date (yyyy-mm-dd) and returns a list of works with [`publication_date`](../../about-the-data/work.md#publication\_date) less than or equal to that date.
 
-### `/authors` filters
+## `/authors` filters
 
 You can filter using these attributes of the `Authors` object. You can find more documentation about each attribute on the [Author page.](../../about-the-data/author.md)
 
@@ -133,7 +135,7 @@ These filters aren't attributes of the [Author entity](../../about-the-data/auth
   * Example: \
     Get a count of all the authors in OpenAlex that have an orcid, and all the ones that don't: [https://api.openalex.org/authors?group\_by=has\_orcid](https://api.openalex.org/authors?group\_by=has\_orcid)
 
-### `/venues` filters
+## `/venues` filters
 
 You can filter using these attributes of the `Venue` object. You can find more documentation about each attribute on the [Venue page](../../about-the-data/venue.md).
 
@@ -156,7 +158,7 @@ These filters aren't attributes of the [Venue entity](../../about-the-data/venue
   * Example: \
     Get a count of all the Venues in OpenAlex that have an issn, and all the ones that don't: [https://api.openalex.org/venues?group\_by=has\_issn](https://api.openalex.org/venues?group\_by=has\_issn)
 
-### `/institutions` filters
+## `/institutions` filters
 
 You can filter using these attributes of the `Institution` object. You can find more documentation about each attribute on the [Institution page](../../about-the-data/institution.md).
 
@@ -177,7 +179,7 @@ These filters aren't attributes of the [Institution entity](../../about-the-data
   * Example: \
     Get a count of all the Institutions in OpenAlex that have a ror, and all the ones that don't: [https://api.openalex.org/institutions?group\_by=has\_ror](https://api.openalex.org/institutions?group\_by=has\_ror)
 
-### `/concepts` filters
+## `/concepts` filters
 
 You can filter using these attributes of the `Concept` object. You can find more documentation about each attribute on the [Concept page.](../../about-the-data/concept.md)
 
