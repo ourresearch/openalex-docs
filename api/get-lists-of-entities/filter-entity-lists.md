@@ -11,15 +11,53 @@ A list of filters are set using the `filter` parameter,  formatted like this: `f
 
 Filters are case-insensitive.&#x20;
 
+## Logical expressions
+
+### Inequality
+
+For numerical filters, use the less-than (`<`) and greater-than (`>`) symbols to filter by inequalities. Example:
+
+* Get venues that host more than 1000 works:\
+  [`https://api.openalex.org/venues?filter=works_count:>1000`](https://api.openalex.org/venues?filter=works\_count:%3E1000)
+
+Some attributes have special filters that act as syntactic sugar around commonly-expressed inequalities: for example, the `from_publication_date` filter on `works`. See the endpoint-specific documentation below for more information. Example:&#x20;
+
+* Get all works published between 2022-01-01 and 2022-01-26 (inclusive):\
+  [`https://api.openalex.org/works?filter=from_publication_date:2022-01-01,to_publication_date:2022-01-26`](https://api.openalex.org/works?filter=from\_publication\_date:2022-01-01,to\_publication\_date:2022-01-26)
+
+### Negation
+
+You can negate any filter, numerical or otherwise, by prepending the exclamation mark symbol (`!`) to the filter value. Example:
+
+* Get all institutions _except_ for ones located in the US:\
+  [`https://api.openalex.org/institutions?filter=country_code:!us`](https://api.openalex.org/institutions?filter=country\_code:!us)``
+
+### Intersection
+
+By default, the returned result set includes only records that satisfy _all_ the supplied filters. In other words, filters are combined as an AND query. Example:
+
+* Get all works that have been cited more than once _and_ are free to read:\
+  [`https://api.openalex.org/works?filter=cited_by_count:>1,is_oa:true`](https://api.openalex.org/works?filter=cited\_by\_count:%3E1,is\_oa:true)``
+* Get all the works that have an author from France _and_ an author from the UK:\
+  [`https://api.openalex.org/works?filter=institutions.country_code:fr,institutions.country_code:gb`](https://api.openalex.org/works?filter=institutions.country\_code:fr,institutions.country\_code:gb)``
+
+### Addition
+
+Use the pipe symbol (`|`) to input lists of values such that _any_ of the values can be satisfied
+
+
+
 &#x20;the attribute you're filtering is a number or an ISO-formatted date string, you can filter using "less than" or "greater than." Example:
 
 * Get venues that host more than 1000 works:\
   [`https://api.openalex.org/venues?filter=works_count:>1000`](https://api.openalex.org/venues?filter=works\_count:%3E1000)
+*
 
 If you want to filter for a specific time range of a work you can use `from_publication_date` and `to_publication_date` (the bounds are inclusive). Example:
 
 * Get all publications between 2022-01-01 and 2022-01-26 (including those dates):\
   [`https://api.openalex.org/works?filter=from_publication_date:2022-01-01,to_publication_date:2022-01-26`](https://api.openalex.org/works?filter=from\_publication\_date:2022-01-01,to\_publication\_date:2022-01-26)
+*
 
 You can stack filters together, and the list will return entities that satisfy all the filters--in other words, it combines multiple filters using "AND." Separate multiple filter with commas. Example:
 
