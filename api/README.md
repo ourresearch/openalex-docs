@@ -4,9 +4,9 @@ description: Query the OpenAlex dataset using the magic of The Internet
 
 # API
 
-The API is the primary way to get OpenAlex data. It's free, requires no authentication, and has generous rate limits; it's also much cheaper and easier than [downloading and using the snapshot](../download-snapshot/). So for most use cases, this is what you're looking for.&#x20;
+The API is the primary way to get OpenAlex data. It's free, requires no authentication, and has no rate limits; it's also much  easier than [downloading and using the snapshot](../download-snapshot/). So for most use cases, this is what you're looking for.&#x20;
 
-The API is read-only, supporting just [GET requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET).&#x20;
+The API is read-only, and support only [GET requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET).&#x20;
 
 ## Entity endpoints
 
@@ -28,35 +28,32 @@ To get a single entity, just feed an ID to the relevant endpoint: `/<endpoint_na
   [https://api.openalex.org/works/W2741809807](https://api.openalex.org/works/W2741809807)
 * Get the venue (journal) with the ISSN `2167-8359`:\
   [https://api.openalex.org/venues/issn:2167-8359](https://api.openalex.org/venues/issn:2167-8359)
-* Get the author with the ORCID `https://orcid.org/0000-0001-6187-6610`:\
-  [https://api.openalex.org/authors/https://orcid.org/0000-0001-6187-6610](https://api.openalex.org/authors/https://orcid.org/0000-0001-6187-6610)
 
-To learn more about which IDs are accepted and in which formats, see [Get Single Entities](get-single-entities.md).
-
-{% hint style="info" %}
-To get a single entity, you need a single _unambiguous_ identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name) then it may apply to many entities, and you should filter a _list_ of them. For example, this gets a list of the authors called Einstein: \
-\
-[`https://api.openalex.org/authors?filter=display_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)\
-\
-To learn more, see [Get lists of entities](get-lists-of-entities/).
-
-
-{% endhint %}
+To learn more, see [Get Single Entities](get-single-entities.md)
 
 ### Get lists of entities
 
-To get a list of entities, just query the relevant endpoint directly: `/<endpoint_name>`. You can add parameters to filter, sort, search, and group results. Examples:
+To get a list of entities, just query the relevant endpoint directly: `/<endpoint_name>`. You can add parameters to filter, sort, and search results. Examples:
 
 * Get all the works in OpenAlex: \
   [`https://api.openalex.org/works`](https://api.openalex.org/works)``
 * Get works published in 2020:\
   [`https://api.openalex.org/works?filter=publication_year:2020`](https://api.openalex.org/works?filter=publication\_year:2020)``
-* Get works with "coffee" in their titles:\
-  [`https://api.openalex.org/works?filter=title.search:coffee`](https://api.openalex.org/works?filter=title.search:coffee)
-* Get _counts_ of works, by institution:\
-  [`https://api.openalex.org/works?group_by=institutions.id`](https://api.openalex.org/works?group\_by=institutions.id)``
+* Get works with "coffee" in their titles or abstracts:\
+  [`https://api.openalex.org/works?search=coffee`](https://api.openalex.org/works?search=coffee)``
 
-These list queries give you a very powerful and fast interface into the OpenAlex dataset. For lots more detail on these, see [Get lists of entities](get-lists-of-entities/) and [Get groups of entities](get-groups-of-entities.md).
+For lots more detail, see [Get lists of entities](get-lists-of-entities/)&#x20;
+
+### Get groups of entities
+
+To aggregate a list of entities into groups, add the group\_by parameter to a list query, like this `/<endpoint_name>?group_by=<attribute>`. Examples:&#x20;
+
+* Get counts of works, by institution:\
+  [`https://api.openalex.org/works?group_by=institutions.id`](https://api.openalex.org/works?group\_by=institutions.id)``
+* Get counts of works that are Open Access, by country: \
+  [https://api.openalex.org/works?filter=is\_oa:true\&group\_by=institutions.country\_code](https://api.openalex.org/works?filter=is\_oa:true\&group\_by=institutions.country\_code)
+
+To learn more about grouping, see [Get groups of entities](get-groups-of-entities.md).
 
 ## Authentication
 

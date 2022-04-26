@@ -18,6 +18,18 @@ So for example, if you want to get the work with the OpenAlex ID [https://openal
 
 That will return a [`Work`](../about-the-data/work.md) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
 
+{% hint style="info" %}
+To get a single entity, you need a single _unambiguous_ identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name) then it may apply to many entities, so you need filter a _list_ of them. For example, this gets a list of the authors called Einstein: \
+\
+[`https://api.openalex.org/authors?filter=display_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)\
+\
+To learn more, see [Get lists of entities](get-lists-of-entities/).
+
+
+{% endhint %}
+
+
+
 ## Supported IDs
 
 For each entity type, you can retrieve the entity using by any of the external IDs we support--not just the native OpenAlex IDs. So for example:
