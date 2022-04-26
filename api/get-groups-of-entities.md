@@ -57,7 +57,7 @@ This returns a `meta` object with details about the query, an empty `results` ob
 
 So from this we can see that the majority of works (66,862,508 of them) are `closed`, with another 10,499,470 `bronze`, and so forth. &#x20;
 
-You can group by most of the same properties that you can [filter](get-lists-of-entities.md#filter) by, and you can combine grouping with filtering.&#x20;
+You can group by most of the same properties that you can [filter](get-lists-of-entities/#filter) by, and you can combine grouping with filtering.&#x20;
 
 Each group contains three properties:
 
@@ -72,7 +72,7 @@ Each group contains three properties:
 
 ### Groupable attributes
 
-Each Entity type has a different set of attributes you can group by. These are mostly the same as the [filterable](get-lists-of-entities.md#filter) attributes - excluding two main types of filters:
+Each Entity type has a different set of attributes you can group by. These are mostly the same as the [filterable](get-lists-of-entities/#filter) attributes - excluding two main types of filters:
 
 * Dates like _to\_publication\_date_ that only make sense for filtering because there isn't a single value that belongs to each entity.
 * Wide-ranging numeric attributes like _cited\_by\_count_ with high cardinality. Grouping on these values produces too many groups to be useful.
@@ -88,10 +88,10 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`authorships.institutions.id`](../about-the-data/work.md#authorships) (alias `institutions.id`)
 * ``[`authorships.institutions.ror`](../about-the-data/work.md#authorships) (alias `institutions.ror`)
 * ``[`authorships.institutions.type`](../about-the-data/work.md#authorships) (alias `institutions.type`)
-* ``[`cites`](get-lists-of-entities.md#additional-filters)``
+* ``[`cites`](get-lists-of-entities/#additional-filters)``
 * ``[`concepts.id`](../about-the-data/work.md#concepts)``
 * ``[`concepts.wikidata`](../about-the-data/work.md#concepts)``
-* ``[`has_doi`](get-lists-of-entities.md#additional-filters)``
+* ``[`has_doi`](get-lists-of-entities/#additional-filters)``
 * ``[`host_venue.id`](../about-the-data/work.md#host\_venue) (alias `journal.id`)
 * ``[`host_venue.issn`](../about-the-data/work.md#host\_venue)``
 * ``[`host_venue.publisher`](../about-the-data/work.md#host\_venue)``
@@ -103,7 +103,7 @@ Each Entity type has a different set of attributes you can group by. These are m
 
 #### `/authors` group\_by attributes
 
-* ``[`has_orcid`](get-lists-of-entities.md#additional-filters-1)``
+* ``[`has_orcid`](get-lists-of-entities/#additional-filters-1)``
 * ``[`last_known_institution.country_code`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.id`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.ror`](../about-the-data/author.md#last\_known\_institution)``
@@ -111,7 +111,7 @@ Each Entity type has a different set of attributes you can group by. These are m
 
 #### `/venues` group\_by attributes
 
-* ``[`has_issn`](get-lists-of-entities.md#additional-filters-2)``
+* ``[`has_issn`](get-lists-of-entities/#additional-filters-2)``
 * ``[`is_in_doaj`](../about-the-data/venue.md#is\_in\_doaj)``
 * ``[`is_oa`](../about-the-data/venue.md#is\_oa)``
 * ``[`issn`](../about-the-data/venue.md#issn)``
@@ -120,14 +120,14 @@ Each Entity type has a different set of attributes you can group by. These are m
 #### `/institutions` group\_by attributes
 
 * [`country_code`](../about-the-data/institution.md#type)``
-* [`has_ror`](get-lists-of-entities.md#additional-filters-3)``
+* [`has_ror`](get-lists-of-entities/#additional-filters-3)``
 * [`type`](../about-the-data/institution.md#type)``
 
 #### `/concepts` group\_by __ attributes
 
 * ``[`ancestors.id`](../about-the-data/concept.md#ancestors)``
 * ``[`level`](../about-the-data/concept.md#level)``
-* ``[`has_wikidata`](get-lists-of-entities.md#additional-filters-4)``
+* ``[`has_wikidata`](get-lists-of-entities/#additional-filters-4)``
 
 ### Sorting groups
 

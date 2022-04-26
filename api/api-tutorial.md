@@ -1,6 +1,6 @@
 # API Tutorial
 
-This page will demonstrate using the API's [filtering](get-lists-of-entities.md#filter) and [grouping](get-groups-of-entities.md) functions to answer questions.
+This page will demonstrate using the API's [filtering](get-lists-of-entities/#filter) and [grouping](get-groups-of-entities.md) functions to answer questions.
 
 We'll use [Python](https://www.python.org) and [requests](https://pypi.org/project/requests/) in these examples. You can use the code as a starting point, or just [read the API results in your browser](./#calling-the-api-in-your-browser) and follow along. How to build the API requests is the important part - you probably won't learn any new Python tricks.&#x20;
 
@@ -22,7 +22,7 @@ But what's our institution's ID? First, let's say our institution is the Univers
 [https://ror.org/02y3ad647](https://ror.org/02y3ad647) looks right, so we can use that as the first part of our filter:\
 `https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647`
 
-We can also use the institution's [OpenAlex ID](../about-the-data/#the-openalex-id). To get that, we'll have to take a detour and filter Institutions using [`display_name.search`:](get-lists-of-entities.md#additional-filters-3)\
+We can also use the institution's [OpenAlex ID](../about-the-data/#the-openalex-id). To get that, we'll have to take a detour and filter Institutions using [`display_name.search`:](get-lists-of-entities/#additional-filters-3)\
 `https://api.openalex.org/institutions?filter=display_name.search:university of florida`
 
 In python:

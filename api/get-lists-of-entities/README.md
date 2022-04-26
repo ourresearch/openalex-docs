@@ -1,7 +1,7 @@
 # Get lists of entities
 
 {% hint style="info" %}
-See the [API overview](./) for info on API rate-limits, authentication, etc.
+See the [API overview](../) for info on API rate-limits, authentication, etc.
 {% endhint %}
 
 Any of the five [entity endpoints](https://docs.openalex.org/api#entity-endpoints) can return a list of entities; you simply call the endpoint directly, and get a list of all the entities we have of that type. For example:
@@ -9,7 +9,7 @@ Any of the five [entity endpoints](https://docs.openalex.org/api#entity-endpoint
 * Get a list of all the concepts in OpenAlex:\
   [`https://api.openalex.org/concepts`](https://api.openalex.org/concepts)
 
-This query returns a `meta` object with details about the query, a `results` list of [entity objects](../about-the-data/), and an empty [`group_by`](get-groups-of-entities.md) list:
+This query returns a `meta` object with details about the query, a `results` list of [entity objects](../../about-the-data/), and an empty [`group_by`](../get-groups-of-entities.md) list:
 
 ```json
 meta: {
@@ -24,7 +24,7 @@ results: [
 group_by: [] // empty
 ```
 
-These responses become a lot more useful when you add parameters to [filter](get-lists-of-entities.md#filter), [search](get-lists-of-entities.md#search), [sort](get-lists-of-entities.md#sort-results), and [group](get-groups-of-entities.md) them.
+These responses become a lot more useful when you add parameters to [filter](./#filter), [search](./#search), [sort](./#sort-results), and [group](../get-groups-of-entities.md) them.
 
 ## Filter
 
@@ -66,43 +66,43 @@ You can combine up to 50 filter parameter values in this way.
 
 ### `/works` filters
 
-You can filter using these attributes of the `Works` object. You can find more documentation about each attribute on the [Work page](../about-the-data/work.md).
+You can filter using these attributes of the `Works` object. You can find more documentation about each attribute on the [Work page](../../about-the-data/work.md).
 
-* ``[`publication_year`](../about-the-data/work.md#publication\_year)``
-* ``[`publication_date`](../about-the-data/work.md#publication\_date)``
-* ``[`host_venue.issn`](../about-the-data/work.md#host\_venue)``
-* ``[`host_venue.publisher`](../about-the-data/work.md#host\_venue)``
-* ``[`host_venue.id`](../about-the-data/work.md#host\_venue)``
-* ``[`type`](../about-the-data/work.md#type)``
-* ``[`is_paratext`](../about-the-data/work.md#is\_paratext)``
-* ``[`open_access.oa_status`](../about-the-data/work.md#open\_access) (alias: `oa_status`)
-* ``[`open_access.is_oa`](../about-the-data/work.md#open\_access) (alias: `is_oa`)
-* ``[`authorships.author.id`](../about-the-data/work.md#authorships) (alias: `author.id`)
-* ``[`authorships.author.orcid`](../about-the-data/work.md#authorships) (alias: `author.orcid`)
-* ``[`authorships.institutions.id`](../about-the-data/work.md#authorships) (alias `institutions.id`)
-* ``[`authorships.institutions.ror`](../about-the-data/work.md#authorships) (alias: `institutions.ror`)
-* ``[`authorships.institutions.country_code`](../about-the-data/work.md#authorships) (alias: `institutions.country_code`)
-* ``[`authorships.institutions.type`](../about-the-data/work.md#authorships) (alias: `institutions.type`)
-* ``[`cited_by_count`](../about-the-data/work.md#cited\_by\_count)``
-* ``[`is_retracted`](../about-the-data/work.md#is\_retracted)``
-* ``[`concepts.id`](../about-the-data/work.md#concepts)``
-* ``[`concepts.wikidata`](../about-the-data/work.md#concepts)``
-* ``[`alternate_host_venues.license`](../about-the-data/work.md#alternate\_host\_venues)``
-* ``[`alternate_host_venues.version`](../about-the-data/work.md#alternate\_host\_venues)``
-* ``[`alternate_host_venues.venue_id`](../about-the-data/work.md#alternate\_host\_venues)``
+* ``[`publication_year`](../../about-the-data/work.md#publication\_year)``
+* ``[`publication_date`](../../about-the-data/work.md#publication\_date)``
+* ``[`host_venue.issn`](../../about-the-data/work.md#host\_venue)``
+* ``[`host_venue.publisher`](../../about-the-data/work.md#host\_venue)``
+* ``[`host_venue.id`](../../about-the-data/work.md#host\_venue)``
+* ``[`type`](../../about-the-data/work.md#type)``
+* ``[`is_paratext`](../../about-the-data/work.md#is\_paratext)``
+* ``[`open_access.oa_status`](../../about-the-data/work.md#open\_access) (alias: `oa_status`)
+* ``[`open_access.is_oa`](../../about-the-data/work.md#open\_access) (alias: `is_oa`)
+* ``[`authorships.author.id`](../../about-the-data/work.md#authorships) (alias: `author.id`)
+* ``[`authorships.author.orcid`](../../about-the-data/work.md#authorships) (alias: `author.orcid`)
+* ``[`authorships.institutions.id`](../../about-the-data/work.md#authorships) (alias `institutions.id`)
+* ``[`authorships.institutions.ror`](../../about-the-data/work.md#authorships) (alias: `institutions.ror`)
+* ``[`authorships.institutions.country_code`](../../about-the-data/work.md#authorships) (alias: `institutions.country_code`)
+* ``[`authorships.institutions.type`](../../about-the-data/work.md#authorships) (alias: `institutions.type`)
+* ``[`cited_by_count`](../../about-the-data/work.md#cited\_by\_count)``
+* ``[`is_retracted`](../../about-the-data/work.md#is\_retracted)``
+* ``[`concepts.id`](../../about-the-data/work.md#concepts)``
+* ``[`concepts.wikidata`](../../about-the-data/work.md#concepts)``
+* ``[`alternate_host_venues.license`](../../about-the-data/work.md#alternate\_host\_venues)``
+* ``[`alternate_host_venues.version`](../../about-the-data/work.md#alternate\_host\_venues)``
+* ``[`alternate_host_venues.venue_id`](../../about-the-data/work.md#alternate\_host\_venues)``
 
 #### Additional filters
 
-These filters aren't attributes of the [Work entity](../about-the-data/work.md) object, but they're included to address some important use cases:
+These filters aren't attributes of the [Work entity](../../about-the-data/work.md) object, but they're included to address some important use cases:
 
 * `display_name.search` (alias: `title.search`)
-  * Takes a string and returns works with [`display_name`](../about-the-data/work.md#display\_name)s exactly matching that string. In most cases, the [`search` parameter](get-lists-of-entities.md#search) is better at finding works relevant to your search terms. Unless you're specifically interested in the content of titles, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
+  * Takes a string and returns works with [`display_name`](../../about-the-data/work.md#display\_name)s exactly matching that string. In most cases, the [`search` parameter](./#search) is better at finding works relevant to your search terms. Unless you're specifically interested in the content of titles, the [`search` parameter](./#search) is better than using [search as a filter](./#search-as-a-filter).
 * `raw_affiliation_string.search`
-  * Takes a string and returns works with at least one [`raw_affiliation_string`](../about-the-data/work.md#raw\_affiliation\_string) matching that string.
+  * Takes a string and returns works with at least one [`raw_affiliation_string`](../../about-the-data/work.md#raw\_affiliation\_string) matching that string.
   * Example:\
     Get works with _Department of Political Science, University of Amsterdam_ in a  `raw_affiliation_string`: [https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%amsterdam](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)
 * `has_doi`&#x20;
-  * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](get-groups-of-entities.md).&#x20;
+  * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](../get-groups-of-entities.md).&#x20;
   * Example: \
     Get a count of all the works in OpenAlex that have a DOI, and all the ones that don't:\
     [https://api.openalex.org/works?group\_by=has\_doi](https://api.openalex.org/works?group\_by=has\_doi)
@@ -114,94 +114,94 @@ These filters aren't attributes of the [Work entity](../about-the-data/work.md) 
 * `related_to`
   * Takes an OpenAlex ID and returns the list of works found in that record's `related_works` section. Example: [https://api.openalex.org/works?filter=related\_to:W2486144666](https://api.openalex.org/works?filter=related\_to:W2486144666)
 * `from_publication_date`
-  * Takes a date (yyyy-mm-dd) and returns a list of works with [`publication_date`](../about-the-data/work.md#publication\_date) greater than or equal to that date.
+  * Takes a date (yyyy-mm-dd) and returns a list of works with [`publication_date`](../../about-the-data/work.md#publication\_date) greater than or equal to that date.
 * `to_publication_date`
-  * Takes a date (yyyy-mm-dd) and returns a list of works with [`publication_date`](../about-the-data/work.md#publication\_date) less than or equal to that date.
+  * Takes a date (yyyy-mm-dd) and returns a list of works with [`publication_date`](../../about-the-data/work.md#publication\_date) less than or equal to that date.
 
 ### `/authors` filters
 
-You can filter using these attributes of the `Authors` object. You can find more documentation about each attribute on the [Author page.](../about-the-data/author.md)
+You can filter using these attributes of the `Authors` object. You can find more documentation about each attribute on the [Author page.](../../about-the-data/author.md)
 
-* ``[`works_count`](../about-the-data/author.md#works\_count)``
-* ``[`cited_by_count`](../about-the-data/author.md#cited\_by\_count)``
-* ``[`last_known_institution.id`](../about-the-data/author.md#last\_known\_institution)``
-* ``[`last_known_institution.ror`](../about-the-data/author.md#last\_known\_institution)``
-* ``[`last_known_institution.country_code`](../about-the-data/author.md#last\_known\_institution)``
-* ``[`last_known_institution.type`](../about-the-data/author.md#last\_known\_institution)``
-* ``[`x_concepts.id`](../about-the-data/author.md#x\_concepts)``
+* ``[`works_count`](../../about-the-data/author.md#works\_count)``
+* ``[`cited_by_count`](../../about-the-data/author.md#cited\_by\_count)``
+* ``[`last_known_institution.id`](../../about-the-data/author.md#last\_known\_institution)``
+* ``[`last_known_institution.ror`](../../about-the-data/author.md#last\_known\_institution)``
+* ``[`last_known_institution.country_code`](../../about-the-data/author.md#last\_known\_institution)``
+* ``[`last_known_institution.type`](../../about-the-data/author.md#last\_known\_institution)``
+* ``[`x_concepts.id`](../../about-the-data/author.md#x\_concepts)``
 
 #### Additional Filters
 
-These filters aren't attributes of the [Author entity](../about-the-data/author.md) object, but they're included to address some important use cases:
+These filters aren't attributes of the [Author entity](../../about-the-data/author.md) object, but they're included to address some important use cases:
 
 * `display_name.search`
-  * Takes a string and returns Authors with [`display_name`](../about-the-data/author.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
+  * Takes a string and returns Authors with [`display_name`](../../about-the-data/author.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](./#search) is better than using [search as a filter](./#search-as-a-filter).
 * `has_orcid`
-  * Takes a boolean (`true` or `false`) and returns a list of Authors that have/lack an [orcid](../about-the-data/author.md#orcid).
+  * Takes a boolean (`true` or `false`) and returns a list of Authors that have/lack an [orcid](../../about-the-data/author.md#orcid).
   * Example: \
     Get a count of all the authors in OpenAlex that have an orcid, and all the ones that don't: [https://api.openalex.org/authors?group\_by=has\_orcid](https://api.openalex.org/authors?group\_by=has\_orcid)
 
 ### `/venues` filters
 
-You can filter using these attributes of the `Venue` object. You can find more documentation about each attribute on the [Venue page](../about-the-data/venue.md).
+You can filter using these attributes of the `Venue` object. You can find more documentation about each attribute on the [Venue page](../../about-the-data/venue.md).
 
-* ``[`issn`](../about-the-data/venue.md#issn)``
-* ``[`publisher`](../about-the-data/venue.md#publisher) (requires exact match)
-* ``[`works_count`](../about-the-data/venue.md#works\_count)``
-* ``[`cited_by_count`](../about-the-data/venue.md#cited\_by\_count)``
-* ``[`x_concepts.id`](../about-the-data/venue.md#x\_concepts)``
-* ``[`is_oa`](../about-the-data/venue.md#is\_oa)``
-* ``[`is_in_doaj`](../about-the-data/venue.md#is\_in\_doaj)``
+* ``[`issn`](../../about-the-data/venue.md#issn)``
+* ``[`publisher`](../../about-the-data/venue.md#publisher) (requires exact match)
+* ``[`works_count`](../../about-the-data/venue.md#works\_count)``
+* ``[`cited_by_count`](../../about-the-data/venue.md#cited\_by\_count)``
+* ``[`x_concepts.id`](../../about-the-data/venue.md#x\_concepts)``
+* ``[`is_oa`](../../about-the-data/venue.md#is\_oa)``
+* ``[`is_in_doaj`](../../about-the-data/venue.md#is\_in\_doaj)``
 
 #### Additional Filters
 
-These filters aren't attributes of the [Venue entity](../about-the-data/venue.md) object, but they're included to address some important use cases:
+These filters aren't attributes of the [Venue entity](../../about-the-data/venue.md) object, but they're included to address some important use cases:
 
 * `display_name.search`
-  * Takes a string and returns Venues with [`display_name`](../about-the-data/venue.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
+  * Takes a string and returns Venues with [`display_name`](../../about-the-data/venue.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](./#search) is better than using [search as a filter](./#search-as-a-filter).
 * `has_issn`
-  * Takes a boolean (`true` or `false`) and returns a list of Venues that have/lack an [issn](../about-the-data/venue.md#issn).
+  * Takes a boolean (`true` or `false`) and returns a list of Venues that have/lack an [issn](../../about-the-data/venue.md#issn).
   * Example: \
     Get a count of all the Venues in OpenAlex that have an issn, and all the ones that don't: [https://api.openalex.org/venues?group\_by=has\_issn](https://api.openalex.org/venues?group\_by=has\_issn)
 
 ### `/institutions` filters
 
-You can filter using these attributes of the `Institution` object. You can find more documentation about each attribute on the [Institution page](../about-the-data/institution.md).
+You can filter using these attributes of the `Institution` object. You can find more documentation about each attribute on the [Institution page](../../about-the-data/institution.md).
 
-* ``[`country_code`](../about-the-data/institution.md#country\_code)``
-* ``[`type`](../about-the-data/institution.md#type)``
-* ``[`works_count`](../about-the-data/institution.md#works\_count)``
-* ``[`cited_by_count`](../about-the-data/institution.md#cited\_by\_count)``
-* ``[`x_concepts.id`](../about-the-data/institution.md#x\_concepts)``
+* ``[`country_code`](../../about-the-data/institution.md#country\_code)``
+* ``[`type`](../../about-the-data/institution.md#type)``
+* ``[`works_count`](../../about-the-data/institution.md#works\_count)``
+* ``[`cited_by_count`](../../about-the-data/institution.md#cited\_by\_count)``
+* ``[`x_concepts.id`](../../about-the-data/institution.md#x\_concepts)``
 
 #### Additional Filters
 
-These filters aren't attributes of the [Institution entity](../about-the-data/institution.md) object, but they're included to address some important use cases:
+These filters aren't attributes of the [Institution entity](../../about-the-data/institution.md) object, but they're included to address some important use cases:
 
 * `display_name.search`
-  * Takes a string and returns Institutions with [`display_name`](../about-the-data/institution.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
+  * Takes a string and returns Institutions with [`display_name`](../../about-the-data/institution.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](./#search) is better than using [search as a filter](./#search-as-a-filter).
 * `has_ror`
-  * Takes a boolean (`true` or `false`) and returns a list of Venues that have/lack a [ror](../about-the-data/institution.md#ror).
+  * Takes a boolean (`true` or `false`) and returns a list of Venues that have/lack a [ror](../../about-the-data/institution.md#ror).
   * Example: \
     Get a count of all the Institutions in OpenAlex that have a ror, and all the ones that don't: [https://api.openalex.org/institutions?group\_by=has\_ror](https://api.openalex.org/institutions?group\_by=has\_ror)
 
 ### `/concepts` filters
 
-You can filter using these attributes of the `Concept` object. You can find more documentation about each attribute on the [Concept page.](../about-the-data/concept.md)
+You can filter using these attributes of the `Concept` object. You can find more documentation about each attribute on the [Concept page.](../../about-the-data/concept.md)
 
-* ``[`level`](../about-the-data/concept.md#level)``
-* ``[`works_count`](../about-the-data/concept.md#works\_count)``
-* ``[`cited_by_count`](../about-the-data/concept.md#cited\_by\_count)``
-* ``[`ancestors.id`](../about-the-data/concept.md#ancestors)``
+* ``[`level`](../../about-the-data/concept.md#level)``
+* ``[`works_count`](../../about-the-data/concept.md#works\_count)``
+* ``[`cited_by_count`](../../about-the-data/concept.md#cited\_by\_count)``
+* ``[`ancestors.id`](../../about-the-data/concept.md#ancestors)``
 
 #### Additional Filters
 
-These filters aren't attributes of the [Concept entity](../about-the-data/concept.md) object, but they're included to address some important use cases:
+These filters aren't attributes of the [Concept entity](../../about-the-data/concept.md) object, but they're included to address some important use cases:
 
 * `display_name.search`
-  * Takes a string and returns Concepts with [`display_name`](../about-the-data/concept.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
+  * Takes a string and returns Concepts with [`display_name`](../../about-the-data/concept.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](./#search) is better than using [search as a filter](./#search-as-a-filter).
 * `has_wikidata`
-  * Takes a boolean (`true` or `false`) and returns a list of Concepts that have/lack a [Wikidata ID](../about-the-data/concept.md#wikidata). For now, all concepts in OpenAlex _do_ have Wikidata IDs.
+  * Takes a boolean (`true` or `false`) and returns a list of Concepts that have/lack a [Wikidata ID](../../about-the-data/concept.md#wikidata). For now, all concepts in OpenAlex _do_ have Wikidata IDs.
   * Example: \
     Get a count of all the Concepts in OpenAlex that have Wikidata ID, and all the ones that don't: [https://api.openalex.org/concepts?group\_by=has\_wikidata](https://api.openalex.org/concepts?group\_by=has\_wikidata)
 
@@ -240,7 +240,7 @@ Use the `?sort` parameter to specify the property you want your list sorted by. 
 * `cited_by_count`
 * `works_count`
 * `publication_date`
-* `relevance_score` (only exists if there's a [search filter](get-lists-of-entities.md#search) active)
+* `relevance_score` (only exists if there's a [search filter](./#search) active)
 
 By default, sort direction is ascending. You can reverse this by appending `:desc` to the sort key like `works_count:desc`. You can sort by multiple properties by providing multiple sort keys, separated by commas. Examples:
 
@@ -305,5 +305,5 @@ Since the number of results is unlimited, you can use cursor paging to retrieve 
 * It's bad for you because it can easily take several days to page through a long list like _Works_ or _Authors_.
 * It's bad for us (and other users!) because it puts a heavy load on our servers during that time.
 
-Instead, try the [data snapshot](../download-snapshot/). You'll get all the results much faster and in the same format as the API responses.
+Instead, try the [data snapshot](../../download-snapshot/). You'll get all the results much faster and in the same format as the API responses.
 {% endhint %}

@@ -15,7 +15,7 @@ This is where autocomplete endpoints come in - they can take partial search stri
 This is the query behind that result: [https://api.openalex.org/autocomplete?q=flori](https://api.openalex.org/autocomplete?q=flori)
 
 {% hint style="info" %}
-For Entities that support it, you might be tempted to [filter on display\_name.search](get-lists-of-entities.md#additional-filters-1). Don't! It's much slower than the autocomplete endpoints we're about to get into, returns a lot of information you don't need, and you have to do a lot of extra work with the results.\
+For Entities that support it, you might be tempted to [filter on display\_name.search](get-lists-of-entities/#additional-filters-1). Don't! It's much slower than the autocomplete endpoints we're about to get into, returns a lot of information you don't need, and you have to do a lot of extra work with the results.\
 \
 👎 [https://api.openalex.org/institutions?filter=display\_name.search:florida](https://api.openalex.org/institutions?filter=display\_name.search:florida) &#x20;
 
@@ -35,7 +35,7 @@ You can limit autocomplete results to a single Entity type by passing that type 
 Equivalently, you can use an entity-specific route: [https://api.openalex.org/autocomplete/venues?q=Birds](https://api.openalex.org/autocomplete/venues?q=Birds)
 
 {% hint style="info" %}
-The entity-specific routes use the (plural) names you would use when [listing Entities](get-lists-of-entities.md). The entity\_type argument uses the (singular) name of the entity type. So use
+The entity-specific routes use the (plural) names you would use when [listing Entities](get-lists-of-entities/). The entity\_type argument uses the (singular) name of the entity type. So use
 
 `/autocomplete/works` but `/autocomplete?entity_type=work`
 {% endhint %}

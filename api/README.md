@@ -38,7 +38,7 @@ To get a single entity, you need a single _unambiguous_ identifier, like an ORCI
 \
 [`https://api.openalex.org/authors?filter=display_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)\
 \
-To learn more, see [Get lists of entities](get-lists-of-entities.md).
+To learn more, see [Get lists of entities](get-lists-of-entities/).
 
 
 {% endhint %}
@@ -56,7 +56,7 @@ To get a list of entities, just query the relevant endpoint directly: `/<endpoin
 * Get _counts_ of works, by institution:\
   [`https://api.openalex.org/works?group_by=institutions.id`](https://api.openalex.org/works?group\_by=institutions.id)``
 
-These list queries give you a very powerful and fast interface into the OpenAlex dataset. For lots more detail on these, see [Get lists of entities](get-lists-of-entities.md) and [Get groups of entities](get-groups-of-entities.md).&#x20;
+These list queries give you a very powerful and fast interface into the OpenAlex dataset. For lots more detail on these, see [Get lists of entities](get-lists-of-entities/) and [Get groups of entities](get-groups-of-entities.md).
 
 ## Authentication
 
@@ -82,9 +82,62 @@ The common pool has slower and less consistent response times. It's a less good 
 
 ## Rate limits
 
-The API doesn't have rate limits. However, in our first few weeks, we'd appreciate it if everyone kept it to under 100,000 calls per day. That will give us a chance to see how many users we may need to be supporting, and scale our infrastructure accordingly.&#x20;
+The API doesn't have rate limits. However, if you need more than 100,000 calls per day, please drop us a line at team@ourresearch.org to let us know you'll be hitting the API extra hard.
 
-If you need more than 100,000 calls per day, please drop us a line at team@ourresearch.org.
+## Paging
+
+### Basic paging
+
+Use the `page` query parameter to control which page of results you want (eg `page=1`, `page=2`, etc). By default there are 25 results per page; you can use the `per-page` parameter to change that to any number between 1 and 200.
+
+* Get the 2nd page of a list:\
+  [https://api.openalex.org/works?page=2](https://api.openalex.org/works?page=2)
+* Get 200 results on the second page:\
+  [https://api.openalex.org/works?page=2\&per-page=200](https://api.openalex.org/works?page=2\&per-page=200)
+
+Basic paging only works for to read the first 10,000 results of any list. If you want to see more than 10,000 results, you'll need to use [cursor paging](./#cursor-paging).
+
+### Cursor paging
+
+Cursor paging is a bit more complicated than [basic paging](./#basic-paging-up-to-10-000-results), but it allows you to access as many records as you like.&#x20;
+
+To use cursor paging, you request a cursor by adding the `cursor=*` parameter-value pair to your query.
+
+* Get a cursor in order to start cursor pagination:\
+  [https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*)
+
+The response to your query will include a `next_cursor` value in the response's `meta` object. Here's what it looks like:&#x20;
+
+```json
+{
+  "meta": {
+    "count": 8695857,
+    "db_response_time_ms": 28,
+    "page": null,
+    "per_page": 100,
+    "next_cursor": "IlsxNjA5MzcyODAwMDAwLCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzI0ODg0OTk3NjQnXSI="
+  },
+  "results" : [
+    // the first page of results
+  ]
+}
+```
+
+To retrieve the next page of results, copy the `meta.next_cursor` value into the cursor field of your next request.
+
+* Get the next page of results using a cursor value: \
+  [https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwLCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzI0ODg0OTk3NjQnXSI=](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwLCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzI0ODg0OTk3NjQnXSI=)
+
+This second page of results will have a new value for `meta.next_cursor`. You'll use this new value the same way you did the first, and it'll give you the second page of results. To get _all_ the results, keep repeating this process until `meta.next_cursor` is null and the results set is empty.
+
+{% hint style="danger" %}
+**Don't use cursor paging to download the whole dataset.**
+
+* It's bad for you because it will take many days to page through a long list like /works or /authors.
+* It's bad for us (and other users!) because it puts a massive load on our servers.
+
+Instead, download everything at once, using the [data snapshot](../download-snapshot/). It's free, easy, fast, and you get all the results in same format you'd get from the API.
+{% endhint %}
 
 ## Usage tips
 
@@ -92,7 +145,7 @@ If you need more than 100,000 calls per day, please drop us a line at team@ourre
 
 Because the API is all GET requests without fancy authentication, you can view any request in your browser. This is a very useful and pleasant way to explore the API and debug scripts; we use it all the time.&#x20;
 
-However, this is _much_ nicer if you install an extension to pretty-print the JSON; [JSONVue (Chrome)](https://chrome.google.com/webstore/detail/jsonvue/chklaanhfefbnpoihckbnefhakgolnmc) and [JSONView (Firefox)](https://addons.mozilla.org/en-US/firefox/addon/jsonview) are popular, free choices.
+However, this is _much_ nicer if you install an extension to pretty-print the JSON; [JSONVue (Chrome)](https://chrome.google.com/webstore/detail/jsonvue/chklaanhfefbnpoihckbnefhakgolnmc) and [JSONView (Firefox)](https://addons.mozilla.org/en-US/firefox/addon/jsonview) are popular, free choices. Here's what an API response looks like with one of these extensions enabled:
 
 ![A lot prettier than cURL](https://i.imgur.com/E7mNLph.png)
 
