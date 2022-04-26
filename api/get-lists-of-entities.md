@@ -100,7 +100,7 @@ These filters aren't attributes of the [Work entity](../about-the-data/work.md) 
 * `raw_affiliation_string.search`
   * Takes a string and returns works with at least one [`raw_affiliation_string`](../about-the-data/work.md#raw\_affiliation\_string) matching that string.
   * Example:\
-    Get works where _Department of Political Science, University of Amsterdam_ is in a  `raw_affiliation_string`: [https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%amsterdam](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)
+    Get works with _Department of Political Science, University of Amsterdam_ in a  `raw_affiliation_string`: [https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%amsterdam](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)
 * `has_doi`&#x20;
   * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](get-groups-of-entities.md).&#x20;
   * Example: \
