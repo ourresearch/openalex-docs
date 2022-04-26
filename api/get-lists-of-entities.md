@@ -96,14 +96,16 @@ You can filter using these attributes of the `Works` object. You can find more d
 These filters aren't attributes of the [Work entity](../about-the-data/work.md) object, but they're included to address some important use cases:
 
 * `display_name.search` (alias: `title.search`)
-  * Takes a string and returns Works with [`display_name`](../about-the-data/work.md#display\_name)s exactly matching that string. In most cases, the [`search` parameter](get-lists-of-entities.md#search) is better at finding works relevant to your search terms. Unless you're specifically interested in the content of titles, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
+  * Takes a string and returns works with [`display_name`](../about-the-data/work.md#display\_name)s exactly matching that string. In most cases, the [`search` parameter](get-lists-of-entities.md#search) is better at finding works relevant to your search terms. Unless you're specifically interested in the content of titles, the [`search` parameter](get-lists-of-entities.md#search) is better than using [search as a filter](get-lists-of-entities.md#search-as-a-filter).
 * `raw_affiliation_string.search`
-  * Takes a string and returns Works with at least one [`raw_affiliation_string`](../about-the-data/work.md#raw\_affiliation\_string) matching that string.
+  * Takes a string and returns works with at least one [`raw_affiliation_string`](../about-the-data/work.md#raw\_affiliation\_string) matching that string.
+  * Example:\
+    Get works where _Department of Political Science, University of Amsterdam_ is in a  `raw_affiliation_string`: [https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%amsterdam](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)
 * `has_doi`&#x20;
   * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](get-groups-of-entities.md).&#x20;
   * Example: \
     Get a count of all the works in OpenAlex that have a DOI, and all the ones that don't:\
-    [`https://api.openalex.org/works?group_by=has_doi`](https://api.openalex.org/works?group\_by=has\_doi)
+    [https://api.openalex.org/works?group\_by=has\_doi](https://api.openalex.org/works?group\_by=has\_doi)
 * `cites`
   * Takes an OpenAlex ID and returns the list of works that cite that work. You can think of this as **incoming citations**.&#x20;
   * Example: Get works that cite [https://openalex.org/W2741809807](https://openalex.org/W2741809807) ("The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles")  [`https://api.openalex.org/works?filter=cites:W2741809807`](https://api.openalex.org/works?filter=cites:W2741809807)``
