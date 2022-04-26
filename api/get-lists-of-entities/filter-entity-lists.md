@@ -43,38 +43,18 @@ By default, the returned result set includes only records that satisfy _all_ the
 
 ### Addition
 
-Use the pipe symbol (`|`) to input lists of values such that _any_ of the values can be satisfied
+Use the pipe symbol (`|`) to input lists of values such that _any_ of the values can be satisfied--in other words, when you separate filter values with a pipe, they'll be combined as an `OR` query. Example:
 
+* Get all the works that have an author from France or an author from the UK:\
+  [`https://api.openalex.org/works?filter=institutions.country_code:fr|gb`](https://api.openalex.org/works?filter=institutions.country\_code:fr|gb)``
 
+This is particularly useful when you want to retrieve a many records by ID all at once. Instead of making a whole bunch of [singleton calls](../get-single-entities.md) in a loop, you can make one call, like this:
 
-&#x20;the attribute you're filtering is a number or an ISO-formatted date string, you can filter using "less than" or "greater than." Example:
+* Get the works with DOI `10.1371/journal.pone.0266781` _or_ with DOI `10.1371/journal.pone.0267149` (note the pipe separator between the two DOIs): \
+  [https://api.openalex.org/works?filter=doi:https://doi.org/10.1371/journal.pone.0266781|https://doi.org/10.1371/journal.pone.0267149](https://api.openalex.org/works?filter=doi:https://doi.org/10.1371/journal.pone.0266781|https://doi.org/10.1371/journal.pone.0267149)
 
-* Get venues that host more than 1000 works:\
-  [`https://api.openalex.org/venues?filter=works_count:>1000`](https://api.openalex.org/venues?filter=works\_count:%3E1000)
-*
+You can combine up to 50 values for a given filter in this way.\
 
-If you want to filter for a specific time range of a work you can use `from_publication_date` and `to_publication_date` (the bounds are inclusive). Example:
-
-* Get all publications between 2022-01-01 and 2022-01-26 (including those dates):\
-  [`https://api.openalex.org/works?filter=from_publication_date:2022-01-01,to_publication_date:2022-01-26`](https://api.openalex.org/works?filter=from\_publication\_date:2022-01-01,to\_publication\_date:2022-01-26)
-*
-
-You can stack filters together, and the list will return entities that satisfy all the filters--in other words, it combines multiple filters using "AND." Separate multiple filter with commas. Example:
-
-* Get US-based authors who've been cited more than 100 times:\
-  [`https://api.openalex.org/authors?filter=last_known_institution.country_code:US,cited_by_count:>100`](https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:US,cited\_by\_count:%3E0)
-
-Each endpoint supports its own list of filters. Here they are, by endpoint:
-
-### Boolean OR within filter clauses
-
-In the above examples, the comma-separated filter clauses are combined using AND. The query [https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:US,cited\_by\_count:>100](https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:US,cited\_by\_count:%3E100) requests authors where `last_known_institution.country code = US AND cited_by_count > 100`.
-
-Within each clause, you can include multiple values using the pipe character `|` to create multiple filter clauses on that attribute and combine them with OR. If you change the query above to [https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:FR|DE,cited\_by\_count:>100](https://api.openalex.org/authors?filter=last\_known\_institution.country\_code:FR|DE,cited\_by\_count:%3E100), you're now asking for authors where `(last_known_institution.country code = FR  OR  last_known_institution.country code = DE) AND cited_by_count > 100`.
-
-One application of this feature is to look up multiple entities by ID in the same query: [https://api.openalex.org/works?filter=openalex\_id:W2412437380|W2739898018](https://api.openalex.org/works?filter=openalex\_id:W2412437380|W2739898018)
-
-You can combine up to 50 filter parameter values in this way.
 
 ### `/works` filters
 
