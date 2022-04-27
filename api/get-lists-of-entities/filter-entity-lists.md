@@ -60,7 +60,7 @@ You can combine up to 50 values for a given filter in this way.\
 
 ### Work attribute filters&#x20;
 
-You can filter using these attributes of the `Works` object. You can find more documentation about each attribute on the [Work page](../../about-the-data/work.md).
+You can filter using these attributes of the `Work` object (click to view more description of each on the [Work page](../../about-the-data/work.md)):
 
 * ``[`publication_year`](../../about-the-data/work.md#publication\_year)``
 * ``[`publication_date`](../../about-the-data/work.md#publication\_date)``
