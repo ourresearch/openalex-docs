@@ -58,7 +58,7 @@ You can combine up to 50 values for a given filter in this way.\
 
 ## `/works` filters
 
-### Work attribute filters&#x20;
+### `/works` attribute filters&#x20;
 
 You can filter using these attributes of the `Work` entity object (click each one to view their documentation on the [`Work` entity page](../../about-the-data/work.md)):
 
@@ -85,7 +85,7 @@ You can filter using these attributes of the `Work` entity object (click each on
 * ``[`alternate_host_venues.version`](../../about-the-data/work.md#alternate\_host\_venues)``
 * ``[`alternate_host_venues.venue_id`](../../about-the-data/work.md#alternate\_host\_venues)``
 
-### Work convenience filters
+### `/works` convenience filters
 
 These filters aren't attributes of the [`Work` entity](../../about-the-data/work.md) object, but they're handy for solving some common use cases:
 
