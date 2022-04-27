@@ -60,7 +60,7 @@ You can combine up to 50 values for a given filter in this way.\
 
 ### Work attribute filters&#x20;
 
-You can filter using these attributes of the `Work` object (click to view more description of each on the [Work page](../../about-the-data/work.md)):
+You can filter using these attributes of the `Work` entity object (click each one to view their documentation on the [`Work` entity page](../../about-the-data/work.md)):
 
 * ``[`publication_year`](../../about-the-data/work.md#publication\_year)``
 * ``[`publication_date`](../../about-the-data/work.md#publication\_date)``
@@ -85,32 +85,70 @@ You can filter using these attributes of the `Work` object (click to view more d
 * ``[`alternate_host_venues.version`](../../about-the-data/work.md#alternate\_host\_venues)``
 * ``[`alternate_host_venues.venue_id`](../../about-the-data/work.md#alternate\_host\_venues)``
 
-### Additional works filters
+### `Work` convenience filters
 
-These filters aren't attributes of the [Work entity](../../about-the-data/work.md) object, but they're included to address some important use cases:
+These filters aren't attributes of the [`Work` entity](../../about-the-data/work.md) object, but they're handy for solving some common use cases:
 
-* `display_name.search` (alias: `title.search`)
-  * Takes a string and returns works with [`display_name`](../../about-the-data/work.md#display\_name)s exactly matching that string. In most cases, the [`search` parameter](filter-entity-lists.md#search) is better at finding works relevant to your search terms. Unless you're specifically interested in the content of titles, the [`search` parameter](filter-entity-lists.md#search) is better than using [search as a filter](filter-entity-lists.md#search-as-a-filter).
-* `raw_affiliation_string.search`
-  * Takes a string and returns works with at least one [`raw_affiliation_string`](../../about-the-data/work.md#raw\_affiliation\_string) matching that string.
-  * Example:\
-    Get works with _Department of Political Science, University of Amsterdam_ in a  `raw_affiliation_string`: [https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%amsterdam](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)
-* `has_doi`&#x20;
-  * Takes a boolean (`true` or `false`) and returns a list of works that have/lack a DOI. It's mostly useful for [grouping](../get-groups-of-entities.md).&#x20;
-  * Example: \
-    Get a count of all the works in OpenAlex that have a DOI, and all the ones that don't:\
-    [https://api.openalex.org/works?group\_by=has\_doi](https://api.openalex.org/works?group\_by=has\_doi)
-* `cites`
-  * Takes an OpenAlex ID and returns the list of works that cite that work. You can think of this as **incoming citations**.&#x20;
-  * Example: Get works that cite [https://openalex.org/W2741809807](https://openalex.org/W2741809807) ("The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles")  [`https://api.openalex.org/works?filter=cites:W2741809807`](https://api.openalex.org/works?filter=cites:W2741809807)``
-* `cited_by`
-  * Takes an OpenAlex ID and returns the list of works found in that record's `referenced_works` section. You can think of this as **outgoing citations**. Example: [https://api.openalex.org/works?filter=cited\_by:W2766808518](https://api.openalex.org/works?filter=cited\_by:W2766808518)
-* `related_to`
-  * Takes an OpenAlex ID and returns the list of works found in that record's `related_works` section. Example: [https://api.openalex.org/works?filter=related\_to:W2486144666](https://api.openalex.org/works?filter=related\_to:W2486144666)
-* `from_publication_date`
-  * Takes a date (yyyy-mm-dd) and returns a list of works with [`publication_date`](../../about-the-data/work.md#publication\_date) greater than or equal to that date.
-* `to_publication_date`
-  * Takes a date (yyyy-mm-dd) and returns a list of works with [`publication_date`](../../about-the-data/work.md#publication\_date) less than or equal to that date.
+#### `display_name.search` (alias: `title.search`)
+
+Value: a search string
+
+Returns: works whose[`display_name`](../../about-the-data/work.md#display\_name) (title) includes the given string; see [the search filter](search-entity-lists.md#the-search-filter) for details.&#x20;
+
+{% hint style="info" %}
+For most cases, you should use the [`search` parameter](search-entity-lists.md#the-search-parameter) instead of this filter, because it uses a better search algorithm and searches over abstracts as well as titles.
+{% endhint %}
+
+#### `raw_affiliation_string.search`
+
+Value: a search string
+
+Returns: works that have a [`raw_affiliation_string`](../../about-the-data/work.md#raw\_affiliation\_string) which includes the given string.  See [the search filter](search-entity-lists.md#the-search-filter) for details on the algorithm used. &#x20;
+
+Example:\
+Get works with _Department of Political Science, University of Amsterdam_ in a  `raw_affiliation_string`: [https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%amsterdam](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)
+
+#### `has_doi`&#x20;
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works that have or lack a DOI, depending on the given value. It's especially useful for [grouping](../get-groups-of-entities.md).
+
+Example: \
+Get a count of all the works in OpenAlex that have a DOI, and all the ones that don't:\
+[https://api.openalex.org/works?group\_by=has\_doi](https://api.openalex.org/works?group\_by=has\_doi)
+
+#### `cites`
+
+Value: the [OpenAlex ID](../../about-the-data/#the-openalex-id) for a given work
+
+Returns: works that cite the given work. You can think of this as **incoming citations**.&#x20;
+
+Example: Get works that cite [https://openalex.org/W2741809807](https://openalex.org/W2741809807) ("The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles")  [`https://api.openalex.org/works?filter=cites:W2741809807`](https://api.openalex.org/works?filter=cites:W2741809807)``
+
+#### `cited_by`
+
+Value: the [OpenAlex ID](../../about-the-data/#the-openalex-id) for a given work
+
+Returns: works found in the given work's `referenced_works` section. You can think of this as **outgoing citations**. Example: [https://api.openalex.org/works?filter=cited\_by:W2766808518](https://api.openalex.org/works?filter=cited\_by:W2766808518)
+
+#### `related_to`
+
+Value: the [OpenAlex ID](../../about-the-data/#the-openalex-id) for a given work
+
+Returns: works found in the given work's `related_works` section. Example: [https://api.openalex.org/works?filter=related\_to:W2486144666](https://api.openalex.org/works?filter=related\_to:W2486144666)
+
+#### `from_publication_date`
+
+Value: a date, formatted as `yyyy-mm-dd`
+
+Returns: works with [`publication_date`](../../about-the-data/work.md#publication\_date) greater than or equal to the given date.
+
+#### `to_publication_date`
+
+Value: a date, formatted as `yyyy-mm-dd`
+
+Returns: works with [`publication_date`](../../about-the-data/work.md#publication\_date) less than or equal to the given date.
 
 ## `/authors` filters
 
