@@ -202,7 +202,7 @@ Value: a Boolean (`true` or `false`)
 Returns: authors that have or lack an [orcid](../../about-the-data/author.md#orcid), depending on the given value.
 
 * Get the authors that have an ORCID:\
-  [`https://api.openalex.org/authors?filter=has_orcid:true`](https://api.openalex.org/authors?filter=has\_orcid:true)``
+  ``[`https://api.openalex.org/authors?filter=has_orcid:true`](https://api.openalex.org/authors?filter=has\_orcid:true)
 
 ## `/venues` filters
 
@@ -228,6 +228,8 @@ Value: a search string
 
 Returns: venues with a [`display_name`](../../about-the-data/venue.md#display\_name) containing the given string; see [the search filter](search-entity-lists.md#the-search-filter) for details.
 
+* Get venues with names containing "Georgia":
+
 {% hint style="info" %}
 In most cases, you should use the [`search` parameter](search-entity-lists.md#the-search-parameter) instead of this filter because it uses a better search algorithm.
 {% endhint %}
@@ -239,7 +241,7 @@ Value: a Boolean (`true` or `false`)
 Returns: venues that have or lack an [ISSN](../../about-the-data/venue.md#issn), depending on the given value.
 
 * Get venues without ISSNs:\
-  [`https://api.openalex.org/venues?filter=has_issn:false`](https://api.openalex.org/venues?filter=has\_issn:false)``
+  [`https://api.openalex.org/venues?filter=has_issn:false`](https://api.openalex.org/venues?filter=has\_issn:false)
 
 ## `/institutions` filters
 
