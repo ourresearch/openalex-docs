@@ -30,3 +30,11 @@ You can also use search as a [filter](filter-entity-lists.md), allowing you to f
   [https://api.openalex.org/works?filter=title.search:cubist](https://api.openalex.org/works?filter=title.search:cubist)
 
 You can read more about which filters support the `.search` suffix on the [Filter entity lists](filter-entity-lists.md) page.
+
+{% hint style="info" %}
+You might be tempted to use the search filter to power an autocomplete or typeahead. Instead, we recommend you use the [autocomplete endpoint](../autocomplete-endpoint.md), which is much faster.\
+\
+👎 [https://api.openalex.org/institutions?filter=display\_name.search:florida](https://api.openalex.org/institutions?filter=display\_name.search:florida) &#x20;
+
+👍 [https://api.openalex.org/autocomplete/institutions?q=Florida](https://api.openalex.org/autocomplete/institutions?q=Florida)
+{% endhint %}

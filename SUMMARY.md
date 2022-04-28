@@ -8,7 +8,7 @@
     * [Search entity lists](api/get-lists-of-entities/search-entity-lists.md)
     * [Sort entity lists](api/get-lists-of-entities/sort-entity-lists.md)
   * [Get groups of entities](api/get-groups-of-entities.md)
-  * [Autocomplete endpoints](api/autocomplete-endpoints.md)
+  * [Autocomplete endpoint](api/autocomplete-endpoint.md)
   * [API Tutorial](api/api-tutorial.md)
 * [Website](website.md)
 * [Download snapshot](download-snapshot/README.md)

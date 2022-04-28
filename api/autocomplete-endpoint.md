@@ -1,18 +1,27 @@
-# Autocomplete endpoints
+# Autocomplete endpoint
 
-The API endpoints we've described so far work great if you know the Entity IDs you want to work with, or the exact value of a filter that can get you those IDs.
+The autocomplete endpoint lets you add autocomplete or typeahead components to your applications, without the overhead of hosting your own API endpoint.&#x20;
 
-For example, if you want to find the latest works authored by [https://explore.openalex.org/authors/A2907412441](https://explore.openalex.org/authors/A2907412441), that's easy - just call [https://api.openalex.org/works?filter=authorships.author.id:https://openalex.org/A2907412441\&sort=publication\_date:desc](https://api.openalex.org/works?filter=authorships.author.id:https://openalex.org/A2907412441\&sort=publication\_date:desc)
+Each endpoint takes a string, and (very quickly) returns a list of entities that match that string.
 
-Want to find the most-cited institutions in Tanzania? Great! [https://api.openalex.org/institutions?filter=country\_code:TZ\&sort=cited\_by\_count:desc](https://api.openalex.org/institutions?filter=country\_code:TZ\&sort=cited\_by\_count:desc)
+Here's an example of an autocomplete component that lets users quickly select an institution:
 
-But what if you can't remember Tanzania's country code, or your favorite researcher's OpenAlex ID? What if you're building a website on top of the OpenAlex API, and you want a page that lets a user find the latest works from any author they want? There are lots of scenarios like this, where you need a quick way to find the Entity you want with information you do have, like an Author's name.
+![A user looking for information on the flagship of Florida's state university system.](https://i.imgur.com/f8yyWCd.png)
 
-This is where autocomplete endpoints come in - they can take partial search strings and provide the Entities the user is most likely to be looking for. You've seen autocomplete UIs in action before - here's how one might look on a site that uses OpenAlex:
+This is the query behind that result: [`https://api.openalex.org/autocomplete/institutions?q=flori`](https://api.openalex.org/autocomplete/institutions?q=flori)``
 
-![A user looking for information on the flagship of Florida's state university system.](<../.gitbook/assets/Screen Shot 2022-04-15 at 1.46.28 PM.png>)
+## Request format
 
-This is the query behind that result: [https://api.openalex.org/autocomplete?q=flori](https://api.openalex.org/autocomplete?q=flori)
+The format for requests is simple: `/autocomplete/<entity_type>?q=<query>`
+
+* `entity_type`: the name of one of the five OpenAlex [entities](../about-the-data/): `works`, `authors`, `venues`, `institutions`, or `concepts`.
+* `query`: the search string supplied by the user.
+
+## Response format
+
+
+
+
 
 {% hint style="info" %}
 For Entities that support it, you might be tempted to [filter on display\_name.search](get-lists-of-entities/#additional-filters-1). Don't! It's much slower than the autocomplete endpoints we're about to get into, returns a lot of information you don't need, and you have to do a lot of extra work with the results.\
@@ -21,6 +30,12 @@ For Entities that support it, you might be tempted to [filter on display\_name.s
 
 👍 [https://api.openalex.org/autocomplete/institutions?q=Florida](https://api.openalex.org/autocomplete/institutions?q=Florida)
 {% endhint %}
+
+
+
+There are&#x20;
+
+
 
 ## Entity Autocomplete Endpoints
 
