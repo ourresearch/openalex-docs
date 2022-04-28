@@ -228,7 +228,8 @@ Value: a search string
 
 Returns: venues with a [`display_name`](../../about-the-data/venue.md#display\_name) containing the given string; see [the search filter](search-entity-lists.md#the-search-filter) for details.
 
-* Get venues with names containing "Georgia":
+* Get venues with names containing "Neurology":\
+  [`https://api.openalex.org/venues?filter=display_name.search:Neurology`](https://api.openalex.org/venues?filter=display\_name.search:Neurology)
 
 {% hint style="info" %}
 In most cases, you should use the [`search` parameter](search-entity-lists.md#the-search-parameter) instead of this filter because it uses a better search algorithm.
