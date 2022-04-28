@@ -151,3 +151,4 @@ However, this is _much_ nicer if you install an extension to pretty-print the JS
 There's no officially-supported client library for the API, for now. However, here's a short list of third-party libraries (and if you know of others, give us a shout):
 
 * [openalexR](https://github.com/massimoaria/openalexR) (R)
+* [OpenAlexAPI](https://pypi.org/project/openalexapi/) (Python)
