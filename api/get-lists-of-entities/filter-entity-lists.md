@@ -180,19 +180,19 @@ You can filter using these attributes of the `Author` entity object (click each 
 
 ### `/authors` convenience filters
 
-These filters aren't attributes of the [Author entity](../../about-the-data/author.md) object, but they're included to address some important use cases:
+These filters aren't attributes of the [Author entity](../../about-the-data/author.md) object, but they're included to address some common use cases:
 
 #### `display_name.search`
 
 Value: a search string
 
-Returns: Authors whose [`display_name`](../../about-the-data/author.md#display\_name) contains the given string; see [the search filter](search-entity-lists.md#the-search-filter) for details. In most cases, unless you're specifically interested in display names, the [`search` parameter](filter-entity-lists.md#search) is better than using [search as a filter](filter-entity-lists.md#search-as-a-filter).
+Returns: Authors whose [`display_name`](../../about-the-data/author.md#display\_name) contains the given string; see [the search filter](search-entity-lists.md#the-search-filter) for details.
 
 * Get authors named "tupolev":\
   [`https://api.openalex.org/authors?filter=display_name.search:tupolev`](https://api.openalex.org/authors?filter=display\_name.search:tupolev)&#x20;
 
 {% hint style="info" %}
-For most cases, you should use the [`search` parameter](search-entity-lists.md#the-search-parameter) instead of this filter because it uses a better search algorithm.
+In most cases, you should use the [`search` parameter](search-entity-lists.md#the-search-parameter) instead of this filter because it uses a better search algorithm.
 {% endhint %}
 
 #### `has_orcid`
@@ -206,7 +206,9 @@ Returns: authors that have or lack an [orcid](../../about-the-data/author.md#orc
 
 ## `/venues` filters
 
-You can filter using these attributes of the `Venue` object. You can find more documentation about each attribute on the [Venue page](../../about-the-data/venue.md).
+### `/venues` attribute filters
+
+You can filter using these attributes of the `Venue` entity object (click each one to view their documentation on the [`Venue` entity page](../../about-the-data/venue.md)):
 
 * ``[`issn`](../../about-the-data/venue.md#issn)``
 * ``[`publisher`](../../about-the-data/venue.md#publisher) (requires exact match)
@@ -216,16 +218,28 @@ You can filter using these attributes of the `Venue` object. You can find more d
 * ``[`is_oa`](../../about-the-data/venue.md#is\_oa)``
 * ``[`is_in_doaj`](../../about-the-data/venue.md#is\_in\_doaj)``
 
-#### Additional Filters
+### `/venues` convenience filters
 
-These filters aren't attributes of the [Venue entity](../../about-the-data/venue.md) object, but they're included to address some important use cases:
+These filters aren't attributes of the [Venue entity](../../about-the-data/venue.md) object, but they're included to address some common use cases:
 
-* `display_name.search`
-  * Takes a string and returns Venues with [`display_name`](../../about-the-data/venue.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](filter-entity-lists.md#search) is better than using [search as a filter](filter-entity-lists.md#search-as-a-filter).
-* `has_issn`
-  * Takes a boolean (`true` or `false`) and returns a list of Venues that have/lack an [issn](../../about-the-data/venue.md#issn).
-  * Example: \
-    Get a count of all the Venues in OpenAlex that have an issn, and all the ones that don't: [https://api.openalex.org/venues?group\_by=has\_issn](https://api.openalex.org/venues?group\_by=has\_issn)
+#### `display_name.search`
+
+Value: a search string
+
+Returns: venues with a [`display_name`](../../about-the-data/venue.md#display\_name) containing the given string; see [the search filter](search-entity-lists.md#the-search-filter) for details.
+
+{% hint style="info" %}
+In most cases, you should use the [`search` parameter](search-entity-lists.md#the-search-parameter) instead of this filter because it uses a better search algorithm.
+{% endhint %}
+
+#### `has_issn`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: venues that have or lack an [ISSN](../../about-the-data/venue.md#issn), depending on the given value.
+
+* Get venues without ISSNs:\
+  [`https://api.openalex.org/venues?filter=has_issn:false`](https://api.openalex.org/venues?filter=has\_issn:false)``
 
 ## `/institutions` filters
 
