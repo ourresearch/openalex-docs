@@ -166,7 +166,9 @@ Returns: works with [`publication_date`](../../about-the-data/work.md#publicatio
 
 ## `/authors` filters
 
-You can filter using these attributes of the `Authors` object. You can find more documentation about each attribute on the [Author page.](../../about-the-data/author.md)
+### `/authors` attribute filters
+
+You can filter using these attributes of the `Author` entity object (click each one to view their documentation on the [`Author` entity page](../../about-the-data/author.md)):
 
 * ``[`works_count`](../../about-the-data/author.md#works\_count)``
 * ``[`cited_by_count`](../../about-the-data/author.md#cited\_by\_count)``
@@ -176,16 +178,31 @@ You can filter using these attributes of the `Authors` object. You can find more
 * ``[`last_known_institution.type`](../../about-the-data/author.md#last\_known\_institution)``
 * ``[`x_concepts.id`](../../about-the-data/author.md#x\_concepts)``
 
-#### Additional Filters
+### `/authors` convenience filters
 
 These filters aren't attributes of the [Author entity](../../about-the-data/author.md) object, but they're included to address some important use cases:
 
-* `display_name.search`
-  * Takes a string and returns Authors with [`display_name`](../../about-the-data/author.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](filter-entity-lists.md#search) is better than using [search as a filter](filter-entity-lists.md#search-as-a-filter).
-* `has_orcid`
-  * Takes a boolean (`true` or `false`) and returns a list of Authors that have/lack an [orcid](../../about-the-data/author.md#orcid).
-  * Example: \
-    Get a count of all the authors in OpenAlex that have an orcid, and all the ones that don't: [https://api.openalex.org/authors?group\_by=has\_orcid](https://api.openalex.org/authors?group\_by=has\_orcid)
+#### `display_name.search`
+
+Value: a search string
+
+Returns: Authors whose [`display_name`](../../about-the-data/author.md#display\_name) contains the given string; see [the search filter](search-entity-lists.md#the-search-filter) for details. In most cases, unless you're specifically interested in display names, the [`search` parameter](filter-entity-lists.md#search) is better than using [search as a filter](filter-entity-lists.md#search-as-a-filter).
+
+* Get authors named "tupolev":\
+  [`https://api.openalex.org/authors?filter=display_name.search:tupolev`](https://api.openalex.org/authors?filter=display\_name.search:tupolev)&#x20;
+
+{% hint style="info" %}
+For most cases, you should use the [`search` parameter](search-entity-lists.md#the-search-parameter) instead of this filter because it uses a better search algorithm.
+{% endhint %}
+
+#### `has_orcid`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: authors that have or lack an [orcid](../../about-the-data/author.md#orcid), depending on the given value.
+
+* Get the authors that have an ORCID:\
+  [`https://api.openalex.org/authors?filter=has_orcid:true`](https://api.openalex.org/authors?filter=has\_orcid:true)``
 
 ## `/venues` filters
 
