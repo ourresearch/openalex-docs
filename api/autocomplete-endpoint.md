@@ -19,85 +19,51 @@ The format for requests is simple: `/autocomplete/<entity_type>?q=<query>`
 
 ## Response format
 
+Each request returns a response object with two properties:
 
-
-
-
-{% hint style="info" %}
-For Entities that support it, you might be tempted to [filter on display\_name.search](get-lists-of-entities/#additional-filters-1). Don't! It's much slower than the autocomplete endpoints we're about to get into, returns a lot of information you don't need, and you have to do a lot of extra work with the results.\
-\
-👎 [https://api.openalex.org/institutions?filter=display\_name.search:florida](https://api.openalex.org/institutions?filter=display\_name.search:florida) &#x20;
-
-👍 [https://api.openalex.org/autocomplete/institutions?q=Florida](https://api.openalex.org/autocomplete/institutions?q=Florida)
-{% endhint %}
-
-
-
-There are&#x20;
-
-
-
-## Entity Autocomplete Endpoints
-
-Entity autocomplete queries all start with `/autocomplete` and have a single required parameter `q`, the string to search for. The most basic autocomplete request includes only those parts: [https://api.openalex.org/autocomplete?q=frogs](https://api.openalex.org/autocomplete?q=frogs)
-
-Each query returns the 10 most relevant results, in descending order of `cited_by_count`.
-
-#### Limiting results to a single Entity type
-
-You can limit autocomplete results to a single Entity type by passing that type in the `entity_type` argument, for example: [https://api.openalex.org/autocomplete?q=Birds\&entity\_type=venue](https://api.openalex.org/autocomplete?q=Birds\&entity\_type=venue)
-
-Equivalently, you can use an entity-specific route: [https://api.openalex.org/autocomplete/venues?q=Birds](https://api.openalex.org/autocomplete/venues?q=Birds)
-
-{% hint style="info" %}
-The entity-specific routes use the (plural) names you would use when [listing Entities](get-lists-of-entities/). The entity\_type argument uses the (singular) name of the entity type. So use
-
-`/autocomplete/works` but `/autocomplete?entity_type=work`
-{% endhint %}
-
-The result object will include the familiar meta object:
+* `meta`: an object with information about the request, including timing and results count
+* `results`: a list of up to ten results for the query, sorted by citation count. Each result represents an entity that matched against the query.
 
 ```json
-"meta": {
-    "count": 160129,
-    "db_response_time_ms": 29,
-    "page": 1,
-    "per_page": 10
- }
-```
-
-along with up to 10 matches:
-
-```json
-"results": [
-    {
-      "id": "https://openalex.org/I33213144",
-      "display_name": "University of Florida",
-      "hint": "Gainesville, USA",
-      "cited_by_count": 17190001,
-      "entity_type": "institution",
-      "external_id": "https://ror.org/02y3ad647"
+{
+    meta: {
+        count: 183,
+        db_response_time_ms: 5,
+        page: 1,
+        per_page: 10
     },
-    // plus others
-]
+    results: [
+        {
+            id: "https://openalex.org/I33213144",
+            display_name: "University of Florida",
+            hint: "Gainesville, USA",
+            cited_by_count: 17190001,
+            entity_type: "institution",
+            external_id: "https://ror.org/02y3ad647"
+        },
+        // more results...
+    ]
+}
 ```
 
-The fields returned in each result are:
+Each object in the `results` list includes these properties:
 
-* `id` (string): The [OpenAlex ID](../about-the-data/#the-openalex-id) for this Entity.
-* `external_id` (string): The gold-standard external ID for this entity. May be null for some entities. Differs by entity type:
-  * Work: [DOI](../about-the-data/work.md#title)
-  * Author: [ORCID](../about-the-data/author.md#orcid)
-  * Venue: [ISSN-L](../about-the-data/venue.md#issn\_l)
-  * Institution: [ROR](../about-the-data/institution.md#ror)
-  * Concept: [Wikidata ID](../about-the-data/concept.md#wikidata)
+* `id` (string): The [OpenAlex ID](../about-the-data/#the-openalex-id) for this result entity.
+* `external_id` (string): The [Canonical External ID](../about-the-data/#canonical-external-ids) for this result entity.
 * `display_name` (string): The entity's `display_name` property.
-* `entity_type` (string): The entity's type (_work_, _author_, _venue_, _institution_, or _concept_).
-* `cited_by_count` (integer): The entity's `cited_by_count` property.
+* `entity_type` (string): The entity's type: `work`, `author`, `venue`, `institution`, or `concept`.
+* `cited_by_count` (integer): The entity's `cited_by_count` property. For works this is simply the number of incoming citations. For other entities, it's the _sum_ of incoming citations for all the works linke to that entity.&#x20;
 * `hint`: Some extra information that can help identify the right item. Differs by entity type.
-  * `Work`: The work's authors' display names, concatenated. e.g. "R. Alexander Pyron, John J. Wiens"
-  * `Author`:  The title and year of the Author's most recent work, e.g. "Touch screen car dashboards as serious danger for causing traffic accidents (2019)"
-  * `Venue`: The publisher, e.g. "Oxford University Press"
-  * `Institution`: The institution's location, e.g. "Gainesville, USA"
-  * `Concept`: The Concept's [description](../about-the-data/concept.md#description), e.g. "the study of relation between plant species and genera"
+
+### Hints
+
+Result objects have a `hint` property. You can show this to users to help them identify which item they're selecting. This is particularly helpful when the `display_name` values of different results are the same, as often happens when autocompleting an author entity--a user who types in `John Smi` is going to see a lot of identical-looking results, even though each one is a different person.
+
+The content of the `hint` property varies depending on what kind of entity you're looking up:
+
+* `Work`: The work's authors' display names, concatenated. e.g. "R. Alexander Pyron, John J. Wiens"
+* `Author`:  The title and year of the Author's most recent work, e.g. "Touch screen car dashboards as serious danger for causing traffic accidents (2019)"
+* `Venue`: The publisher, e.g. "Oxford University Press"
+* `Institution`: The institution's location, e.g. "Gainesville, USA"
+* `Concept`: The Concept's [description](../about-the-data/concept.md#description), e.g. "the study of relation between plant species and genera"
 
