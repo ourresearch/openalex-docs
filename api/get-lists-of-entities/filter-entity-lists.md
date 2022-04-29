@@ -25,14 +25,14 @@ Some attributes have special filters that act as syntactic sugar around commonly
 * Get all works published between 2022-01-01 and 2022-01-26 (inclusive):\
   [`https://api.openalex.org/works?filter=from_publication_date:2022-01-01,to_publication_date:2022-01-26`](https://api.openalex.org/works?filter=from\_publication\_date:2022-01-01,to\_publication\_date:2022-01-26)
 
-### Negation
+### Negation (NOT)
 
 You can negate any filter, numerical or otherwise, by prepending the exclamation mark symbol (`!`) to the filter value. Example:
 
 * Get all institutions _except_ for ones located in the US:\
   [`https://api.openalex.org/institutions?filter=country_code:!us`](https://api.openalex.org/institutions?filter=country\_code:!us)``
 
-### Intersection
+### Intersection (AND)
 
 By default, the returned result set includes only records that satisfy _all_ the supplied filters. In other words, filters are combined as an AND query. Example:
 
@@ -41,7 +41,7 @@ By default, the returned result set includes only records that satisfy _all_ the
 * Get all the works that have an author from France _and_ an author from the UK:\
   [`https://api.openalex.org/works?filter=institutions.country_code:fr,institutions.country_code:gb`](https://api.openalex.org/works?filter=institutions.country\_code:fr,institutions.country\_code:gb)``
 
-### Addition
+### Addition (OR)
 
 Use the pipe symbol (`|`) to input lists of values such that _any_ of the values can be satisfied--in other words, when you separate filter values with a pipe, they'll be combined as an `OR` query. Example:
 
