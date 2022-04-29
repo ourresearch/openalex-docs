@@ -71,10 +71,6 @@ Value: a string; the [OpenAlex ID](../about-the-data/#the-openalex-id) or raw va
 
 Value: a string; the `display_name` or raw value of the `group_by` parameter for members of this group. See details on [`key` and `key_display_name`](get-groups-of-entities.md#key-and-key\_display\_name).
 
-#### `key_display_name`
-
-Value: a string; the value of the `group_by` parameter for this group
-
 #### `count`
 
 Value: an integer; the number of entities in the group.&#x20;
