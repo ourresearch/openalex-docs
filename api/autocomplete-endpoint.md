@@ -10,6 +10,8 @@ Here's an example of an autocomplete component that lets users quickly select an
 
 This is the query behind that result: [`https://api.openalex.org/autocomplete/institutions?q=flori`](https://api.openalex.org/autocomplete/institutions?q=flori)``
 
+The autocomplete endpoint is very fast; queries generally return in around 200ms. If you'd like to see it in action, we're using a slightly-modified version of this endpoint in the OpenAlex website here: [https://explore.openalex.org/](https://explore.openalex.org)
+
 ## Request format
 
 The format for requests is simple: `/autocomplete/<entity_type>?q=<query>`
@@ -55,7 +57,7 @@ Each object in the `results` list includes these properties:
 * `cited_by_count` (integer): The entity's `cited_by_count` property. For works this is simply the number of incoming citations. For other entities, it's the _sum_ of incoming citations for all the works linke to that entity.&#x20;
 * `hint`: Some extra information that can help identify the right item. Differs by entity type.
 
-### Hints
+### The `hint` property
 
 Result objects have a `hint` property. You can show this to users to help them identify which item they're selecting. This is particularly helpful when the `display_name` values of different results are the same, as often happens when autocompleting an author entity--a user who types in `John Smi` is going to see a lot of identical-looking results, even though each one is a different person.
 
