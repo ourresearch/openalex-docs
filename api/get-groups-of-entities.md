@@ -84,9 +84,12 @@ Value: a string; the value of the `group_by` parameter for this group
 
 Value: an integer; the number of entities in the group.&#x20;
 
-### Grouping by `Entities`
+### `key` and `key_display_name`
 
+If the value being grouped by is an [OpenAlex `Entity`](../about-the-data/), the [`key`](get-groups-of-entities.md#key) and `key_display_name` properties will be that `Entity`'s [`id`](../about-the-data/#the-openalex-id) and `display_name`, respectively.
 
+* Count Works by Institution:\
+  [`https://api.openalex.org/works?group_by=authorships.institutions.id`](https://api.openalex.org/works?group\_by=authorships.institutions.id)
 
 ### Groupable attributes
 
