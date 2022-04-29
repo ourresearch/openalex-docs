@@ -81,7 +81,7 @@ If the value being grouped by is an [OpenAlex `Entity`](../about-the-data/), the
 
 * Group `Works` by `Institution`:\
   [`https://api.openalex.org/works?group_by=authorships.institutions.id`](https://api.openalex.org/works?group\_by=authorships.institutions.id)
-* For one group, `key` is "[https://openalex.org/I136199984](https://openalex.org/I136199984)" and key\_display\_name is "Harvard University".
+* For one group, `key` is "[https://openalex.org/I136199984](https://openalex.org/I136199984)" and `key_display_name` is "Harvard University".
 
 Otherwise, `key` is the same as `key_display_name`; both are the raw value of the `group_by` parameter for this group.
 
