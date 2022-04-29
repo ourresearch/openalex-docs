@@ -180,7 +180,7 @@ You can filter using these attributes of the `Author` entity object (click each 
 
 ### `/authors` convenience filters
 
-These filters aren't attributes of the `Author` entity object, but they're included to address some common use cases:
+These filters aren't attributes of the [`Author` entity](../../about-the-data/author.md) object, but they're included to address some common use cases:
 
 #### `display_name.search`
 
@@ -295,11 +295,26 @@ You can filter using these attributes of the `Concept` entity object ((click eac
 
 ### `/concepts` convenience filters
 
-These filters aren't attributes of the [`Concept` entity ](../../about-the-data/concept.md)object, but they're included to address some important use cases:
+These filters aren't attributes of the [`Concept` entity ](../../about-the-data/concept.md)object, but they're included to address some common use cases:
 
-* `display_name.search`
-  * Takes a string and returns Concepts with [`display_name`](../../about-the-data/concept.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](filter-entity-lists.md#search) is better than using [search as a filter](filter-entity-lists.md#search-as-a-filter).
-* `has_wikidata`
-  * Takes a boolean (`true` or `false`) and returns a list of Concepts that have/lack a [Wikidata ID](../../about-the-data/concept.md#wikidata). For now, all concepts in OpenAlex _do_ have Wikidata IDs.
-  * Example: \
-    Get a count of all the Concepts in OpenAlex that have Wikidata ID, and all the ones that don't: [https://api.openalex.org/concepts?group\_by=has\_wikidata](https://api.openalex.org/concepts?group\_by=has\_wikidata)
+#### `display_name.search`
+
+Value: a search string
+
+Returns: concepts with a [display\_name](../../about-the-data/concept.md#display\_name) containing the given string; see [the search filter](search-entity-lists.md#the-search-filter) for details.
+
+* Get concepts with display names containing "electrodynamics":\
+  [`https://api.openalex.org/concepts?filter=display_name.search:electrodynamics`](https://api.openalex.org/concepts?filter=display\_name.search:electrodynamics)
+
+{% hint style="info" %}
+In most cases, you should use the [search parameter ](search-entity-lists.md#the-search-parameter)instead of this filter because it uses a better search algorithm.
+{% endhint %}
+
+#### `has_wikidata`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: concepts that have or lack a [Wikidata ID](../../about-the-data/concept.md#wikidata), depending on the given value. For now, all concepts in OpenAlex _do_ have Wikidata IDs.
+
+* Get concepts without Wikidata IDs:\
+  [`https://api.openalex.org/concepts?filter=has_wikidata:false`](https://api.openalex.org/concepts?filter=has\_wikidata:false)
