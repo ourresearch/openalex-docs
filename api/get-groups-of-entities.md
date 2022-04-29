@@ -59,7 +59,7 @@ So from this we can see that the majority of works (66,862,508 of them) are `clo
 
 You can group by most of the same properties that you can [filter](get-lists-of-entities/#filter) by, and you can combine grouping with filtering.&#x20;
 
-### Group properties
+## Group properties
 
 Each group object in the `group_by` list contains three properties:
 
@@ -75,7 +75,7 @@ Value: a string; the `display_name` or raw value of the `group_by` parameter for
 
 Value: an integer; the number of entities in the group.&#x20;
 
-### `key` and `key_display_name`
+## `key` and `key_display_name`
 
 If the value being grouped by is an [OpenAlex `Entity`](../about-the-data/), the [`key`](get-groups-of-entities.md#key) and [`key_display_name`](get-groups-of-entities.md#key\_display\_name) properties will be that `Entity`'s [`id`](../about-the-data/#the-openalex-id) and `display_name`, respectively.
 
@@ -85,18 +85,18 @@ If the value being grouped by is an [OpenAlex `Entity`](../about-the-data/), the
 
 Otherwise, `key` is the same as `key_display_name`; both are the raw value of the `group_by` parameter for this group.
 
-* Count `Concepts` by [`level`](../about-the-data/concept.md#level):\
+* Group `Concepts` by [`level`](../about-the-data/concept.md#level):\
   [`https://api.openalex.org/concepts?group_by=level`](https://api.openalex.org/concepts?group\_by=level)
 * For one group, both `key` and `key_display_name` are "3".
 
-### Groupable attributes
+## Groupable attributes
 
 Each Entity type has a different set of attributes you can group by. These are mostly the same as the [filterable](get-lists-of-entities/#filter) attributes - excluding two main types of filters:
 
 * Dates like _to\_publication\_date_ that only make sense for filtering because there isn't a single value that belongs to each entity.
 * Wide-ranging numeric attributes like _cited\_by\_count_ with high cardinality. Grouping on these values produces too many groups to be useful.
 
-#### `/works` group\_by attributes
+### `/works` group\_by attributes
 
 * ``[`alternate_host_venues.id`](../about-the-data/work.md#alternate\_host\_venues)``
 * ``[`alternate_host_venues.license`](../about-the-data/work.md#alternate\_host\_venues)``
@@ -120,7 +120,7 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`is_retracted`](../about-the-data/work.md#is\_retracted)``
 * ``[`publication_year`](../about-the-data/work.md#publication\_year)``
 
-#### `/authors` group\_by attributes
+### `/authors` group\_by attributes
 
 * ``[`has_orcid`](get-lists-of-entities/#additional-filters-1)``
 * ``[`last_known_institution.country_code`](../about-the-data/author.md#last\_known\_institution)``
@@ -128,7 +128,7 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`last_known_institution.ror`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.type`](../about-the-data/author.md#last\_known\_institution)
 
-#### `/venues` group\_by attributes
+### `/venues` group\_by attributes
 
 * ``[`has_issn`](get-lists-of-entities/#additional-filters-2)``
 * ``[`is_in_doaj`](../about-the-data/venue.md#is\_in\_doaj)``
@@ -136,40 +136,52 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`issn`](../about-the-data/venue.md#issn)``
 * ``[`publisher`](../about-the-data/venue.md#publisher)``
 
-#### `/institutions` group\_by attributes
+### `/institutions` group\_by attributes
 
 * [`country_code`](../about-the-data/institution.md#type)``
 * [`has_ror`](get-lists-of-entities/#additional-filters-3)``
 * [`type`](../about-the-data/institution.md#type)``
 
-#### `/concepts` group\_by __ attributes
+### `/concepts` group\_by __ attributes
 
 * ``[`ancestors.id`](../about-the-data/concept.md#ancestors)``
 * ``[`level`](../about-the-data/concept.md#level)``
 * ``[`has_wikidata`](get-lists-of-entities/#additional-filters-4)``
 
-### Sorting groups
+## Sorting groups
 
 You can sort grouped by results using `count` or `key`. The default is `count:desc`.
 
 * Sort group\_by results by key, ascending\
-  [https://api.openalex.org/works?group\_by=oa\_status\&sort=key:asc](https://api.openalex.org/works?group\_by=oa\_status\&sort=key:asc)
+  [`https://api.openalex.org/works?group_by=oa_status&sort=key:asc`](https://api.openalex.org/works?group\_by=oa\_status\&sort=key:asc)
 
-### Pagination
+## Pagination
 
 You cannot page through grouped results using `page` or `per-page`. You will always receive one page of results and per-page is fixed at 200.
 
 This means 200 is the maximum number of groups that can be returned - [https://api.openalex.org/works?group\_by=host\_venue.publisher](https://api.openalex.org/works?group\_by=host\_venue.publisher) will only provide work counts for the top 200 publishers.
 
-### Combining grouping with filtering
+## Combining grouping with filtering
 
-The _group\_by_ and _filter_ parameters can be used at the same time. If you use both parameters, only the Entities matched by _filter_ will be grouped and counted. For example:
+The `group_by` and `filter` parameters can be used at the same time. If you use both parameters, only the `Entities` matched by `filter` will be grouped and counted.
 
-[https://api.openalex.org/works?group\_by=is\_oa](https://api.openalex.org/works?group\_by=is\_oa) gives you the overall count of open and closed Works in OpenAlex. (About 68% are OA at the moment).
+*   Group [`Works`](../about-the-data/work.md) by [`is_oa`](../about-the-data/work.md#is\_oa):
 
-Combining this with the filter _type:journal-article_ gives you the same count, but for journal articles only: [https://api.openalex.org/works?group\_by=is\_oa\&filter=type:journal-article](https://api.openalex.org/works?group\_by=is\_oa\&filter=type:journal-article) (about 51% OA).
+    ``[`https://api.openalex.org/works?group_by=is_oa`](https://api.openalex.org/works?group\_by=is\_oa)&#x20;
 
-You can use multiple filters, just as if you weren't grouping: [https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647,type:journal-article\&group\_by=is\_oa](https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647,type:journal-article\&group\_by=is\_oa) gives you open/closed counts for journal articles with at least one author affiliated with the [University of Florida](https://ror.org/02y3ad647).
+This gives you the overall count of open and closed Works in OpenAlex. About 68% are OA at the moment.
+
+Combining this with the filter _type:journal-article_ gives you the same count, but for journal articles only.
+
+* Group [`Works`](../about-the-data/work.md) with [`type`](../about-the-data/work.md#type) = "journal-article" by [`is_oa`](../about-the-data/work.md#is\_oa):\
+  [`https://api.openalex.org/works?group_by=is_oa&filter=type:journal-article`](https://api.openalex.org/works?group\_by=is\_oa\&filter=type:journal-article)
+
+Journal articles are about 51% OA.
+
+You can filter using all the available [logical expressions](get-lists-of-entities/filter-entity-lists.md#logical-expressions), just as if you weren't grouping.
+
+* Group journal articles with at least one author affiliated with the [University of Florida](https://ror.org/02y3ad647) by `is_oa`:\
+  [`https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647,type:journal-article&group_by=is_oa`](https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647,type:journal-article\&group\_by=is\_oa)
 
 
 
