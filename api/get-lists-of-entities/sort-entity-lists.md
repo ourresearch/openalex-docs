@@ -18,6 +18,6 @@ By default, sort direction is ascending. You can reverse this by appending `:des
 You can sort by relevance\_score when searching:
 
 * Sort by year, then by relevance\_score when searching for "bioplastics":\
-  ``[`https://api.openalex.org/works?filter=display_name.search:bioplastics&sort=publication_year:desc,relevance_score:desc`](https://api.openalex.org/works?filter=display\_name.search:bioplastics\&sort=publication\_year:desc,relevance\_score:desc)
+  [`https://api.openalex.org/works?filter=display_name.search:bioplastics&sort=publication_year:desc,relevance_score:desc`](https://api.openalex.org/works?filter=display\_name.search:bioplastics\&sort=publication\_year:desc,relevance\_score:desc)
 
 An error is thrown if attempting to sort by `relevance_score` without a search query.
