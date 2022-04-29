@@ -6,13 +6,13 @@ description: Query the OpenAlex dataset using the magic of The Internet
 
 The API is the primary way to get OpenAlex data. It's free, requires no authentication, and has no rate limits; it's also much  easier than [downloading and using the snapshot](../download-snapshot/). So for most use cases, this is what you're looking for.&#x20;
 
-The API is read-only, and support only [GET requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET).&#x20;
+The API is read-only, and supports only [GET requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET).&#x20;
 
 ## Entity endpoints
 
 These are the main endpoints for the API. There are five entity endpoints, one for each entity type:
 
-* `/works`&#x20;
+* `/works`
 * `/authors`
 * `/venues`
 * `/institutions`
@@ -25,11 +25,11 @@ Each of these can give you either a _single_ entity, or a _list_ of entities. In
 To get a single entity, just feed an ID to the relevant endpoint: `/<endpoint_name>/<id>`. Examples:
 
 * Get the work with the OpenAlex ID `https://openalex.org/W2741809807`:\
-  [https://api.openalex.org/works/W2741809807](https://api.openalex.org/works/W2741809807)
+  [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
 * Get the venue (journal) with the ISSN `2167-8359`:\
-  [https://api.openalex.org/venues/issn:2167-8359](https://api.openalex.org/venues/issn:2167-8359)
+  [`https://api.openalex.org/venues/issn:2167-8359`](https://api.openalex.org/venues/issn:2167-8359)
 
-To learn more, see [Get Single Entities](get-single-entities.md)
+To learn more, see [Get Single Entities](get-single-entities.md).
 
 ### Get lists of entities
 
