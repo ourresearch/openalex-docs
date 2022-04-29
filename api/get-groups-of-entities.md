@@ -85,7 +85,7 @@ If the value being grouped by is an [OpenAlex `Entity`](../about-the-data/), the
 
 Otherwise, `key` is the same as `key_display_name`; both are the raw value of the `group_by` parameter for this group.
 
-* Count `Concepts` by [level](../about-the-data/concept.md#level):\
+* Count `Concepts` by [`level`](../about-the-data/concept.md#level):\
   [`https://api.openalex.org/concepts?group_by=level`](https://api.openalex.org/concepts?group\_by=level)
 * For one group, both `key` and `key_display_name` are "3".
 
