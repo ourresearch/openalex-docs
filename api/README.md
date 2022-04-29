@@ -51,7 +51,7 @@ To aggregate a list of entities into groups, add the group\_by parameter to a li
 * Get counts of works, by institution:\
   [`https://api.openalex.org/works?group_by=institutions.id`](https://api.openalex.org/works?group\_by=institutions.id)``
 * Get counts of works that are Open Access, by country: \
-  [https://api.openalex.org/works?filter=is\_oa:true\&group\_by=institutions.country\_code](https://api.openalex.org/works?filter=is\_oa:true\&group\_by=institutions.country\_code)
+  [`https://api.openalex.org/works?filter=is_oa:true&group_by=institutions.country_code`](https://api.openalex.org/works?filter=is\_oa:true\&group\_by=institutions.country\_code)
 
 To learn more about grouping, see [Get groups of entities](get-groups-of-entities.md).
 
@@ -59,7 +59,7 @@ To learn more about grouping, see [Get groups of entities](get-groups-of-entitie
 
 The OpenAlex API doesn't require authentication. However, it is helpful for us to know who's behind each API call, for two reasons:
 
-* It allows us to get in touch with the user if something's gone wrong--for instance, their script has run amok and we've needed to start blocking or throttling a their usage.
+* It allows us to get in touch with the user if something's gone wrong--for instance, their script has run amok and we've needed to start blocking or throttling their usage.
 * It lets us report back to our funders, which helps us keep the lights on.
 
 Like Crossref (whose approach we are shamelessly stealing), we prefer carrots to sticks for this. So, depending on your preferences, you'll be in one of two API pools:
@@ -88,20 +88,20 @@ The API doesn't have rate limits. However, if you need more than 100,000 calls p
 Use the `page` query parameter to control which page of results you want (eg `page=1`, `page=2`, etc). By default there are 25 results per page; you can use the `per-page` parameter to change that to any number between 1 and 200.
 
 * Get the 2nd page of a list:\
-  [https://api.openalex.org/works?page=2](https://api.openalex.org/works?page=2)
+  [`https://api.openalex.org/works?page=2`](https://api.openalex.org/works?page=2)
 * Get 200 results on the second page:\
-  [https://api.openalex.org/works?page=2\&per-page=200](https://api.openalex.org/works?page=2\&per-page=200)
+  [`https://api.openalex.org/works?page=2&per-page=200`](https://api.openalex.org/works?page=2\&per-page=200)
 
 Basic paging only works for to read the first 10,000 results of any list. If you want to see more than 10,000 results, you'll need to use [cursor paging](./#cursor-paging).
 
 ### Cursor paging
 
-Cursor paging is a bit more complicated than [basic paging](./#basic-paging-up-to-10-000-results), but it allows you to access as many records as you like.&#x20;
+Cursor paging is a bit more complicated than [basic paging](./#basic-paging), but it allows you to access as many records as you like.&#x20;
 
 To use cursor paging, you request a cursor by adding the `cursor=*` parameter-value pair to your query.
 
 * Get a cursor in order to start cursor pagination:\
-  [https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*)
+  [`https://api.openalex.org/works?filter=publication_year:2020&per-page=100&cursor=*`](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=\*)
 
 The response to your query will include a `next_cursor` value in the response's `meta` object. Here's what it looks like:&#x20;
 
@@ -125,7 +125,7 @@ To retrieve the next page of results, copy the `meta.next_cursor` value into the
 * Get the next page of results using a cursor value: \
   [https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwLCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzI0ODg0OTk3NjQnXSI=](https://api.openalex.org/works?filter=publication\_year:2020\&per-page=100\&cursor=IlsxNjA5MzcyODAwMDAwLCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzI0ODg0OTk3NjQnXSI=)
 
-This second page of results will have a new value for `meta.next_cursor`. You'll use this new value the same way you did the first, and it'll give you the second page of results. To get _all_ the results, keep repeating this process until `meta.next_cursor` is null and the results set is empty.
+This second page of results will have a new value for `meta.next_cursor`. You'll use this new value the same way you did the first, and it'll give you the second page of results. To get _all_ the results, keep repeating this process until `meta.next_cursor` is null and the `results` set is empty.
 
 {% hint style="danger" %}
 **Don't use cursor paging to download the whole dataset.**
