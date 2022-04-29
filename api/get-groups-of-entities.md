@@ -57,7 +57,7 @@ This returns a `meta` object with details about the query, an empty `results` ob
 
 So from this we can see that the majority of works (66,862,508 of them) are `closed`, with another 10,499,470 `bronze`, and so forth. &#x20;
 
-You can group by most of the same properties that you can filter by, and you can combine grouping with filtering.&#x20;
+You can group by most of the same properties that you can [filter](get-lists-of-entities/filter-entity-lists.md) by, and you can combine grouping with filtering.&#x20;
 
 ## Group properties
 
