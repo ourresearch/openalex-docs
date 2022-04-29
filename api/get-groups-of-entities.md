@@ -65,20 +65,15 @@ Each group object in the `group_by` list contains three properties:
 
 #### `key`
 
-Value: a string; the [OpenAlex ID](../about-the-data/#the-openalex-id) or raw value of the `group_by` parameter for members of this group.
+Value: a string; the [OpenAlex ID](../about-the-data/#the-openalex-id) or raw value of the `group_by` parameter for members of this group. See details on [`key` and `key_display_name`](get-groups-of-entities.md#key-and-key\_display\_name).
 
 #### `key_display_name`
 
-Value: a string; the `display_name` or raw value of the `group_by` parameter for members of this group.
-
-* If the property being grouped by is an OpenAlex [Entity](../about-the-data/), `key` will be the entity's [OpenAlex ID](../about-the-data/#the-openalex-id). For example, if you [group Works by Institution](https://api.openalex.org/works?group\_by=authorships.institutions.id), one group's `key` might be [https://openalex.org/I136199984](https://openalex.org/I136199984)
-* Otherwise, `key` is just the value, and is the same as `key_display_name`. For example, if you [group Concepts by level](https://api.openalex.org/concepts?group\_by=level), one group might have both the both `key` and `key_display_name` "2".
+Value: a string; the `display_name` or raw value of the `group_by` parameter for members of this group. See details on [`key` and `key_display_name`](get-groups-of-entities.md#key-and-key\_display\_name).
 
 #### `key_display_name`
 
 Value: a string; the value of the `group_by` parameter for this group
-
-* If the group\_by parameter is an Entity, the Entity's display name. Otherwise, the value being grouped by, and the same as `key`.
 
 #### `count`
 
@@ -88,8 +83,15 @@ Value: an integer; the number of entities in the group.&#x20;
 
 If the value being grouped by is an [OpenAlex `Entity`](../about-the-data/), the [`key`](get-groups-of-entities.md#key) and `key_display_name` properties will be that `Entity`'s [`id`](../about-the-data/#the-openalex-id) and `display_name`, respectively.
 
-* Count Works by Institution:\
+* Group `Works` by `Institution`:\
   [`https://api.openalex.org/works?group_by=authorships.institutions.id`](https://api.openalex.org/works?group\_by=authorships.institutions.id)
+* For one group, `key` is "[https://openalex.org/I136199984](https://openalex.org/I136199984)" and key\_display\_name is "Harvard University".
+
+Otherwise, `key` is the same as `key_display_name`; both are the raw value of the `group_by` parameter for this group.
+
+* Count `Concepts` by [level](../about-the-data/concept.md#level):\
+  [`https://api.openalex.org/concepts?group_by=level`](https://api.openalex.org/concepts?group\_by=level)
+* For one group, both `key` and `key_display_name` are "3".
 
 ### Groupable attributes
 
