@@ -180,7 +180,7 @@ You can filter using these attributes of the `Author` entity object (click each 
 
 ### `/authors` convenience filters
 
-These filters aren't attributes of the [Author entity](../../about-the-data/author.md) object, but they're included to address some common use cases:
+These filters aren't attributes of the `Author` entity object, but they're included to address some common use cases:
 
 #### `display_name.search`
 
@@ -220,7 +220,7 @@ You can filter using these attributes of the `Venue` entity object (click each o
 
 ### `/venues` convenience filters
 
-These filters aren't attributes of the [Venue entity](../../about-the-data/venue.md) object, but they're included to address some common use cases:
+These filters aren't attributes of the [`Venue` entity](../../about-the-data/venue.md) object, but they're included to address some common use cases:
 
 #### `display_name.search`
 
@@ -246,7 +246,9 @@ Returns: venues that have or lack an [ISSN](../../about-the-data/venue.md#issn),
 
 ## `/institutions` filters
 
-You can filter using these attributes of the `Institution` object. You can find more documentation about each attribute on the [Institution page](../../about-the-data/institution.md).
+### `/institutions` attribute filters
+
+You can filter using these attributes of the `Institution` entity object (click each one to view their documentation on the [`Institution` entity page](../../about-the-data/institution.md)):
 
 * ``[`country_code`](../../about-the-data/institution.md#country\_code)``
 * ``[`type`](../../about-the-data/institution.md#type)``
@@ -254,29 +256,46 @@ You can filter using these attributes of the `Institution` object. You can find 
 * ``[`cited_by_count`](../../about-the-data/institution.md#cited\_by\_count)``
 * ``[`x_concepts.id`](../../about-the-data/institution.md#x\_concepts)``
 
-#### Additional Filters
+### `/institutions` convenience filters
 
-These filters aren't attributes of the [Institution entity](../../about-the-data/institution.md) object, but they're included to address some important use cases:
+These filters aren't attributes of the [`Institution` entity](../../about-the-data/institution.md) object, but they're included to address some common use cases:
 
-* `display_name.search`
-  * Takes a string and returns Institutions with [`display_name`](../../about-the-data/institution.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](filter-entity-lists.md#search) is better than using [search as a filter](filter-entity-lists.md#search-as-a-filter).
-* `has_ror`
-  * Takes a boolean (`true` or `false`) and returns a list of Venues that have/lack a [ror](../../about-the-data/institution.md#ror).
-  * Example: \
-    Get a count of all the Institutions in OpenAlex that have a ror, and all the ones that don't: [https://api.openalex.org/institutions?group\_by=has\_ror](https://api.openalex.org/institutions?group\_by=has\_ror)
+#### `display_name.search`
+
+Value: a search string
+
+Returns: institutions with a [display\_name](../../about-the-data/institution.md#display\_name) containing the given string; see [the search filter](search-entity-lists.md#the-search-filter) for details.
+
+* Get institutions with names containing "technology":\
+  [`https://api.openalex.org/institutions?filter=display_name.search:technology`](https://api.openalex.org/institutions?filter=display\_name.search:technology)
+
+{% hint style="info" %}
+In most cases, you should use the [search parameter](search-entity-lists.md#the-search-parameter) instead of this filter because it uses a better search algorithm.
+{% endhint %}
+
+#### `has_ror`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: institutions that have or lack a [ROR ID](../../about-the-data/institution.md#ror), depending on the given value.
+
+* Get institutions without ROR IDs:\
+  [`https://api.openalex.org/institutions?filter=has_ror:false`](https://api.openalex.org/institutions?filter=has\_ror:false)
 
 ## `/concepts` filters
 
-You can filter using these attributes of the `Concept` object. You can find more documentation about each attribute on the [Concept page.](../../about-the-data/concept.md)
+### `/concepts` attribute filters
+
+You can filter using these attributes of the `Concept` entity object ((click each one to view their documentation on the [`Concept` entity page](../../about-the-data/concept.md)):
 
 * ``[`level`](../../about-the-data/concept.md#level)``
 * ``[`works_count`](../../about-the-data/concept.md#works\_count)``
 * ``[`cited_by_count`](../../about-the-data/concept.md#cited\_by\_count)``
 * ``[`ancestors.id`](../../about-the-data/concept.md#ancestors)``
 
-#### Additional Filters
+### `/concepts` convenience filters
 
-These filters aren't attributes of the [Concept entity](../../about-the-data/concept.md) object, but they're included to address some important use cases:
+These filters aren't attributes of the [`Concept` entity ](../../about-the-data/concept.md)object, but they're included to address some important use cases:
 
 * `display_name.search`
   * Takes a string and returns Concepts with [`display_name`](../../about-the-data/concept.md#display\_name)s exactly matching that string. In most cases, unless you're specifically interested in display names, the [`search` parameter](filter-entity-lists.md#search) is better than using [search as a filter](filter-entity-lists.md#search-as-a-filter).
