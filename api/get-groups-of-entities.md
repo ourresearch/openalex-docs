@@ -4,7 +4,7 @@
 See the [API overview](./) for info on rate limiting, authentication, etc.
 {% endhint %}
 
-Sometimes instead of just listing entities, you want to _group them_ into facets, and count how many entities are in each group. For example, maybe you want to count the number of `Works` by [open access status](../about-the-data/work.md#oa\_status). To do that, you call the appropriate entity endpoint, adding the `?group_by` parameter. Here's an example:
+Sometimes instead of just listing entities, you want to _group them_ into facets, and count how many entities are in each group. For example, maybe you want to count the number of `Works` by [open access status](../about-the-data/work.md#oa\_status). To do that, you call the appropriate entity endpoint, adding the `?group_by` parameter. Example:
 
 * Get counts of works by Open Access status:\
   [`https://api.openalex.org/works?group_by=oa_status`](https://api.openalex.org/works?group\_by=oa\_status)
@@ -59,16 +59,34 @@ So from this we can see that the majority of works (66,862,508 of them) are `clo
 
 You can group by most of the same properties that you can [filter](get-lists-of-entities/#filter) by, and you can combine grouping with filtering.&#x20;
 
-Each group contains three properties:
+### Group properties
 
-* `key`
-  * The value of the `group_by` parameter for this group.
-    * If the property being grouped by is an OpenAlex [Entity](../about-the-data/), `key` will be the entity's [OpenAlex ID](../about-the-data/#the-openalex-id). For example, if you [group Works by Institution](https://api.openalex.org/works?group\_by=authorships.institutions.id), one group's `key` might be [https://openalex.org/I136199984](https://openalex.org/I136199984)
-    * If grouping by a string, boolean, or numeric value, `key` is just the value, and is the same as `key_display_name`. For example, if you [group Concepts by level](https://api.openalex.org/concepts?group\_by=level), one group might have both the both `key` and `key_display_name` "2".
-* `key_display_name`
-  * If the group\_by parameter is an Entity, the Entity's display name. Otherwise, the value being grouped by, and the same as `key`.
-* `count`
-  * The number of entities in the group.&#x20;
+Each group object in the `group_by` list contains three properties:
+
+#### `key`
+
+Value: a string; the [OpenAlex ID](../about-the-data/#the-openalex-id) or raw value of the `group_by` parameter for members of this group.
+
+#### `key_display_name`
+
+Value: a string; the `display_name` or raw value of the `group_by` parameter for members of this group.
+
+* If the property being grouped by is an OpenAlex [Entity](../about-the-data/), `key` will be the entity's [OpenAlex ID](../about-the-data/#the-openalex-id). For example, if you [group Works by Institution](https://api.openalex.org/works?group\_by=authorships.institutions.id), one group's `key` might be [https://openalex.org/I136199984](https://openalex.org/I136199984)
+* Otherwise, `key` is just the value, and is the same as `key_display_name`. For example, if you [group Concepts by level](https://api.openalex.org/concepts?group\_by=level), one group might have both the both `key` and `key_display_name` "2".
+
+#### `key_display_name`
+
+Value: a string; the value of the `group_by` parameter for this group
+
+* If the group\_by parameter is an Entity, the Entity's display name. Otherwise, the value being grouped by, and the same as `key`.
+
+#### `count`
+
+Value: an integer; the number of entities in the group.&#x20;
+
+### Grouping by `Entities`
+
+
 
 ### Groupable attributes
 
