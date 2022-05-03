@@ -6,26 +6,12 @@ description: Query the OpenAlex dataset using the magic of The Internet
 
 The API is the primary way to get OpenAlex data. It's free, requires no authentication, and has no rate limits; it's also much  easier than [downloading and using the snapshot](../download-snapshot/). So for most use cases, this is what you're looking for.&#x20;
 
-The API is read-only, and supports only [GET requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET).&#x20;
+Using the API you can [get a single entity](get-single-entities.md), [get a list of entities](get-lists-of-entities/), or [get groups of entities](get-groups-of-entities.md).  Examples:
 
-## Entity endpoint
-
-This is the main endpoint for the API, and it's real simple:`/<entity name>`
-
-Using this endpoint, you can [get a single entity](get-single-entities.md), [get a list of entities](get-lists-of-entities/), or [get groups of entities](get-groups-of-entities.md). Examples:
-
-* Get the work with the OpenAlex ID `https://openalex.org/W2741809807`:\
-  [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
 * Get the venue (journal) with the ISSN `2167-8359`:\
   [`https://api.openalex.org/venues/issn:2167-8359`](https://api.openalex.org/venues/issn:2167-8359)
-* Get all the works in OpenAlex: \
-  [`https://api.openalex.org/works`](https://api.openalex.org/works)``
 * Get works published in 2020:\
   [`https://api.openalex.org/works?filter=publication_year:2020`](https://api.openalex.org/works?filter=publication\_year:2020)``
-* Get works with "coffee" in their titles or abstracts:\
-  [`https://api.openalex.org/works?search=coffee`](https://api.openalex.org/works?search=coffee)``
-* Get counts of works, by institution:\
-  [`https://api.openalex.org/works?group_by=institutions.id`](https://api.openalex.org/works?group\_by=institutions.id)``
 * Get counts of works that are Open Access, by country: \
   [`https://api.openalex.org/works?filter=is_oa:true&group_by=institutions.country_code`](https://api.openalex.org/works?filter=is\_oa:true\&group\_by=institutions.country\_code)
 
