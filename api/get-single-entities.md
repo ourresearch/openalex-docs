@@ -8,13 +8,9 @@ description: Get a single entity, based on an ID
 See the [API overview](./) for info on rate limiting, authentication, etc.
 {% endhint %}
 
-It's easy to retrieve a singleton [entity object](https://docs.openalex.org/about-the-data#entity-objects) from any of the five [entity endpoints](https://docs.openalex.org/api#entity-endpoints): just add an ID to the path of any entity endpoint like so:
+Here's how you get a singleton [entity object](https://docs.openalex.org/about-the-data#entity-objects) from from the entity endpoint:`/<entity_name>/<entity_id>.` Here's an example:
 
-`https://api.openalex.org/<entity_name>/<:id>`
-
-So for example, if you want to get the work with the OpenAlex ID [https://openalex.org/W2741809807](https://openalex.org/W2741809807), you'd make this query:
-
-``[`https://api.openalex.org/works/https://openalex.org/W2741809807`](https://api.openalex.org/works/https://openalex.org/W2741809807)``
+* Get the work with the OpenAlex ID [https://openalex.org/W2741809807](https://openalex.org/W2741809807): [`https://api.openalex.org/works/https://openalex.org/W2741809807`](https://api.openalex.org/works/https://openalex.org/W2741809807)``
 
 That will return a [`Work`](../about-the-data/work.md) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
 
