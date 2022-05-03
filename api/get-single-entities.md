@@ -10,7 +10,7 @@ See the [API overview](./) for info on rate limiting, authentication, etc.
 
 Here's how you get a singleton [entity object](https://docs.openalex.org/about-the-data#entity-objects) from from the entity endpoint:`/<entity_name>/<entity_id>.` Here's an example:
 
-* Get the work with the OpenAlex ID [https://openalex.org/W2741809807](https://openalex.org/W2741809807): [`https://api.openalex.org/works/https://openalex.org/W2741809807`](https://api.openalex.org/works/https://openalex.org/W2741809807)``
+* Get the work with the [OpenAlex ID ](../about-the-data/#the-openalex-id)`W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)``
 
 That will return a [`Work`](../about-the-data/work.md) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
 
