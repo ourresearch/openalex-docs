@@ -6,7 +6,7 @@ description: Query the OpenAlex dataset using the magic of The Internet
 
 The API is the primary way to get OpenAlex data. It's free, requires no authentication, and has no rate limits; it's also much  easier than [downloading and using the snapshot](../download-snapshot/). So for most use cases, this is what you're looking for.&#x20;
 
-Using the API you can [get a single entity](get-single-entities.md), [get a list of entities](get-lists-of-entities/), or [get groups of entities](get-groups-of-entities.md).  Examples:
+Using the API you can [get a single entity](get-single-entities.md), [filter and search lists of entities](get-lists-of-entities/), or [group and count entities](get-groups-of-entities.md).  Examples:
 
 * Get the venue (journal) with the ISSN `2167-8359`:\
   [`https://api.openalex.org/venues/issn:2167-8359`](https://api.openalex.org/venues/issn:2167-8359)
