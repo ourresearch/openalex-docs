@@ -5,7 +5,7 @@ description: Get a single entity, based on an ID
 # Get single entities
 
 {% hint style="info" %}
-See the [API overview](./) for info on rate limiting, authentication, etc.
+See the [API overview](./) for info on rate-limits, authentication, etc.
 {% endhint %}
 
 It's easy to get a singleton [entity object](https://docs.openalex.org/about-the-data#entity-objects) from from the API:`/<entity_name>/<entity_id>.` Here's an example:

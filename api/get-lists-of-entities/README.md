@@ -1,7 +1,7 @@
 # Get lists of entities
 
 {% hint style="info" %}
-See the [API overview](../) for info on API rate-limits, authentication, etc.
+See the [API overview](../) for info on API pagination, authentication, etc.
 {% endhint %}
 
 It's easy to get a list of [entity objects](https://docs.openalex.org/about-the-data#entity-objects) from from the API:`/<entity_name>.` Here's an example:

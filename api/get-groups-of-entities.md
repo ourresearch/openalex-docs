@@ -1,7 +1,7 @@
 # Get groups of entities
 
 {% hint style="info" %}
-See the [API overview](./) for info on rate limiting, authentication, etc.
+See the [API overview](./) for info on pagination, authentication, etc.
 {% endhint %}
 
 Sometimes instead of just listing entities, you want to _group them_ into facets, and count how many entities are in each group. For example, maybe you want to count the number of `Works` by [open access status](../about-the-data/work.md#oa\_status). To do that, you call the [entity endpoint](./#entity-endpoint), adding the `?group_by` parameter. Example:
