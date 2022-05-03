@@ -15,13 +15,11 @@ It's easy to get a singleton [entity object](https://docs.openalex.org/about-the
 That will return a [`Work`](../about-the-data/work.md) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
 
 {% hint style="info" %}
-To get a single entity, you need a single _unambiguous_ identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name) then it may apply to many entities, so you need filter a _list_ of them. For example, this gets a list of the authors called Einstein: \
-\
-[`https://api.openalex.org/authors?filter=display_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)\
-\
-To learn more, see [Get lists of entities](get-lists-of-entities/).
+You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax.](get-lists-of-entities/filter-entity-lists.md#addition-or)
+{% endhint %}
 
-
+{% hint style="info" %}
+To get a single entity, you need a single _unambiguous_ identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name), you'll want to  [search](get-lists-of-entities/search-entity-lists.md) instead.
 {% endhint %}
 
 
