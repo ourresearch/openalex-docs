@@ -1,8 +1,10 @@
 # FAQ
 
-### Are OpenAlex IDs stable?
+### How do I cite OpenAlex
 
-Several people have asked if OpenAlex IDs are stable (MAG's were not).
+See our [citation section here.](./#citation)
+
+### Are OpenAlex IDs stable?
 
 Yes! The work associated with ID W1234 will keep the ID W1234.
 
