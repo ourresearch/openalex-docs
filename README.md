@@ -1,6 +1,8 @@
 # Welcome!
 
-OpenAlex is a [fully open](license.md) catalog of the global research system. It's named after the [ancient Library of Alexandria.](https://en.wikipedia.org/wiki/Library\_of\_Alexandria)
+OpenAlex is a [fully open](license.md) catalog of the global research system. It's named after the [ancient Library of Alexandria](https://en.wikipedia.org/wiki/Library\_of\_Alexandria) and made by the nonprofit [OurResearch](https://ourresearch.org).
+
+## Data
 
 The OpenAlex dataset describes scholarly _entities_ and how those entities are connected to each other. There are five types of entities:
 
@@ -12,13 +14,22 @@ The OpenAlex dataset describes scholarly _entities_ and how those entities are c
 
 Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of hundreds of millions of entities and billions of connections between them all.
 
-There are three ways to access the OpenAlex dataset:
+You can read more about the [entity objects](about-the-data/) that make up OpenAlex, or [about the data](about-the-data.md) more broadly.
+
+## Access
+
+OpenAlex data is completely free and open, provided under a [CC0 license](license.md). There are three ways to actually get the OpenAlex dataset:
 
 * the [API](api/)
 * the [website](website.md) (launching Summer 2022), and
 * the [database snapshot](download-snapshot/).
 
-This documentation has sections for each of these three. There are also a section about the [entity objects](about-the-data/) that make up OpenAlex, as well as information [about the data](about-the-data.md) more broadly, and of course a [FAQ](faq.md).
+## Funding
 
-OpenAlex is made with love by [OurResearch,](https://ourresearch.org) with generous support from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk).
+OpenAlex is made with generous support from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk).
 
+## Citation
+
+If you use OpenAlex in research, please cite [this paper](https://arxiv.org/abs/2205.01833):&#x20;
+
+> Priem, J., Piwowar, H., & Orr, R. (2022). _OpenAlex: A fully-open index of scholarly works, authors, venues, institutions, and concepts_. ArXiv. https://arxiv.org/abs/2205.01833
