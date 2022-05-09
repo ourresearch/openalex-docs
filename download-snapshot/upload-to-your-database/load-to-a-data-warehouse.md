@@ -9,6 +9,14 @@ We'll show you how to do this in 4 steps:
 3. Copy the data files to the tables you created
 4. Run some queries on the data you loaded
 
+{% hint style="info" %}
+This guide will have you load each entity to a single text column, then use BigQuery's JSON functions to parse them when you run your queries. This is convenient but inefficient since each object has to be parsed every time you run a query.
+
+This project, kindly shared by [@DShvadron](https://twitter.com/DShvadron), takes a more efficient approach: [https://github.com/DrorSh/openalex\_to\_gbq](https://github.com/DrorSh/openalex\_to\_gbq)
+
+Separating the Entity data into multiple columns takes more work up front but lets you write queries that are faster, simpler, and often [cheaper](https://cloud.google.com/bigquery/pricing#data).&#x20;
+{% endhint %}
+
 ## **Step 1: Create a BigQuery Project and Dataset**
 
 In BigQuery, you need a [Project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) and [Dataset](https://cloud.google.com/bigquery/docs/datasets-intro) to hold your tables. We’ll call the project “openalex-demo” and the dataset “openalex”. Follow the linked instructions to create the Project, then create the dataset inside it:
