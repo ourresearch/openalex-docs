@@ -344,7 +344,7 @@ referenced_works: [
 
 ### `related_works`
 
-_List:_ [OpenAlex IDs](./#the-openalex-id) for works related to this work.&#x20;
+_List:_ [OpenAlex IDs](./#the-openalex-id) for works related to this work. Related works are computed algorithmically; the algorithm finds recent papers with the most concepts in common with the current paper.
 
 ```json
 related_works: [
