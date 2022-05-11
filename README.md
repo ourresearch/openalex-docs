@@ -24,6 +24,10 @@ OpenAlex data is completely free and open, provided under a [CC0 license](licens
 * the [website](website.md) (launching Summer 2022), and
 * the [database snapshot](download-snapshot/).
 
+## Contact
+
+For tech support and bug reports, please email us at [team@ourresearch.org](mailto:team@ourresearch.org). You can follow us on Twitter at [@OpenAlex\_org](https://twitter.com/openalex\_org). For announcements and discussion, join the [OpenAlex Users newsgroup](https://groups.google.com/g/openalex-users).
+
 ## Funding
 
 OpenAlex is made with generous support from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk).
