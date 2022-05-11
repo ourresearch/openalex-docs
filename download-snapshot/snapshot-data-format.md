@@ -9,6 +9,7 @@ Here are the details on where the OpenAlex data lives and how it's structured.
   * If you're initializing a fresh snapshot, the `updated_date` partitions aren't important yet. You need all the entities, so for `Authors` you would get `/data/authors/*/*.gz`
 * There are multiple objects under each `updated_date` partition. Each is under 2GB.
 * The manifest file is JSON (in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-files-using-manifest.html) format) and lists all the data files for each object type - `/data/works/manifest` lists all the works.
+* The gzip-compressed snapshot takes up about 330 GB and decompresses to about 1.6 TB.&#x20;
 
 The structure of each entity type is documented here: [Work](../about-the-data/work.md), [Author](../about-the-data/author.md), [Venue](../about-the-data/venue.md), [Institution](../about-the-data/institution.md), and [Concept](../about-the-data/concept.md).
 
