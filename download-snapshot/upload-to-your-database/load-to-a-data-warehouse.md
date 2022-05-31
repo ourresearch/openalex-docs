@@ -14,7 +14,7 @@ This guide will have you load each entity to a single text column, then use BigQ
 
 This project, kindly shared by [@DShvadron](https://twitter.com/DShvadron), takes a more efficient approach: [https://github.com/DrorSh/openalex\_to\_gbq](https://github.com/DrorSh/openalex\_to\_gbq)
 
-Separating the Entity data into multiple columns takes more work up front but lets you write queries that are faster, simpler, and often [cheaper](https://cloud.google.com/bigquery/pricing#data).&#x20;
+Separating the Entity data into multiple columns takes more work up front but lets you write queries that are faster, simpler, and often [cheaper](https://cloud.google.com/bigquery/pricing#on\_demand\_pricing).&#x20;
 {% endhint %}
 
 ## **Step 1: Create a BigQuery Project and Dataset**
