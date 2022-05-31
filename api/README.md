@@ -30,7 +30,7 @@ The polite pool has much faster and more consistent response times. It's a good 
 
 To get into the polite pool, you just have to give us an email where we can contact you. You can give us this email in one of two ways:
 
-* Add the `mailto=you@example.com` parameter in your API request, like this: [https://api.openalex.org/works?mailto=you@example.com](https://api.openalex.org/works?filters=publication\_year:2020)
+* Add the `mailto=you@example.com` parameter in your API request, like this: [https://api.openalex.org/works?mailto=you@example.com](https://api.openalex.org/works?mailto=you@example.com)
 * Add `mailto:you@example.com` somewhere in your User-Agent request header.
 
 ### The common pool
