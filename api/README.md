@@ -112,3 +112,4 @@ There's no officially-supported client library for the API, for now. However, he
 
 * [openalexR](https://github.com/massimoaria/openalexR) (R)
 * [OpenAlexAPI](https://pypi.org/project/openalexapi/) (Python)
+* [diophila](https://pypi.org/project/diophila/) (Python)
