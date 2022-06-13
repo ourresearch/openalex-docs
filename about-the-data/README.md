@@ -39,12 +39,6 @@ An OpenAlex ID is a URL that identifies a resource (data about an entity). You c
 * Get a JSON object describing this same work, via our API (note the `.json` at the end):\
   [`https://openalex.org/W2741809807.json`](https://openalex.org/W2741809807.json)``
 
-## Merged Entities
-
-Every [OpenAlex ID](./#the-openalex-id) will be supported forever. But the IDs and the Entities they represent are only a model of the world, and that model is always changing. Sometimes we have two Entities, and thus two IDs, that refer to the same real-world entity. This poses a problem: If Entities A and B refer to the same thing, for example if two author IDs refer to the same person, what do we do with them? We can't delete one (both IDs need to work forever) but it needs to be clear that both IDs represent the same person.&#x20;
-
-Our solution is ID "merging". If authors A111 and A222 are the same person, and we decide to keep A222 as this person's canonical ID, we change all internal references to A111 to A222 and recalculate all relevant data, for example A222 is credited with A111's Works. Inside OpenAlex A111 effectively _is_ deleted, but we we have to take a few extra steps to keep A111 working in our API and in any copies of the snapshot.
-
 ## Canonical External IDs
 
 Every entity has an OpenAlex ID. Most entities also have IDs in other systems, too. There are hundreds of different ID systems, but we've selected a single external ID system for each entity to provide the **Canonical External ID**--this is the ID in the system that's been most fully adopted by the community, and is most frequently used in the wild. We support other external IDs as well, but the canonical ones get a privileged spot in the API and dataset.&#x20;
