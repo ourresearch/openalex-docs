@@ -75,7 +75,7 @@ cited_by_count: 38
 _Object:_ All the external identifiers that we know about for this author. IDs are expressed as URIs whenever possible. Possible ID types:
 
 * `openalex` (_String:_ this author's [OpenAlex ID](./#the-openalex-id). Same as [`Author.id`](author.md#id))
-* `orcid` (_String:_ this author's [ORCID](https://orcid.org) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome). Same as [`Author.orcid`](author.md#orcid))
+* `orcid` (_String:_ this author's [ORCID](https://orcid.org/) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome). Same as [`Author.orcid`](author.md#orcid))
 * `mag`  (_Integer:_ this author's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `twitter` (_String:_ this author's Twitter handle)
 * `wikipedia` (_String_: this author's Wikipedia page)
@@ -143,7 +143,7 @@ x_concepts: [
 
 _List:_ [`Author.works_count`](author.md#works\_count) and [`Author.cited_by_count`](author.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many works this author published, and how many times they got cited.&#x20;
 
-Any works or citations older than ten years old aren't included.
+Any works or citations older than ten years old aren't included. Years with zero works and zero citations have been removed and it is the user's responsibility to add them to suit their use case.
 
 ```json
 counts_by_year: [
