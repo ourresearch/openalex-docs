@@ -22,6 +22,19 @@ You can make up to 50 of these queries at once by [requesting a list of entities
 To get a single entity, you need a single _unambiguous_ identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name), you'll want to  [search](get-lists-of-entities/search-entity-lists.md) instead.
 {% endhint %}
 
+### Merged Entity IDs
+
+At times we will need to [merge two entities](../about-the-data/#merged-entities), effectively deleting one of them. This usually happens when we discover two Entities that represent the same real-world, (lowercase) entity - for example, two [`Authors`](../about-the-data/author.md) that are really the same person.
+
+If you request an Entity using its OpenAlex ID, and that Entity has been merged into another Entity, you will be redirected to the Entity it has been merged into. For example, https://openalex.org/A2224836008 has been merged into https://openalex.org/A2208157607, so in the API the former will redirect to the latter:
+
+```bash
+$ curl -i https://api.openalex.org/authors/A2224836008
+HTTP/1.1 301 MOVED PERMANENTLY
+Location: https://api.openalex.org/authors/A2208157607
+```
+
+Most clients will handle this transparently; you'll get the data for author A2208157607 without knowing about the redirect. If you have stored entity lists, you might as well replace the merged-away (deleted) ID to save the redirect next time.\
 
 
 ## Supported IDs
