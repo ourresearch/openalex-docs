@@ -36,7 +36,7 @@ id: "https://openalex.org/W2741809807"
 
 _String:_ The DOI for the work. This is the [Canonical External ID](./#canonical-external-ids) for works.
 
-Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on [bioRxiv](https://www.biorxiv.org), and another DOI for the [published version](work.md#version). However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the [`Work.alternate_host_venues`](work.md#alternate\_host\_venues) list.&#x20;
+Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on [bioRxiv](https://www.biorxiv.org/), and another DOI for the [published version](work.md#version). However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the [`Work.alternate_host_venues`](work.md#alternate\_host\_venues) list.&#x20;
 
 ```json
 doi: "https://doi.org/10.7717/peerj.4375"
@@ -88,7 +88,7 @@ _Object:_ All the external identifiers that we know about for this work. IDs are
 * `doi` (_String:_ The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). Same as [`Work.doi`](work.md#title))
 * `mag`  (_Integer:_ the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `pmid` (_String:_ The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
-* `pmcid` (_String_: the [Pubmed Central identifier](https://www.ncbi.nlm.nih.gov/pmc/about/public-access-info/#:\~:text=The%20PMCID%20is%20a%20unique,in%20both%20PMC%20and%20PubMed.))
+* `pmcid` (_String_: the [Pubmed Central identifier](https://www.ncbi.nlm.nih.gov/pmc/about/public-access-info/))
 
 {% hint style="info" %}
 Most works are missing one or more ID types (either because we don't know the ID, or because it was never assigned). Keys for `null` IDs are not displayed.
@@ -222,7 +222,7 @@ biblio: {
 
 _Boolean:_ True if we know this work has been retracted.&#x20;
 
-This field has high precision but low recall. In other words, if `is_retracted` is  `true`, the article is definitely retracted. But if `is_retracted` is `False`,  it still might be retracted, but we just don't know. This is because unfortunately, the [open sources for retraction data](https://www.crossref.org/blog/encouraging-even-greater-reporting-of-corrections-and-retractions/) aren't currently very comprehensive, and [the more comprehensive ones](https://retractionwatch.com) aren't sufficiently open for us to use here.
+This field has high precision but low recall. In other words, if `is_retracted` is  `true`, the article is definitely retracted. But if `is_retracted` is `False`,  it still might be retracted, but we just don't know. This is because unfortunately, the [open sources for retraction data](https://www.crossref.org/blog/encouraging-even-greater-reporting-of-corrections-and-retractions/) aren't currently very comprehensive, and [the more comprehensive ones](https://retractionwatch.com/) aren't sufficiently open for us to use here.
 
 ```json
 is_retracted: false 
@@ -278,7 +278,7 @@ concepts: [
 
 ### `mesh`
 
-_List:_ List of [MeSH](https://www.nlm.nih.gov/mesh/meshhome.html) tag objects. Only works found in [PubMed](https://pubmed.ncbi.nlm.nih.gov) have MeSH tags; for all other works, this is an empty list.
+_List:_ List of [MeSH](https://www.nlm.nih.gov/mesh/meshhome.html) tag objects. Only works found in [PubMed](https://pubmed.ncbi.nlm.nih.gov/) have MeSH tags; for all other works, this is an empty list.
 
 ```json
 mesh: [
@@ -403,9 +403,27 @@ TODO: documentation coming soon!
 
 ### `counts_by_year`
 
-{% hint style="warning" %}
-TODO: documentation coming soon!
-{% endhint %}
+_List:_ [`Works.cited_by_count`](work.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many times this work was cited.&#x20;
+
+Any citations older than ten years old aren't included. Years with zero citations have been removed and it is the user's responsibility to add them to suit their use case.
+
+```json
+counts_by_year: [
+    {
+        year: 2022,
+        cited_by_count: 8
+    },
+    {
+        year: 2021,
+        cited_by_count: 252
+    },
+    ...
+    {
+        year: 2012,
+        cited_by_count: 79
+    }
+]
+```
 
 ### `updated_date`
 
@@ -553,7 +571,7 @@ is_oa: true
 
 _String:_ The Open Access (OA) status of this work. Possible values are:
 
-* **`gold`**: Published in an OA journal that is indexed by the [DOAJ](https://doaj.org).
+* **`gold`**: Published in an OA journal that is indexed by the [DOAJ](https://doaj.org/).
 * **`green`**: Toll-access on the publisher landing page, but there is a free copy in an [OA repository](https://en.wikipedia.org/wiki/Open-access\_repository).
 * **`hybrid`**: Free under an [open license](https://support.unpaywall.org/support/solutions/articles/44002063718-what-is-an-oa-license-) in a toll-access journal.
 * **`bronze`**: Free to read on the publisher landing page, but without any identifiable license.
