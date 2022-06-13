@@ -22,7 +22,7 @@ id: "https://openalex.org/I114027177"
 
 ### `ror`
 
-_String:_ The [ROR](https://ror.org) ID for this institution. This is the [Canonical External ID](./#canonical-external-ids) for institutions.
+_String:_ The [ROR](https://ror.org/) ID for this institution. This is the [Canonical External ID](./#canonical-external-ids) for institutions.
 
 The ROR (Research Organization Registry) identifier is a globally unique ID for research organization. [ROR is the successor to GRiD](https://www.digital-science.com/press-release/grid-passes-torch-to-ror/), which is no longer being updated.&#x20;
 
@@ -121,7 +121,7 @@ _Object:_ All the external identifiers that we know about for this institution. 
 * `openalex` (_String:_ this institution's [OpenAlex ID](./#the-openalex-id). Same as [`Institution.id`](institution.md#id))
 * `ror` (_String:_ this institution's ROR ID. Same as [`Institution.ror`](institution.md#ror))
 * `mag`  (_Integer:_ this institution's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `grid` (_String:_ this institution's [GRID](https://www.grid.ac) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome))
+* `grid` (_String:_ this institution's [GRID](https://www.grid.ac/) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome))
 * `wikipedia` (_String:_ this institution's Wikipedia page URL)
 * `wikidata` (_String:_ this institution's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers))
 
@@ -145,7 +145,7 @@ ids: {
 _Object:_ A bunch of stuff we know about the location of this institution:
 
 * `city` (_String_): The city where this institution lives.
-* `geonames_city_id` (_String_): The city where this institution lives, as a [GeoNames database](http://www.geonames.org) ID.
+* `geonames_city_id` (_String_): The city where this institution lives, as a [GeoNames database](http://www.geonames.org/) ID.
 * `region` (_String_): The sub-national region (state, province) where this institution lives.
 * `country_code` (_String_): The country where this institution lives, represented as an [ISO two-letter country code](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2).
 * `country` (_String_): The country where this institution lives.
@@ -212,6 +212,8 @@ associated_institutions: [
 ### `counts_by_year`
 
 _List:_ [`works_count`](institution.md#works\_count) and [`cited_by_count`](institution.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this venue started hosting, and how many times _any_ work in this venue got cited.
+
+Years with zero citations and zero works have been removed and it is the user's responsibility to add them to suit their use case.
 
 ```json
 counts_by_year: [
