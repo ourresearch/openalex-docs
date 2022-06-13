@@ -153,7 +153,7 @@ x_concepts: [
 
 _List:_ [`works_count`](venue.md#works\_count) and [`cited_by_count`](venue.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this venue started hosting, and how many times _any_ work in this venue got cited.
 
-If the venue was founded less than ten years ago, there will naturally be fewer than ten years in this list.
+If the venue was founded less than ten years ago, there will naturally be fewer than ten years in this list. Years with zero citations and zero works have been removed and it is the user's responsibility to add them to suit their use case.
 
 ```json
 counts_by_year: [
