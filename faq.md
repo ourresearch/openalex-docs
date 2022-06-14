@@ -24,7 +24,7 @@ See our list of [sources here](about-the-data.md#sources).
 
 ### How often is the data updated?
 
-For now, the dataset is updated about every two weeks. However, in the future we will probably offer a much faster update cadence (approximately daily) as an optional, [paid upgrade](faq.md#whats-your-sustainability-plan). If you're interested in that,  drop us a line at [team@ourresearch.org](mailto:team@ourresearch.org).
+For now, the dataset is updated about once per month. However, in the future we will probably offer a much faster update cadence (approximately daily) as an optional, [paid upgrade](faq.md#whats-your-sustainability-plan). If you're interested in that,  drop us a line at [team@ourresearch.org](mailto:team@ourresearch.org).
 
 ### Is your data quality better than \_\_\_\_?
 
@@ -42,7 +42,7 @@ It's free! The [website](website.md), the [API](api/), and the [database snapsho
 
 Our nonprofit (OurResearch) has a ten-year track record of building sustainable scholarly infrastructure, and a formal commitment to sustainability as part of [our adoption of the POSI principles.](https://blog.ourresearch.org/posi/)&#x20;
 
-We're currently still exploring our options for OpenAlex's sustainability plan. Thanks to a generous grant from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk), we've got lots of runway, and we don't need to roll anything out in a rush.
+We're currently still exploring our options for OpenAlex's sustainability plan. Thanks to a generous grant from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk/), we've got lots of runway, and we don't need to roll anything out in a rush.
 
 Our Unpaywall project (a free index of the world's open-access research literature) has been self-sustaining via a freemium revenue model for nearly five years, and we'll certainly be looking closely at that as a model for OpenAlex, as well. Access to the data will always be free for everyone, but some kind of high-throughput, SLA access is potentially something we could add later for a fee.&#x20;
 
