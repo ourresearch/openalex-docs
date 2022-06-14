@@ -3,7 +3,7 @@
 Here are the details on where the OpenAlex data lives and how it's structured.
 
 * All the data is stored in [Amazon S3](https://aws.amazon.com/s3/), in the `openalex` bucket.
-* The data files are gzip-compressed [JSON Lines](https://jsonlines.org), one row per entity.
+* The data files are gzip-compressed [JSON Lines](https://jsonlines.org/), one row per entity.
 * The bucket contains one prefix (folder) for each entity type: work, author, venue, institution, and concept.
 * Records are partitioned by [updated\_date](../about-the-data/work.md#updated\_date). Within each entity type prefix, each object (file) is further prefixed by this date. For example, if an [`Author`](../about-the-data/author.md) has an updated\_date of 2021-12-30 it will be prefixed`/data/authors/updated_date=2021-12-30/`.
   * If you're initializing a fresh snapshot, the `updated_date` partitions aren't important yet. You need all the entities, so for `Authors` you would get `/data/authors/*/*.gz`
@@ -88,3 +88,34 @@ The file is in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/d
 5. Decompress the files you downloaded and parse one JSON `Author` per line. Insert or update into your database of choice, using [each entity's ID](../about-the-data/#the-openalex-id) as a primary key.
 
 If you’ve worked with dataset like this before and have a toolchain picked out, this may be all you need to know. If you want more detailed steps, proceed to [download the data](download-to-your-machine.md).
+
+### Merged Entities
+
+{% hint style="info" %}
+See [Merged Entities](../about-the-data/#merged-entities) for an explanation of what Entity merging is and why we do it.&#x20;
+{% endhint %}
+
+Alongside the folders for the five Entity types - work, author, venue, institution, and concept - you'll find a sixth folder: merged\_ids. Within this folder you'll find the IDs of [Entities that have been merged](../about-the-data/#merged-entities), along with the Entity IDs they were merged into.
+
+```
+/data/merged_ids/
+├── authors
+│   └── 2022-06-07.csv.gz
+├── institutions
+│   └── 2022-06-01.csv.gz
+├── venues
+│   └── 2022-06-03.csv.gz
+└── works
+    └── 2022-06-06.csv.gz
+```
+
+Merge operations are separated into files by date. Each dated file lists the IDs of Entities that were merged on that date, and names the Entities they were merged into. For example, `data/merged_ids/authors/2022-06-07.csv.gz` begins:
+
+```
+merge_date,id,merge_into_id
+2022-06-07,A2257618939,A2208157607
+```
+
+Like the Entities' _updated\_date_ partitions, you only ever need to download merge listing files that are new to you. Any later merges will appear in new files with later dates.
+
+Merging entities is essentially a workaround that lets us delete Entities while keeping their IDs valid. References to merged Entities within OpenAlex are replaced by the Entity they were merged into. In practice, you can simply delete these "merged away" Entities in your database. &#x20;
