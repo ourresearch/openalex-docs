@@ -53,7 +53,7 @@ For many MAG use cases, you'll be able to ignore this transition, as the data wi
 
 Because we get a lot of questions about a few specific MAG data types, we're listing them below to clear up any confusion — but keep in mind this list is not comprehensive:
 
-* **Updates monthly:** Like MAG, we continue to release a [MAG-format data dump](https://docs.openalex.org/download-snapshot/mag-format/how-to-download), updated with all the latest data, every two weeks or so.
+* **Updates monthly:** Like MAG, we continue to release a [MAG-format data dump](https://docs.openalex.org/download-snapshot/mag-format/how-to-download), updated with all the latest data, about once a month.
 * **Author name disambiguation (AND):** Like MAG, OpenAlex uses document properties (title, topic, journal, etc) to identify and assign unique author IDs, even when authors share a name — so you'll see one ID for the biologist Jane Smith, and a different one for the Jane Smith who's an art historian. Also like MAG, we identify two name strings as referring to the same person even if they are written differently ("J smith" and "Jane Smith").
 * **Work clustering:** Like MAG, we infer that two papers are the same, even when they don't have [PIDs.](https://en.wikipedia.org/wiki/Persistent\_identifier) We use fingerprint-based fuzzy matching that's robust again typos, and can identify different versions of the same paper (preprint and version of record, for example).
 * **Institution identification:** Like MAG, we identify authors' institutions, even there are no [PIDs](https://en.wikipedia.org/wiki/Persistent\_identifier) or other structured metadata to use.
