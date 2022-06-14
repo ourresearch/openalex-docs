@@ -39,7 +39,7 @@ Please see the [schema docs](https://docs.openalex.org/download-snapshot/mag-for
 
 * **Rank:** MAG computed a "rank" property for lots of things. We are no longer updating this rank.
 * **Family:** MAG's concept of "family" was used to group a preprint with its associated paper. Instead, OpenAlex treats a preprint and associated paper as the _same work,_ with two different _versions._ That version relationship is enumerated in the new [PaperUrls.version](https://openalex.org/schema#PaperUrls\_Version) column.
-* **GRID IDs:** GRID has now been [officially replaced](https://www.digital-science.com/grid-passes-the-torch-to-ror-faqs/) by [ROR,](https://ror.org) and we'll stop updating GRID IDs, and use ROR IDs instead. Since there's a simple 1-to-1 mapping between them, it's easy to [transition from GRID to ROR.](https://ror.readme.io/docs/gridror-transition-faq)
+* **GRID IDs:** GRID has now been [officially replaced](https://www.digital-science.com/grid-passes-the-torch-to-ror-faqs/) by [ROR,](https://ror.org/) and we'll stop updating GRID IDs, and use ROR IDs instead. Since there's a simple 1-to-1 mapping between them, it's easy to [transition from GRID to ROR.](https://ror.readme.io/docs/gridror-transition-faq)
 * **Conferences:** In an early announcement, we said OpenAlex might not support conference papers. This turns out to be only partly true. We actually will index the vast majority of conference _papers._ However, we won't do a good job of indexing the _conference instances_ and _conference series_ that publish the papers.&#x20;
 * **Random webpage-hosted papers:** MAG indexed papers informally hosted on faculty and personal homepages; we won't be adding more of these.
 * **Paper resources:** This table, which gathered code and data associated with a given papers, is no longer being updated
@@ -53,7 +53,7 @@ For many MAG use cases, you'll be able to ignore this transition, as the data wi
 
 Because we get a lot of questions about a few specific MAG data types, we're listing them below to clear up any confusion — but keep in mind this list is not comprehensive:
 
-* **Updates every two weeks:** Like MAG, we continue to release a [MAG-format data dump](https://docs.openalex.org/download-snapshot/mag-format/how-to-download), updated with all the latest data, every two weeks or so.
+* **Updates monthly:** Like MAG, we continue to release a [MAG-format data dump](https://docs.openalex.org/download-snapshot/mag-format/how-to-download), updated with all the latest data, every two weeks or so.
 * **Author name disambiguation (AND):** Like MAG, OpenAlex uses document properties (title, topic, journal, etc) to identify and assign unique author IDs, even when authors share a name — so you'll see one ID for the biologist Jane Smith, and a different one for the Jane Smith who's an art historian. Also like MAG, we identify two name strings as referring to the same person even if they are written differently ("J smith" and "Jane Smith").
 * **Work clustering:** Like MAG, we infer that two papers are the same, even when they don't have [PIDs.](https://en.wikipedia.org/wiki/Persistent\_identifier) We use fingerprint-based fuzzy matching that's robust again typos, and can identify different versions of the same paper (preprint and version of record, for example).
 * **Institution identification:** Like MAG, we identify authors' institutions, even there are no [PIDs](https://en.wikipedia.org/wiki/Persistent\_identifier) or other structured metadata to use.
@@ -63,10 +63,10 @@ Because we get a lot of questions about a few specific MAG data types, we're lis
 
 These data types and functions are included in OpenAlex, but were _not in Microsoft's dataset_. They're updated using OpenAlex's algorithms and data sources.
 
-* **Open Access (OA) status:** By integrating the industry-standard [Unpaywall](https://unpaywall.org) dataset, OpenAlex can tell you whether a given paper is OA or not, name its copyright license (eg CC-BY), and give you the URL where to find it.
+* **Open Access (OA) status:** By integrating the industry-standard [Unpaywall](https://unpaywall.org/) dataset, OpenAlex can tell you whether a given paper is OA or not, name its copyright license (eg CC-BY), and give you the URL where to find it.
 * **Full ISSN support:** OpenAlex provides a comprehensive list of ISSNs associated with each journal, including the [ISSN-L](https://www.issn.org/understanding-the-issn/assignment-rules/the-issn-l-for-publications-on-multiple-media/), the standard for for deduplicating journals.
-* **ORCID:** In addition to disambiguating authors, OpenAlex also matches authors to their [ORCID](https://orcid.org) IDs.
-* **ROR:** We report [ROR](https://ror.org) IDs, the new standard which has replaced the old GRID system. Since there's a simple 1-to-1 mapping between them, it's easy to [transition from GRID to ROR.](https://ror.readme.io/docs/gridror-transition-faq)
+* **ORCID:** In addition to disambiguating authors, OpenAlex also matches authors to their [ORCID](https://orcid.org/) IDs.
+* **ROR:** We report [ROR](https://ror.org/) IDs, the new standard which has replaced the old GRID system. Since there's a simple 1-to-1 mapping between them, it's easy to [transition from GRID to ROR.](https://ror.readme.io/docs/gridror-transition-faq)
 * **REST API:** Because not everyone has the time and money to manage a 500GB dataset, we're launching a [free REST AP](https://docs.openalex.org/api)I that will support easy, expressive access to the dataset without the need for much technical knowledge.
 
 ## **3. Coverage comparison**
