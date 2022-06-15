@@ -75,20 +75,6 @@ At the time of writing, these are the `Author` partitions and the number of reco
 
 This reflects the creation of the dataset on 2021-12-30 and 145,678,664 combined updates and inserts since then - 1,352,773 of which were on 2022-01-02. Over time, the number of partitions will grow. If we make a change that affects all records, the partitions before the date of the change will disappear.
 
-### The `manifest` file&#x20;
-
-When we start writing a new `updated_date` partition for an entity, we'll delete that entity's `manifest` file. When we finish writing the partition, we'll recreate the manifest, including the newly-created objects. So if `manifest` is there, all the entities are there too.
-
-The file is in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-files-using-manifest.html) format. To use it as part of the update process for an Entity type (we'll keep using Authors as an example):
-
-1. Download `s3://openalex/data/authors/manifest.`
-2. Get the file list from the `url` property of each item in the `entries` list.
-3. Download any objects with an `updated_date` you haven't seen before.
-4. Download `s3://openalex/data/authors/manifest` again. If it hasn't changed since (1), no records moved around and any date partitions you downloaded are valid.
-5. Decompress the files you downloaded and parse one JSON `Author` per line. Insert or update into your database of choice, using [each entity's ID](../about-the-data/#the-openalex-id) as a primary key.
-
-If you’ve worked with dataset like this before and have a toolchain picked out, this may be all you need to know. If you want more detailed steps, proceed to [download the data](download-to-your-machine.md).
-
 ### Merged Entities
 
 {% hint style="info" %}
@@ -96,6 +82,8 @@ See [Merged Entities](../about-the-data/#merged-entities) for an explanation of 
 {% endhint %}
 
 Alongside the folders for the five Entity types - work, author, venue, institution, and concept - you'll find a sixth folder: merged\_ids. Within this folder you'll find the IDs of Entities that have been merged, along with the Entity IDs they were merged into.
+
+Merge operations are separated into files by date. Each dated file lists the IDs of Entities that were merged on that date, and names the Entities they were merged into.&#x20;
 
 ```
 /data/merged_ids/
@@ -109,7 +97,7 @@ Alongside the folders for the five Entity types - work, author, venue, instituti
     └── 2022-06-06.csv.gz
 ```
 
-Merge operations are separated into files by date. Each dated file lists the IDs of Entities that were merged on that date, and names the Entities they were merged into. For example, `data/merged_ids/authors/2022-06-07.csv.gz` begins:
+For example, `data/merged_ids/authors/2022-06-07.csv.gz` begins:
 
 ```
 merge_date,id,merge_into_id
@@ -119,3 +107,17 @@ merge_date,id,merge_into_id
 Like the Entities' _updated\_date_ partitions, you only ever need to download merge listing files that are new to you. Any later merges will appear in new files with later dates.
 
 We merge IDs Instead of deleting them to keep the IDs persistent. References to merged Entities within OpenAlex are replaced by the Entity they were merged into. In practice, you can simply delete these "merged away" Entities in your database. &#x20;
+
+### The `manifest` file&#x20;
+
+When we start writing a new `updated_date` partition for an entity, we'll delete that entity's `manifest` file. When we finish writing the partition, we'll recreate the manifest, including the newly-created objects. So if `manifest` is there, all the entities are there too.
+
+The file is in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-files-using-manifest.html) format. To use it as part of the update process for an Entity type (we'll keep using Authors as an example):
+
+1. Download `s3://openalex/data/authors/manifest.`
+2. Get the file list from the `url` property of each item in the `entries` list.
+3. Download any objects with an `updated_date` you haven't seen before.
+4. Download `s3://openalex/data/authors/manifest` again. If it hasn't changed since (1), no records moved around and any date partitions you downloaded are valid.
+5. Decompress the files you downloaded and parse one JSON `Author` per line. Insert or update into your database of choice, using [each entity's ID](../about-the-data/#the-openalex-id) as a primary key.
+
+If you’ve worked with dataset like this before and have a toolchain picked out, this may be all you need to know. If you want more detailed steps, proceed to [download the data](download-to-your-machine.md).
