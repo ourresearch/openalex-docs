@@ -95,7 +95,7 @@ If you’ve worked with dataset like this before and have a toolchain picked out
 See [Merged Entities](../about-the-data/#merged-entities) for an explanation of what Entity merging is and why we do it.&#x20;
 {% endhint %}
 
-Alongside the folders for the five Entity types - work, author, venue, institution, and concept - you'll find a sixth folder: merged\_ids. Within this folder you'll find the IDs of [Entities that have been merged](../about-the-data/#merged-entities), along with the Entity IDs they were merged into.
+Alongside the folders for the five Entity types - work, author, venue, institution, and concept - you'll find a sixth folder: merged\_ids. Within this folder you'll find the IDs of Entities that have been merged, along with the Entity IDs they were merged into.
 
 ```
 /data/merged_ids/
@@ -118,4 +118,4 @@ merge_date,id,merge_into_id
 
 Like the Entities' _updated\_date_ partitions, you only ever need to download merge listing files that are new to you. Any later merges will appear in new files with later dates.
 
-Merging entities is essentially a workaround that lets us delete Entities while keeping their IDs valid. References to merged Entities within OpenAlex are replaced by the Entity they were merged into. In practice, you can simply delete these "merged away" Entities in your database. &#x20;
+We merge IDs Instead of deleting them to keep the IDs persistent. References to merged Entities within OpenAlex are replaced by the Entity they were merged into. In practice, you can simply delete these "merged away" Entities in your database. &#x20;
