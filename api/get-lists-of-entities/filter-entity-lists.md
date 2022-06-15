@@ -55,7 +55,14 @@ This is particularly useful when you want to retrieve a many records by ID all a
 
 You can combine up to 50 values for a given filter in this way.&#x20;
 
-Using the pipe symbol to create an OR query between separate filters is not supported at this time (such as `institutions.country_code:fr|host_venue.issn:0957-1558`).\
+{% hint style="info" %}
+You can use OR for values _within_ a given filter, but not _between_ different filters. So this, for example, doesn't work and will return an error:&#x20;
+
+* Get either French works _or_ ones published in the journal with ISSN 0957-1558:\
+  [`https://api.openalex.org/works?filter=institutions.country_code:fr|host_venue.issn:0957-1558`](https://api.openalex.org/works?filter=institutions.country\_code:fr|host\_venue.issn:0957-1558)``
+{% endhint %}
+
+\
 
 
 ## `/works` filters
