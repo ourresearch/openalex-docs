@@ -81,7 +81,9 @@ This reflects the creation of the dataset on 2021-12-30 and 145,678,664 combined
 See [Merged Entities](../about-the-data/#merged-entities) for an explanation of what Entity merging is and why we do it.&#x20;
 {% endhint %}
 
-Alongside the folders for the five Entity types - work, author, venue, institution, and concept - you'll find a sixth folder: merged\_ids. Within this folder you'll find the IDs of Entities that have been merged, along with the Entity IDs they were merged into.
+Alongside the folders for the five Entity types - work, author, venue, institution, and concept - you'll find a sixth folder: merged\_ids. Within this folder you'll find the IDs of Entities that have been merged away, along with the Entity IDs they were merged into.
+
+Keep in mind that merging an Entity ID is a way of deleting it while keeping the ID persistent. In practice, you can just delete the entity it belongs to. It's not necessary to keep track of the date or which entity it was merged into.
 
 Merge operations are separated into files by date. Each dated file lists the IDs of Entities that were merged on that date, and names the Entities they were merged into.&#x20;
 
@@ -104,9 +106,9 @@ merge_date,id,merge_into_id
 2022-06-07,A2257618939,A2208157607
 ```
 
-Like the Entities' _updated\_date_ partitions, you only ever need to download merge listing files that are new to you. Any later merges will appear in new files with later dates.
+When processing this file, all you need to do is delete A2257618939. The effects of merging these authors, like crediting A2208157607 with their Works, are already reflected in the affected Entities.
 
-We merge IDs Instead of deleting them to keep the IDs persistent. References to merged Entities within OpenAlex are replaced by the Entity they were merged into. In practice, you can simply delete these "merged away" Entities in your database. &#x20;
+Like the Entities' _updated\_date_ partitions, you only ever need to download merge listing files that are new to you. Any later merges will appear in new files with later dates.&#x20;
 
 ### The `manifest` file&#x20;
 
