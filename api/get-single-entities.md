@@ -34,7 +34,7 @@ HTTP/1.1 301 MOVED PERMANENTLY
 Location: https://api.openalex.org/authors/A2208157607
 ```
 
-Most clients will handle this transparently; you'll get the data for author A2208157607 without knowing the redirecteven happened. If you have stored entity lists, you might as well replace the merged-away (deleted) ID to save the redirect next time.
+Most clients will handle this transparently; you'll get the data for author A2208157607 without knowing the redirec even happened. If you have stored Entity ID lists, you might as well replace the merged-away (deleted) ID to save the redirect next time.
 
 ## Supported IDs
 
