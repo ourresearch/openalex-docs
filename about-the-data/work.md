@@ -405,7 +405,7 @@ TODO: documentation coming soon!
 
 _List:_ [`Works.cited_by_count`](work.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many times this work was cited.&#x20;
 
-Any citations older than ten years old aren't included. Years with zero citations have been removed and it is the user's responsibility to add them to suit their use case.
+Any citations older than ten years old aren't included. Years with zero citations have been removed so you will need to add those in if you need them.
 
 ```json
 counts_by_year: [

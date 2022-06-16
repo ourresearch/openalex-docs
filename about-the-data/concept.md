@@ -191,7 +191,7 @@ related_concepts: [
 
 _List:_ The values of [`works_count`](concept.md#works\_count) and [`cited_by_count`](concept.md#cited\_by\_count) for _each_ of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works were tagged with this concept, and how many times _any_ work tagged with this concept got cited.
 
-Years with zero citations and zero works have been removed so you will need to add those back in  if you need them.
+Years with zero citations and zero works have been removed and it is the user's responsibility to add them to suit their use case.
 
 ```json
 counts_by_year: [
