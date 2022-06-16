@@ -45,7 +45,7 @@ Every [OpenAlex ID](./#the-openalex-id) is [persistent](https://en.wikipedia.org
 
 Sometimes we have two Entities, and thus two IDs, that refer to the same person or thing in the real world. This poses a problem: If we learn that Entities A and B refer to the same thing, for example if two author IDs refer to the same person, what do we do with them? We can't delete one since both IDs need to work forever, but it needs to be clear that both IDs represent the same person.
 
-Our solution to this problem to "merge" the IDs. If authors A1234 and A5678 are the same person, and we decide to keep A5678 as this person's canonical ID, we change all internal references to A1234 to A5678 and update all relevant data, for example A5678 will be credited with A1234's Works. Inside OpenAlex, A1 effectively _is_ deleted, but we we have to take a few extra steps to keep A1 working [in our API](../api/get-single-entities.md#merged-entity-ids) and in any [copies of the snapshot](../download-snapshot/snapshot-data-format.md#merged-entities).
+Our solution to this problem to "merge" the IDs. If authors A1234 and A5678 are the same person, and we decide to keep A5678 as this person's canonical ID, we change all internal references to A1234 to A5678 and update all relevant data, for example A5678 will be credited with A1234's Works. Inside OpenAlex, A1234 effectively _is_ deleted, but we we have to take a few extra steps to keep A1234 working [in our API](../api/get-single-entities.md#merged-entity-ids) and in any [copies of the snapshot](../download-snapshot/snapshot-data-format.md#merged-entities).
 
 ## Canonical External IDs
 
