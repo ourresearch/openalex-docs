@@ -143,7 +143,7 @@ x_concepts: [
 
 _List:_ [`Author.works_count`](author.md#works\_count) and [`Author.cited_by_count`](author.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many works this author published, and how many times they got cited.&#x20;
 
-Any works or citations older than ten years old aren't included. Years with zero works and zero citations have been removed so you will need to add those back in manually if you need them.
+Any works or citations older than ten years old aren't included. Years with zero works and zero citations have been removed and it is the user's responsibility to add them to suit their use case.
 
 ```json
 counts_by_year: [
