@@ -213,7 +213,7 @@ associated_institutions: [
 
 _List:_ [`works_count`](institution.md#works\_count) and [`cited_by_count`](institution.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this venue started hosting, and how many times _any_ work in this venue got cited.
 
-Years with zero citations and zero works have been removed and it is the user's responsibility to add them to suit their use case.
+Years with zero citations and zero works have been removed so you will need to add those back in if you need them.
 
 ```json
 counts_by_year: [
