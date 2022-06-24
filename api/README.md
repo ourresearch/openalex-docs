@@ -39,7 +39,7 @@ The common pool has slower and less consistent response times. It's a less good 
 
 ## Rate limits
 
-The API doesn't have rate limits. However, if you need more than 100,000 calls per day, please drop us a line at team@ourresearch.org to let us know you'll be hitting the API extra hard.
+The API doesn't have rate limits. However, if you need more than 100,000 calls per day, please drop us a line at support@openalex.org to let us know you'll be hitting the API extra hard.
 
 ## Paging
 

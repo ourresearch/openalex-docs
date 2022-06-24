@@ -1,6 +1,6 @@
 # Welcome!
 
-OpenAlex is a [fully open](license.md) catalog of the global research system. It's named after the [ancient Library of Alexandria](https://en.wikipedia.org/wiki/Library\_of\_Alexandria) and made by the nonprofit [OurResearch](https://ourresearch.org).
+OpenAlex is a [fully open](license.md) catalog of the global research system. It's named after the [ancient Library of Alexandria](https://en.wikipedia.org/wiki/Library\_of\_Alexandria) and made by the nonprofit [OurResearch](https://ourresearch.org/).
 
 ## Data
 
@@ -26,11 +26,11 @@ OpenAlex data is completely free and open, provided under a [CC0 license](licens
 
 ## Contact
 
-For tech support and bug reports, please email us at [team@ourresearch.org](mailto:team@ourresearch.org). You can follow us on Twitter at [@OpenAlex\_org](https://twitter.com/openalex\_org). For announcements and discussion, join the [OpenAlex Users newsgroup](https://groups.google.com/g/openalex-users).
+For tech support and bug reports, please email us at [support@openalex.org](mailto:support@openalex.org). You can follow us on Twitter at [@OpenAlex\_org](https://twitter.com/openalex\_org). For announcements and discussion, join the [OpenAlex Users newsgroup](https://groups.google.com/g/openalex-users).
 
 ## Funding
 
-OpenAlex is made with generous support from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk).
+OpenAlex is made with generous support from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk/).
 
 ## Citation
 

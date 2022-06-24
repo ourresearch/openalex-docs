@@ -3,7 +3,7 @@
 OpenAlex is still very new, and so you'll encounter some bugs as you look through the data. This page documents the ones we currently know about.&#x20;
 
 {% hint style="info" %}
-&#x20;Please report any other issues you find by emailing us at **team@ourresearch.org.**
+&#x20;Please report any other issues you find by emailing us at **support@openalex.org**
 {% endhint %}
 
 ## Some strings not yet matched to entities.
