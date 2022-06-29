@@ -4,7 +4,7 @@ Concepts are abstract ideas that works are about.
 
 OpenAlex indexes about 65k concepts. The [Canonical External ID](./#canonical-external-ids) for OpenAlex concepts is the Wikidata ID, and each of our concepts has one, because all OpenAlex concepts are also Wikidata concepts.
 
-Concepts are hierarchical, like a tree. There are 19 root-level concepts, and six layers of descendents branching out from them, containing about 65 thousand concepts all told. This concept tree is a modified version of [the one created by MAG](https://arxiv.org/abs/1805.12216). You can view all the concepts and their position in the tree [as a spreadsheet here](https://docs.google.com/spreadsheets/d/1LBFHjPt4rj\_9r0t0TTAlT68NwOtNH8Z21lBMsJDMoZg/edit#gid=1473310811).
+Concepts are hierarchical, like a tree. There are 19 root-level concepts, and six layers of descendents branching out from them, containing about 65 thousand concepts all told. This concept tree is a modified version of [the one created by MAG](https://arxiv.org/abs/1805.12216). You can view all the concepts and their position in the tree [as a spreadsheet here](https://docs.google.com/spreadsheets/d/1LBFHjPt4rj\_9r0t0TTAlT68NwOtNH8Z21lBMsJDMoZg/edit#gid=1473310811). About 85% of works are tagged with at least one concept (here's the [breakdown of concept counts per work](https://docs.google.com/spreadsheets/d/17DoJjyl1XVNZdVWs7fUy91z69U2tD8qtnBsaqJ-Zigo/edit#gid=0)).
 
 Each work is tagged with multiple concepts, based on its title and abstract. The tagging is done using an automated classifier that was trained on MAG’s corpus; you can read more about the development and operation of this classifier in [Automated concept tagging for OpenAlex, an open index of scholarly articles.](https://docs.google.com/document/d/1OgXSLriHO3Ekz0OYoaoP\_h0sPcuvV4EqX7VgLLblKe4/edit) You can also implement the classifier yourself using [our models and code](https://github.com/ourresearch/openalex-concept-tagging).
 
@@ -191,7 +191,7 @@ related_concepts: [
 
 _List:_ The values of [`works_count`](concept.md#works\_count) and [`cited_by_count`](concept.md#cited\_by\_count) for _each_ of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works were tagged with this concept, and how many times _any_ work tagged with this concept got cited.
 
-Years with zero citations and zero works have been removed and it is the user's responsibility to add them to suit their use case.
+Years with zero citations and zero works have been removed so you will need to add those back in  if you need them.
 
 ```json
 counts_by_year: [
