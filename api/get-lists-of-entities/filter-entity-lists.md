@@ -90,6 +90,10 @@ You can filter using these attributes of the `Work` entity object (click each on
 * ``[`is_retracted`](../../about-the-data/work.md#is\_retracted)``
 * ``[`concepts.id`](../../about-the-data/work.md#concepts)``
 * ``[`concepts.wikidata`](../../about-the-data/work.md#concepts)``
+* ``[`doi`](../../about-the-data/work.md#title)``
+* ``[`ids.mag`](../../about-the-data/work.md#ids) (alias: `mag`)
+* ``[`ids.pmid`](../../about-the-data/work.md#ids) (alias: `pmid`)
+* ``[`ids.pmcid`](../../about-the-data/work.md#ids) (alias: `pmcid`)
 * ``[`alternate_host_venues.license`](../../about-the-data/work.md#alternate\_host\_venues)``
 * ``[`alternate_host_venues.version`](../../about-the-data/work.md#alternate\_host\_venues)``
 * ``[`alternate_host_venues.venue_id`](../../about-the-data/work.md#alternate\_host\_venues)``
