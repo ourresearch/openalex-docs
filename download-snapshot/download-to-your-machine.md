@@ -12,10 +12,16 @@ The easiest way to get the files is with the Amazon Web Services Command Line In
 
 You can also browse the snapshot files using the AWS console here: [https://s3.console.aws.amazon.com/s3/buckets/openalex](https://s3.console.aws.amazon.com/s3/buckets/openalex). You need to be logged into an Amazon account to use the console, but it’s still free. The CLI will work without an account.
 
-This shell command will copy everything in the `openalex` S3 bucket to a local folder named `openalex-snapshot`. It'll take up about 350GB of disk space.
+This shell command will copy everything in the `openalex` S3 bucket to a local folder named `openalex-snapshot`. It'll take up roughly 300GB of disk space.
 
 ```bash
 aws s3 sync "s3://openalex" "openalex-snapshot" --no-sign-request
+```
+
+The size of the snapshot will change over time. You can check the current size before downloading by looking at the output of:
+
+```bash
+aws s3 ls --summarize --human-readable --no-sign-request --recursive "s3://openalex/"
 ```
 
 You should get a file structure like this (edited for length - there are more objects in the actual bucket):
