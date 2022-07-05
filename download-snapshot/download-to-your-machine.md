@@ -15,7 +15,7 @@ You can also browse the snapshot files using the AWS console here: [https://s3.c
 This shell command will copy everything in the `openalex` S3 bucket to a local folder named `openalex-snapshot`. It'll take up about 350GB of disk space.
 
 ```bash
-aws s3 sync 's3://openalex' 'openalex-snapshot' --no-sign-request
+aws s3 sync "s3://openalex" "openalex-snapshot" --no-sign-request
 ```
 
 You should get a file structure like this (edited for length - there are more objects in the actual bucket):
