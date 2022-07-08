@@ -41,6 +41,11 @@ By default, the returned result set includes only records that satisfy _all_ the
 * Get all the works that have an author from France _and_ an author from the UK:\
   [`https://api.openalex.org/works?filter=institutions.country_code:fr,institutions.country_code:gb`](https://api.openalex.org/works?filter=institutions.country\_code:fr,institutions.country\_code:gb)``
 
+You can repeat a filter to create an AND query within a single attribute. Example:
+
+* Get all works that have concepts "Medicine" _and_ "Artificial Intelligence":\
+  [`https://api.openalex.org/works?filter=concepts.id:C71924100,concepts.id:C154945302`](https://api.openalex.org/works?filter=concepts.id:C71924100,concepts.id:C154945302)``
+
 ### Addition (OR)
 
 Use the pipe symbol (`|`) to input lists of values such that _any_ of the values can be satisfied--in other words, when you separate filter values with a pipe, they'll be combined as an `OR` query. Example:
