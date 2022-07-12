@@ -2,7 +2,7 @@
 
 Here are the details on where the OpenAlex data lives and how it's structured.
 
-* All the data is stored in [Amazon S3](https://aws.amazon.com/s3/), in the `openalex` bucket.
+* All the data is stored in [Amazon S3](https://aws.amazon.com/s3/), in the [`openalex`](https://openalex.s3.amazonaws.com/browse.html) bucket.
 * The data files are gzip-compressed [JSON Lines](https://jsonlines.org/), one row per entity.
 * The bucket contains one prefix (folder) for each entity type: work, author, venue, institution, and concept.
 * Records are partitioned by [updated\_date](../about-the-data/work.md#updated\_date). Within each entity type prefix, each object (file) is further prefixed by this date. For example, if an [`Author`](../about-the-data/author.md) has an updated\_date of 2021-12-30 it will be prefixed`/data/authors/updated_date=2021-12-30/`.

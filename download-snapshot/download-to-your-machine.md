@@ -10,7 +10,7 @@ Before you load the snapshot contents to your database, you’ll need to get the
 
 The easiest way to get the files is with the Amazon Web Services Command Line Interface (AWS CLI). Sample commands in this documentation will use the AWS CLI. You can find instructions for installing it on your system here: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-You can also browse the snapshot files using the AWS console here: [https://s3.console.aws.amazon.com/s3/buckets/openalex](https://s3.console.aws.amazon.com/s3/buckets/openalex). You need to be logged into an Amazon account to use the console, but it’s still free. The CLI will work without an account.
+You can also browse the snapshot files using the AWS console here: [https://openalex.s3.amazonaws.com/browse.html](https://openalex.s3.amazonaws.com/browse.html). This browser and the CLI will work without an account.
 
 This shell command will copy everything in the `openalex` S3 bucket to a local folder named `openalex-snapshot`. It'll take up roughly 300GB of disk space.
 
