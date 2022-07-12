@@ -13,6 +13,12 @@ Here are the details on where the OpenAlex data lives and how it's structured.
 
 The structure of each entity type is documented here: [Work](../about-the-data/work.md), [Author](../about-the-data/author.md), [Venue](../about-the-data/venue.md), [Institution](../about-the-data/institution.md), and [Concept](../about-the-data/concept.md).
 
+#### Visualization of the entity\_type/updated\_date folder structure
+
+This is a screenshot showing the "leaf" nodes of one (entity type, updated date folder). You can also click around the browser links above to get a sense of the snapshot's structure.&#x20;
+
+![](<../.gitbook/assets/Screen Shot 2022-07-12 at 12.42.43 PM.png>)
+
 ### Downloading updated Entities
 
 Once you have a copy of the snapshot, you'll probably want to keep it up to date. The `updated_date` partitions make this easy, but the way they work may be unfamiliar. Unlike a set of dated snapshots that each contain the full dataset as of a certain date, each partition contains the records that last changed on that date.

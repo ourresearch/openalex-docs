@@ -31,7 +31,7 @@ Entity information can be displayed on a web page, like [https://explore.openale
 #### **How to get a web page**:&#x20;
 
 * In a web browser, click OpenAlex ID or paste it into your location bar. Try clicking [https://openalex.org/W2741809807](https://openalex.org/W2741809807), for example.
-* In any client - [cURL](https://curl.se), [Requests](https://docs.python-requests.org/en/latest/), web browsers and so on - don't request JSON in any of the ways outlined below.
+* In any client - [cURL](https://curl.se/), [Requests](https://docs.python-requests.org/en/latest/), web browsers and so on - don't request JSON in any of the ways outlined below.
 
 ### 2. A [JSON](https://json.org) object, easy for computers to read ([`application/json`](https://www.iana.org/assignments/media-types/application/json))
 
@@ -39,7 +39,7 @@ Entity information can be returned in JSON format, as from [https://api.openalex
 
 #### **How to get JSON:**
 
-* Ask for `application/json` in your request's [Accept header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1). For example, using [cURL](https://curl.se):&#x20;
+* Ask for `application/json` in your request's [Accept header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1). For example, using [cURL](https://curl.se/):&#x20;
   * &#x20;`curl -L -H 'Accept: application/json' 'https://openalex.org/W2741809807'`
 * Add `.json` to the OpenAlex ID of the Entity. For example, [https://openalex.org/W2741809807.json](https://openalex.org/W2741809807.json) will give you a JSON object for [`Work`](about-the-data/work.md) W2741809807, without regard to the client you're using or any request headers you send.
 

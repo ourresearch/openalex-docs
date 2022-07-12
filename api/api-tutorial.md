@@ -2,7 +2,7 @@
 
 This page will demonstrate using the API's [filtering](get-lists-of-entities/#filter) and [grouping](get-groups-of-entities.md) functions to answer questions.
 
-We'll use [Python](https://www.python.org) and [requests](https://pypi.org/project/requests/) in these examples. You can use the code as a starting point, or just [read the API results in your browser](./#calling-the-api-in-your-browser) and follow along. How to build the API requests is the important part - you probably won't learn any new Python tricks.&#x20;
+We'll use [Python](https://www.python.org/) and [requests](https://pypi.org/project/requests/) in these examples. You can use the code as a starting point, or just [read the API results in your browser](./#calling-the-api-in-your-browser) and follow along. How to build the API requests is the important part - you probably won't learn any new Python tricks.&#x20;
 
 ### Example: Get the percentage of recent journal articles from a given institution that are open access
 

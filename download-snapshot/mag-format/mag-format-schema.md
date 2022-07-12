@@ -165,7 +165,7 @@ Base table for Journals (mag/Journals.txt)
 | Issn             | varchar   | UPDATED; the [ISSN-L](https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number#Linking\_ISSN) for the journal |
 | Issns            | varchar   | 🔥NEW; JSON list of all ISSNs for this journal (example: '\["1469-5073","0016-6723"]' )                                    |
 | IsOa             | boolean   | 🔥NEW; TRUE when the journal is 100% OA                                                                                    |
-| IsInDoaj         | boolean   | 🔥NEW; TRUE when the journal is in [DOAJ](https://doaj.org)                                                                |
+| IsInDoaj         | boolean   | 🔥NEW; TRUE when the journal is in [DOAJ](https://doaj.org/)                                                               |
 | Publisher        | varchar   |                                                                                                                            |
 | Webpage          | varchar   |                                                                                                                            |
 | PaperCount       | bigint    |                                                                                                                            |
