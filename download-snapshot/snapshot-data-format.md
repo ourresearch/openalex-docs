@@ -15,7 +15,7 @@ The structure of each entity type is documented here: [Work](../about-the-data/w
 
 #### Visualization of the entity\_type/updated\_date folder structure
 
-This is a screenshot showing the "leaf" nodes of one (entity type, updated date folder). You can also click around the browser links above to get a sense of the snapshot's structure.&#x20;
+This is a screenshot showing the "leaf" nodes of one _entity type_, _updated date_ folder. You can also click around the browser links above to get a sense of the snapshot's structure.&#x20;
 
 ![](<../.gitbook/assets/Screen Shot 2022-07-12 at 12.42.43 PM.png>)
 

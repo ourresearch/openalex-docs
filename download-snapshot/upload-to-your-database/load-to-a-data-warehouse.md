@@ -17,6 +17,10 @@ This project, kindly shared by [@DShvadron](https://twitter.com/DShvadron), take
 Separating the Entity data into multiple columns takes more work up front but lets you write queries that are faster, simpler, and often [cheaper](https://cloud.google.com/bigquery/pricing#on\_demand\_pricing).&#x20;
 {% endhint %}
 
+{% hint style="info" %}
+[Snowflake](https://www.snowflake.com/) users can connect to a ready-to-query data set on the marketplace, helpfully maintailed by [Util](https://www.util.co/) - [https://app.snowflake.com/marketplace/listing/GZT0ZOMX4O7](https://app.snowflake.com/marketplace/listing/GZT0ZOMX4O7)
+{% endhint %}
+
 ## **Step 1: Create a BigQuery Project and Dataset**
 
 In BigQuery, you need a [Project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) and [Dataset](https://cloud.google.com/bigquery/docs/datasets-intro) to hold your tables. We’ll call the project “openalex-demo” and the dataset “openalex”. Follow the linked instructions to create the Project, then create the dataset inside it:
