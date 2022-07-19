@@ -4,6 +4,10 @@ This page will demonstrate using the API's [filtering](get-lists-of-entities/#fi
 
 We'll use [Python](https://www.python.org/) and [requests](https://pypi.org/project/requests/) in these examples. You can use the code as a starting point, or just [read the API results in your browser](./#calling-the-api-in-your-browser) and follow along. How to build the API requests is the important part - you probably won't learn any new Python tricks.&#x20;
 
+{% hint style="info" %}
+There's now a [Jupyter notebook version of this tutorial!](https://github.com/ourresearch/openalex-api-tutorials/blob/develop/notebooks/institutions/oa-percentage.ipynb) And we'll be adding more Jupyter notebook tutorials soon.
+{% endhint %}
+
 ### Example: Get the percentage of recent journal articles from a given institution that are open access
 
 More specifically, of the works that:
