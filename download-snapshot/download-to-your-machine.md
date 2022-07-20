@@ -18,6 +18,10 @@ This shell command will copy everything in the `openalex` S3 bucket to a local f
 aws s3 sync "s3://openalex" "openalex-snapshot" --no-sign-request
 ```
 
+{% hint style="warning" %}
+If you download the snapshot into an existing folder, you'll need to use the [`aws s3 sync`](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html) `--delete` flag to remove files from any previous downloads. You can also remove the contents of destination folder manually. If you don't, you will see duplicate Entities that have moved from one file to another between snapshot updates.
+{% endhint %}
+
 The size of the snapshot will change over time. You can check the current size before downloading by looking at the output of:
 
 ```bash
