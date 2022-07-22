@@ -120,6 +120,14 @@ Returns: works whose[`display_name`](../../about-the-data/work.md#display\_name)
 For most cases, you should use the [`search` parameter](search-entity-lists.md#the-search-parameter) instead of this filter, because it uses a better search algorithm and searches over abstracts as well as titles.
 {% endhint %}
 
+#### `abstract.search`
+
+Value: a search string
+
+Returns: works whose abstract includes the given string.  See [the search filter](search-entity-lists.md#the-search-filter) for details on the search algorithm used. &#x20;
+
+* Get works with abstracts that mention "artificial intelligence": [`https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence`](https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence)``
+
 #### `raw_affiliation_string.search`
 
 Value: a search string
