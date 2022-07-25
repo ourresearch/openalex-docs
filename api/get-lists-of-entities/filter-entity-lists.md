@@ -97,6 +97,7 @@ You can filter using these attributes of the `Work` entity object (click each on
 * ``[`concepts.wikidata`](../../about-the-data/work.md#concepts)``
 * ``[`doi`](../../about-the-data/work.md#title)``
 * ``[`ids.mag`](../../about-the-data/work.md#ids) (alias: `mag`)
+* &#x20;[`ids.openalex`](../../about-the-data/work.md#ids) (alias: `openalex`)
 * ``[`ids.pmid`](../../about-the-data/work.md#ids) (alias: `pmid`)
 * ``[`ids.pmcid`](../../about-the-data/work.md#ids) (alias: `pmcid`)
 * ``[`alternate_host_venues.license`](../../about-the-data/work.md#alternate\_host\_venues)``
@@ -124,7 +125,7 @@ For most cases, you should use the [`search` parameter](search-entity-lists.md#t
 
 Value: a search string
 
-Returns: works whose abstract includes the given string.  See [the search filter](search-entity-lists.md#the-search-filter) for details on the search algorithm used. &#x20;
+Returns: works whose abstract includes the given string. See [the search filter](search-entity-lists.md#the-search-filter) for details on the search algorithm used. &#x20;
 
 * Get works with abstracts that mention "artificial intelligence": [`https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence`](https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence)``
 
