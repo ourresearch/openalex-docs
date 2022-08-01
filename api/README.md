@@ -39,7 +39,9 @@ The common pool has slower and less consistent response times. It's a less good 
 
 ## Rate limits
 
-The API doesn't have rate limits. However, if you need more than 100,000 calls per day, please drop us a line at support@openalex.org to let us know you'll be hitting the API extra hard.
+The API doesn't have daily rate limits. However, there is a burst rate limit of 10 requests per second. So calling multiple requests at the same time could lead to errors with code 429. If you're calling the API with a list of IDs, using the [OR syntax](get-lists-of-entities/filter-entity-lists.md#addition-or) will save a lot of time and likely reduce any 429 errors.&#x20;
+
+If you need more than 100,000 calls per day, please drop us a line at support@openalex.org to let us know you'll be hitting the API extra hard.
 
 ## Paging
 
