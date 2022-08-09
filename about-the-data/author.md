@@ -63,7 +63,7 @@ works_count: 38
 ```
 
 {% hint style="info" %}
-This is updated a couple times per day. So the count may be slightly different than what's actually in works when viewed [like this](https://api.openalex.org/works?filter=author.id:A2151238091).&#x20;
+This is updated a couple times per day. So the count may be slightly different than what's in works when viewed [like this](https://api.openalex.org/works?filter=author.id:A2151238091).&#x20;
 {% endhint %}
 
 ### `cited_by_count`
