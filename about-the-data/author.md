@@ -62,6 +62,10 @@ _Integer:_ The number of :page\_facing\_up: [Works](work.md) this this author ha
 works_count: 38 
 ```
 
+{% hint style="info" %}
+This is updated a couple times per day. So the count may be slightly different than what's actually in works when viewed [like this](https://api.openalex.org/works?filter=author.id:A2151238091).&#x20;
+{% endhint %}
+
 ### `cited_by_count`
 
 _Integer:_ The total number :page\_facing\_up: [Works](work.md) that cite a work this author has created.
