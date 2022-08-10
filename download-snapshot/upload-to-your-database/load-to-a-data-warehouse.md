@@ -18,7 +18,7 @@ Separating the Entity data into multiple columns takes more work up front but le
 {% endhint %}
 
 {% hint style="info" %}
-[Snowflake](https://www.snowflake.com/) users can connect to a ready-to-query data set on the marketplace, helpfully maintailed by [Util](https://www.util.co/) - [https://app.snowflake.com/marketplace/listing/GZT0ZOMX4O7](https://app.snowflake.com/marketplace/listing/GZT0ZOMX4O7)
+[Snowflake](https://www.snowflake.com/) users can connect to a ready-to-query data set on the marketplace, helpfully maintained by [Util](https://www.util.co/) - [https://app.snowflake.com/marketplace/listing/GZT0ZOMX4O7](https://app.snowflake.com/marketplace/listing/GZT0ZOMX4O7)
 {% endhint %}
 
 ## **Step 1: Create a BigQuery Project and Dataset**
