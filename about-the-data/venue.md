@@ -72,7 +72,7 @@ cited_by_count: 133702
 
 ### `is_oa`
 
-_Boolean:_ **todo**&#x20;
+_Boolean:_ Whether this is currently a [Gold](https://en.wikipedia.org/wiki/Open\_access#Colour\_naming\_system) or [Diamond](https://en.wikipedia.org/wiki/Diamond\_open\_access) open access, where all newly published Works are available for free under an open licence.
 
 ```json
 is_oa: true 
@@ -80,7 +80,7 @@ is_oa: true
 
 ### `is_in_doaj`
 
-_Boolean:_ **todo**&#x20;
+_Boolean:_ Whether this is a journal listed in the [Directory of Open Access Journals](https://doaj.org/) (DOAJ). ****&#x20;
 
 ```json
 is_in_doaj: true 
@@ -88,7 +88,7 @@ is_in_doaj: true
 
 ### `homepage_url`
 
-_String:_ **todo**&#x20;
+_String:_ The starting page for navigating the contents of this venue; the homepage for this venue's website.
 
 ```json
 homepage_url: "http://www.peerj.com/" 
