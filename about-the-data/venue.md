@@ -72,7 +72,7 @@ cited_by_count: 133702
 
 ### `is_oa`
 
-_Boolean:_ Whether this is currently a [Gold](https://en.wikipedia.org/wiki/Open\_access#Colour\_naming\_system) or [Diamond](https://en.wikipedia.org/wiki/Diamond\_open\_access) open access, where all newly published Works are available for free under an open licence.
+_Boolean:_ Whether this is currently fully-open-access venue. This could be `true` for a preprint repository where everything uploaded is free to read, or for a [Gold](https://en.wikipedia.org/wiki/Open\_access#Colour\_naming\_system) or [Diamond](https://en.wikipedia.org/wiki/Diamond\_open\_access) open access journal, where all newly published Works are available for free under an open license.
 
 ```json
 is_oa: true 
