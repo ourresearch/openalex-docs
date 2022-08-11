@@ -52,8 +52,6 @@ level: 2
 
 _String:_ A brief description of this concept.
 
-**todo**
-
 ```json
 description: "study of alternative metrics for analyzing and informing scholarship"
 ```
@@ -122,7 +120,7 @@ image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/
 
 ### `international`
 
-_Object:_ **todo**&#x20;
+_Object:_ This concept's display name in many languages, derived from article titles on each language's wikipedia. See the [Wikidata entry](https://www.wikidata.org/wiki/Q137496#sitelinks-wikipedia) for "Java Bytecode" for example source data.
 
 ```json
 international: {
