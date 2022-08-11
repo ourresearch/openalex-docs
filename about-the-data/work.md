@@ -109,10 +109,10 @@ ids: {
 
 _Object:_ A [`HostVenue`](work.md#the-hostvenue-object) object describing how and where this work is being hosted online.
 
-{% hint style="info" %}
-The `host_venue` is important because it describes where you can find the "best" (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work.
+The `host_venue` is where you can find the best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work. For a peer-reviewed journal article, the best `host_venue` would be a full text published version, hosted by the publisher at the article's DOI URL.
 
-However, some records don't have a `host_venue`, because they were inherited from [MAG](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), which implemented a less complete provenance chain. We're gradually filling in these missing host venues.
+{% hint style="info" %}
+Some records don't have a `host_venue`, because they were inherited from [MAG](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), which implemented a less complete provenance chain. We're gradually filling in these missing host venues.
 {% endhint %}
 
 ```json
