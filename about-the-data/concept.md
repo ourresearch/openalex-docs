@@ -42,9 +42,7 @@ display_name: "Altmetrics"
 
 ### `level`
 
-_Integer:_ The level in the concept tree where this concept lives.
-
-**todo**
+_Integer:_ The level in the concept tree where this concept lives. Lower-level concepts are more general, and higher-level concepts are more specific. [Computer Science](https://openalex.org/C41008148) has a level of 0; [Java Bytecode](https://openalex.org/C2777472213) has a level of 5. Level 0 concepts have no ancestors and level 5 concepts have no descendants.
 
 ```json
 level: 2
