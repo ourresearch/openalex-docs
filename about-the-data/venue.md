@@ -74,6 +74,8 @@ cited_by_count: 133702
 
 _Boolean:_ Whether this is currently fully-open-access venue. This could be `true` for a preprint repository where everything uploaded is free to read, or for a [Gold](https://en.wikipedia.org/wiki/Open\_access#Colour\_naming\_system) or [Diamond](https://en.wikipedia.org/wiki/Diamond\_open\_access) open access journal, where all newly published Works are available for free under an open license.
 
+We say "currently" because the status of a Venue can change over time. It's common for journals to "flip" to Gold OA, after which they may make only future articles open or also open their back catalogs. It's entirely possible for a Venue to say `is_oa: true`, but for an article from last year to require a subscription.
+
 ```json
 is_oa: true 
 ```
