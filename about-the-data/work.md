@@ -303,7 +303,7 @@ mesh: [
 
 ### `alternate_host_venues`
 
-_List:_ List of [`HostVenue`](work.md#the-hostvenue-object) objects describing places this work lives. This work's _primary_ hosting venue isn't in this list; it's at [`host_venue`](work.md#host\_venue).&#x20;
+_List:_ List of [`HostVenue`](work.md#the-hostvenue-object) objects describing places this work lives. They're called "alternate" because the list doesn't include the work's canonical location; that's in [`host_venue`](work.md#host\_venue).&#x20;
 
 {% hint style="danger" %}
 **Known Issue**: Some venues in this list are missing the `id` field! This should be fixed by February 2022.
