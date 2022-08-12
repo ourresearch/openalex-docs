@@ -191,6 +191,19 @@ Returns: works with [`publication_date`](../../about-the-data/work.md#publicatio
 * Get works published on or _before_ March 14th, 2001:\
   [`https://api.openalex.org/works?filter=to_publication_date:2001-03-14`](https://api.openalex.org/works?filter=to\_publication\_date:2001-03-14)``
 
+#### `has_oa_accepted_or_published_version`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works with at least one [`host_venue`](../../about-the-data/work.md#host\_venue) or [`alternate_host_venue`](../../about-the-data/work.md#alternate\_host\_venues) where [`is_oa`](../../about-the-data/work.md#is\_oa-1)= true and [`version`](../../about-the-data/work.md#version) is acceptedVersion or publishedVersion. For Works that undergo peer review, like journal articles, this means there is a peer-reviewed OA copy somewhere. For some items, like books, a published version doesn't imply peer review, so they aren't quite synonymous.
+
+* Get Works with an OA accepted or published copy\
+  [`https://api.openalex.org/works?filter=has_oa_accepted_or_published_version:true`](https://api.openalex.org/works?filter=has\_oa\_accepted\_or\_published\_version:true)
+
+#### has\_oa\_submitted\_version
+
+Value: a Boolean (`true` or `false`)
+
 ## `/authors` filters
 
 ### `/authors` attribute filters
