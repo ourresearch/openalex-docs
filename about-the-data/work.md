@@ -395,6 +395,12 @@ abstract_inverted_index: {
 }
 ```
 
+#### Abstracts coverage
+
+We're more likely to have abstracts for newer articles. Over 60% of works in 2022 have abstracts compared to 45% for works older than 2000.
+
+![](<../.gitbook/assets/OpenAlex works with abstracts by year (percent).svg>)
+
 ### `cited_by_api_url`
 
 {% hint style="warning" %}
