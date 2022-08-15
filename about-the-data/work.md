@@ -395,9 +395,9 @@ abstract_inverted_index: {
 }
 ```
 
-#### Coverage
+#### Abstract inverted index coverage
 
-Newer works are more likely to have an abstract inverted index. Over 60% of works in 2022 have abstracts compared to 45% for works older than 2000.
+Newer works are more likely to have an abstract inverted index. For example, over 60% of works in 2022 have abstract data, compared to 45% for works older than 2000. Full chart is below:
 
 ![](<../.gitbook/assets/OpenAlex works with abstracts by year (percent) (1).svg>)
 
