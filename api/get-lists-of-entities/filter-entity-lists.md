@@ -137,6 +137,15 @@ Returns: works that have at least one [`raw_affiliation_string`](../../about-the
 
 * Get works with the words _Department of Political Science, University of Amsterdam_ somewhere in at least one author's  `raw_affiliation_string`: [`https://api.openalex.org/works?filter=raw_affiliation_string.search:department%20of%20political%20science%20university%20of%amsterdam`](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)``
 
+#### `has_abstract`&#x20;
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works that have or lack an abstract, depending on the given value.
+
+* Get the works that have abstracts:\
+  [`https://api.openalex.org/works?filter=has_abstract:true`](https://api.openalex.org/works?filter=has\_abstract:true) ``&#x20;
+
 #### `has_doi`&#x20;
 
 Value: a Boolean (`true` or `false`)
