@@ -100,7 +100,7 @@ Instead, download everything at once, using the [data snapshot](../download-snap
 
 ## Aliases
 
-Many filters have an alias to make using OpenAlex even easier (see [filters](get-lists-of-entities/filter-entity-lists.md#works-attribute-filters) for details). Two of the entities have aliases as well, with [/authors](https://api.openalex.org/authors) available as [/people](https://api.openalex.org/people) and [/venues](https://api.openalex.org/venues) available as [/journals](https://api.openalex.org/journals).
+Many filters have an alias to make using OpenAlex even easier (see [filters](get-lists-of-entities/filter-entity-lists.md#works-attribute-filters) for details). Two of the entities have aliases as well, with [`/authors`](https://api.openalex.org/authors) available as [`/people`](https://api.openalex.org/people) and [`/venues`](https://api.openalex.org/venues) available as [`/journals`](https://api.openalex.org/journals).
 
 ## Usage tips
 
