@@ -98,6 +98,10 @@ This second page of results will have a new value for `meta.next_cursor`. You'll
 Instead, download everything at once, using the [data snapshot](../download-snapshot/). It's free, easy, fast, and you get all the results in same format you'd get from the API.
 {% endhint %}
 
+## Aliases
+
+Many filters have an alias to make using OpenAlex even easier (see [filters](get-lists-of-entities/filter-entity-lists.md#works-attribute-filters) for details). Two of the entities have aliases as well, with [/authors](https://api.openalex.org/authors) available as [/people](https://api.openalex.org/people) and [/venues](https://api.openalex.org/venues) available as [/journals](https://api.openalex.org/journals).
+
 ## Usage tips
 
 ### Calling the API in your browser
