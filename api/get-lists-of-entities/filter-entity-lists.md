@@ -258,10 +258,6 @@ Returns: authors that have or lack an [orcid](../../about-the-data/author.md#orc
 * Get the authors that have an ORCID:\
   ``[`https://api.openalex.org/authors?filter=has_orcid:true`](https://api.openalex.org/authors?filter=has\_orcid:true)
 
-### `/authors` alias
-
-You can use `/people` as an alias for `/authors`. &#x20;
-
 ## `/venues` filters
 
 ### `/venues` attribute filters
@@ -301,10 +297,6 @@ Returns: venues that have or lack an [ISSN](../../about-the-data/venue.md#issn),
 
 * Get venues without ISSNs:\
   [`https://api.openalex.org/venues?filter=has_issn:false`](https://api.openalex.org/venues?filter=has\_issn:false)
-
-### `/venues` alias
-
-You can use `/journals` as an alias for `/venues`. &#x20;
 
 ## `/institutions` filters
 
