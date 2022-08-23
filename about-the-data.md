@@ -11,6 +11,7 @@ OpenAlex is not doing this alone! Rather, we're aggregating and standardizing da
 * [Pubmed](https://pubmed.ncbi.nlm.nih.gov/)
 * [Pubmed Central](https://www.ncbi.nlm.nih.gov/pmc/)
 * [The ISSN International Centre](https://www.issn.org/)
+* [The General Index](https://archive.org/details/GeneralIndex)
 * Web crawls
 * Subject-area and institutional repositories from [arXiv](https://arxiv.org/) to [Zenodo](https://zenodo.org/) and everywhere in between
 
