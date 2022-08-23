@@ -7,7 +7,7 @@ The `search` query parameter finds results that match a given text search. Examp
 * Get works with search term "dna" in the title or abstract:\
   [https://api.openalex.org/works?search=dna](https://api.openalex.org/works?search=dna)
 
-When you search `works`, the API looks for matches in titles and abstracts. When you search  `concepts`, we look looks in each concept's `display_name` and `description` fields. Searching  `authors`, `venues`, and `institutions` will looks for matches within each entities' `display_name` field.
+When you search `works`, the API looks for matches in titles, abstracts, and fulltext. When you search `concepts`, we look looks in each concept's `display_name` and `description` fields. Searching  `authors`, `venues`, and `institutions` will looks for matches within each entities' `display_name` field.
 
 When you use search, each returned entity in the results lists gets an extra property called `relevance_score`, and the list is by default sorted in descending order of `relevance_score`. The `relevance_score` is based on text similarity to your search term. It also includes a weighting term for citation counts: more highly-cited entities score higher, all else being equal.
 
@@ -38,3 +38,16 @@ You might be tempted to use the search filter to power an autocomplete or typeah
 
 👍 [https://api.openalex.org/autocomplete/institutions?q=Florida](https://api.openalex.org/autocomplete/institutions?q=Florida)
 {% endhint %}
+
+## Fulltext coverage
+
+About 57 million works have fulltext available for search. Fulltext is based on publicly available words and phrases (called ngrams) made generously available through the [General Index](https://archive.org/details/GeneralIndex). OurResearch is the first organization to host this data in a highly usable way, and we are proud to integrate it into OpenAlex!
+
+Curious about ngrams used in search? Browse them all via the API. Highly-cited works and less recent works are more likely to have fulltext, as shown by the coverage charts below:
+
+<figure><img src="../../.gitbook/assets/OpenAlex works with fulltext (cited _ 50) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/OpenAlex works with fulltext by year (percent).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/OpenAlex works with fulltext by year (count).png" alt=""><figcaption></figcaption></figure>
+
