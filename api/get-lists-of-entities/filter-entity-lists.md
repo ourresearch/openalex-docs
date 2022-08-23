@@ -129,6 +129,14 @@ Returns: works whose abstract includes the given string. See [the search filter]
 
 * Get works with abstracts that mention "artificial intelligence": [`https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence`](https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence)``
 
+**`fulltext.search`**
+
+Value: a search string
+
+Returns: works whose fulltext includes the given string. See [the search filter](search-entity-lists.md#the-search-filter) for details on fulltext and the search algorithm used.
+
+* Get works with fulltext that mention "climate change": [`https://api.openalex.org/works?filter=fulltext.search:climate%20change`](https://api.openalex.org/works?filter=fulltext.search:climate%20change)``
+
 #### `raw_affiliation_string.search`
 
 Value: a search string
@@ -137,14 +145,23 @@ Returns: works that have at least one [`raw_affiliation_string`](../../about-the
 
 * Get works with the words _Department of Political Science, University of Amsterdam_ somewhere in at least one author's  `raw_affiliation_string`: [`https://api.openalex.org/works?filter=raw_affiliation_string.search:department%20of%20political%20science%20university%20of%amsterdam`](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)``
 
-#### `has_abstract`&#x20;
+#### `has_abstract`
 
 Value: a Boolean (`true` or `false`)
 
 Returns: works that have or lack an abstract, depending on the given value.
 
 * Get the works that have abstracts:\
-  [`https://api.openalex.org/works?filter=has_abstract:true`](https://api.openalex.org/works?filter=has\_abstract:true) ``&#x20;
+  [`https://api.openalex.org/works?filter=has_abstract:true`](https://api.openalex.org/works?filter=has\_abstract:true)
+
+#### `has_fulltext`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works that have or lack fulltext, depending on the given value.
+
+* Get the works that have fulltext:\
+  [`https://api.openalex.org/works?filter=has_fulltext:true`](https://api.openalex.org/works?filter=has\_fulltext:true)``
 
 #### `has_doi`&#x20;
 
