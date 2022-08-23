@@ -359,32 +359,27 @@ The URL accepts an OpenAlex ID or DOI:
 [https://api.openalex.org/works/W2023271753/ngrams](https://api.openalex.org/works/W2023271753/ngrams)\
 [https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams](https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams)
 
-The response is a list of ngram objects, sorted from 5-grams down to unigrams with:
+The response is a list of [Ngram objects](work.md#the-ngram-object), sorted from 5-grams down to unigrams with:
 
-* `ngram` (_String_): set of tokens (1 to 5 words) that exist in the work
-* `ngram_tokens` (_Integer_): how many tokens are in the ngram
-* `ngram_count` (_Integer_): how many times this ngram occurred in the work
-* `term_frequency` (_Float_): how often the ngram occurred in the work
-
-```
+```json
 {
-  "meta": {
-    "count": 1068,
-    "doi": "https://doi.org/10.1103/physrevb.37.785",
-    "openalex_id": "https://openalex.org/W2023271753"
+  meta: {
+    count: 1068,
+    doi: "https://doi.org/10.1103/physrevb.37.785",
+    openalex_id: "https://openalex.org/W2023271753"
   },
-  "ngrams": [
+  ngrams: [
     {
-      "ngram": "energy formula into a functional",
-      "ngram_tokens": 5,
-      "ngram_count": 1,
-      "term_frequency": 0.0005452562704471102
+      ngram: "energy formula into a functional",
+      ngram_tokens: 5,
+      ngram_count: 1,
+      term_frequency: 0.0005452562704471102
     },
     {
-      "ngram": "functional of the electron density",
-      "ngram_tokens": 5,
-      "ngram_count": 1,
-      "term_frequency": 0.0005452562704471102
+      ngram: "functional of the electron density",
+      ngram_tokens: 5,
+      ngram_count: 1,
+      term_frequency: 0.0005452562704471102
     },
     ...
   ]
@@ -502,8 +497,6 @@ author: {
 }
 ```
 
-
-
 ### `institutions`
 
 _List:_ The institutional affiliations this author claimed in the context of this work, as dehydrated `Institution` objects.
@@ -534,8 +527,6 @@ _String:_ This author's affiliation as it originally came to us (on a webpage or
 ```json
 raw_affiliation_string: "Canadian Institute for Studies in Publishing, Simon Fraser University, Vancouver, BC, Canada."
 ```
-
-``
 
 ## The `HostVenue` object
 
@@ -584,10 +575,6 @@ _String:_ The license applied to this work at this host.  Most toll-access works
 license: "cc-by"
 ```
 
-
-
-
-
 ## The `OpenAccess` object
 
 The `OpenAccess` object describes access options for a given work. It's only found as part of the `Work` object.
@@ -628,5 +615,38 @@ This URL might be a direct link to a PDF, or it might be to a landing page that 
 oa_url: "https://peerj.com/articles/4375.pdf"
 ```
 
-###
+## The `Ngram` object
 
+Ngram objects are only available via the API.
+
+### ngram
+
+_String:_ Group of words (or numbers, letters, etc) that exist together in the work. This can be a five-gram, four-gram, trigram, bigram, or unigram.
+
+```json
+ngram: "energy formula into a functional"
+```
+
+### ngram\_tokens
+
+_Integer:_  How many tokens are in the ngram.
+
+```json
+ngram_tokens: 5
+```
+
+### ngram\_count
+
+_Integer:_  How many times this ngram occurred in the work.
+
+```json
+ngram_count: 1
+```
+
+### token\_frequency
+
+_Float:_  How often the ngram occurred in the work.&#x20;
+
+```json
+term_frequency: 0.0005452562704471102
+```
