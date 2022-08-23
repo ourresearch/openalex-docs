@@ -64,7 +64,7 @@ Result objects have a `hint` property. You can show this to users to help them i
 The content of the `hint` property varies depending on what kind of entity you're looking up:
 
 * `Work`: The work's authors' display names, concatenated. e.g. "R. Alexander Pyron, John J. Wiens"
-* `Author`:  The title and year of the Author's most recent work, e.g. "Touch screen car dashboards as serious danger for causing traffic accidents (2019)"
+* `Author`:  The title and year of the Author's most cited work, e.g. "Touch screen car dashboards as serious danger for causing traffic accidents (2019)"
 * `Venue`: The publisher, e.g. "Oxford University Press"
 * `Institution`: The institution's location, e.g. "Gainesville, USA"
 * `Concept`: The Concept's [description](../about-the-data/concept.md#description), e.g. "the study of relation between plant species and genera"
