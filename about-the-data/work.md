@@ -359,7 +359,7 @@ The URL accepts an OpenAlex ID or DOI:
 [https://api.openalex.org/works/W2023271753/ngrams](https://api.openalex.org/works/W2023271753/ngrams)\
 [https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams](https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams)
 
-The response is a list of [Ngram objects](work.md#the-ngram-object), sorted from 5-grams down to unigrams with:
+The response is a list of [Ngram objects](work.md#the-ngram-object), sorted from 5-grams down to unigrams:
 
 ```json
 {
