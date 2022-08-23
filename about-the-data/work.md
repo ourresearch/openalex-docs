@@ -103,8 +103,6 @@ ids: {
 }
 ```
 
-
-
 ### `host_venue`
 
 _Object:_ A [`HostVenue`](work.md#the-hostvenue-object) object describing how and where this work is being hosted online.
@@ -134,8 +132,6 @@ host_venue: {
     license: null
 }
 ```
-
-
 
 ### `type`
 
@@ -190,8 +186,6 @@ authorships: [
 ]
 ```
 
-
-
 ### `cited_by_count`
 
 _Integer:_ The number of citations to this work. These are the times that other works have cited this work: Other works ➞ This work.
@@ -227,8 +221,6 @@ This field has high precision but low recall. In other words, if `is_retracted` 
 ```json
 is_retracted: false 
 ```
-
-
 
 ### `is_paratext`
 
@@ -274,8 +266,6 @@ concepts: [
 ]
 ```
 
-
-
 ### `mesh`
 
 _List:_ List of [MeSH](https://www.nlm.nih.gov/mesh/meshhome.html) tag objects. Only works found in [PubMed](https://pubmed.ncbi.nlm.nih.gov/) have MeSH tags; for all other works, this is an empty list.
@@ -298,8 +288,6 @@ mesh: [
     }
 ]
 ```
-
-``
 
 ### `alternate_host_venues`
 
@@ -360,6 +348,47 @@ related_works: [
     "https://openalex.org/W2115339903",
     "https://openalex.org/W2031754690",
 ]
+```
+
+### `ngrams_url`
+
+_String:_ This field is only available in the API, and leads to groups of words and phrases (ngrams) that make up a work, as obtained from the [General Index](https://archive.org/details/GeneralIndex). These are the ngrams used for fulltext search.
+
+The URL accepts an OpenAlex ID or DOI:
+
+[https://api.openalex.org/works/W2023271753/ngrams](https://api.openalex.org/works/W2023271753/ngrams)\
+[https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams](https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams)
+
+The response is a list of ngram objects, sorted from 5-grams down to unigrams with:
+
+* `ngram` (_String_): set of tokens (1 to 5 words) that exist in the work
+* `ngram_tokens` (_Integer_): how many tokens are in the ngram
+* `ngram_count` (_Integer_): how many times this ngram occurred in the work
+* `term_frequency` (_Float_): how often the ngram occurred in the work
+
+```
+{
+  "meta": {
+    "count": 1068,
+    "doi": "https://doi.org/10.1103/physrevb.37.785",
+    "openalex_id": "https://openalex.org/W2023271753"
+  },
+  "ngrams": [
+    {
+      "ngram": "energy formula into a functional",
+      "ngram_tokens": 5,
+      "ngram_count": 1,
+      "term_frequency": 0.0005452562704471102
+    },
+    {
+      "ngram": "functional of the electron density",
+      "ngram_tokens": 5,
+      "ngram_count": 1,
+      "term_frequency": 0.0005452562704471102
+    },
+    ...
+  ]
+}
 ```
 
 ### `abstract_inverted_index`
