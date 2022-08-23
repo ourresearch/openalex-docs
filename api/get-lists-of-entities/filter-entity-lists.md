@@ -129,7 +129,7 @@ Returns: works whose abstract includes the given string. See [the search filter]
 
 * Get works with abstracts that mention "artificial intelligence": [`https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence`](https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence)``
 
-**`fulltext.search`**
+#### **`fulltext.search`**
 
 Value: a search string
 
