@@ -45,9 +45,8 @@ About 57 million works have fulltext. Fulltext is based on words and phrases (ca
 
 Curious about ngrams used in search? [Browse them all](../../about-the-data/work.md#ngrams\_url) via the API. Highly-cited works and less recent works are more likely to have fulltext, as shown by the coverage charts below:
 
-<figure><img src="../../.gitbook/assets/OpenAlex works cited _ 50 with fulltext (percent).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/OpenAlex works w_ cited count _ 50 and fulltext (percentage).svg" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/OpenAlex works with fulltext by year (percent).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/OpenAlex total works w_ fulltext (percentage).svg" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/OpenAlex works with fulltext by year (count).png" alt=""><figcaption></figcaption></figure>
-
+<figure><img src="../../.gitbook/assets/OpenAlex total works w_ fulltext (count).svg" alt=""><figcaption></figcaption></figure>
