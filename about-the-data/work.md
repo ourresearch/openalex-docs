@@ -647,6 +647,8 @@ ngram_count: 1
 
 _Float:_  How often the ngram occurred in the work.&#x20;
 
+**Caution:** This data was taken directly from the General Index and we've not tested `term_frequency` against actual articles. You can read about their data extraction process on the [General Index  website](https://archive.org/details/GeneralIndex). If you compare `term_frequency` against articles we would [like to hear](mailto:support@openalex.org) how it went!
+
 ```json
 term_frequency: 0.0005452562704471102
 ```
