@@ -41,9 +41,9 @@ You might be tempted to use the search filter to power an autocomplete or typeah
 
 ## Fulltext coverage
 
-About 57 million works have fulltext. Fulltext is based on words and phrases (called ngrams) that are publicly (and generously :clap:) available through the [General Index](https://archive.org/details/GeneralIndex). OurResearch is the first organization to host this data in a highly usable way, and we are proud to integrate it into OpenAlex!
+About 57 million works have fulltext. Fulltext is based on words and phrases (called n-grams) that are publicly (and generously :clap:) available through the [General Index](https://archive.org/details/GeneralIndex). OurResearch is the first organization to host this data in a highly usable way, and we are proud to integrate it into OpenAlex!
 
-Curious about ngrams used in search? [Browse them all](../../about-the-data/work.md#ngrams\_url) via the API. Highly-cited works and less recent works are more likely to have fulltext, as shown by the coverage charts below:
+Curious about n-grams used in search? [Browse them all](../../about-the-data/work.md#ngrams\_url) via the API. Highly-cited works and less recent works are more likely to have fulltext, as shown by the coverage charts below:
 
 <figure><img src="../../.gitbook/assets/OpenAlex works w_ cited count _ 50 and fulltext (percentage).svg" alt=""><figcaption></figcaption></figure>
 

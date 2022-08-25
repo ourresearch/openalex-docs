@@ -352,7 +352,7 @@ related_works: [
 
 ### `ngrams_url`
 
-_String:_ This field is only available in the API, and leads to groups of words and phrases (ngrams) that make up a work, as obtained from the [General Index](https://archive.org/details/GeneralIndex). These are the ngrams used for [fulltext search](../api/get-lists-of-entities/filter-entity-lists.md#fulltext.search).
+_String:_ This field is only available in the API, and leads to groups of words and phrases (n-grams) that make up a work, as obtained from the [General Index](https://archive.org/details/GeneralIndex). These are the n-grams used for [fulltext search](../api/get-lists-of-entities/filter-entity-lists.md#fulltext.search).
 
 The URL accepts an OpenAlex ID or DOI:
 
