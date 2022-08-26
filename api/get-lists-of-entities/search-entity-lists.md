@@ -4,7 +4,7 @@
 
 The `search` query parameter finds results that match a given text search. Example:
 
-* Get works with search term "dna" in the title or abstract:\
+* Get works with search term "dna" in the title, abstract, or fulltext:\
   [https://api.openalex.org/works?search=dna](https://api.openalex.org/works?search=dna)
 
 When you search `works`, the API looks for matches in titles, abstracts, and fulltext. When you search `concepts`, we look looks in each concept's `display_name` and `description` fields. Searching  `authors`, `venues`, and `institutions` will looks for matches within each entities' `display_name` field.
