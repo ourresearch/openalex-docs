@@ -10,6 +10,7 @@
   * [Get groups of entities](api/get-groups-of-entities.md)
   * [Autocomplete endpoint](api/autocomplete-endpoint.md)
   * [API Tutorial](api/api-tutorial.md)
+  * [Fulltext and N-grams](api/fulltext-and-n-grams.md)
 * [Website](website.md)
 * [Download snapshot](download-snapshot/README.md)
   * [Snapshot data format](download-snapshot/snapshot-data-format.md)
