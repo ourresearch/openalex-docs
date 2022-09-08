@@ -45,6 +45,10 @@ If you need more than 100,000 calls per day, please drop us a line at support@op
 
 ## Paging
 
+{% hint style="info" %}
+You can see executable examples of paging in [this user-contributed Jupyter notebook!](https://github.com/ourresearch/openalex-api-tutorials/blob/main/notebooks/getting-started/paging.ipynb)
+{% endhint %}
+
 ### Basic paging
 
 Use the `page` query parameter to control which page of results you want (eg `page=1`, `page=2`, etc). By default there are 25 results per page; you can use the `per-page` parameter to change that to any number between 1 and 200.
