@@ -158,9 +158,9 @@ Returns: works that have or lack an abstract, depending on the given value.
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works that have or lack fulltext, depending on the given value.
+Returns: works for which fulltext searches are available or unavailable, depending on the given value. This property is independent of [is\_oa](../../about-the-data/work.md#is\_oa-1), [open\_access](../../about-the-data/work.md#open\_access), and related fields - it indicates whether the text of a Work is indexed and searchable, not whether that text is free to read. See[ Fulltext and N-Grams ](../fulltext-and-n-grams.md)for a more detail on this distinction.
 
-* Get the works that have fulltext:\
+* Get the works that have searchable fulltext:\
   [`https://api.openalex.org/works?filter=has_fulltext:true`](https://api.openalex.org/works?filter=has\_fulltext:true)``
 
 #### `has_doi`&#x20;
