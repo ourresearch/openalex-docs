@@ -352,38 +352,10 @@ related_works: [
 
 ### `ngrams_url`
 
-_String:_ This field is only available in the API, and leads to groups of words and phrases (n-grams) that make up a work, as obtained from the [General Index](https://archive.org/details/GeneralIndex). These are the n-grams used for [fulltext search](../api/get-lists-of-entities/filter-entity-lists.md#fulltext.search).
-
-The URL accepts an OpenAlex ID or DOI:
-
-[https://api.openalex.org/works/W2023271753/ngrams](https://api.openalex.org/works/W2023271753/ngrams)\
-[https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams](https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams)
-
-The response is a list of [Ngram objects](work.md#the-ngram-object), sorted from 5-grams down to unigrams:
+_String:_ This field is only available in the API. It lists groups of words and phrases (n-grams) that make up a work, as obtained from the [General Index](https://archive.org/details/GeneralIndex). These are the n-grams used for [fulltext search](../api/get-lists-of-entities/filter-entity-lists.md#fulltext.search). See [The Ngram Object](work.md#the-ngram-object) and [Fulltext and N-grams](../api/fulltext-and-n-grams.md) for background on n-grams, fulltext, and what this API call returns.
 
 ```json
-{
-  meta: {
-    count: 1068,
-    doi: "https://doi.org/10.1103/physrevb.37.785",
-    openalex_id: "https://openalex.org/W2023271753"
-  },
-  ngrams: [
-    {
-      ngram: "energy formula into a functional",
-      ngram_tokens: 5,
-      ngram_count: 1,
-      term_frequency: 0.0005452562704471102
-    },
-    {
-      ngram: "functional of the electron density",
-      ngram_tokens: 5,
-      ngram_count: 1,
-      term_frequency: 0.0005452562704471102
-    },
-    ...
-  ]
-}
+ngrams_url: "https://api.openalex.org/works/W2023271753/ngrams"
 ```
 
 ### `abstract_inverted_index`

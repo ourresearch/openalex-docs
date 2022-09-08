@@ -10,7 +10,7 @@ Note that while n-grams are derived from the fulltext of a Work, the presence of
 
 In addition to enabling fulltext search capabilities, a Work's n-grams are viewable directly through an endpoint that accepts either an [OpenAlex ID](../about-the-data/#the-openalex-id) or a DOI.
 
-* Get n-grams for https://openalex.org/W2023271753:\
+* Get n-grams for [W2023271753](https://openalex.org/W2023271753):\
   [`https://api.openalex.org/works/W2023271753/ngrams`](https://api.openalex.org/works/W2023271753/ngrams)\
   [`https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams`](https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams)
 
