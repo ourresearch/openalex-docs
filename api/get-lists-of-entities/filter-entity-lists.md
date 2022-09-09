@@ -154,14 +154,14 @@ Returns: works that have or lack an abstract, depending on the given value.
 * Get the works that have abstracts:\
   [`https://api.openalex.org/works?filter=has_abstract:true`](https://api.openalex.org/works?filter=has\_abstract:true)
 
-#### `has_fulltext`
+#### `has_ngrams`
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works for which fulltext searches are available or unavailable, depending on the given value. This property is independent of [is\_oa](../../about-the-data/work.md#is\_oa-1), [open\_access](../../about-the-data/work.md#open\_access), and related fields - it indicates whether the text of a Work is indexed and searchable, not whether that text is free to read. See [Fulltext and N-Grams](../get-n-grams.md) for more detail on this distinction.
+Returns: works for which [n-grams](../get-n-grams.md) are available or unavailable, depending on the given value. N-grams power fulltext searches through the [`fulltext.search`](filter-entity-lists.md#fulltext.search) filter and the [`search`](search-entity-lists.md#the-search-parameter) parameter.
 
-* Get the works that have searchable fulltext:\
-  [`https://api.openalex.org/works?filter=has_fulltext:true`](https://api.openalex.org/works?filter=has\_fulltext:true)``
+* Get the works that have n-grams:\
+  [`https://api.openalex.org/works?filter=has_ngrams:true`](https://api.openalex.org/works?filter=has\_ngrams:true)
 
 #### `has_doi`&#x20;
 
