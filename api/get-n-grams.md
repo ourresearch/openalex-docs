@@ -45,7 +45,7 @@ The response is a list of [Ngram objects](get-n-grams.md#the-ngram-object), sort
 }
 ```
 
-The ID-based link is provided in [`Work.ngrams_url`](../about-the-data/work.md#ngrams\_url) if n-grams are available. Works with n-grams can be found using the [`Work.has_fulltext`](get-lists-of-entities/filter-entity-lists.md#has\_fulltext) filter, which can be [combined with other filters](get-lists-of-entities/filter-entity-lists.md#logical-expressions) using logical expressions.
+The ID-based link is provided in [`Work.ngrams_url`](../about-the-data/work.md#ngrams\_url) if n-grams are available. Works with n-grams can be found using the [`Work.has_ngrams`](get-lists-of-entities/filter-entity-lists.md#has\_ngrams) filter, which can be [combined with other filters](get-lists-of-entities/filter-entity-lists.md#logical-expressions) using logical expressions.
 
 ## Fulltext Coverage
 
