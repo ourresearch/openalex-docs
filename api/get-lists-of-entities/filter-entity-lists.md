@@ -133,7 +133,7 @@ Returns: works whose abstract includes the given string. See [the search filter]
 
 Value: a search string
 
-Returns: works whose fulltext includes the given string. You can learn more about fulltext [here](search-entity-lists.md#fulltext-coverage).
+Returns: works whose fulltext includes the given string. Fulltext search is powered by an index of word sequences called n-grams - see [Get N-grams](../get-n-grams.md) for coverage details.
 
 * Get works with fulltext that mention "climate change": [`https://api.openalex.org/works?filter=fulltext.search:climate%20change`](https://api.openalex.org/works?filter=fulltext.search:climate%20change)``
 
