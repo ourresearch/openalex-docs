@@ -352,7 +352,7 @@ related_works: [
 
 ### `ngrams_url`
 
-_String:_ This field is only available in the API. It lists groups of words and phrases (n-grams) that make up a work, as obtained from the [General Index](https://archive.org/details/GeneralIndex). These are the n-grams used for [fulltext search](../api/get-lists-of-entities/filter-entity-lists.md#fulltext.search). See [The Ngram Object](work.md#the-ngram-object) and [Fulltext and N-grams](../api/get-n-grams.md) for background on n-grams, fulltext, and what this API call returns.
+_String:_ This field is only available in the API. It lists groups of words and phrases (n-grams) that make up a work, as obtained from the [General Index](https://archive.org/details/GeneralIndex). See [The Ngram object](work.md#the-ngram-object) and [Get N-grams](../api/get-n-grams.md) for background on n-grams, how we use them, and what this API call returns.
 
 ```json
 ngrams_url: "https://api.openalex.org/works/W2023271753/ngrams"
