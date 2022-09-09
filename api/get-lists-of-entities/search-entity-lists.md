@@ -9,6 +9,8 @@ The `search` query parameter finds results that match a given text search. Examp
 
 When you search `works`, the API looks for matches in titles, abstracts, and fulltext. When you search `concepts`, we look looks in each concept's `display_name` and `description` fields. Searching  `authors`, `venues`, and `institutions` will looks for matches within each entities' `display_name` field.
 
+Fulltext search for `works` is powered by an index of word sequences called n-grams - see [Get N-grams](../get-n-grams.md) for coverage details.
+
 When you use search, each returned entity in the results lists gets an extra property called `relevance_score`, and the list is by default sorted in descending order of `relevance_score`. The `relevance_score` is based on text similarity to your search term. It also includes a weighting term for citation counts: more highly-cited entities score higher, all else being equal.
 
 If you search for a multiple-word phrase, the algorithm will treat each word separately, and rank results higher when the words appear close together. If you want to return only results where the exact phrase is used, just enclose your phrase within quotes. Example:
