@@ -113,6 +113,7 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`has_abstract`](../about-the-data/work.md#abstract\_inverted\_index)``
 * ``[`has_doi`](get-lists-of-entities/#additional-filters)``
 * ``[`has_ngrams`](get-n-grams.md)``
+* ``[`has_references`](get-lists-of-entities/filter-entity-lists.md#has\_references)``
 * ``[`host_venue.id`](../about-the-data/work.md#host\_venue) (alias `journal.id`)
 * ``[`host_venue.issn`](../about-the-data/work.md#host\_venue)``
 * ``[`host_venue.license`](../about-the-data/work.md#host\_venue)``
