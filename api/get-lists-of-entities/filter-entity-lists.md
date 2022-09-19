@@ -155,6 +155,15 @@ Returns: works that have or lack an abstract, depending on the given value.
 * Get the works that have abstracts:\
   [`https://api.openalex.org/works?filter=has_abstract:true`](https://api.openalex.org/works?filter=has\_abstract:true)
 
+#### `has_doi`&#x20;
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works that have or lack a DOI, depending on the given value. It's especially useful for [grouping](../get-groups-of-entities.md).
+
+* Get the works that have no DOI assigned:\
+  [`https://api.openalex.org/works?filter=has_doi:false`](https://api.openalex.org/works?filter=has\_doi:false) ``&#x20;
+
 #### `has_ngrams`
 
 Value: a Boolean (`true` or `false`)
@@ -164,14 +173,14 @@ Returns: works for which [n-grams](../get-n-grams.md) are available or unavailab
 * Get the works that have n-grams:\
   [`https://api.openalex.org/works?filter=has_ngrams:true`](https://api.openalex.org/works?filter=has\_ngrams:true)
 
-#### `has_doi`&#x20;
+#### `has_references`
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works that have or lack a DOI, depending on the given value. It's especially useful for [grouping](../get-groups-of-entities.md).
+Returns: works that have or lack [referenced\_works](../../about-the-data/work.md#referenced\_works), depending on the given value.
 
-* Get the works that have no DOI assigned:\
-  [`https://api.openalex.org/works?filter=has_doi:false`](https://api.openalex.org/works?filter=has\_doi:false) ``&#x20;
+* Get the works that have references:\
+  [`https://api.openalex.org/works?filter=has_references:true`](https://api.openalex.org/works?filter=has\_references:true)
 
 #### `cites`
 
