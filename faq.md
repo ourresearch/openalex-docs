@@ -22,9 +22,13 @@ Yes. We automatically gather and normalize author affiliations from both structu
 
 See our list of [sources here](about-the-data.md#sources).
 
+### Can I index my journal or add my article?
+
+We automatically index new journals and articles so there is nothing you need to do. We primarily retrieve new records from Crossref. So if you are not seeing your journal or article, you may want to [check if it is registered](https://impactstory.freshdesk.com/support/solutions/articles/44001903674) there. We are adding more DOI registrars soon!
+
 ### How often is the data updated?
 
-For now, the dataset is updated about once per month. However, in the future we will probably offer a much faster update cadence (approximately daily) as an optional, [paid upgrade](faq.md#whats-your-sustainability-plan). If you're interested in that,  drop us a line at [team@ourresearch.org](mailto:team@ourresearch.org).
+For now, the database snapshot is updated about once per month. However, in the future we will probably offer a much faster update cadence (approximately daily) as an optional, [paid upgrade](faq.md#whats-your-sustainability-plan). If you're interested in that, drop us a line at [team@ourresearch.org](mailto:team@ourresearch.org).
 
 ### Is your data quality better than \_\_\_\_?
 
