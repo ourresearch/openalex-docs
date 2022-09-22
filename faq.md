@@ -24,7 +24,7 @@ See our list of [sources here](about-the-data.md#sources).
 
 ### Can I index my journal or add my article?
 
-We automatically index new journals and articles so there is nothing you need to do. We primarily retrieve new records from Crossref. So if you are not seeing your journal or article, you may want to [check if it is registered](https://impactstory.freshdesk.com/support/solutions/articles/44001903674) there. We are adding more DOI registrars soon!
+We automatically index new journals and articles so there is nothing you need to do. We primarily retrieve new records from [Crossref](https://www.crossref.org/). So if you are not seeing your journal or article, you may want to check if it is available there. We are adding more DOI registrars soon!
 
 ### How often is the data updated?
 
