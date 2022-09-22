@@ -191,7 +191,7 @@ Returns: works that cite the given work. You can think of this as **incoming cit
 * Get works that cite [https://openalex.org/W2741809807](https://openalex.org/W2741809807):  [`https://api.openalex.org/works?filter=cites:W2741809807`](https://api.openalex.org/works?filter=cites:W2741809807)``
 
 {% hint style="info" %}
-The number of results returned by this filter may be slightly higher than [`cited_by_count`](../../about-the-data/work.md#cited\_by\_count)due to a timing lag in updating that field.&#x20;
+The number of results returned by this filter may be slightly higher than the work's[`cited_by_count`](../../about-the-data/work.md#cited\_by\_count)due to a timing lag in updating that field.&#x20;
 {% endhint %}
 
 #### `cited_by`
