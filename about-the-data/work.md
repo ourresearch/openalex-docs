@@ -399,9 +399,7 @@ Newer works are more likely to have an abstract inverted index. For example, ove
 
 ### `cited_by_api_url`
 
-{% hint style="warning" %}
-TODO: documentation coming soon!
-{% endhint %}
+_String:_ A URL that uses the [`cites`](../api/get-lists-of-entities/filter-entity-lists.md#cites) filter to display a list of works that cite this work. This is a way to expand [`cited_by_count`](work.md#cited\_by\_count) into an actual list of works.
 
 ### `counts_by_year`
 
