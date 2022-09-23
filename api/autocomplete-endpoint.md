@@ -69,3 +69,8 @@ The content of the `hint` property varies depending on what kind of entity you'r
 * `Institution`: The institution's location, e.g. "Gainesville, USA"
 * `Concept`: The Concept's [description](../about-the-data/concept.md#description), e.g. "the study of relation between plant species and genera"
 
+## Filter autocomplete results
+
+All [filters](get-lists-of-entities/filter-entity-lists.md) and [search](get-lists-of-entities/search-entity-lists.md) queries can be added to autocomplete and work as expected, like:
+
+[`https://api.openalex.org/autocomplete/works?filter=publication_year:2010&search=frogs&q=greenhou`](https://api.openalex.org/autocomplete/works?filter=publication\_year:2010\&search=frogs\&q=greenhou)``
