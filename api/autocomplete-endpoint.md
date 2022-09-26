@@ -55,8 +55,9 @@ Each object in the `results` list includes these properties:
 * `id` (string): The [OpenAlex ID](../about-the-data/#the-openalex-id) for this result entity.
 * `external_id` (string): The [Canonical External ID](../about-the-data/#canonical-external-ids) for this result entity.
 * `display_name` (string): The entity's `display_name` property.
-* `entity_type` (string): The entity's type: `work`, `author`, `venue`, `institution`, or `concept`.
+* `entity_type` (string): The entity's type: `author`, `concept`, `institution`, `venue`, or `work`.
 * `cited_by_count` (integer): The entity's `cited_by_count` property. For works this is simply the number of incoming citations. For other entities, it's the _sum_ of incoming citations for all the works linked to that entity.&#x20;
+* `works_count` (integer): The number of works created by an `author`, `concept`, `institution`, or `venue`. For entity type `work` it's always null.
 * `hint`: Some extra information that can help identify the right item. Differs by entity type.
 
 ### The `hint` property
