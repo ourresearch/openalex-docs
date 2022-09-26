@@ -16,8 +16,10 @@ The autocomplete endpoint is very fast; queries generally return in around 200ms
 
 The format for requests is simple: `/autocomplete/<entity_type>?q=<query>`
 
-* `entity_type`: the name of one of the five OpenAlex [entities](../about-the-data/): `works`, `authors`, `venues`, `institutions`, or `concepts`.
+* `entity_type` (optional): the name of one of the five OpenAlex [entities](../about-the-data/): `works`, `authors`, `venues`, `institutions`, or `concepts`.
 * `query`: the search string supplied by the user.
+
+You can optionally [filter autocomplete results](autocomplete-endpoint.md#filter-autocomplete-results).
 
 ## Response format
 
@@ -54,7 +56,7 @@ Each object in the `results` list includes these properties:
 * `external_id` (string): The [Canonical External ID](../about-the-data/#canonical-external-ids) for this result entity.
 * `display_name` (string): The entity's `display_name` property.
 * `entity_type` (string): The entity's type: `work`, `author`, `venue`, `institution`, or `concept`.
-* `cited_by_count` (integer): The entity's `cited_by_count` property. For works this is simply the number of incoming citations. For other entities, it's the _sum_ of incoming citations for all the works linke to that entity.&#x20;
+* `cited_by_count` (integer): The entity's `cited_by_count` property. For works this is simply the number of incoming citations. For other entities, it's the _sum_ of incoming citations for all the works linked to that entity.&#x20;
 * `hint`: Some extra information that can help identify the right item. Differs by entity type.
 
 ### The `hint` property
@@ -69,8 +71,15 @@ The content of the `hint` property varies depending on what kind of entity you'r
 * `Institution`: The institution's location, e.g. "Gainesville, USA"
 * `Concept`: The Concept's [description](../about-the-data/concept.md#description), e.g. "the study of relation between plant species and genera"
 
+## IDs in autocomplete
+
+[Canonical External IDs](../about-the-data/#canonical-external-ids) and [OpenAlex IDs](../about-the-data/#the-openalex-id) are detected within autocomplete queries and matched to the appropriate record if it exists. For example:
+
+* The query [`https://api.openalex.org/autocomplete?q=https://orcid.org/0000-0002-7436-3176`](https://api.openalex.org/autocomplete?q=https://orcid.org/0000-0002-7436-3176) will search for the author with ORCID ID `https://orcid.org/0000-0002-7436-3176` and return 0 records if it does not exist.
+* The query [`https://api.openalex.org/autocomplete/venues?q=V49861241`](https://api.openalex.org/autocomplete/venues?q=V49861241) will search for the venue with OpenAlex ID `https://openalex.org/V49861241` and return 0 records if it does not exist.
+
 ## Filter autocomplete results
 
-All [filters](get-lists-of-entities/filter-entity-lists.md) and [search](get-lists-of-entities/search-entity-lists.md) queries can be added to autocomplete and work as expected, like:
+All entity [filters](get-lists-of-entities/filter-entity-lists.md) and [search](get-lists-of-entities/search-entity-lists.md) queries can be added to autocomplete and work as expected, like:
 
-[`https://api.openalex.org/autocomplete/works?filter=publication_year:2010&search=frogs&q=greenhou`](https://api.openalex.org/autocomplete/works?filter=publication\_year:2010\&search=frogs\&q=greenhou)``
+[`https://api.openalex.org/autocomplete/works?filter=publication_year:2010&search=frogs&q=greenhou`](https://api.openalex.org/autocomplete/works?filter=publication\_year:2010\&search=frogs\&q=greenhou)
