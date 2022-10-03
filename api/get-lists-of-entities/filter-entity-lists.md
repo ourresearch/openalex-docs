@@ -261,6 +261,7 @@ You can filter using these attributes of the `Author` entity object (click each 
 * ``[`last_known_institution.ror`](../../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.country_code`](../../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.type`](../../about-the-data/author.md#last\_known\_institution)``
+* [`ids.openalex`](../../about-the-data/author.md#ids) (alias: `openalex`)
 * ``[`x_concepts.id`](../../about-the-data/author.md#x\_concepts)``
 
 ### `/authors` convenience filters
@@ -302,6 +303,7 @@ You can filter using these attributes of the `Venue` entity object (click each o
 * ``[`x_concepts.id`](../../about-the-data/venue.md#x\_concepts)``
 * ``[`is_oa`](../../about-the-data/venue.md#is\_oa)``
 * ``[`is_in_doaj`](../../about-the-data/venue.md#is\_in\_doaj)``
+* [`ids.openalex`](../../about-the-data/venue.md#ids) (alias: `openalex`)
 
 ### `/venues` convenience filters
 
@@ -339,6 +341,7 @@ You can filter using these attributes of the `Institution` entity object (click 
 * ``[`type`](../../about-the-data/institution.md#type)``
 * ``[`works_count`](../../about-the-data/institution.md#works\_count)``
 * ``[`cited_by_count`](../../about-the-data/institution.md#cited\_by\_count)``
+* [`ids.openalex`](../../about-the-data/institution.md#ids) (alias: `openalex`)
 * ``[`x_concepts.id`](../../about-the-data/institution.md#x\_concepts)``
 
 ### `/institutions` convenience filters
@@ -377,6 +380,7 @@ You can filter using these attributes of the `Concept` entity object ((click eac
 * ``[`works_count`](../../about-the-data/concept.md#works\_count)``
 * ``[`cited_by_count`](../../about-the-data/concept.md#cited\_by\_count)``
 * ``[`ancestors.id`](../../about-the-data/concept.md#ancestors)``
+* [`ids.openalex`](../../about-the-data/concept.md#ids) (alias: `openalex`)
 
 ### `/concepts` convenience filters
 
