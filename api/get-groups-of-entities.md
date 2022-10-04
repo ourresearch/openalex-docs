@@ -107,6 +107,7 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`authorships.institutions.id`](../about-the-data/work.md#authorships) (alias `institutions.id`)
 * ``[`authorships.institutions.ror`](../about-the-data/work.md#authorships) (alias `institutions.ror`)
 * ``[`authorships.institutions.type`](../about-the-data/work.md#authorships) (alias `institutions.type`)
+* ``[`cited_by_count`](../about-the-data/work.md#cited\_by\_count)``
 * ``[`cites`](get-lists-of-entities/#additional-filters)``
 * ``[`concepts.id`](../about-the-data/work.md#concepts)``
 * ``[`concepts.wikidata`](../about-the-data/work.md#concepts)``
@@ -126,31 +127,39 @@ Each Entity type has a different set of attributes you can group by. These are m
 
 ### `/authors` group\_by attributes
 
+* ``[`cited_by_count`](../about-the-data/author.md#cited\_by\_count)``
 * ``[`has_orcid`](get-lists-of-entities/#additional-filters-1)``
 * ``[`last_known_institution.country_code`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.id`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.ror`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.type`](../about-the-data/author.md#last\_known\_institution)
+* ``[`works_count`](../about-the-data/author.md#works\_count)``
 
 ### `/venues` group\_by attributes
 
+* ``[`cited_by_count`](../about-the-data/venue.md#cited\_by\_count)``
 * ``[`has_issn`](get-lists-of-entities/#additional-filters-2)``
 * ``[`is_in_doaj`](../about-the-data/venue.md#is\_in\_doaj)``
 * ``[`is_oa`](../about-the-data/venue.md#is\_oa)``
 * ``[`issn`](../about-the-data/venue.md#issn)``
 * ``[`publisher`](../about-the-data/venue.md#publisher)``
+* ``[`works_count`](../about-the-data/venue.md#works\_count)``
 
 ### `/institutions` group\_by attributes
 
+* ``[`cited_by_count`](../about-the-data/institution.md#cited\_by\_count)``
 * [`country_code`](../about-the-data/institution.md#type)``
 * [`has_ror`](get-lists-of-entities/#additional-filters-3)``
 * [`type`](../about-the-data/institution.md#type)``
+* ``[`works_count`](../about-the-data/institution.md#works\_count)``
 
 ### `/concepts` group\_by __ attributes
 
 * ``[`ancestors.id`](../about-the-data/concept.md#ancestors)``
+* ``[`cited_by_count`](../about-the-data/concept.md#cited\_by\_count)``
+* ``[`has_wikidata`](../about-the-data/concept.md#wikidata)``
 * ``[`level`](../about-the-data/concept.md#level)``
-* ``[`has_wikidata`](get-lists-of-entities/#additional-filters-4)``
+* ``[`works_count`](../about-the-data/concept.md#works\_count)``
 
 ## Sorting groups
 
