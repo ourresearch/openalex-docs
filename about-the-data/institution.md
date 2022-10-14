@@ -182,7 +182,7 @@ international: {
 
 ### `associated_institutions`
 
-_List:_  `Institutions` related to this one. Each associated institution is represented as a [dehydrated Institution](institution.md#the-dehydratedinstitution-object) object, with one extpa property:
+_List:_  `Institutions` related to this one. Each associated institution is represented as a [dehydrated Institution](institution.md#the-dehydratedinstitution-object) object, with one extra property:
 
 * `relationship` (_String_): The type of relationship between this institution and the listed institution. Possible values: `parent`, `child`, and `related`.
 

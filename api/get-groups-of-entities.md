@@ -174,6 +174,17 @@ You cannot page through grouped results using `page` or `per-page`. You will alw
 
 This means 200 is the maximum number of groups that can be returned - [https://api.openalex.org/works?group\_by=host\_venue.publisher](https://api.openalex.org/works?group\_by=host\_venue.publisher) will only provide work counts for the top 200 publishers.
 
+## CSV export
+
+You can download a CSV file of your results using the `format` parameter.
+
+* Download a CSV file with grouped publication year:
+
+&#x20;
+
+Sort group\_by results by key, ascending\
+[`https://api.openalex.org/works?group_by=oa_status&sort=key:asc`](https://api.openalex.org/works?group\_by=oa\_status\&sort=key:asc)
+
 ## Combining grouping with filtering
 
 The `group_by` and `filter` parameters can be used at the same time. If you use both parameters, only the `Entities` matched by `filter` will be grouped and counted.
