@@ -122,10 +122,6 @@ image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/
 
 _Object:_ This concept's display name in many languages, derived from article titles on each language's wikipedia. See the [Wikidata entry](https://www.wikidata.org/wiki/Q137496#sitelinks-wikipedia) for "Java Bytecode" for example source data.
 
-* `display_name` (_Object_)
-  * `key` (String): language code in [wikidata language code](https://www.wikidata.org/wiki/Property:P9753) format. Full list of languages is [here](https://doc.wikimedia.org/mediawiki-core/master/php/Names\_8php\_source.html).
-  * `value` (String): `display_name` in the given language
-
 ```json
 international: {
     display_name: {
@@ -134,6 +130,8 @@ international: {
     }
 }
 ```
+
+
 
 ### `ancestors`
 

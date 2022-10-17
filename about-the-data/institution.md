@@ -166,7 +166,7 @@ geo: {
 
 ### `international`
 
-_Object:_ The institution's `display_name` in different languages. Source is the wikidata page for the institution.
+_Object:_ The institution's display name in different languages. Derived from the wikipedia page for the institution in the given language.
 
 * `display_name` (_Object_)
   * `key` (String): language code in [wikidata language code](https://www.wikidata.org/wiki/Property:P9753) format. Full list of languages is [here](https://doc.wikimedia.org/mediawiki-core/master/php/Names\_8php\_source.html).
