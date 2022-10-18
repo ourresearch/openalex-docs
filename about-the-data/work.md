@@ -245,7 +245,7 @@ _List:_ List of dehydrated [`Concept` objects](concept.md).&#x20;
 
 Each `Concept` object in the list also has one additional property:
 
-* `score` (_Float_): The strength of the connection between the work and this concept (higher is stronger).
+* `score` (_Float_): The strength of the connection between the work and this concept (higher is stronger). This number is produced by the last layer of the [machine learning model](https://github.com/ourresearch/openalex-concept-tagging) that assigns concepts.
 
 ```json
 concepts: [
