@@ -10,6 +10,7 @@
   * [Get groups of entities](api/get-groups-of-entities.md)
   * [Get N-grams](api/get-n-grams.md)
   * [Autocomplete endpoint](api/autocomplete-endpoint.md)
+  * [Global regions](api/global-regions.md)
   * [API Tutorial](api/api-tutorial.md)
 * [Website](website.md)
 * [Download snapshot](download-snapshot/README.md)
