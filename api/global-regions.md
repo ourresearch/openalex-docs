@@ -8,7 +8,7 @@ But you still have quite a few countries to add! Instead you can do:
 
 * [https://api.openalex.org/institutions?filter=country.is\_south_\__america:true](https://api.openalex.org/institutions?filter=country.is\_south\_america:true)
 
-To see a detailed count by country, you can add a group-by for the country\_code:
+To see a breakdown by country, you can add a group-by for the country\_code:
 
 * [https://api.openalex.org/institutions?filter=country.is\_south\_america:true\&group-by=country\_code](https://api.openalex.org/institutions?filter=country.is\_south\_america:true\&group-by=country\_code)
 

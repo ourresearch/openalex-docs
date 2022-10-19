@@ -250,18 +250,6 @@ Returns: works with at least one [`host_venue`](../../about-the-data/work.md#hos
 * Get Works with an OA submitted copy:\
   [`https://api.openalex.org/works?filter=has_oa_submitted_version:true`](https://api.openalex.org/works?filter=has\_oa\_submitted\_version:true)``
 
-#### authorships.institutions.country.is\_\* __ (alias: institutions.country.is\_\*)
-
-You can filter `authorships.institutions.country_code` by a global region using one of the following boolean filters:
-
-* authorships.institutions.country.is\_antarctica
-* authorships.institutions.country.is_north_america
-*
-
-Value: a Boolean (true or false)
-
-
-
 ## `/authors` filters
 
 ### `/authors` attribute filters
