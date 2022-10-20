@@ -1,6 +1,6 @@
-# Global regions
+# Continents and regions
 
-It's easy to filter and group by global regions, such as continents and the [Global South](https://en.wikipedia.org/wiki/Global\_North\_and\_Global\_South).&#x20;
+It's easy to filter and group by large geographic regions, such as continents and the [Global South](https://en.wikipedia.org/wiki/Global\_North\_and\_Global\_South).&#x20;
 
 * Get institutions located in South America\
   [https://api.openalex.org/institutions?filter=country.is\_south_\__america:true](https://api.openalex.org/institutions?filter=country.is\_south\_america:true)
@@ -11,7 +11,7 @@ It's easy to filter and group by global regions, such as continents and the [Glo
 
 ### Filters
 
-There are three ways to use global region filters:
+There are three ways to use geographic region filters:
 
 | Endpoint     | Format                                                                |
 | ------------ | --------------------------------------------------------------------- |
@@ -37,7 +37,7 @@ Countries are mapped to continents using data from the [United Nations Statistic
 
 #### **Global South Region Filter**
 
-The Global South is a term used to identify regions within Latin America, Asia, Africa, and Oceania. Our source for this group of countries in the API is the [United Nations Finance Center for South-South Cooperation](http://www.fc-ssc.org/en/partnership\_program/south\_south\_countries). The filter is:
+The Global South is a term used to identify regions within Latin America, Asia, Africa, and Oceania. Our source for this group of countries is the [United Nations Finance Center for South-South Cooperation](http://www.fc-ssc.org/en/partnership\_program/south\_south\_countries). The filter is:
 
 | Region       | Boolean Filter    |
 | ------------ | ----------------- |
@@ -45,7 +45,7 @@ The Global South is a term used to identify regions within Latin America, Asia, 
 
 ### Group by
 
-You can group by global region to see document counts by continent or region.
+You can group by geographic region to collect counts by continent or region.
 
 * Group institutions by continent\
   [https://api.openalex.org/institutions?group-by=continent](https://api.openalex.org/institutions?group-by=continent)
@@ -80,12 +80,12 @@ There are three ways to group by global region or continent:
 
 The two region groups are:
 
-* `global_region` - display all available regions (currently continents and the Global South)
+* `geographic_region` - display all available regions (currently continents and the Global South)
 * `continent` - continents only
 
 For example, to see all continents and Global South, you can use:
 
-* [https://api.openalex.org/institutions?group-by=global\_region](https://api.openalex.org/institutions?group-by=global\_region)
+* [https://api.openalex.org/institutions?group-by=geographic\_region](https://api.openalex.org/institutions?group-by=geographic\_region)
 
 To limit the group to continents you can use:
 
