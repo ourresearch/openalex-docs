@@ -241,7 +241,7 @@ Returns: works with at least one [`host_venue`](../../about-the-data/work.md#hos
 * Get works with an OA accepted or published copy\
   [`https://api.openalex.org/works?filter=has_oa_accepted_or_published_version:true`](https://api.openalex.org/works?filter=has\_oa\_accepted\_or\_published\_version:true)
 
-#### has\_oa\_submitted\_version
+#### `has_oa_submitted_version`
 
 Value: a Boolean (`true` or `false`)
 
@@ -250,7 +250,7 @@ Returns: works with at least one [`host_venue`](../../about-the-data/work.md#hos
 * Get works with an OA submitted copy:\
   [`https://api.openalex.org/works?filter=has_oa_submitted_version:true`](https://api.openalex.org/works?filter=has\_oa\_submitted\_version:true)``
 
-#### authorships.institutions.country.is\_\* __ (alias: institutions.country.is\_\*)
+#### `authorships.institutions.country.is_*` __ (alias: `institutions.country.is_*`)
 
 Value: a Boolean (`true` or `false`)
 
@@ -299,6 +299,15 @@ Returns: authors that have or lack an [orcid](../../about-the-data/author.md#orc
 
 * Get the authors that have an ORCID:\
   ``[`https://api.openalex.org/authors?filter=has_orcid:true`](https://api.openalex.org/authors?filter=has\_orcid:true)
+
+#### `last_known_institution.country.is_*`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: authors where where the last known institution is in the chosen continent or geographic region ([read more](../global-regions.md)).
+
+* Get authors where the last known institution is located in Africa\
+  [https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_africa:true](https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_africa:true)
 
 ## `/venues` filters
 
@@ -379,6 +388,15 @@ Returns: institutions that have or lack a [ROR ID](../../about-the-data/institut
 
 * Get institutions without ROR IDs:\
   [`https://api.openalex.org/institutions?filter=has_ror:false`](https://api.openalex.org/institutions?filter=has\_ror:false)
+
+#### `country.is_*`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: institutions that are located in the chosen continent or geographic region ([read more](../global-regions.md)).
+
+* Get institutions that are located in South America\
+  [https://api.openalex.org/institutions?filter=country.is\_south\_america:true](https://api.openalex.org/institutions?filter=country.is\_south\_america:true)
 
 ## `/concepts` filters
 
