@@ -50,6 +50,8 @@ You can group by geographic region to collect counts by continent or region.
 * Group institutions by continent\
   [https://api.openalex.org/institutions?group-by=continent](https://api.openalex.org/institutions?group-by=continent)
 
+Response:
+
 ```json
 {
   key: "Europe",
@@ -90,3 +92,31 @@ For example, to see all continents and Global South, you can use:
 To limit the group to continents you can use:
 
 * [https://api.openalex.org/institutions?group-by=continent](https://api.openalex.org/institutions?group-by=continent)
+
+### Tips & Tricks
+
+To see country-by-country details for a geographic region, filter by region, then group by `country_code`.
+
+* Get number of authors with last known institution in Global South, by country\
+  [https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_global\_south:true\&group-by=last\_known\_institution.country\_code](https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_global\_south:true\&group-by=last\_known\_institution.country\_code)
+
+Response:
+
+```json
+// all countries are in Global South
+{
+  key: "CN",
+  key_display_name: "China",
+  count: 13926441
+},
+{
+  key: "IN",
+  key_display_name: "India",
+  count: 2632721
+},
+{
+  key: "BR",
+  key_display_name: "Brazil",
+  count: 2089957
+}...
+```
