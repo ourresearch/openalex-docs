@@ -238,7 +238,7 @@ Value: a Boolean (`true` or `false`)
 
 Returns: works with at least one [`host_venue`](../../about-the-data/work.md#host\_venue) or [`alternate_host_venue`](../../about-the-data/work.md#alternate\_host\_venues) where [`is_oa`](../../about-the-data/work.md#is\_oa)= true and [`version`](../../about-the-data/work.md#version) is acceptedVersion or publishedVersion. For Works that undergo peer review, like journal articles, this means there is a peer-reviewed OA copy somewhere. For some items, like books, a published version doesn't imply peer review, so they aren't quite synonymous.
 
-* Get Works with an OA accepted or published copy\
+* Get works with an OA accepted or published copy\
   [`https://api.openalex.org/works?filter=has_oa_accepted_or_published_version:true`](https://api.openalex.org/works?filter=has\_oa\_accepted\_or\_published\_version:true)
 
 #### has\_oa\_submitted\_version
@@ -247,20 +247,17 @@ Value: a Boolean (`true` or `false`)
 
 Returns: works with at least one [`host_venue`](../../about-the-data/work.md#host\_venue) or [`alternate_host_venue`](../../about-the-data/work.md#alternate\_host\_venues) where [`is_oa`](../../about-the-data/work.md#is\_oa)= true and [`version`](../../about-the-data/work.md#version) is submittedVersion. This is useful for finding works with preprints deposited somewhere.
 
-* Get Works with an OA submitted copy:\
+* Get works with an OA submitted copy:\
   [`https://api.openalex.org/works?filter=has_oa_submitted_version:true`](https://api.openalex.org/works?filter=has\_oa\_submitted\_version:true)``
 
 #### authorships.institutions.country.is\_\* __ (alias: institutions.country.is\_\*)
 
-You can filter `authorships.institutions.country_code` by a global region using one of the following boolean filters:
+Value: a Boolean (`true` or `false`)
 
-* authorships.institutions.country.is\_antarctica
-* authorships.institutions.country.is_north_america
-*
+Returns: works where at least _one_ of the author's institutions is in the chosen continent or geographic region ([read more](../global-regions.md)).
 
-Value: a Boolean (true or false)
-
-
+* Get works where at least one author's institution in each work is located in Europe\
+  [https://api.openalex.org/works?filter=authorships.institutions.country.is\_europe:true](https://api.openalex.org/works?filter=authorships.institutions.country.is\_europe:true)
 
 ## `/authors` filters
 
