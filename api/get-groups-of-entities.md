@@ -103,7 +103,9 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`alternate_host_venues.version`](../about-the-data/work.md#alternate\_host\_venues)``
 * ``[`authorships.author.id`](../about-the-data/work.md#authorships) (alias `author.id`)
 * ``[`authorships.author.orcid`](../about-the-data/work.md#authorships) (alias `author.orcid`)
+* ``[`authorships.institutions.continent`](global-regions.md#group-by) (alias `institutions.continent`)
 * ``[`authorships.institutions.country_code`](../about-the-data/work.md#authorships) (alias `institutions.country_code`)
+* ``[`authorships.institutions.geographic_region`](global-regions.md#group-by) (alias `institutions.geographic_region`)
 * ``[`authorships.institutions.id`](../about-the-data/work.md#authorships) (alias `institutions.id`)
 * ``[`authorships.institutions.ror`](../about-the-data/work.md#authorships) (alias `institutions.ror`)
 * ``[`authorships.institutions.type`](../about-the-data/work.md#authorships) (alias `institutions.type`)
@@ -129,7 +131,9 @@ Each Entity type has a different set of attributes you can group by. These are m
 
 * ``[`cited_by_count`](../about-the-data/author.md#cited\_by\_count)``
 * ``[`has_orcid`](get-lists-of-entities/#additional-filters-1)``
+* ``[`last_known_institution.continent`](global-regions.md#group-by)``
 * ``[`last_known_institution.country_code`](../about-the-data/author.md#last\_known\_institution)``
+* ``[`last_known_institution.geographic_region`](global-regions.md#group-by)``
 * ``[`last_known_institution.id`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.ror`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.type`](../about-the-data/author.md#last\_known\_institution)
@@ -148,7 +152,9 @@ Each Entity type has a different set of attributes you can group by. These are m
 ### `/institutions` group\_by attributes
 
 * ``[`cited_by_count`](../about-the-data/institution.md#cited\_by\_count)``
+* ``[`continent`](global-regions.md#group-by)``
 * [`country_code`](../about-the-data/institution.md#type)``
+* ``[`geographic_region`](global-regions.md#group-by)``
 * [`has_ror`](get-lists-of-entities/#additional-filters-3)``
 * [`type`](../about-the-data/institution.md#type)``
 * ``[`works_count`](../about-the-data/institution.md#works\_count)``
