@@ -85,7 +85,7 @@ The two region groups are:
 * `geographic_region` - display all available regions (currently continents and the Global South)
 * `continent` - continents only
 
-For example, to see all continents and Global South, you can use:
+For example, to see all continents and the Global South, you can use:
 
 * [https://api.openalex.org/institutions?group-by=geographic\_region](https://api.openalex.org/institutions?group-by=geographic\_region)
 
@@ -97,13 +97,13 @@ To limit the group to continents you can use:
 
 To see country-by-country details for a geographic region, filter by region, then group by `country_code`.
 
-* Get number of authors with last known institution in Global South, by country\
+* Get number of authors with last known institution in the Global South, by country\
   [https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_global\_south:true\&group-by=last\_known\_institution.country\_code](https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_global\_south:true\&group-by=last\_known\_institution.country\_code)
 
 Response:
 
 ```json
-// all countries are in Global South
+// all countries are in the Global South
 {
   key: "CN",
   key_display_name: "China",
