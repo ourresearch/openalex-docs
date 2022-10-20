@@ -1,6 +1,6 @@
 # Global regions
 
-We've made it easy to filter and group by global regions, such as continents and the Global South. Let's say you want to find the number of institutions in South America. That would involve looking up a list of country codes and building a query like:
+We've made it easy to filter and group by global regions, such as continents and the [Global South](https://en.wikipedia.org/wiki/Global\_North\_and\_Global\_South). Let's say you want to find the number of institutions in South America. That would involve looking up a list of country codes and building a query like:
 
 * [https://api.openalex.org/institutions?filter=country\_code:ar|br|cl](https://api.openalex.org/institutions?filter=country\_code:ar|br|cl)
 
@@ -8,7 +8,7 @@ But you still have quite a few countries to add! Instead you can do:
 
 * [https://api.openalex.org/institutions?filter=country.is\_south_\__america:true](https://api.openalex.org/institutions?filter=country.is\_south\_america:true)
 
-To see a breakdown by country, you can add a group-by for the country\_code:
+To see a breakdown by country within South America, you can add a group-by for the country\_code:
 
 * [https://api.openalex.org/institutions?filter=country.is\_south\_america:true\&group-by=country\_code](https://api.openalex.org/institutions?filter=country.is\_south\_america:true\&group-by=country\_code)
 
@@ -32,29 +32,33 @@ Which will give results like this:
 }...
 ```
 
-### Filter by global region
+### Filters
 
 Every country\_code filter in OpenAlex has a corresponding regional boolean filter, falling into one of these groups:
 
 #### **Continents**
 
-Countries are mapped to continents using data from the [United Nations Statistics Division](https://unstats.un.org/unsd/methodology/m49/). You can see the actual mapping used by the API [here](https://github.com/ourresearch/openalex-elastic-api/blob/master/countries.py).
+Countries are mapped to continents using data from the [United Nations Statistics Division](https://unstats.un.org/unsd/methodology/m49/). You can see the actual mapping used by the API [here](https://github.com/ourresearch/openalex-elastic-api/blob/master/countries.py). The filters for each continent are:
 
-* `is_africa`
-* `is_antarctica`
-* `is_asia`
-* `is_europe`
-* `is_north_america`
-* `is_oceania`
-* `is_south_america`
+| Continent     | Boolean Filter     |
+| ------------- | ------------------ |
+| Africa        | `is_africa`        |
+| Antarctica    | `is_antarctica`    |
+| Asia          | `is_asia`          |
+| Europe        | `is_europe`        |
+| North America | `is_north_america` |
+| Oceania       | `is_oceania`       |
+| South America | `is_south_america` |
 
 #### **Global South**
 
-The Global South is a term used to identify regions within Latin America, Asia, Africa, and Oceania. Our source for this group of countries in the API is the [United Nations Finance Center for South-South Cooperation](http://www.fc-ssc.org/en/partnership\_program/south\_south\_countries).
+The Global South is a term used to identify regions within Latin America, Asia, Africa, and Oceania. Our source for this group of countries in the API is the [United Nations Finance Center for South-South Cooperation](http://www.fc-ssc.org/en/partnership\_program/south\_south\_countries). The filter is:
 
-* `is_global_south`
+| Region       | Boolean Filter    |
+| ------------ | ----------------- |
+| Global South | `is_global_south` |
 
-### Group by global region
+### Group by
 
 You can group regions or continents using:
 
