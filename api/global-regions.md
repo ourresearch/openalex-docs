@@ -4,10 +4,10 @@ It's easy to filter and group by large geographic regions, such as continents an
 
 * Get institutions located in South America\
   [https://api.openalex.org/institutions?filter=country.is\_south_\__america:true](https://api.openalex.org/institutions?filter=country.is\_south\_america:true)
-* Group highly-cited authors by their last known institution's continent\
-  [https://api.openalex.org/authors?group-by=last\_known\_institution.continent\&filter=cited\_by\_count:>100](https://api.openalex.org/authors?group-by=last\_known\_institution.continent\&filter=cited\_by\_count:%3E100)
 * Get works where at least one author's institution is located in the Global South\
   [https://api.openalex.org/works?filter=institutions.country.is\_global\_south:true](https://api.openalex.org/works?filter=institutions.country.is\_global\_south:true)
+* Group highly-cited authors by their last known institution's continent\
+  [https://api.openalex.org/authors?group-by=last\_known\_institution.continent\&filter=cited\_by\_count:>100](https://api.openalex.org/authors?group-by=last\_known\_institution.continent\&filter=cited\_by\_count:%3E100)
 
 ### Filters
 
