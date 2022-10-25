@@ -190,6 +190,8 @@ _List:_  `Institutions` related to this one. Each associated institution is repr
 
 * `relationship` (_String_): The type of relationship between this institution and the listed institution. Possible values: `parent`, `child`, and `related`.
 
+Institution associations and the _relationship_ vocabulary come from [ROR's `relationships`](https://ror.readme.io/docs/ror-data-structure#relationships).
+
 ```json
 associated_institutions: [
     {
