@@ -12,9 +12,9 @@ Works are linked to other works via the [`referenced_works`](work.md#referenced\
 
 There are three component objects that are only used as part of a `Work`:&#x20;
 
-* [`Authorship`](work.md#the-authorship-object)``
-* ``[`HostVenue`](work.md#the-hostvenue-object)``
-* ``[`OpenAccess`](work.md#the-openaccess-object)``
+* [`Authorship`](work.md#the-authorship-object)
+* [`HostVenue`](work.md#the-hostvenue-object)
+* [`OpenAccess`](work.md#the-openaccess-object)
 
 {% hint style="info" %}
 Most of the examples below are drawn from a single work. You can view this work in its entirety via the [website](https://openalex.org/W2741809807) or [API](https://openalex.org/W2741809807.json).
