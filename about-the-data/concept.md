@@ -240,7 +240,7 @@ created_date: "2017-08-08"
 
 The `DehydratedConcept` is stripped-down [`Concept`](concept.md#the-concept-object) object, with most of its properties removed to save weight. Its only remaining properties are:
 
-* [`id`](concept.md#id)``
-* [`wikidata`](concept.md#wikidata)``
-* [`display_name`](concept.md#display\_name)``
-* [`level`](concept.md#level)``
+* [`id`](concept.md#id)
+* [`wikidata`](concept.md#wikidata)
+* [`display_name`](concept.md#display\_name)
+* [`level`](concept.md#level)

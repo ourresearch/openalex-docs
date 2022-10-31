@@ -303,9 +303,9 @@ created_date: "2017-08-08"
 
 The `DehydratedInstitution` is stripped-down [`Institution`](institution.md#the-institution-object) object, with most of its properties removed to save weight. Its only remaining properties are:
 
-* [`id`](institution.md#id)``
-* [`display_name`](institution.md#display\_name)``
-* [`ror`](institution.md#ror)``
-* [`country_code`](institution.md#country\_code)``
-* [`type`](institution.md#type)``
+* [`id`](institution.md#id)
+* [`display_name`](institution.md#display\_name)
+* [`ror`](institution.md#ror)
+* [`country_code`](institution.md#country\_code)
+* [`type`](institution.md#type)
 

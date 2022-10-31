@@ -208,8 +208,8 @@ created_date: "2017-08-08"
 
 The `DehydratedVenue` is stripped-down [`Venue`](venue.md#the-venue-object) object, with most of its properties removed to save weight. Its only remaining properties are:
 
-* [`id`](venue.md#id)``
-* [`issn_l`](venue.md#issn\_l)``
-* [`issn`](venue.md#issn)``
-* [`display_name`](venue.md#display\_name)``
-* ``[`publisher`](venue.md#publisher)``
+* [`id`](venue.md#id)
+* [`issn_l`](venue.md#issn\_l)
+* [`issn`](venue.md#issn)
+* [`display_name`](venue.md#display\_name)
+* [`publisher`](venue.md#publisher)
