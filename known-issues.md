@@ -15,9 +15,11 @@ We've got a lot of strings floating around for venues and institutions that have
 
 These ID-less objects are tricky because they can't do most of the things a regular entity can. They're just a suitcase for a name, right now.  They are inherited from MAG, and we plan to fix them. Over the next month or so, we'll be processing all these stub entities, clustering them together, and minting tens of millions of new entities from them.
 
-## MAG format snapshot has a few duplicate rows and escaping issues.
+## API queries with a high amount of authors will return an error
 
-We're continuing to improve our processes to make sure the data in the MAG format is clean and easy to pull in to a relational database. This current release still has a few issues, but we'll try to fix these by the next release.
+Some works have a _lot_ of authors. There are around 3,000 works in OpenAlex, where each work has more than 5,000 authors associated with the article. Certain API queries combine these works and cause a `503` error.&#x20;
+
+Rather than return this generic error or truncate the author list, we are returning a `403` error when the total author count exceeds 30,000 authors within a single query. The error message includes instructions to add or alter the [per-page parameter](api/#paging) down to around 10 or 5 results in order to continue.
 
 ## Questionable dates
 
