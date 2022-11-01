@@ -3,11 +3,11 @@
 It's easy to filter and group by large geographic regions, such as continents and the [Global South](https://en.wikipedia.org/wiki/Global\_North\_and\_Global\_South).&#x20;
 
 * Get institutions located in South America\
-  [https://api.openalex.org/institutions?filter=country.continent:south_\__america](https://api.openalex.org/institutions?filter=country.continent:south\_america)
+  [https://api.openalex.org/institutions?filter=continent:south_\__america](https://api.openalex.org/institutions?filter=continent:south\_america)
 * Get works where at least one author's institution is located in the Global South\
-  [https://api.openalex.org/works?filter=institutions.country.is\_global\_south:true](https://api.openalex.org/works?filter=institutions.country.is\_global\_south:true)
+  [https://api.openalex.org/works?filter=institutions.is\_global\_south:true](https://api.openalex.org/works?filter=institutions.is\_global\_south:true)
 * Group highly-cited authors by their last known institution's continent\
-  [https://api.openalex.org/authors?group-by=last\_known\_institution.country.continent\&filter=cited\_by\_count:>100](https://api.openalex.org/authors?group-by=last\_known\_institution.country.continent\&filter=cited\_by\_count:%3E100)
+  [https://api.openalex.org/authors?group-by=last\_known\_institution.continent\&filter=cited\_by\_count:>100](https://api.openalex.org/authors?group-by=last\_known\_institution.continent\&filter=cited\_by\_count:%3E100)
 
 ### Continents
 
@@ -17,11 +17,11 @@ Countries are mapped to continents using data from the [United Nations Statistic
 
 There are three ways to use continent filters:
 
-| Endpoint     | Format                                                                 |
-| ------------ | ---------------------------------------------------------------------- |
-| Authors      | `/authors?filter=last_known_institution.country.continent:<continent>` |
-| Institutions | `/institutions?filter=country.continent:<continent>`                   |
-| Works        | `/works?filter=institutions.country.continent:<continent>`             |
+| Endpoint     | Format                                                         |
+| ------------ | -------------------------------------------------------------- |
+| Authors      | `/authors?filter=last_known_institution.continent:<continent>` |
+| Institutions | `/institutions?filter=continent:<continent>`                   |
+| Works        | `/works?filter=institutions.continent:<continent>`             |
 
 Available values for the `<continent>` filter are:
 
@@ -40,7 +40,7 @@ Available values for the `<continent>` filter are:
 You can group by continent.
 
 * Group institutions by continent\
-  [https://api.openalex.org/institutions?group-by=country.continent](https://api.openalex.org/institutions?group-by=country.continent)
+  [https://api.openalex.org/institutions?group-by=continent](https://api.openalex.org/institutions?group-by=continent)
 
 Response:
 
@@ -64,11 +64,11 @@ Response:
 
 Groups are available in these endpoints:
 
-| Endpoint     | Format                                                       |
-| ------------ | ------------------------------------------------------------ |
-| Authors      | `/authors?group-by=last_known_institution.country.continent` |
-| Institutions | `/institutions?group-by=country.continent`                   |
-| Works        | `/works?group-by=institutions.country.continent`             |
+| Endpoint     | Format                                               |
+| ------------ | ---------------------------------------------------- |
+| Authors      | `/authors?group-by=last_known_institution.continent` |
+| Institutions | `/institutions?group-by=continent`                   |
+| Works        | `/works?group-by=institutions.continent`             |
 
 ### **Global South**
 
@@ -78,28 +78,28 @@ The Global South is a term used to identify regions within Latin America, Asia, 
 
 You can filter Global South countries by using the boolean filter `is_global_south` in the following endpoints:
 
-| Endpoint     | Format                                                                     |
-| ------------ | -------------------------------------------------------------------------- |
-| Authors      | `/authors?filter=last_known_institution.country.is_global_south:<boolean>` |
-| Institutions | `/institutions?filter=country.is_global_south:<boolean>`                   |
-| Works        | `/works?filter=institutions.country.is_global_south:<boolean>`             |
+| Endpoint     | Format                                                             |
+| ------------ | ------------------------------------------------------------------ |
+| Authors      | `/authors?filter=last_known_institution.is_global_south:<boolean>` |
+| Institutions | `/institutions?filter=is_global_south:<boolean>`                   |
+| Works        | `/works?filter=institutions.is_global_south:<boolean>`             |
 
 #### Group by Global South
 
 You can also group by the Global South:
 
-| Endpoint     | Format                                                             |
-| ------------ | ------------------------------------------------------------------ |
-| Authors      | `/authors?group-by=last_known_institution.country.is_global_south` |
-| Institutions | `/institutions?group-by=country.is_global_south`                   |
-| Works        | `/works?group-by=institutions.country.is_global_south`             |
+| Endpoint     | Format                                                     |
+| ------------ | ---------------------------------------------------------- |
+| Authors      | `/authors?group-by=last_known_institution.is_global_south` |
+| Institutions | `/institutions?group-by=is_global_south`                   |
+| Works        | `/works?group-by=institutions.is_global_south`             |
 
 ### Tips & Tricks
 
 To see country-by-country details for a geographic region, filter by region, then group by `country_code`.
 
 * Get number of authors with last known institution in the Global South, by country\
-  [https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_global\_south:true\&group-by=last\_known\_institution.country\_code](https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_global\_south:true\&group-by=last\_known\_institution.country\_code)
+  h[ttps://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true\&group-by=last\_known\_institution.country\_code](ttps://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true\&group-by=last\_known\_institution.country\_code)
 
 Response:
 
