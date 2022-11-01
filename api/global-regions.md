@@ -76,13 +76,7 @@ The Global South is a term used to identify regions within Latin America, Asia, 
 
 #### Filter by Global South
 
-You can filter Global South countries by using the boolean filter:
-
-| Region       | Boolean Filter    |
-| ------------ | ----------------- |
-| Global South | `is_global_south` |
-
-It is available in these endpoints:
+You can filter Global South countries by using the boolean filter `is_global_south` in the following endpoints:
 
 | Endpoint     | Format                                                                     |
 | ------------ | -------------------------------------------------------------------------- |
@@ -92,7 +86,7 @@ It is available in these endpoints:
 
 #### Group by Global South
 
-There are three ways to group by the Global South:
+You can also group by the Global South:
 
 | Endpoint     | Format                                                             |
 | ------------ | ------------------------------------------------------------------ |
