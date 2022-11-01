@@ -259,6 +259,15 @@ Returns: works where at least _one_ of the author's institutions is in the chose
 * Get works where at least one author's institution in each work is located in Europe\
   [https://api.openalex.org/works?filter=authorships.institutions.country.continent:europe](https://api.openalex.org/works?filter=authorships.institutions.country.continent:europe)
 
+#### `authorships.institutions.country.is_global_south` __ (alias: `institutions.country.is_global_south`)
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works where at least _one_ of the author's institutions is in the Global South ([read more](../global-regions.md#global-south)).
+
+* Get works where at least one author's institution is in the Global South\
+  [https://api.openalex.org/works?filter=authorships.institutions.country.is\_global\_south:true](https://api.openalex.org/works?filter=authorships.institutions.country.is\_global\_south:true)
+
 ## `/authors` filters
 
 ### `/authors` attribute filters
@@ -308,6 +317,15 @@ Returns: authors where where the last known institution is in the chosen contine
 
 * Get authors where the last known institution is located in Africa\
   [https://api.openalex.org/authors?filter=last\_known\_institution.country.continent:africa](https://api.openalex.org/authors?filter=last\_known\_institution.country.continent:africa)
+
+#### `last_known_institution.country.is_global_south`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works where at least _one_ of the author's institutions is in the Global South ([read more](../global-regions.md#global-south)).
+
+* Get authors where the last known institution is located in the Global South\
+  [https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_global\_south:true](https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_global\_south:true)
 
 ## `/venues` filters
 
@@ -397,6 +415,15 @@ Returns: institutions that are located in the chosen continent ([read more](../g
 
 * Get institutions that are located in South America\
   [https://api.openalex.org/institutions?filter=country.continent:south\_america](https://api.openalex.org/institutions?filter=country.continent:south\_america)
+
+#### `country.is_global_south`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: institutions that are located in the Global South ([read more](../global-regions.md#global-south)).
+
+* Get institutions that are located in the Global South\
+  [https://api.openalex.org/institutions?filter=country.is\_global\_south:true](https://api.openalex.org/institutions?filter=country.is\_global\_south:true)
 
 ## `/concepts` filters
 
