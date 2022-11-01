@@ -104,8 +104,8 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`authorships.author.id`](../about-the-data/work.md#authorships) (alias `author.id`)
 * ``[`authorships.author.orcid`](../about-the-data/work.md#authorships) (alias `author.orcid`)
 * ``[`authorships.institutions.country_code`](../about-the-data/work.md#authorships) (alias `institutions.country_code`)
-* ``[`authorships.institutions.country.continent`](global-regions.md#group-by-continent) (alias `institutions.country.continent`)
-* ``[`authorships.institutions.country.is_global_south`](global-regions.md#group-by-global-south)``
+* ``[`authorships.institutions.continent`](global-regions.md#group-by-continent) (alias `institutions.continent`)
+* ``[`authorships.institutions.is_global_south`](global-regions.md#group-by-global-south)``
 * ``[`authorships.institutions.id`](../about-the-data/work.md#authorships) (alias `institutions.id`)
 * ``[`authorships.institutions.ror`](../about-the-data/work.md#authorships) (alias `institutions.ror`)
 * ``[`authorships.institutions.type`](../about-the-data/work.md#authorships) (alias `institutions.type`)
@@ -132,8 +132,8 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`cited_by_count`](../about-the-data/author.md#cited\_by\_count)``
 * ``[`has_orcid`](get-lists-of-entities/#additional-filters-1)``
 * ``[`last_known_institution.country_code`](../about-the-data/author.md#last\_known\_institution)``
-* ``[`last_known_institution.country.continent`](global-regions.md#group-by-continent)``
-* ``[`last_known_institution.country.is_global_south`](global-regions.md#group-by-global-south)``
+* ``[`last_known_institution.continent`](global-regions.md#group-by-continent)``
+* ``[`last_known_institution.is_global_south`](global-regions.md#group-by-global-south)``
 * ``[`last_known_institution.id`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.ror`](../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.type`](../about-the-data/author.md#last\_known\_institution)
@@ -153,8 +153,8 @@ Each Entity type has a different set of attributes you can group by. These are m
 
 * ``[`cited_by_count`](../about-the-data/institution.md#cited\_by\_count)``
 * ``[`country_code`](../about-the-data/institution.md#type)``
-* ``[`country.continent`](global-regions.md#group-by-continent)``
-* ``[`country.is_global_south`](global-regions.md#group-by-global-south)``
+* ``[`continent`](global-regions.md#group-by-continent)``
+* ``[`is_global_south`](global-regions.md#group-by-global-south)``
 * ``[`geographic_region`](global-regions.md#group-by)``
 * [`has_ror`](get-lists-of-entities/#additional-filters-3)``
 * [`type`](../about-the-data/institution.md#type)``
