@@ -17,9 +17,9 @@ These ID-less objects are tricky because they can't do most of the things a regu
 
 ## API queries with a high amount of authors will return an error
 
-Some works have a _lot_ of authors. There are around 3,000 works in OpenAlex, where each work has more than 5,000 authors associated with the article. Certain API queries combine these works and cause a `503` error.&#x20;
+Some [works](about-the-data/work.md#the-work-object) have a _lot_ of [`authorships`](about-the-data/work.md#authorships) objects. There are around 3,000 works in OpenAlex, where each work has more than 5,000 `authorships` objects associated with the article. Certain API queries combine these works and cause a `503` error.&#x20;
 
-Rather than return this generic error or truncate the author list, we are returning a `403` error when the total author count exceeds 30,000 authors within a single query. The error message includes instructions to add or alter the [per-page parameter](api/#paging) down to around 10 or 5 results in order to continue.
+Rather than return this generic error or truncate the author list, we are returning a `403` error when the total number of `authorships` objects exceeds 30,000 within a single query. The error message includes instructions to add or alter the [`per-page`](api/#paging) parameter down to around 10 or 5 results in order to continue.
 
 ## Questionable dates
 
