@@ -99,7 +99,7 @@ You can also group by the Global South:
 To see country-by-country details for a geographic region, filter by region, then group by `country_code`.
 
 * Get number of authors with last known institution in the Global South, by country\
-  h[ttps://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true\&group-by=last\_known\_institution.country\_code](ttps://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true\&group-by=last\_known\_institution.country\_code)
+  [https://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true\&group-by=last\_known\_institution.country\_code](https://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true\&group-by=last\_known\_institution.country\_code)
 
 Response:
 
