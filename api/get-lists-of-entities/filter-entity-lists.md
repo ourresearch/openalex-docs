@@ -165,6 +165,24 @@ Returns: works that have or lack a DOI, depending on the given value. It's espec
 * Get the works that have no DOI assigned:\
   [`https://api.openalex.org/works?filter=has_doi:false`](https://api.openalex.org/works?filter=has\_doi:false) ``&#x20;
 
+#### `has_pmid`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works that have or lack a PubMed reference number ([`pmid`](../../about-the-data/work.md#ids)), depending on the given value.
+
+* Get the works that have a `pmid`:\
+  [`https://api.openalex.org/works?filter=has_pmid:true`](https://api.openalex.org/works?filter=has\_pmid:true)``
+
+#### `has_pmcid`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works that have or lack a PubMed Central ID ([`pmcid`](../../about-the-data/work.md#ids)) depending on the given value.
+
+* Get the works that have a `pmcid`:\
+  [`https://api.openalex.org/works?filter=has_pmcid:true`](https://api.openalex.org/works?filter=has\_pmcid:true)``
+
 #### `has_ngrams`
 
 Value: a Boolean (`true` or `false`)
@@ -250,23 +268,23 @@ Returns: works with at least one [`host_venue`](../../about-the-data/work.md#hos
 * Get works with an OA submitted copy:\
   [`https://api.openalex.org/works?filter=has_oa_submitted_version:true`](https://api.openalex.org/works?filter=has\_oa\_submitted\_version:true)``
 
-#### `authorships.institutions.country.continent` __ (alias: `institutions.country.continent`)
+#### `authorships.institutions.continent` __ (alias: `institutions.continent`)
 
 Value: a String with a valid [continent filter](../global-regions.md#filter-by-continent)
 
 Returns: works where at least _one_ of the author's institutions is in the chosen continent ([read more](../global-regions.md)).
 
 * Get works where at least one author's institution in each work is located in Europe\
-  [https://api.openalex.org/works?filter=authorships.institutions.country.continent:europe](https://api.openalex.org/works?filter=authorships.institutions.country.continent:europe)
+  [https://api.openalex.org/works?filter=authorships.institutions.continent:europe](https://api.openalex.org/works?filter=authorships.institutions.continent:europe)
 
-#### `authorships.institutions.country.is_global_south` __ (alias: `institutions.country.is_global_south`)
+#### `authorships.institutions.is_global_south` __ (alias: `institutions.is_global_south`)
 
 Value: a Boolean (`true` or `false`)
 
 Returns: works where at least _one_ of the author's institutions is in the Global South ([read more](../global-regions.md#global-south)).
 
 * Get works where at least one author's institution is in the Global South\
-  [https://api.openalex.org/works?filter=authorships.institutions.country.is\_global\_south:true](https://api.openalex.org/works?filter=authorships.institutions.country.is\_global\_south:true)
+  [https://api.openalex.org/works?filter=authorships.institutions.is\_global\_south:true](https://api.openalex.org/works?filter=authorships.institutions.is\_global\_south:true)
 
 ## `/authors` filters
 
@@ -309,23 +327,23 @@ Returns: authors that have or lack an [orcid](../../about-the-data/author.md#orc
 * Get the authors that have an ORCID:\
   ``[`https://api.openalex.org/authors?filter=has_orcid:true`](https://api.openalex.org/authors?filter=has\_orcid:true)
 
-#### `last_known_institution.country.continent`
+#### `last_known_institution.continent`
 
 Value: a String with a valid [continent filter](../global-regions.md#filter-by-continent)
 
 Returns: authors where where the last known institution is in the chosen continent ([read more](../global-regions.md)).
 
 * Get authors where the last known institution is located in Africa\
-  [https://api.openalex.org/authors?filter=last\_known\_institution.country.continent:africa](https://api.openalex.org/authors?filter=last\_known\_institution.country.continent:africa)
+  [https://api.openalex.org/authors?filter=last\_known\_institution.continent:africa](https://api.openalex.org/authors?filter=last\_known\_institution.continent:africa)
 
-#### `last_known_institution.country.is_global_south`
+#### `last_known_institution.is_global_south`
 
 Value: a Boolean (`true` or `false`)
 
 Returns: works where at least _one_ of the author's institutions is in the Global South ([read more](../global-regions.md#global-south)).
 
 * Get authors where the last known institution is located in the Global South\
-  [https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_global\_south:true](https://api.openalex.org/authors?filter=last\_known\_institution.country.is\_global\_south:true)
+  [https://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true](https://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true)
 
 ## `/venues` filters
 
@@ -407,23 +425,23 @@ Returns: institutions that have or lack a [ROR ID](../../about-the-data/institut
 * Get institutions without ROR IDs:\
   [`https://api.openalex.org/institutions?filter=has_ror:false`](https://api.openalex.org/institutions?filter=has\_ror:false)
 
-#### `country.continent`
+#### `continent`
 
 Value: a String with a valid [continent filter](../global-regions.md#filter-by-continent)
 
 Returns: institutions that are located in the chosen continent ([read more](../global-regions.md)).
 
 * Get institutions that are located in South America\
-  [https://api.openalex.org/institutions?filter=country.continent:south\_america](https://api.openalex.org/institutions?filter=country.continent:south\_america)
+  [https://api.openalex.org/institutions?filter=continent:south\_america](https://api.openalex.org/institutions?filter=continent:south\_america)
 
-#### `country.is_global_south`
+#### `is_global_south`
 
 Value: a Boolean (`true` or `false`)
 
 Returns: institutions that are located in the Global South ([read more](../global-regions.md#global-south)).
 
 * Get institutions that are located in the Global South\
-  [https://api.openalex.org/institutions?filter=country.is\_global\_south:true](https://api.openalex.org/institutions?filter=country.is\_global\_south:true)
+  [https://api.openalex.org/institutions?filter=is\_global\_south:true](https://api.openalex.org/institutions?filter=is\_global\_south:true)
 
 ## `/concepts` filters
 
