@@ -128,6 +128,7 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`is_paratext`](../about-the-data/work.md#is\_paratext)``
 * ``[`is_retracted`](../about-the-data/work.md#is\_retracted)``
 * ``[`publication_year`](../about-the-data/work.md#publication\_year)``
+* ``[`version`](get-lists-of-entities/filter-entity-lists.md#version)``
 
 ### `/authors` group\_by attributes
 
