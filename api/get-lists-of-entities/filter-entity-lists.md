@@ -290,7 +290,7 @@ Returns: works where at least _one_ of the author's institutions is in the Globa
 
 Value: a String with value `publishedVersion`, `submittedVersion`, `acceptedVersion`, or `null`
 
-Returns: works where the chosen version exists within the [host\_venue](../../about-the-data/work.md#the-hostvenue-object) _or_ the [alternate\_host\_venues](../../about-the-data/work.md#alternate\_host\_venues) objects. If `null`, it returns works where no version is found.
+Returns: works where the chosen version exists within the [host\_venue](../../about-the-data/work.md#the-hostvenue-object) _or_ the [alternate\_host\_venues](../../about-the-data/work.md#alternate\_host\_venues) objects. If `null`, it returns works where no version is found in either location.
 
 * Get works where a published version is available in the host venue or alternate host venues\
   [https://api.openalex.org/works?filter=version:publishedVersion](https://api.openalex.org/works?filter=version:publishedVersion)
