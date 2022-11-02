@@ -169,7 +169,7 @@ Returns: works that have or lack a DOI, depending on the given value. It's espec
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works that have or lack a PubMed reference number ([`pmid`](../../about-the-data/work.md#ids)), depending on the given value.
+Returns: works that have or lack a PubMed identifier ([`pmid`](../../about-the-data/work.md#ids)), depending on the given value.
 
 * Get the works that have a `pmid`:\
   [`https://api.openalex.org/works?filter=has_pmid:true`](https://api.openalex.org/works?filter=has\_pmid:true)``
@@ -178,7 +178,7 @@ Returns: works that have or lack a PubMed reference number ([`pmid`](../../about
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works that have or lack a PubMed Central ID ([`pmcid`](../../about-the-data/work.md#ids)) depending on the given value.
+Returns: works that have or lack a PubMed Central identifier ([`pmcid`](../../about-the-data/work.md#ids)) depending on the given value.
 
 * Get the works that have a `pmcid`:\
   [`https://api.openalex.org/works?filter=has_pmcid:true`](https://api.openalex.org/works?filter=has\_pmcid:true)``
