@@ -15,7 +15,7 @@ We've got a lot of strings floating around for venues and institutions that have
 
 These ID-less objects are tricky because they can't do most of the things a regular entity can. They're just a suitcase for a name, right now.  They are inherited from MAG, and we plan to fix them. Over the next month or so, we'll be processing all these stub entities, clustering them together, and minting tens of millions of new entities from them.
 
-## API queries with a high amount of authors will return an error
+## Works API queries with high amount of authors will return an error
 
 Some [works](about-the-data/work.md#the-work-object) have a _lot_ of [`authorships`](about-the-data/work.md#authorships) objects. There are around 3,000 works in OpenAlex, where each work has more than 5,000 `authorships` objects associated with the article. Certain API queries combine these works and cause a `503` error.&#x20;
 
