@@ -115,6 +115,8 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`concepts.wikidata`](../about-the-data/work.md#concepts)``
 * ``[`has_abstract`](../about-the-data/work.md#abstract\_inverted\_index)``
 * ``[`has_doi`](get-lists-of-entities/#additional-filters)``
+* ``[`has_pmid`](../about-the-data/work.md#ids)``
+* ``[`has_pmcid`](../about-the-data/work.md#ids)``
 * ``[`has_ngrams`](get-n-grams.md)``
 * ``[`has_references`](get-lists-of-entities/filter-entity-lists.md#has\_references)``
 * ``[`host_venue.id`](../about-the-data/work.md#host\_venue) (alias `journal.id`)
