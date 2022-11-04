@@ -286,6 +286,19 @@ Returns: works where at least _one_ of the author's institutions is in the Globa
 * Get works where at least one author's institution is in the Global South\
   [https://api.openalex.org/works?filter=authorships.institutions.is\_global\_south:true](https://api.openalex.org/works?filter=authorships.institutions.is\_global\_south:true)
 
+#### `repository`
+
+Value: the [OpenAlex ID](../../about-the-data/#the-openalex-id) for a given [venue](../../about-the-data/venue.md)
+
+Returns: works where the chosen [venue ID](../../about-the-data/venue.md#id) exists within the [host\_venue](../../about-the-data/work.md#the-hostvenue-object) _or_ the [alternate\_host\_venues](../../about-the-data/work.md#alternate\_host\_venues) objects.
+
+You can use this to find works where authors are associated with your university, but the work is not part of the university's repository. :clap:
+
+* Get works that are available in the University of Michigan Deep Blue repository (OpenAlex ID: https://openalex.org/V4306400393)\
+  [https://api.openalex.org/works?filter=repository:V4306400393](https://api.openalex.org/works?filter=repository:V4306400393)
+* Get works where at least one author is associated with the University of Michigan, but the works are not found in the University of Michigan Deep Blue repository\
+  [https://api.openalex.org/works?filter=institutions.id:I27837315,repository:!V4306400393](https://api.openalex.org/works?filter=institutions.id:I27837315,repository:!V4306400393)
+
 #### `version`
 
 Value: a String with value `publishedVersion`, `submittedVersion`, `acceptedVersion`, or `null`
