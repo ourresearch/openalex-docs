@@ -83,6 +83,7 @@ You can filter using these attributes of the `Work` entity object (click each on
 * ``[`host_venue.license`](../../about-the-data/work.md)``
 * ``[`host_venue.publisher`](../../about-the-data/work.md#host\_venue)``
 * ``[`host_venue.type`](../../about-the-data/work.md#host\_venue)``
+* ``[`host_venue.version`](../../about-the-data/work.md#version)``
 * ``[`type`](../../about-the-data/work.md#type)``
 * ``[`is_paratext`](../../about-the-data/work.md#is\_paratext)``
 * ``[`open_access.oa_status`](../../about-the-data/work.md#open\_access) (alias: `oa_status`)
@@ -95,7 +96,7 @@ You can filter using these attributes of the `Work` entity object (click each on
 * ``[`authorships.institutions.type`](../../about-the-data/work.md#authorships) (alias: `institutions.type`)
 * ``[`cited_by_count`](../../about-the-data/work.md#cited\_by\_count)``
 * ``[`is_retracted`](../../about-the-data/work.md#is\_retracted)``
-* ``[`concepts.id`](../../about-the-data/work.md#concepts)``
+* ``[`concepts.id`](../../about-the-data/work.md#concepts) (alias: `concept.id`)
 * ``[`concepts.wikidata`](../../about-the-data/work.md#concepts)``
 * ``[`doi`](../../about-the-data/work.md#title)``
 * ``[`ids.mag`](../../about-the-data/work.md#ids) (alias: `mag`)
@@ -321,7 +322,7 @@ You can filter using these attributes of the `Author` entity object (click each 
 * ``[`last_known_institution.country_code`](../../about-the-data/author.md#last\_known\_institution)``
 * ``[`last_known_institution.type`](../../about-the-data/author.md#last\_known\_institution)``
 * [`ids.openalex`](../../about-the-data/author.md#ids) (alias: `openalex`)
-* ``[`x_concepts.id`](../../about-the-data/author.md#x\_concepts)``
+* ``[`x_concepts.id`](../../about-the-data/author.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
 
 ### `/authors` convenience filters
 
@@ -377,7 +378,7 @@ You can filter using these attributes of the `Venue` entity object (click each o
 * ``[`publisher`](../../about-the-data/venue.md#publisher) (requires exact match)
 * ``[`works_count`](../../about-the-data/venue.md#works\_count)``
 * ``[`cited_by_count`](../../about-the-data/venue.md#cited\_by\_count)``
-* ``[`x_concepts.id`](../../about-the-data/venue.md#x\_concepts)``
+* ``[`x_concepts.id`](../../about-the-data/venue.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
 * ``[`is_oa`](../../about-the-data/venue.md#is\_oa)``
 * ``[`is_in_doaj`](../../about-the-data/venue.md#is\_in\_doaj)``
 * [`ids.openalex`](../../about-the-data/venue.md#ids) (alias: `openalex`)
@@ -419,7 +420,7 @@ You can filter using these attributes of the `Institution` entity object (click 
 * ``[`works_count`](../../about-the-data/institution.md#works\_count)``
 * ``[`cited_by_count`](../../about-the-data/institution.md#cited\_by\_count)``
 * [`ids.openalex`](../../about-the-data/institution.md#ids) (alias: `openalex`)
-* ``[`x_concepts.id`](../../about-the-data/institution.md#x\_concepts)``
+* ``[`x_concepts.id`](../../about-the-data/institution.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
 
 ### `/institutions` convenience filters
 
