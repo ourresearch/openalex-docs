@@ -123,6 +123,7 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`host_venue.issn`](../about-the-data/work.md#host\_venue)``
 * ``[`host_venue.license`](../about-the-data/work.md#host\_venue)``
 * ``[`host_venue.publisher`](../about-the-data/work.md#host\_venue)``
+* ``[`host_venue.version`](../about-the-data/work.md#version)``
 * ``[`open_access.is_oa`](../about-the-data/work.md#open\_access) (alias `is_oa`)
 * ``[`open_access.oa_status`](../about-the-data/work.md#open\_access) (alias `oa_status`)
 * ``[`is_paratext`](../about-the-data/work.md#is\_paratext)``

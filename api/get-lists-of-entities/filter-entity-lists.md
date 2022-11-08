@@ -83,7 +83,6 @@ You can filter using these attributes of the `Work` entity object (click each on
 * ``[`host_venue.license`](../../about-the-data/work.md)``
 * ``[`host_venue.publisher`](../../about-the-data/work.md#host\_venue)``
 * ``[`host_venue.type`](../../about-the-data/work.md#host\_venue)``
-* ``[`host_venue.version`](../../about-the-data/work.md#version)``
 * ``[`type`](../../about-the-data/work.md#type)``
 * ``[`is_paratext`](../../about-the-data/work.md#is\_paratext)``
 * ``[`open_access.oa_status`](../../about-the-data/work.md#open\_access) (alias: `oa_status`)
