@@ -120,6 +120,21 @@ ids: {
 }
 ```
 
+### `type`
+
+_String:_ The type of venue, which will be one of the following from the Type column:
+
+| Type             | Wikidata ID                                          | How it's assigned                                   |
+| ---------------- | ---------------------------------------------------- | --------------------------------------------------- |
+| `journal`        | [Q737498](https://www.wikidata.org/wiki/Q737498)     | the venue has an [ISSN](venue.md#issn)              |
+| `repository`     | [Q66656823](https://www.wikidata.org/wiki/Q66656823) | "repository" found in publisher or article metadata |
+| `conference`     | [Q47258130](https://www.wikidata.org/wiki/Q47258130) | "conference" found in publisher or article metadata |
+| `ebook platform` | [Q1294318](https://www.wikidata.org/wiki/Q1294318)   | "book" found in publisher or article metadata       |
+
+```json
+type: "journal" 
+```
+
 ### `x_concepts`
 
 {% hint style="danger" %}
