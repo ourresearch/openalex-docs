@@ -400,6 +400,7 @@ You can filter using these attributes of the `Venue` entity object (click each o
 * ``[`is_oa`](../../about-the-data/venue.md#is\_oa)``
 * ``[`is_in_doaj`](../../about-the-data/venue.md#is\_in\_doaj)``
 * [`ids.openalex`](../../about-the-data/venue.md#ids) (alias: `openalex`)
+* [`type`](../../about-the-data/venue.md#type)``
 
 ### `/venues` convenience filters
 

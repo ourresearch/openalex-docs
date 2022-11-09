@@ -153,6 +153,7 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`is_oa`](../about-the-data/venue.md#is\_oa)``
 * ``[`issn`](../about-the-data/venue.md#issn)``
 * ``[`publisher`](../about-the-data/venue.md#publisher)``
+* ``[`type`](../about-the-data/venue.md#type)``
 * ``[`works_count`](../about-the-data/venue.md#works\_count)``
 
 ### `/institutions` group\_by attributes
