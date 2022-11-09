@@ -309,6 +309,24 @@ Returns: works where the chosen version exists within the [host\_venue](../../ab
 * Get works where a published version is available in the host venue or alternate host venues\
   [https://api.openalex.org/works?filter=version:publishedVersion](https://api.openalex.org/works?filter=version:publishedVersion)
 
+#### `authors_count`
+
+Value: an Integer
+
+Returns: works with the chosen number of [`authorships`](../../about-the-data/work.md#authorships) objects (authors). You can use the inequality filter to select a range, such as `authors_count:>5`_._
+
+* Get works that have exactly one author\
+  [https://api.openalex.org/works?filter=authors\_count:1](https://api.openalex.org/works?filter=authors\_count:1)
+
+#### `concepts_count`
+
+Value: an Integer
+
+Returns: works with the chosen number of [`concepts`](../../about-the-data/work.md#concepts).
+
+* Get works with at least three concepts assigned\
+  [https://api.openalex.org/works?filter=concepts\_count:>2](https://api.openalex.org/works?filter=concepts\_count:%3E2)
+
 ## `/authors` filters
 
 ### `/authors` attribute filters
