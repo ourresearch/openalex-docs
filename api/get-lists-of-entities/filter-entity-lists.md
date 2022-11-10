@@ -170,7 +170,7 @@ Returns: works that have or lack a DOI, depending on the given value. It's espec
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works where at least one author has an [ORCID ID](../../about-the-data/author.md#orcid) (if `true`). This is based on the `orcid` field within [`authorships.author`](../../about-the-data/work.md#author).
+Returns: if `true` it returns works where at least one author or has an [ORCID ID](../../about-the-data/author.md#orcid). If `false`, it returns works where no authors have an ORCID ID. This is based on the `orcid` field within [`authorships.author`](../../about-the-data/work.md#author).
 
 * Get the works where at least one author has an ORCID ID:\
   [`https://api.openalex.org/works?filter=has_orcid:true`](https://api.openalex.org/works?filter=has\_orcid:true) ``&#x20;
