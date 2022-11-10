@@ -157,7 +157,7 @@ Returns: works that have or lack an abstract, depending on the given value.
 * Get the works that have abstracts:\
   [`https://api.openalex.org/works?filter=has_abstract:true`](https://api.openalex.org/works?filter=has\_abstract:true)
 
-#### `has_doi`&#x20;
+#### `has_doi`
 
 Value: a Boolean (`true` or `false`)
 
@@ -165,6 +165,15 @@ Returns: works that have or lack a DOI, depending on the given value. It's espec
 
 * Get the works that have no DOI assigned:\
   [`https://api.openalex.org/works?filter=has_doi:false`](https://api.openalex.org/works?filter=has\_doi:false) ``&#x20;
+
+#### `has_orcid`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works where at least one author has an [ORCID ID](../../about-the-data/author.md#orcid) (if `true`). This is based on the `orcid` field within [`authorships.author`](../../about-the-data/work.md#author).
+
+* Get the works where at least one author has an ORCID ID:\
+  [`https://api.openalex.org/works?filter=has_orcid:true`](https://api.openalex.org/works?filter=has\_orcid:true) ``&#x20;
 
 #### `has_pmid`
 
