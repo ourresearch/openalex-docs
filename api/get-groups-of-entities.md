@@ -163,7 +163,6 @@ Each Entity type has a different set of attributes you can group by. These are m
 * ``[`country_code`](../about-the-data/institution.md#type)``
 * ``[`continent`](global-regions.md#group-by-continent)``
 * ``[`is_global_south`](global-regions.md#group-by-global-south)``
-* ``[`geographic_region`](global-regions.md#group-by)``
 * [`has_ror`](get-lists-of-entities/#additional-filters-3)``
 * [`type`](../about-the-data/institution.md#type)``
 * ``[`works_count`](../about-the-data/institution.md#works\_count)``
