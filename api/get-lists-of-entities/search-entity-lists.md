@@ -7,7 +7,7 @@ The `search` query parameter finds results that match a given text search. Examp
 * Get works with search term "dna" in the title, abstract, or fulltext:\
   [https://api.openalex.org/works?search=dna](https://api.openalex.org/works?search=dna)
 
-When you search `works`, the API looks for matches in titles, abstracts, and fulltext. When you search `concepts`, we look looks in each concept's `display_name` and `description` fields. Searching  `authors`, `venues`, and `institutions` will looks for matches within each entities' `display_name` field.
+When you search `works`, the API looks for matches in titles, abstracts, and fulltext. When you search `concepts`, we look looks in each concept's `display_name` and `description` fields. When you search `venues`, we look at the `display_name`_,_ `alternate_titles`, and `abbreviated_title` fields. Searching  `authors` or `institutions` will looks for matches within each entities' `display_name` field.
 
 Fulltext search for `works` is powered by an index of word sequences called n-grams - see [Get N-grams](../get-n-grams.md) for coverage details.
 
