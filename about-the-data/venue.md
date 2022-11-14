@@ -120,6 +120,14 @@ ids: {
 }
 ```
 
+### `country_code`
+
+_String:_ The country that this venue is associated with, represented as an [ISO two-letter country code](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2).
+
+```json
+country_code: "GB" 
+```
+
 ### `type`
 
 _String:_ The type of venue, which will be one of the following from the Type column:

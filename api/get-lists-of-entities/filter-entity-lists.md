@@ -403,13 +403,14 @@ You can filter using these attributes of the `Venue` entity object (click each o
 
 * ``[`issn`](../../about-the-data/venue.md#issn)``
 * ``[`publisher`](../../about-the-data/venue.md#publisher) (requires exact match)
+* ``[`country_code`](../../about-the-data/venue.md#country\_code)``
 * ``[`works_count`](../../about-the-data/venue.md#works\_count)``
 * ``[`cited_by_count`](../../about-the-data/venue.md#cited\_by\_count)``
-* ``[`x_concepts.id`](../../about-the-data/venue.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
 * ``[`is_oa`](../../about-the-data/venue.md#is\_oa)``
 * ``[`is_in_doaj`](../../about-the-data/venue.md#is\_in\_doaj)``
 * [`ids.openalex`](../../about-the-data/venue.md#ids) (alias: `openalex`)
 * [`type`](../../about-the-data/venue.md#type)``
+* [`x_concepts.id`](../../about-the-data/venue.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
 
 ### `/venues` convenience filters
 

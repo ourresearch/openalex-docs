@@ -150,6 +150,7 @@ Each Entity type has a different set of attributes you can group by. These are m
 
 * ``[`cited_by_count`](../about-the-data/venue.md#cited\_by\_count)``
 * ``[`has_issn`](get-lists-of-entities/#additional-filters-2)``
+* ``[`country_code`](../about-the-data/venue.md#country\_code)``
 * ``[`is_in_doaj`](../about-the-data/venue.md#is\_in\_doaj)``
 * ``[`is_oa`](../about-the-data/venue.md#is\_oa)``
 * ``[`issn`](../about-the-data/venue.md#issn)``
