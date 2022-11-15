@@ -7,6 +7,7 @@
     * [Filter entity lists](api/get-lists-of-entities/filter-entity-lists.md)
     * [Search entity lists](api/get-lists-of-entities/search-entity-lists.md)
     * [Sort entity lists](api/get-lists-of-entities/sort-entity-lists.md)
+    * [Limitations](api/get-lists-of-entities/limitations.md)
   * [Get groups of entities](api/get-groups-of-entities.md)
   * [Get N-grams](api/get-n-grams.md)
   * [Autocomplete endpoint](api/autocomplete-endpoint.md)
