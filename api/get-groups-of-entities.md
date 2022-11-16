@@ -220,5 +220,9 @@ You can filter using all the available [logical expressions](get-lists-of-entiti
 * Group journal articles with at least one author affiliated with the [University of Florida](https://ror.org/02y3ad647) by `is_oa`:\
   [`https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647,type:journal-article&group_by=is_oa`](https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647,type:journal-article\&group\_by=is\_oa)
 
+## Download as CSV
 
+You can export any group-by results to a CSV file by adding the parameter `format=csv`.
 
+* Download a CSV file with a count of institutions by country code\
+  [https://api.openalex.org/institutions?group-by=country\_code\&format=csv](https://api.openalex.org/institutions?group-by=country\_code\&format=csv)
