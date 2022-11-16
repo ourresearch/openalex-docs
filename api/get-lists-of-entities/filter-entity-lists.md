@@ -215,7 +215,7 @@ Returns: works that have or lack [referenced\_works](../../about-the-data/work.m
 
 Value: the [OpenAlex ID](../../about-the-data/#the-openalex-id) for a given work
 
-Returns: works that cite the given work. You can think of this as **incoming citations**.&#x20;
+Returns: works that cite the given work. This is works that have the given OpenAlex ID in the [`referenced_works`](../../about-the-data/work.md#referenced\_works) section. You can think of this as **incoming citations**.&#x20;
 
 * Get works that cite [https://openalex.org/W2741809807](https://openalex.org/W2741809807):  [`https://api.openalex.org/works?filter=cites:W2741809807`](https://api.openalex.org/works?filter=cites:W2741809807)``
 
