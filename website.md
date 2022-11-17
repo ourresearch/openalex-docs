@@ -4,10 +4,6 @@ description: Explore OpenAlex without needing to write code
 
 # Website
 
-{% hint style="info" %}
-The website launches in the summer of 2022
-{% endhint %}
-
 The easiest way to explore the OpenAlex dataset is via the web interface. It allows you to search, filter, facet, and export OpenAlex entities, just like [the API](api/) does (in fact, it's built on our API), but without needing any technical knowledge.
 
 There's only one downside to the website: it's not actually done yet :).&#x20;
