@@ -67,9 +67,6 @@ You can use OR for values _within_ a given filter, but not _between_ different f
   [`https://api.openalex.org/works?filter=institutions.country_code:fr|host_venue.issn:0957-1558`](https://api.openalex.org/works?filter=institutions.country\_code:fr|host\_venue.issn:0957-1558)``
 {% endhint %}
 
-\
-
-
 ## `/works` filters
 
 ### `/works` attribute filters&#x20;
