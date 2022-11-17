@@ -21,7 +21,7 @@ You can read more about the [entity objects](about-the-data/) that make up OpenA
 OpenAlex data is completely free and open, provided under a [CC0 license](license.md). There are three ways to actually get the OpenAlex dataset:
 
 * the [API](api/)
-* the [website](website.md) (launching Summer 2022), and
+* the [website](website.md) (launching soon), and
 * the [database snapshot](download-snapshot/).
 
 ## Contact
