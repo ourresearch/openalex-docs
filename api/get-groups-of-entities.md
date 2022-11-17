@@ -187,17 +187,6 @@ You can sort grouped by results using `count` or `key`. The default is `count:de
 
 You cannot page through grouped results using `page`.  However, you can use `per-page` to change the number of results returned. The default (and maximum) is 200 results. Changing `per-page` to a lower number will likely be faster.
 
-## CSV export
-
-You can download a CSV file of your results using the `format` parameter.
-
-* Download a CSV file with grouped publication year:
-
-&#x20;
-
-Sort group\_by results by key, ascending\
-[`https://api.openalex.org/works?group_by=oa_status&sort=key:asc`](https://api.openalex.org/works?group\_by=oa\_status\&sort=key:asc)
-
 ## Combining grouping with filtering
 
 The `group_by` and `filter` parameters can be used at the same time. If you use both parameters, only the `Entities` matched by `filter` will be grouped and counted.
