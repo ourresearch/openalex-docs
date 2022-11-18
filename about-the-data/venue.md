@@ -136,8 +136,31 @@ ids: {
     issn: [
         "2167-8359"
     ],
-    mag: 1983995261
+    mag: 1983995261,
+    fatcat: "https://fatcat.wiki/container/z3ijzhu7zzey3f7jwws7rzopoq",
+    wikidata: "https://www.wikidata.org/entity/Q96326029"
 }
+```
+
+### apc\_usd
+
+_Integer:_ The Venue's article processing charge in US Dollars, if available from [DOAJ](https://doaj.org/).&#x20;
+
+```json
+apc_usd: 5200
+```
+
+### societies
+
+_Array:_ Societies on whose behalf the Venue is maintained, obtained from our [crowdsourced list](https://blog.ourresearch.org/society-list/). Thanks!&#x20;
+
+```json
+societies: [
+    {
+        "url": "http://www.counseling.org/",
+        "organization": "American Counseling Association on behalf of the American College Counseling Association"
+    }
+]
 ```
 
 ### `country_code`
