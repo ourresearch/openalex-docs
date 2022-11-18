@@ -88,6 +88,24 @@ _Boolean:_ Whether this is a journal listed in the [Directory of Open Access Jou
 is_in_doaj: true 
 ```
 
+### alternate\_titles
+
+_Array:_ Alternate titles for this Venue, as obtained from the [ISSN Centre](https://issn.org) and individual work records, like Crossref DOIs, that carry the Venue name as a string. These are commonly abbreviations or translations of the Venue's canonical name.
+
+```json
+alternate_titles: [
+   "ACRJ"
+]
+```
+
+### abbreviated\_title
+
+_String:_ An abbreviated title obtained from the [ISSN Centre](https://issn.org).
+
+```json
+abbreviated_title: "J. addict. med. ther. sci."
+```
+
 ### `homepage_url`
 
 _String:_ The starting page for navigating the contents of this venue; the homepage for this venue's website.
@@ -104,6 +122,8 @@ _Object:_ All the external identifiers that we know about for this venue. IDs ar
 * `issn_l` (_String:_ this venue's ISSN-L. Same as [`Venue.issn_l`](venue.md#issn\_l))
 * `mag`  (_Integer:_ this venue's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `issn` (_List:_ a list of this venue's ISSNs. Same as [`Venue.issn`](venue.md#issn))
+* `fatcat` (_String_: this venue's [Fatcat](https://fatcat.wiki/) ID)
+* `wikidata` (_String_: this venue's [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main\_Page) ID)
 
 {% hint style="info" %}
 Many venues are missing one or more ID types (either because we don't know the ID, or because it was never assigned). Keys for null IDs are not displayed.
