@@ -132,12 +132,12 @@ country_code: "GB"
 
 _String:_ The type of venue, which will be one of the following from the Type column:
 
-| Type             | Wikidata ID                                          | How it's assigned                                   |
-| ---------------- | ---------------------------------------------------- | --------------------------------------------------- |
-| `journal`        | [Q737498](https://www.wikidata.org/wiki/Q737498)     | the venue has an [ISSN](venue.md#issn)              |
-| `repository`     | [Q66656823](https://www.wikidata.org/wiki/Q66656823) | "repository" found in publisher or article metadata |
-| `conference`     | [Q47258130](https://www.wikidata.org/wiki/Q47258130) | "conference" found in publisher or article metadata |
-| `ebook platform` | [Q1294318](https://www.wikidata.org/wiki/Q1294318)   | "book" found in publisher or article metadata       |
+| Type             | Wikidata ID                                          | How it's assigned                                                                                                   |
+| ---------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `journal`        | [Q737498](https://www.wikidata.org/wiki/Q737498)     | The Venue is an academic journal with an [ISSN](venue.md#issn).                                                     |
+| `repository`     | [Q66656823](https://www.wikidata.org/wiki/Q66656823) | The Venue is a disciplinary or institutional repository.                                                            |
+| `conference`     | [Q47258130](https://www.wikidata.org/wiki/Q47258130) | The Venue publishes Works with [`type`](work.md#type) "Proceedings", "Proceedings Series" or "Proceedings Article". |
+| `ebook platform` | [Q1294318](https://www.wikidata.org/wiki/Q1294318)   | The Venue publishes Works with [`type`](work.md#type) containing "book", e.g. "Book Chapter".                       |
 
 ```json
 type: "journal" 
