@@ -150,7 +150,9 @@ Each Entity type has a different set of attributes you can group by. These are m
 
 * ``[`cited_by_count`](../about-the-data/venue.md#cited\_by\_count)``
 * ``[`has_issn`](get-lists-of-entities/#additional-filters-2)``
+* ``[`continent`](global-regions.md#group-by-continent)``
 * ``[`country_code`](../about-the-data/venue.md#country\_code)``
+* ``[`is_global_south`](global-regions.md#group-by-global-south)``
 * ``[`is_in_doaj`](../about-the-data/venue.md#is\_in\_doaj)``
 * ``[`is_oa`](../about-the-data/venue.md#is\_oa)``
 * ``[`issn`](../about-the-data/venue.md#issn)``
@@ -161,8 +163,8 @@ Each Entity type has a different set of attributes you can group by. These are m
 ### `/institutions` group\_by attributes
 
 * ``[`cited_by_count`](../about-the-data/institution.md#cited\_by\_count)``
+* [`continent`](global-regions.md#group-by-continent)``
 * ``[`country_code`](../about-the-data/institution.md#type)``
-* ``[`continent`](global-regions.md#group-by-continent)``
 * ``[`is_global_south`](global-regions.md#group-by-global-south)``
 * [`has_ror`](get-lists-of-entities/#additional-filters-3)``
 * [`type`](../about-the-data/institution.md#type)``
