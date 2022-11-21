@@ -152,7 +152,7 @@ apc_usd: 5200
 
 ### societies
 
-_Array:_ Societies on whose behalf the Venue is maintained, obtained from our [crowdsourced list](https://blog.ourresearch.org/society-list/). Thanks!&#x20;
+_Array:_ Societies on whose behalf the Venue is published and maintained, obtained from our [crowdsourced list](https://blog.ourresearch.org/society-list/). Thanks!&#x20;
 
 ```json
 societies: [

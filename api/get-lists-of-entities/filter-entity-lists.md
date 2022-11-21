@@ -435,6 +435,24 @@ Returns: venues that have or lack an [ISSN](../../about-the-data/venue.md#issn),
 * Get venues without ISSNs:\
   [`https://api.openalex.org/venues?filter=has_issn:false`](https://api.openalex.org/venues?filter=has\_issn:false)
 
+#### `continent`
+
+Value: a String with a valid [continent filter](../global-regions.md#filter-by-continent)
+
+Returns: venues that are associated with the chosen continent ([read more](../global-regions.md)).
+
+* Get venues that are associated with Asia\
+  [https://api.openalex.org/venues?filter=continent:asia](https://api.openalex.org/venues?filter=continent:asia)
+
+#### `is_global_south`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: venues that are associated with the Global South ([read more](../global-regions.md#global-south)).
+
+* Get venues that are located in the Global South\
+  [https://api.openalex.org/venues?filter=is\_global\_south:true](https://api.openalex.org/venues?filter=is\_global\_south:true)
+
 ## `/institutions` filters
 
 ### `/institutions` attribute filters
