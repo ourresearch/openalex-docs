@@ -18,7 +18,7 @@ Unlike other API endpoints, n-grams are cached via CDN, which means this one is 
   [`https://api.openalex.org/works/W2023271753/ngrams`](https://api.openalex.org/works/W2023271753/ngrams)\
   [`https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams`](https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams)
 
-The response is a list of [Ngram objects](get-n-grams.md#the-ngram-object), sorted from 5-grams down to unigrams:
+The response is a list of [Ngram objects](../about-the-data/work.md#the-ngram-object), sorted from 5-grams down to unigrams:
 
 ```
 {
