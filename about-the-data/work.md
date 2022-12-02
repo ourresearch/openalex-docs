@@ -488,7 +488,7 @@ institutions: [
 
 ### `raw_affiliation_string`
 
-_String:_ This author's affiliation as it originally came to us (on a webpage or in an API), as a raw unformatted string.&#x20;
+_String:_ This author's affiliation as it originally came to us (on a webpage or in an API), as a raw unformatted string. Multiple affiliations are separated by a semicolon.
 
 ```json
 raw_affiliation_string: "Canadian Institute for Studies in Publishing, Simon Fraser University, Vancouver, BC, Canada."
