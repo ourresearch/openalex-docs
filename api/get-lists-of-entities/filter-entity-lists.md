@@ -137,6 +137,10 @@ Returns: works whose fulltext includes the given string. Fulltext search is powe
 
 * Get works with fulltext that mention "climate change": [`https://api.openalex.org/works?filter=fulltext.search:climate%20change`](https://api.openalex.org/works?filter=fulltext.search:climate%20change)``
 
+{% hint style="info" %}
+We combined some n-grams before storing them in our search database, so querying for an exact phrase using quotes does not always work well.
+{% endhint %}
+
 #### `raw_affiliation_string.search`
 
 Value: a search string
