@@ -26,7 +26,7 @@ OpenAlex data is completely free and open, provided under a [CC0 license](licens
 
 ## Contact
 
-For tech support and bug reports, please email us at [support@openalex.org](mailto:support@openalex.org). You can follow us on Twitter at [@OpenAlex\_org](https://twitter.com/openalex\_org). For announcements and discussion, join the [OpenAlex Users newsgroup](https://groups.google.com/g/openalex-users).
+For tech support and bug reports, submit them via our [help request](https://openalex.org/help) form. You can follow us on Twitter at [@OpenAlex\_org](https://twitter.com/openalex\_org). For announcements and discussion, join the [OpenAlex Users newsgroup](https://groups.google.com/g/openalex-users).
 
 ## Funding
 
