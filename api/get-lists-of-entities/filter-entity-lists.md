@@ -409,6 +409,7 @@ You can filter using these attributes of the `Venue` entity object (click each o
 * ``[`cited_by_count`](../../about-the-data/venue.md#cited\_by\_count)``
 * ``[`is_oa`](../../about-the-data/venue.md#is\_oa)``
 * ``[`is_in_doaj`](../../about-the-data/venue.md#is\_in\_doaj)``
+* ``[`ids.mag`](../../about-the-data/venue.md#ids)``
 * [`ids.openalex`](../../about-the-data/venue.md#ids) (alias: `openalex`)
 * [`type`](../../about-the-data/venue.md#type)``
 * [`x_concepts.id`](../../about-the-data/venue.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
