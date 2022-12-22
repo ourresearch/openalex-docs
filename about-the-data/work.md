@@ -247,6 +247,8 @@ Each `Concept` object in the list also has one additional property:
 
 * `score` (_Float_): The strength of the connection between the work and this concept (higher is stronger). This number is produced by AWS Sagemaker, in the last layer of the [machine learning model](https://github.com/ourresearch/openalex-concept-tagging) that assigns concepts.
 
+Concepts with a score of at least 0.3 are assigned to the work. However, ancestors of an assigned concept are also added to the work, even if the ancestor scores are below 0.3. We will likely improve the ancestor scoring method in the future.
+
 ```json
 concepts: [
     {
