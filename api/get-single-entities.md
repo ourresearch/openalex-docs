@@ -12,10 +12,10 @@ It's easy to get a singleton [entity object](https://docs.openalex.org/about-the
 
 * Get the work with the [OpenAlex ID ](../about-the-data/#the-openalex-id)`W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)``
 
-That will return a [`Work`](../about-the-data/work.md) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
+That will return a [`Work`](../about-the-data/work.md) object, describing everything OpenAlex knows about the work with that ID. You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
 
 {% hint style="info" %}
-You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax.](get-lists-of-entities/filter-entity-lists.md#addition-or)
+You can make up to 50 of these queries at once by using the [OR syntax](get-lists-of-entities/filter-entity-lists.md#addition-or) ([tutorial](https://blog.ourresearch.org/fetch-multiple-dois-in-one-openalex-api-request/)).
 {% endhint %}
 
 {% hint style="info" %}
