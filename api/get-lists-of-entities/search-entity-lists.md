@@ -20,7 +20,7 @@ If you search for a multiple-word phrase, the algorithm will treat each word sep
 * Get works with the words "fierce" and "creatures" in the title or abstract, with works that have the two words close together ranked higher by `relevance_score` (returns way more results):\
   [https://api.openalex.org/works?search=fierce%20creatures](https://api.openalex.org/works?search=fierce%20creatures)
 
-Search using [stemming](https://en.wikipedia.org/wiki/Stemming), so a search for "possums" will also return records using the word "possum."
+Search uses [stemming](https://en.wikipedia.org/wiki/Stemming), so a search for "possums" will also return records using the word "possum." You can about our handling of diacritics within author names [here](https://blog.ourresearch.org/author-search-in-openalex-improved-handling-of-diacritics-within-names/).&#x20;
 
 ## The search filter
 
