@@ -128,6 +128,17 @@ Returns: works whose[`display_name`](work-object.md#display\_name) (title) inclu
 For most cases, you should use the [`search`](search-works.md#works-full-search) parameter instead of this filter, because it uses a better search algorithm and searches over abstracts as well as titles.
 {% endhint %}
 
+#### `from_created_date`
+
+Value: a date, formatted as `yyyy-mm-dd`
+
+Returns: works with [`created_date`](work-object.md#created\_date) greater than or equal to the given date.
+
+This field requires an OpenAlex Premium subscription to access. Please [contact us](mailto:support@openalex.org) if you are interested.&#x20;
+
+* Get works created on or _after_ January 12th, 2023 (does not work without valid API key):\
+  [`https://api.openalex.org/works?filter=from_created_date:2023-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=from\_created\_date:2023-01-12\&api\_key=myapikey)``
+
 #### `from_publication_date`
 
 Value: a date, formatted as `yyyy-mm-dd`
@@ -136,6 +147,17 @@ Returns: works with [`publication_date`](work-object.md#publication\_date) great
 
 * Get works published on or _after_ March 14th, 2001:\
   [`https://api.openalex.org/works?filter=from_publication_date:2001-03-14`](https://api.openalex.org/works?filter=from\_publication\_date:2001-03-14)``
+
+#### `from_updated_date`
+
+Value: a date, formatted as `yyyy-mm-dd`
+
+Returns: works with [`updated_date`](work-object.md#updated\_date) greater than or equal to the given date.
+
+This field requires an OpenAlex Premium subscription to access. Please [contact us](mailto:support@openalex.org) if you are interested.&#x20;
+
+* Get works updated on or _after_ January 12th, 2023 (does not work without valid API key):\
+  [`https://api.openalex.org/works?filter=from_updated_date:2023-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=from\_updated\_date:2023-01-12\&api\_key=myapikey)``
 
 #### **`fulltext.search`**
 
