@@ -143,10 +143,14 @@ This field requires an OpenAlex Premium subscription to access. Please [contact 
 
 Value: a date, formatted as `yyyy-mm-dd`
 
-Returns: works with [`publication_date`](work-object.md#publication\_date) greater than or equal to the given date.
+Returns: works with [`publication_date`](work-object.md#publication\_date) greater than or equal to the given date.&#x20;
 
 * Get works published on or _after_ March 14th, 2001:\
   [`https://api.openalex.org/works?filter=from_publication_date:2001-03-14`](https://api.openalex.org/works?filter=from\_publication\_date:2001-03-14)``
+
+{% hint style="info" %}
+Filtering by publication date is not a reliable way to retrieve recently updated and created works, due to the way publishers assign publication dates. Use `from_created_date` or `from_updated_date` to get the latest changes in OpenAlex.
+{% endhint %}
 
 #### `from_updated_date`
 
