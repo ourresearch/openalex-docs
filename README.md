@@ -25,7 +25,7 @@ There's no officially-supported client library for the API, for now. However, th
 
 If you're looking for a visual interface, you can also check out the free [VOSviewer](https://www.vosviewer.com/), which lets you make network visualizations based on OpenAlex data:
 
-![](<.gitbook/assets/Screenshot by Dropbox Capture.png>)
+![](<.gitbook/assets/Screenshot by Dropbox Capture (1).png>)
 
 ## Contact
 
