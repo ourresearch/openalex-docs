@@ -13,7 +13,7 @@ You can get venues from the OpenAlex API like this:
 
 The [Canonical External ID](../../how-to-use-the-api/get-single-entities.md#canonical-external-ids) for venues is ISSN-L, which is a special "main" ISSN assigned to every venue (venues tend to have multiple ISSNs). About 90% of venues in OpenAlex have an ISSN-L or ISSN.
 
-Our information about venues comes from Crossref, the ISSN Network, and MAG. These datasets are joined automatically where possible, but there’s also a lot of manual curation involved.
+Our information about venues comes from Crossref, the ISSN Network, and MAG. These datasets are joined automatically where possible, but there’s also a lot of manual combining involved. We do not curate journals, so any journal that is available in the data sources should make its way into OpenAlex.&#x20;
 
 Several venues may host the same work. OpenAlex reports both the primary host venue (generally wherever the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record) lives), and alternate host venues (like preprint repositories).
 
