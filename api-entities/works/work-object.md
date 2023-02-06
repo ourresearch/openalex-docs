@@ -525,6 +525,63 @@ _String:_ The version of the work, based on the [DRIVER Guidelines versioning sc
 version: "publishedVersion"
 ```
 
+## The `Location` object
+
+The `Location` object describes locations where works are hosted. It is only found within `Work` objects.
+
+### source
+
+_Object_: A [`Source.DehydratedSource`](../venues/venue-object.md#the-dehydratedsource-object) object consisting of a source or venue's `display_name`, `host_organization`, `id`, `issn`, `issn_l`, and `type`. This is the [`Source`](../venues/venue-object.md) that hosts this location for the work.
+
+```
+source: {
+  id: "https://openalex.org/S127170475",
+  display_name: "Journal of Applied Oral Science",
+  host_organization: "https://openalex.org/P4310312331"
+  issn: ["1678-7765", "1678-7757"]
+  issn_l: "1678-7757",
+  type: "education"
+}
+```
+
+{% hint style="info" %}
+We're in the process of changing sources to venues within the API, so you will see this field referenced as a mix of _source_ and _venue_ for the next 5 to 10 days.
+{% endhint %}
+
+### `is_oa`
+
+_Boolean:_ `True` if this work is Open Access (OA).&#x20;
+
+There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in.
+
+```json
+is_oa: true
+```
+
+### landing\_page\_url
+
+_String:_ The landing page URL for this location.&#x20;
+
+```json
+landing_page_url: "https://doi.org/10.1590/s1678-77572010000100010"
+```
+
+### license
+
+_String:_ This location's license.&#x20;
+
+```json
+license: "cc-by"
+```
+
+### pdf\_url
+
+_String:_ A URL where you can find this location as a PDF.&#x20;
+
+```json
+license: "http://www.scielo.br/pdf/jaos/v18n1/a10v18n1.pdf"
+```
+
 ## The `Ngram` object
 
 {% hint style="info" %}
