@@ -568,7 +568,7 @@ landing_page_url: "https://doi.org/10.1590/s1678-77572010000100010"
 
 ### license
 
-_String:_ This location's license.&#x20;
+_String:_ The location's publishing license. This can be a [Create Commons](https://creativecommons.org/about/cclicenses/) license such as cc0 or cc-by, a publisher-specific license, or null which means we are not able to determine a license for this location.&#x20;
 
 ```json
 license: "cc-by"
@@ -579,7 +579,7 @@ license: "cc-by"
 _String:_ A URL where you can find this location as a PDF.&#x20;
 
 ```json
-license: "http://www.scielo.br/pdf/jaos/v18n1/a10v18n1.pdf"
+pdf_url: "http://www.scielo.br/pdf/jaos/v18n1/a10v18n1.pdf"
 ```
 
 ## The `Ngram` object
