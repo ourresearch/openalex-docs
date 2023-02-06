@@ -326,6 +326,45 @@ This field has high precision but low recall. In other words, if `is_retracted` 
 is_retracted: false 
 ```
 
+### `locations`
+
+_List:_ A list of [`Location`](work-object.md#the-location-object) objects describing all unique places where this work lives.
+
+```json
+locations: [ 
+  {
+    is_oa: true,
+    landing_page_url: "https://doi.org/10.1073/pnas.17.6.401",
+    pdf_url: "http://www.pnas.org/content/17/6/401.full.pdf",
+    source: {
+      id: "https://openalex.org/S125754415",
+      display_name: "Proceedings of the National Academy of Sciences of the United States of America",
+      issn_l: "0027-8424",
+      issn: ["1091-6490", "0027-8424"],
+      host_organization: "https://openalex.org/P4310320052",
+      type: "journal"
+    },
+    license: null,
+    version: "publishedVersion"
+  },
+  {
+    is_oa: true,
+    landing_page_url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1076072",
+    pdf_url: null,
+    source: {
+      id: "https://openalex.org/S2764455111",
+      display_name: "PubMed Central",
+      issn_l: null,
+      issn: null,
+      host_organization: "https://openalex.org/I1299303238",
+      type: "repository"
+    },
+    license: null,
+    version: "publishedVersion"
+  }
+]
+```
+
 ### `mesh`
 
 _List:_ List of [MeSH](https://www.nlm.nih.gov/mesh/meshhome.html) tag objects. Only works found in [PubMed](https://pubmed.ncbi.nlm.nih.gov/) have MeSH tags; for all other works, this is an empty list.
