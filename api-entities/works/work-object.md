@@ -373,6 +373,30 @@ open_access: {
 },
 ```
 
+### `primary_location`
+
+_Object:_ A [`Location`](work-object.md#the-location-object) object with the primary location of this work.
+
+The `primary_location` is where you can find the best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work. For a peer-reviewed journal article, this would be a full text published version, hosted by the publisher at the article's DOI URL.
+
+```json
+primary_location: {
+  is_oa: true,
+  landing_page_url: "https://doi.org/10.1073/pnas.17.6.401",
+  pdf_url: "http://www.pnas.org/content/17/6/401.full.pdf",
+  source: {
+    id: "https://openalex.org/S125754415",
+    display_name: "Proceedings of the National Academy of Sciences of the United States of America",
+    issn_l: "0027-8424",
+    issn: ["1091-6490", "0027-8424"],
+    host_organization: "https://openalex.org/P4310320052",
+    type: "journal"
+  },
+  license: null,
+  version: "publishedVersion"
+}
+```
+
 ### `publication_date`
 
 _String:_ The day when this work was published, formatted as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date.
