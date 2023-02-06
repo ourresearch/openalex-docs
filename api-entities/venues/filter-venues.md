@@ -15,6 +15,7 @@ You can filter using these attributes of the `Source` entity object (click each 
 
 * ``[`cited_by_count`](venue-object.md#cited\_by\_count)``
 * ``[`country_code`](venue-object.md#country\_code)``
+* ``[`host_organization`](venue-object.md#host\_organization)``
 * ``[`ids.openalex`](venue-object.md#ids) (alias: `openalex`)
 * ``[`is_in_doaj`](venue-object.md#is\_in\_doaj)``
 * ``[`is_oa`](venue-object.md#is\_oa)``

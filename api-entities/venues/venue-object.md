@@ -91,6 +91,14 @@ _String:_ The starting page for navigating the contents of this source; the home
 homepage_url: "http://www.peerj.com/" 
 ```
 
+### `host_organization`
+
+_String:_ The host organization for this source as an [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id). This will be an [`Institution.id`](../institutions/institution-object.md#id) if the source is a repository, and a [`Publisher.id`](../publishers/publisher-object.md#id) if the source is a journal, conference, or eBook platform (based on the [`type`](venue-object.md#type) field).
+
+```json
+id: "https://openalex.org/P4310320595"
+```
+
 ### `id`
 
 _String:_ The [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) for this source.
