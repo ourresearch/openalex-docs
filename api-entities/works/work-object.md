@@ -103,29 +103,31 @@ authorships: [
 
 _Object:_ A [`Location`](work-object.md#the-location-object) object with the best available open access location for this work.
 
-When an article has more than one OA location, we need to decide which is the most current, authoritative version. Each location is assigned a sort score based on:
+We score open locations to determine which is best using these factors:
 
-1. type_:_ "publisher" is better than "repository".
-2. version: "publishedVersion" is better than "acceptedVersion", which is better than "submittedVersion".
-3. url\_for\_pdf: A location with a direct PDF link is better than one without.
-4. repository rankings: Some major repositories like PubMed Central and arXiv are ranked above others.
+1. Must have is\_oa: true
+2. type_:_ "publisher" is better than "repository".
+3. version: "publishedVersion" is better than "acceptedVersion", which is better than "submittedVersion".
+4. url\_for\_pdf: A location with a direct PDF link is better than one without.
+5. repository rankings: Some major repositories like PubMed Central and arXiv are ranked above others.
 
-<pre class="language-json"><code class="lang-json">best_oa_location: {
+```json
+best_oa_location: {
   is_oa: true,
   landing_page_url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1398957",
   pdf_url: null,
   source: {
     id: "https://openalex.org/S2764455111",
-<strong>    display_name: "PubMed Central",
-</strong>    issn_l: null,
+    display_name: "PubMed Central",
+    issn_l: null,
     issn: null,
-<strong>    host_organization: "https://openalex.org/I1299303238",
-</strong>    type: "repository"
+    host_organization: "https://openalex.org/I1299303238",
+    type: "repository"
   },
   license: null,
   version: "publishedVersion"
 }
-</code></pre>
+```
 
 ### `biblio`
 
