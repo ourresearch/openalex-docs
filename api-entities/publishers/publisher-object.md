@@ -116,22 +116,22 @@ _String:_ An OpenAlex ID linking to the direct parent of the publisher. This wil
 parent_publisher: "https://openalex.org/P4310311775"
 ```
 
+### `sources_api_url`
+
+_String:_ An URL that will get you a list of all the sources published by this publisher.
+
+We express this as an API URL (instead of just listing the sources themselves) because there might be thousands of sources linked to a publisher, and that's too many to fit here.
+
+```json
+sources_api_url: "https://api.openalex.org/sources?filter=host_organization.id:P4310319965"
+```
+
 ### `updated_date`
 
 _String:_ The last time anything in this publisher object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
 
 ```json
 updated_date: "2021-12-25T14:04:30.578837"
-```
-
-### `venues_api_url`
-
-_String:_ An URL that will get you a list of all the venues published by this publisher.
-
-We express this as an API URL (instead of just listing the venues themselves) because there might be thousands of venues linked to a publisher, and that's too many to fit here.
-
-```json
-venues_api_url: "https://api.openalex.org/venues?filter=host_organization.id:P4310319965"
 ```
 
 ### `works_count`
