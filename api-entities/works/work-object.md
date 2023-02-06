@@ -43,7 +43,7 @@ Newer works are more likely to have an abstract inverted index. For example, ove
 
 ### `alternate_host_venues` (deprecated)
 
-_This field is being deprecated in favor of_ [_locations_](work-object.md#locations) _and will be removed March 6th, 2023._
+_This field is being deprecated in favor of_ [_`locations`_](work-object.md#locations) _and will be removed March 6th, 2023._
 
 _List:_ List of [`HostVenue`](work-object.md#the-hostvenue-object) objects describing places this work lives. They're called "alternate" because the list doesn't include the work's canonical location; that's in [`host_venue`](work-object.md#host\_venue).&#x20;
 
@@ -110,7 +110,7 @@ We score open locations to determine which is best using these factors:
 1. Must have is\_oa: true
 2. type_:_ "publisher" is better than "repository".
 3. version: "publishedVersion" is better than "acceptedVersion", which is better than "submittedVersion".
-4. url\_for\_pdf: A location with a direct PDF link is better than one without.
+4. pdf\_url: A location with a direct PDF link is better than one without.
 5. repository rankings: Some major repositories like PubMed Central and arXiv are ranked above others.
 
 ```json
@@ -242,7 +242,7 @@ doi: "https://doi.org/10.7717/peerj.4375"
 
 ### `host_venue` (deprecated)
 
-_This field is being deprecated in favor of_ [_primary\_location_](work-object.md#primary\_location) _and will be removed March 6th, 2023._
+_This field is being deprecated in favor of_ [_`primary_location`_](work-object.md#primary\_location) _and will be removed March 6th, 2023._
 
 _Object:_ A [`HostVenue`](work-object.md#the-hostvenue-object) object describing how and where this work is being hosted online.
 
@@ -575,7 +575,9 @@ _String:_ This author's affiliation as it originally came to us (on a webpage or
 raw_affiliation_string: "Canadian Institute for Studies in Publishing, Simon Fraser University, Vancouver, BC, Canada."
 ```
 
-## The `HostVenue` object
+## The `HostVenue` object (deprecated)
+
+_The HostVenue object is being deprecated in favor of the_ [_`Location object`_](work-object.md#the-location-object) _and will be removed on March 6th, 2023._
 
 The HostVenue object describes a given work hosted on a given venue (you can think of it as a WorkVenue bridging table). It's only found as part of the `Work` object. It's got two parts:
 
@@ -624,7 +626,14 @@ version: "publishedVersion"
 
 ## The `Location` object
 
-The `Location` object describes locations where works are hosted. It is only found within `Work` objects.
+The `Location` object describes the location of a given work. It's only found as part of the `Work` object. It's got two parts:
+
+1. a dehydrated Source object, and
+2. some extra stuff about the work.
+
+The extra stuff is important because a given work can be hosted in different ways and in different forms, depending on where it's living.&#x20;
+
+To learn more about the dehydrated Source object part, see the [DehydratedSource](../venues/venue-object.md#the-dehydratedsource-object) docs. To learn more about the other stuff, read below:
 
 ### `is_oa`
 
@@ -660,34 +669,13 @@ _String:_ A URL where you can find this location as a PDF.&#x20;
 pdf_url: "http://www.scielo.br/pdf/jaos/v18n1/a10v18n1.pdf"
 ```
 
-### source
-
-_Object_: A [`Source.DehydratedSource`](../venues/venue-object.md#the-dehydratedsource-object) object consisting of a source or venue's `display_name`, `host_organization`, `id`, `issn`, `issn_l`, and `type`. This is the [`Source`](../venues/venue-object.md) that hosts this location for the work.
-
-```
-source: {
-  id: "https://openalex.org/S127170475",
-  display_name: "Journal of Applied Oral Science",
-  host_organization: "https://openalex.org/P4310312331"
-  issn: ["1678-7765", "1678-7757"]
-  issn_l: "1678-7757",
-  type: "education"
-}
-```
-
-{% hint style="info" %}
-We're in the process of changing sources to venues within the API, so you will see this field referenced as a mix of _source_ and _venue_ until around February 16th, 2023.
-{% endhint %}
-
 ### version
 
-_String:_ The version of the work at this location, which will be either publishedVersion, acceptedVersion, or submittedVersion.
+_String:_ The version of the work, based on the [DRIVER Guidelines versioning scheme.](https://wiki.surfnet.nl/display/DRIVERguidelines/DRIVER-VERSION+Mappings) Possible values are:.
 
-Definitions of the versions are:
-
-* **publishedVersion**: The document’s version of record which matches the version hosted at the publisher’s website. This is the most authoritative version.
-* **acceptedVersion**: the document after having completed peer review and being officially accepted for publication. There may be minor content differences between the acceptedVersion and the version of record such as differences in spelling, word choice, or sentence structure; however, the content should essentially interchangeable with the content of the publishedVersion, for the information needs of a reasonable reader. The acceptedVersion lacks most or all publisher formatting. The acceptedVersion is the second-most authoritative version.
-* **submittedVersion**: the document as submitted to the publisher by the authors, but before peer-review. There may be significant differences in the content of the submittedVersion as compared to the final completed article. The submittedVersion is the third-most authoritative version.
+* `publishedVersion`: The document’s version of record. This is the most authoritative version.
+* `acceptedVersion`: The document after having completed peer review and being officially accepted for publication. It will lack publisher formatting, but the _content_ should be interchangeable with the that of the `publishedVersion`.
+* `submittedVersion`: the document as submitted to the publisher by the authors, but _before_ peer-review. Its content may differ significantly from that of the accepted article.
 
 ```json
 version: "publishedVersion"
