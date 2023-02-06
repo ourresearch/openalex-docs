@@ -17,7 +17,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * ``[`has_issn`](filter-venues.md#has\_issn)``
 * ``[`continent`](../geo/continents.md#group-by-continent)``
 * ``[`country_code`](venue-object.md#country\_code)``
-* ``[`host_organization`](venue-object.md#host\_organization)``
+* ``[`host_organization`](venue-object.md#host\_organization) (alias: `host_organization.id`)
 * ``[`is_global_south`](../geo/regions.md#group-by-global-south)``
 * ``[`is_in_doaj`](venue-object.md#is\_in\_doaj)``
 * ``[`is_oa`](venue-object.md#is\_oa)``
