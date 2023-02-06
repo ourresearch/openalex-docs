@@ -41,7 +41,9 @@ Newer works are more likely to have an abstract inverted index. For example, ove
 
 ![](<../../.gitbook/assets/OpenAlex works with abstracts by year (percent) (1).svg>)
 
-### `alternate_host_venues`
+### `alternate_host_venues` (deprecated)
+
+_This field is being deprecated in favor of_ [_locations_](work-object.md#locations) _and will be removed March 6th, 2023._
 
 _List:_ List of [`HostVenue`](work-object.md#the-hostvenue-object) objects describing places this work lives. They're called "alternate" because the list doesn't include the work's canonical location; that's in [`host_venue`](work-object.md#host\_venue).&#x20;
 
@@ -238,7 +240,9 @@ Occasionally, a work has more than one DOI--for example, there might be one DOI 
 doi: "https://doi.org/10.7717/peerj.4375"
 ```
 
-### `host_venue`
+### `host_venue` (deprecated)
+
+_This field is being deprecated in favor of_ [_primary\_location_](work-object.md#primary\_location) _and will be removed March 6th, 2023._
 
 _Object:_ A [`HostVenue`](work-object.md#the-hostvenue-object) object describing how and where this work is being hosted online.
 
@@ -622,25 +626,6 @@ version: "publishedVersion"
 
 The `Location` object describes locations where works are hosted. It is only found within `Work` objects.
 
-### source
-
-_Object_: A [`Source.DehydratedSource`](../venues/venue-object.md#the-dehydratedsource-object) object consisting of a source or venue's `display_name`, `host_organization`, `id`, `issn`, `issn_l`, and `type`. This is the [`Source`](../venues/venue-object.md) that hosts this location for the work.
-
-```
-source: {
-  id: "https://openalex.org/S127170475",
-  display_name: "Journal of Applied Oral Science",
-  host_organization: "https://openalex.org/P4310312331"
-  issn: ["1678-7765", "1678-7757"]
-  issn_l: "1678-7757",
-  type: "education"
-}
-```
-
-{% hint style="info" %}
-We're in the process of changing sources to venues within the API, so you will see this field referenced as a mix of _source_ and _venue_ for the next 5 to 10 days.
-{% endhint %}
-
 ### `is_oa`
 
 _Boolean:_ `True` if this work is Open Access (OA).&#x20;
@@ -673,6 +658,39 @@ _String:_ A URL where you can find this location as a PDF.&#x20;
 
 ```json
 pdf_url: "http://www.scielo.br/pdf/jaos/v18n1/a10v18n1.pdf"
+```
+
+### source
+
+_Object_: A [`Source.DehydratedSource`](../venues/venue-object.md#the-dehydratedsource-object) object consisting of a source or venue's `display_name`, `host_organization`, `id`, `issn`, `issn_l`, and `type`. This is the [`Source`](../venues/venue-object.md) that hosts this location for the work.
+
+```
+source: {
+  id: "https://openalex.org/S127170475",
+  display_name: "Journal of Applied Oral Science",
+  host_organization: "https://openalex.org/P4310312331"
+  issn: ["1678-7765", "1678-7757"]
+  issn_l: "1678-7757",
+  type: "education"
+}
+```
+
+{% hint style="info" %}
+We're in the process of changing sources to venues within the API, so you will see this field referenced as a mix of _source_ and _venue_ until around February 16th, 2023.
+{% endhint %}
+
+### version
+
+_String:_ The version of the work at this location, which will be either publishedVersion, acceptedVersion, or submittedVersion.
+
+Definitions of the versions are:
+
+* **publishedVersion**: The document’s version of record which matches the version hosted at the publisher’s website. This is the most authoritative version.
+* **acceptedVersion**: the document after having completed peer review and being officially accepted for publication. There may be minor content differences between the acceptedVersion and the version of record such as differences in spelling, word choice, or sentence structure; however, the content should essentially interchangeable with the content of the publishedVersion, for the information needs of a reasonable reader. The acceptedVersion lacks most or all publisher formatting. The acceptedVersion is the second-most authoritative version.
+* **submittedVersion**: the document as submitted to the publisher by the authors, but before peer-review. There may be significant differences in the content of the submittedVersion as compared to the final completed article. The submittedVersion is the third-most authoritative version.
+
+```json
+version: "publishedVersion"
 ```
 
 ## The `Ngram` object
