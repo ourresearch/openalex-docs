@@ -171,7 +171,9 @@ ISSN is a global and unique ID for serial publications. However, different media
 issn_l: "2167-8359"
 ```
 
-### `publisher`
+### `publisher` (deprecated)
+
+This field is deprecated in favor of [`host_organization`](venue-object.md#host\_organization) and will be removed on March 6th, 2023.&#x20;
 
 _String:_ The name of this source's publisher. Publisher is a tricky category, as journals often change publishers, publishers merge, publishers have subsidiaries ("imprints"), and of course no one is consistent in their naming. In the future, we plan to roll out support for a more structured publisher field, but for now it's just a string.
 
@@ -268,8 +270,9 @@ x_concepts: [
 
 The `DehydratedSource` is stripped-down `Source` object, with most of its properties removed to save weight. Its only remaining properties are:
 
+* ``[`display_name`](venue-object.md#display\_name)``
+* ``[`host_organization`](venue-object.md#host\_organization)``
 * ``[`id`](venue-object.md#id)``
 * ``[`issn`](venue-object.md#issn)``
 * ``[`issn_l`](venue-object.md#issn\_l)``
-* ``[`display_name`](venue-object.md#display\_name)``
-* ``[`publisher`](venue-object.md#publisher)``
+* ``[`type`](venue-object.md#type)``
