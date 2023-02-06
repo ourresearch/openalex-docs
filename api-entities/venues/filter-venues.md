@@ -1,17 +1,17 @@
-# Filter venues
+# Filter sources
 
-You can filter venues with the `filter` parameter:
+You can filter sources with the `filter` parameter:
 
-* Get venues that have an ORCID\
-  [https://api.openalex.org/authors?filter=has\_orcid:true](https://api.openalex.org/authors?filter=has\_orcid:true)
+* Get sources that have an ISSN\
+  [https://api.openalex.org/sources?filter=has\_issn:true](https://api.openalex.org/sources?filter=has\_issn:true)
 
 {% hint style="info" %}
 It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md) before trying these out. It will show you how to combine filters and build an AND, OR, or negation query
 {% endhint %}
 
-### `/venues` attribute filters
+### `/sources` attribute filters
 
-You can filter using these attributes of the `Venue` entity object (click each one to view their documentation on the [`Venue`](venue-object.md) object page):
+You can filter using these attributes of the `Source` entity object (click each one to view their documentation on the [`Source`](venue-object.md) object page):
 
 * ``[`cited_by_count`](venue-object.md#cited\_by\_count)``
 * ``[`country_code`](venue-object.md#country\_code)``
@@ -24,27 +24,27 @@ You can filter using these attributes of the `Venue` entity object (click each o
 * ``[`works_count`](venue-object.md#works\_count)``
 * ``[`x_concepts.id`](venue-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
 
-### `/venues` convenience filters
+### `/sources` convenience filters
 
-These filters aren't attributes of the [`Venue`](venue-object.md) object, but they're included to address some common use cases:
+These filters aren't attributes of the [`Source`](venue-object.md) object, but they're included to address some common use cases:
 
 #### `continent`
 
 Value: a String with a valid [continent filter](../geo/continents.md#filter-by-continent)
 
-Returns: venues that are associated with the chosen continent.
+Returns: sources that are associated with the chosen continent.
 
-* Get venues that are associated with Asia\
-  [https://api.openalex.org/venues?filter=continent:asia](https://api.openalex.org/venues?filter=continent:asia)
+* Get sources that are associated with Asia\
+  [https://api.openalex.org/sources?filter=continent:asia](https://api.openalex.org/sources?filter=continent:asia)
 
 #### `display_name.search`
 
 Value: a search string
 
-Returns: venues with a [`display_name`](venue-object.md#display\_name) containing the given string; see the [search page](search-venues.md) for details.
+Returns: sources with a [`display_name`](venue-object.md#display\_name) containing the given string; see the [search page](search-venues.md) for details.
 
-* Get venues with names containing "Neurology":\
-  [`https://api.openalex.org/venues?filter=display_name.search:Neurology`](https://api.openalex.org/venues?filter=display\_name.search:Neurology)
+* Get sources with names containing "Neurology":\
+  [`https://api.openalex.org/sources?filter=display_name.search:Neurology`](https://api.openalex.org/sources?filter=display\_name.search:Neurology)``
 
 {% hint style="info" %}
 In most cases, you should use the [`search`](search-venues.md#venues-full-search) parameter instead of this filter because it uses a better search algorithm.
@@ -54,16 +54,16 @@ In most cases, you should use the [`search`](search-venues.md#venues-full-search
 
 Value: a Boolean (`true` or `false`)
 
-Returns: venues that have or lack an [ISSN](broken-reference), depending on the given value.
+Returns: sources that have or lack an [ISSN](broken-reference), depending on the given value.
 
-* Get venues without ISSNs:\
-  [`https://api.openalex.org/venues?filter=has_issn:false`](https://api.openalex.org/venues?filter=has\_issn:false)
+* Get sources without ISSNs:\
+  [`https://api.openalex.org/sources?filter=has_issn:false`](https://api.openalex.org/sources?filter=has\_issn:false)``
 
 #### `is_global_south`
 
 Value: a Boolean (`true` or `false`)
 
-Returns: venues that are associated with the [Global South](../geo/regions.md#global-south).
+Returns: sources that are associated with the [Global South](../geo/regions.md#global-south).
 
-* Get venues that are located in the Global South\
-  [https://api.openalex.org/venues?filter=is\_global\_south:true](https://api.openalex.org/venues?filter=is\_global\_south:true)
+* Get sources that are located in the Global South\
+  [https://api.openalex.org/sources?filter=is\_global\_south:true](https://api.openalex.org/sources?filter=is\_global\_south:true)

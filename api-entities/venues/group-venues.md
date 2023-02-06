@@ -1,9 +1,9 @@
-# Group venues
+# Group sources
 
-You can group venues with the `group_by` parameter:
+You can group sources with the `group_by` parameter:
 
-* Get counts of venues by publisher:\
-  [https://api.openalex.org/venues?group\_by=publisher](https://api.openalex.org/venues?group\_by=publisher)
+* Get counts of sources by publisher:\
+  [https://api.openalex.org/sources?group\_by=publisher](https://api.openalex.org/sources?group\_by=publisher)
 
 Or you can group using one the attributes below.
 
@@ -11,7 +11,7 @@ Or you can group using one the attributes below.
 It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entities.md) before trying these out. It will show you how results are formatted, the number of results returned, and how to sort results.
 {% endhint %}
 
-### `/venues` group\_by attributes
+### `/sources` group\_by attributes
 
 * ``[`cited_by_count`](venue-object.md#cited\_by\_count)``
 * ``[`has_issn`](filter-venues.md#has\_issn)``

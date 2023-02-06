@@ -1,9 +1,9 @@
-# Get lists of venues
+# Get lists of sources
 
-You can get lists of venues:
+You can get lists of sources:
 
-* Get _all_ venues in OpenAlex\
-  [https://api.openalex.org/venues](https://api.openalex.org/venues)
+* Get _all_ sources in OpenAlex\
+  [https://api.openalex.org/sources](https://api.openalex.org/sources)
 
 Which returns a response like this:
 
@@ -17,14 +17,14 @@ Which returns a response like this:
     },
     "results": [
         {
-            "id": "https://openalex.org/V2764455111",
+            "id": "https://openalex.org/S2764455111",
             "issn_l": null,
             "issn": null,
             "display_name": "PubMed Central",
             // more fields (removed to save space)
         },
         {
-            "id": "https://openalex.org/V4306400806",
+            "id": "https://openalex.org/S4306400806",
             "issn_l": null,
             "issn": null,
             "display_name": "PubMed Central - Europe PMC",
@@ -36,16 +36,16 @@ Which returns a response like this:
 }
 ```
 
-## Page and sort venues
+## Page and sort sources
 
-By default we return 25 results per page. You can change this default and [page](../../how-to-use-the-api/get-lists-of-entities/paging.md) through venues with the `per-page` and `page` parameters:
+By default we return 25 results per page. You can change this default and [page](../../how-to-use-the-api/get-lists-of-entities/paging.md) through sources with the `per-page` and `page` parameters:
 
-* Get the second page of venues results, with 50 results returned per page\
-  [https://api.openalex.org/venues?per-page=50\&page=2](https://api.openalex.org/venues?per-page=50\&page=2)
+* Get the second page of sources results, with 50 results returned per page\
+  [https://api.openalex.org/sources?per-page=50\&page=2](https://api.openalex.org/sources?per-page=50\&page=2)
 
 You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-entity-lists.md) with the `sort` parameter:
 
-* Sort venues by cited by count, descending\
-  [https://api.openalex.org/venues?sort=cited\_by\_count:desc](https://api.openalex.org/venues?sort=cited\_by\_count:desc)
+* Sort sources by cited by count, descending\
+  https://api.openalex.org/sources?sort=cited\_by\_count:desc
 
-Continue on to learn how you can [filter](filter-venues.md) and [search](search-venues.md) lists of venues.
+Continue on to learn how you can [filter](filter-venues.md) and [search](search-venues.md) lists of sources.
