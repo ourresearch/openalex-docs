@@ -27,9 +27,9 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * ``[`authorships.institutions.type`](work-object.md#institutions) (alias `institutions.type`)
 * ``[`best_oa_location.is_oa`](work-object.md#best\_oa\_location)``
 * ``[`best_oa_location.license`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.source.host_organization`](work-object.md#best\_oa\_location)``
 * ``[`best_oa_location.source.id`](work-object.md#best\_oa\_location)``
 * ``[`best_oa_location.source.issn`](work-object.md#best\_oa\_location)``
-* ``[`best_oa_location.source.host_organization`](work-object.md#best\_oa\_location)``
 * ``[`best_oa_location.source.type`](work-object.md#best\_oa\_location)``
 * ``[`best_oa_location.version`](work-object.md#best\_oa\_location)``
 * ``[`cited_by_count`](work-object.md#cited\_by\_count)``
