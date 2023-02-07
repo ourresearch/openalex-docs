@@ -54,6 +54,8 @@ You can filter using these attributes of the [`Work`](work-object.md) object (cl
 * ``[`locations.source.host_organization`](work-object.md#locations)``
 * ``[`locations.source.type`](work-object.md#locations)``
 * ``[`locations.version`](work-object.md#locations)&#x20;
+* ``[`open_access.is_oa`](work-object.md#open\_access) (alias: `is_oa`)
+* ``[`open_access.oa_status`](work-object.md#open\_access) (alias: `oa_status`)
 * ``[`primary_location.is_oa`](work-object.md#primary\_location)``
 * ``[`primary_location.license`](work-object.md#primary\_location)``
 * ``[`primary_location.source.id`](work-object.md#primary\_location)``
@@ -61,8 +63,6 @@ You can filter using these attributes of the [`Work`](work-object.md) object (cl
 * ``[`primary_location.source.host_organization`](work-object.md#primary\_location)``
 * ``[`primary_location.source.type`](work-object.md#primary\_location)``
 * ``[`primary_location.version`](work-object.md#primary\_location)&#x20;
-* ``[`open_access.is_oa`](work-object.md#open\_access) (alias: `is_oa`)
-* ``[`open_access.oa_status`](work-object.md#open\_access) (alias: `oa_status`)
 * ``[`publication_year`](work-object.md#publication\_year)``
 * ``[`publication_date`](work-object.md#publication\_date)``
 * ``[`type`](work-object.md#type)``
