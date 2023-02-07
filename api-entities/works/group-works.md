@@ -25,6 +25,13 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * ``[`authorships.institutions.id`](work-object.md#institutions) (alias `institutions.id`)
 * ``[`authorships.institutions.ror`](work-object.md#institutions) (alias `institutions.ror`)
 * ``[`authorships.institutions.type`](work-object.md#institutions) (alias `institutions.type`)
+* ``[`best_oa_location.is_oa`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.license`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.source.id`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.source.issn`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.source.host_organization`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.source.type`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.version`](work-object.md#best\_oa\_location)``
 * ``[`cited_by_count`](work-object.md#cited\_by\_count)``
 * ``[`cites`](filter-works.md#cites)``
 * ``[`concepts_count`](filter-works.md#concepts\_count)``
@@ -42,9 +49,17 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * ``[`host_venue.license`](work-object.md#host\_venue)``
 * ``[`host_venue.publisher`](work-object.md#host\_venue)``
 * ``[`host_venue.version`](work-object.md#host\_venue)``
+* ``[`is_retracted`](work-object.md#is\_retracted)``
+* ``[`is_paratext`](work-object.md#is\_paratext)``
 * ``[`open_access.is_oa`](work-object.md#is\_oa-1) (alias `is_oa`)
 * ``[`open_access.oa_status`](work-object.md#oa\_status) (alias `oa_status`)
-* ``[`is_paratext`](work-object.md#is\_paratext)``
-* ``[`is_retracted`](work-object.md#is\_retracted)``
+* ``[`primary_location.is_oa`](work-object.md#primary\_location)``
+* ``[`primary_location.license`](work-object.md#primary\_location)``
+* ``[`primary_location.source.has_issn`](work-object.md#primary\_location)``
+* ``[`primary_location.source.host_organization`](work-object.md#primary\_location)``
+* ``[`primary_location.source.id`](work-object.md#primary\_location)``
+* ``[`primary_location.source.issn`](work-object.md#primary\_location)``
+* ``[`primary_location.source.type`](work-object.md#primary\_location)``
+* ``[`primary_location.version`](work-object.md#primary\_location)``
 * ``[`publication_year`](work-object.md#publication\_year)``
 * ``[`version`](work-object.md#version)``
