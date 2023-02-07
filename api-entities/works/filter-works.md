@@ -30,10 +30,6 @@ You can filter using these attributes of the [`Work`](work-object.md) object (cl
 * ``[`best_oa_location.source.issn`](work-object.md#best\_oa\_location)``
 * ``[`best_oa_location.source.host_organization`](work-object.md#best\_oa\_location)``
 * ``[`best_oa_location.source.type`](work-object.md#best\_oa\_location)``
-* ``[`best_oa_location.venue.id`](work-object.md#best\_oa\_location) (deprecated)
-* ``[`best_oa_location.venue.issn`](work-object.md#best\_oa\_location)  (deprecated)
-* ``[`best_oa_location.venue.host_organization`](work-object.md#best\_oa\_location)  (deprecated)
-* ``[`best_oa_location.venue.type`](work-object.md#best\_oa\_location)  (deprecated)
 * ``[`best_oa_location.version`](work-object.md#best\_oa\_location)&#x20;
 * ``[`cited_by_count`](work-object.md#cited\_by\_count)``
 * ``[`concepts.id`](work-object.md#concepts) (alias: `concept.id`)
@@ -57,10 +53,6 @@ You can filter using these attributes of the [`Work`](work-object.md) object (cl
 * ``[`locations.source.issn`](work-object.md#locations)``
 * ``[`locations.source.host_organization`](work-object.md#locations)``
 * ``[`locations.source.type`](work-object.md#locations)``
-* ``[`locations.venue.id`](work-object.md#locations) (deprecated)
-* ``[`locations.venue.issn`](work-object.md#locations)  (deprecated)
-* ``[`locations.venue.host_organization`](work-object.md#locations)  (deprecated)
-* ``[`locations.venue.type`](work-object.md#locations)  (deprecated)
 * ``[`locations.version`](work-object.md#locations)&#x20;
 * ``[`primary_location.is_oa`](work-object.md#primary\_location)``
 * ``[`primary_location.license`](work-object.md#primary\_location)``
@@ -68,10 +60,6 @@ You can filter using these attributes of the [`Work`](work-object.md) object (cl
 * ``[`primary_location.source.issn`](work-object.md#primary\_location)``
 * ``[`primary_location.source.host_organization`](work-object.md#primary\_location)``
 * ``[`primary_location.source.type`](work-object.md#primary\_location)``
-* ``[`primary_location.venue.id`](work-object.md#primary\_location) (deprecated)
-* ``[`primary_location.venue.issn`](work-object.md#primary\_location)  (deprecated)
-* ``[`primary_location.venue.host_organization`](work-object.md#primary\_location)  (deprecated)
-* ``[`primary_location.venue.type`](work-object.md#primary\_location)  (deprecated)
 * ``[`primary_location.version`](work-object.md#primary\_location)&#x20;
 * ``[`open_access.is_oa`](work-object.md#open\_access) (alias: `is_oa`)
 * ``[`open_access.oa_status`](work-object.md#open\_access) (alias: `oa_status`)
