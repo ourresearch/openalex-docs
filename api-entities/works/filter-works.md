@@ -24,6 +24,17 @@ You can filter using these attributes of the [`Work`](work-object.md) object (cl
 * ``[`authorships.institutions.id`](work-object.md#institutions) (alias `institutions.id`)
 * ``[`authorships.institutions.ror`](work-object.md#institutions) (alias: `institutions.ror`)
 * ``[`authorships.institutions.type`](work-object.md#institutions)``
+* ``[`best_oa_location.is_oa`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.license`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.source.id`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.source.issn`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.source.host_organization`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.source.type`](work-object.md#best\_oa\_location)``
+* ``[`best_oa_location.venue.id`](work-object.md#best\_oa\_location) (deprecated)
+* ``[`best_oa_location.venue.issn`](work-object.md#best\_oa\_location)  (deprecated)
+* ``[`best_oa_location.venue.host_organization`](work-object.md#best\_oa\_location)  (deprecated)
+* ``[`best_oa_location.venue.type`](work-object.md#best\_oa\_location)  (deprecated)
+* ``[`best_oa_location.version`](work-object.md#best\_oa\_location)&#x20;
 * ``[`cited_by_count`](work-object.md#cited\_by\_count)``
 * ``[`concepts.id`](work-object.md#concepts) (alias: `concept.id`)
 * ``[`concepts.wikidata`](work-object.md#concepts)``
@@ -40,6 +51,28 @@ You can filter using these attributes of the [`Work`](work-object.md) object (cl
 * ``[`ids.mag`](work-object.md#ids) (alias: `mag`)
 * ``[`is_paratext`](work-object.md#is\_paratext)``
 * ``[`is_retracted`](work-object.md#is\_retracted)``
+* ``[`locations.is_oa`](work-object.md#locations)``
+* ``[`locations.license`](work-object.md#locations)``
+* ``[`locations.source.id`](work-object.md#locations)``
+* ``[`locations.source.issn`](work-object.md#locations)``
+* ``[`locations.source.host_organization`](work-object.md#locations)``
+* ``[`locations.source.type`](work-object.md#locations)``
+* ``[`locations.venue.id`](work-object.md#locations) (deprecated)
+* ``[`locations.venue.issn`](work-object.md#locations)  (deprecated)
+* ``[`locations.venue.host_organization`](work-object.md#locations)  (deprecated)
+* ``[`locations.venue.type`](work-object.md#locations)  (deprecated)
+* ``[`locations.version`](work-object.md#locations)&#x20;
+* ``[`primary_location.is_oa`](work-object.md#primary\_location)``
+* ``[`primary_location.license`](work-object.md#primary\_location)``
+* ``[`primary_location.source.id`](work-object.md#primary\_location)``
+* ``[`primary_location.source.issn`](work-object.md#primary\_location)``
+* ``[`primary_location.source.host_organization`](work-object.md#primary\_location)``
+* ``[`primary_location.source.type`](work-object.md#primary\_location)``
+* ``[`primary_location.venue.id`](work-object.md#primary\_location) (deprecated)
+* ``[`primary_location.venue.issn`](work-object.md#primary\_location)  (deprecated)
+* ``[`primary_location.venue.host_organization`](work-object.md#primary\_location)  (deprecated)
+* ``[`primary_location.venue.type`](work-object.md#primary\_location)  (deprecated)
+* ``[`primary_location.version`](work-object.md#primary\_location)&#x20;
 * ``[`open_access.is_oa`](work-object.md#open\_access) (alias: `is_oa`)
 * ``[`open_access.oa_status`](work-object.md#open\_access) (alias: `oa_status`)
 * ``[`publication_year`](work-object.md#publication\_year)``
