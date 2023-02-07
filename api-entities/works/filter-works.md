@@ -15,9 +15,9 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 
 You can filter using these attributes of the [`Work`](work-object.md) object (click each one to view their documentation on the `Work` object page):
 
-* ``[`alternate_host_venues.license`](work-object.md#alternate\_host\_venues)``
-* ``[`alternate_host_venues.venue_id`](work-object.md#alternate\_host\_venues)``
-* ``[`alternate_host_venues.version`](work-object.md#alternate\_host\_venues)``
+* ``[`alternate_host_venues.license`](work-object.md#alternate\_host\_venues)
+* ``[`alternate_host_venues.venue_id`](work-object.md#alternate\_host\_venues)
+* ``[`alternate_host_venues.version`](work-object.md#alternate\_host\_venues)
 * ``[`authorships.author.id`](work-object.md#author) (alias: `author.id`)
 * ``[`authorships.author.orcid`](work-object.md#author) (alias: `author.orcid`)
 * ``[`authorships.institutions.country_code`](work-object.md#institutions) (alias: `institutions.country_code`)
@@ -288,6 +288,15 @@ Returns: works that have or lack [`referenced_works`](work-object.md#referenced\
 
 * Get the works that have references:\
   [`https://api.openalex.org/works?filter=has_references:true`](https://api.openalex.org/works?filter=has\_references:true)
+
+#### `primary_location.source.has_issn`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works where the [primary\_location](work-object.md#primary\_location) has at least one ISSN assigned.
+
+* Get the works that have an ISSN within the primary location:\
+  [`https://api.openalex.org/works?filter=primary_location.source.has_issn:true`](https://api.openalex.org/works?filter=primary\_location.source.has\_issn:true)``
 
 #### `raw_affiliation_string.search`
 
