@@ -10,6 +10,12 @@ Yes! The work associated with ID W1234 will keep the ID W1234.
 
 At some point we might merge duplicated works, authors, etc that already have assigned IDs. At that point we will expand the schema to include synonym ID data.
 
+### Can you index my journal?
+
+We automatically index new journals and articles so there is nothing you need to do. We primarily retrieve new records from [Crossref](https://www.crossref.org/). So if you are not seeing your journal or article in OpenAlex, it is best to check if it is in Crossref with a query like `https://api.crossref.org/works/<doi>` ([example](https://api.crossref.org/works/10.1097/HS9.0000000000000014)). We do not curate journals or limit which journals will be included in OpenAlex. So any discoverable journals will be added to the data set.
+
+If your example DOI is in Crossref but not in OpenAlex, please send us a [support request](https://openalex.org/help) so we can look into it further!
+
 ### Do you disambiguate authors?
 
 Yes. Using coauthors, references, and other features of the data, we can tell that the same Jane Smith wrote both "Frog behavior" and "Frogs: A retrospective," but it's a different Jane Smith who wrote "Oats before boats: The breakfast customs of 17th-Century Dutch bargemen."
@@ -32,10 +38,6 @@ OpenAlex is not doing this alone! Rather, we're aggregating and standardizing da
 * [Internet Archive](https://archive.org/details/GeneralIndex)
 * Web crawls
 * Subject-area and institutional repositories from [arXiv](https://arxiv.org/) to [Zenodo](https://zenodo.org/) and everywhere in between
-
-### Can I index my journal or add my article?
-
-We automatically index new journals and articles so there is nothing you need to do. We primarily retrieve new records from [Crossref](https://www.crossref.org/). So if you are not seeing your journal or article, you may want to check if it is available there. We are adding more DOI registrars soon!
 
 ### How often is the data updated?
 
