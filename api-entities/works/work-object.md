@@ -171,6 +171,10 @@ Each `Concept` object in the list also has one additional property:
 
 Concepts with a score of at least 0.3 are assigned to the work. However, ancestors of an assigned concept are also added to the work, even if the ancestor scores are below 0.3.
 
+{% hint style="info" %}
+Because all ancestor concepts are assigned to the work, you may see concepts in works with very low scores, even some zero scores.
+{% endhint %}
+
 ```json
 concepts: [
     {
