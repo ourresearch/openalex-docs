@@ -4,20 +4,20 @@ description: Get a single entity, based on an ID
 
 # Get single entities
 
-This is a more detailed guide to single entities in OpenAlex. If you're just getting started, check out [get a single work](../api-entities/works/get-a-single-work.md).
+This is a more detailed guide to single entities in OpenAlex. If you're just getting started, check out [get a single work](../../api-entities/works/get-a-single-work.md).
 
 It's easy to get a singleton entity object from from the API:`/<entity_name>/<entity_id>.` Here's an example:
 
-* Get the work with the [OpenAlex ID](get-single-entities.md#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)``
+* Get the work with the [OpenAlex ID](./#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)``
 
-That will return a [`Work`](../api-entities/works/work-object.md) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
+That will return a [`Work`](../../api-entities/works/work-object.md) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
 
 {% hint style="info" %}
-You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax](get-lists-of-entities/filter-entity-lists.md#addition-or).
+You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax](../get-lists-of-entities/filter-entity-lists.md#addition-or).
 {% endhint %}
 
 {% hint style="info" %}
-To get a single entity, you need a single _unambiguous_ identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name), you'll want to  [search](get-lists-of-entities/search-entities.md) instead.
+To get a single entity, you need a single _unambiguous_ identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name), you'll want to  [search](../get-lists-of-entities/search-entities.md) instead.
 {% endhint %}
 
 ## The OpenAlex ID
@@ -36,7 +36,7 @@ Because OpenAlex was launched as a replacement for [Microsoft Academic Graph (MA
 
 ## Merged Entity IDs
 
-At times we need to merge two Entities, effectively deleting one of them. This usually happens when we discover two Entities that represent the same real-world entity - for example, two [`Authors`](../api-entities/authors/) that are really the same person.
+At times we need to merge two Entities, effectively deleting one of them. This usually happens when we discover two Entities that represent the same real-world entity - for example, two [`Authors`](../../api-entities/authors/) that are really the same person.
 
 If you request an Entity using its OpenAlex ID, and that Entity has been merged into another Entity, you will be redirected to the Entity it has been merged into. For example, https://openalex.org/A2224836008 has been merged into https://openalex.org/A2208157607, so in the API the former will redirect to the latter:
 
@@ -57,12 +57,12 @@ For each entity type, you can retrieve the entity using by any of the external I
 
 This works with DOIs, ISSNs, ORCIDs, and lots of other IDs...in fact, you can use any ID listed in an entity's `ids` property, as listed below:
 
-* ``[`Work.ids`](../api-entities/works/work-object.md#ids)``
-* ``[`Author.ids`](../api-entities/authors/author-object.md#ids)``
-* ``[`Source.ids`](../api-entities/venues/venue-object.md#ids)``
-* ``[`Institution.ids`](../api-entities/institutions/institution-object.md#ids)``
-* ``[`Concept.ids`](../api-entities/concepts/concept-object.md#ids)``
-* ``[`Publisher.ids`](../api-entities/publishers/publisher-object.md#ids)``
+* ``[`Work.ids`](../../api-entities/works/work-object.md#ids)``
+* ``[`Author.ids`](../../api-entities/authors/author-object.md#ids)``
+* ``[`Source.ids`](../../api-entities/venues/venue-object.md#ids)``
+* ``[`Institution.ids`](../../api-entities/institutions/institution-object.md#ids)``
+* ``[`Concept.ids`](../../api-entities/concepts/concept-object.md#ids)``
+* ``[`Publisher.ids`](../../api-entities/publishers/publisher-object.md#ids)``
 
 ## ID formats
 
@@ -80,7 +80,7 @@ For simplicity and clarity, you may also want to express those IDs in a simpler,
 * Get the author with the ORCID [https://orcid.org/0000-0003-1613-5981](https://orcid.org/0000-0003-1613-5981) (Heather Piwowar):\
   [`https://api.openalex.org/authors/orcid:0000-0003-1613-5981`](https://api.openalex.org/authors/orcid:0000-0003-1613-5981)``
 
-Finally, if you're using an OpenAlex ID, you can be even more succinct, and just use the [Key](get-single-entities.md#the-openalex-key) part of the ID all by itself, the part that looks like `w1234567`:
+Finally, if you're using an OpenAlex ID, you can be even more succinct, and just use the [Key](./#the-openalex-key) part of the ID all by itself, the part that looks like `w1234567`:
 
 * Get the work with OpenAlex ID https://openalex.org/W2741809807:\
   [https://api.openalex.org/works/W2741809807](https://api.openalex.org/works/W2741809807)
@@ -91,38 +91,15 @@ Every entity has an OpenAlex ID. Most entities also have IDs in other systems, t
 
 These are the Canonical External IDs:
 
-* Works: [DOI](../api-entities/works/work-object.md#title)
-* Authors: [ORCID](../api-entities/authors/author-object.md#orcid)
-* Sources: [ISSN-L](../api-entities/venues/venue-object.md#issn\_l)
-* Institutions: [ROR ID](../api-entities/institutions/institution-object.md#ror)
-* Concepts: [Wikidata ID](../api-entities/concepts/concept-object.md#wikidata)
-* Publishers: [Wikidata ID](../api-entities/publishers/publisher-object.md#ids)
+* Works: [DOI](../../api-entities/works/work-object.md#title)
+* Authors: [ORCID](../../api-entities/authors/author-object.md#orcid)
+* Sources: [ISSN-L](../../api-entities/venues/venue-object.md#issn\_l)
+* Institutions: [ROR ID](../../api-entities/institutions/institution-object.md#ror)
+* Concepts: [Wikidata ID](../../api-entities/concepts/concept-object.md#wikidata)
+* Publishers: [Wikidata ID](../../api-entities/publishers/publisher-object.md#ids)
 
 ## Dehydrated entity objects
 
 The full entity objects can get pretty unwieldy, especially when you're embedding a list of them in another object (for instance, a list of `Concept`s in a `Work`). For these cases, all the entities except `Work`s have a dehydrated version. This is a stripped-down representation of the entity that carries only its most essential properties. These properties are documented individually on their respective entity pages.
-
-## Select fields
-
-You can use `select` to choose top-level fields you want to see in a result.
-
-* Display `id` and `display_name` for a work\
-  [https://api.openalex.org/works/W2138270253?select=id,display\_name](https://api.openalex.org/works/W2138270253?select=id,display\_name)
-
-```json
-{
-  id: "https://openalex.org/W2138270253",
-  display_name: "DNA sequencing with chain-terminating inhibitors"
-}
-```
-
-## Random entity
-
-You can get a random entity by using the string `random` where an ID would normally go. OMG that's so random! Each time you call this URL you'll get a different entity.  Examples:
-
-* Get a random institution:\
-  [`https://api.openalex.org/institutions/random`](https://api.openalex.org/institutions/random)``
-* Get a random concept:\
-  [`https://api.openalex.org/concepts/random`](https://api.openalex.org/concepts/random)
 
 \

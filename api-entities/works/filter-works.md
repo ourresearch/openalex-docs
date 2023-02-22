@@ -108,7 +108,7 @@ Returns: works where at least _one_ of the author's institutions is in the Globa
 
 #### `cited_by`
 
-Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) for a given work
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given work
 
 Returns: works found in the given work's [`referenced_works`](work-object.md#referenced\_works) section. You can think of this as **outgoing citations**.&#x20;
 
@@ -117,7 +117,7 @@ Returns: works found in the given work's [`referenced_works`](work-object.md#ref
 
 #### `cites`
 
-Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) for a given work
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given work
 
 Returns: works that cite the given work. This is works that have the given OpenAlex ID in the [`referenced_works`](work-object.md#referenced\_works) section. You can think of this as **incoming citations**.&#x20;
 
@@ -296,7 +296,7 @@ Returns: works that have at least one [`raw_affiliation_string`](work-object.md#
 
 #### `related_to`
 
-Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) for a given work
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given work
 
 Returns: works found in the given work's [`related_works`](work-object.md#related\_works) section.&#x20;
 
@@ -305,7 +305,7 @@ Returns: works found in the given work's [`related_works`](work-object.md#relate
 
 #### `repository`
 
-Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) for a given [venue](../venues/venue-object.md)
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given [venue](../venues/venue-object.md)
 
 Returns: works where the chosen [venue ID](../venues/venue-object.md#id) exists within the [host\_venue](work-object.md#host\_venue) _or_ the [alternate\_host\_venues](work-object.md#alternate\_host\_venues) objects.
 

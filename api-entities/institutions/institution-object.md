@@ -140,7 +140,7 @@ homepage_url: "http://www.unc.edu/"
 
 ### `id`
 
-_String:_ The [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) for this institution.
+_String:_ The [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for this institution.
 
 ```json
 id: "https://openalex.org/I114027177"
@@ -152,7 +152,7 @@ _Object:_ All the external identifiers that we know about for this institution. 
 
 * `grid` (_String:_ this institution's [GRID](https://www.grid.ac/) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome))
 * `mag`  (_Integer:_ this institution's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `openalex` (_String:_ this institution's [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id). Same as [`Institution.id`](institution-object.md#id))
+* `openalex` (_String:_ this institution's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Institution.id`](institution-object.md#id))
 * `ror` (_String:_ this institution's ROR ID. Same as [`Institution.ror`](institution-object.md#ror))
 * `wikipedia` (_String:_ this institution's Wikipedia page URL)
 * `wikidata` (_String:_ this institution's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers))
@@ -210,7 +210,7 @@ international: {
 
 ### `ror`
 
-_String:_ The [ROR](https://ror.org/) ID for this institution. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities.md#canonical-external-ids) for institutions.
+_String:_ The [ROR](https://ror.org/) ID for this institution. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for institutions.
 
 The ROR (Research Organization Registry) identifier is a globally unique ID for research organization. [ROR is the successor to GRiD](https://www.digital-science.com/press-release/grid-passes-torch-to-ror/), which is no longer being updated.&#x20;
 

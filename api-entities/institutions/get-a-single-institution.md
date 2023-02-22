@@ -2,7 +2,7 @@
 
 It's easy to get an institution from from the API with: `/institutions/<entity_id>`. Here's an example:
 
-* Get the institution with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) `I27837315`: \
+* Get the institution with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `I27837315`: \
   [https://api.openalex.org/institutions/I27837315](https://api.openalex.org/institutions/I27837315)
 
 That will return an [`Institution`](institution-object.md) object, describing everything OpenAlex knows about the institution with that ID:

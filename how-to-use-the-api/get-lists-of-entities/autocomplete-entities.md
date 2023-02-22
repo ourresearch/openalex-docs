@@ -52,8 +52,8 @@ Each request returns a response object with two properties:
 
 Each object in the `results` list includes these properties:
 
-* `id` (string): The [OpenAlex ID](../get-single-entities.md#the-openalex-id) for this result entity.
-* `external_id` (string): The [Canonical External ID](../get-single-entities.md#canonical-external-ids) for this result entity.
+* `id` (string): The [OpenAlex ID](../get-single-entities/#the-openalex-id) for this result entity.
+* `external_id` (string): The [Canonical External ID](../get-single-entities/#canonical-external-ids) for this result entity.
 * `display_name` (string): The entity's `display_name` property.
 * `entity_type` (string): The entity's type: `author`, `concept`, `institution`, `venue`, or `work`.
 * `cited_by_count` (integer): The entity's `cited_by_count` property. For works this is simply the number of incoming citations. For other entities, it's the _sum_ of incoming citations for all the works linked to that entity.&#x20;
@@ -76,7 +76,7 @@ You can change the author hint to the author's [last known institution](../../ap
 
 ## IDs in autocomplete
 
-[Canonical External IDs](../get-single-entities.md#canonical-external-ids) and [OpenAlex IDs](../get-single-entities.md#the-openalex-id) are detected within autocomplete queries and matched to the appropriate record if it exists. For example:
+[Canonical External IDs](../get-single-entities/#canonical-external-ids) and [OpenAlex IDs](../get-single-entities/#the-openalex-id) are detected within autocomplete queries and matched to the appropriate record if it exists. For example:
 
 * The query [`https://api.openalex.org/autocomplete?q=https://orcid.org/0000-0002-7436-3176`](https://api.openalex.org/autocomplete?q=https://orcid.org/0000-0002-7436-3176) will search for the author with ORCID ID `https://orcid.org/0000-0002-7436-3176` and return 0 records if it does not exist.
 * The query [`https://api.openalex.org/autocomplete/venues?q=V49861241`](https://api.openalex.org/autocomplete/venues?q=V49861241) will search for the venue with OpenAlex ID `https://openalex.org/V49861241` and return 0 records if it does not exist.

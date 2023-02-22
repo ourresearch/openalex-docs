@@ -26,7 +26,7 @@ But what's our institution's ID? First, let's say our institution is the Univers
 [https://ror.org/02y3ad647](https://ror.org/02y3ad647) looks right, so we can use that as the first part of our filter:\
 `https://api.openalex.org/works?filter=institutions.ror:https://ror.org/02y3ad647`
 
-We can also use the institution's [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id). To get that, we'll have to take a detour and filter Institutions using [`display_name.search`](../../api-entities/institutions/filter-institutions.md#display\_name.search):\
+We can also use the institution's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). To get that, we'll have to take a detour and filter Institutions using [`display_name.search`](../../api-entities/institutions/filter-institutions.md#display\_name.search):\
 `https://api.openalex.org/institutions?filter=display_name.search:university of florida`
 
 In python:

@@ -11,7 +11,7 @@ You can get a concept from the OpenAlex API like this:
 * Get the concept with OpenAlex ID `C41008148`\
   [https://api.openalex.org/concepts/C41008148](https://api.openalex.org/concepts/C41008148)
 
-The [Canonical External ID](../../how-to-use-the-api/get-single-entities.md#canonical-external-ids) for OpenAlex concepts is the Wikidata ID, and each of our concepts has one, because all OpenAlex concepts are also Wikidata concepts.
+The [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for OpenAlex concepts is the Wikidata ID, and each of our concepts has one, because all OpenAlex concepts are also Wikidata concepts.
 
 Concepts are hierarchical, like a tree. There are 19 root-level concepts, and six layers of descendants branching out from them, containing about 65 thousand concepts all told. This concept tree is a modified version of [the one created by MAG](https://arxiv.org/abs/1805.12216). You can view all the concepts and their position in the tree [as a spreadsheet here](https://docs.google.com/spreadsheets/d/1LBFHjPt4rj\_9r0t0TTAlT68NwOtNH8Z21lBMsJDMoZg/edit#gid=1473310811). About 85% of works are tagged with at least one concept (here's the [breakdown of concept counts per work](https://docs.google.com/spreadsheets/d/17DoJjyl1XVNZdVWs7fUy91z69U2tD8qtnBsaqJ-Zigo/edit#gid=0)).
 

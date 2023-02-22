@@ -61,7 +61,7 @@ Each group object in the `group_by` list contains three properties:
 
 #### `key`
 
-Value: a string; the [OpenAlex ID](get-single-entities.md#the-openalex-id) or raw value of the `group_by` parameter for members of this group. See details on [`key` and `key_display_name`](get-groups-of-entities.md#key-and-key\_display\_name).
+Value: a string; the [OpenAlex ID](get-single-entities/#the-openalex-id) or raw value of the `group_by` parameter for members of this group. See details on [`key` and `key_display_name`](get-groups-of-entities.md#key-and-key\_display\_name).
 
 #### `key_display_name`
 

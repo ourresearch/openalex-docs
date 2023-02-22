@@ -11,7 +11,7 @@ You can get sources from the OpenAlex API like this:
 * Search for the journal Nature\
   [https://api.openalex.org/sources?search=nature](https://api.openalex.org/sources?search=nature)
 
-The [Canonical External ID](../../how-to-use-the-api/get-single-entities.md#canonical-external-ids) for sources is ISSN-L, which is a special "main" ISSN assigned to every sources (sources tend to have multiple ISSNs). About 90% of sources in OpenAlex have an ISSN-L or ISSN.
+The [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for sources is ISSN-L, which is a special "main" ISSN assigned to every sources (sources tend to have multiple ISSNs). About 90% of sources in OpenAlex have an ISSN-L or ISSN.
 
 Our information about sources comes from Crossref, the ISSN Network, and MAG. These datasets are joined automatically where possible, but there’s also a lot of manual combining involved. We do not curate journals, so any journal that is available in the data sources should make its way into OpenAlex.&#x20;
 

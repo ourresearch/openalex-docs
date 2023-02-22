@@ -95,7 +95,7 @@ id: "https://openalex.org/C2778407487"
 _Object:_ All the external identifiers that we know about for this institution. IDs are expressed as URIs whenever possible. Possible ID types:
 
 * `mag`  (_Integer:_ this concept's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `openalex` (_String:_ this concept's [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id). Same as [`Concept.id`](concept-object.md#id))
+* `openalex` (_String:_ this concept's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Concept.id`](concept-object.md#id))
 * `umls_cui` (_List:_ this concept's [Unified Medical Language System](https://www.nlm.nih.gov/research/umls/index.html) [Concept Unique Identifiers](https://www.nlm.nih.gov/research/umls/new\_users/online\_learning/Meta\_005.html))
 * `umls_aui` (_List:_ this concept's [Unified Medical Language System](https://www.nlm.nih.gov/research/umls/index.html) [Atom Unique Identifiers](https://www.nlm.nih.gov/research/umls/new\_users/online\_learning/Meta\_005.html))
 * `wikidata` (_String:_ this concept's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers). Same as [`Concept.wikidata`](concept-object.md#wikidata))
@@ -192,7 +192,7 @@ updated_date: "2021-12-25T14:04:30.578837"
 
 ### `wikidata`
 
-_String:_ The [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers) for this concept.  This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities.md#canonical-external-ids) for concepts.
+_String:_ The [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers) for this concept.  This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for concepts.
 
 {% hint style="info" %}
 _All_ OpenAlex concepts have a Wikidata ID, because all OpenAlex concepts are also Wikidata concepts.&#x20;

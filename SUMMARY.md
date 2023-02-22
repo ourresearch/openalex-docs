@@ -55,12 +55,15 @@
 
 ## How to use the API
 
-* [Get single entities](how-to-use-the-api/get-single-entities.md)
+* [Get single entities](how-to-use-the-api/get-single-entities/README.md)
+  * [Random result](how-to-use-the-api/get-single-entities/random-result.md)
+  * [Select fields](how-to-use-the-api/get-single-entities/select-fields.md)
 * [Get lists of entities](how-to-use-the-api/get-lists-of-entities/README.md)
   * [Paging](how-to-use-the-api/get-lists-of-entities/paging.md)
   * [Filter entity lists](how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md)
   * [Search entities](how-to-use-the-api/get-lists-of-entities/search-entities.md)
   * [Sort entity lists](how-to-use-the-api/get-lists-of-entities/sort-entity-lists.md)
+  * [Select fields](how-to-use-the-api/get-lists-of-entities/select-fields.md)
   * [Autocomplete entities](how-to-use-the-api/get-lists-of-entities/autocomplete-entities.md)
 * [Get groups of entities](how-to-use-the-api/get-groups-of-entities.md)
 * [Rate limits and authentication](how-to-use-the-api/rate-limits-and-authentication.md)

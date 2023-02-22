@@ -2,7 +2,7 @@
 
 It's easy to get a work from from the API with: `/works/<entity_id>` Here's an example:
 
-* Get the work with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)``
+* Get the work with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)``
 
 That will return a [`Work`](work-object.md) object, describing everything OpenAlex knows about the work with that ID.
 

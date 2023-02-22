@@ -2,7 +2,7 @@
 
 It's easy to get an author from from the API with: `/authors/<entity_id>`. Here's an example:
 
-* Get the author with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) `A2208157607`: \
+* Get the author with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `A2208157607`: \
   [https://api.openalex.org/authors/A2208157607](https://api.openalex.org/authors/A2208157607)
 
 That will return an [`Author`](author-object.md) object, describing everything OpenAlex knows about the author with that ID:

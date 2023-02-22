@@ -113,7 +113,7 @@ last_known_institution: {
 
 ### `orcid`
 
-_String:_ The [ORCID](https://en.wikipedia.org/wiki/ORCID) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome) for this author. ORCID is a global and unique ID for authors. This is the [Canonical external ID](../../how-to-use-the-api/get-single-entities.md#canonical-external-ids) for authors.
+_String:_ The [ORCID](https://en.wikipedia.org/wiki/ORCID) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome) for this author. ORCID is a global and unique ID for authors. This is the [Canonical external ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for authors.
 
 {% hint style="warning" %}
 Compared to other Canonical IDs, ORCID coverage is relatively low in OpenAlex, because ORCID adoption in the wild has been slow compared with DOI, for example. This is particularly an issue when dealing with older works and authors.

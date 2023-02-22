@@ -236,7 +236,7 @@ display_name: "The state of OA: a large-scale analysis of the prevalence and imp
 
 ### `doi` <a href="#title" id="title"></a>
 
-_String:_ The DOI for the work. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities.md#canonical-external-ids) for works.
+_String:_ The DOI for the work. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for works.
 
 Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on [bioRxiv](https://www.biorxiv.org/), and another DOI for the [published version](work-object.md#version). However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the [`Work.alternate_host_venues`](work-object.md#alternate\_host\_venues) list.&#x20;
 
@@ -278,7 +278,7 @@ host_venue: {
 
 ### `id`
 
-_String:_ The [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) for this work.
+_String:_ The [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for this work.
 
 ```json
 id: "https://openalex.org/W2741809807"
@@ -468,7 +468,7 @@ publication_year: 2018
 
 ### `referenced_works`
 
-_List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.&#x20;
+_List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.&#x20;
 
 ```json
 referenced_works: [
@@ -482,7 +482,7 @@ referenced_works: [
 
 ### `related_works`
 
-_List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) for works related to this work. Related works are computed algorithmically; the algorithm finds recent papers with the most concepts in common with the current paper.
+_List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for works related to this work. Related works are computed algorithmically; the algorithm finds recent papers with the most concepts in common with the current paper.
 
 ```json
 related_works: [

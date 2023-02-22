@@ -97,7 +97,7 @@ id: "https://openalex.org/P4310320990"
 
 _Object:_ All the external identifiers that we know about for this publisher. IDs are expressed as URIs whenever possible. Possible ID types:
 
-* `openalex` _String:_ this publishers's [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id)
+* `openalex` _String:_ this publishers's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id)
 * `ror` _String:_ this publisher's ROR ID
 * `wikidata` _String:_ this publisher's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers)
 

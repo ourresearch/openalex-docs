@@ -10,7 +10,7 @@ Note that while n-grams are derived from the fulltext of a Work, the presence of
 
 ## API Endpoint
 
-In addition to enabling fulltext search capabilities, a Work's n-grams are viewable directly through an endpoint that accepts either an [OpenAlex ID](../../how-to-use-the-api/get-single-entities.md#the-openalex-id) or a DOI.
+In addition to enabling fulltext search capabilities, a Work's n-grams are viewable directly through an endpoint that accepts either an [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) or a DOI.
 
 Unlike other API endpoints, n-grams are cached via CDN, which means this one is super fast, and you can call it as fast as you want - [rate limits](../../how-to-use-the-api/rate-limits-and-authentication.md) don't apply.
 
