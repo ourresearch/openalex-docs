@@ -102,6 +102,20 @@ These are the Canonical External IDs:
 
 The full entity objects can get pretty unwieldy, especially when you're embedding a list of them in another object (for instance, a list of `Concept`s in a `Work`). For these cases, all the entities except `Work`s have a dehydrated version. This is a stripped-down representation of the entity that carries only its most essential properties. These properties are documented individually on their respective entity pages.
 
+## Select fields
+
+You can use `select` to choose top-level fields you want to see in a result.
+
+* Display `id` and `display_name` for a work\
+  [https://api.openalex.org/works/W2138270253?select=id,display\_name](https://api.openalex.org/works/W2138270253?select=id,display\_name)
+
+```json
+{
+  id: "https://openalex.org/W2138270253",
+  display_name: "DNA sequencing with chain-terminating inhibitors"
+}
+```
+
 ## Random entity
 
 You can get a random entity by using the string `random` where an ID would normally go. OMG that's so random! Each time you call this URL you'll get a different entity.  Examples:
