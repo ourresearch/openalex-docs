@@ -43,3 +43,10 @@ Available external IDs for sources are:
 | Fatcat                         | `fatcat`   |
 | Microsoft Academic Graph (MAG) | `mag`      |
 | Wikidata                       | `wikidata` |
+
+### Select fields
+
+You can use `select` to limit the fields that are returned in a source object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id` and `display_name` for a source object\
+  [https://api.openalex.org/sources/S137773608?select=id,display\_name](https://api.openalex.org/sources/S137773608?select=id,display\_name)

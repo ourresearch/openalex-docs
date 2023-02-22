@@ -49,3 +49,10 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
   https://api.openalex.org/sources?sort=cited\_by\_count:desc
 
 Continue on to learn how you can [filter](filter-venues.md) and [search](search-venues.md) lists of sources.
+
+## Select fields
+
+You can use `select` to limit the fields that are returned in a list of sources. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id`, `display_name` and `issn` within sources results\
+  [https://api.openalex.org/sources?select=id,display\_name,issn](https://api.openalex.org/sources?select=id,display\_name,issn)

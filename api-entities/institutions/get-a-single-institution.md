@@ -36,3 +36,10 @@ Available external IDs for institutions are:
 | ROR                            | `ror`      |
 | Microsoft Academic Graph (MAG) | `mag`      |
 | Wikidata                       | `wikidata` |
+
+### Select fields
+
+You can use `select` to limit the fields that are returned in an institution object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id` and `display_name` for an institution object\
+  [https://api.openalex.org/institutions/I27837315?select=id,display\_name](https://api.openalex.org/institutions/I27837315?select=id,display\_name)

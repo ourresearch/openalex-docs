@@ -47,3 +47,10 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
   [https://api.openalex.org/institutions?sort=cited\_by\_count:desc](https://api.openalex.org/institutions?sort=cited\_by\_count:desc)
 
 Continue on to learn how you can [filter](filter-institutions.md) and [search](search-institutions.md) lists of institutions.
+
+## Select fields
+
+You can use `select` to limit the fields that are returned in a list of institutions. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id`, `ror`, and `display_name` within institutions results\
+  [https://api.openalex.org/institutions?select=id,display\_name,ror](https://api.openalex.org/institutions?select=id,display\_name,ror)
