@@ -30,7 +30,7 @@ The OpenAlex ID is the primary key for all entities. It's a URL shaped like this
 
 The OpenAlex ID has two parts. The first part is the Base; it's always `https://openalex.org/.` The second part is the Key; it's the unique primary key that identifies a given resource in our database.
 
-The key starts with a letter; that letter tells you what kind of entity you've got: **W**(ork), **A**(uthor), **V**(enue), **I**(nstitution), or **C**(oncept). The IDs are not case-sensitive, so `w2741809807` is just as valid as `W2741809807`. So in the example above, the Key is `W2741809807`, and the `W` at the front tells us that this is a `Work`. &#x20;
+The key starts with a letter; that letter tells you what kind of entity you've got: **W**(ork), **A**(uthor), **S**(ource), **I**(nstitution), or **C**(oncept), **P**(ublisher). The IDs are not case-sensitive, so `w2741809807` is just as valid as `W2741809807`. So in the example above, the Key is `W2741809807`, and the `W` at the front tells us that this is a `Work`. &#x20;
 
 Because OpenAlex was launched as a replacement for [Microsoft Academic Graph (MAG)](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), OpenAlex IDs are designed to be backwards-compatible with MAG IDs, where they exist. To find the MAG ID, just take the first letter off the front of the unique part of the ID (so in the example above, the MAG ID is `2741809807`). Of course this won't yield anything useful for entities that don't have a MAG ID.
 
@@ -59,9 +59,10 @@ This works with DOIs, ISSNs, ORCIDs, and lots of other IDs...in fact, you can us
 
 * ``[`Work.ids`](../api-entities/works/work-object.md#ids)``
 * ``[`Author.ids`](../api-entities/authors/author-object.md#ids)``
-* ``[`Venue.ids`](../api-entities/venues/venue-object.md#ids)``
+* ``[`Source.ids`](../api-entities/venues/venue-object.md#ids)``
 * ``[`Institution.ids`](../api-entities/institutions/institution-object.md#ids)``
 * ``[`Concept.ids`](../api-entities/concepts/concept-object.md#ids)``
+* ``[`Publisher.ids`](../api-entities/publishers/publisher-object.md#ids)``
 
 ## ID formats
 
@@ -92,9 +93,10 @@ These are the Canonical External IDs:
 
 * Works: [DOI](../api-entities/works/work-object.md#title)
 * Authors: [ORCID](../api-entities/authors/author-object.md#orcid)
-* Venues: [ISSN-L](../api-entities/venues/venue-object.md#issn\_l)
+* Sources: [ISSN-L](../api-entities/venues/venue-object.md#issn\_l)
 * Institutions: [ROR ID](../api-entities/institutions/institution-object.md#ror)
 * Concepts: [Wikidata ID](../api-entities/concepts/concept-object.md#wikidata)
+* Publishers: [Wikidata ID](../api-entities/publishers/publisher-object.md#ids)
 
 ## Dehydrated entity objects
 
