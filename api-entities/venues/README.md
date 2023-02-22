@@ -17,7 +17,7 @@ Our information about sources comes from Crossref, the ISSN Network, and MAG. Th
 
 Several sources may host the same work. OpenAlex reports both the primary host source (generally wherever the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record) lives), and alternate host sources (like preprint repositories).
 
-Sources are linked to works via the [`works.host_venue`](../works/work-object.md#host\_venue) and [`works.alternate_host_venues`](../works/work-object.md#alternate\_host\_venues) properties.
+Sources are linked to works via the [`works.primary_location`](../works/work-object.md#primary\_location) and [`works.location`](../works/work-object.md#locations) properties.
 
 ## What's next
 
