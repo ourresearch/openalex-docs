@@ -42,3 +42,10 @@ Available external IDs for works are:
 | Microsoft Academic Graph (MAG) | `mag`   |
 | PubMed ID (PMID)               | `pmid`  |
 | PubMed Central ID (PMCID)      | `pmcid` |
+
+### Select fields
+
+You can use `select` to limit the fields that are returned in a work object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id` and `display_name` for a work object\
+  [https://api.openalex.org/works/W2741809807?select=id,display\_name](https://api.openalex.org/works/W2741809807?select=id,display\_name)
