@@ -35,3 +35,10 @@ Available external IDs for concepts are:
 | ------------------------------ | ---------- |
 | Microsoft Academic Graph (MAG) | `mag`      |
 | Wikidata                       | `wikidata` |
+
+### Select fields
+
+You can use `select` to limit the fields that are returned in a concept object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id` and `display_name` for a concept object\
+  [https://api.openalex.org/concepts/C71924100?select=id,display\_name](https://api.openalex.org/concepts/C71924100?select=id,display\_name)

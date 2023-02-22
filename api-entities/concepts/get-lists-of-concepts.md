@@ -47,3 +47,10 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
   [https://api.openalex.org/concepts?sort=cited\_by\_count:desc](https://api.openalex.org/concepts?sort=cited\_by\_count:desc)
 
 Continue on to learn how you can [filter](filter-concepts.md) and [search](search-concepts.md) lists of concepts.
+
+## Select fields
+
+You can use `select` to limit the fields that are returned in a list of concepts. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id`, `display_name`, and `description` within concepts results\
+  [https://api.openalex.org/concepts?select=id,display\_name,description](https://api.openalex.org/concepts?select=id,display\_name,description)

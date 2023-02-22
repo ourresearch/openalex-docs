@@ -38,3 +38,10 @@ Available external IDs for publishers are:
 | ----------- | ---------- |
 | ROR         | `ror`      |
 | Wikidata    | `wikidata` |
+
+### Select fields
+
+You can use `select` to limit the fields that are returned in a publisher object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id` and `display_name` for a publisher object\
+  [https://api.openalex.org/publishers/P4310319965?select=id,display\_name](https://api.openalex.org/publishers/P4310319965?select=id,display\_name)

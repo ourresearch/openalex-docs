@@ -45,3 +45,10 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
   [https://api.openalex.org/publishers?sort=display\_name:desc](https://api.openalex.org/publishers?sort=display\_name:desc)
 
 Continue on to learn how you can [filter](filter-publishers.md) and [search](search-publishers.md) lists of publishers.
+
+## Select fields
+
+You can use `select` to limit the fields that are returned in a list of publishers. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id`, `display_name`, and `alternate_titles` within publishers results\
+  [https://api.openalex.org/publishers?select=id,display\_name,alternate\_titles](https://api.openalex.org/publishers?select=id,display\_name,alternate\_titles)
