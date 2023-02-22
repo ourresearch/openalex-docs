@@ -47,3 +47,10 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
   [https://api.openalex.org/authors?sort=cited\_by\_count:desc](https://api.openalex.org/authors?sort=cited\_by\_count:desc)
 
 Continue on to learn how you can [filter](filter-authors.md) and [search](search-authors.md) lists of authors.
+
+## Select fields
+
+You can use `select` to limit the fields that are returned in a list of authors. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id` and `display_name` and `orcid` within authors results\
+  [https://api.openalex.org/authors?select=id,display\_name,orcid](https://api.openalex.org/authors?select=id,display\_name,orcid)

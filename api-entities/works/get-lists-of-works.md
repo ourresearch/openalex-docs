@@ -47,3 +47,10 @@ You can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-entit
   [https://api.openalex.org/works?sort=publication\_year](https://api.openalex.org/works?sort=publication\_year)
 
 Continue on to learn how you can [filter](filter-works.md) and [search](search-works.md) lists of works.
+
+## Select fields
+
+You can use `select` to limit the fields that are returned in a list of works. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id` and `display_name` within works results\
+  [https://api.openalex.org/works?select=id,display\_name](https://api.openalex.org/works?select=id,display\_name)

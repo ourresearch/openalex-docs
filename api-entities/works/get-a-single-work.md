@@ -22,7 +22,7 @@ That will return a [`Work`](work-object.md) object, describing everything OpenAl
 You can make up to 50 of these queries at once by requesting a list of entities and filtering on IDs [using OR syntax](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md#addition-or) ([tutorial](https://blog.ourresearch.org/fetch-multiple-dois-in-one-openalex-api-request/)).
 {% endhint %}
 
-### External IDs
+## External IDs
 
 You can look up works using external IDs such as a DOI:
 

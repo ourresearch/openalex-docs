@@ -26,7 +26,7 @@ You can make up to 50 of these queries at once by [requesting a list of entities
 Authors are also available via an alias: `/people`
 {% endhint %}
 
-### External IDs
+## External IDs
 
 You can look up authors using external IDs such as an ORCID:
 
@@ -47,3 +47,10 @@ Available external IDs for authors are:
 | Scopus                         | `scopus`    |
 | Twitter                        | `twitter`   |
 | Wikipedia                      | `wikipedia` |
+
+## Select fields
+
+You can use `select` to limit the fields that are returned in an author object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+
+* Display only the `id` and `display_name` and orcid for an author object\
+  [https://api.openalex.org/authors/A2479313101?select=id,display\_name,orcid](https://api.openalex.org/authors/A2479313101?select=id,display\_name,orcid)
