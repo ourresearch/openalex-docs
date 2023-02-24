@@ -50,6 +50,13 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
 
 Continue on to learn how you can [filter](filter-venues.md) and [search](search-venues.md) lists of sources.
 
+## Sample sources
+
+You can use `sample` to get a random batch of sources. Read more about sampling and how to add a `seed` value [here](../../how-to-use-the-api/get-lists-of-entities/sample-entity-lists.md).
+
+* Get 10 random sources\
+  [https://api.openalex.org/sources?sample=10](https://api.openalex.org/sources?sample=10)
+
 ## Select fields
 
 You can use `select` to limit the fields that are returned in a list of sources. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
