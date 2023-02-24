@@ -10,8 +10,12 @@ You can add a `seed` value in order to retrieve the same set of random records, 
 * Get 20 random sources with a seed value\
   [https://api.openalex.org/sources?sample=20\&seed=123](https://api.openalex.org/sources?sample=20\&seed=123)
 
+{% hint style="info" %}
+Depending on your query, a random set of records with a seed value _may_ change over time due to new records coming into OpenAlex.&#x20;
+{% endhint %}
+
 ## Limitations
 
-* Sample is limited to 10,000 results.
+* The sample size is limited to 10,000 results.
 * You can't use [`search`](search-entities.md) with `sample`. We'll try to fix that later!
 * You must provide a `seed` value when [paging](paging.md) beyond the first page of results. Without a seed value, you might get duplicate records in your results.
