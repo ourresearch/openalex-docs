@@ -11,7 +11,7 @@ You can add a `seed` value in order to retrieve the same set of random records, 
   [https://api.openalex.org/sources?sample=20\&seed=123](https://api.openalex.org/sources?sample=20\&seed=123)
 
 {% hint style="info" %}
-Depending on your query, a random set of records with a seed value _may_ change over time due to new records coming into OpenAlex.&#x20;
+Depending on your query, random results with a seed value _may_ change over time due to new records coming into OpenAlex.&#x20;
 {% endhint %}
 
 ## Limitations
