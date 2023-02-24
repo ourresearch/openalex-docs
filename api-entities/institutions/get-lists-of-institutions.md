@@ -48,6 +48,13 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
 
 Continue on to learn how you can [filter](filter-institutions.md) and [search](search-institutions.md) lists of institutions.
 
+## Sample institutions
+
+You can use `sample` to get a random batch of institutions. Read more about sampling and how to add a `seed` value [here](../../how-to-use-the-api/get-lists-of-entities/sample-entity-lists.md).
+
+* Get 50 random institutions\
+  [https://api.openalex.org/institutions?sample=50\&per-page=50](https://api.openalex.org/institutions?sample=50\&per-page=50)
+
 ## Select fields
 
 You can use `select` to limit the fields that are returned in a list of institutions. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).

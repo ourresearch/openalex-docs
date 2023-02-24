@@ -48,6 +48,13 @@ You can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-entit
 
 Continue on to learn how you can [filter](filter-works.md) and [search](search-works.md) lists of works.
 
+## Sample works
+
+You can use `sample` to get a random batch of works. Read more about sampling and how to add a `seed` value [here](../../how-to-use-the-api/get-lists-of-entities/sample-entity-lists.md).
+
+* Get 20 random works\
+  [https://api.openalex.org/works?sample=20](https://api.openalex.org/works?sample=20)
+
 ## Select fields
 
 You can use `select` to limit the fields that are returned in a list of works. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).

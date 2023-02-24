@@ -48,6 +48,13 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
 
 Continue on to learn how you can [filter](filter-concepts.md) and [search](search-concepts.md) lists of concepts.
 
+## Sample concepts
+
+You can use `sample` to get a random batch of concepts. Read more about sampling and how to add a `seed` value [here](../../how-to-use-the-api/get-lists-of-entities/sample-entity-lists.md).
+
+* Get 10 random concepts\
+  [https://api.openalex.org/concepts?sample=10](https://api.openalex.org/concepts?sample=10)
+
 ## Select fields
 
 You can use `select` to limit the fields that are returned in a list of concepts. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).

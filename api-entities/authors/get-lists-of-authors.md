@@ -48,6 +48,13 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
 
 Continue on to learn how you can [filter](filter-authors.md) and [search](search-authors.md) lists of authors.
 
+## Sample authors
+
+You can use `sample` to get a random batch of authors. Read more about sampling and how to add a `seed` value [here](../../how-to-use-the-api/get-lists-of-entities/sample-entity-lists.md).
+
+* Get 25 random authors\
+  [https://api.openalex.org/authors?sample=25](https://api.openalex.org/authors?sample=25)
+
 ## Select fields
 
 You can use `select` to limit the fields that are returned in a list of authors. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
