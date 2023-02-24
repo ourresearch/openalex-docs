@@ -64,6 +64,7 @@
   * [Search entities](how-to-use-the-api/get-lists-of-entities/search-entities.md)
   * [Sort entity lists](how-to-use-the-api/get-lists-of-entities/sort-entity-lists.md)
   * [Select fields](how-to-use-the-api/get-lists-of-entities/select-fields.md)
+  * [Sample entity lists](how-to-use-the-api/get-lists-of-entities/sample-entity-lists.md)
   * [Autocomplete entities](how-to-use-the-api/get-lists-of-entities/autocomplete-entities.md)
 * [Get groups of entities](how-to-use-the-api/get-groups-of-entities.md)
 * [Rate limits and authentication](how-to-use-the-api/rate-limits-and-authentication.md)
