@@ -4,6 +4,8 @@ You can use `sample` to get a random list of up to 10,000 results.
 
 * Get 100 random works\
   [https://api.openalex.org/works?sample=100\&per-page=100](https://api.openalex.org/works?sample=100\&per-page=100)
+* Get 50 random works that are open access and published in 2021\
+  [https://api.openalex.org/works?filter=open\_access.is\_oa:true,publication\_year:2021\&sample=50\&per-page=50](https://api.openalex.org/works?filter=open\_access.is\_oa:true,publication\_year:2021\&sample=50\&per-page=50)
 
 You can add a `seed` value in order to retrieve the same set of random records, in the same order, multiple times.
 
