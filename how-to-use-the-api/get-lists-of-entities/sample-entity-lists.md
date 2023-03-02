@@ -19,5 +19,4 @@ Depending on your query, random results with a seed value _may_ change over time
 ## Limitations
 
 * The sample size is limited to 10,000 results.
-* You can't use [`search`](search-entities.md) with `sample`. We'll try to fix that later!
 * You must provide a `seed` value when [paging](paging.md) beyond the first page of results. Without a seed value, you might get duplicate records in your results.
