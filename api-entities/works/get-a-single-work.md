@@ -43,6 +43,10 @@ Available external IDs for works are:
 | PubMed ID (PMID)               | `pmid`  |
 | PubMed Central ID (PMCID)      | `pmcid` |
 
+{% hint style="warning" %}
+You must make sure that the ID(s) you supply are correctly formatted. In most cases, if an ID you request is malformed, there will not be any work returned for that ID. If the ID has certain invalid characters, such as an ampersand (`&`) or a comma (`,`), the API query will fail and you will get a 403 error.
+{% endhint %}
+
 ### Select fields
 
 You can use `select` to limit the fields that are returned in a work object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
