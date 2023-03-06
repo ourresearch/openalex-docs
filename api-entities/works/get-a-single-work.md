@@ -44,7 +44,7 @@ Available external IDs for works are:
 | PubMed Central ID (PMCID)      | `pmcid` |
 
 {% hint style="warning" %}
-You must make sure that the ID(s) you supply are correctly formatted. In most cases, if an ID you request is malformed, there will not be any work returned for that ID. If the ID has certain invalid characters, such as an ampersand (`&`) or a comma (`,`), the API query will fail and you will get a 403 error.
+You must make sure that the ID(s) you supply are valid and correct. If an ID you request is incorrect, you will get no result. If you request an illegal ID—such as one containing a `,` or `&`, the query will fail and you will get a 403 error.
 {% endhint %}
 
 ### Select fields
