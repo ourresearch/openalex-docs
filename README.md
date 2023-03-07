@@ -18,7 +18,7 @@ The API is the primary way to get OpenAlex data. It's free and requires no authe
 
 There's no officially-supported client library for the API, for now. However, there are several third-party libraries you can use (and if you know of others, give us a shout):
 
-* [openalexR](https://github.com/massimoaria/openalexR) (R)
+* [openalexR](https://github.com/ropensci/openalexR) (R)
 * [OpenAlexAPI](https://pypi.org/project/openalexapi/) (Python)
 * [diophila](https://pypi.org/project/diophila/) (Python)
 * [PyAlex](https://github.com/J535D165/pyalex) (Python)
