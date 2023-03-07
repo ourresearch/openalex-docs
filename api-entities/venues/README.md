@@ -19,6 +19,10 @@ Several sources may host the same work. OpenAlex reports both the primary host s
 
 Sources are linked to works via the [`works.primary_location`](../works/work-object.md#primary\_location) and [`works.location`](../works/work-object.md#locations) properties.
 
+{% hint style="info" %}
+Check out the [Japanese Sources tutorial](https://github.com/ourresearch/openalex-api-tutorials/blob/main/notebooks/institutions/japan\_sources.ipynb), a Jupyter notebook showing how to use Python and the API to learn about all of the sources in a country.
+{% endhint %}
+
 ## What's next
 
 Learn more about what you can do with sources:

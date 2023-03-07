@@ -81,7 +81,6 @@
 
 ## Additional Help
 
-* [Tutorials](additional-help/tutorials/README.md)
-  * [Filter and group with API](additional-help/tutorials/filter-and-group-with-api.md)
+* [Tutorials](additional-help/tutorials.md)
 * [Report bugs](additional-help/report-bugs.md)
 * [FAQ](additional-help/faq.md)
