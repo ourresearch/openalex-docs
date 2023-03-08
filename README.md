@@ -4,7 +4,7 @@ OpenAlex is a fully open catalog of the global research system. It's named after
 
 ## Data
 
-The OpenAlex dataset describes scholarly _entities_ and how those entities are connected to each other. There are five types of entities: [works](api-entities/works/), [authors](api-entities/authors/), [venues](api-entities/venues/), [institutions](api-entities/institutions/), and [concepts](api-entities/concepts/).
+The OpenAlex dataset describes scholarly _entities_ and how those entities are connected to each other. Types of entities include [works](api-entities/works/), [authors](api-entities/authors/), [venues](api-entities/venues/), [institutions](api-entities/institutions/), and [concepts](api-entities/concepts/).
 
 Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of hundreds of millions of entities and billions of connections between them all.
 
@@ -12,16 +12,7 @@ Together, these make a huge web (or more technically, heterogeneous directed [gr
 
 ## Access
 
-The API is the primary way to get OpenAlex data. It's free and requires no authentication. For best performance, [add your email](how-to-use-the-api/rate-limits-and-authentication.md#the-polite-pool) to all API requests, like `mailto=example@domain.com`.
-
-## Client Libraries&#x20;
-
-There's no officially-supported client library for the API, for now. However, there are several third-party libraries you can use (and if you know of others, give us a shout):
-
-* [openalexR](https://github.com/ropensci/openalexR) (R)
-* [OpenAlexAPI](https://pypi.org/project/openalexapi/) (Python)
-* [diophila](https://pypi.org/project/diophila/) (Python)
-* [PyAlex](https://github.com/J535D165/pyalex) (Python)
+The API is the primary way to get OpenAlex data. It's free and requires no authentication. For best performance, [add your email](how-to-use-the-api/rate-limits-and-authentication.md#the-polite-pool) to all API requests, like `mailto=example@domain.com`. [Learn more](how-to-use-the-api/api-overview.md)
 
 If you're looking for a visual interface, you can also check out the free [VOSviewer](https://www.vosviewer.com/), which lets you make network visualizations based on OpenAlex data:
 

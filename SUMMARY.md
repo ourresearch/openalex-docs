@@ -5,6 +5,7 @@
 
 ## API Entities
 
+* [Entities overview](api-entities/entities-overview.md)
 * [📄 Works](api-entities/works/README.md)
   * [Work object](api-entities/works/work-object.md)
   * [Get a single work](api-entities/works/get-a-single-work.md)
@@ -55,6 +56,7 @@
 
 ## How to use the API
 
+* [API Overview](how-to-use-the-api/api-overview.md)
 * [Get single entities](how-to-use-the-api/get-single-entities/README.md)
   * [Random result](how-to-use-the-api/get-single-entities/random-result.md)
   * [Select fields](how-to-use-the-api/get-single-entities/select-fields.md)
