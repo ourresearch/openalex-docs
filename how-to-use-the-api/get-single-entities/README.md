@@ -59,7 +59,7 @@ This works with DOIs, ISSNs, ORCIDs, and lots of other IDs...in fact, you can us
 
 * ``[`Work.ids`](../../api-entities/works/work-object.md#ids)``
 * ``[`Author.ids`](../../api-entities/authors/author-object.md#ids)``
-* ``[`Source.ids`](../../api-entities/venues/venue-object.md#ids)``
+* ``[`Source.ids`](../../api-entities/sources/venue-object.md#ids)``
 * ``[`Institution.ids`](../../api-entities/institutions/institution-object.md#ids)``
 * ``[`Concept.ids`](../../api-entities/concepts/concept-object.md#ids)``
 * ``[`Publisher.ids`](../../api-entities/publishers/publisher-object.md#ids)``
@@ -93,7 +93,7 @@ These are the Canonical External IDs:
 
 * Works: [DOI](../../api-entities/works/work-object.md#title)
 * Authors: [ORCID](../../api-entities/authors/author-object.md#orcid)
-* Sources: [ISSN-L](../../api-entities/venues/venue-object.md#issn\_l)
+* Sources: [ISSN-L](../../api-entities/sources/venue-object.md#issn\_l)
 * Institutions: [ROR ID](../../api-entities/institutions/institution-object.md#ror)
 * Concepts: [Wikidata ID](../../api-entities/concepts/concept-object.md#wikidata)
 * Publishers: [Wikidata ID](../../api-entities/publishers/publisher-object.md#ids)

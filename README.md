@@ -4,7 +4,7 @@ OpenAlex is a fully open catalog of the global research system. It's named after
 
 ## Data
 
-The OpenAlex dataset describes scholarly _entities_ and how those entities are connected to each other. Types of entities include [works](api-entities/works/), [authors](api-entities/authors/), [venues](api-entities/venues/), [institutions](api-entities/institutions/), and [concepts](api-entities/concepts/).
+The OpenAlex dataset describes scholarly _entities_ and how those entities are connected to each other. Types of entities include [works](api-entities/works/), [authors](api-entities/authors/), [venues](api-entities/sources/), [institutions](api-entities/institutions/), and [concepts](api-entities/concepts/).
 
 Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of hundreds of millions of entities and billions of connections between them all.
 

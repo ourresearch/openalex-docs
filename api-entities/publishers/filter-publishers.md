@@ -39,11 +39,11 @@ Returns: publishers that are located in the chosen continent.
 
 Value: a search string
 
-Returns: institutions with a [`display_name`](publisher-object.md#display\_name) containing the given string; see the [search page](../venues/search-venues.md#search-a-specific-field) for details.
+Returns: institutions with a [`display_name`](publisher-object.md#display\_name) containing the given string; see the [search page](../sources/search-venues.md#search-a-specific-field) for details.
 
 * Get publishers with names containing "elsevier":\
   [`https://api.openalex.org/publishers?filter=display_name.search:elsevier`](https://api.openalex.org/publishers?filter=display\_name.search:elsevier)``
 
 {% hint style="info" %}
-In most cases, you should use the [`search` parameter](../venues/search-venues.md#venues-full-search) instead of this filter because it uses a better search algorithm.
+In most cases, you should use the [`search` parameter](../sources/search-venues.md#venues-full-search) instead of this filter because it uses a better search algorithm.
 {% endhint %}

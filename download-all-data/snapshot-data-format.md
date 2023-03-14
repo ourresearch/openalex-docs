@@ -11,7 +11,7 @@ Here are the details on where the OpenAlex data lives and how it's structured.
 * The manifest file is JSON (in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-files-using-manifest.html) format) and lists all the data files for each object type - [`/data/works/manifest`](https://openalex.s3.amazonaws.com/data/works/manifest) lists all the works.
 * The gzip-compressed snapshot takes up about 330 GB and decompresses to about 1.6 TB.&#x20;
 
-The structure of each entity type is documented here: [Work](../api-entities/works/work-object.md), [Author](../api-entities/authors/author-object.md), [Venue](../api-entities/venues/venue-object.md), [Institution](../api-entities/institutions/institution-object.md), and [Concept](../api-entities/concepts/concept-object.md).
+The structure of each entity type is documented here: [Work](../api-entities/works/work-object.md), [Author](../api-entities/authors/author-object.md), [Venue](../api-entities/sources/venue-object.md), [Institution](../api-entities/institutions/institution-object.md), and [Concept](../api-entities/concepts/concept-object.md).
 
 #### Visualization of the entity\_type/updated\_date folder structure
 

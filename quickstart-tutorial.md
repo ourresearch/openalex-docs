@@ -89,6 +89,6 @@ Jump into an area of OpenAlex that interests you:
 
 * [Works](api-entities/works/)
 * [Authors](api-entities/authors/)
-* [Venues](api-entities/venues/)
+* [Venues](api-entities/sources/)
 * [Institutions](api-entities/institutions/)
 * [Concepts](api-entities/concepts/)
