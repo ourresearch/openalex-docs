@@ -17,7 +17,7 @@ We’re going to use [PostgreSQL](https://www.postgresql.org/) as an example and
 
 ## Step 1: Create the schema
 
-Running this SQL on your database (in the [psql](https://www.postgresql.org/docs/13/app-psql.html) client, for example) will initialize [this schema](broken-reference) for you: [https://gist.github.com/richard-orr/4c30f52cf5481ac68dc0b282f46f1905](https://gist.github.com/richard-orr/4c30f52cf5481ac68dc0b282f46f1905)
+Running [this SQL](https://github.com/ourresearch/openalex-documentation-scripts/blob/main/openalex-pg-schema.sql) on your database (in the [psql](https://www.postgresql.org/docs/13/app-psql.html) client, for example) will initialize a schema for you.
 
 Run it and you'll be set up to follow the next steps. To show you what it's doing, we'll explain some excerpts here, using the [concept](../../../api-entities/concepts/) entity as an example.&#x20;
 
@@ -46,13 +46,9 @@ CREATE TABLE openalex.concepts_related_concepts (
 
 We can preserve `score` in this relationship table and look up any other attributes of the [dehydrated related concepts](../../../api-entities/concepts/concept-object.md#the-dehydratedconcept-object) in the main table `concepts`. Creating indexes on `concept_id` and  `related_concept_id` lets us look up concepts on both sides of the relationship quickly.
 
-{% hint style="info" %}
-We're working on an issue where [some nested objects don't have IDs](broken-reference). For example [`Work.host_venue`](broken-reference) may have a [`display_name`](broken-reference) but also a null [`id`](broken-reference).  This is a problem when flattening a parent `Entity`, because we need non-null `ids` to refer to its children. For now, we're skipping objects without ids when flattening their containing `Entities`.
-{% endhint %}
-
 ## Step 2: Convert the JSON Lines files to CSV
 
-This python script will turn the JSON Lines files you downloaded into CSV files that can be copied to the the tables you created in step 1: [https://gist.github.com/richard-orr/152d828356a7c47ed7e3e22d2253708d](https://gist.github.com/richard-orr/152d828356a7c47ed7e3e22d2253708d)
+[This python script](https://github.com/ourresearch/openalex-documentation-scripts/blob/main/flatten-openalex-jsonl.py) will turn the JSON Lines files you downloaded into CSV files that can be copied to the the tables you created in step 1.
 
 {% hint style="warning" %}
 This script assumes your downloaded snapshot is in `openalex-snapshot` and you've made a directory `csv-files` to hold the CSV files.
@@ -80,7 +76,7 @@ This script is slow. Exactly how slow depends on the machine you run it on, but 
 
 If you're familiar with python, there are two big improvements you can make:
 
-* Run [`flatten_authors`](https://gist.github.com/richard-orr/152d828356a7c47ed7e3e22d2253708d#file-flatten-openalex-jsonl-py-L558) and [flatten\_works](https://gist.github.com/richard-orr/152d828356a7c47ed7e3e22d2253708d#file-flatten-openalex-jsonl-py-L559) at the same time, either by using threading in python or just running two copies of the script with the appropriate lines commented out.
+* Run [`flatten_authors`](https://github.com/ourresearch/openalex-documentation-scripts/blob/main/flatten-openalex-jsonl.py#L214) and [`flatten_works`](https://github.com/ourresearch/openalex-documentation-scripts/blob/main/flatten-openalex-jsonl.py#L544) at the same time, either by using threading in python or just running two copies of the script with the appropriate lines commented out.
 * Flatten multiple `.gz` files within each entity type at the same time. This means parallelizing the `for jsonl_file_name ... loop` in each `flatten_` function and writing multiple CSV files per entity type.
 {% endhint %}
 
@@ -111,7 +107,7 @@ Now we run one postgres copy command to load each CSV file to its corresponding 
 \copy openalex.concepts_ancestors (concept_id, ancestor_id) from csv-files/concepts_ancestors.csv csv header
 ```
 
-This script will run all the copy commands in the right order: [https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4](https://gist.github.com/richard-orr/a1117d7dd618970a1af23fa4b54c4da4). Here's how to run it:
+[This script](https://github.com/ourresearch/openalex-documentation-scripts/blob/main/copy-openalex-csv.sql) will run all the copy commands in the right order. Here's how to run it:
 
 1. Copy it to the same place as the python script from step 2, right above the folder with your CSV files.
 2. Set the environment variable OPENALEX\_SNAPSHOT\_DB to the [connection URI](https://www.postgresql.org/docs/13/libpq-connect.html#LIBPQ-CONNSTRING) for your database.
