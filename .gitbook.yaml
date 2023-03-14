@@ -6,3 +6,4 @@ redirects:
     about-the-data/institution: api-entities/institutions/README.md
     about-the-data/concept: api-entities/concepts/README.md
     api/api-tutorial: additional-help/tutorials/README.md
+    api-entities/venues: api-entities/sources/README.md
