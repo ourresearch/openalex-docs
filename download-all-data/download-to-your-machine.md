@@ -50,7 +50,7 @@ openalex-snapshot/
     │   └── updated_date=2021-12-28
     │       ├── 0000_part_00.gz
     │       └── 0001_part_00.gz
-    ├── venues
+    ├── sources
     │   ├── manifest
     │   └── updated_date=2021-12-28
     │       ├── 0000_part_00.gz

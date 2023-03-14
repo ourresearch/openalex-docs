@@ -47,7 +47,7 @@ bq mk --table openalex-demo:openalex.authors author:string
 
 > `Table 'openalex-demo:openalex.authors' successfully created`
 
-and so on for `venues`, `institutions`, and `concepts`.
+and so on for `sources`, `institutions`, `concepts,` and `publishers`.
 
 ## Step 3: Load the data files
 

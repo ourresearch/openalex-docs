@@ -590,7 +590,7 @@ The HostVenue object describes a given work hosted on a given venue (you can thi
 
 The extra stuff is important because a given work can be hosted in different ways and in different forms, depending on where it's living.&#x20;
 
-To learn more about the dehydrated Venue object part, see the [DehydratedVenue](../sources/venue-object.md#the-dehydratedvenue-object) docs. To learn more about the other stuff, read below:
+To learn more about the dehydrated Venue object part, see the [DehydratedVenue](../venues/venue-object.md#the-dehydratedvenue-object) docs. To learn more about the other stuff, read below:
 
 ### `is_oa`
 
@@ -637,7 +637,7 @@ The `Location` object describes the location of a given work. It's only found as
 
 The extra stuff is important because a given work can be hosted in different ways and in different forms, depending on where it's living.&#x20;
 
-To learn more about the dehydrated Source object part, see the [DehydratedSource](../sources/venue-object.md#the-dehydratedsource-object) docs. To learn more about the other stuff, read below:
+To learn more about the dehydrated Source object part, see the [DehydratedSource](../venues/venue-object.md#the-dehydratedsource-object) docs. To learn more about the other stuff, read below:
 
 ### `is_oa`
 

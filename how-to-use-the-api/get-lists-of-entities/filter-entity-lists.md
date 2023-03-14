@@ -73,6 +73,6 @@ The filters for each entity can be found here:
 
 * [Works](../../api-entities/works/filter-works.md)
 * [Authors](../../api-entities/authors/filter-authors.md)
-* [Venues](../../api-entities/sources/filter-venues.md)
+* [Venues](../../api-entities/venues/filter-venues.md)
 * [Institutions](../../api-entities/institutions/filter-institutions.md)
 * [Concepts](../../api-entities/concepts/filter-concepts.md)

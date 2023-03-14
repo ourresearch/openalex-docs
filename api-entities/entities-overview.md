@@ -4,7 +4,7 @@ The OpenAlex dataset describes scholarly _entities_ and how those entities are c
 
 * [Works](works/)
 * [Authors](authors/)
-* [Sources](sources/)
+* [Sources](venues/)
 * [Institutions](institutions/)
 * [Concepts](concepts/)
 * [Publishers](publishers/)
