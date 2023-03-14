@@ -173,13 +173,7 @@ issn_l: "2167-8359"
 
 ### `publisher` (deprecated)
 
-This field is deprecated in favor of [`host_organization`](venue-object.md#host\_organization) and will be removed on March 6th, 2023.&#x20;
-
-_String:_ The name of this source's publisher. Publisher is a tricky category, as journals often change publishers, publishers merge, publishers have subsidiaries ("imprints"), and of course no one is consistent in their naming. In the future, we plan to roll out support for a more structured publisher field, but for now it's just a string.
-
-```json
-publisher: "Peerj"
-```
+This field is deprecated in favor of [`host_organization`](venue-object.md#host\_organization) (as of March 6th, 2023).&#x20;
 
 ### societies
 
@@ -229,7 +223,7 @@ works_api_url: "https://api.openalex.org/works?filter=host_venue.id:V1983995261"
 
 ### `works_count`
 
-_Integer:_ The number of [`Works`](../works/work-object.md) this this source hosts.
+_Integer:_ The number of [`Works`](../works/work-object.md) this source hosts.
 
 ```json
 works_count: 20184 

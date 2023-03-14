@@ -1,10 +1,10 @@
 ---
-description: Universities and other organizations affiliated with works
+description: Universities and other organizations to which authors claim affiliations
 ---
 
 # 🏫 Institutions
 
-Institutions are universities and organizations to which authors claim affiliations. OpenAlex indexes about 109,000 institutions.&#x20;
+Institutions are universities and other organizations to which authors claim affiliations. OpenAlex indexes about 109,000 institutions.&#x20;
 
 You can get an institution from the OpenAlex API like this:
 
