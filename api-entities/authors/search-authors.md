@@ -1,6 +1,6 @@
 # Search authors
 
-The best way to search for authors is to use the `search` query parameter, which searches the [`display_name`](../works/work-object.md#display\_name) field in a flexible way. Example:
+The best way to search for authors is to use the `search` query parameter, which searches the [`display_name`](../works/work-object/#display\_name) field in a flexible way. Example:
 
 * Get works with the author name "Carl Sagan":\
   [https://api.openalex.org/authors?search=carl sagan](https://api.openalex.org/authors?search=carl%20sagan)

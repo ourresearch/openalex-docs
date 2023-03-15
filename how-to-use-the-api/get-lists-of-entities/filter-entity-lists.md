@@ -4,7 +4,7 @@ Filters narrow the list down to just entities that meet a particular condition--
 
 A list of filters are set using the `filter` parameter,  formatted like this: `filter=attribute:value,attribute2:value2`. Examples:
 
-* Get the works whose [type](../../api-entities/works/work-object.md#type) is `book`:\
+* Get the works whose [type](../../api-entities/works/work-object/#type) is `book`:\
   [`https://api.openalex.org/works?filter=type:book`](https://api.openalex.org/works?filter=type:book)
 * Get the authors whose name is Einstein:\
   [`https://api.openalex.org/authors?filter=display_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)``

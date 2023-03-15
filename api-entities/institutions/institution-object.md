@@ -35,7 +35,7 @@ associated_institutions: [
 
 ### `cited_by_count`
 
-_Integer:_ The total number [`Works`](../works/work-object.md) that cite a work created by an author affiliated with this institution. Or less formally: the number of citations this institution has collected.
+_Integer:_ The total number [`Works`](../works/work-object/) that cite a work created by an author affiliated with this institution. Or less formally: the number of citations this institution has collected.
 
 ```json
 cited_by_count: 21199844 
@@ -238,7 +238,7 @@ updated_date: "2022-01-02T00:27:23.088909"
 
 ### `works_api_url`
 
-_String:_ A URL that will get you a list of all the [`Works`](../works/work-object.md) affiliated with this institution.
+_String:_ A URL that will get you a list of all the [`Works`](../works/work-object/) affiliated with this institution.
 
 We express this as an API URL (instead of just listing the `Works` themselves) because most institutions have way too many works to reasonably fit into a single return object.
 
@@ -248,7 +248,7 @@ works_api_url: "https://api.openalex.org/works?filter=institutions.id:I114027177
 
 ### `works_count`
 
-_Integer:_ The number of [`Works`](../works/work-object.md) created by authors affiliated with this institution. Or less formally: the number of works coming out of this institution.
+_Integer:_ The number of [`Works`](../works/work-object/) created by authors affiliated with this institution. Or less formally: the number of works coming out of this institution.
 
 ```json
 works_count: 202704    

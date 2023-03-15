@@ -1,6 +1,6 @@
 # Search works
 
-The best way to search for works is to use the `search` query parameter, which searches across [titles](work-object.md#title-1), [abstracts](work-object.md#abstract\_inverted\_index), and [fulltext](work-object.md#the-ngram-object). Example:
+The best way to search for works is to use the `search` query parameter, which searches across [titles](work-object/#title-1), [abstracts](work-object/#abstract\_inverted\_index), and [fulltext](work-object/#the-ngram-object). Example:
 
 * Get works with search term "dna" in the title, abstract, or fulltext:\
   [https://api.openalex.org/works?search=dna](https://api.openalex.org/works?search=dna)
@@ -20,12 +20,12 @@ You can use search as a [filter](../../how-to-use-the-api/get-lists-of-entities/
 
 The following fields can be searched within works:
 
-| Search filter                                                                        | Field that is searched                                                    |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| ``[`abstract.search`](filter-works.md#abstract.search)``                             | ``[`abstract_inverted_index`](work-object.md#abstract\_inverted\_index)`` |
-| ``[`display_name.search`](filter-works.md#display\_name.search-alias-title.search)`` | ``[`display_name`](work-object.md#display\_name)``                        |
-| ``[`fulltext.search`](filter-works.md#fulltext.search)``                             | fulltext via [`n-grams`](get-n-grams.md)``                                |
-| ``[`title.search`](filter-works.md#display\_name.search-alias-title.search)``        | ``[`display_name`](work-object.md#display\_name)``                        |
+| Search filter                                                                        | Field that is searched                                                  |
+| ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
+| ``[`abstract.search`](filter-works.md#abstract.search)``                             | ``[`abstract_inverted_index`](work-object/#abstract\_inverted\_index)`` |
+| ``[`display_name.search`](filter-works.md#display\_name.search-alias-title.search)`` | ``[`display_name`](work-object/#display\_name)``                        |
+| ``[`fulltext.search`](filter-works.md#fulltext.search)``                             | fulltext via [`n-grams`](get-n-grams.md)``                              |
+| ``[`title.search`](filter-works.md#display\_name.search-alias-title.search)``        | ``[`display_name`](work-object/#display\_name)``                        |
 
 ## Autocomplete works
 

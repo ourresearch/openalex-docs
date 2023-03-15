@@ -1,6 +1,6 @@
 # Get groups of entities
 
-Sometimes instead of just listing entities, you want to _group them_ into facets, and count how many entities are in each group. For example, maybe you want to count the number of `Works` by [open access status](../api-entities/works/work-object.md#open\_access). To do that, you call the entity endpoint, adding the `?group_by` parameter. Example:
+Sometimes instead of just listing entities, you want to _group them_ into facets, and count how many entities are in each group. For example, maybe you want to count the number of `Works` by [open access status](../api-entities/works/work-object/#open\_access). To do that, you call the entity endpoint, adding the `?group_by` parameter. Example:
 
 * Get counts of works by Open Access status:\
   [`https://api.openalex.org/works?group_by=oa_status`](https://api.openalex.org/works?group\_by=oa\_status)

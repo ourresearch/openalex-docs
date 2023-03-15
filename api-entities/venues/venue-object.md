@@ -30,7 +30,7 @@ apc_usd: 5200
 
 ### `cited_by_count`
 
-_Integer:_ The total number of [`Works`](../works/work-object.md) that cite a `Work` hosted in this source.
+_Integer:_ The total number of [`Works`](../works/work-object/) that cite a `Work` hosted in this source.
 
 ```json
 cited_by_count: 133702 
@@ -192,12 +192,12 @@ societies: [
 
 _String:_ The type of source, which will be one of the following from the Type column:
 
-| Type             | Wikidata ID                                          | How it's assigned                                                                                                                    |
-| ---------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `journal`        | [Q737498](https://www.wikidata.org/wiki/Q737498)     | The source is an academic journal with an [ISSN](venue-object.md#issn).                                                              |
-| `repository`     | [Q66656823](https://www.wikidata.org/wiki/Q66656823) | The source is a disciplinary or institutional repository.                                                                            |
-| `conference`     | [Q47258130](https://www.wikidata.org/wiki/Q47258130) | The source publishes Works with [`type`](../works/work-object.md#type) "Proceedings", "Proceedings Series" or "Proceedings Article". |
-| `ebook platform` | [Q1294318](https://www.wikidata.org/wiki/Q1294318)   | The source publishes Works with [`type`](../works/work-object.md#type) containing "book", e.g. "Book Chapter".                       |
+| Type             | Wikidata ID                                          | How it's assigned                                                                                                                  |
+| ---------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `journal`        | [Q737498](https://www.wikidata.org/wiki/Q737498)     | The source is an academic journal with an [ISSN](venue-object.md#issn).                                                            |
+| `repository`     | [Q66656823](https://www.wikidata.org/wiki/Q66656823) | The source is a disciplinary or institutional repository.                                                                          |
+| `conference`     | [Q47258130](https://www.wikidata.org/wiki/Q47258130) | The source publishes Works with [`type`](../works/work-object/#type) "Proceedings", "Proceedings Series" or "Proceedings Article". |
+| `ebook platform` | [Q1294318](https://www.wikidata.org/wiki/Q1294318)   | The source publishes Works with [`type`](../works/work-object/#type) containing "book", e.g. "Book Chapter".                       |
 
 ```json
 type: "journal" 
@@ -223,7 +223,7 @@ works_api_url: "https://api.openalex.org/works?filter=host_venue.id:V1983995261"
 
 ### `works_count`
 
-_Integer:_ The number of [`Works`](../works/work-object.md) this source hosts.
+_Integer:_ The number of [`Works`](../works/work-object/) this source hosts.
 
 ```json
 works_count: 20184 

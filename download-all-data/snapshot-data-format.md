@@ -5,13 +5,13 @@ Here are the details on where the OpenAlex data lives and how it's structured.
 * All the data is stored in [Amazon S3](https://aws.amazon.com/s3/), in the [`openalex`](https://openalex.s3.amazonaws.com/browse.html) bucket.
 * The data files are gzip-compressed [JSON Lines](https://jsonlines.org/), one row per entity.
 * The bucket contains one prefix (folder) for each entity type: [work](https://openalex.s3.amazonaws.com/browse.html#data/works/), [author](https://openalex.s3.amazonaws.com/browse.html#data/authors/), [source](https://openalex.s3.amazonaws.com/browse.html#data/sources/), [institution](https://openalex.s3.amazonaws.com/browse.html#data/institutions/), [concept](https://openalex.s3.amazonaws.com/browse.html#data/concepts/), and [publisher](https://openalex.s3.amazonaws.com/browse.html#data/publishers/).
-* Records are partitioned by [updated\_date](../api-entities/works/work-object.md#updated\_date). Within each entity type prefix, each object (file) is further prefixed by this date. For example, if an [`Author`](../api-entities/authors/author-object.md) has an updated\_date of 2021-12-30 it will be prefixed`/data/authors/updated_date=2021-12-30/`.
+* Records are partitioned by [updated\_date](../api-entities/works/work-object/#updated\_date). Within each entity type prefix, each object (file) is further prefixed by this date. For example, if an [`Author`](../api-entities/authors/author-object.md) has an updated\_date of 2021-12-30 it will be prefixed`/data/authors/updated_date=2021-12-30/`.
   * If you're initializing a fresh snapshot, the `updated_date` partitions aren't important yet. You need all the entities, so for `Authors` you would get [`/data/authors`](https://openalex.s3.amazonaws.com/browse.html#data/authors/)`/*/*.gz`
 * There are multiple objects under each `updated_date` partition. Each is under 2GB.
 * The manifest file is JSON (in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-files-using-manifest.html) format) and lists all the data files for each object type - [`/data/works/manifest`](https://openalex.s3.amazonaws.com/data/works/manifest) lists all the works.
 * The gzip-compressed snapshot takes up about 330 GB and decompresses to about 1.6 TB.&#x20;
 
-The structure of each entity type is documented here: [Work](../api-entities/works/work-object.md), [Author](../api-entities/authors/author-object.md), [Source](../api-entities/venues/venue-object.md), [Institution](../api-entities/institutions/institution-object.md), [Concept](../api-entities/concepts/concept-object.md), and [Publisher](../api-entities/publishers/publisher-object.md).
+The structure of each entity type is documented here: [Work](../api-entities/works/work-object/), [Author](../api-entities/authors/author-object.md), [Source](../api-entities/venues/venue-object.md), [Institution](../api-entities/institutions/institution-object.md), [Concept](../api-entities/concepts/concept-object.md), and [Publisher](../api-entities/publishers/publisher-object.md).
 
 #### Visualization of the entity\_type/updated\_date folder structure
 

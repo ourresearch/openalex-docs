@@ -19,9 +19,9 @@ Concepts are hierarchical, like a tree. There are 19 root-level concepts, and si
 
 Each work is tagged with multiple concepts, based on the title, abstract, and the title of its host venue. The tagging is done using an automated classifier that was trained on MAG’s corpus; you can read more about the development and operation of this classifier in [Automated concept tagging for OpenAlex, an open index of scholarly articles.](https://docs.google.com/document/d/1OgXSLriHO3Ekz0OYoaoP\_h0sPcuvV4EqX7VgLLblKe4/edit) You can implement the classifier yourself using [our models and code](https://github.com/ourresearch/openalex-concept-tagging).
 
-A score is available for each [concept in a work](../works/work-object.md#concepts), showing the classifier's confidence in choosing that concept. However, when assigning a lower-level child concept, we also assign all of its parent concepts all the way up to the root. This means that some concept assignment scores will be 0.0. The tagger adds concepts to works written in different languages, but it is optimized for English.
+A score is available for each [concept in a work](../works/work-object/#concepts), showing the classifier's confidence in choosing that concept. However, when assigning a lower-level child concept, we also assign all of its parent concepts all the way up to the root. This means that some concept assignment scores will be 0.0. The tagger adds concepts to works written in different languages, but it is optimized for English.
 
-Concepts are linked to works via the [`concepts`](../works/work-object.md#concepts) property. They’re also linked to [authors](../authors/author-object.md), [venues](../venues/venue-object.md), and [institutions](../institutions/institution-object.md) via the `x_concepts` property, and to other concepts via the [`ancestors`](./#ancestors) and [`related_concepts`](./#related\_concepts) properties.
+Concepts are linked to works via the [`concepts`](../works/work-object/#concepts) property. They’re also linked to [authors](../authors/author-object.md), [venues](../venues/venue-object.md), and [institutions](../institutions/institution-object.md) via the `x_concepts` property, and to other concepts via the [`ancestors`](./#ancestors) and [`related_concepts`](./#related\_concepts) properties.
 
 ## What's next
 

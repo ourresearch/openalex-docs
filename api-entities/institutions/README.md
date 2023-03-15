@@ -17,7 +17,7 @@ Our information about institutions comes from metadata found in Crossref, PubMed
 
 For a simple example: we will treat both “MIT, Boston, USA” and “Massachusetts Institute of Technology” as the same institution ([https://ror.org/042nb2s44](https://ror.org/042nb2s44)).
 
-Institutions are linked to works via the [`works.authorships`](../works/work-object.md#authorships) property.
+Institutions are linked to works via the [`works.authorships`](../works/work-object/#authorships) property.
 
 ## What's next
 

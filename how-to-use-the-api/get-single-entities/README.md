@@ -10,7 +10,7 @@ It's easy to get a singleton entity object from from the API:`/<entity_name>/<en
 
 * Get the work with the [OpenAlex ID](./#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)``
 
-That will return a [`Work`](../../api-entities/works/work-object.md) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
+That will return a [`Work`](../../api-entities/works/work-object/) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
 
 {% hint style="info" %}
 You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax](../get-lists-of-entities/filter-entity-lists.md#addition-or).
@@ -57,7 +57,7 @@ For each entity type, you can retrieve the entity using by any of the external I
 
 This works with DOIs, ISSNs, ORCIDs, and lots of other IDs...in fact, you can use any ID listed in an entity's `ids` property, as listed below:
 
-* ``[`Work.ids`](../../api-entities/works/work-object.md#ids)``
+* ``[`Work.ids`](../../api-entities/works/work-object/#ids)``
 * ``[`Author.ids`](../../api-entities/authors/author-object.md#ids)``
 * ``[`Source.ids`](../../api-entities/venues/venue-object.md#ids)``
 * ``[`Institution.ids`](../../api-entities/institutions/institution-object.md#ids)``
@@ -91,7 +91,7 @@ Every entity has an OpenAlex ID. Most entities also have IDs in other systems, t
 
 These are the Canonical External IDs:
 
-* Works: [DOI](../../api-entities/works/work-object.md#title)
+* Works: [DOI](../../api-entities/works/work-object/#title)
 * Authors: [ORCID](../../api-entities/authors/author-object.md#orcid)
 * Sources: [ISSN-L](../../api-entities/venues/venue-object.md#issn\_l)
 * Institutions: [ROR ID](../../api-entities/institutions/institution-object.md#ror)

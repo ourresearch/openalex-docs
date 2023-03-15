@@ -4,7 +4,7 @@ When you use the API to get a [single author](get-a-single-author.md) or [lists 
 
 ### `cited_by_count`
 
-_Integer:_ The total number :page\_facing\_up: [Works](../works/work-object.md) that cite a work this author has created.
+_Integer:_ The total number :page\_facing\_up: [Works](../works/work-object/) that cite a work this author has created.
 
 ```json
 cited_by_count: 38 
@@ -97,7 +97,7 @@ ids: {
 
 ### `last_known_institution`
 
-_Object:_ This author's last known institutional affiliation. In this context "last known" means that we took all the [Works](../works/work-object.md) where this author has an institutional affiliation, sorted them by publication date, and selected the most recent one.
+_Object:_ This author's last known institutional affiliation. In this context "last known" means that we took all the [Works](../works/work-object/) where this author has an institutional affiliation, sorted them by publication date, and selected the most recent one.
 
 This is a [dehydrated `Institution`](../institutions/institution-object.md#the-dehydratedinstitution-object) object, and you can find more documentation on the [Institution](../institutions/institution-object.md) page.
 
@@ -143,7 +143,7 @@ works_api_url: "https://api.openalex.org/works?filter=author.id:A2208157607",
 
 ### `works_count`
 
-_Integer:_ The number of :page\_facing\_up: [Works](../works/work-object.md) this this author has created.
+_Integer:_ The number of :page\_facing\_up: [Works](../works/work-object/) this this author has created.
 
 ```json
 works_count: 38 

@@ -4,9 +4,9 @@ description: N-grams are groups of sequential words that occur in the text of a 
 
 # Get N-grams
 
-N-grams list the words and phrases that occur in the full text of a [`Work`](work-object.md). We obtain them from Internet Archive's publicly (and generously :clap:) available [General Index](https://archive.org/details/GeneralIndex) and use them to enable fulltext searches on the Works that have them, through both the [`fulltext.search`](filter-works.md#fulltext.search) _filter_, and as an element of the more holistic [`search`](search-works.md#works-full-search) _parameter_.
+N-grams list the words and phrases that occur in the full text of a [`Work`](work-object/). We obtain them from Internet Archive's publicly (and generously :clap:) available [General Index](https://archive.org/details/GeneralIndex) and use them to enable fulltext searches on the Works that have them, through both the [`fulltext.search`](filter-works.md#fulltext.search) _filter_, and as an element of the more holistic [`search`](search-works.md#works-full-search) _parameter_.
 
-Note that while n-grams are derived from the fulltext of a Work, the presence of n-grams for a given Work doesn't imply that the fulltext is available to you, the reader. It only means the fulltext was available to Internet Archive for indexing. [`Work.open_access`](work-object.md#open\_access) is the place to go for information on public fulltext availability.
+Note that while n-grams are derived from the fulltext of a Work, the presence of n-grams for a given Work doesn't imply that the fulltext is available to you, the reader. It only means the fulltext was available to Internet Archive for indexing. [`Work.open_access`](work-object/#open\_access) is the place to go for information on public fulltext availability.
 
 ## API Endpoint
 
@@ -45,13 +45,13 @@ The response is a list of [Ngram objects](get-n-grams.md#the-ngram-object), sort
 }
 ```
 
-The ID-based link is provided in [`Work.ngrams_url`](work-object.md#ngrams\_url) if n-grams are available. Works with n-grams can be found using the [`Work.has_ngrams`](filter-works.md#has\_ngrams) filter, which can be [combined with other filters](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md) using logical expressions.
+The ID-based link is provided in [`Work.ngrams_url`](work-object/#ngrams\_url) if n-grams are available. Works with n-grams can be found using the [`Work.has_ngrams`](filter-works.md#has\_ngrams) filter, which can be [combined with other filters](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md) using logical expressions.
 
 ## Fulltext Coverage
 
 About 57 million works have n-grams coverage through [Internet Archive](https://archive.org/details/GeneralIndex). OurResearch is the first organization to host this data in a highly usable way, and we are proud to integrate it into OpenAlex!
 
-Curious about n-grams used in search? [Browse them all](work-object.md#ngrams\_url) via the API. Highly-cited works and less recent works are more likely to have n-grams, as shown by the coverage charts below:
+Curious about n-grams used in search? [Browse them all](work-object/#ngrams\_url) via the API. Highly-cited works and less recent works are more likely to have n-grams, as shown by the coverage charts below:
 
 <figure><img src="../../.gitbook/assets/OpenAlex works w_ cited count _ 50 and fulltext (percentage).svg" alt=""><figcaption></figcaption></figure>
 

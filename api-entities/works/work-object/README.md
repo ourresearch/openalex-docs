@@ -1,6 +1,6 @@
 # Work object
 
-There's a lot of useful data inside a work. When you use the API to get a [single work](get-a-single-work.md) or [lists of works](get-lists-of-works.md), this is what's returned.
+There's a lot of useful data inside a work. When you use the API to get a [single work](../get-a-single-work.md) or [lists of works](../get-lists-of-works.md), this is what's returned.
 
 ### `abstract_inverted_index`
 
@@ -39,13 +39,13 @@ abstract_inverted_index: {
 
 Newer works are more likely to have an abstract inverted index. For example, over 60% of works in 2022 have abstract data, compared to 45% for works older than 2000. Full chart is below:
 
-![](<../../.gitbook/assets/OpenAlex works with abstracts by year (percent) (1).svg>)
+![](<../../../.gitbook/assets/OpenAlex works with abstracts by year (percent) (1).svg>)
 
 ### `alternate_host_venues` (deprecated)
 
-_This field is being deprecated in favor of_ [_`locations`_](work-object.md#locations) _and will be removed March 6th, 2023._
+_This field is being deprecated in favor of_ [_`locations`_](./#locations) _and will be removed March 6th, 2023._
 
-_List:_ List of [`HostVenue`](work-object.md#the-hostvenue-object) objects describing places this work lives. They're called "alternate" because the list doesn't include the work's canonical location; that's in [`host_venue`](work-object.md#host\_venue).&#x20;
+_List:_ List of [`HostVenue`](./#the-hostvenue-object) objects describing places this work lives. They're called "alternate" because the list doesn't include the work's canonical location; that's in [`host_venue`](./#host\_venue).&#x20;
 
 ```json
 alternate_host_venues: [
@@ -74,7 +74,7 @@ alternate_host_venues: [
 
 ### `authorships`
 
-_List:_ List of [`Authorship`](work-object.md#the-authorship-object) objects, each representing an author and their institution. [Limited to](../authors/limitations.md) the first 100 authors to maintain API performance.
+_List:_ List of [`Authorship`](./#the-authorship-object) objects, each representing an author and their institution. [Limited to](../../authors/limitations.md) the first 100 authors to maintain API performance.
 
 ```json
 authorships: [
@@ -103,7 +103,7 @@ authorships: [
 
 ### `best_oa_location`
 
-_Object:_ A [`Location`](work-object.md#the-location-object) object with the best available open access location for this work.
+_Object:_ A [`Location`](location-object.md) object with the best available open access location for this work.
 
 We score open locations to determine which is best using these factors:
 
@@ -151,7 +151,7 @@ biblio: {
 
 ### `cited_by_api_url`
 
-_String:_ A URL that uses the [`cites`](filter-works.md#cites) filter to display a list of works that cite this work. This is a way to expand [`cited_by_count`](work-object.md#cited\_by\_count) into an actual list of works.
+_String:_ A URL that uses the [`cites`](../filter-works.md#cites) filter to display a list of works that cite this work. This is a way to expand [`cited_by_count`](./#cited\_by\_count) into an actual list of works.
 
 ### `cited_by_count`
 
@@ -163,7 +163,7 @@ cited_by_count: 382
 
 ### `concepts`
 
-_List:_ List of dehydrated [`Concept` objects](../concepts/concept-object.md).&#x20;
+_List:_ List of dehydrated [`Concept` objects](../../concepts/concept-object.md).&#x20;
 
 Each `Concept` object in the list also has one additional property:
 
@@ -196,7 +196,7 @@ concepts: [
 
 ### `counts_by_year`
 
-_List:_ [`Works.cited_by_count`](work-object.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many times this work was cited.&#x20;
+_List:_ [`Works.cited_by_count`](./#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many times this work was cited.&#x20;
 
 Any citations older than ten years old aren't included. Years with zero citations have been removed so you will need to add those in if you need them.
 
@@ -228,7 +228,7 @@ created_date: "2017-08-08"
 
 ### `display_name`
 
-_String:_ Exactly the same as [`Work.title`](work-object.md#title-1). It's useful for `Work`s to include a `display_name` property, since all the other entities have one.
+_String:_ Exactly the same as [`Work.title`](./#title-1). It's useful for `Work`s to include a `display_name` property, since all the other entities have one.
 
 ```json
 display_name: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
@@ -236,9 +236,9 @@ display_name: "The state of OA: a large-scale analysis of the prevalence and imp
 
 ### `doi` <a href="#title" id="title"></a>
 
-_String:_ The DOI for the work. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for works.
+_String:_ The DOI for the work. This is the [Canonical External ID](../../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for works.
 
-Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on [bioRxiv](https://www.biorxiv.org/), and another DOI for the [published version](work-object.md#version). However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the [`Work.alternate_host_venues`](work-object.md#alternate\_host\_venues) list.&#x20;
+Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on [bioRxiv](https://www.biorxiv.org/), and another DOI for the [published version](./#version). However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the [`Work.alternate_host_venues`](./#alternate\_host\_venues) list.&#x20;
 
 ```json
 doi: "https://doi.org/10.7717/peerj.4375"
@@ -246,9 +246,9 @@ doi: "https://doi.org/10.7717/peerj.4375"
 
 ### `host_venue` (deprecated)
 
-_This field is being deprecated in favor of_ [_`primary_location`_](work-object.md#primary\_location) _and will be removed March 6th, 2023._
+_This field is being deprecated in favor of_ [_`primary_location`_](./#primary\_location) _and will be removed March 6th, 2023._
 
-_Object:_ A [`HostVenue`](work-object.md#the-hostvenue-object) object describing how and where this work is being hosted online.
+_Object:_ A [`HostVenue`](./#the-hostvenue-object) object describing how and where this work is being hosted online.
 
 The `host_venue` is where you can find the best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work. For a peer-reviewed journal article, the best `host_venue` would be a full text published version, hosted by the publisher at the article's DOI URL.
 
@@ -278,7 +278,7 @@ host_venue: {
 
 ### `id`
 
-_String:_ The [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for this work.
+_String:_ The [OpenAlex ID](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) for this work.
 
 ```json
 id: "https://openalex.org/W2741809807"
@@ -288,9 +288,9 @@ id: "https://openalex.org/W2741809807"
 
 _Object:_ All the external identifiers that we know about for this work. IDs are expressed as URIs whenever possible. Possible ID types:
 
-* `doi` (_String:_ The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). Same as [`Work.doi`](work-object.md#title))
+* `doi` (_String:_ The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). Same as [`Work.doi`](./#title))
 * `mag`  (_Integer:_ the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `openalex` (_String:_ The [OpenAlex ID](broken-reference). Same as [`Work.id`](work-object.md#id))
+* `openalex` (_String:_ The [OpenAlex ID](broken-reference). Same as [`Work.id`](./#id))
 * `pmid` (_String:_ The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
 * `pmcid` (_String_: the [Pubmed Central identifier](https://www.ncbi.nlm.nih.gov/pmc/about/public-access-info/))
 
@@ -336,7 +336,7 @@ is_retracted: false
 
 ### `locations`
 
-_List:_ A list of [`Location`](work-object.md#the-location-object) objects describing all unique places where this work lives.
+_List:_ A list of [`Location`](location-object.md) objects describing all unique places where this work lives.
 
 ```json
 locations: [ 
@@ -399,10 +399,10 @@ mesh: [
 ### `ngrams_url`
 
 {% hint style="info" %}
-`ngrams_url` is only displayed in the API and is not included in the [OpenAlex snapshot](../../download-all-data/openalex-snapshot.md).
+`ngrams_url` is only displayed in the API and is not included in the [OpenAlex snapshot](../../../download-all-data/openalex-snapshot.md).
 {% endhint %}
 
-_String:_ It lists groups of words and phrases (n-grams) that make up a work, as obtained from the [Internet Archive](https://archive.org/details/GeneralIndex). See [The Ngram object](work-object.md#the-ngram-object) and [Get N-grams](get-n-grams.md) for background on n-grams, how we use them, and what this API call returns.
+_String:_ It lists groups of words and phrases (n-grams) that make up a work, as obtained from the [Internet Archive](https://archive.org/details/GeneralIndex). See [The Ngram object](./#the-ngram-object) and [Get N-grams](../get-n-grams.md) for background on n-grams, how we use them, and what this API call returns.
 
 ```json
 ngrams_url: "https://api.openalex.org/works/W2023271753/ngrams"
@@ -410,7 +410,7 @@ ngrams_url: "https://api.openalex.org/works/W2023271753/ngrams"
 
 ### `open_access`
 
-_Object:_ Information about the access status of this work, as an [`OpenAccess`](work-object.md#the-openaccess-object) object.
+_Object:_ Information about the access status of this work, as an [`OpenAccess`](./#the-openaccess-object) object.
 
 ```json
 open_access: {
@@ -422,7 +422,7 @@ open_access: {
 
 ### `primary_location`
 
-_Object:_ A [`Location`](work-object.md#the-location-object) object with the primary location of this work.
+_Object:_ A [`Location`](location-object.md) object with the primary location of this work.
 
 The `primary_location` is where you can find the best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work. For a peer-reviewed journal article, this would be a full text published version, hosted by the publisher at the article's DOI URL.
 
@@ -450,7 +450,7 @@ _String:_ The day when this work was published, formatted as an [ISO 8601](https
 
 Where different publication dates exist, we select the earliest available date of electronic publication.&#x20;
 
-This date applies to the version found at [`Work.url`](work-object.md#url). The other versions, found in [`Work.alternate_host_venues`](work-object.md#alternate\_host\_venues), may have been published at different (earlier) dates.&#x20;
+This date applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.alternate_host_venues`](./#alternate\_host\_venues), may have been published at different (earlier) dates.&#x20;
 
 ```json
 publication_date: "2018-02-13"
@@ -460,7 +460,7 @@ publication_date: "2018-02-13"
 
 _Integer:_ The year this work was published.
 
-This year applies to the version found at [`Work.url`](work-object.md#url). The other versions, found in [`Work.alternate_host_venues`](work-object.md#alternate\_host\_venues), may have been published in different (earlier) years.&#x20;
+This year applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.alternate_host_venues`](./#alternate\_host\_venues), may have been published in different (earlier) years.&#x20;
 
 ```json
 publication_year: 2018
@@ -468,7 +468,7 @@ publication_year: 2018
 
 ### `referenced_works`
 
-_List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.&#x20;
+_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.&#x20;
 
 ```json
 referenced_works: [
@@ -482,7 +482,7 @@ referenced_works: [
 
 ### `related_works`
 
-_List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for works related to this work. Related works are computed algorithmically; the algorithm finds recent papers with the most concepts in common with the current paper.
+_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) for works related to this work. Related works are computed algorithmically; the algorithm finds recent papers with the most concepts in common with the current paper.
 
 ```json
 related_works: [
@@ -528,7 +528,7 @@ The Authorship object represents a single author and her institutional affiliati
 
 ### `author`
 
-_String:_ An author of this work, as a dehydrated [`Author`](../authors/author-object.md) object.
+_String:_ An author of this work, as a dehydrated [`Author`](../../authors/author-object.md) object.
 
 ```json
 author: {
@@ -581,7 +581,7 @@ raw_affiliation_string: "Canadian Institute for Studies in Publishing, Simon Fra
 
 ## The `HostVenue` object (deprecated)
 
-_The HostVenue object is being deprecated in favor of the_ [_`Location object`_](work-object.md#the-location-object) _and will be removed on March 6th, 2023._
+_The HostVenue object is being deprecated in favor of the_ [_`Location object`_](./#the-location-object) _and will be removed on March 6th, 2023._
 
 The HostVenue object describes a given work hosted on a given venue (you can think of it as a WorkVenue bridging table). It's only found as part of the `Work` object. It's got two parts:
 
@@ -590,7 +590,7 @@ The HostVenue object describes a given work hosted on a given venue (you can thi
 
 The extra stuff is important because a given work can be hosted in different ways and in different forms, depending on where it's living.&#x20;
 
-To learn more about the dehydrated Venue object part, see the [DehydratedVenue](../venues/venue-object.md#the-dehydratedvenue-object) docs. To learn more about the other stuff, read below:
+To learn more about the dehydrated Venue object part, see the [DehydratedVenue](../../venues/venue-object.md#the-dehydratedvenue-object) docs. To learn more about the other stuff, read below:
 
 ### `is_oa`
 
@@ -628,67 +628,10 @@ _String:_ The version of the work, based on the [DRIVER Guidelines versioning sc
 version: "publishedVersion"
 ```
 
-## The `Location` object
-
-The `Location` object describes the location of a given work. It's only found as part of the `Work` object. It's got two parts:
-
-1. a dehydrated Source object, and
-2. some extra stuff about the work.
-
-The extra stuff is important because a given work can be hosted in different ways and in different forms, depending on where it's living.&#x20;
-
-To learn more about the dehydrated Source object part, see the [DehydratedSource](../venues/venue-object.md#the-dehydratedsource-object) docs. To learn more about the other stuff, read below:
-
-### `is_oa`
-
-_Boolean:_ `True` if this work is Open Access (OA).&#x20;
-
-There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in.
-
-```json
-is_oa: true
-```
-
-### landing\_page\_url
-
-_String:_ The landing page URL for this location.&#x20;
-
-```json
-landing_page_url: "https://doi.org/10.1590/s1678-77572010000100010"
-```
-
-### license
-
-_String:_ The location's publishing license. This can be a [Create Commons](https://creativecommons.org/about/cclicenses/) license such as cc0 or cc-by, a publisher-specific license, or null which means we are not able to determine a license for this location.&#x20;
-
-```json
-license: "cc-by"
-```
-
-### pdf\_url
-
-_String:_ A URL where you can find this location as a PDF.&#x20;
-
-```json
-pdf_url: "http://www.scielo.br/pdf/jaos/v18n1/a10v18n1.pdf"
-```
-
-### version
-
-_String:_ The version of the work, based on the [DRIVER Guidelines versioning scheme.](https://wiki.surfnet.nl/display/DRIVERguidelines/DRIVER-VERSION+Mappings) Possible values are:.
-
-* `publishedVersion`: The document’s version of record. This is the most authoritative version.
-* `acceptedVersion`: The document after having completed peer review and being officially accepted for publication. It will lack publisher formatting, but the _content_ should be interchangeable with the that of the `publishedVersion`.
-* `submittedVersion`: the document as submitted to the publisher by the authors, but _before_ peer-review. Its content may differ significantly from that of the accepted article.
-
-```json
-version: "publishedVersion"
-```
-
 ## The `Ngram` object
 
 {% hint style="info" %}
-Ngram objects are only available in the API and are not included in the [OpenAlex snapshot](../../download-all-data/openalex-snapshot.md).
+Ngram objects are only available in the API and are not included in the [OpenAlex snapshot](../../../download-all-data/openalex-snapshot.md).
 {% endhint %}
 
 ### ngram
@@ -733,7 +676,7 @@ The `OpenAccess` object describes access options for a given work. It's only fou
 
 _Boolean:_ `True` if this work is Open Access (OA).&#x20;
 
-There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in. You can use the [`alternate_host_venues`](work-object.md#alternate\_host\_venues) and [`oa_status`](work-object.md#oa\_status) fields to narrow your results further, accommodating any definition of OA you like.
+There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in. You can use the [`alternate_host_venues`](./#alternate\_host\_venues) and [`oa_status`](./#oa\_status) fields to narrow your results further, accommodating any definition of OA you like.
 
 ```json
 is_oa: true

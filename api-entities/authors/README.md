@@ -14,7 +14,7 @@ Our information about authors comes from MAG, Crossref, PubMed, ORCID, and publi
 
 So for example, if J. Schmidt and John Jacob Jingleheimer Schmidt both write about 19th-century ketchup production, we’ll treat them as one author–but we won’t include the JJJ Schmidt who writes about weasel migration (even though his name is their name, too).
 
-Authors are linked to works via the [`works.authorships`](../works/work-object.md#authorships) property.
+Authors are linked to works via the [`works.authorships`](../works/work-object/#authorships) property.
 
 ## What's next
 
