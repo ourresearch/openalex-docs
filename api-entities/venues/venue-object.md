@@ -99,6 +99,14 @@ _String:_ The host organization for this source as an [OpenAlex ID](../../how-to
 id: "https://openalex.org/P4310320595"
 ```
 
+### `host_organization_name`
+
+_String:_ The `display_name` from the host\_organization, shown for convenience.
+
+```json
+host_organization_name: "Elsevier BV" 
+```
+
 ### `id`
 
 _String:_ The [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for this source.
@@ -170,10 +178,6 @@ ISSN is a global and unique ID for serial publications. However, different media
 ```json
 issn_l: "2167-8359"
 ```
-
-### `publisher` (deprecated)
-
-This field is deprecated in favor of [`host_organization`](venue-object.md#host\_organization) (as of March 6th, 2023).&#x20;
 
 ### societies
 
@@ -266,6 +270,7 @@ The `DehydratedSource` is stripped-down `Source` object, with most of its proper
 
 * ``[`display_name`](venue-object.md#display\_name)``
 * ``[`host_organization`](venue-object.md#host\_organization)``
+* ``[`host_organization_name`](venue-object.md#host\_organization\_name)``
 * ``[`id`](venue-object.md#id)``
 * ``[`issn`](venue-object.md#issn)``
 * ``[`issn_l`](venue-object.md#issn\_l)``
