@@ -581,7 +581,7 @@ raw_affiliation_string: "Canadian Institute for Studies in Publishing, Simon Fra
 
 ## The `HostVenue` object (deprecated)
 
-_The HostVenue object is being deprecated in favor of the_ [_`Location object`_](./#the-location-object) _and will be removed on March 6th, 2023._
+_The HostVenue object is being deprecated in favor of the_ [_`Location object`_](location-object.md) _and will be removed on March 6th, 2023._
 
 The HostVenue object describes a given work hosted on a given venue (you can think of it as a WorkVenue bridging table). It's only found as part of the `Work` object. It's got two parts:
 
