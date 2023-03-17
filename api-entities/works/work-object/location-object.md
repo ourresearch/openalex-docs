@@ -2,7 +2,15 @@
 
 The `Location` object describes the location of a given work. It's only found as part of the `Work` object.
 
-Any given work may have multiple [`locations`](./#locations), representing the different places where the work lives (online). The best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of a work can be found in the work's [`primary_location`](./#primary\_location). For a peer-reviewed journal article, this would be a full text published version, hosted by the publisher at the article's DOI URL.
+Locations are meant to capture the way that a work exists in different versions. So, for example, a work may have a version that has been peer-reviewed and published in a journal (the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)). This would be one of the work's locations. It may have another version available on a preprint server like [arXiv](https://arxiv.org/)—this version having been posted before it was accepted for publication. This would be another one of the work's locations.
+
+Locations are meant to cover anywhere that a given work can be found. This can include journals, proceedings, institutional repositories, and subject-area repositories like [arXiv ](https://arxiv.org/)and [bioRxiv](https://www.biorxiv.org/). If you are only interested in a certain one of these (like journal), you can use a [filter](../filter-works.md) to specify the `locations.source.type`. ([Learn more about types here.](../../venues/venue-object.md#type))
+
+There are three places in the `Work` object where you can find locations:
+
+* [`primary_location`](./#primary\_location): The best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work.
+* ``[`best_oa_location`](./#best\_oa\_location): The best available open access location of this work.
+* ``[`locations`](./#locations): A list of all of the locations where this work lives. This will include the two locations above if availabe, and can also include other locations.
 
 ### `is_oa`
 
@@ -33,6 +41,8 @@ license: "cc-by"
 ### source
 
 _Object:_ Information about the source of this location, as a [`DehydratedSource`](../../venues/venue-object.md#the-dehydratedsource-object) object.
+
+The concept of a source is meant to capture a certain social relationship between the host organization and a version of a work. When an organization puts the work on the internet, there is an understanding that they have, at some level, endorsed the work. This level varies, and can be very different depending on the source!
 
 ```json
 source {
