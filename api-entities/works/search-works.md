@@ -27,6 +27,15 @@ The following fields can be searched within works:
 | ``[`fulltext.search`](filter-works.md#fulltext.search)``                             | fulltext via [`n-grams`](get-n-grams.md)``                              |
 | ``[`title.search`](filter-works.md#display\_name.search-alias-title.search)``        | ``[`display_name`](work-object/#display\_name)``                        |
 
+### Why can't I search by name of related entity (author name, institution name, etc.)?
+
+Rather than searching for the _names_ of entities related to works—such as authors, institutions, and sources—you need to search by a more unique identifyer for that entity, like the OpenAlex ID. This means that there is a 2 step process:
+
+1. Find the ID of the related entity. For example, if you're interested in works associated with NYU, you could search the `/institutions` endpoint for that name: [https://api.openalex.org/institutions?search=nyu](https://api.openalex.org/institutions?search=nyu). Looking at the first result, you'll see that the OpenAlex ID for NYU is `I57206974`.
+2. Use a [filter ](filter-works.md)with the `/works` endpoint to get all of the works: [https://api.openalex.org/works?filter=institutions.id:I57206974](https://api.openalex.org/works?filter=institutions.id:I57206974).
+
+Why can't you do this in just one step? Well, if you use the search term, "NYU," you might end up missing the ones that use the full name "New York University," rather than the initials. Sure, you could try to think of all possible variants and search for all of them, but you might miss some, and you risk putting in search terms that let in works that you're not interested in. Figuring out which works are actually associated with the "NYU" you're interested shouldn't be your responsibility—that's our job! We've done that work for you, so all the relevant works should be associated with one unique ID.
+
 ## Autocomplete works
 
 You can autocomplete works to create a very fast type-ahead style search function:

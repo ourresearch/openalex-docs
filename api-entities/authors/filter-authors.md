@@ -22,6 +22,15 @@ You can filter using these attributes of the `Author` entity object (click each 
 * ``[`works_count`](author-object.md#works\_count)``
 * ``[`x_concepts.id`](author-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
 
+{% hint style="info" %}
+Want to filter by `last_known_institution.display_name`? This is a two-step process:
+
+1. Find the `institution.id` by searching institutions by `display_name`.
+2. Filter works by `last_known_institution.id`.
+
+To learn more about why we do it this way, [see here.](../works/search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)
+{% endhint %}
+
 ### `/authors` convenience filters
 
 These filters aren't attributes of the [`Author` object](author-object.md), but they're included to address some common use cases:
