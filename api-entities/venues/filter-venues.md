@@ -25,6 +25,15 @@ You can filter using these attributes of the `Source` entity object (click each 
 * ``[`works_count`](venue-object.md#works\_count)``
 * ``[`x_concepts.id`](venue-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
 
+{% hint style="info" %}
+Want to filter by `host_organization.display_name`? This is a two-step process:
+
+1. Find the host organization's ID by searching by `display_name` in Publishers or Institutions, depending on which type you are looking for.
+2. Filter works by `host_organization.id`.
+
+To learn more about why we do it this way, [see here.](../works/search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)
+{% endhint %}
+
 ### `/sources` convenience filters
 
 These filters aren't attributes of the [`Source`](venue-object.md) object, but they're included to address some common use cases:

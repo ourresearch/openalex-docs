@@ -67,6 +67,10 @@ You can filter using these attributes of the [`Work`](work-object/) object (clic
 * ``[`publication_date`](work-object/#publication\_date)``
 * ``[`type`](work-object/#type)``
 
+{% hint style="info" %}
+Want to filter by the `display_name` of an associated entity (author, institution, source, etc.)? [See here.](../works/search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)
+{% endhint %}
+
 ## `/works` convenience filters
 
 These filters aren't attributes of the [`Work`](work-object/) object, but they're handy for solving some common use cases:

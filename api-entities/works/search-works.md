@@ -29,7 +29,7 @@ The following fields can be searched within works:
 
 ### Why can't I search by name of related entity (author name, institution name, etc.)?
 
-Rather than searching for the _names_ of entities related to works—such as authors, institutions, and sources—you need to search by a more unique identifyer for that entity, like the OpenAlex ID. This means that there is a 2 step process:
+Rather than searching for the _names_ of entities related to works—such as authors, institutions, and sources—you need to search by a more unique identifier for that entity, like the OpenAlex ID. This means that there is a 2 step process:
 
 1. Find the ID of the related entity. For example, if you're interested in works associated with NYU, you could search the `/institutions` endpoint for that name: [https://api.openalex.org/institutions?search=nyu](https://api.openalex.org/institutions?search=nyu). Looking at the first result, you'll see that the OpenAlex ID for NYU is `I57206974`.
 2. Use a [filter ](filter-works.md)with the `/works` endpoint to get all of the works: [https://api.openalex.org/works?filter=institutions.id:I57206974](https://api.openalex.org/works?filter=institutions.id:I57206974).
