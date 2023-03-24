@@ -15,58 +15,58 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 
 You can filter using these attributes of the [`Work`](work-object/) object (click each one to view their documentation on the `Work` object page):
 
-* \`\`[`alternate_host_venues.license`](work-object/#alternate\_host\_venues)
-* \`\`[`alternate_host_venues.venue_id`](work-object/#alternate\_host\_venues)
-* \`\`[`alternate_host_venues.version`](work-object/#alternate\_host\_venues)
-* \`\`[`authorships.author.id`](work-object/#author) (alias: `author.id`)
-* \`\`[`authorships.author.orcid`](work-object/#author) (alias: `author.orcid`)
-* \`\`[`authorships.institutions.country_code`](work-object/#institutions) (alias: `institutions.country_code`)
-* \`\`[`authorships.institutions.id`](work-object/#institutions) (alias `institutions.id`)
-* \`\`[`authorships.institutions.ror`](work-object/#institutions) (alias: `institutions.ror`)
-* ``[`authorships.institutions.type`](work-object/#institutions)``
-* ``[`authorships.is_corresponding`](work-object/#is\_corresponding) (alias: `is_corresponding`)
-* ``[`best_oa_location.is_oa`](work-object/#best\_oa\_location)``
-* ``[`best_oa_location.license`](work-object/#best\_oa\_location)``
-* ``[`best_oa_location.source.id`](work-object/#best\_oa\_location)``
-* ``[`best_oa_location.source.issn`](work-object/#best\_oa\_location)``
-* ``[`best_oa_location.source.host_organization`](work-object/#best\_oa\_location)``
-* ``[`best_oa_location.source.type`](work-object/#best\_oa\_location)``
-* \`\`[`best_oa_location.version`](work-object/#best\_oa\_location)
-* ``[`cited_by_count`](work-object/#cited\_by\_count)``
-* \`\`[`concepts.id`](work-object/#concepts) (alias: `concept.id`)
-* ``[`concepts.wikidata`](work-object/#concepts)``
-* ``[`doi`](work-object/#title)``
-* ``[`host_venue.id`](work-object/#the-hostvenue-object)``
-* ``[`host_venue.issn`](work-object/#the-hostvenue-object)``
-* ``[`host_venue.license`](work-object/#the-hostvenue-object)``
-* ``[`host_venue.publisher`](work-object/#the-hostvenue-object)``
-* ``[`host_venue.type`](work-object/#the-hostvenue-object)``
-* ``[`host_venue.version`](work-object/#the-hostvenue-object)``
-* ``[`ids.pmcid`](../authors/author-object.md#ids)``
-* \`\`[`ids.pmid`](work-object/#ids) (alias: `pmid`)
-* \`\`[`ids.openalex`](work-object/#ids) (alias: `openalex`)
-* \`\`[`ids.mag`](work-object/#ids) (alias: `mag`)
-* ``[`is_paratext`](work-object/#is\_paratext)``
-* ``[`is_retracted`](work-object/#is\_retracted)``
-* ``[`locations.is_oa`](work-object/#locations)``
-* ``[`locations.license`](work-object/#locations)``
-* ``[`locations.source.id`](work-object/#locations)``
-* ``[`locations.source.issn`](work-object/#locations)``
-* ``[`locations.source.host_organization`](work-object/#locations)``
-* ``[`locations.source.type`](work-object/#locations)``
-* \`\`[`locations.version`](work-object/#locations)
-* \`\`[`open_access.is_oa`](work-object/#open\_access) (alias: `is_oa`)
-* \`\`[`open_access.oa_status`](work-object/#open\_access) (alias: `oa_status`)
-* ``[`primary_location.is_oa`](work-object/#primary\_location)``
-* ``[`primary_location.license`](work-object/#primary\_location)``
-* ``[`primary_location.source.id`](work-object/#primary\_location)``
-* ``[`primary_location.source.issn`](work-object/#primary\_location)``
-* ``[`primary_location.source.host_organization`](work-object/#primary\_location)``
-* ``[`primary_location.source.type`](work-object/#primary\_location)``
-* \`\`[`primary_location.version`](work-object/#primary\_location)
-* ``[`publication_year`](work-object/#publication\_year)``
-* ``[`publication_date`](work-object/#publication\_date)``
-* ``[`type`](work-object/#type)``
+* [`alternate_host_venues.license`](work-object/#alternate\_host\_venues)
+* [`alternate_host_venues.venue_id`](work-object/#alternate\_host\_venues)
+* [`alternate_host_venues.version`](work-object/#alternate\_host\_venues)
+* [`authorships.author.id`](work-object/#author) (alias: `author.id`)
+* [`authorships.author.orcid`](work-object/#author) (alias: `author.orcid`)
+* [`authorships.institutions.country_code`](work-object/#institutions) (alias: `institutions.country_code`)
+* [`authorships.institutions.id`](work-object/#institutions) (alias `institutions.id`)
+* [`authorships.institutions.ror`](work-object/#institutions) (alias: `institutions.ror`)
+* [`authorships.institutions.type`](work-object/#institutions)
+* [`authorships.is_corresponding`](work-object/#is\_corresponding) (alias: `is_corresponding`)
+* [`best_oa_location.is_oa`](work-object/#best\_oa\_location)
+* [`best_oa_location.license`](work-object/#best\_oa\_location)
+* [`best_oa_location.source.id`](work-object/#best\_oa\_location)
+* [`best_oa_location.source.issn`](work-object/#best\_oa\_location)
+* [`best_oa_location.source.host_organization`](work-object/#best\_oa\_location)
+* [`best_oa_location.source.type`](work-object/#best\_oa\_location)
+* [`best_oa_location.version`](work-object/#best\_oa\_location)
+* [`cited_by_count`](work-object/#cited\_by\_count)
+* [`concepts.id`](work-object/#concepts) (alias: `concept.id`)
+* [`concepts.wikidata`](work-object/#concepts)
+* [`doi`](work-object/#title)
+* [`host_venue.id`](work-object/#the-hostvenue-object)
+* [`host_venue.issn`](work-object/#the-hostvenue-object)
+* [`host_venue.license`](work-object/#the-hostvenue-object)
+* [`host_venue.publisher`](work-object/#the-hostvenue-object)
+* [`host_venue.type`](work-object/#the-hostvenue-object)
+* [`host_venue.version`](work-object/#the-hostvenue-object)
+* [`ids.pmcid`](../authors/author-object.md#ids)
+* [`ids.pmid`](work-object/#ids) (alias: `pmid`)
+* [`ids.openalex`](work-object/#ids) (alias: `openalex`)
+* [`ids.mag`](work-object/#ids) (alias: `mag`)
+* [`is_paratext`](work-object/#is\_paratext)
+* [`is_retracted`](work-object/#is\_retracted)
+* [`locations.is_oa`](work-object/#locations)
+* [`locations.license`](work-object/#locations)
+* [`locations.source.id`](work-object/#locations)
+* [`locations.source.issn`](work-object/#locations)
+* [`locations.source.host_organization`](work-object/#locations)
+* [`locations.source.type`](work-object/#locations)
+* [`locations.version`](work-object/#locations)
+* [`open_access.is_oa`](work-object/#open\_access) (alias: `is_oa`)
+* [`open_access.oa_status`](work-object/#open\_access) (alias: `oa_status`)
+* [`primary_location.is_oa`](work-object/#primary\_location)
+* [`primary_location.license`](work-object/#primary\_location)
+* [`primary_location.source.id`](work-object/#primary\_location)
+* [`primary_location.source.issn`](work-object/#primary\_location)
+* [`primary_location.source.host_organization`](work-object/#primary\_location)
+* [`primary_location.source.type`](work-object/#primary\_location)
+* [`primary_location.version`](work-object/#primary\_location)
+* [`publication_year`](work-object/#publication\_year)
+* [`publication_date`](work-object/#publication\_date)
+* [`type`](work-object/#type)
 
 {% hint style="info" %}
 Want to filter by the `display_name` of an associated entity (author, institution, source, etc.)? [See here.](search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)

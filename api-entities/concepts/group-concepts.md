@@ -13,8 +13,8 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 
 ### `/concepts` group\_by __ attributes
 
-* ``[`ancestors.id`](concept-object.md#ancestors)``
-* ``[`cited_by_count`](concept-object.md#cited\_by\_count)``
-* ``[`has_wikidata`](filter-concepts.md#has\_wikidata)``
-* ``[`level`](concept-object.md#level)``
-* ``[`works_count`](concept-object.md#works\_count)``
+* [`ancestors.id`](concept-object.md#ancestors)
+* [`cited_by_count`](concept-object.md#cited\_by\_count)
+* [`has_wikidata`](filter-concepts.md#has\_wikidata)
+* [`level`](concept-object.md#level)
+* [`works_count`](concept-object.md#works\_count)

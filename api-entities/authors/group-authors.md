@@ -13,12 +13,12 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 
 ### `/authors` group\_by attributes
 
-* ``[`cited_by_count`](author-object.md#cited\_by\_count)``
-* ``[`has_orcid`](filter-authors.md#has\_orcid)``
-* ``[`last_known_institution.continent`](filter-authors.md#last\_known\_institution.continent)``
-* ``[`last_known_institution.country_code`](author-object.md#last\_known\_institution)``
-* ``[`last_known_institution.id`](author-object.md#last\_known\_institution)``
-* ``[`last_known_institution.is_global_south`](filter-authors.md#last\_known\_institution.is\_global\_south)``
-* ``[`last_known_institution.ror`](author-object.md#last\_known\_institution)``
-* ``[`last_known_institution.type`](author-object.md#last\_known\_institution)``
-* ``[`works_count`](author-object.md#works\_count)``
+* [`cited_by_count`](author-object.md#cited\_by\_count)
+* [`has_orcid`](filter-authors.md#has\_orcid)
+* [`last_known_institution.continent`](filter-authors.md#last\_known\_institution.continent)
+* [`last_known_institution.country_code`](author-object.md#last\_known\_institution)
+* [`last_known_institution.id`](author-object.md#last\_known\_institution)
+* [`last_known_institution.is_global_south`](filter-authors.md#last\_known\_institution.is\_global\_south)
+* [`last_known_institution.ror`](author-object.md#last\_known\_institution)
+* [`last_known_institution.type`](author-object.md#last\_known\_institution)
+* [`works_count`](author-object.md#works\_count)

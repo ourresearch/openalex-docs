@@ -13,14 +13,14 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 
 You can filter using these attributes of the `Author` entity object (click each one to view their documentation on the [`Author`](author-object.md) object page):
 
-* ``[`cited_by_count`](author-object.md#cited\_by\_count)``
-* ``[`ids.openalex`](author-object.md#ids) (alias: `openalex`)
-* ``[`last_known_institution.country_code`](author-object.md#last\_known\_institution)``
-* ``[`last_known_institution.id`](author-object.md#last\_known\_institution)``
-* ``[`last_known_institution.ror`](author-object.md#last\_known\_institution)``
-* ``[`last_known_institution.type`](author-object.md#last\_known\_institution)``
-* ``[`works_count`](author-object.md#works\_count)``
-* ``[`x_concepts.id`](author-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
+* [`cited_by_count`](author-object.md#cited\_by\_count)
+* [`ids.openalex`](author-object.md#ids) (alias: `openalex`)
+* [`last_known_institution.country_code`](author-object.md#last\_known\_institution)
+* [`last_known_institution.id`](author-object.md#last\_known\_institution)
+* [`last_known_institution.ror`](author-object.md#last\_known\_institution)
+* [`last_known_institution.type`](author-object.md#last\_known\_institution)
+* [`works_count`](author-object.md#works\_count)
+* [`x_concepts.id`](author-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
 
 {% hint style="info" %}
 Want to filter by `last_known_institution.display_name`? This is a two-step process:

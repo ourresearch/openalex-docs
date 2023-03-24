@@ -13,14 +13,14 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 
 You can filter using these attributes of the `Publisher` entity object (click each one to view their documentation on the [`Publisher`](publisher-object.md) object page):
 
-* ``[`cited_by_count`](publisher-object.md#cited\_by\_count)``
-* ``[`country_codes`](publisher-object.md#country\_codes)``
-* ``[`hierarchy_level`](publisher-object.md#hierarchy\_level)``
-* ``[`ids.openalex`](publisher-object.md#ids) (alias: `openalex`)
-* ``[`ids.ror`](publisher-object.md#ids) (alias: `ror`)
-* ``[`ids.wikidata`](publisher-object.md#ids) (alias: `wikidata`)
-* ``[`parent_publisher`](publisher-object.md#parent\_publisher)``
-* ``[`works_count`](publisher-object.md#works\_count)``
+* [`cited_by_count`](publisher-object.md#cited\_by\_count)
+* [`country_codes`](publisher-object.md#country\_codes)
+* [`hierarchy_level`](publisher-object.md#hierarchy\_level)
+* [`ids.openalex`](publisher-object.md#ids) (alias: `openalex`)
+* [`ids.ror`](publisher-object.md#ids) (alias: `ror`)
+* [`ids.wikidata`](publisher-object.md#ids) (alias: `wikidata`)
+* [`parent_publisher`](publisher-object.md#parent\_publisher)
+* [`works_count`](publisher-object.md#works\_count)
 
 ### `/publishers` convenience filters
 

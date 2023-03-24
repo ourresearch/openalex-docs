@@ -13,12 +13,12 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 
 You can filter using these attributes of the `Institution` entity object (click each one to view their documentation on the [`Institution`](institution-object.md) object page):
 
-* ``[`cited_by_count`](institution-object.md#cited\_by\_count)``
-* ``[`country_code`](institution-object.md#country\_code)``
-* ``[`ids.openalex`](institution-object.md#ids) (alias: `openalex`)
-* ``[`type`](institution-object.md#type)``
-* ``[`works_count`](institution-object.md#works\_count)``
-* ``[`x_concepts.id`](institution-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
+* [`cited_by_count`](institution-object.md#cited\_by\_count)
+* [`country_code`](institution-object.md#country\_code)
+* [`ids.openalex`](institution-object.md#ids) (alias: `openalex`)
+* [`type`](institution-object.md#type)
+* [`works_count`](institution-object.md#works\_count)
+* [`x_concepts.id`](institution-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
 
 ### `/institutions` convenience filters
 

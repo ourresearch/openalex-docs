@@ -13,5 +13,5 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 
 ### `/publishers` group\_by __ attributes
 
-* ``[`country_codes`](publisher-object.md#country\_codes)``
-* ``[`hierarchy_level`](publisher-object.md#hierarchy\_level)``
+* [`country_codes`](publisher-object.md#country\_codes)
+* [`hierarchy_level`](publisher-object.md#hierarchy\_level)

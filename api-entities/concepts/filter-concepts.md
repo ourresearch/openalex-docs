@@ -13,11 +13,11 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 
 You can filter using these attributes of the [`Concept`](concept-object.md) object (click each one to view their documentation on the `Concept` object page):
 
-* ``[`ancestors.id`](concept-object.md#ancestors)``
-* ``[`cited_by_count`](concept-object.md#cited\_by\_count)``
-* ``[`ids.openalex`](concept-object.md#ids) (alias: `openalex`)
-* ``[`level`](concept-object.md#level)``
-* ``[`works_count`](concept-object.md#works\_count)``
+* [`ancestors.id`](concept-object.md#ancestors)
+* [`cited_by_count`](concept-object.md#cited\_by\_count)
+* [`ids.openalex`](concept-object.md#ids) (alias: `openalex`)
+* [`level`](concept-object.md#level)
+* [`works_count`](concept-object.md#works\_count)
 
 ### `/concepts` convenience filters
 
