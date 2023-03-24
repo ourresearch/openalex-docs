@@ -25,6 +25,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * ``[`authorships.institutions.id`](work-object/#institutions) (alias `institutions.id`)
 * ``[`authorships.institutions.ror`](work-object/#institutions) (alias `institutions.ror`)
 * ``[`authorships.institutions.type`](work-object/#institutions) (alias `institutions.type`)
+* ``[`authorships.is_corresponding`](work-object/#is\_corresponding) (alias: `is_corresponding`)
 * ``[`best_oa_location.is_oa`](work-object/#best\_oa\_location)``
 * ``[`best_oa_location.license`](work-object/#best\_oa\_location)``
 * ``[`best_oa_location.source.host_organization`](work-object/#best\_oa\_location)``
