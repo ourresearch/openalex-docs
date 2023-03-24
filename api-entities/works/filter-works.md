@@ -24,7 +24,7 @@ You can filter using these attributes of the [`Work`](work-object/) object (clic
 * [`authorships.institutions.id`](work-object/#institutions) (alias `institutions.id`)
 * [`authorships.institutions.ror`](work-object/#institutions) (alias: `institutions.ror`)
 * [`authorships.institutions.type`](work-object/#institutions)
-* [`authorships.is_corresponding`](work-object/#is\_corresponding) (alias: `is_corresponding`)
+* [`authorships.is_corresponding`](work-object/#is\_corresponding) (alias: `is_corresponding`): this filter marks whether or not we have corresponding author information for a given work
 * [`best_oa_location.is_oa`](work-object/#best\_oa\_location)
 * [`best_oa_location.license`](work-object/#best\_oa\_location)
 * [`best_oa_location.source.id`](work-object/#best\_oa\_location)
