@@ -15,7 +15,8 @@ You can filter using these attributes of the `Institution` entity object (click 
 
 * [`cited_by_count`](institution-object.md#cited\_by\_count)
 * [`country_code`](institution-object.md#country\_code)
-* [`ids.openalex`](institution-object.md#ids) (alias: `openalex`)
+* [`openalex`](institution-object.md#id): the OpenAlex ID of the Institution
+* [`ror`](institution-object.md#ror): the ROR ID of the Institution
 * [`type`](institution-object.md#type)
 * [`works_count`](institution-object.md#works\_count)
 * [`x_concepts.id`](institution-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
