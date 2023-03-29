@@ -64,7 +64,7 @@ You can combine up to 50 values for a given filter in this way. See our [blog po
 You can use OR for values _within_ a given filter, but not _between_ different filters. So this, for example, **doesn't work and will return an error**:&#x20;
 
 * Get either French works _or_ ones published in the journal with ISSN 0957-1558:\
-  [`https://api.openalex.org/works?filter=institutions.country_code:fr|host_venue.issn:0957-1558`](https://api.openalex.org/works?filter=institutions.country\_code:fr|host\_venue.issn:0957-1558)``
+  [`https://api.openalex.org/works?filter=institutions.country_code:frprimary_location.source.issn:0957-1558`](https://api.openalex.org/works?filter=institutions.country\_code:fr|primary\_location.source.issn:0957-1558)``
 {% endhint %}
 
 ## Available Filters
