@@ -222,7 +222,7 @@ _String:_ A URL that will get you a list of all this source's `Works`.
 We express this as an API URL (instead of just listing the works themselves) because sometimes a source's publication list is too long to reasonably fit into a single `Source` object.
 
 ```json
-works_api_url: "https://api.openalex.org/works?filter=host_venue.id:V1983995261",
+works_api_url: "https://api.openalex.org/works?filter=host_venue.id:S1983995261",
 ```
 
 ### `works_count`

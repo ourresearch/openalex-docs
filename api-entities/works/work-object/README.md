@@ -238,7 +238,7 @@ display_name: "The state of OA: a large-scale analysis of the prevalence and imp
 
 _String:_ The DOI for the work. This is the [Canonical External ID](../../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for works.
 
-Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on [bioRxiv](https://www.biorxiv.org/), and another DOI for the [published version](./#version). However, this field always has just one DOI, the DOI for the published work. If you want DOIs for other versions, you can find them in the [`Work.alternate_host_venues`](./#alternate\_host\_venues) list.&#x20;
+Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on [bioRxiv](https://www.biorxiv.org/), and another DOI for the [published version](./#version). However, this field always has just one DOI, the DOI for the published work.
 
 ```json
 doi: "https://doi.org/10.7717/peerj.4375"
@@ -450,7 +450,7 @@ _String:_ The day when this work was published, formatted as an [ISO 8601](https
 
 Where different publication dates exist, we select the earliest available date of electronic publication.&#x20;
 
-This date applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.alternate_host_venues`](./#alternate\_host\_venues), may have been published at different (earlier) dates.&#x20;
+This date applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.locations`](./#locations), may have been published at different (earlier) dates.&#x20;
 
 ```json
 publication_date: "2018-02-13"

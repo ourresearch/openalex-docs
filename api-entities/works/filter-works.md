@@ -15,9 +15,6 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 
 You can filter using these attributes of the [`Work`](work-object/) object (click each one to view their documentation on the `Work` object page):
 
-* [`alternate_host_venues.license`](work-object/#alternate\_host\_venues)
-* [`alternate_host_venues.venue_id`](work-object/#alternate\_host\_venues)
-* [`alternate_host_venues.version`](work-object/#alternate\_host\_venues)
 * [`authorships.author.id`](work-object/#author) (alias: `author.id`)
 * [`authorships.author.orcid`](work-object/#author) (alias: `author.orcid`)
 * [`authorships.institutions.country_code`](work-object/#institutions) (alias: `institutions.country_code`)
@@ -36,12 +33,6 @@ You can filter using these attributes of the [`Work`](work-object/) object (clic
 * [`concepts.id`](work-object/#concepts) (alias: `concept.id`)
 * [`concepts.wikidata`](work-object/#concepts)
 * [`doi`](work-object/#title)
-* [`host_venue.id`](work-object/#the-hostvenue-object)
-* [`host_venue.issn`](work-object/#the-hostvenue-object)
-* [`host_venue.license`](work-object/#the-hostvenue-object)
-* [`host_venue.publisher`](work-object/#the-hostvenue-object)
-* [`host_venue.type`](work-object/#the-hostvenue-object)
-* [`host_venue.version`](work-object/#the-hostvenue-object)
 * [`ids.pmcid`](../authors/author-object.md#ids)
 * [`ids.pmid`](work-object/#ids) (alias: `pmid`)
 * [`ids.openalex`](work-object/#ids) (alias: `openalex`)
@@ -223,7 +214,7 @@ Returns: works that have or lack a DOI, depending on the given value. It's espec
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works with at least one [`host_venue`](work-object/#host\_venue) or [`alternate_host_venue`](work-object/#alternate\_host\_venues) where [`is_oa`](work-object/#is\_oa)= true and [`version`](work-object/#version) is acceptedVersion or publishedVersion. For Works that undergo peer review, like journal articles, this means there is a peer-reviewed OA copy somewhere. For some items, like books, a published version doesn't imply peer review, so they aren't quite synonymous.
+Returns: works with at least one of the [`locations`](work-object/#locations) has [`is_oa`](work-object/#is\_oa)= true and [`version`](work-object/#version) is acceptedVersion or publishedVersion. For Works that undergo peer review, like journal articles, this means there is a peer-reviewed OA copy somewhere. For some items, like books, a published version doesn't imply peer review, so they aren't quite synonymous.
 
 * Get works with an OA accepted or published copy\
   [`https://api.openalex.org/works?filter=has_oa_accepted_or_published_version:true`](https://api.openalex.org/works?filter=has\_oa\_accepted\_or\_published\_version:true)
@@ -232,7 +223,7 @@ Returns: works with at least one [`host_venue`](work-object/#host\_venue) or [`a
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works with at least one [`host_venue`](work-object/#host\_venue) or [`alternate_host_venue`](work-object/#alternate\_host\_venues) where [`is_oa`](work-object/#is\_oa)= true and [`version`](work-object/#version) is submittedVersion. This is useful for finding works with preprints deposited somewhere.
+Returns: works with at least one of the [`locations`](work-object/#locations) has [`is_oa`](work-object/#is\_oa)= true and [`version`](work-object/#version) is submittedVersion. This is useful for finding works with preprints deposited somewhere.
 
 * Get works with an OA submitted copy:\
   [`https://api.openalex.org/works?filter=has_oa_submitted_version:true`](https://api.openalex.org/works?filter=has\_oa\_submitted\_version:true)\`\`
@@ -310,9 +301,9 @@ Returns: works found in the given work's [`related_works`](work-object/#related\
 
 #### `repository`
 
-Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given [venue](../venues/venue-object.md)
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given [source](../venues/venue-object.md)
 
-Returns: works where the chosen [venue ID](../venues/venue-object.md#id) exists within the [host\_venue](work-object/#host\_venue) _or_ the [alternate\_host\_venues](work-object/#alternate\_host\_venues) objects.
+Returns: works where the chosen [source ID](../venues/venue-object.md#id) exists within the [`locations`](work-object/#locations).
 
 You can use this to find works where authors are associated with your university, but the work is not part of the university's repository. :clap:
 
@@ -334,7 +325,7 @@ Returns: works with [`publication_date`](work-object/#publication\_date) less th
 
 Value: a String with value `publishedVersion`, `submittedVersion`, `acceptedVersion`, or `null`
 
-Returns: works where the chosen version exists within the [host\_venue](work-object/#host\_venue) _or_ the [alternate\_host\_venues](work-object/#alternate\_host\_venues) objects. If `null`, it returns works where no version is found in either location.
+Returns: works where the chosen version exists within the [`locations`](work-object/#locations). If `null`, it returns works where no version is found in any of the locations.
 
-* Get works where a published version is available in the host venue or alternate host venues\
+* Get works where a published version is available in at least one of the locations:\
   [https://api.openalex.org/works?filter=version:publishedVersion](https://api.openalex.org/works?filter=version:publishedVersion)

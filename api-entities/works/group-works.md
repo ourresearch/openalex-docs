@@ -13,9 +13,6 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 
 ### `/works` group\_by attributes
 
-* [`alternate_host_venues.id`](work-object/#alternate\_host\_venues)
-* [`alternate_host_venues.license`](work-object/#alternate\_host\_venues)
-* [`alternate_host_venues.version`](work-object/#alternate\_host\_venues)
 * [`authors_count`](filter-works.md#authors\_count)
 * [`authorships.author.id`](work-object/#author) (alias `author.id`)
 * [`authorships.author.orcid`](work-object/#author) (alias `author.orcid`)
@@ -45,11 +42,6 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`has_pmcid`](filter-works.md#has\_pmcid)
 * [`has_ngrams`](filter-works.md#has\_ngrams)
 * [`has_references`](filter-works.md#has\_references)
-* [`host_venue.id`](work-object/#host\_venue) (alias `journal.id`)
-* [`host_venue.issn`](work-object/#host\_venue)
-* [`host_venue.license`](work-object/#host\_venue)
-* [`host_venue.publisher`](work-object/#host\_venue)
-* [`host_venue.version`](work-object/#host\_venue)
 * [`is_retracted`](work-object/#is\_retracted)
 * [`is_paratext`](work-object/#is\_paratext)
 * [`open_access.is_oa`](work-object/#is\_oa-1) (alias `is_oa`)
