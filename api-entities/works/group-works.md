@@ -55,4 +55,5 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`primary_location.source.type`](work-object/#primary\_location)
 * [`primary_location.version`](work-object/#primary\_location)
 * [`publication_year`](work-object/#publication\_year)
-* [`version`](work-object/#version)
+* ``[`repository`](filter-works.md#repository)``
+* ``[`version`](work-object/#version)
