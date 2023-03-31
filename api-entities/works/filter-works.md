@@ -307,10 +307,10 @@ Returns: works where the chosen [source ID](../venues/venue-object.md#id) exists
 
 You can use this to find works where authors are associated with your university, but the work is not part of the university's repository. :clap:
 
-* Get works that are available in the University of Michigan Deep Blue repository (OpenAlex ID: https://openalex.org/V4306400393)\
-  [https://api.openalex.org/works?filter=repository:V4306400393](https://api.openalex.org/works?filter=repository:V4306400393)
+* Get works that are available in the University of Michigan Deep Blue repository (OpenAlex ID: https://openalex.org/S4306400393)\
+  [`https://api.openalex.org/works?filter=repository:S4306400393`](https://api.openalex.org/works?filter=repository:S4306400393)
 * Get works where at least one author is associated with the University of Michigan, but the works are not found in the University of Michigan Deep Blue repository\
-  [https://api.openalex.org/works?filter=institutions.id:I27837315,repository:!V4306400393](https://api.openalex.org/works?filter=institutions.id:I27837315,repository:!V4306400393)
+  [`https://api.openalex.org/works?filter=institutions.id:I27837315,repository:!S4306400393`](https://api.openalex.org/works?filter=institutions.id:I27837315,repository:!S4306400393)
 
 #### `to_publication_date`
 
