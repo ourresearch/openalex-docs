@@ -601,7 +601,7 @@ _Integer:_  How many tokens are in the ngram.
 ngram_tokens: 5
 ```
 
-### token\_frequency
+### term\_frequency
 
 _Float:_  How often the ngram occurred in the work.&#x20;
 
