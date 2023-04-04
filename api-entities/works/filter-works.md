@@ -102,6 +102,18 @@ Returns: works where at least _one_ of the author's institutions is in the Globa
 * Get works where at least one author's institution is in the Global South\
   [https://api.openalex.org/works?filter=authorships.institutions.is\_global\_south:true](https://api.openalex.org/works?filter=authorships.institutions.is\_global\_south:true)
 
+#### `best_open_version`
+
+Value: a String with one of the following values:
+
+* **`any`**: This means that `best_oa_location.version` = `submittedVersion`, `acceptedVersion`, or `publishedVersion`
+* **`acceptedOrPublished`**: This means that `best_oa_location.version` can be `acceptedVersion` or `publishedVersion`
+* **`published`**: This means that `best_oa_location.version` = `publishedVersion`
+
+Returns: works that meet the above criteria for [`best_oa_location`](work-object/#best\_oa\_location).
+
+* Get works whose `best_oa_location` is a submitted, accepted, or published version: [`https://api.openalex.org/works?filter=best_open_version:any`](https://api.openalex.org/works?filter=best\_open\_version:any)``
+
 #### `cited_by`
 
 Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given work
@@ -328,4 +340,4 @@ Value: a String with value `publishedVersion`, `submittedVersion`, `acceptedVers
 Returns: works where the chosen version exists within the [`locations`](work-object/#locations). If `null`, it returns works where no version is found in any of the locations.
 
 * Get works where a published version is available in at least one of the locations:\
-  [https://api.openalex.org/works?filter=version:publishedVersion](https://api.openalex.org/works?filter=version:publishedVersion)
+  ``[`https://api.openalex.org/works?filter=version:publishedVersion`](https://api.openalex.org/works?filter=version:publishedVersion)``

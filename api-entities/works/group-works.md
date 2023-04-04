@@ -30,6 +30,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`best_oa_location.source.issn`](work-object/#best\_oa\_location)
 * [`best_oa_location.source.type`](work-object/#best\_oa\_location)
 * [`best_oa_location.version`](work-object/#best\_oa\_location)
+* ``[`best_open_version`](filter-works.md#best\_open\_version)``
 * [`cited_by_count`](work-object/#cited\_by\_count)
 * [`cites`](filter-works.md#cites)
 * [`concepts_count`](filter-works.md#concepts\_count)
