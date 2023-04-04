@@ -33,7 +33,7 @@ You can filter using these attributes of the [`Work`](work-object/) object (clic
 * [`concepts.id`](work-object/#concepts) (alias: `concept.id`)
 * [`concepts.wikidata`](work-object/#concepts)
 * [`doi`](work-object/#title)
-* [`ids.pmcid`](../authors/author-object.md#ids)
+* [`ids.pmcid`](work-object/#ids)
 * [`ids.pmid`](work-object/#ids) (alias: `pmid`)
 * [`ids.openalex`](work-object/#ids) (alias: `openalex`)
 * [`ids.mag`](work-object/#ids) (alias: `mag`)
