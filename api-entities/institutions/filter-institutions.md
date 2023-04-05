@@ -17,6 +17,9 @@ You can filter using these attributes of the `Institution` entity object (click 
 * [`country_code`](institution-object.md#country\_code)
 * [`openalex`](institution-object.md#id): the OpenAlex ID of the Institution
 * [`ror`](institution-object.md#ror): the ROR ID of the Institution
+* [`summary_stats.2yr_mean_citedness`](institution-object.md#summary_stats) (accepts float, null, !null, can use range queries such as < >)
+* [`summary_stats.h_index`](institution-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
+* [`summary_stats.i10_index`](institution-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
 * [`type`](institution-object.md#type)
 * [`works_count`](institution-object.md#works\_count)
 * [`x_concepts.id`](institution-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)

@@ -17,4 +17,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`cited_by_count`](concept-object.md#cited\_by\_count)
 * [`has_wikidata`](filter-concepts.md#has\_wikidata)
 * [`level`](concept-object.md#level)
+* [`summary_stats.2yr_mean_citedness`](concept-object.md#summary_stats)
+* [`summary_stats.h_index`](concept-object.md#summary_stats)
+* [`summary_stats.i10_index`](concept-object.md#summary_stats)
 * [`works_count`](concept-object.md#works\_count)

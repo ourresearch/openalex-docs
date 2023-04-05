@@ -218,6 +218,24 @@ The ROR (Research Organization Registry) identifier is a globally unique ID for 
 ror: "https://ror.org/0130frc33"
 ```
 
+### `summary_stats`
+
+_Object:_ Citation metrics for this institution
+
+* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this institution. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
+* `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this institution.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this institution.
+
+While the _h_-index and the i-10 index are normally author-level metrics and the 2-year mean citedness is normally a journal-level metric, they can be calculated for any set of papers, so we include them for institutions.
+
+```json
+summary_stats: {
+    2yr_mean_citedness: 5.065784263815827,
+    h_index: 985,
+    i10_index: 176682
+}
+```
+
 ### `type`
 
 _String:_ The institution's primary type, using the [ROR "type" controlled vocabulary](https://ror.readme.io/docs/ror-data-structure).&#x20;

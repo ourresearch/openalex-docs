@@ -123,6 +123,24 @@ Compared to other Canonical IDs, ORCID coverage is relatively low in OpenAlex, b
 orcid: "https://orcid.org/0000-0001-6187-6610"
 ```
 
+### `summary_stats`
+
+_Object:_ Citation metrics for this author
+
+* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this author. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
+* `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this author.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this author.
+
+While the 2-year mean citedness is normally a journal-level metric, it can be calculated for any set of papers, so we include it for authors.
+
+```json
+summary_stats: {
+    2yr_mean_citedness: 1.5295340589458237,
+    h_index: 45,
+    i10_index: 205
+}
+```
+
 ### `updated_date`
 
 _String:_ The last time anything in this author object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.

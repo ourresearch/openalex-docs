@@ -126,6 +126,24 @@ We express this as an API URL (instead of just listing the sources themselves) b
 sources_api_url: "https://api.openalex.org/sources?filter=host_organization.id:P4310319965"
 ```
 
+### `summary_stats`
+
+_Object:_ Citation metrics for this publisher
+
+* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this publisher. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
+* `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this publisher.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this publisher.
+
+While the _h_-index and the i-10 index are normally author-level metrics and the 2-year mean citedness is normally a journal-level metric, they can be calculated for any set of papers, so we include them for publishers.
+
+```json
+summary_stats: {
+    2yr_mean_citedness: 5.065784263815827,
+    h_index: 985,
+    i10_index: 176682
+}
+```
+
 ### `updated_date`
 
 _String:_ The last time anything in this publisher object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.

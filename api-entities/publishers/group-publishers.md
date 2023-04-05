@@ -15,3 +15,6 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 
 * [`country_codes`](publisher-object.md#country\_codes)
 * [`hierarchy_level`](publisher-object.md#hierarchy\_level)
+* [`summary_stats.2yr_mean_citedness`](publisher-object.md#summary_stats)
+* [`summary_stats.h_index`](publisher-object.md#summary_stats)
+* [`summary_stats.i10_index`](publisher-object.md#summary_stats)

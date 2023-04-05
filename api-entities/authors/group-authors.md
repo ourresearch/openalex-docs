@@ -21,4 +21,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`last_known_institution.is_global_south`](filter-authors.md#last\_known\_institution.is\_global\_south)
 * [`last_known_institution.ror`](author-object.md#last\_known\_institution)
 * [`last_known_institution.type`](author-object.md#last\_known\_institution)
+* [`summary_stats.2yr_mean_citedness`](author-object.md#summary_stats)
+* [`summary_stats.h_index`](author-object.md#summary_stats)
+* [`summary_stats.i10_index`](author-object.md#summary_stats)
 * [`works_count`](author-object.md#works\_count)

@@ -20,6 +20,9 @@ You can filter using these attributes of the `Publisher` entity object (click ea
 * [`ids.ror`](publisher-object.md#ids) (alias: `ror`)
 * [`ids.wikidata`](publisher-object.md#ids) (alias: `wikidata`)
 * [`parent_publisher`](publisher-object.md#parent\_publisher)
+* [`summary_stats.2yr_mean_citedness`](publisher-object.md#summary_stats) (accepts float, null, !null, can use range queries such as < >)
+* [`summary_stats.h_index`](publisher-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
+* [`summary_stats.i10_index`](publisher-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
 * [`works_count`](publisher-object.md#works\_count)
 
 ### `/publishers` convenience filters

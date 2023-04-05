@@ -17,6 +17,9 @@ You can filter using these attributes of the [`Concept`](concept-object.md) obje
 * [`cited_by_count`](concept-object.md#cited\_by\_count)
 * [`ids.openalex`](concept-object.md#ids) (alias: `openalex`)
 * [`level`](concept-object.md#level)
+* [`summary_stats.2yr_mean_citedness`](concept-object.md#summary_stats) (accepts float, null, !null, can use range queries such as < >)
+* [`summary_stats.h_index`](concept-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
+* [`summary_stats.i10_index`](concept-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
 * [`works_count`](concept-object.md#works\_count)
 
 ### `/concepts` convenience filters

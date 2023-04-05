@@ -18,5 +18,8 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`country_code`](institution-object.md#country\_code)
 * [`is_global_south`](filter-institutions.md#is\_global\_south)
 * [`has_ror`](filter-institutions.md#has\_ror)
+* [`summary_stats.2yr_mean_citedness`](institution-object.md#summary_stats)
+* [`summary_stats.h_index`](institution-object.md#summary_stats)
+* [`summary_stats.i10_index`](institution-object.md#summary_stats)
 * [`type`](institution-object.md#type)
 * [`works_count`](institution-object.md#works\_count)
