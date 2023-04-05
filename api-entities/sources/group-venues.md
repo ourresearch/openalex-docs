@@ -23,5 +23,8 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`is_oa`](venue-object.md#is\_oa)
 * [`issn`](venue-object.md#issn)
 * [`publisher`](venue-object.md#publisher)
+* [`summary_stats.2yr_mean_citedness`](venue-object.md#summary_stats)
+* [`summary_stats.h_index`](venue-object.md#summary_stats)
+* [`summary_stats.i10_index`](venue-object.md#summary_stats)
 * [`type`](venue-object.md#type)
 * [`works_count`](venue-object.md#works\_count)
