@@ -55,13 +55,13 @@ OpenAlex data is licensed as [CC0](https://creativecommons.org/publicdomain/zero
 
 It's free! The [website](https://explore.openalex.org), the [API](../), and the [database snapshot](broken-reference) are all available at no charge. As a nonprofit, making this data free and open is part of our mission.
 
+For those who would like a higher level of service and to provide direct financial support for our mission, we offer [OpenAlex Premium. Click here to learn more.](https://openalex.org/pricing)
+
 ### What's your sustainability plan?
 
 Our nonprofit (OurResearch) has a ten-year track record of building sustainable scholarly infrastructure, and a formal commitment to sustainability as part of [our adoption of the POSI principles.](https://blog.ourresearch.org/posi/)&#x20;
 
 We're currently still exploring our options for OpenAlex's sustainability plan. Thanks to a generous grant from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk/), we've got lots of runway, and we don't need to roll anything out in a rush.
 
-Our Unpaywall project (a free index of the world's open-access research literature) has been self-sustaining via a freemium revenue model for nearly five years, and we'll certainly be looking closely at that as a model for OpenAlex, as well. Access to the data will always be free for everyone, but some kind of high-throughput, SLA access is potentially something we could add later for a fee.&#x20;
-
-We're currently focused on getting OpenAlex launched and all the bugs worked out, though, and we're not ready to commit to any one sustainability path just yet. Stay tuned :)
+Our Unpaywall project (a free index of the world's open-access research literature) has been self-sustaining via a freemium revenue model for nearly five years, and we have recently introduced a similar model in [OpenAlex Premium. ](https://openalex.org/pricing)Access to the data will always be free for everyone, but OpenAlex Premium offers several benefits in service above the services we offer for free.
 

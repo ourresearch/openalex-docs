@@ -112,7 +112,7 @@ Value: a String with one of the following values:
 
 Returns: works that meet the above criteria for [`best_oa_location`](work-object/#best\_oa\_location).
 
-* Get works whose `best_oa_location` is a submitted, accepted, or published version: [`https://api.openalex.org/works?filter=best_open_version:any`](https://api.openalex.org/works?filter=best\_open\_version:any)``
+* Get works whose `best_oa_location` is a submitted, accepted, or published version: [`https://api.openalex.org/works?filter=best_open_version:any`](https://api.openalex.org/works?filter=best\_open\_version:any)\`\`
 
 #### `cited_by`
 
@@ -163,7 +163,7 @@ Value: a date, formatted as `yyyy-mm-dd`
 
 Returns: works with [`created_date`](work-object/#created\_date) greater than or equal to the given date.
 
-This field requires an OpenAlex Premium subscription to access. Please [contact us](mailto:support@openalex.org) if you are interested.
+This field requires an [OpenAlex Premium subscription to access. Click here to learn more.](https://openalex.org/pricing)
 
 * Get works created on or _after_ January 12th, 2023 (does not work without valid API key):\
   [`https://api.openalex.org/works?filter=from_created_date:2023-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=from\_created\_date:2023-01-12\&api\_key=myapikey)\`\`
@@ -187,7 +187,7 @@ Value: a date, formatted as `yyyy-mm-dd`
 
 Returns: works with [`updated_date`](work-object/#updated\_date) greater than or equal to the given date.
 
-This field requires an OpenAlex Premium subscription to access. Please [contact us](mailto:support@openalex.org) if you are interested.
+This field requires an [OpenAlex Premium subscription to access. Click here to learn more.](https://openalex.org/pricing)
 
 * Get works updated on or _after_ January 12th, 2023 (does not work without valid API key):\
   [`https://api.openalex.org/works?filter=from_updated_date:2023-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=from\_updated\_date:2023-01-12\&api\_key=myapikey)\`\`
