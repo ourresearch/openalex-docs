@@ -192,6 +192,24 @@ societies: [
 ]
 ```
 
+### `summary_stats`
+
+_Object:_ Citation metrics for this source
+
+* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this source. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
+* `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this source.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this source.
+
+While the _h_-index and the i-10 index are normally author-level metrics, they can be calculated for any set of papers, so we include them for sources.
+
+```json
+summary_stats: {
+    2yr_mean_citedness: 1.5295340589458237,
+    h_index: 105,
+    i10_index: 5045
+}
+```
+
 ### `type`
 
 _String:_ The type of source, which will be one of the following from the Type column:
