@@ -175,7 +175,7 @@ Value: a date, formatted as `yyyy-mm-dd`
 Returns: works with [`publication_date`](work-object/#publication\_date) greater than or equal to the given date.
 
 * Get works published on or _after_ March 14th, 2001:\
-  [`https://api.openalex.org/works?filter=from_publication_date:2001-03-14`](https://api.openalex.org/works?filter=from\_publication\_date:2001-03-14)\`\`
+  [`https://api.openalex.org/works?filter=from_publication_date:2001-03-14`](https://api.openalex.org/works?filter=from\_publication\_date:2001-03-14)
 
 {% hint style="info" %}
 Filtering by publication date is not a reliable way to retrieve recently updated and created works, due to the way publishers assign publication dates. Use `from_created_date` or `from_updated_date` to get the latest changes in OpenAlex.
@@ -190,7 +190,11 @@ Returns: works with [`updated_date`](work-object/#updated\_date) greater than or
 This field requires an [OpenAlex Premium subscription to access. Click here to learn more.](https://openalex.org/pricing)
 
 * Get works updated on or _after_ January 12th, 2023 (does not work without valid API key):\
-  [`https://api.openalex.org/works?filter=from_updated_date:2023-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=from\_updated\_date:2023-01-12\&api\_key=myapikey)\`\`
+  [`https://api.openalex.org/works?filter=from_updated_date:2023-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=from\_updated\_date:2023-01-12\&api\_key=myapikey)
+
+{% hint style="info" %}
+Learn more about using this filter to get the freshest data possible with our [Premium How-To](https://github.com/ourresearch/openalex-api-tutorials/blob/main/notebooks/getting-started/premium.ipynb).
+{% endhint %}
 
 #### **`fulltext.search`**
 
