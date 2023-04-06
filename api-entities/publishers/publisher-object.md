@@ -108,6 +108,24 @@ _Object:_ All the external identifiers that we know about for this publisher. ID
 </strong>},
 </code></pre>
 
+### `image_thumbnail_url`
+
+_String:_ Same as [`image_url`](publisher-object.md#image\_url-1), but it's a smaller image.
+
+This is usually a hotlink to a wikimedia image. You can change the `width=300` parameter in the URL if you want a different thumbnail size.
+
+```json
+image_thumbnail_url: "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/MIT%20Press%20logo.svg&width=300"
+```
+
+### `image_url`
+
+_String:_ URL where you can get an image representing this publisher. Usually this a hotlink to a Wikimedia image, and usually it's a seal or logo.
+
+```json
+image_url: "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/MIT%20Press%20logo.svg"
+```
+
 ### `parent_publisher`
 
 _String:_ An OpenAlex ID linking to the direct parent of the publisher. This will be null if the publisher's `hierarchy_level` is 0.
