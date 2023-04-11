@@ -92,3 +92,5 @@ Jump into an area of OpenAlex that interests you:
 * [Venues](api-entities/venues/)
 * [Institutions](api-entities/institutions/)
 * [Concepts](api-entities/concepts/)
+
+And check out our [tutorials](additional-help/tutorials.md) page for some hands-on examples!
