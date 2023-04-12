@@ -317,7 +317,7 @@ Returns: works found in the given work's [`related_works`](work-object/#related\
 
 #### `repository`
 
-Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given [source](../venues/venue-object.md)
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given [source](../venues/venue-object.md), where the source is [`type: repository`](../venues/venue-object.md#type)
 
 Returns: works where the chosen [source ID](../venues/venue-object.md#id) exists within the [`locations`](work-object/#locations).
 
@@ -327,6 +327,10 @@ You can use this to find works where authors are associated with your university
   [`https://api.openalex.org/works?filter=repository:S4306400393`](https://api.openalex.org/works?filter=repository:S4306400393)
 * Get works where at least one author is associated with the University of Michigan, but the works are not found in the University of Michigan Deep Blue repository\
   [`https://api.openalex.org/works?filter=institutions.id:I27837315,repository:!S4306400393`](https://api.openalex.org/works?filter=institutions.id:I27837315,repository:!S4306400393)
+
+You can also use this as a `group_by` to learn things about repositories:
+
+* Learn which repositories have the most open access works [`https://api.openalex.org/works?filter=is_oa:true&group_by=repository`](https://api.openalex.org/works?filter=is\_oa:true\&group\_by=repository)
 
 #### `to_publication_date`
 
