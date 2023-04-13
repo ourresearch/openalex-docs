@@ -416,7 +416,8 @@ _Object:_ Information about the access status of this work, as an [`OpenAccess`]
 open_access: {
     is_oa: true,
     oa_status: "gold",
-    oa_url: "https://peerj.com/articles/4375.pdf"
+    oa_url: "https://peerj.com/articles/4375.pdf",
+    any_repository_has_fulltext: true
 },
 ```
 
@@ -615,11 +616,23 @@ term_frequency: 0.0005452562704471102
 
 The `OpenAccess` object describes access options for a given work. It's only found as part of the `Work` object.
 
+### `any_repository_has_fulltext`
+
+_Boolean:_ `True` if any of this work's [`locations`](./#locations) has `location.is_oa=true` and `location.source.type=repository`.
+
+Use case: researchers want to track Green OA, using a definition of "any repository hosts this." OpenAlex's definition (as used in [`oa_status`](./#oa\_status)) doesn't support this, because as soon as there's a publisher-hosted copy (bronze, hybrid, or gold), oa_status is set to that publisher-hosted status.
+
+So there's a lot of repository-hosted content that the `oa_status` can't tell you about. Our [State of OA paper](https://peerj.com/articles/4375/) calls this "shadowed Green." This feature makes it possible to track shadowed Green.
+
+```json
+any_repository_has_fulltext: true
+```
+
 ### `is_oa`
 
-_Boolean:_ `True` if this work is Open Access (OA).&#x20;
+_Boolean:_ `True` if this work is Open Access (OA).
 
-There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in. You can use the [`alternate_host_venues`](./#alternate\_host\_venues) and [`oa_status`](./#oa\_status) fields to narrow your results further, accommodating any definition of OA you like.
+There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in. You can use the [`locations`](./#locations) and [`oa_status`](./#oa\_status) fields to narrow your results further, accommodating any definition of OA you like.
 
 ```json
 is_oa: true

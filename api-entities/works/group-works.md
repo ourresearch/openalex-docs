@@ -30,7 +30,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`best_oa_location.source.issn`](work-object/#best\_oa\_location)
 * [`best_oa_location.source.type`](work-object/#best\_oa\_location)
 * [`best_oa_location.version`](work-object/#best\_oa\_location)
-* ``[`best_open_version`](filter-works.md#best\_open\_version)``
+* [`best_open_version`](filter-works.md#best\_open\_version)
 * [`cited_by_count`](work-object/#cited\_by\_count)
 * [`cites`](filter-works.md#cites)
 * [`concepts_count`](filter-works.md#concepts\_count)
@@ -45,6 +45,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`has_references`](filter-works.md#has\_references)
 * [`is_retracted`](work-object/#is\_retracted)
 * [`is_paratext`](work-object/#is\_paratext)
+* [`open_access.any_repository_has_fulltext`](work-object/#open\_access)
 * [`open_access.is_oa`](work-object/#is\_oa-1) (alias `is_oa`)
 * [`open_access.oa_status`](work-object/#oa\_status) (alias `oa_status`)
 * [`primary_location.is_oa`](work-object/#primary\_location)
@@ -56,5 +57,5 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`primary_location.source.type`](work-object/#primary\_location)
 * [`primary_location.version`](work-object/#primary\_location)
 * [`publication_year`](work-object/#publication\_year)
-* ``[`repository`](filter-works.md#repository)``
-* ``[`version`](work-object/#version)
+* [`repository`](filter-works.md#repository)
+* [`version`](work-object/#version)
