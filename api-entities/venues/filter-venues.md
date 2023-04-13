@@ -13,6 +13,9 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 
 You can filter using these attributes of the `Source` entity object (click each one to view their documentation on the [`Source`](venue-object.md) object page):
 
+* [`apc_prices.currency`](venue-object.md#apc\_prices)
+* [`apc_prices.price`](venue-object.md#apc\_prices)
+* [`apc_usd`](venue-object.md#apc\_usd)
 * [`cited_by_count`](venue-object.md#cited\_by\_count)
 * [`country_code`](venue-object.md#country\_code)
 * [`host_organization`](venue-object.md#host\_organization) (alias: `host_organization.id`)

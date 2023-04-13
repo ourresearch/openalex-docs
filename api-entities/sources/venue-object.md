@@ -20,9 +20,26 @@ alternate_titles: [
 ]
 ```
 
+### apc\_prices
+
+_List:_ List of objects, each with `price` (_Integer_) and `currency` (_String_).
+
+Article processing charge information, taken directly from [DOAJ](https://doaj.org/).
+
+```json
+apc_prices: [
+    {
+        price: 3920,
+        currency: "GBP"
+    }
+]
+```
+
 ### apc\_usd
 
-_Integer:_ The source's article processing charge in US Dollars, if available from [DOAJ](https://doaj.org/).&#x20;
+_Integer:_ The source's article processing charge in US Dollars, if available from [DOAJ](https://doaj.org/).
+
+The `apc_usd` value is calculated by taking the APC price (see [`apc_prices`](venue-object.md#apc\_prices)) with a currency of USD if it is available. If it's not available, we convert the first available value from `apc_prices` into USD, using recent exchange rates.
 
 ```json
 apc_usd: 5200

@@ -13,6 +13,8 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 
 ### `/sources` group\_by attributes
 
+* [`apc_prices.currency`](venue-object.md#apc\_prices)
+* [`apc_usd`](venue-object.md#apc\_usd)
 * [`cited_by_count`](venue-object.md#cited\_by\_count)
 * [`has_issn`](filter-venues.md#has\_issn)
 * [`continent`](../geo/continents.md#group-by-continent)
