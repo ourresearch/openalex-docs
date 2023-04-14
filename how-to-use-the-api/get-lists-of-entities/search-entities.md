@@ -7,11 +7,11 @@ The `search` query parameter finds results that match a given text search. Examp
 * Get works with search term "dna" in the title, abstract, or fulltext:\
   [https://api.openalex.org/works?search=dna](https://api.openalex.org/works?search=dna)
 
-When you [search `works`](../../api-entities/works/search-works.md), the API looks for matches in titles, abstracts, and fulltext. When you [search `concepts`](../../api-entities/concepts/search-concepts.md), we look in each concept's `display_name` and `description` fields. When you [search `venues`](../../api-entities/venues/search-venues.md), we look at the `display_name`_,_ `alternate_titles`, and `abbreviated_title` fields. Searching  [`authors`](../../api-entities/authors/search-authors.md) or [`institutions`](../../api-entities/institutions/search-institutions.md) will looks for matches within each entities' `display_name` field.
+When you [search `works`](../../api-entities/works/search-works.md), the API looks for matches in titles, abstracts, and fulltext. When you [search `concepts`](../../api-entities/concepts/search-concepts.md), we look in each concept's `display_name` and `description` fields. When you [search `venues`](../../api-entities/venues/search-venues.md), we look at the `display_name`_,_ `alternate_titles`, and `abbreviated_title` fields. Searching [`authors`](../../api-entities/authors/search-authors.md) or [`institutions`](../../api-entities/institutions/search-institutions.md) will looks for matches within each entities' `display_name` field.
 
 For most text search we remove [stop words](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-stop-tokenfilter.html) and use [stemming](https://en.wikipedia.org/wiki/Stemming) to improve results. So words like "the" and "an" are transparently removed, and a search for "possums" will also return records using the word "possum." With the except of raw affiliation strings, we do not search within words but rather try to match whole words. So a search with "lun" will not match the word "lunar".
 
-Currently, we do not allow searches with boolean expressions, such as `OR` and `NOT`. If you include those terms, they will be removed as stop words. We disallow searches using the pipe (`|`) operator, and also the an exclamation mark (`!`) `NOT` operator at the beginning of words.
+Currently, we do not allow searches with boolean expressions, such as `OR` and `NOT`. If you include those terms, they will be removed as stop words. When using the `search` parameter, we disallow searches using the pipe (`|`) operator, and also the exclamation mark (`!`) `NOT` operator at the beginning of words. (The pipe (`|`) operator is allowed if using a filter search, such as `/works?filter=display_name.search:term1|term2`.)&#x20;
 
 ## Relevance score
 
@@ -26,19 +26,19 @@ If you search for a multiple-word phrase, the algorithm will treat each word sep
 
 ## The search filter
 
-You can also use search as a [filter](broken-reference), allowing you to fine-tune the fields you're searching over. To do this, you append `.search` to the end of the property you are filtering for:
+You can also use search as a [filter](broken-reference/), allowing you to fine-tune the fields you're searching over. To do this, you append `.search` to the end of the property you are filtering for:
 
 * Get authors who have "Einstein" as part of their name:\
   [`https://api.openalex.org/authors?filter=display\_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)
 * Get works with "cubist" in the title:\
   [`https://api.openalex.org/works?filter=title.search:cubist`](https://api.openalex.org/works?filter=title.search:cubist)
 
-You can read more about which filters support the `.search` suffix on the [Filter entity lists](broken-reference) page.
+You can read more about which filters support the `.search` suffix on the [Filter entity lists](broken-reference/) page.
 
 {% hint style="info" %}
 You might be tempted to use the search filter to power an autocomplete or typeahead. Instead, we recommend you use the [autocomplete endpoint](autocomplete-entities.md), which is much faster.\
 \
-👎 [`https://api.openalex.org/institutions?filter=display\_name.search:florida`](https://api.openalex.org/institutions?filter=display\_name.search:florida) &#x20;
+👎 [`https://api.openalex.org/institutions?filter=display\_name.search:florida`](https://api.openalex.org/institutions?filter=display\_name.search:florida)
 
 👍 [`https://api.openalex.org/autocomplete/institutions?q=Florida`](https://api.openalex.org/autocomplete/institutions?q=Florida)
 {% endhint %}
