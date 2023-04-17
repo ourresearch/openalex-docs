@@ -517,7 +517,7 @@ type: "journal-article"
 
 ### `updated_date`
 
-_String:_ The last time anything in this `Work` object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
+_String:_ The last time anything in this `Work` object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string (in UTC). This date is updated for _any change at all_, including increases in various counts.
 
 ```json
 updated_date: "2022-01-02T00:22:35.180390"

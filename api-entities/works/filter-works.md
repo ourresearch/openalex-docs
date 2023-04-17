@@ -184,7 +184,7 @@ Filtering by publication date is not a reliable way to retrieve recently updated
 
 #### `from_updated_date`
 
-Value: a date, formatted as `yyyy-mm-dd`
+Value: a date, formatted as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date or date-time string (for example: "2020-05-17", "2020-05-17T15:30", or "2020-01-02T00:22:35.180390").
 
 Returns: works with [`updated_date`](work-object/#updated\_date) greater than or equal to the given date.
 
