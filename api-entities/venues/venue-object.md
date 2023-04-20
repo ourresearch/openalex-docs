@@ -116,9 +116,21 @@ _String:_ The host organization for this source as an [OpenAlex ID](../../how-to
 id: "https://openalex.org/P4310320595"
 ```
 
+### `host_organization_lineage`
+
+_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) — See [publisher.lineage](../publishers/publisher-object.md#lineage). This will only be included if the [`host_organization`](#host_organization) is a publisher (and not if the `host_organization` is an institution).
+
+```json
+host_organization_lineage: [
+    "https://openalex.org/P4310321285",
+    "https://openalex.org/P4310319900",
+    "https://openalex.org/P4310319965"
+]
+```
+
 ### `host_organization_name`
 
-_String:_ The `display_name` from the host\_organization, shown for convenience.
+_String:_ The `display_name` from the [host_organization](#host_organization), shown for convenience.
 
 ```json
 host_organization_name: "Elsevier BV" 
@@ -303,10 +315,11 @@ x_concepts: [
 
 The `DehydratedSource` is stripped-down `Source` object, with most of its properties removed to save weight. Its only remaining properties are:
 
-* ``[`display_name`](venue-object.md#display\_name)``
-* ``[`host_organization`](venue-object.md#host\_organization)``
-* ``[`host_organization_name`](venue-object.md#host\_organization\_name)``
-* ``[`id`](venue-object.md#id)``
-* ``[`issn`](venue-object.md#issn)``
-* ``[`issn_l`](venue-object.md#issn\_l)``
-* ``[`type`](venue-object.md#type)``
+* [`display_name`](venue-object.md#display\_name)
+* [`host_organization`](venue-object.md#host\_organization)
+* [`host_organization_lineage`](venue-object.md#host\_organization\_lineage)
+* [`host_organization_name`](venue-object.md#host\_organization\_name)
+* [`id`](venue-object.md#id)
+* [`issn`](venue-object.md#issn)
+* [`issn_l`](venue-object.md#issn\_l)
+* [`type`](venue-object.md#type)

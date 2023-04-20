@@ -134,7 +134,7 @@ _List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-open
 id: "https://openalex.org/P4310321285",
 ...
 hierarchy_level: 2,
-referenced_works: [
+lineage: [
     "https://openalex.org/P4310321285",
     "https://openalex.org/P4310319900",
     "https://openalex.org/P4310319965"
