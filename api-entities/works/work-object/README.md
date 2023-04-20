@@ -194,6 +194,22 @@ concepts: [
 ]
 ```
 
+### `corresponding_author_ids`
+
+_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) of any authors for which [authorships.is_corresponding](authorship-object#is_corresponding) is `true`.
+
+```json
+corresponding_author_ids: ["https://openalex.org/A2109306456"]
+```
+
+### `corresponding_institution_ids`
+
+_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) of any institutions found within an `authorship` for which [authorships.is_corresponding](authorship-object#is_corresponding) is `true`.
+
+```json
+corresponding_institution_ids: ["https://openalex.org/I4210123613"]
+```
+
 ### `counts_by_year`
 
 _List:_ [`Works.cited_by_count`](./#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many times this work was cited.&#x20;

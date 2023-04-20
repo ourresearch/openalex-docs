@@ -32,6 +32,8 @@ You can filter using these attributes of the [`Work`](work-object/) object (clic
 * [`cited_by_count`](work-object/#cited\_by\_count)
 * [`concepts.id`](work-object/#concepts) (alias: `concept.id`)
 * [`concepts.wikidata`](work-object/#concepts)
+* [`corresponding_author_ids`](work-object/#corresponding_author_ids)
+* [`corresponding_institution_ids`](work-object/#corresponding_institution_ids)
 * [`doi`](work-object/#title)
 * [`ids.pmcid`](work-object/#ids)
 * [`ids.pmid`](work-object/#ids) (alias: `pmid`)
