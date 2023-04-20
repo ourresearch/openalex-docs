@@ -118,7 +118,7 @@ id: "https://openalex.org/P4310320595"
 
 ### `host_organization_lineage`
 
-_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) — See [publisher.lineage](../publishers/publisher-object.md#lineage). This will only be included if the [`host_organization`](#host_organization) is a publisher (and not if the `host_organization` is an institution).
+_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) — See [`Publisher.lineage`](../publishers/publisher-object.md#lineage). This will only be included if the [`host_organization`](#host_organization) is a publisher (and not if the `host_organization` is an institution).
 
 ```json
 host_organization_lineage: [

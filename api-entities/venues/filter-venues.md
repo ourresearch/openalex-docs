@@ -19,11 +19,12 @@ You can filter using these attributes of the `Source` entity object (click each 
 * [`cited_by_count`](venue-object.md#cited\_by\_count)
 * [`country_code`](venue-object.md#country\_code)
 * [`host_organization`](venue-object.md#host\_organization) (alias: `host_organization.id`)
+* [`host_organization_lineage`](venue-object.md#host_organization_lineage) — Use this with a publisher ID to find works from that publisher and all of its children.
 * [`ids.openalex`](venue-object.md#ids) (alias: `openalex`)
 * [`is_in_doaj`](venue-object.md#is\_in\_doaj)
 * [`is_oa`](venue-object.md#is\_oa)
 * [`issn`](venue-object.md#issn)
-* [`publisher`](venue-object.md#publisher) (requires exact match)
+* [`publisher`](venue-object.md#publisher) — Requires exact match. Use the [`host_organization_lineage`](venue-object.md#host_organization_lineage) filter instead if you want to find works from a publisher and all of its children.
 * [`summary_stats.2yr_mean_citedness`](venue-object.md#summary_stats) (accepts float, null, !null, can use range queries such as < >)
 * [`summary_stats.h_index`](venue-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
 * [`summary_stats.i10_index`](venue-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
