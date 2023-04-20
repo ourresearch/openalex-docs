@@ -126,6 +126,21 @@ _String:_ URL where you can get an image representing this publisher. Usually th
 image_url: "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/MIT%20Press%20logo.svg"
 ```
 
+### `lineage`
+
+_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) of publishers. The list will include this publisher's ID, as well as any parent publishers. If this publisher's `hierarchy_level` is 0, this list will only contain its own ID.
+
+```json
+id: "https://openalex.org/P4310321285",
+...
+hierarchy_level: 2,
+referenced_works: [
+    "https://openalex.org/P4310321285",
+    "https://openalex.org/P4310319900",
+    "https://openalex.org/P4310319965"
+]
+```
+
 ### `parent_publisher`
 
 _String:_ An OpenAlex ID linking to the direct parent of the publisher. This will be null if the publisher's `hierarchy_level` is 0.
