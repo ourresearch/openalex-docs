@@ -15,7 +15,7 @@ Our publisher data is closely tied to the publisher information in Wikidata. So 
 
 ## What's next
 
-Learn more about what you can do with concepts:
+Learn more about what you can do with publishers:
 
 * [The Publisher object](publisher-object.md)
 * [Get a single publisher](get-a-single-publisher.md)
