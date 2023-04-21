@@ -8,7 +8,7 @@ This is a more detailed guide to single entities in OpenAlex. If you're just get
 
 It's easy to get a singleton entity object from from the API:`/<entity_name>/<entity_id>.` Here's an example:
 
-* Get the work with the [OpenAlex ID](./#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)``
+* Get the work with the [OpenAlex ID](./#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
 
 That will return a [`Work`](../../api-entities/works/work-object/) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
 
@@ -24,7 +24,7 @@ To get a single entity, you need a single _unambiguous_ identifier, like an ORCI
 
 The OpenAlex ID is the primary key for all entities. It's a URL shaped like this: `https://openalex.org/<OpenAlex_key>`. Here's a real-world example:&#x20;
 
-``[`https://openalex.org/W2741809807`](https://openalex.org/W2741809807)``
+[`https://openalex.org/W2741809807`](https://openalex.org/W2741809807)
 
 ### The OpenAlex Key
 
@@ -57,28 +57,28 @@ For each entity type, you can retrieve the entity using by any of the external I
 
 This works with DOIs, ISSNs, ORCIDs, and lots of other IDs...in fact, you can use any ID listed in an entity's `ids` property, as listed below:
 
-* ``[`Work.ids`](../../api-entities/works/work-object/#ids)``
-* ``[`Author.ids`](../../api-entities/authors/author-object.md#ids)``
-* ``[`Source.ids`](../../api-entities/venues/venue-object.md#ids)``
-* ``[`Institution.ids`](../../api-entities/institutions/institution-object.md#ids)``
-* ``[`Concept.ids`](../../api-entities/concepts/concept-object.md#ids)``
-* ``[`Publisher.ids`](../../api-entities/publishers/publisher-object.md#ids)``
+* [`Work.ids`](../../api-entities/works/work-object/#ids)
+* [`Author.ids`](../../api-entities/authors/author-object.md#ids)
+* [`Source.ids`](../../api-entities/venues/venue-object.md#ids)
+* [`Institution.ids`](../../api-entities/institutions/institution-object.md#ids)
+* [`Concept.ids`](../../api-entities/concepts/concept-object.md#ids)
+* [`Publisher.ids`](../../api-entities/publishers/publisher-object.md#ids)
 
 ## ID formats
 
 Most of the external IDs OpenAlex supports are canonically expressed as URLs...for example, [the canonical form of a DOI](https://www.crossref.org/display-guidelines/) always starts with `https://doi.org/`. You can always use these URL-style IDs in the entity endpoints. Examples:
 
 * Get the institution with the ROR [https://ror.org/02y3ad647](https://ror.org/02y3ad647) (University of Florida):\
-  [`https://api.openalex.org/institutions/https://ror.org/02y3ad647`](https://api.openalex.org/institutions/https://ror.org/02y3ad647)``
+  [`https://api.openalex.org/institutions/https://ror.org/02y3ad647`](https://api.openalex.org/institutions/https://ror.org/02y3ad647)
 * Get the author with the ORCID [https://orcid.org/0000-0003-1613-5981](https://orcid.org/0000-0003-1613-5981) (Heather Piwowar):\
-  [`https://api.openalex.org/authors/https://orcid.org/0000-0003-1613-5981`](https://api.openalex.org/authors/https://orcid.org/0000-0003-1613-5981)``
+  [`https://api.openalex.org/authors/https://orcid.org/0000-0003-1613-5981`](https://api.openalex.org/authors/https://orcid.org/0000-0003-1613-5981)
 
 For simplicity and clarity, you may also want to express those IDs in a simpler, URN-style format, and that's supported as well; you just write the namespace of the ID, followed by the ID itself. Here are the same examples from above, but in the namespace:id format:
 
 * Get the institution with the ROR [https://ror.org/02y3ad647](https://ror.org/02y3ad647) (University of Florida):\
-  [`https://api.openalex.org/institutions/ror:02y3ad647`](https://api.openalex.org/institutions/ror:02y3ad647)``
+  [`https://api.openalex.org/institutions/ror:02y3ad647`](https://api.openalex.org/institutions/ror:02y3ad647)
 * Get the author with the ORCID [https://orcid.org/0000-0003-1613-5981](https://orcid.org/0000-0003-1613-5981) (Heather Piwowar):\
-  [`https://api.openalex.org/authors/orcid:0000-0003-1613-5981`](https://api.openalex.org/authors/orcid:0000-0003-1613-5981)``
+  [`https://api.openalex.org/authors/orcid:0000-0003-1613-5981`](https://api.openalex.org/authors/orcid:0000-0003-1613-5981)
 
 Finally, if you're using an OpenAlex ID, you can be even more succinct, and just use the [Key](./#the-openalex-key) part of the ID all by itself, the part that looks like `w1234567`:
 

@@ -18,9 +18,9 @@ You can also use search as a [filter](../../how-to-use-the-api/get-lists-of-enti
 
 The following field can be searched as a filter within concepts:
 
-| Search filter                                                        | Field that is searched                                |
-| -------------------------------------------------------------------- | ----------------------------------------------------- |
-| ``[`display_name.search`](filter-concepts.md#display\_name.search)`` | ``[`display_name`](concept-object.md#display\_name)`` |
+| Search filter                                                    | Field that is searched                            |
+| ---------------------------------------------------------------- | ------------------------------------------------- |
+| [`display_name.search`](filter-concepts.md#display\_name.search) | [`display_name`](concept-object.md#display\_name) |
 
 ## Autocomplete concepts
 

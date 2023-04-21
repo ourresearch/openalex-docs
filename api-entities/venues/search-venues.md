@@ -18,9 +18,9 @@ You can also use search as a [filter](../../how-to-use-the-api/get-lists-of-enti
 
 The following fields can be searched as a filter within sources:
 
-| Search filter                                                      | Field that is searched                              |
-| ------------------------------------------------------------------ | --------------------------------------------------- |
-| ``[`display_name.search`](filter-venues.md#display\_name.search)`` | ``[`display_name`](venue-object.md#display\_name)`` |
+| Search filter                                                  | Field that is searched                          |
+| -------------------------------------------------------------- | ----------------------------------------------- |
+| [`display_name.search`](filter-venues.md#display\_name.search) | [`display_name`](venue-object.md#display\_name) |
 
 ## Autocomplete sources
 

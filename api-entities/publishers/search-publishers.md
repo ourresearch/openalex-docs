@@ -18,9 +18,9 @@ You can also use search as a [filter](../../how-to-use-the-api/get-lists-of-enti
 
 The following field can be searched as a filter within publishers:
 
-| Search filter                                                          | Field that is searched                                  |
-| ---------------------------------------------------------------------- | ------------------------------------------------------- |
-| ``[`display_name.search`](filter-publishers.md#display\_name.search)`` | ``[`display_name`](publisher-object.md#display\_name)`` |
+| Search filter                                                      | Field that is searched                              |
+| ------------------------------------------------------------------ | --------------------------------------------------- |
+| [`display_name.search`](filter-publishers.md#display\_name.search) | [`display_name`](publisher-object.md#display\_name) |
 
 ## Autocomplete publishers
 

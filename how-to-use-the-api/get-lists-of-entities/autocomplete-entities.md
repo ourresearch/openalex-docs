@@ -8,7 +8,7 @@ Here's an example of an autocomplete component that lets users quickly select an
 
 ![A user looking for information on the flagship of Florida's state university system.](https://i.imgur.com/f8yyWCd.png)
 
-This is the query behind that result: [`https://api.openalex.org/autocomplete/institutions?q=flori`](https://api.openalex.org/autocomplete/institutions?q=flori)``
+This is the query behind that result: [`https://api.openalex.org/autocomplete/institutions?q=flori`](https://api.openalex.org/autocomplete/institutions?q=flori)
 
 The autocomplete endpoint is very fast; queries generally return in around 200ms. If you'd like to see it in action, we're using a slightly-modified version of this endpoint in the OpenAlex website here: [https://explore.openalex.org/](https://explore.openalex.org/)
 
