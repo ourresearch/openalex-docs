@@ -52,6 +52,8 @@
   * [Filter publishers](api-entities/publishers/filter-publishers.md)
   * [Search publishers](api-entities/publishers/search-publishers.md)
   * [Group publishers](api-entities/publishers/group-publishers.md)
+* [💰 Funders](api-entities/funders/README.md)
+  * [Funder object](api-entities/funders/funder-object.md)
 * [🌎 Geo](api-entities/geo/README.md)
   * [Continents](api-entities/geo/continents.md)
   * [Regions](api-entities/geo/regions.md)
