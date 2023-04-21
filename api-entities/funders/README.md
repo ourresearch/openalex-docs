@@ -9,7 +9,7 @@ Funders are organizations that fund research. OpenAlex indexes about 32,000 fund
 You can get a funder from the OpenAlex API like this:
 
 * Get the funder National Institutes of Health (NIH) with OpenAlex ID `F4320332161`\
-  [https://api.openalex.org/funders/F4320332161](https://api.openalex.org/funders/F4320332161)
+  [`https://api.openalex.org/funders/F4320332161`](https://api.openalex.org/funders/F4320332161)
 
 ## What's next
 
