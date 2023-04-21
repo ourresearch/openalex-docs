@@ -10,7 +10,7 @@ _List:_ A list of alternate titles for this funder.
 alternate_titles: [
   "US National Institutes of Health",
   "Institutos Nacionales de la Salud",
-  "NIH",
+  "NIH"
 ]
 ```
 

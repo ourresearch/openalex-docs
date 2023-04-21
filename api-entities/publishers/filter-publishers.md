@@ -49,5 +49,5 @@ Returns: publishers with a [`display_name`](publisher-object.md#display\_name) c
   [`https://api.openalex.org/publishers?filter=display_name.search:elsevier`](https://api.openalex.org/publishers?filter=display\_name.search:elsevier)``
 
 {% hint style="info" %}
-In most cases, you should use the [`search` parameter](../venues/search-venues.md#venues-full-search) instead of this filter because it uses a better search algorithm.
+In most cases, you should use the [`search` parameter](search-publishers.md) instead of this filter because it uses a better search algorithm.
 {% endhint %}

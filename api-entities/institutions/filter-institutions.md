@@ -47,7 +47,7 @@ Returns: institutions with a [`display_name`](institution-object.md#display\_nam
   [`https://api.openalex.org/institutions?filter=display_name.search:technology`](https://api.openalex.org/institutions?filter=display\_name.search:technology)
 
 {% hint style="info" %}
-In most cases, you should use the [`search` parameter](../venues/search-venues.md#venues-full-search) instead of this filter because it uses a better search algorithm.
+In most cases, you should use the [`search` parameter](search-publishers.md) instead of this filter because it uses a better search algorithm.
 {% endhint %}
 
 #### `has_ror`
