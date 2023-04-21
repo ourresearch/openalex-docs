@@ -4,7 +4,7 @@ description: Organizations that fund research
 
 # 💰 Funders
 
-Funders are organizations that fund research. OpenAlex indexes about 32,000 funders.
+Funders are organizations that fund research. OpenAlex indexes about 32,000 funders. Funder data comes from Crossref, and is enhanced with data from Wikidata and ROR.
 
 You can get a funder from the OpenAlex API like this:
 
@@ -21,4 +21,3 @@ Learn more about what you can do with funders:
 * [Filter funders](filter-funders.md)
 * [Search funders](search-funders.md)
 * [Group funders](group-funders.md)
-
