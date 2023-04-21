@@ -33,7 +33,7 @@ country_code: "US"
 
 ### `counts_by_year`
 
-_List:_ The values of [`works_count`](#works_count) and [`cited_by_count`](publisher-object.md#cited\_by\_count) for _each_ of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works are linked to this funder, and how many times _any_ work linked to this funder was cited.
+_List:_ The values of [`works_count`](#works_count) and [`cited_by_count`](#cited_by_count) for _each_ of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works are linked to this funder, and how many times _any_ work linked to this funder was cited.
 
 Years with zero citations and zero works have been removed so you will need to add those back in if you need them.
 

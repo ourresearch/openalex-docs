@@ -41,7 +41,7 @@ Returns: institutions that are located in the chosen continent.
 
 Value: a search string
 
-Returns: institutions with a [`display_name`](institution-object.md#display\_name) containing the given string; see the [search page](../venues/search-venues.md#search-a-specific-field) for details.
+Returns: institutions with a [`display_name`](institution-object.md#display\_name) containing the given string; see the [search page](search-institutions.md#search-a-specific-field) for details.
 
 * Get institutions with names containing "technology":\
   [`https://api.openalex.org/institutions?filter=display_name.search:technology`](https://api.openalex.org/institutions?filter=display\_name.search:technology)
