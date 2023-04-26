@@ -16,7 +16,7 @@ The autocomplete endpoint is very fast; queries generally return in around 200ms
 
 The format for requests is simple: `/autocomplete/<entity_type>?q=<query>`
 
-* `entity_type` (optional): the name of one of the five OpenAlex entities: `works`, `authors`, `venues`, `institutions`, or `concepts`.
+* `entity_type` (optional): the name of one of the OpenAlex entities: `works`, `authors`, `sources`, `institutions`, `concepts`, `publishers`, or `funders`.
 * `query`: the search string supplied by the user.
 
 You can optionally [filter autocomplete results](autocomplete-entities.md#filter-autocomplete-results).
@@ -55,9 +55,9 @@ Each object in the `results` list includes these properties:
 * `id` (string): The [OpenAlex ID](../get-single-entities/#the-openalex-id) for this result entity.
 * `external_id` (string): The [Canonical External ID](../get-single-entities/#canonical-external-ids) for this result entity.
 * `display_name` (string): The entity's `display_name` property.
-* `entity_type` (string): The entity's type: `author`, `concept`, `institution`, `venue`, or `work`.
+* `entity_type` (string): The entity's type: `author`, `concept`, `institution`, `source`, `publisher`, `funder`, or `work`.
 * `cited_by_count` (integer): The entity's `cited_by_count` property. For works this is simply the number of incoming citations. For other entities, it's the _sum_ of incoming citations for all the works linked to that entity.&#x20;
-* `works_count` (integer): The number of works created by an `author`, `concept`, `institution`, or `venue`. For entity type `work` it's always null.
+* `works_count` (integer): The number of works associated with the entity. For entity type `work` it's always null.
 * `hint`: Some extra information that can help identify the right item. Differs by entity type.
 
 ### The `hint` property
@@ -68,7 +68,7 @@ The content of the `hint` property varies depending on what kind of entity you'r
 
 * `Work`: The work's authors' display names, concatenated. e.g. "R. Alexander Pyron, John J. Wiens"
 * `Author`:  The title and year of the Author's most cited work, e.g. "Touch screen car dashboards as serious danger for causing traffic accidents (2019)"
-* `Venue`: The publisher, e.g. "Oxford University Press"
+* `Source`: The `host_organization`, e.g. "Oxford University Press"
 * `Institution`: The institution's location, e.g. "Gainesville, USA"
 * `Concept`: The Concept's [description](../../api-entities/concepts/concept-object.md#description), e.g. "the study of relation between plant species and genera"
 
@@ -79,7 +79,7 @@ You can change the author hint to the author's [last known institution](../../ap
 [Canonical External IDs](../get-single-entities/#canonical-external-ids) and [OpenAlex IDs](../get-single-entities/#the-openalex-id) are detected within autocomplete queries and matched to the appropriate record if it exists. For example:
 
 * The query [`https://api.openalex.org/autocomplete?q=https://orcid.org/0000-0002-7436-3176`](https://api.openalex.org/autocomplete?q=https://orcid.org/0000-0002-7436-3176) will search for the author with ORCID ID `https://orcid.org/0000-0002-7436-3176` and return 0 records if it does not exist.
-* The query [`https://api.openalex.org/autocomplete/venues?q=V49861241`](https://api.openalex.org/autocomplete/venues?q=V49861241) will search for the venue with OpenAlex ID `https://openalex.org/V49861241` and return 0 records if it does not exist.
+* The query [`https://api.openalex.org/autocomplete/sources?q=S49861241`](https://api.openalex.org/autocomplete/sources?q=S49861241) will search for the source with OpenAlex ID `https://openalex.org/S49861241` and return 0 records if it does not exist.
 
 ## Filter autocomplete results
 
