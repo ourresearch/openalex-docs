@@ -7,3 +7,4 @@ redirects:
     about-the-data/concept: api-entities/concepts/README.md
     api/api-tutorial: additional-help/tutorials/README.md
     api-entities/venues: api-entities/sources/README.md
+    faq: additional-help/faq.md
