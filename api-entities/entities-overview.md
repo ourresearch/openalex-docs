@@ -8,7 +8,7 @@ Learn more about the OpenAlex entities:
 
 * [Works](works/): Scholarly documents like journal articles, books, datasets, and theses
 * [Authors](authors/): People who create works
-* [Sources](venues/): Where works are hosted (such as journals, conferences, and repositories)
+* [Sources](sources/): Where works are hosted (such as journals, conferences, and repositories)
 * [Institutions](institutions/): Universities and other organizations to which authors claim affiliations
 * [Concepts](concepts/): Topics assigned to works
 * [Publishers](publishers/): Companies and organizations that distribute works

@@ -39,7 +39,7 @@ apc_prices: [
 
 _Integer:_ The source's article processing charge in US Dollars, if available from [DOAJ](https://doaj.org/).
 
-The `apc_usd` value is calculated by taking the APC price (see [`apc_prices`](venue-object.md#apc\_prices)) with a currency of USD if it is available. If it's not available, we convert the first available value from `apc_prices` into USD, using recent exchange rates.
+The `apc_usd` value is calculated by taking the APC price (see [`apc_prices`](source-object.md#apc\_prices)) with a currency of USD if it is available. If it's not available, we convert the first available value from `apc_prices` into USD, using recent exchange rates.
 
 ```json
 apc_usd: 5200
@@ -47,7 +47,7 @@ apc_usd: 5200
 
 ### `cited_by_count`
 
-_Integer:_ The total number of [`Works`](../works/work-object.md) that cite a `Work` hosted in this source.
+_Integer:_ The total number of [`Works`](../works/work-object/) that cite a `Work` hosted in this source.
 
 ```json
 cited_by_count: 133702 
@@ -63,7 +63,7 @@ country_code: "GB"
 
 ### `counts_by_year`
 
-_List:_ [`works_count`](venue-object.md#works\_count) and [`cited_by_count`](venue-object.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this source started hosting, and how many times _any_ work in this source got cited.
+_List:_ [`works_count`](source-object.md#works\_count) and [`cited_by_count`](source-object.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this source started hosting, and how many times _any_ work in this source got cited.
 
 If the source was founded less than ten years ago, there will naturally be fewer than ten years in this list. Years with zero citations and zero works have been removed so you will need to add those  in if you need them.
 
@@ -110,7 +110,7 @@ homepage_url: "http://www.peerj.com/"
 
 ### `host_organization`
 
-_String:_ The host organization for this source as an [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). This will be an [`Institution.id`](../institutions/institution-object.md#id) if the source is a repository, and a [`Publisher.id`](../publishers/publisher-object.md#id) if the source is a journal, conference, or eBook platform (based on the [`type`](venue-object.md#type) field).
+_String:_ The host organization for this source as an [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). This will be an [`Institution.id`](../institutions/institution-object.md#id) if the source is a repository, and a [`Publisher.id`](../publishers/publisher-object.md#id) if the source is a journal, conference, or eBook platform (based on the [`type`](source-object.md#type) field).
 
 ```json
 id: "https://openalex.org/P4310320595"
@@ -149,10 +149,10 @@ id: "https://openalex.org/S1983995261"
 _Object:_ All the external identifiers that we know about for this source. IDs are expressed as URIs whenever possible. Possible ID types:
 
 * `fatcat` (_String_: this source's [Fatcat](https://fatcat.wiki/) ID)
-* `issn` (_List:_ a list of this source's ISSNs. Same as [`Source.issn`](venue-object.md#issn))
-* `issn_l` (_String:_ this source's ISSN-L. Same as [`Source.issn_l`](venue-object.md#issn\_l))
+* `issn` (_List:_ a list of this source's ISSNs. Same as [`Source.issn`](source-object.md#issn))
+* `issn_l` (_String:_ this source's ISSN-L. Same as [`Source.issn_l`](source-object.md#issn\_l))
 * `mag`  (_Integer:_ this source's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `openalex` (_String:_ this source's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Source.id`](venue-object.md#id))
+* `openalex` (_String:_ this source's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Source.id`](source-object.md#id))
 * `wikidata` (_String_: this source's [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main\_Page) ID)
 
 {% hint style="info" %}
@@ -192,7 +192,7 @@ is_oa: true
 
 ### `issn`
 
-_List:_ The [ISSNs](https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number) used by this source. Many publications have multiple ISSNs ([see above](venue-object.md#issn\_l)), so [ISSN-L](venue-object.md#issn\_l) should be used when possible.
+_List:_ The [ISSNs](https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number) used by this source. Many publications have multiple ISSNs ([see above](source-object.md#issn\_l)), so [ISSN-L](source-object.md#issn\_l) should be used when possible.
 
 ```json
 issn: ["2167-8359"]
@@ -208,16 +208,6 @@ ISSN is a global and unique ID for serial publications. However, different media
 issn_l: "2167-8359"
 ```
 
-### `publisher` (deprecated)
-
-This field is deprecated in favor of [`host_organization`](venue-object.md#host\_organization) and will be removed on March 6th, 2023.&#x20;
-
-_String:_ The name of this source's publisher. Publisher is a tricky category, as journals often change publishers, publishers merge, publishers have subsidiaries ("imprints"), and of course no one is consistent in their naming. In the future, we plan to roll out support for a more structured publisher field, but for now it's just a string.
-
-```json
-publisher: "Peerj"
-```
-
 ### societies
 
 _Array:_ Societies on whose behalf the source is published and maintained, obtained from our [crowdsourced list](https://blog.ourresearch.org/society-list/). Thanks!&#x20;
@@ -231,16 +221,34 @@ societies: [
 ]
 ```
 
+### `summary_stats`
+
+_Object:_ Citation metrics for this source
+
+* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this source. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
+* `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this source.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this source.
+
+While the _h_-index and the i-10 index are normally author-level metrics, they can be calculated for any set of papers, so we include them for sources.
+
+```json
+summary_stats: {
+    2yr_mean_citedness: 1.5295340589458237,
+    h_index: 105,
+    i10_index: 5045
+}
+```
+
 ### `type`
 
 _String:_ The type of source, which will be one of the following from the Type column:
 
-| Type             | Wikidata ID                                          | How it's assigned                                                                                                                    |
-| ---------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `journal`        | [Q737498](https://www.wikidata.org/wiki/Q737498)     | The source is an academic journal with an [ISSN](venue-object.md#issn).                                                              |
-| `repository`     | [Q66656823](https://www.wikidata.org/wiki/Q66656823) | The source is a disciplinary or institutional repository.                                                                            |
-| `conference`     | [Q47258130](https://www.wikidata.org/wiki/Q47258130) | The source publishes Works with [`type`](../works/work-object.md#type) "Proceedings", "Proceedings Series" or "Proceedings Article". |
-| `ebook platform` | [Q1294318](https://www.wikidata.org/wiki/Q1294318)   | The source publishes Works with [`type`](../works/work-object.md#type) containing "book", e.g. "Book Chapter".                       |
+| Type             | Wikidata ID                                          | How it's assigned                                                                                                                  |
+| ---------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `journal`        | [Q737498](https://www.wikidata.org/wiki/Q737498)     | The source is an academic journal with an [ISSN](source-object.md#issn).                                                            |
+| `repository`     | [Q66656823](https://www.wikidata.org/wiki/Q66656823) | The source is a disciplinary or institutional repository.                                                                          |
+| `conference`     | [Q47258130](https://www.wikidata.org/wiki/Q47258130) | The source publishes Works with [`type`](../works/work-object/#type) "Proceedings", "Proceedings Series" or "Proceedings Article". |
+| `ebook platform` | [Q1294318](https://www.wikidata.org/wiki/Q1294318)   | The source publishes Works with [`type`](../works/work-object/#type) containing "book", e.g. "Book Chapter".                       |
 
 ```json
 type: "journal" 
@@ -261,12 +269,12 @@ _String:_ A URL that will get you a list of all this source's `Works`.
 We express this as an API URL (instead of just listing the works themselves) because sometimes a source's publication list is too long to reasonably fit into a single `Source` object.
 
 ```json
-works_api_url: "https://api.openalex.org/works?filter=host_venue.id:V1983995261",
+works_api_url: "https://api.openalex.org/works?filter=primary_location.source.id:S1983995261",
 ```
 
 ### `works_count`
 
-_Integer:_ The number of [`Works`](../works/work-object.md) this this source hosts.
+_Integer:_ The number of [`Works`](../works/work-object/) this source hosts.
 
 ```json
 works_count: 20184 
@@ -307,11 +315,11 @@ x_concepts: [
 
 The `DehydratedSource` is stripped-down `Source` object, with most of its properties removed to save weight. Its only remaining properties are:
 
-* [`display_name`](venue-object.md#display\_name)
-* [`host_organization`](venue-object.md#host\_organization)
-* [`host_organization_lineage`](venue-object.md#host\_organization\_lineage)
-* [`host_organization_name`](venue-object.md#host\_organization\_name)
-* [`id`](venue-object.md#id)
-* [`issn`](venue-object.md#issn)
-* [`issn_l`](venue-object.md#issn\_l)
-* [`type`](venue-object.md#type)
+* [`display_name`](source-object.md#display\_name)
+* [`host_organization`](source-object.md#host\_organization)
+* [`host_organization_lineage`](source-object.md#host\_organization\_lineage)
+* [`host_organization_name`](source-object.md#host\_organization\_name)
+* [`id`](source-object.md#id)
+* [`issn`](source-object.md#issn)
+* [`issn_l`](source-object.md#issn\_l)
+* [`type`](source-object.md#type)

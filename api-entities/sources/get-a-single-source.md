@@ -5,7 +5,7 @@ It's easy to get a source from from the API with: `/sources/<entity_id>`. Here's
 * Get the source with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `S137773608`: \
   [https://api.openalex.org/sources/S137773608](https://api.openalex.org/sources/S137773608)
 
-That will return an [`Source`](venue-object.md) object, describing everything OpenAlex knows about the source with that ID:
+That will return an [`Source`](source-object.md) object, describing everything OpenAlex knows about the source with that ID:
 
 ```json
 {

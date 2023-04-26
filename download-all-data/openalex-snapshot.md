@@ -8,7 +8,7 @@ If you've worked with a dataset like this before, the [snapshot data format](sna
 
 The rest of this guide will tell you how to (a) download the snapshot and (b) upload it to your own database. We’ll cover two general approaches:
 
-* Load the intact OpenAlex records to a data warehouse (we’ll use [BigQuery](https://cloud.google.com/bigquery) as an example) and use native JSON functions to query the [Work](../api-entities/works/work-object/), [Author](../api-entities/authors/author-object.md), [Source](../api-entities/venues/venue-object.md), [Institution](../api-entities/institutions/institution-object.md), [Concept](../api-entities/concepts/concept-object.md), and [Publisher](../api-entities/publishers/publisher-object.md) objects directly.
+* Load the intact OpenAlex records to a data warehouse (we’ll use [BigQuery](https://cloud.google.com/bigquery) as an example) and use native JSON functions to query the [Work](../api-entities/works/work-object/), [Author](../api-entities/authors/author-object.md), [Source](../api-entities/sources/source-object.md), [Institution](../api-entities/institutions/institution-object.md), [Concept](../api-entities/concepts/concept-object.md), and [Publisher](../api-entities/publishers/publisher-object.md) objects directly.
 * Flatten the records into a normalized schema in a relational database (we’ll use [PostgreSQL](https://www.postgresql.org/)) while preserving the relationships between objects.
 
 We'll assume you're initializing a fresh snapshot. To keep it up to date, you'll have to take the information from [Downloading updated Entities](snapshot-data-format.md#downloading-updated-entities) and generalize from the steps in the guide.

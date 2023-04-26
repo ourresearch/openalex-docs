@@ -1,6 +1,6 @@
 # Search sources
 
-The best way to search for sources is to use the `search` query parameter, which searches across [`display_name`](venue-object.md#display\_name), [`alternate_titles`](venue-object.md#alternate\_titles), and [`abbreviated_title`](venue-object.md#abbreviated\_title). Example:
+The best way to search for sources is to use the `search` query parameter, which searches across [`display_name`](source-object.md#display\_name), [`alternate_titles`](source-object.md#alternate\_titles), and [`abbreviated_title`](source-object.md#abbreviated\_title). Example:
 
 * Search for the abbreviated version of the Journal of the American Chemical Society "`jacs`":\
   [https://api.openalex.org/sources?search=jacs](https://api.openalex.org/sources?search=jacs)
@@ -18,9 +18,9 @@ You can also use search as a [filter](../../how-to-use-the-api/get-lists-of-enti
 
 The following fields can be searched as a filter within sources:
 
-| Search filter                                                      | Field that is searched                              |
-| ------------------------------------------------------------------ | --------------------------------------------------- |
-| ``[`display_name.search`](filter-venues.md#display\_name.search)`` | ``[`display_name`](venue-object.md#display\_name)`` |
+| Search filter                                                  | Field that is searched                          |
+| -------------------------------------------------------------- | ----------------------------------------------- |
+| [`display_name.search`](filter-sources.md#display\_name.search) | [`display_name`](source-object.md#display\_name) |
 
 ## Autocomplete sources
 

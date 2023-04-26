@@ -320,9 +320,9 @@ Returns: works found in the given work's [`related_works`](work-object/#related\
 
 #### `repository`
 
-Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given [source](../venues/venue-object.md), where the source is [`type: repository`](../venues/venue-object.md#type)
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given [source](../sources/source-object.md), where the source is [`type: repository`](../sources/source-object.md#type)
 
-Returns: works where the chosen [source ID](../venues/venue-object.md#id) exists within the [`locations`](work-object/#locations).
+Returns: works where the chosen [source ID](../sources/source-object.md#id) exists within the [`locations`](work-object/#locations).
 
 You can use this to find works where authors are associated with your university, but the work is not part of the university's repository. :clap:
 

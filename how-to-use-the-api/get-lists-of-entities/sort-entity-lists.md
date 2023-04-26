@@ -12,8 +12,8 @@ By default, sort direction is ascending. You can reverse this by appending `:des
 
 * All works, sorted by `cited_by_count` (highest counts first)\
   [`https://api.openalex.org/works?sort=cited_by_count:desc`](https://api.openalex.org/works?sort=cited\_by\_count:desc)
-* All venues, in alphabetical order by title:\
-  [`https://api.openalex.org/venues?sort=display_name`](https://api.openalex.org/venues?sort=display\_name)
+* All sources, in alphabetical order by title:\
+  [`https://api.openalex.org/sources?sort=display_name`](https://api.openalex.org/sources?sort=display\_name)
 
 You can sort by relevance\_score when searching:
 

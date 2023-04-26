@@ -48,7 +48,7 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
 * Sort sources by cited by count, descending\
   https://api.openalex.org/sources?sort=cited\_by\_count:desc
 
-Continue on to learn how you can [filter](filter-venues.md) and [search](search-venues.md) lists of sources.
+Continue on to learn how you can [filter](filter-sources.md) and [search](search-sources.md) lists of sources.
 
 ## Sample sources
 

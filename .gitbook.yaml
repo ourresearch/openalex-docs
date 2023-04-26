@@ -2,7 +2,7 @@ redirects:
     download-snapshot: download-all-data/openalex-snapshot.md
     about-the-data/work: api-entities/works/README.md
     about-the-data/author: api-entities/authors/README.md
-    about-the-data/venue: api-entities/venues/README.md
+    about-the-data/venue: api-entities/sources/README.md
     about-the-data/institution: api-entities/institutions/README.md
     about-the-data/concept: api-entities/concepts/README.md
     api/api-tutorial: additional-help/tutorials/README.md

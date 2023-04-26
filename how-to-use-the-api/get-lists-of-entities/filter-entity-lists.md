@@ -17,8 +17,8 @@ Filters are case-insensitive.&#x20;
 
 For numerical filters, use the less-than (`<`) and greater-than (`>`) symbols to filter by inequalities. Example:
 
-* Get venues that host more than 1000 works:\
-  [`https://api.openalex.org/venues?filter=works_count:>1000`](https://api.openalex.org/venues?filter=works\_count:%3E1000)
+* Get sources that host more than 1000 works:\
+  [`https://api.openalex.org/sources?filter=works_count:>1000`](https://api.openalex.org/sources?filter=works\_count:%3E1000)
 
 Some attributes have special filters that act as syntactic sugar around commonly-expressed inequalities: for example, the `from_publication_date` filter on `works`. See the endpoint-specific documentation below for more information. Example:&#x20;
 
@@ -73,6 +73,6 @@ The filters for each entity can be found here:
 
 * [Works](../../api-entities/works/filter-works.md)
 * [Authors](../../api-entities/authors/filter-authors.md)
-* [Venues](../../api-entities/venues/filter-venues.md)
+* [sources](../../api-entities/sources/filter-sources.md)
 * [Institutions](../../api-entities/institutions/filter-institutions.md)
 * [Concepts](../../api-entities/concepts/filter-concepts.md)

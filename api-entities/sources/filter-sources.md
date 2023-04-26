@@ -11,26 +11,26 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 
 ### `/sources` attribute filters
 
-You can filter using these attributes of the `Source` entity object (click each one to view their documentation on the [`Source`](venue-object.md) object page):
+You can filter using these attributes of the `Source` entity object (click each one to view their documentation on the [`Source`](source-object.md) object page):
 
-* [`apc_prices.currency`](venue-object.md#apc\_prices)
-* [`apc_prices.price`](venue-object.md#apc\_prices)
-* [`apc_usd`](venue-object.md#apc\_usd)
-* [`cited_by_count`](venue-object.md#cited\_by\_count)
-* [`country_code`](venue-object.md#country\_code)
-* [`host_organization`](venue-object.md#host\_organization) (alias: `host_organization.id`)
-* [`host_organization_lineage`](venue-object.md#host_organization_lineage) — Use this with a publisher ID to find works from that publisher and all of its children.
-* [`ids.openalex`](venue-object.md#ids) (alias: `openalex`)
-* [`is_in_doaj`](venue-object.md#is\_in\_doaj)
-* [`is_oa`](venue-object.md#is\_oa)
-* [`issn`](venue-object.md#issn)
-* [`publisher`](venue-object.md#publisher) — Requires exact match. Use the [`host_organization_lineage`](venue-object.md#host_organization_lineage) filter instead if you want to find works from a publisher and all of its children.
-* [`summary_stats.2yr_mean_citedness`](venue-object.md#summary_stats) (accepts float, null, !null, can use range queries such as < >)
-* [`summary_stats.h_index`](venue-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
-* [`summary_stats.i10_index`](venue-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
-* [`type`](venue-object.md#type)
-* [`works_count`](venue-object.md#works\_count)
-* [`x_concepts.id`](venue-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
+* [`apc_prices.currency`](source-object.md#apc\_prices)
+* [`apc_prices.price`](source-object.md#apc\_prices)
+* [`apc_usd`](source-object.md#apc\_usd)
+* [`cited_by_count`](source-object.md#cited\_by\_count)
+* [`country_code`](source-object.md#country\_code)
+* [`host_organization`](source-object.md#host\_organization) (alias: `host_organization.id`)
+* [`host_organization_lineage`](source-object.md#host_organization_lineage) — Use this with a publisher ID to find works from that publisher and all of its children.
+* [`ids.openalex`](source-object.md#ids) (alias: `openalex`)
+* [`is_in_doaj`](source-object.md#is\_in\_doaj)
+* [`is_oa`](source-object.md#is\_oa)
+* [`issn`](source-object.md#issn)
+* [`publisher`](source-object.md#publisher) — Requires exact match. Use the [`host_organization_lineage`](source-object.md#host_organization_lineage) filter instead if you want to find works from a publisher and all of its children.
+* [`summary_stats.2yr_mean_citedness`](source-object.md#summary_stats) (accepts float, null, !null, can use range queries such as < >)
+* [`summary_stats.h_index`](source-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
+* [`summary_stats.i10_index`](source-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
+* [`type`](source-object.md#type)
+* [`works_count`](source-object.md#works\_count)
+* [`x_concepts.id`](source-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
 
 {% hint style="info" %}
 Want to filter by `host_organization.display_name`? This is a two-step process:
@@ -43,7 +43,7 @@ To learn more about why we do it this way, [see here.](../works/search-works.md#
 
 ### `/sources` convenience filters
 
-These filters aren't attributes of the [`Source`](venue-object.md) object, but they're included to address some common use cases:
+These filters aren't attributes of the [`Source`](source-object.md) object, but they're included to address some common use cases:
 
 #### `continent`
 
@@ -58,13 +58,13 @@ Returns: sources that are associated with the chosen continent.
 
 Value: a search string
 
-Returns: sources with a [`display_name`](venue-object.md#display\_name) containing the given string; see the [search page](search-venues.md) for details.
+Returns: sources with a [`display_name`](source-object.md#display\_name) containing the given string; see the [search page](search-sources.md) for details.
 
 * Get sources with names containing "Neurology":\
   [`https://api.openalex.org/sources?filter=display_name.search:Neurology`](https://api.openalex.org/sources?filter=display\_name.search:Neurology)``
 
 {% hint style="info" %}
-In most cases, you should use the [`search`](search-venues.md#venues-full-search) parameter instead of this filter because it uses a better search algorithm.
+In most cases, you should use the [`search`](search-sources.md#sources-full-search) parameter instead of this filter because it uses a better search algorithm.
 {% endhint %}
 
 #### `has_issn`

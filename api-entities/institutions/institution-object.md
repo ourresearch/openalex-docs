@@ -51,7 +51,7 @@ country_code: "US"
 
 ### `counts_by_year`
 
-_List:_ [`works_count`](institution-object.md#works\_count) and [`cited_by_count`](institution-object.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this venue started hosting, and how many times _any_ work in this venue got cited.
+_List:_ [`works_count`](institution-object.md#works\_count) and [`cited_by_count`](institution-object.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this institution put out, and how many times _any_ work affiliated with this institution got cited.
 
 Years with zero citations and zero works have been removed so you will need to add those in if you need them.
 

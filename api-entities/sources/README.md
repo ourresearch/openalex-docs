@@ -17,7 +17,7 @@ Our information about sources comes from Crossref, the ISSN Network, and MAG. Th
 
 Several sources may host the same work. OpenAlex reports both the primary host source (generally wherever the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record) lives), and alternate host sources (like preprint repositories).
 
-Sources are linked to works via the [`works.primary_location`](../works/work-object.md#primary\_location) and [`works.location`](../works/work-object.md#locations) properties.
+Sources are linked to works via the [`works.primary_location`](../works/work-object/#primary\_location) and [`works.locations`](../works/work-object/#locations) properties.
 
 {% hint style="info" %}
 Check out the [Japanese Sources tutorial](https://github.com/ourresearch/openalex-api-tutorials/blob/main/notebooks/institutions/japan\_sources.ipynb), a Jupyter notebook showing how to use Python and the API to learn about all of the sources in a country.
@@ -27,9 +27,9 @@ Check out the [Japanese Sources tutorial](https://github.com/ourresearch/openale
 
 Learn more about what you can do with sources:
 
-* [The Source object](venue-object.md)
-* [Get a single source](get-a-single-venue.md)
-* [Get lists of sources](get-lists-of-venues.md)
-* [Filter sources](filter-venues.md)
-* [Search sources](search-venues.md)
-* [Group sources](group-venues.md)
+* [The Source object](source-object.md)
+* [Get a single source](get-a-single-source.md)
+* [Get lists of sources](get-lists-of-sources.md)
+* [Filter sources](filter-sources.md)
+* [Search sources](search-sources.md)
+* [Group sources](group-sources.md)
