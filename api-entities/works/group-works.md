@@ -47,6 +47,8 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`has_references`](filter-works.md#has\_references)
 * [`is_retracted`](work-object/#is\_retracted)
 * [`is_paratext`](work-object/#is\_paratext)
+* [`locations.source.host_institutions_lineage`](filter-works.md#locationssourcehost_institution_lineage)
+* [`locations.source.publisher_lineage`](filter-works.md#locationssourcepublisher_lineage)
 * [`open_access.any_repository_has_fulltext`](work-object/#open\_access)
 * [`open_access.is_oa`](work-object/#is\_oa-1) (alias `is_oa`)
 * [`open_access.oa_status`](work-object/#oa\_status) (alias `oa_status`)

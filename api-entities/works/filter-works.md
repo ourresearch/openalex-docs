@@ -3,7 +3,7 @@
 It's easy to filter works with the `filter` parameter:
 
 * Get works where the publication year is 2020\
-  [https://api.openalex.org/works?filter=publication\_year:2020](https://api.openalex.org/works?filter=publication\_year:2020)
+  [`https://api.openalex.org/works?filter=publication\_year:2020`](https://api.openalex.org/works?filter=publication\_year:2020)
 
 In this example the filter is `publication_year` and the value is 2020.
 
@@ -76,7 +76,7 @@ Value: a search string
 
 Returns: works whose abstract includes the given string. See the [search page](../../how-to-use-the-api/get-lists-of-entities/search-entities.md) for details on the search algorithm used.
 
-* Get works with abstracts that mention "artificial intelligence": [`https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence`](https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence)\`\`
+* Get works with abstracts that mention "artificial intelligence": [`https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence`](https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence)
 
 #### `authors_count`
 
@@ -85,7 +85,7 @@ Value: an Integer
 Returns: works with the chosen number of [`authorships`](work-object/#authorships) objects (authors). You can use the inequality filter to select a range, such as `authors_count:>5`_._
 
 * Get works that have exactly one author\
-  [https://api.openalex.org/works?filter=authors\_count:1](https://api.openalex.org/works?filter=authors\_count:1)
+  [`https://api.openalex.org/works?filter=authors\_count:1`](https://api.openalex.org/works?filter=authors\_count:1)
 
 #### `authorships.institutions.continent` \_\_ (alias: `institutions.continent`)
 
@@ -94,7 +94,7 @@ Value: a String with a valid [continent filter](../geo/continents.md#filter-by-c
 Returns: works where at least _one_ of the author's institutions is in the chosen continent.
 
 * Get works where at least one author's institution in each work is located in Europe\
-  [https://api.openalex.org/works?filter=authorships.institutions.continent:europe](https://api.openalex.org/works?filter=authorships.institutions.continent:europe)
+  [`https://api.openalex.org/works?filter=authorships.institutions.continent:europe`](https://api.openalex.org/works?filter=authorships.institutions.continent:europe)
 
 #### `authorships.institutions.is_global_south` \_\_ (alias: `institutions.is_global_south`)
 
@@ -103,7 +103,7 @@ Value: a Boolean (`true` or `false`)
 Returns: works where at least _one_ of the author's institutions is in the Global South ([read more](../geo/regions.md#global-south)).
 
 * Get works where at least one author's institution is in the Global South\
-  [https://api.openalex.org/works?filter=authorships.institutions.is\_global\_south:true](https://api.openalex.org/works?filter=authorships.institutions.is\_global\_south:true)
+  [`https://api.openalex.org/works?filter=authorships.institutions.is\_global\_south:true`](https://api.openalex.org/works?filter=authorships.institutions.is\_global\_south:true)
 
 #### `best_open_version`
 
@@ -123,8 +123,8 @@ Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-opena
 
 Returns: works found in the given work's [`referenced_works`](work-object/#referenced\_works) section. You can think of this as **outgoing citations**.
 
-* Get works cited by [https://openalex.org/W2766808518](https://openalex.org/W2766808518):\
-  [`https://api.openalex.org/works?filter=cited_by:W2766808518`](https://api.openalex.org/works?filter=cited\_by:W2766808518)\`\`
+* Get works cited by [`https://openalex.org/W2766808518`](https://openalex.org/W2766808518):\
+  [`https://api.openalex.org/works?filter=cited_by:W2766808518`](https://api.openalex.org/works?filter=cited\_by:W2766808518)
 
 #### `cites`
 
@@ -132,7 +132,7 @@ Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-opena
 
 Returns: works that cite the given work. This is works that have the given OpenAlex ID in the [`referenced_works`](work-object/#referenced\_works) section. You can think of this as **incoming citations**.
 
-* Get works that cite [https://openalex.org/W2741809807](https://openalex.org/W2741809807): [`https://api.openalex.org/works?filter=cites:W2741809807`](https://api.openalex.org/works?filter=cites:W2741809807)\`\`
+* Get works that cite [`https://openalex.org/W2741809807`](https://openalex.org/W2741809807): [`https://api.openalex.org/works?filter=cites:W2741809807`](https://api.openalex.org/works?filter=cites:W2741809807)\`\`
 
 {% hint style="info" %}
 The number of results returned by this filter may be slightly higher than the work's[`cited_by_count`](work-object/#cited\_by\_count)due to a timing lag in updating that field.
@@ -145,7 +145,7 @@ Value: an Integer
 Returns: works with the chosen number of [`concepts`](work-object/#concepts).
 
 * Get works with at least three concepts assigned\
-  [https://api.openalex.org/works?filter=concepts\_count:>2](https://api.openalex.org/works?filter=concepts\_count:%3E2)
+  [`https://api.openalex.org/works?filter=concepts\_count:>2`](https://api.openalex.org/works?filter=concepts\_count:%3E2)
 
 #### `display_name.search` (alias: `title.search`)
 
@@ -292,14 +292,32 @@ Returns: works that have or lack [`referenced_works`](work-object/#referenced\_w
 * Get the works that have references:\
   [`https://api.openalex.org/works?filter=has_references:true`](https://api.openalex.org/works?filter=has\_references:true)
 
+#### `locations.source.host_institution_lineage`
+
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for an [`Institution`](../institutions/README.md)
+
+Returns: works where the given institution ID is in [`locations.source.host_organization_lineage`](../sources/source-object.md#host_organization_lineage)
+
+* Get the works that have `https://openalex.org/I205783295` in their [`host_organization_lineage`]:\
+  [`https://api.openalex.org/works?filter=locations.source.host_institution_lineage:https://openalex.org/I205783295`](https://api.openalex.org/works?filter=locations.source.host_institution_lineage:https://openalex.org/I205783295)
+
+#### `locations.source.publisher_lineage`
+
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a [`Publisher`](../publishers/README.md)
+
+Returns: works where the given publisher ID is in [`locations.source.host_organization_lineage`](../sources/source-object.md#host_organization_lineage)
+
+* Get the works that have `https://openalex.org/P4310320547` in their [`host_organization_lineage`]:\
+  [`https://api.openalex.org/works?filter=locations.source.publisher_lineage:https://openalex.org/P4310320547`](https://api.openalex.org/works?filter=locations.source.publisher_lineage:https://openalex.org/P4310320547)
+
 #### `primary_location.source.has_issn`
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works where the [primary\_location](work-object/#primary\_location) has at least one ISSN assigned.
+Returns: works where the [`primary\_location`](work-object/#primary\_location) has at least one ISSN assigned.
 
 * Get the works that have an ISSN within the primary location:\
-  [`https://api.openalex.org/works?filter=primary_location.source.has_issn:true`](https://api.openalex.org/works?filter=primary\_location.source.has\_issn:true)\`\`
+  [`https://api.openalex.org/works?filter=primary_location.source.has_issn:true`](https://api.openalex.org/works?filter=primary\_location.source.has\_issn:true)
 
 #### `raw_affiliation_string.search`
 
