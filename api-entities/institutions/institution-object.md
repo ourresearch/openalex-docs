@@ -208,6 +208,23 @@ international: {
 }
 ```
 
+### `repositories`
+
+_List:_  Repositories ([`Sources`](../sources/README.md) with `type: repository`) that have this institution as their [`host_organization`](../sources/source-object.md#host_organization)
+
+```json
+repositories: [
+    {
+        id: "https://openalex.org/S4306402521",
+        display_name: "University of Minnesota Digital Conservancy (University of Minnesota)",
+        host_organization: "https://openalex.org/I130238516",
+        host_organization_name: "University of Minnesota",
+        host_organization_lineage: ["https://openalex.org/I130238516"]
+    }
+    // and so forth
+]
+```
+
 ### `ror`
 
 _String:_ The [ROR](https://ror.org/) ID for this institution. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for institutions.
