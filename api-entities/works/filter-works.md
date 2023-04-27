@@ -35,6 +35,8 @@ You can filter using these attributes of the [`Work`](work-object/) object (clic
 * [`corresponding_author_ids`](work-object/#corresponding_author_ids)
 * [`corresponding_institution_ids`](work-object/#corresponding_institution_ids)
 * [`doi`](work-object/#title)
+* [`grants.award_id`](work-object/#grants)
+* [`grants.funder`](work-object/#grants)
 * [`ids.pmcid`](work-object/#ids)
 * [`ids.pmid`](work-object/#ids) (alias: `pmid`)
 * [`ids.openalex`](work-object/#ids) (alias: `openalex`)

@@ -38,6 +38,8 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`concepts.wikidata`](work-object/#concepts)
 * [`corresponding_author_ids`](work-object/#corresponding\_author\_ids)
 * [`corresponding_institution_ids`](work-object/#corresponding\_institution\_ids)
+* [`grants.award_id`](work-object/#grants)
+* [`grants.funder`](work-object/#grants)
 * [`has_abstract`](filter-works.md#has\_abstract)
 * [`has_doi`](filter-works.md#has\_doi)
 * [`has_orcid`](filter-works.md#has\_orcid)

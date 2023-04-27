@@ -260,6 +260,27 @@ Occasionally, a work has more than one DOI--for example, there might be one DOI 
 doi: "https://doi.org/10.7717/peerj.4375"
 ```
 
+### `grants`
+
+_List:_ List of grant objects, which include the [`Funder`](../../funders/README.md) and the award ID, if available. Our grants data comes from Crossref, and is currently fairly limited.
+
+```json
+grants: [
+    // grant for which we have the grant details:
+    {
+        funder: "https://openalex.org/F4320306076",
+        funder_display_name: "National Science Foundation",
+        award_id: "ABI 1661218",
+    },
+    // grant for which we do not have the details:
+    {
+        funder: "https://openalex.org/F4320306084",
+        funder_display_name: "U.S. Department of Energy",
+        award_id: null,
+    },
+]
+```
+
 ### `host_venue` (deprecated)
 
 _This field is being deprecated in favor of_ [_`primary_location`_](./#primary\_location) _and will be removed March 6th, 2023._
