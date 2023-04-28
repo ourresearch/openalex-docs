@@ -24,7 +24,7 @@ The following fields can be searched within works:
 | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
 | ``[`abstract.search`](filter-works.md#abstract.search)``                             | ``[`abstract_inverted_index`](work-object/#abstract\_inverted\_index)`` |
 | ``[`display_name.search`](filter-works.md#display\_name.search-alias-title.search)`` | ``[`display_name`](work-object/#display\_name)``                        |
-| ``[`fulltext.search`](filter-works.md#fulltext.search)``                             | fulltext via [`n-grams`](get-n-grams.md)``                              |
+| ``[`fulltext.search`](filter-works.md#fulltext.search)``                             | fulltext via [`n-grams`](get-n-grams.md)                                |
 | ``[`title.search`](filter-works.md#display\_name.search-alias-title.search)``        | ``[`display_name`](work-object/#display\_name)``                        |
 
 ### Why can't I search by name of related entity (author name, institution name, etc.)?
