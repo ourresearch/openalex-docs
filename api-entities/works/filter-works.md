@@ -294,6 +294,12 @@ Returns: works that have or lack [`referenced_works`](work-object/#referenced\_w
 * Get the works that have references:\
   [`https://api.openalex.org/works?filter=has_references:true`](https://api.openalex.org/works?filter=has\_references:true)
 
+#### `journal`
+
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given [source](../sources/source-object.md), where the source is [`type: journal`](../sources/source-object.md#type)
+
+Returns: works where the chosen [source ID](../sources/source-object.md#id) is the [`primary_location.source`](work-object/#primary_location).
+
 #### `locations.source.host_institution_lineage`
 
 Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for an [`Institution`](../institutions/README.md)
