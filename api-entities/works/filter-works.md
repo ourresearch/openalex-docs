@@ -306,7 +306,7 @@ Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-opena
 
 Returns: works where the given institution ID is in [`locations.source.host_organization_lineage`](../sources/source-object.md#host_organization_lineage)
 
-* Get the works that have `https://openalex.org/I205783295` in their [`host_organization_lineage`]:\
+* Get the works that have `https://openalex.org/I205783295` in their `host_organization_lineage`:\
   [`https://api.openalex.org/works?filter=locations.source.host_institution_lineage:https://openalex.org/I205783295`](https://api.openalex.org/works?filter=locations.source.host_institution_lineage:https://openalex.org/I205783295)
 
 #### `locations.source.publisher_lineage`
@@ -315,14 +315,14 @@ Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-opena
 
 Returns: works where the given publisher ID is in [`locations.source.host_organization_lineage`](../sources/source-object.md#host_organization_lineage)
 
-* Get the works that have `https://openalex.org/P4310320547` in their [`host_organization_lineage`]:\
+* Get the works that have `https://openalex.org/P4310320547` in their `publisher_lineage`:\
   [`https://api.openalex.org/works?filter=locations.source.publisher_lineage:https://openalex.org/P4310320547`](https://api.openalex.org/works?filter=locations.source.publisher_lineage:https://openalex.org/P4310320547)
 
 #### `primary_location.source.has_issn`
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works where the [`primary\_location`](work-object/#primary\_location) has at least one ISSN assigned.
+Returns: works where the [`primary_location`](work-object/#primary_location) has at least one ISSN assigned.
 
 * Get the works that have an ISSN within the primary location:\
   [`https://api.openalex.org/works?filter=primary_location.source.has_issn:true`](https://api.openalex.org/works?filter=primary\_location.source.has\_issn:true)
@@ -352,7 +352,7 @@ Returns: works where the chosen [source ID](../sources/source-object.md#id) exis
 
 You can use this to find works where authors are associated with your university, but the work is not part of the university's repository. :clap:
 
-* Get works that are available in the University of Michigan Deep Blue repository (OpenAlex ID: https://openalex.org/S4306400393)\
+* Get works that are available in the University of Michigan Deep Blue repository (OpenAlex ID: `https://openalex.org/S4306400393`)\
   [`https://api.openalex.org/works?filter=repository:S4306400393`](https://api.openalex.org/works?filter=repository:S4306400393)
 * Get works where at least one author is associated with the University of Michigan, but the works are not found in the University of Michigan Deep Blue repository\
   [`https://api.openalex.org/works?filter=institutions.id:I27837315,repository:!S4306400393`](https://api.openalex.org/works?filter=institutions.id:I27837315,repository:!S4306400393)
