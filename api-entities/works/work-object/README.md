@@ -76,6 +76,25 @@ authorships: [
 ]
 ```
 
+### `apc_payment`
+
+_Object:_ Objects containing information about the APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)) for this work. The object contains:
++ `price`: _Integer_
++ `currency`: _String_
++ `provenance`: _String_ — either `openapc` or `doaj`, see below
++ `price_usd`: _Integer_ — the APC converted into USD
+
+If we can get the APC price from [OpenAPC](https://openapc.net/), we use that. Those APCs are specific to an article and are the actual APC paid by an author or institution to publish the article. As a fallback, we use the [DOAJ](https://doaj.org/) APC prices that are available in [sources](../../sources/README.md). Those are an estimate of what authors would have had to pay to publish the article, since the DOAJ apc prices apply to an entire journal.
+
+```json
+apc_payment: {
+    price: 1889,
+    currency: "EUR",
+    provenance: "openapc",
+    price_usd: 2037
+}
+```
+
 ### `best_oa_location`
 
 _Object:_ A [`Location`](location-object.md) object with the best available open access location for this work.

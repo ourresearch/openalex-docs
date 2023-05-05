@@ -26,7 +26,11 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`authorships.institutions.id`](work-object/#institutions) (alias `institutions.id`)
 * [`authorships.institutions.ror`](work-object/#institutions) (alias `institutions.ror`)
 * [`authorships.institutions.type`](work-object/#institutions) (alias `institutions.type`)
-* [`authorships.is_corresponding`](work-object/#is\_corresponding) (alias: `is_corresponding`)
+* [`authorships.is_corresponding`](./work-object/authorship-object.md#is_corresponding) (alias: `is_corresponding`): this marks whether or not we have corresponding author information for a given work
+* [`apc_payment.price`](./work-object/README.md#apc_payment)
+* [`apc_payment.currency`](./work-object/README.md#apc_payment)
+* [`apc_payment.provenance`](./work-object/README.md#apc_payment)
+* [`apc_payment.price_usd`](./work-object/README.md#apc_payment)
 * [`best_oa_location.is_oa`](work-object/#best\_oa\_location)
 * [`best_oa_location.license`](work-object/#best\_oa\_location)
 * [`best_oa_location.source.host_organization`](work-object/#best\_oa\_location)
