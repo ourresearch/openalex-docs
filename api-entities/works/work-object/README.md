@@ -45,7 +45,7 @@ Newer works are more likely to have an abstract inverted index. For example, ove
 
 _This field is being deprecated in favor of_ [_`locations`_](./#locations) _and will be removed March 6th, 2023._
 
-_List:_ List of [`HostVenue`](./#the-hostvenue-object) objects describing places this work lives. They're called "alternate" because the list doesn't include the work's canonical location; that's in [`host_venue`](./#host\_venue).&#x20;
+_List:_ List of [`HostVenue`](./#the-hostvenue-object) objects describing places this work lives. They're called "alternate" because the list doesn't include the work's canonical location; that's in [`host_venue`](./#host\_venue).
 
 ```json
 alternate_host_venues: [
@@ -108,7 +108,7 @@ _Object:_ A [`Location`](location-object.md) object with the best available open
 We score open locations to determine which is best using these factors:
 
 1. Must have is\_oa: true
-2. type_:_ "publisher" is better than "repository".
+2. type\_:\_ "publisher" is better than "repository".
 3. version: "publishedVersion" is better than "acceptedVersion", which is better than "submittedVersion".
 4. pdf\_url: A location with a direct PDF link is better than one without.
 5. repository rankings: Some major repositories like PubMed Central and arXiv are ranked above others.
@@ -163,7 +163,7 @@ cited_by_count: 382
 
 ### `concepts`
 
-_List:_ List of dehydrated [`Concept` objects](../../concepts/concept-object.md).&#x20;
+_List:_ List of dehydrated [`Concept` objects](../../concepts/concept-object.md).
 
 Each `Concept` object in the list also has one additional property:
 
@@ -196,7 +196,7 @@ concepts: [
 
 ### `corresponding_author_ids`
 
-_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) of any authors for which [authorships.is_corresponding](authorship-object.md#is_corresponding) is `true`.
+_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) of any authors for which [authorships.is\_corresponding](authorship-object.md#is\_corresponding) is `true`.
 
 ```json
 corresponding_author_ids: ["https://openalex.org/A2109306456"]
@@ -204,7 +204,7 @@ corresponding_author_ids: ["https://openalex.org/A2109306456"]
 
 ### `corresponding_institution_ids`
 
-_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) of any institutions found within an `authorship` for which [authorships.is_corresponding](authorship-object.md#is_corresponding) is `true`.
+_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) of any institutions found within an `authorship` for which [authorships.is\_corresponding](authorship-object.md#is\_corresponding) is `true`.
 
 ```json
 corresponding_institution_ids: ["https://openalex.org/I4210123613"]
@@ -212,7 +212,7 @@ corresponding_institution_ids: ["https://openalex.org/I4210123613"]
 
 ### `counts_by_year`
 
-_List:_ [`Works.cited_by_count`](./#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many times this work was cited.&#x20;
+_List:_ [`Works.cited_by_count`](./#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many times this work was cited.
 
 Any citations older than ten years old aren't included. Years with zero citations have been removed so you will need to add those in if you need them.
 
@@ -236,7 +236,7 @@ counts_by_year: [
 
 ### `created_date`
 
-_String:_ The date this `Work` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.&#x20;
+_String:_ The date this `Work` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
 
 ```json
 created_date: "2017-08-08"
@@ -262,7 +262,7 @@ doi: "https://doi.org/10.7717/peerj.4375"
 
 ### `grants`
 
-_List:_ List of grant objects, which include the [`Funder`](../../funders/README.md) and the award ID, if available. Our grants data comes from Crossref, and is currently fairly limited.
+_List:_ List of grant objects, which include the [`Funder`](../../funders/) and the award ID, if available. Our grants data comes from Crossref, and is currently fairly limited.
 
 ```json
 grants: [
@@ -283,35 +283,9 @@ grants: [
 
 ### `host_venue` (deprecated)
 
-_This field is being deprecated in favor of_ [_`primary_location`_](./#primary\_location) _and will be removed March 6th, 2023._
-
-_Object:_ A [`HostVenue`](./#the-hostvenue-object) object describing how and where this work is being hosted online.
-
-The `host_venue` is where you can find the best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work. For a peer-reviewed journal article, the best `host_venue` would be a full text published version, hosted by the publisher at the article's DOI URL.
-
-{% hint style="info" %}
-Some records don't have a `host_venue`, because they were inherited from [MAG](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/), which implemented a less complete provenance chain. We're gradually filling in these missing host venues.
+{% hint style="danger" %}
+The `host_venue` and `alternate_host_venues` properties have been deprecated in favor of [`primary_location`](./#primary\_location) and [`locations`](./#locations). `host_venue` and `alternate_host_venues` are no longer available in the Work object, and trying to access them in filters or group-bys will return an error.
 {% endhint %}
-
-```json
-host_venue: {
-    // this top stuff is the same as a dehydrated Venue object
-    id: "https://openalex.org/V1983995261",
-    issn_l: "2167-8359",
-    issn: [
-        "2167-8359"
-    ],
-    display_name: "PeerJ",
-    publisher: "PeerJ",
-    type: "journal",
-    
-    // this stuff is extra, and relates to this work at this venue
-    url: "https://doi.org/10.7717/peerj.4375",
-    is_oa: null,
-    version: null,
-    license: null
-}
-```
 
 ### `id`
 
@@ -326,8 +300,8 @@ id: "https://openalex.org/W2741809807"
 _Object:_ All the external identifiers that we know about for this work. IDs are expressed as URIs whenever possible. Possible ID types:
 
 * `doi` (_String:_ The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). Same as [`Work.doi`](./#title))
-* `mag`  (_Integer:_ the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `openalex` (_String:_ The [OpenAlex ID](broken-reference). Same as [`Work.id`](./#id))
+* `mag` (_Integer:_ the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
+* `openalex` (_String:_ The [OpenAlex ID](broken-reference/). Same as [`Work.id`](./#id))
 * `pmid` (_String:_ The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
 * `pmcid` (_String_: the [Pubmed Central identifier](https://www.ncbi.nlm.nih.gov/pmc/about/public-access-info/))
 
@@ -346,16 +320,16 @@ ids: {
 
 ### `is_paratext`
 
-_Boolean:_ True if we think this work is [paratext](https://en.wikipedia.org/wiki/Paratext).&#x20;
+_Boolean:_ True if we think this work is [paratext](https://en.wikipedia.org/wiki/Paratext).
 
-In our context, paratext is stuff that's in scholarly venue (like a journal) but is _about the venue_ rather than a scholarly work properly speaking.  Some examples and nonexamples:
+In our context, paratext is stuff that's in scholarly venue (like a journal) but is _about the venue_ rather than a scholarly work properly speaking. Some examples and nonexamples:
 
-* **yep it's paratext**: front cover, back cover, table of contents, editorial board listing, issue information,  masthead.
-* **no,  not paratext**: research paper, dataset, letters to the editor, figures
+* **yep it's paratext**: front cover, back cover, table of contents, editorial board listing, issue information, masthead.
+* **no, not paratext**: research paper, dataset, letters to the editor, figures
 
 Turns out there is a lot of paratext in registries like Crossref. That's not a bad thing... but we've found that it's good to have a way to filter it out.
 
-We determine `is_paratext` algorithmically using title heuristics.&#x20;
+We determine `is_paratext` algorithmically using title heuristics.
 
 ```json
 is_paratext: false 
@@ -363,9 +337,9 @@ is_paratext: false
 
 ### `is_retracted`
 
-_Boolean:_ True if we know this work has been retracted.&#x20;
+_Boolean:_ True if we know this work has been retracted.
 
-This field has high precision but low recall. In other words, if `is_retracted` is  `true`, the article is definitely retracted. But if `is_retracted` is `False`,  it still might be retracted, but we just don't know. This is because unfortunately, the [open sources for retraction data](https://www.crossref.org/blog/encouraging-even-greater-reporting-of-corrections-and-retractions/) aren't currently very comprehensive, and [the more comprehensive ones](https://retractionwatch.com/) aren't sufficiently open for us to use here.
+This field has high precision but low recall. In other words, if `is_retracted` is `true`, the article is definitely retracted. But if `is_retracted` is `False`, it still might be retracted, but we just don't know. This is because unfortunately, the [open sources for retraction data](https://www.crossref.org/blog/encouraging-even-greater-reporting-of-corrections-and-retractions/) aren't currently very comprehensive, and [the more comprehensive ones](https://retractionwatch.com/) aren't sufficiently open for us to use here.
 
 ```json
 is_retracted: false 
@@ -486,9 +460,9 @@ primary_location: {
 
 _String:_ The day when this work was published, formatted as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date.
 
-Where different publication dates exist, we select the earliest available date of electronic publication.&#x20;
+Where different publication dates exist, we select the earliest available date of electronic publication.
 
-This date applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.locations`](./#locations), may have been published at different (earlier) dates.&#x20;
+This date applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.locations`](./#locations), may have been published at different (earlier) dates.
 
 ```json
 publication_date: "2018-02-13"
@@ -498,7 +472,7 @@ publication_date: "2018-02-13"
 
 _Integer:_ The year this work was published.
 
-This year applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.alternate_host_venues`](./#alternate\_host\_venues), may have been published in different (earlier) years.&#x20;
+This year applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.alternate_host_venues`](./#alternate\_host\_venues), may have been published in different (earlier) years.
 
 ```json
 publication_year: 2018
@@ -506,7 +480,7 @@ publication_year: 2018
 
 ### `referenced_works`
 
-_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.&#x20;
+_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.
 
 ```json
 referenced_works: [
@@ -542,9 +516,9 @@ title: "The state of OA: a large-scale analysis of the prevalence and impact of 
 
 ### `type`
 
-_String:_ The type or genre of the work.&#x20;
+_String:_ The type or genre of the work.
 
-This field uses Crossref's "type" controlled vocabulary; you can see all possible values via the Crossref api here: [https://api.crossref.org/types](https://api.crossref.org/types).&#x20;
+This field uses Crossref's "type" controlled vocabulary; you can see all possible values via the Crossref api here: [https://api.crossref.org/types](https://api.crossref.org/types).
 
 Where possible, we just pass along Crossref's `type` value for each work. When that's impossible (eg the work isn't in Crossref), we do our best to figure out the `type` ourselves. Unfortunately the accuracy of Crossref's data for this isn't great, and ours isn't much better. We're working to develop better type classification.
 
@@ -569,7 +543,7 @@ The HostVenue object describes a given work hosted on a given venue (you can thi
 1. a dehydrated Venue object, and
 2. some extra stuff about the work.
 
-The extra stuff is important because a given work can be hosted in different ways and in different forms, depending on where it's living.&#x20;
+The extra stuff is important because a given work can be hosted in different ways and in different forms, depending on where it's living.
 
 To learn more about the dehydrated Venue object part, see the [DehydratedVenue](../../venues/venue-object.md#the-dehydratedvenue-object) docs. To learn more about the other stuff, read below:
 
@@ -583,7 +557,7 @@ is_oa: true
 
 ### `license`
 
-_String:_ The license applied to this work at this host.  Most toll-access works don't have an explicit license (they're under "all rights reserved" copyright), so this field generally has content only if `is_oa` is `true`.
+_String:_ The license applied to this work at this host. Most toll-access works don't have an explicit license (they're under "all rights reserved" copyright), so this field generally has content only if `is_oa` is `true`.
 
 ```json
 license: "cc-by"
@@ -625,7 +599,7 @@ ngram: "energy formula into a functional"
 
 ### ngram\_count
 
-_Integer:_  How many times this ngram occurred in the work.
+_Integer:_ How many times this ngram occurred in the work.
 
 ```json
 ngram_count: 1
@@ -633,7 +607,7 @@ ngram_count: 1
 
 ### ngram\_tokens
 
-_Integer:_  How many tokens are in the ngram.
+_Integer:_ How many tokens are in the ngram.
 
 ```json
 ngram_tokens: 5
@@ -641,7 +615,7 @@ ngram_tokens: 5
 
 ### term\_frequency
 
-_Float:_  How often the ngram occurred in the work.&#x20;
+_Float:_ How often the ngram occurred in the work.
 
 **Caution:** This data was taken directly from the General Index and we've not tested `term_frequency` against actual articles. You can read about their data extraction process on the [Internet Archive](https://archive.org/details/GeneralIndex) website. If you compare `term_frequency` against articles we would [like to hear](mailto:support@openalex.org) how it went!
 
@@ -657,7 +631,7 @@ The `OpenAccess` object describes access options for a given work. It's only fou
 
 _Boolean:_ `True` if any of this work's [`locations`](./#locations) has `location.is_oa=true` and `location.source.type=repository`.
 
-Use case: researchers want to track Green OA, using a definition of "any repository hosts this." OpenAlex's definition (as used in [`oa_status`](./#oa\_status)) doesn't support this, because as soon as there's a publisher-hosted copy (bronze, hybrid, or gold), oa_status is set to that publisher-hosted status.
+Use case: researchers want to track Green OA, using a definition of "any repository hosts this." OpenAlex's definition (as used in [`oa_status`](./#oa\_status)) doesn't support this, because as soon as there's a publisher-hosted copy (bronze, hybrid, or gold), oa\_status is set to that publisher-hosted status.
 
 So there's a lot of repository-hosted content that the `oa_status` can't tell you about. Our [State of OA paper](https://peerj.com/articles/4375/) calls this "shadowed Green." This feature makes it possible to track shadowed Green.
 
@@ -691,9 +665,9 @@ oa_status: "gold"
 
 ### `oa_url`
 
-_String:_ The best Open Access (OA) URL for this work.&#x20;
+_String:_ The best Open Access (OA) URL for this work.
 
-Although there are [many ways to define OA](https://peerj.com/articles/4375/#literature-review), in this context an OA URL is one where you can read the fulltext of this work without needing to pay money or log in. The "best" such URL is the one closest to the version of record.&#x20;
+Although there are [many ways to define OA](https://peerj.com/articles/4375/#literature-review), in this context an OA URL is one where you can read the fulltext of this work without needing to pay money or log in. The "best" such URL is the one closest to the version of record.
 
 This URL might be a direct link to a PDF, or it might be to a landing page that links to the free PDF
 
