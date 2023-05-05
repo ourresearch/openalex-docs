@@ -26,6 +26,8 @@ When searching for authors, there is no difference when using the `search` param
 | --------------------------------------------------------------- | ------------------------------------------------ |
 | [`display_name.search`](filter-authors.md#display\_name.search) | [`display_name`](author-object.md#display\_name) |
 
+You can also use the filter `default.search`, which works the same as using the [`search` parameter](#search-authors).
+
 ## Autocomplete authors
 
 You can autocomplete authors to create a very fast type-ahead style search function:

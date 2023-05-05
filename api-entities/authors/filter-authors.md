@@ -38,6 +38,12 @@ To learn more about why we do it this way, [see here.](../works/search-works.md#
 
 These filters aren't attributes of the [`Author` object](author-object.md), but they're included to address some common use cases:
 
+#### `default.search`
+
+Value: a search string
+
+This works the same as using the [`search` parameter](./search-authors.md#search-authors) for Authors.
+
 #### `display_name.search`
 
 Value: a search string
