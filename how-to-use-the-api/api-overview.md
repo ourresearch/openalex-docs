@@ -10,8 +10,6 @@
 
 ## Client Libraries&#x20;
 
-The API is the primary way to get OpenAlex data. It's free and requires no authentication. For best performance, [add your email](rate-limits-and-authentication.md#the-polite-pool) to all API requests, like `mailto=example@domain.com`.
-
 There are several third-party libraries you can use to get data from OpenAlex:
 
 * [openalexR](https://github.com/ropensci/openalexR) (R)
