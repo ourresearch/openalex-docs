@@ -81,6 +81,6 @@ If the value being grouped by is an OpenAlex `Entity`, the [`key`](get-groups-of
 
 Otherwise, `key` is the same as `key_display_name`; both are the raw value of the `group_by` parameter for this group.
 
-* Group `Concepts` by [`level`](broken-reference):\
+* Group `Concepts` by [`level`](../api-entities/concepts/concept-object.md#level):\
   [`https://api.openalex.org/concepts?group_by=level`](https://api.openalex.org/concepts?group\_by=level)
 * For one group, both `key` and `key_display_name` are "3".

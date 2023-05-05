@@ -71,7 +71,7 @@ In most cases, you should use the [`search`](search-sources.md#sources-full-sear
 
 Value: a Boolean (`true` or `false`)
 
-Returns: sources that have or lack an [ISSN](broken-reference), depending on the given value.
+Returns: sources that have or lack an [ISSN](./source-object.md#issn), depending on the given value.
 
 * Get sources without ISSNs:\
   [`https://api.openalex.org/sources?filter=has_issn:false`](https://api.openalex.org/sources?filter=has\_issn:false)``

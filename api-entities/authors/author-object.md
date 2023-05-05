@@ -76,7 +76,7 @@ id: "https://openalex.org/A2208157607"
 _Object:_ All the external identifiers that we know about for this author. IDs are expressed as URIs whenever possible. Possible ID types:
 
 * `mag`  (_Integer:_ this author's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `openalex` (_String:_ this author's [OpenAlex ID](broken-reference). Same as [`Author.id`](author-object.md#id))
+* `openalex` (_String:_ this author's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Author.id`](author-object.md#id))
 * `orcid` (_String:_ this author's [ORCID](https://orcid.org/) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome). Same as [`Author.orcid`](author-object.md#orcid))
 * `scopus` (_String_: this author's [Scopus author ID](https://utas.libguides.com/ManageID/Scopus))
 * `twitter` (_String:_ this author's Twitter handle)

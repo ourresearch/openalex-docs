@@ -84,7 +84,7 @@ This reflects the creation of the dataset on 2021-12-30 and 145,678,664 combined
 ### Merged Entities
 
 {% hint style="info" %}
-See [Merged Entities](broken-reference) for an explanation of what Entity merging is and why we do it.&#x20;
+See [Merged Entities](../how-to-use-the-api/get-single-entities/README.md#merged-entity-ids) for an explanation of what Entity merging is and why we do it.&#x20;
 {% endhint %}
 
 Alongside the folders for the six Entity types - work, author, source, institution, concept, and publisher - you'll find a seventh folder: [merged\_ids](https://openalex.s3.amazonaws.com/browse.html#data/merged\_ids/). Within this folder you'll find the IDs of Entities that have been merged away, along with the Entity IDs they were merged into.

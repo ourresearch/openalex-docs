@@ -276,7 +276,7 @@ _Object:_ All the external identifiers that we know about for this work. IDs are
 
 * `doi` (_String:_ The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). Same as [`Work.doi`](./#title))
 * `mag` (_Integer:_ the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `openalex` (_String:_ The [OpenAlex ID](broken-reference/). Same as [`Work.id`](./#id))
+* `openalex` (_String:_ The [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Work.id`](./#id))
 * `pmid` (_String:_ The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
 * `pmcid` (_String_: the [Pubmed Central identifier](https://www.ncbi.nlm.nih.gov/pmc/about/public-access-info/))
 

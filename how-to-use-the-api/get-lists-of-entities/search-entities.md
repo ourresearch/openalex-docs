@@ -26,19 +26,19 @@ If you search for a multiple-word phrase, the algorithm will treat each word sep
 
 ## The search filter
 
-You can also use search as a [filter](broken-reference/), allowing you to fine-tune the fields you're searching over. To do this, you append `.search` to the end of the property you are filtering for:
+You can also use search as a [filter](./filter-entity-lists.md), allowing you to fine-tune the fields you're searching over. To do this, you append `.search` to the end of the property you are filtering for:
 
 * Get authors who have "Einstein" as part of their name:\
-  [`https://api.openalex.org/authors?filter=display\_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)
+  [`https://api.openalex.org/authors?filter=display_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)
 * Get works with "cubist" in the title:\
   [`https://api.openalex.org/works?filter=title.search:cubist`](https://api.openalex.org/works?filter=title.search:cubist)
 
-You can read more about which filters support the `.search` suffix on the [Filter entity lists](broken-reference/) page.
+You can read more about which filters support the `.search` suffix on the [Filter entity lists](./filter-entity-lists.md) page.
 
 {% hint style="info" %}
 You might be tempted to use the search filter to power an autocomplete or typeahead. Instead, we recommend you use the [autocomplete endpoint](autocomplete-entities.md), which is much faster.\
 \
-👎 [`https://api.openalex.org/institutions?filter=display\_name.search:florida`](https://api.openalex.org/institutions?filter=display\_name.search:florida)
+👎 [`https://api.openalex.org/institutions?filter=display_name.search:florida`](https://api.openalex.org/institutions?filter=display\_name.search:florida)
 
 👍 [`https://api.openalex.org/autocomplete/institutions?q=Florida`](https://api.openalex.org/autocomplete/institutions?q=Florida)
 {% endhint %}
