@@ -225,6 +225,34 @@ repositories: [
 ]
 ```
 
+### `roles`
+
+_List:_ List of role objects, which include the `role` (one of `institution`, `funder`, or `publisher`), the `id` ([OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id)), and the `works_count`.
+
+In many cases, a single organization does not fit neatly into one role. For example, Yale University is a single organization that is a research university, funds research studies, and publishes an academic journal. The `roles` property links the OpenAlex entities together for a single organization, and includes counts for the works associated with each role.
+
+The `roles` list of an entity (Funder, Publisher, or Institution) always includes itself. In the case where an organization only has one role, the `roles` will be a list of length one, with itself as the only item.
+
+```json
+roles: [
+    {
+        role: "funder",
+        id: "https://openalex.org/F4320308380",
+        works_count: 1004,
+    },
+    {
+        role: "publisher",
+        id: "https://openalex.org/P4310315589",
+        works_count: 13986,
+    },
+    {
+        role: "institution",
+        id: "https://openalex.org/I32971472",
+        works_count: 250031,
+    }
+]
+```
+
 ### `ror`
 
 _String:_ The [ROR](https://ror.org/) ID for this institution. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for institutions.

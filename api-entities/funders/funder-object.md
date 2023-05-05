@@ -128,6 +128,34 @@ _String:_ URL where you can get an image representing this funder. Usually this 
 image_url: "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/NIH 2013 logo vertical.svg"
 ```
 
+### `roles`
+
+_List:_ List of role objects, which include the `role` (one of `institution`, `funder`, or `publisher`), the `id` ([OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id)), and the `works_count`.
+
+In many cases, a single organization does not fit neatly into one role. For example, Yale University is a single organization that is a research university, funds research studies, and publishes an academic journal. The `roles` property links the OpenAlex entities together for a single organization, and includes counts for the works associated with each role.
+
+The `roles` list of an entity (Funder, Publisher, or Institution) always includes itself. In the case where an organization only has one role, the `roles` will be a list of length one, with itself as the only item.
+
+```json
+roles: [
+    {
+        role: "funder",
+        id: "https://openalex.org/F4320308380",
+        works_count: 1004,
+    },
+    {
+        role: "publisher",
+        id: "https://openalex.org/P4310315589",
+        works_count: 13986,
+    },
+    {
+        role: "institution",
+        id: "https://openalex.org/I32971472",
+        works_count: 250031,
+    }
+]
+```
+
 ### `summary_stats`
 
 _Object:_ Citation metrics for this funder
