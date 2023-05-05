@@ -1,10 +1,10 @@
 # Institution object
 
-These are the fields in an institution object. When you use the API to get a [single institution](get-a-single-institution.md) or [lists of institutions](get-lists-of-institutions.md), this is what's returned.&#x20;
+These are the fields in an institution object. When you use the API to get a [single institution](get-a-single-institution.md) or [lists of institutions](get-lists-of-institutions.md), this is what's returned.
 
 ### `associated_institutions`
 
-_List:_  `Institutions` related to this one. Each associated institution is represented as a [dehydrated Institution](institution-object.md#the-dehydratedinstitution-object) object, with one extra property:
+_List:_ `Institutions` related to this one. Each associated institution is represented as a [dehydrated Institution](institution-object.md#the-dehydratedinstitution-object) object, with one extra property:
 
 * `relationship` (_String_): The type of relationship between this institution and the listed institution. Possible values: `parent`, `child`, and `related`.
 
@@ -74,7 +74,7 @@ counts_by_year: [
 
 ### `created_date`
 
-_String:_ The date this `Institution` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.&#x20;
+_String:_ The date this `Institution` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
 
 ```json
 created_date: "2017-08-08"
@@ -98,7 +98,7 @@ display_name_acronyms:["UNC"]
 
 ### `display_name_alternatives`
 
-_List:_ Other names people may use for this institution. &#x20;
+_List:_ Other names people may use for this institution.
 
 ```json
 display_name_alternatives: [
@@ -151,7 +151,7 @@ id: "https://openalex.org/I114027177"
 _Object:_ All the external identifiers that we know about for this institution. IDs are expressed as URIs whenever possible. Possible ID types:
 
 * `grid` (_String:_ this institution's [GRID](https://www.grid.ac/) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome))
-* `mag`  (_Integer:_ this institution's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
+* `mag` (_Integer:_ this institution's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `openalex` (_String:_ this institution's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Institution.id`](institution-object.md#id))
 * `ror` (_String:_ this institution's ROR ID. Same as [`Institution.ror`](institution-object.md#ror))
 * `wikipedia` (_String:_ this institution's Wikipedia page URL)
@@ -210,7 +210,7 @@ international: {
 
 ### `repositories`
 
-_List:_  Repositories ([`Sources`](../sources/README.md) with `type: repository`) that have this institution as their [`host_organization`](../sources/source-object.md#host_organization)
+_List:_ Repositories ([`Sources`](../sources/) with `type: repository`) that have this institution as their [`host_organization`](../sources/source-object.md#host\_organization)
 
 ```json
 repositories: [
@@ -231,7 +231,7 @@ _List:_ List of role objects, which include the `role` (one of `institution`, `f
 
 In many cases, a single organization does not fit neatly into one role. For example, Yale University is a single organization that is a research university, funds research studies, and publishes an academic journal. The `roles` property links the OpenAlex entities together for a single organization, and includes counts for the works associated with each role.
 
-The `roles` list of an entity (Funder, Publisher, or Institution) always includes itself. In the case where an organization only has one role, the `roles` will be a list of length one, with itself as the only item.
+The `roles` list of an entity ([Funder](../funders/), [Publisher](../publishers/), or [Institution](./)) always includes itself. In the case where an organization only has one role, the `roles` will be a list of length one, with itself as the only item.
 
 ```json
 roles: [
@@ -257,7 +257,7 @@ roles: [
 
 _String:_ The [ROR](https://ror.org/) ID for this institution. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for institutions.
 
-The ROR (Research Organization Registry) identifier is a globally unique ID for research organization. [ROR is the successor to GRiD](https://www.digital-science.com/press-release/grid-passes-torch-to-ror/), which is no longer being updated.&#x20;
+The ROR (Research Organization Registry) identifier is a globally unique ID for research organization. [ROR is the successor to GRiD](https://www.digital-science.com/press-release/grid-passes-torch-to-ror/), which is no longer being updated.
 
 ```json
 ror: "https://ror.org/0130frc33"
@@ -267,9 +267,9 @@ ror: "https://ror.org/0130frc33"
 
 _Object:_ Citation metrics for this institution
 
-* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this institution. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
+* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this institution. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor).
 * `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this institution.
-* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this institution.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level\_metrics#i-10-index) for this institution.
 
 While the _h_-index and the i-10 index are normally author-level metrics and the 2-year mean citedness is normally a journal-level metric, they can be calculated for any set of papers, so we include them for institutions.
 
@@ -283,7 +283,7 @@ summary_stats: {
 
 ### `type`
 
-_String:_ The institution's primary type, using the [ROR "type" controlled vocabulary](https://ror.readme.io/docs/ror-data-structure).&#x20;
+_String:_ The institution's primary type, using the [ROR "type" controlled vocabulary](https://ror.readme.io/docs/ror-data-structure).
 
 Possible values are: `Education`, `Healthcare`, `Company`, `Archive`, `Nonprofit`, `Government`, `Facility`, and `Other`.
 
@@ -320,7 +320,7 @@ works_count: 202704    
 ### `x_concepts`
 
 {% hint style="danger" %}
-The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.&#x20;
+The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.
 {% endhint %}
 
 _List:_ The [`Concepts`](../concepts/concept-object.md) most frequently applied to works affiliated with this institution. Each is represented as a [dehydrated Concept](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:

@@ -24,7 +24,7 @@ alternate_titles: [
 
 _Integer:_ The number of citations to works that are linked to this publisher through journals or other sources.
 
-For example, if a publisher publishes 27 journals and those 27 journals have 3,050 works, this number is the sum of the cited\_by\_count values for all of those 3,050 works.&#x20;
+For example, if a publisher publishes 27 journals and those 27 journals have 3,050 works, this number is the sum of the cited\_by\_count values for all of those 3,050 works.
 
 ```json
 cited_by_count: 407508754
@@ -63,7 +63,7 @@ counts_by_year: [
 
 ### `created_date`
 
-_String:_ The date this `Publisher` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.&#x20;
+_String:_ The date this `Publisher` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
 
 ```json
 created_date: "2017-08-08"
@@ -128,7 +128,7 @@ image_url: "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/fil
 
 ### `lineage`
 
-_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) of publishers. The list will include this publisher's ID, as well as any parent publishers. If this publisher's `hierarchy_level` is 0, this list will only contain its own ID.
+_List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) of publishers. The list will include this publisher's ID, as well as any parent publishers. If this publisher's `hierarchy_level` is 0, this list will only contain its own ID.
 
 ```json
 id: "https://openalex.org/P4310321285",
@@ -155,7 +155,7 @@ _List:_ List of role objects, which include the `role` (one of `institution`, `f
 
 In many cases, a single organization does not fit neatly into one role. For example, Yale University is a single organization that is a research university, funds research studies, and publishes an academic journal. The `roles` property links the OpenAlex entities together for a single organization, and includes counts for the works associated with each role.
 
-The `roles` list of an entity (Funder, Publisher, or Institution) always includes itself. In the case where an organization only has one role, the `roles` will be a list of length one, with itself as the only item.
+The `roles` list of an entity ([Funder](../funders/), [Publisher](./), or [Institution](../institutions/)) always includes itself. In the case where an organization only has one role, the `roles` will be a list of length one, with itself as the only item.
 
 ```json
 roles: [
@@ -191,9 +191,9 @@ sources_api_url: "https://api.openalex.org/sources?filter=host_organization.id:P
 
 _Object:_ Citation metrics for this publisher
 
-* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this publisher. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
+* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this publisher. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor).
 * `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this publisher.
-* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this publisher.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level\_metrics#i-10-index) for this publisher.
 
 While the _h_-index and the i-10 index are normally author-level metrics and the 2-year mean citedness is normally a journal-level metric, they can be calculated for any set of papers, so we include them for publishers.
 

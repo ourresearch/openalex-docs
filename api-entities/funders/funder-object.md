@@ -18,7 +18,6 @@ alternate_titles: [
 
 _Integer:_ The total number [`Works`](../works/work-object/) that cite a work linked to this funder.
 
-
 ```json
 cited_by_count: 7823467
 ```
@@ -33,7 +32,7 @@ country_code: "US"
 
 ### `counts_by_year`
 
-_List:_ The values of [`works_count`](#works_count) and [`cited_by_count`](#cited_by_count) for _each_ of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works are linked to this funder, and how many times _any_ work linked to this funder was cited.
+_List:_ The values of [`works_count`](funder-object.md#works\_count) and [`cited_by_count`](funder-object.md#cited\_by\_count) for _each_ of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works are linked to this funder, and how many times _any_ work linked to this funder was cited.
 
 Years with zero citations and zero works have been removed so you will need to add those back in if you need them.
 
@@ -64,7 +63,7 @@ created_date: "2023-02-13"
 
 ### `description`
 
-_String:_ A short description of this funder, taken from [Wikidata](#ids).
+_String:_ A short description of this funder, taken from [Wikidata](funder-object.md#ids).
 
 ```json
 description: "medical research organization in the United States"
@@ -134,7 +133,7 @@ _List:_ List of role objects, which include the `role` (one of `institution`, `f
 
 In many cases, a single organization does not fit neatly into one role. For example, Yale University is a single organization that is a research university, funds research studies, and publishes an academic journal. The `roles` property links the OpenAlex entities together for a single organization, and includes counts for the works associated with each role.
 
-The `roles` list of an entity (Funder, Publisher, or Institution) always includes itself. In the case where an organization only has one role, the `roles` will be a list of length one, with itself as the only item.
+The `roles` list of an entity ([Funder](./), [Publisher](../publishers/), or [Institution](../institutions/)) always includes itself. In the case where an organization only has one role, the `roles` will be a list of length one, with itself as the only item.
 
 ```json
 roles: [
@@ -160,9 +159,9 @@ roles: [
 
 _Object:_ Citation metrics for this funder
 
-* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this funder. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
+* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this funder. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor).
 * `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this funder.
-* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this funder.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level\_metrics#i-10-index) for this funder.
 
 While the _h_-index and the i-10 index are normally author-level metrics and the 2-year mean citedness is normally a journal-level metric, they can be calculated for any set of papers, so we include them for funders.
 
