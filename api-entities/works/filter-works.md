@@ -153,6 +153,12 @@ Returns: works with the chosen number of [`concepts`](work-object/#concepts).
 * Get works with at least three concepts assigned\
   [`https://api.openalex.org/works?filter=concepts\_count:>2`](https://api.openalex.org/works?filter=concepts\_count:%3E2)
 
+#### `default.search`
+
+Value: a search string
+
+This works the same as using the [`search` parameter](./search-works.md#search-works) for Works.
+
 #### `display_name.search` (alias: `title.search`)
 
 Value: a search string

@@ -36,6 +36,12 @@ Returns: funders that are located in the chosen continent.
 * Get funders that are located in South America\
   [`https://api.openalex.org/funders?filter=continent:south\_america`](https://api.openalex.org/funders?filter=continent:south\_america)
 
+#### `default.search`
+
+Value: a search string
+
+This works the same as using the [`search` parameter](./search-funders.md#search-funders) for Funders.
+
 #### `description.search`
 
 Value: a search string

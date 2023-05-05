@@ -22,6 +22,8 @@ The following field can be searched as a filter within publishers:
 | ------------------------------------------------------------------ | --------------------------------------------------- |
 | [`display_name.search`](filter-publishers.md#display\_name.search) | [`display_name`](publisher-object.md#display\_name) |
 
+You can also use the filter `default.search`, which works the same as using the [`search` parameter](#search-publishers).
+
 ## Autocomplete publishers
 
 You can autocomplete publishers to create a very fast type-ahead style search function:

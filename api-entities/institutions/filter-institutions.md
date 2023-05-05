@@ -40,6 +40,12 @@ Returns: institutions that are located in the chosen continent.
 * Get institutions that are located in South America\
   [https://api.openalex.org/institutions?filter=continent:south\_america](https://api.openalex.org/institutions?filter=continent:south\_america)
 
+#### `default.search`
+
+Value: a search string
+
+This works the same as using the [`search` parameter](./search-institutions.md#search-institutions) for Institutions.
+
 #### `display_name.search`
 
 Value: a search string

@@ -35,6 +35,8 @@ You can also use search as a [filter](./filter-entity-lists.md), allowing you to
 
 You can read more about which filters support the `.search` suffix on the [Filter entity lists](./filter-entity-lists.md) page.
 
+Additionally, the filter `default.search` is available on all entities; this works the same as the [`search` parameter](#the-search-parameter).
+
 {% hint style="info" %}
 You might be tempted to use the search filter to power an autocomplete or typeahead. Instead, we recommend you use the [autocomplete endpoint](autocomplete-entities.md), which is much faster.\
 \

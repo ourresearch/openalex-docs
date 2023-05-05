@@ -26,6 +26,12 @@ You can filter using these attributes of the [`Concept`](concept-object.md) obje
 
 These filters aren't attributes of the [`Concept`](concept-object.md) object, but they're included to address some common use cases:
 
+#### `default.search`
+
+Value: a search string
+
+This works the same as using the [`search` parameter](./search-concepts.md#search-concepts) for Concepts.
+
 #### `display_name.search`
 
 Value: a search string

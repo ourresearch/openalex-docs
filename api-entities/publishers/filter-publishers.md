@@ -39,6 +39,12 @@ Returns: publishers that are located in the chosen continent.
 * Get publishers that are located in South America\
   [https://api.openalex.org/publishers?filter=continent:south\_america](https://api.openalex.org/publishers?filter=continent:south\_america)
 
+#### `default.search`
+
+Value: a search string
+
+This works the same as using the [`search` parameter](./search-publishers.md#search-publishers) for Publishers.
+
 #### `display_name.search`
 
 Value: a search string

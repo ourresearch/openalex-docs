@@ -22,6 +22,8 @@ The following field can be searched as a filter within concepts:
 | ---------------------------------------------------------------- | ------------------------------------------------- |
 | [`display_name.search`](filter-concepts.md#display\_name.search) | [`display_name`](concept-object.md#display\_name) |
 
+You can also use the filter `default.search`, which works the same as using the [`search` parameter](#search-concepts).
+
 ## Autocomplete concepts
 
 You can autocomplete concepts to create a very fast type-ahead style search function:

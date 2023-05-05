@@ -22,6 +22,8 @@ The following field can be searched as a filter within institutions:
 | -------------------------------------------------------------------- | ----------------------------------------------------- |
 | [`display_name.search`](filter-institutions.md#display\_name.search) | [`display_name`](institution-object.md#display\_name) |
 
+You can also use the filter `default.search`, which works the same as using the [`search` parameter](#search-institutions).
+
 ## Autocomplete institutions
 
 You can autocomplete institutions to create a very fast type-ahead style search function:

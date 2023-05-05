@@ -22,6 +22,8 @@ The following fields can be searched as a filter within sources:
 | -------------------------------------------------------------- | ----------------------------------------------- |
 | [`display_name.search`](filter-sources.md#display\_name.search) | [`display_name`](source-object.md#display\_name) |
 
+You can also use the filter `default.search`, which works the same as using the [`search` parameter](#search-sources).
+
 ## Autocomplete sources
 
 You can autocomplete sources to create a very fast type-ahead style search function:

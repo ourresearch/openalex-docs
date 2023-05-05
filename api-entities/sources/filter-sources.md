@@ -54,6 +54,12 @@ Returns: sources that are associated with the chosen continent.
 * Get sources that are associated with Asia\
   [https://api.openalex.org/sources?filter=continent:asia](https://api.openalex.org/sources?filter=continent:asia)
 
+#### `default.search`
+
+Value: a search string
+
+This works the same as using the [`search` parameter](./search-sources.md#search-sources) for Sources.
+
 #### `display_name.search`
 
 Value: a search string

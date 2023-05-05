@@ -23,6 +23,8 @@ The following fields can be searched as a filter within funders:
 | [`display_name.search`](filter-funders.md#display_name.search) | [`display_name`](funder-object.md#display_name) |
 | [`description.search`](filter-funders.md#description.search) | [`description`](funder-object.md#description) |
 
+You can also use the filter `default.search`, which works the same as using the [`search` parameter](#search-funders).
+
 ## Autocomplete funders
 
 You can autocomplete funders to create a very fast type-ahead style search function:

@@ -27,6 +27,8 @@ The following fields can be searched within works:
 | [`fulltext.search`](filter-works.md#fulltext.search)                                 | fulltext via [`n-grams`](get-n-grams.md)                                |
 | [`title.search`](filter-works.md#display\_name.search-alias-title.search)            | [`display_name`](work-object/#display\_name)                            |
 
+You can also use the filter `default.search`, which works the same as using the [`search` parameter](#search-works).
+
 ### Why can't I search by name of related entity (author name, institution name, etc.)?
 
 Rather than searching for the _names_ of entities related to works—such as authors, institutions, and sources—you need to search by a more unique identifier for that entity, like the OpenAlex ID. This means that there is a 2 step process:
