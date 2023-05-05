@@ -13,6 +13,10 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 
 ### `/works` group\_by attributes
 
+{% hint style="danger" %}
+The `host_venue` and `alternate_host_venues` properties have been deprecated in favor of [`primary_location`](./#primary\_location) and [`locations`](./#locations). `host_venue` and `alternate_host_venues` are no longer available in the Work object, and trying to access them in filters or group-bys will return an error.
+{% endhint %}
+
 * [`authors_count`](filter-works.md#authors\_count)
 * [`authorships.author.id`](work-object/#author) (alias `author.id`)
 * [`authorships.author.orcid`](work-object/#author) (alias `author.orcid`)

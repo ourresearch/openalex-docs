@@ -15,6 +15,10 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 
 You can filter using these attributes of the [`Work`](work-object/) object (click each one to view their documentation on the `Work` object page):
 
+{% hint style="danger" %}
+The `host_venue` and `alternate_host_venues` properties have been deprecated in favor of [`primary_location`](./#primary\_location) and [`locations`](./#locations). `host_venue` and `alternate_host_venues` are no longer available in the Work object, and trying to access them in filters or group-bys will return an error.
+{% endhint %}
+
 * [`authorships.author.id`](work-object/#author) (alias: `author.id`)
 * [`authorships.author.orcid`](work-object/#author) (alias: `author.orcid`)
 * [`authorships.institutions.country_code`](work-object/#institutions) (alias: `institutions.country_code`)

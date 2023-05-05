@@ -43,34 +43,9 @@ Newer works are more likely to have an abstract inverted index. For example, ove
 
 ### `alternate_host_venues` (deprecated)
 
-_This field is being deprecated in favor of_ [_`locations`_](./#locations) _and will be removed March 6th, 2023._
-
-_List:_ List of [`HostVenue`](./#the-hostvenue-object) objects describing places this work lives. They're called "alternate" because the list doesn't include the work's canonical location; that's in [`host_venue`](./#host\_venue).
-
-```json
-alternate_host_venues: [
-    {
-        id: null,
-        display_name: "Europe PMC",
-        type: "repository",
-        url: "http://europepmc.org/articles/pmc5815332?pdf=render",
-        is_oa: true,
-        version: "publishedVersion",
-        license: "cc-by"
-    },
-    {
-        id: null,
-        display_name: "Simon Fraser University - Summit",
-        type: "repository",
-        url: "https://summit.sfu.ca/item/17691",
-        is_oa: true,
-        version: "submittedVersion",
-        license: "cc-by"
-    },
-    // others omitted for brevity. 
-
-]
-```
+{% hint style="danger" %}
+The `host_venue` and `alternate_host_venues` properties have been deprecated in favor of [`primary_location`](./#primary\_location) and [`locations`](./#locations). `host_venue` and `alternate_host_venues` are no longer available in the Work object, and trying to access them in filters or group-bys will return an error.
+{% endhint %}
 
 ### `authorships`
 
