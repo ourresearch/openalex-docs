@@ -2,7 +2,7 @@
 
 The best way to search for funders is to use the `search` query parameter, which searches the [`display_name`](funder-object.md#display\_name), the [`alternate_titles`](funder-object.md#alternate\_titles), and the [`description`](funder_object.md#description) fields. Example:
 
-* Search publishers' `display_name`, `alternate_titles`, and `description` for "health":\
+* Search funders' `display_name`, `alternate_titles`, and `description` for "health":\
   [`https://api.openalex.org/funders?search=health`](https://api.openalex.org/funders?search=health)
 
 {% hint style="info" %}

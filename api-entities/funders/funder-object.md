@@ -111,7 +111,7 @@ ids: {
 
 ### `image_thumbnail_url`
 
-_String:_ Same as [`image_url`](publisher-object.md#image\_url-1), but it's a smaller image.
+_String:_ Same as [`image_url`](#image_url), but it's a smaller image.
 
 This is usually a hotlink to a wikimedia image. You can change the `width=300` parameter in the URL if you want a different thumbnail size.
 

@@ -44,7 +44,7 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
 * Sort funders by display name, descending\
   [https://api.openalex.org/funders?sort=display\_name:desc](https://api.openalex.org/funders?sort=display\_name:desc)
 
-Continue on to learn how you can [filter](filter-funders.md) and [search](search-funders.md) lists of publishers.
+Continue on to learn how you can [filter](filter-funders.md) and [search](search-funders.md) lists of funders.
 
 ## Sample funders
 
