@@ -4,7 +4,7 @@ description: Companies and organizations that distribute works
 
 # 🏢 Publishers
 
-Publishers are companies and organizations that distribute journal articles, books, and theses. OpenAlex indexes about 7,000 publishers.
+Publishers are companies and organizations that distribute journal articles, books, and theses. OpenAlex indexes about 10,000 publishers.
 
 You can get a publisher from the OpenAlex API like this:
 
