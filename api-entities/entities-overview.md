@@ -2,7 +2,7 @@
 
 The OpenAlex dataset describes scholarly [_entities_ ](entities-overview.md)and how those entities are connected to each other. Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of hundreds of millions of entities and billions of connections between them all.
 
-<figure><img src="../.gitbook/assets/entities.png" alt="Entity relation diagram for OpenAlex"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/entities (1).png" alt="Entity relation diagram for OpenAlex"><figcaption></figcaption></figure>
 
 Learn more about the OpenAlex entities:
 
