@@ -13,10 +13,11 @@ You can add a `seed` value in order to retrieve the same set of random records, 
   [https://api.openalex.org/sources?sample=20\&seed=123](https://api.openalex.org/sources?sample=20\&seed=123)
 
 {% hint style="info" %}
-Depending on your query, random results with a seed value _may_ change over time due to new records coming into OpenAlex.&#x20;
+Depending on your query, random results with a seed value _may_ change over time due to new records coming into OpenAlex.
 {% endhint %}
 
 ## Limitations
 
 * The sample size is limited to 10,000 results.
-* You must provide a `seed` value when [paging](paging.md) beyond the first page of results. Without a seed value, you might get duplicate records in your results.
+* You must use [basic paging](paging.md#basic-paging) when sampling. Cursor pagination is not supported.
+* You must provide a `seed` value when paging beyond the first page of results. Without a seed value, you might get duplicate records in your results.
