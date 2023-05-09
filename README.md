@@ -36,7 +36,7 @@ Many people and organizations have already found great value using OpenAlex. Hav
 
 ## Contact
 
-For tech support and bug reports, please visit our [help page](https://openalex.org/help). You can also join the OpenAlex user group, and follow us on [Twitter (@OpenAlex\_org)](https://twitter.com/openalex\_org) and [Mastodon](https://mastodon.social/@OpenAlex).
+For tech support and bug reports, please visit our [help page](https://openalex.org/help). You can also join the [OpenAlex user group](https://groups.google.com/g/openalex-users), and follow us on [Twitter (@OpenAlex\_org)](https://twitter.com/openalex\_org) and [Mastodon](https://mastodon.social/@OpenAlex).
 
 ## Citation
 
