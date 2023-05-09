@@ -1,5 +1,7 @@
 # API Overview
 
+The API is the primary way to get OpenAlex data. It's free and requires no authentication. The daily limit for API calls is 100,000 requests per user per day. For best performance, [add your email](how-to-use-the-api/rate-limits-and-authentication.md#the-polite-pool) to all API requests, like `mailto=example@domain.com`. 
+
 ## Learn more about the API
 
 * [Get single entities](get-single-entities/)
@@ -8,7 +10,7 @@
 * [Rate limits and authentication](rate-limits-and-authentication.md) — Learn about joining the [polite pool](rate-limits-and-authentication.md#the-polite-pool)
 * [Tutorials ](../additional-help/tutorials.md)— Hands-on examples with code
 
-## Client Libraries&#x20;
+## Client Libraries
 
 There are several third-party libraries you can use to get data from OpenAlex:
 

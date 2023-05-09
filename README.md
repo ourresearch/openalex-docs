@@ -16,7 +16,7 @@ Together, these make a huge web (or more technically, heterogeneous directed [gr
 
 The API is the primary way to get OpenAlex data. It's free and requires no authentication. The daily limit for API calls is 100,000 requests per user per day. For best performance, [add your email](how-to-use-the-api/rate-limits-and-authentication.md#the-polite-pool) to all API requests, like `mailto=example@domain.com`. [Learn more](how-to-use-the-api/api-overview.md)
 
-There is also a complete database database snapshot available to download. [Learn more about the data snapshot here.](download-all-data/openalex-snapshot.md)
+There is also a complete database snapshot available to download. [Learn more about the data snapshot here.](download-all-data/openalex-snapshot.md)
 
 The API has a limit of 100,000 calls per day, and the snapshot is updated monthly. If you need a higher limit, or more frequent updates, please look into [**OpenAlex Premium.**](https://openalex.org/pricing)
 
@@ -24,7 +24,7 @@ The web interface for OpenAlex is currently in development, with a beta launch c
 
 ## Why OpenAlex?
 
-OpenAlex offers an open replacement for industry-standard scientific knowledge bases like Elsevier's Scopus and Clarivate's Web of Science. Compared to these paywalled services, OpenAlex offers significant advantages in terms of inclusivity, affordability, and avaliability.
+OpenAlex offers an open replacement for industry-standard scientific knowledge bases like Elsevier's Scopus and Clarivate's Web of Science. [Compared to](https://openalex.org/about#comparison) these paywalled services, OpenAlex offers significant advantages in terms of inclusivity, affordability, and avaliability.
 
 OpenAlex is:
 
@@ -32,11 +32,11 @@ OpenAlex is:
 * _Easy —_ Our service is fast, modern, and well-documented.
 * _Open —_ Our complete dataset is free under the CC0 license, which allows for transparency and reuse.
 
-Many people and organizations have already found great value using OpenAlex. Have a look at the Testimonials to hear what they've said!
+Many people and organizations have already found great value using OpenAlex. Have a look at the [Testimonials](https://openalex.org/testimonials) to hear what they've said!
 
 ## Contact
 
-For tech support and bug reports, please visit our [help page](https://openalex.org/help). You can also join the OpenAlex user group, and follow us on Twitter at [@OpenAlex\_org](https://twitter.com/openalex\_org).
+For tech support and bug reports, please visit our [help page](https://openalex.org/help). You can also join the OpenAlex user group, and follow us on [Twitter (@OpenAlex\_org)](https://twitter.com/openalex\_org) and [Mastodon](https://mastodon.social/@OpenAlex).
 
 ## Citation
 
