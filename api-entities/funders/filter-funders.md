@@ -15,6 +15,7 @@ You can filter using these attributes of the `Funder` entity object (click each 
 
 * [`cited_by_count`](funder-object.md#cited\_by\_count)
 * [`country_code`](funder-object.md#country\_code)
+* [`grants_count`](funder-object.md#grants_count)
 * [`ids.openalex`](funder-object.md#ids) (alias: `openalex`)
 * [`ids.ror`](funder-object.md#ids) (alias: `ror`)
 * [`ids.wikidata`](funder-object.md#ids) (alias: `wikidata`)

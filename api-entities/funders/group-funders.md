@@ -16,6 +16,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`cited_by_count`](funder-object.md#cited_by_count)
 * [`continent`](filter-funders.md#continent)
 * [`country_code`](funder-object.md#country_code)
+* [`grants_count`](funder-object.md#grants_count)
 * [`is_global_south`](filter-funders.md#is_global_south)
 * [`summary_stats.2yr_mean_citedness`](funder-object.md#summary_stats)
 * [`summary_stats.h_index`](funder-object.md#summary_stats)
