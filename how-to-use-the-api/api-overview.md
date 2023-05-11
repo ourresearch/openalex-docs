@@ -1,6 +1,6 @@
 # API Overview
 
-The API is the primary way to get OpenAlex data. It's free and requires no authentication. The daily limit for API calls is 100,000 requests per user per day. For best performance, [add your email](how-to-use-the-api/rate-limits-and-authentication.md#the-polite-pool) to all API requests, like `mailto=example@domain.com`. 
+The API is the primary way to get OpenAlex data. It's free and requires no authentication. The daily limit for API calls is 100,000 requests per user per day. For best performance, [add your email](how-to-use-the-api/rate-limits-and-authentication.md#the-polite-pool) to all API requests, like `mailto=example@domain.com`.
 
 ## Learn more about the API
 
@@ -21,4 +21,4 @@ There are several third-party libraries you can use to get data from OpenAlex:
 
 If you're looking for a visual interface, you can also check out the free [VOSviewer](https://www.vosviewer.com/), which lets you make network visualizations based on OpenAlex data:
 
-![](<.gitbook/assets/Screenshot by Dropbox Capture (1).png>)
+![](<../.gitbook/assets/Screenshot by Dropbox Capture (1).png>)
