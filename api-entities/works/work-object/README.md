@@ -339,6 +339,10 @@ This field has high precision but low recall. In other words, if `is_retracted` 
 is_retracted: false 
 ```
 
+### `language`
+
+_String:_ The language of the work in [ISO 639-1 format](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). The language is automatically detected using the information we have about the work. We use the [langdetect](https://pypi.org/project/langdetect/) software library on the words in the work's abstract, or the title if we do not have the abstract. The source code for this procedure is [here.](https://github.com/ourresearch/openalex-guts/blob/54471c6c8e3c59662c4a4d9c37320af7b1667b2b/models/work.py#LL1102C1-L1102C1) Keep in mind that this method is not perfect, and that in some cases the language of the title or abstract could be different from the body of the work.
+
 ### `locations`
 
 _List:_ A list of [`Location`](location-object.md) objects describing all unique places where this work lives.

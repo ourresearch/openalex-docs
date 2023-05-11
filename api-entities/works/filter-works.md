@@ -51,6 +51,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`ids.mag`](work-object/#ids) (alias: `mag`)
 * [`is_paratext`](work-object/#is\_paratext)
 * [`is_retracted`](work-object/#is\_retracted)
+* [`language`](work-object/#language)
 * [`locations.is_oa`](work-object/#locations)
 * [`locations.license`](work-object/#locations)
 * [`locations.source.id`](work-object/#locations)
