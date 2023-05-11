@@ -18,3 +18,7 @@ There are several third-party libraries you can use to get data from OpenAlex:
 * [PyAlex](https://github.com/J535D165/pyalex) (Python)
 * [diophila](https://pypi.org/project/diophila/) (Python)
 * [OpenAlexAPI](https://pypi.org/project/openalexapi/) (Python)
+
+If you're looking for a visual interface, you can also check out the free [VOSviewer](https://www.vosviewer.com/), which lets you make network visualizations based on OpenAlex data:
+
+![](<.gitbook/assets/Screenshot by Dropbox Capture (1).png>)
