@@ -77,6 +77,14 @@ _String:_ The primary name of the funder.
 display_name: "National Institutes of Health"
 ```
 
+### `grants_count`
+
+_Integer:_ The number of grants linked to this funder.
+
+```json
+grants_count: 7109
+```
+
 ### `homepage_url`
 
 _String:_ The URL for this funder's primary homepage.
