@@ -474,7 +474,7 @@ publication_date: "2018-02-13"
 
 _Integer:_ The year this work was published.
 
-This year applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.alternate_host_venues`](./#alternate\_host\_venues), may have been published in different (earlier) years.
+This year applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.locations`](#locations), may have been published in different (earlier) years.
 
 ```json
 publication_year: 2018
@@ -535,19 +535,6 @@ _String:_ The last time anything in this `Work` object changed, expressed as an 
 ```json
 updated_date: "2022-01-02T00:22:35.180390"
 ```
-
-## The `HostVenue` object (deprecated)
-
-_The HostVenue object is being deprecated in favor of the_ [_`Location object`_](location-object.md) _and will be removed on March 6th, 2023._
-
-The HostVenue object describes a given work hosted on a given venue (you can think of it as a WorkVenue bridging table). It's only found as part of the `Work` object. It's got two parts:
-
-1. a dehydrated Venue object, and
-2. some extra stuff about the work.
-
-The extra stuff is important because a given work can be hosted in different ways and in different forms, depending on where it's living.
-
-To learn more about the dehydrated Venue object part, see the [DehydratedVenue](../../venues/venue-object.md#the-dehydratedvenue-object) docs. To learn more about the other stuff, read below:
 
 ### `is_oa`
 
