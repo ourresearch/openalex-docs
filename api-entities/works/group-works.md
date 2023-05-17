@@ -14,7 +14,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 ### `/works` group\_by attributes
 
 {% hint style="danger" %}
-The `host_venue` and `alternate_host_venues` properties have been deprecated in favor of [`primary_location`](./#primary\_location) and [`locations`](./#locations). `host_venue` and `alternate_host_venues` are no longer available in the Work object, and trying to access them in filters or group-bys will return an error.
+The `host_venue` and `alternate_host_venues` properties have been deprecated in favor of [`primary_location`](work-object/#primary\_location) and [`locations`](work-object/#locations). `host_venue` and `alternate_host_venues` are no longer available in the Work object, and trying to access them in filters or group-bys will return an error.
 {% endhint %}
 
 * [`authors_count`](filter-works.md#authors\_count)
@@ -61,6 +61,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`language`](work-object/#language)
 * [`locations.source.host_institutions_lineage`](filter-works.md#locations.source.host\_institution\_lineage)
 * [`locations.source.publisher_lineage`](filter-works.md#locations.source.publisher\_lineage)
+* [`locations_count`](work-object/#locations_count)
 * [`open_access.any_repository_has_fulltext`](work-object/#open\_access)
 * [`open_access.is_oa`](work-object/#is\_oa-1) (alias `is_oa`)
 * [`open_access.oa_status`](work-object/#oa\_status) (alias `oa_status`)

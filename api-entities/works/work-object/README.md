@@ -386,6 +386,14 @@ locations: [
 ]
 ```
 
+### `locations_count`
+
+_Integer:_ Number of [`locations`](#locations) for this work.
+
+```json
+locations_count: 3
+```
+
 ### `mesh`
 
 _List:_ List of [MeSH](https://www.nlm.nih.gov/mesh/meshhome.html) tag objects. Only works found in [PubMed](https://pubmed.ncbi.nlm.nih.gov/) have MeSH tags; for all other works, this is an empty list.
