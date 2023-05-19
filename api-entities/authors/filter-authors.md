@@ -19,6 +19,8 @@ You can filter using these attributes of the `Author` entity object (click each 
 * [`last_known_institution.id`](author-object.md#last\_known\_institution)
 * [`last_known_institution.ror`](author-object.md#last\_known\_institution)
 * [`last_known_institution.type`](author-object.md#last\_known\_institution)
+* [`orcid`](author-object.md#orcid)
+* [`scopus`](author-object.md#ids) (the author's scopus ID, as an integer)
 * [`summary_stats.2yr_mean_citedness`](author-object.md#summary_stats) (accepts float, null, !null, can use range queries such as < >)
 * [`summary_stats.h_index`](author-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
 * [`summary_stats.i10_index`](author-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
