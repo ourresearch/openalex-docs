@@ -238,13 +238,13 @@ created_date: "2017-08-08"
 
 ### `display_name`
 
-_String:_ Exactly the same as [`Work.title`](./#title-1). It's useful for `Work`s to include a `display_name` property, since all the other entities have one.
+_String:_ Exactly the same as [`Work.title`](./#title). It's useful for `Work`s to include a `display_name` property, since all the other entities have one.
 
 ```json
 display_name: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
 ```
 
-### `doi` <a href="#title" id="title"></a>
+### `doi`
 
 _String:_ The DOI for the work. This is the [Canonical External ID](../../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for works.
 

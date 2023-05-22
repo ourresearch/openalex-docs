@@ -1,6 +1,6 @@
 # Search works
 
-The best way to search for works is to use the `search` query parameter, which searches across [titles](work-object/#title-1), [abstracts](work-object/#abstract\_inverted\_index), and [fulltext](work-object/#the-ngram-object). Example:
+The best way to search for works is to use the `search` query parameter, which searches across [titles](work-object/#title), [abstracts](work-object/#abstract\_inverted\_index), and [fulltext](work-object/#the-ngram-object). Example:
 
 * Get works with search term "dna" in the title, abstract, or fulltext:\
   [https://api.openalex.org/works?search=dna](https://api.openalex.org/works?search=dna)
