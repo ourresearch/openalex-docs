@@ -1,6 +1,6 @@
 # Source object
 
-These are the fields in a source object. When you use the API to get a single source or lists of sources, this is what's returned.&#x20;
+These are the fields in a source object. When you use the API to get a single source or lists of sources, this is what's returned.
 
 ### abbreviated\_title
 
@@ -65,7 +65,7 @@ country_code: "GB"
 
 _List:_ [`works_count`](source-object.md#works\_count) and [`cited_by_count`](source-object.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this source started hosting, and how many times _any_ work in this source got cited.
 
-If the source was founded less than ten years ago, there will naturally be fewer than ten years in this list. Years with zero citations and zero works have been removed so you will need to add those  in if you need them.
+If the source was founded less than ten years ago, there will naturally be fewer than ten years in this list. Years with zero citations and zero works have been removed so you will need to add those in if you need them.
 
 ```json
 counts_by_year: [
@@ -86,7 +86,7 @@ counts_by_year: [
 
 ### `created_date`
 
-_String:_ The date this `Source` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.&#x20;
+_String:_ The date this `Source` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
 
 ```json
 created_date: "2017-08-08"
@@ -118,7 +118,7 @@ id: "https://openalex.org/P4310320595"
 
 ### `host_organization_lineage`
 
-_List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) — See [`Publisher.lineage`](../publishers/publisher-object.md#lineage). This will only be included if the [`host_organization`](#host_organization) is a publisher (and not if the `host_organization` is an institution).
+_List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) — See [`Publisher.lineage`](../publishers/publisher-object.md#lineage). This will only be included if the [`host_organization`](source-object.md#host\_organization) is a publisher (and not if the `host_organization` is an institution).
 
 ```json
 host_organization_lineage: [
@@ -130,7 +130,7 @@ host_organization_lineage: [
 
 ### `host_organization_name`
 
-_String:_ The `display_name` from the [host_organization](#host_organization), shown for convenience.
+_String:_ The `display_name` from the [host\_organization](source-object.md#host\_organization), shown for convenience.
 
 ```json
 host_organization_name: "Elsevier BV" 
@@ -151,7 +151,7 @@ _Object:_ All the external identifiers that we know about for this source. IDs a
 * `fatcat` (_String_: this source's [Fatcat](https://fatcat.wiki/) ID)
 * `issn` (_List:_ a list of this source's ISSNs. Same as [`Source.issn`](source-object.md#issn))
 * `issn_l` (_String:_ this source's ISSN-L. Same as [`Source.issn_l`](source-object.md#issn\_l))
-* `mag`  (_Integer:_ this source's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
+* `mag` (_Integer:_ this source's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `openalex` (_String:_ this source's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Source.id`](source-object.md#id))
 * `wikidata` (_String_: this source's [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main\_Page) ID)
 
@@ -159,6 +159,11 @@ _Object:_ All the external identifiers that we know about for this source. IDs a
 Many sources are missing one or more ID types (either because we don't know the ID, or because it was never assigned). Keys for null IDs are not displayed.
 {% endhint %}
 
+<details>
+
+<summary>Example</summary>
+
+{% code fullWidth="true" %}
 ```json
 ids: {
     openalex: "https://openalex.org/S1983995261",
@@ -171,10 +176,13 @@ ids: {
     wikidata: "https://www.wikidata.org/entity/Q96326029"
 }
 ```
+{% endcode %}
+
+</details>
 
 ### `is_in_doaj`
 
-_Boolean:_ Whether this is a journal listed in the [Directory of Open Access Journals](https://doaj.org/) (DOAJ). ****&#x20;
+_Boolean:_ Whether this is a journal listed in the [Directory of Open Access Journals](https://doaj.org/) (DOAJ). \*\*\*\*
 
 ```json
 is_in_doaj: true 
@@ -210,7 +218,7 @@ issn_l: "2167-8359"
 
 ### societies
 
-_Array:_ Societies on whose behalf the source is published and maintained, obtained from our [crowdsourced list](https://blog.ourresearch.org/society-list/). Thanks!&#x20;
+_Array:_ Societies on whose behalf the source is published and maintained, obtained from our [crowdsourced list](https://blog.ourresearch.org/society-list/). Thanks!
 
 ```json
 societies: [
@@ -225,9 +233,9 @@ societies: [
 
 _Object:_ Citation metrics for this source
 
-* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this source. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
+* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this source. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor).
 * `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this source.
-* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this source.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level\_metrics#i-10-index) for this source.
 
 While the _h_-index and the i-10 index are normally author-level metrics, they can be calculated for any set of papers, so we include them for sources.
 
@@ -245,7 +253,7 @@ _String:_ The type of source, which will be one of the following from the Type c
 
 | Type             | Wikidata ID                                          | How it's assigned                                                                                                                  |
 | ---------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `journal`        | [Q737498](https://www.wikidata.org/wiki/Q737498)     | The source is an academic journal with an [ISSN](source-object.md#issn).                                                            |
+| `journal`        | [Q737498](https://www.wikidata.org/wiki/Q737498)     | The source is an academic journal with an [ISSN](source-object.md#issn).                                                           |
 | `repository`     | [Q66656823](https://www.wikidata.org/wiki/Q66656823) | The source is a disciplinary or institutional repository.                                                                          |
 | `conference`     | [Q47258130](https://www.wikidata.org/wiki/Q47258130) | The source publishes Works with [`type`](../works/work-object/#type) "Proceedings", "Proceedings Series" or "Proceedings Article". |
 | `ebook platform` | [Q1294318](https://www.wikidata.org/wiki/Q1294318)   | The source publishes Works with [`type`](../works/work-object/#type) containing "book", e.g. "Book Chapter".                       |
@@ -283,7 +291,7 @@ works_count: 20184
 ### `x_concepts`
 
 {% hint style="danger" %}
-The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.&#x20;
+The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.
 {% endhint %}
 
 _List:_ The `Concepts` most frequently applied to works hosted by this source. Each is represented as a [dehydrated Concept](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
