@@ -660,6 +660,10 @@ _String:_ The Open Access (OA) status of this work. Possible values are:
 oa_status: "gold"
 ```
 
+<!-- [Diamond open access](https://en.wikipedia.org/wiki/Diamond_open_access) is another more recent designation that refers to works which are free for both readers and authors. In OpenAlex, there is no "diamond" `oa_status`, but diamond OA works can be identified using a combination of the [`is_oa`](#is_oa) and [`apc_payment.price`](#apc_payment):
+
+* Get Diamond open access works: [`https://api.openalex.org/works?filter=apc_payment.price:0,is_oa:true`](https://api.openalex.org/works?filter=apc_payment.price:0,is_oa:true) -->
+
 ### `oa_url`
 
 _String:_ The best Open Access (OA) URL for this work.
