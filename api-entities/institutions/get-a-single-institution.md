@@ -31,11 +31,7 @@ You can look up institutions using external IDs such as a [ROR ID](https://ror.o
 
 Available external IDs for institutions are:
 
-| External ID                    | URN        |
-| ------------------------------ | ---------- |
-| ROR                            | `ror`      |
-| Microsoft Academic Graph (MAG) | `mag`      |
-| Wikidata                       | `wikidata` |
+<table><thead><tr><th width="388.6666666666667">External ID</th><th width="416">URN</th></tr></thead><tbody><tr><td>ROR</td><td><code>ror</code></td></tr><tr><td>Microsoft Academic Graph (MAG)</td><td><code>mag</code></td></tr><tr><td>Wikidata</td><td><code>wikidata</code></td></tr></tbody></table>
 
 ### Select fields
 
