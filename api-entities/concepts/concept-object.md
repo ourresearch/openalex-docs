@@ -4,7 +4,7 @@ These are the fields in a concept object. When you use the API to get a [single 
 
 ### `ancestors`
 
-_List:_ List of concepts that this concept descends from, as [dehydrated Concept](concept-object.md#the-dehydratedconcept-object) objects. See the [concept tree section](concept-object.md#the-concept-tree) for more details on how the different layers of concepts work together.
+*List:* List of concepts that this concept descends from, as [dehydrated Concept](concept-object.md#the-dehydratedconcept-object) objects. See the [concept tree section](concept-object.md#the-concept-tree) for more details on how the different layers of concepts work together.
 
 ```json
 ancestors: [
@@ -27,7 +27,7 @@ ancestors: [
 
 ### `cited_by_count`
 
-_Integer:_ The number citations to works that have been tagged with this concept. Or less formally: the number of citations to this concept.
+*Integer:* The number citations to works that have been tagged with this concept. Or less formally: the number of citations to this concept.
 
 For example, if there are just two works tagged with this concept and one of them has been cited 10 times, and the other has been cited 1 time, `cited_by_count` for this concept would be `11`.
 
@@ -37,7 +37,7 @@ cited_by_count: 20248
 
 ### `counts_by_year`
 
-_List:_ The values of [`works_count`](concept-object.md#works\_count) and [`cited_by_count`](concept-object.md#cited\_by\_count) for _each_ of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works were tagged with this concept, and how many times _any_ work tagged with this concept got cited.
+*List:* The values of [`works_count`](concept-object.md#works_count) and [`cited_by_count`](concept-object.md#cited_by_count) for *each* of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works were tagged with this concept, and how many times *any* work tagged with this concept got cited.
 
 Years with zero citations and zero works have been removed so you will need to add those back in  if you need them.
 
@@ -60,7 +60,7 @@ counts_by_year: [
 
 ### `created_date`
 
-_String:_ The date this `Concept` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.&#x20;
+*String:* The date this `Concept` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date string.&#x20;
 
 ```json
 created_date: "2017-08-08"
@@ -68,7 +68,7 @@ created_date: "2017-08-08"
 
 ### `description`
 
-_String:_ A brief description of this concept.
+*String:* A brief description of this concept.
 
 ```json
 description: "study of alternative metrics for analyzing and informing scholarship"
@@ -76,7 +76,7 @@ description: "study of alternative metrics for analyzing and informing scholarsh
 
 ### `display_name`
 
-_String:_ The English-language label of the concept.
+*String:* The English-language label of the concept.
 
 ```json
 display_name: "Altmetrics"
@@ -84,7 +84,7 @@ display_name: "Altmetrics"
 
 ### `id`
 
-_String:_ The OpenAlex ID for this concept.
+*String:* The OpenAlex ID for this concept.
 
 ```json
 id: "https://openalex.org/C2778407487"
@@ -92,14 +92,14 @@ id: "https://openalex.org/C2778407487"
 
 ### `ids`
 
-_Object:_ All the external identifiers that we know about for this institution. IDs are expressed as URIs whenever possible. Possible ID types:
+*Object:* All the external identifiers that we know about for this institution. IDs are expressed as URIs whenever possible. Possible ID types:
 
-* `mag`  (_Integer:_ this concept's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `openalex` (_String:_ this concept's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Concept.id`](concept-object.md#id))
-* `umls_cui` (_List:_ this concept's [Unified Medical Language System](https://www.nlm.nih.gov/research/umls/index.html) [Concept Unique Identifiers](https://www.nlm.nih.gov/research/umls/new\_users/online\_learning/Meta\_005.html))
-* `umls_aui` (_List:_ this concept's [Unified Medical Language System](https://www.nlm.nih.gov/research/umls/index.html) [Atom Unique Identifiers](https://www.nlm.nih.gov/research/umls/new\_users/online\_learning/Meta\_005.html))
-* `wikidata` (_String:_ this concept's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers). Same as [`Concept.wikidata`](concept-object.md#wikidata))
-* `wikipedia` (_String:_ this concept's Wikipedia page URL)
+*   `mag`  (*Integer:* this concept's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
+*   `openalex` (*String:* this concept's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Concept.id`](concept-object.md#id))
+*   `umls_cui` (*List:* this concept's [Unified Medical Language System](https://www.nlm.nih.gov/research/umls/index.html) [Concept Unique Identifiers](https://www.nlm.nih.gov/research/umls/new_users/online_learning/Meta_005.html))
+*   `umls_aui` (*List:* this concept's [Unified Medical Language System](https://www.nlm.nih.gov/research/umls/index.html) [Atom Unique Identifiers](https://www.nlm.nih.gov/research/umls/new_users/online_learning/Meta_005.html))
+*   `wikidata` (*String:* this concept's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers). Same as [`Concept.wikidata`](concept-object.md#wikidata))
+*   `wikipedia` (*String:* this concept's Wikipedia page URL)
 
 {% hint style="info" %}
 Many concepts are missing one or more ID types (either because we don't know the ID, or because it was never assigned). Keys for null IDs are not displayed..
@@ -116,7 +116,7 @@ ids: {
 
 ### `image_thumbnail_url`
 
-_String:_ Same as [`image_url`](concept-object.md#image\_url), but it's a smaller image.
+*String:* Same as [`image_url`](concept-object.md#image_url), but it's a smaller image.
 
 ```json
 image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Altmetrics.svg/100px-Altmetrics.svg.png"
@@ -124,7 +124,7 @@ image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/
 
 ### `image_url`
 
-_String:_ URL where you can get an image representing this concept, where available. Usually this is hosted on Wikipedia.
+*String:* URL where you can get an image representing this concept, where available. Usually this is hosted on Wikipedia.
 
 ```json
 image_url: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Altmetrics.svg"
@@ -132,11 +132,11 @@ image_url: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Altmetrics.svg"
 
 ### `international`
 
-_Object:_ This concept's display name in many languages, derived from article titles on each language's wikipedia. See the [Wikidata entry](https://www.wikidata.org/wiki/Q137496#sitelinks-wikipedia) for "Java Bytecode" for example source data.
+*Object:* This concept's display name in many languages, derived from article titles on each language's wikipedia. See the [Wikidata entry](https://www.wikidata.org/wiki/Q137496#sitelinks-wikipedia) for "Java Bytecode" for example source data.
 
-* `display_name` (_Object_)
-  * `key` (String): language code in [wikidata language code](https://www.wikidata.org/wiki/Property:P9753) format. Full list of languages is [here](https://doc.wikimedia.org/mediawiki-core/master/php/Names\_8php\_source.html).
-  * `value` (String): `display_name` in the given language
+*   `display_name` (*Object*)
+    *   `key` (String): language code in [wikidata language code](https://www.wikidata.org/wiki/Property:P9753) format. Full list of languages is [here](https://doc.wikimedia.org/mediawiki-core/master/php/Names_8php_source.html).
+    *   `value` (String): `display_name` in the given language
 
 ```json
 international: {
@@ -149,7 +149,7 @@ international: {
 
 ### `level`
 
-_Integer:_ The level in the concept tree where this concept lives. Lower-level concepts are more general, and higher-level concepts are more specific. [Computer Science](https://openalex.org/C41008148) has a level of 0; [Java Bytecode](https://openalex.org/C2777472213) has a level of 5. Level 0 concepts have no ancestors and level 5 concepts have no descendants.
+*Integer:* The level in the concept tree where this concept lives. Lower-level concepts are more general, and higher-level concepts are more specific. [Computer Science](https://openalex.org/C41008148) has a level of 0; [Java Bytecode](https://openalex.org/C2777472213) has a level of 5. Level 0 concepts have no ancestors and level 5 concepts have no descendants.
 
 ```json
 level: 2
@@ -157,9 +157,9 @@ level: 2
 
 ### `related_concepts`
 
-_List:_ Concepts that are similar to this one. Each listed concept is a [dehydrated Concept](concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
+*List:* Concepts that are similar to this one. Each listed concept is a [dehydrated Concept](concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
 
-* `score` (_Float_): The strength of association between this concept and the listed concept, on a scale of 0-100.
+*   `score` (*Float*): The strength of association between this concept and the listed concept, on a scale of 0-100.
 
 ```json
 related_concepts: [
@@ -184,13 +184,13 @@ related_concepts: [
 
 ### `summary_stats`
 
-_Object:_ Citation metrics for this concept
+*Object:* Citation metrics for this concept
 
-* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this concept. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
-* `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this concept.
-* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this concept.
+*   `2yr_mean_citedness` *Float*: The 2-year mean citedness for this concept. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
+*   `h_index` *Integer*: The [*h*-index](https://en.wikipedia.org/wiki/H-index) for this concept.
+*   `i10_index` *Integer*: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this concept.
 
-While the _h_-index and the i-10 index are normally author-level metrics and the 2-year mean citedness is normally a journal-level metric, they can be calculated for any set of papers, so we include them for concepts.
+While the *h*-index and the i-10 index are normally author-level metrics and the 2-year mean citedness is normally a journal-level metric, they can be calculated for any set of papers, so we include them for concepts.
 
 ```json
 summary_stats: {
@@ -202,7 +202,7 @@ summary_stats: {
 
 ### `updated_date`
 
-_String:_ The last time anything in this concept object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
+*String:* The last time anything in this concept object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date string. This date is updated for *any change at all*, including increases in various counts.
 
 ```json
 updated_date: "2021-12-25T14:04:30.578837"
@@ -210,10 +210,10 @@ updated_date: "2021-12-25T14:04:30.578837"
 
 ### `wikidata`
 
-_String:_ The [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers) for this concept.  This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for concepts.
+*String:* The [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers) for this concept.  This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for concepts.
 
 {% hint style="info" %}
-_All_ OpenAlex concepts have a Wikidata ID, because all OpenAlex concepts are also Wikidata concepts.&#x20;
+*All* OpenAlex concepts have a Wikidata ID, because all OpenAlex concepts are also Wikidata concepts.&#x20;
 {% endhint %}
 
 ```json
@@ -222,7 +222,7 @@ wikidata: "https://www.wikidata.org/wiki/Q14565201"
 
 ### `works_api_url`
 
-_String:_ An URL that will get you a list of all the works tagged with this concept.
+*String:* An URL that will get you a list of all the works tagged with this concept.
 
 We express this as an API URL (instead of just listing the works themselves) because there might be millions of works tagged with this concept, and that's too many to fit here.
 
@@ -232,7 +232,7 @@ works_api_url: "https://api.openalex.org/works?filter=concept.id:C2778407487"
 
 ### `works_count`
 
-_Integer:_ The number of works tagged with this concept.
+*Integer:* The number of works tagged with this concept.
 
 ```json
 works_count: 3078 
@@ -242,7 +242,7 @@ works_count: 3078
 
 The `DehydratedConcept` is stripped-down [`Concept`](concept-object.md#the-concept-object) object, with most of its properties removed to save weight. Its only remaining properties are:
 
-* ``[`display_name`](concept-object.md#display\_name)``
-* ``[`id`](concept-object.md#id)``
-* ``[`level`](concept-object.md#level)``
-* ``[`wikidata`](concept-object.md#wikidata)``
+*   ``[`display_name`](concept-object.md#display\_name)``
+*   ``[`id`](concept-object.md#id)``
+*   ``[`level`](concept-object.md#level)``
+*   ``[`wikidata`](concept-object.md#wikidata)``

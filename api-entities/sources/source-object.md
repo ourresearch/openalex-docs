@@ -4,7 +4,7 @@ These are the fields in a source object. When you use the API to get a single so
 
 ### abbreviated\_title
 
-_String:_ An abbreviated title obtained from the [ISSN Centre](https://issn.org).
+*String:* An abbreviated title obtained from the [ISSN Centre](https://issn.org).
 
 ```json
 abbreviated_title: "J. addict. med. ther. sci."
@@ -12,7 +12,7 @@ abbreviated_title: "J. addict. med. ther. sci."
 
 ### alternate\_titles
 
-_Array:_ Alternate titles for this source, as obtained from the [ISSN Centre](https://issn.org) and individual work records, like Crossref DOIs, that carry the source name as a string. These are commonly abbreviations or translations of the source's canonical name.
+*Array:* Alternate titles for this source, as obtained from the [ISSN Centre](https://issn.org) and individual work records, like Crossref DOIs, that carry the source name as a string. These are commonly abbreviations or translations of the source's canonical name.
 
 ```json
 alternate_titles: [
@@ -22,7 +22,7 @@ alternate_titles: [
 
 ### apc\_prices
 
-_List:_ List of objects, each with `price` (_Integer_) and `currency` (_String_).
+*List:* List of objects, each with `price` (*Integer*) and `currency` (*String*).
 
 Article processing charge information, taken directly from [DOAJ](https://doaj.org/).
 
@@ -37,9 +37,9 @@ apc_prices: [
 
 ### apc\_usd
 
-_Integer:_ The source's article processing charge in US Dollars, if available from [DOAJ](https://doaj.org/).
+*Integer:* The source's article processing charge in US Dollars, if available from [DOAJ](https://doaj.org/).
 
-The `apc_usd` value is calculated by taking the APC price (see [`apc_prices`](source-object.md#apc\_prices)) with a currency of USD if it is available. If it's not available, we convert the first available value from `apc_prices` into USD, using recent exchange rates.
+The `apc_usd` value is calculated by taking the APC price (see [`apc_prices`](source-object.md#apc_prices)) with a currency of USD if it is available. If it's not available, we convert the first available value from `apc_prices` into USD, using recent exchange rates.
 
 ```json
 apc_usd: 5200
@@ -47,7 +47,7 @@ apc_usd: 5200
 
 ### `cited_by_count`
 
-_Integer:_ The total number of [`Works`](../works/work-object/) that cite a `Work` hosted in this source.
+*Integer:* The total number of [`Works`](../works/work-object/) that cite a `Work` hosted in this source.
 
 ```json
 cited_by_count: 133702 
@@ -55,7 +55,7 @@ cited_by_count: 133702
 
 ### `country_code`
 
-_String:_ The country that this source is associated with, represented as an [ISO two-letter country code](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2).
+*String:* The country that this source is associated with, represented as an [ISO two-letter country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
 
 ```json
 country_code: "GB" 
@@ -63,7 +63,7 @@ country_code: "GB"
 
 ### `counts_by_year`
 
-_List:_ [`works_count`](source-object.md#works\_count) and [`cited_by_count`](source-object.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this source started hosting, and how many times _any_ work in this source got cited.
+*List:* [`works_count`](source-object.md#works_count) and [`cited_by_count`](source-object.md#cited_by_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this source started hosting, and how many times *any* work in this source got cited.
 
 If the source was founded less than ten years ago, there will naturally be fewer than ten years in this list. Years with zero citations and zero works have been removed so you will need to add those in if you need them.
 
@@ -86,7 +86,7 @@ counts_by_year: [
 
 ### `created_date`
 
-_String:_ The date this `Source` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
+*String:* The date this `Source` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date string.
 
 ```json
 created_date: "2017-08-08"
@@ -94,7 +94,7 @@ created_date: "2017-08-08"
 
 ### `display_name`
 
-_String:_ The name of the source.
+*String:* The name of the source.
 
 ```json
 display_name: "PeerJ"
@@ -102,7 +102,7 @@ display_name: "PeerJ"
 
 ### `homepage_url`
 
-_String:_ The starting page for navigating the contents of this source; the homepage for this source's website.
+*String:* The starting page for navigating the contents of this source; the homepage for this source's website.
 
 ```json
 homepage_url: "http://www.peerj.com/" 
@@ -110,7 +110,7 @@ homepage_url: "http://www.peerj.com/"
 
 ### `host_organization`
 
-_String:_ The host organization for this source as an [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). This will be an [`Institution.id`](../institutions/institution-object.md#id) if the source is a repository, and a [`Publisher.id`](../publishers/publisher-object.md#id) if the source is a journal, conference, or eBook platform (based on the [`type`](source-object.md#type) field).
+*String:* The host organization for this source as an [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). This will be an [`Institution.id`](../institutions/institution-object.md#id) if the source is a repository, and a [`Publisher.id`](../publishers/publisher-object.md#id) if the source is a journal, conference, or eBook platform (based on the [`type`](source-object.md#type) field).
 
 ```json
 id: "https://openalex.org/P4310320595"
@@ -118,7 +118,7 @@ id: "https://openalex.org/P4310320595"
 
 ### `host_organization_lineage`
 
-_List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) — See [`Publisher.lineage`](../publishers/publisher-object.md#lineage). This will only be included if the [`host_organization`](source-object.md#host\_organization) is a publisher (and not if the `host_organization` is an institution).
+*List:* [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) — See [`Publisher.lineage`](../publishers/publisher-object.md#lineage). This will only be included if the [`host_organization`](source-object.md#host_organization) is a publisher (and not if the `host_organization` is an institution).
 
 ```json
 host_organization_lineage: [
@@ -130,7 +130,7 @@ host_organization_lineage: [
 
 ### `host_organization_name`
 
-_String:_ The `display_name` from the [host\_organization](source-object.md#host\_organization), shown for convenience.
+*String:* The `display_name` from the [host\_organization](source-object.md#host_organization), shown for convenience.
 
 ```json
 host_organization_name: "Elsevier BV" 
@@ -138,7 +138,7 @@ host_organization_name: "Elsevier BV"
 
 ### `id`
 
-_String:_ The [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for this source.
+*String:* The [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for this source.
 
 ```json
 id: "https://openalex.org/S1983995261"
@@ -146,14 +146,14 @@ id: "https://openalex.org/S1983995261"
 
 ### `ids`
 
-_Object:_ All the external identifiers that we know about for this source. IDs are expressed as URIs whenever possible. Possible ID types:
+*Object:* All the external identifiers that we know about for this source. IDs are expressed as URIs whenever possible. Possible ID types:
 
-* `fatcat` (_String_: this source's [Fatcat](https://fatcat.wiki/) ID)
-* `issn` (_List:_ a list of this source's ISSNs. Same as [`Source.issn`](source-object.md#issn))
-* `issn_l` (_String:_ this source's ISSN-L. Same as [`Source.issn_l`](source-object.md#issn\_l))
-* `mag` (_Integer:_ this source's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `openalex` (_String:_ this source's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Source.id`](source-object.md#id))
-* `wikidata` (_String_: this source's [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main\_Page) ID)
+*   `fatcat` (*String*: this source's [Fatcat](https://fatcat.wiki/) ID)
+*   `issn` (*List:* a list of this source's ISSNs. Same as [`Source.issn`](source-object.md#issn))
+*   `issn_l` (*String:* this source's ISSN-L. Same as [`Source.issn_l`](source-object.md#issn_l))
+*   `mag` (*Integer:* this source's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
+*   `openalex` (*String:* this source's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Source.id`](source-object.md#id))
+*   `wikidata` (*String*: this source's [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) ID)
 
 {% hint style="info" %}
 Many sources are missing one or more ID types (either because we don't know the ID, or because it was never assigned). Keys for null IDs are not displayed.
@@ -164,6 +164,7 @@ Many sources are missing one or more ID types (either because we don't know the 
 <summary>Example</summary>
 
 {% code fullWidth="true" %}
+
 ```json
 ids: {
     openalex: "https://openalex.org/S1983995261",
@@ -176,13 +177,14 @@ ids: {
     wikidata: "https://www.wikidata.org/entity/Q96326029"
 }
 ```
+
 {% endcode %}
 
 </details>
 
 ### `is_in_doaj`
 
-_Boolean:_ Whether this is a journal listed in the [Directory of Open Access Journals](https://doaj.org/) (DOAJ). \*\*\*\*
+*Boolean:* Whether this is a journal listed in the [Directory of Open Access Journals](https://doaj.org/) (DOAJ). \*\*\*\*
 
 ```json
 is_in_doaj: true 
@@ -190,7 +192,7 @@ is_in_doaj: true
 
 ### `is_oa`
 
-_Boolean:_ Whether this is currently fully-open-access source. This could be `true` for a preprint repository where everything uploaded is free to read, or for a [Gold](https://en.wikipedia.org/wiki/Open\_access#Colour\_naming\_system) or [Diamond](https://en.wikipedia.org/wiki/Diamond\_open\_access) open access journal, where all newly published Works are available for free under an open license.
+*Boolean:* Whether this is currently fully-open-access source. This could be `true` for a preprint repository where everything uploaded is free to read, or for a [Gold](https://en.wikipedia.org/wiki/Open_access#Colour_naming_system) or [Diamond](https://en.wikipedia.org/wiki/Diamond_open_access) open access journal, where all newly published Works are available for free under an open license.
 
 We say "currently" because the status of a source can change over time. It's common for journals to "flip" to Gold OA, after which they may make only future articles open or also open their back catalogs. It's entirely possible for a source to say `is_oa: true`, but for an article from last year to require a subscription.
 
@@ -200,7 +202,7 @@ is_oa: true
 
 ### `issn`
 
-_List:_ The [ISSNs](https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number) used by this source. Many publications have multiple ISSNs ([see above](source-object.md#issn\_l)), so [ISSN-L](source-object.md#issn\_l) should be used when possible.
+*List:* The [ISSNs](https://en.wikipedia.org/wiki/International_Standard_Serial_Number) used by this source. Many publications have multiple ISSNs ([see above](source-object.md#issn_l)), so [ISSN-L](source-object.md#issn_l) should be used when possible.
 
 ```json
 issn: ["2167-8359"]
@@ -208,9 +210,9 @@ issn: ["2167-8359"]
 
 ### `issn_l`
 
-_String:_ The [ISSN-L](https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number#Linking\_ISSN) identifying this source. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for sources.
+*String:* The [ISSN-L](https://en.wikipedia.org/wiki/International_Standard_Serial_Number#Linking_ISSN) identifying this source. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for sources.
 
-ISSN is a global and unique ID for serial publications. However, different media versions of a given publication (e.g., print and electronic) often have _different_ ISSNs. This is why we can't have nice things. The ISSN-L or Linking ISSN solves the problem by designating a single canonical ISSN for all media versions of the title. It's _usually_ the same as the print ISSN.
+ISSN is a global and unique ID for serial publications. However, different media versions of a given publication (e.g., print and electronic) often have *different* ISSNs. This is why we can't have nice things. The ISSN-L or Linking ISSN solves the problem by designating a single canonical ISSN for all media versions of the title. It's *usually* the same as the print ISSN.
 
 ```json
 issn_l: "2167-8359"
@@ -218,7 +220,7 @@ issn_l: "2167-8359"
 
 ### societies
 
-_Array:_ Societies on whose behalf the source is published and maintained, obtained from our [crowdsourced list](https://blog.ourresearch.org/society-list/). Thanks!
+*Array:* Societies on whose behalf the source is published and maintained, obtained from our [crowdsourced list](https://blog.ourresearch.org/society-list/). Thanks!
 
 ```json
 societies: [
@@ -231,13 +233,13 @@ societies: [
 
 ### `summary_stats`
 
-_Object:_ Citation metrics for this source
+*Object:* Citation metrics for this source
 
-* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this source. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor).
-* `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this source.
-* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level\_metrics#i-10-index) for this source.
+*   `2yr_mean_citedness` *Float*: The 2-year mean citedness for this source. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
+*   `h_index` *Integer*: The [*h*-index](https://en.wikipedia.org/wiki/H-index) for this source.
+*   `i10_index` *Integer*: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this source.
 
-While the _h_-index and the i-10 index are normally author-level metrics, they can be calculated for any set of papers, so we include them for sources.
+While the *h*-index and the i-10 index are normally author-level metrics, they can be calculated for any set of papers, so we include them for sources.
 
 ```json
 summary_stats: {
@@ -249,7 +251,7 @@ summary_stats: {
 
 ### `type`
 
-_String:_ The type of source, which will be one of the following from the Type column:
+*String:* The type of source, which will be one of the following from the Type column:
 
 | Type             | Wikidata ID                                          | How it's assigned                                                                                                                  |
 | ---------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -264,7 +266,7 @@ type: "journal"
 
 ### `updated_date`
 
-_String:_ The last time anything in this `Source` object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
+*String:* The last time anything in this `Source` object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date string. This date is updated for *any change at all*, including increases in various counts.
 
 ```json
 updated_date: "2022-01-02T00:00:00"
@@ -272,7 +274,7 @@ updated_date: "2022-01-02T00:00:00"
 
 ### `works_api_url`
 
-_String:_ A URL that will get you a list of all this source's `Works`.
+*String:* A URL that will get you a list of all this source's `Works`.
 
 We express this as an API URL (instead of just listing the works themselves) because sometimes a source's publication list is too long to reasonably fit into a single `Source` object.
 
@@ -282,7 +284,7 @@ works_api_url: "https://api.openalex.org/works?filter=primary_location.source.id
 
 ### `works_count`
 
-_Integer:_ The number of [`Works`](../works/work-object/) this source hosts.
+*Integer:* The number of [`Works`](../works/work-object/) this source hosts.
 
 ```json
 works_count: 20184 
@@ -294,9 +296,9 @@ works_count: 20184
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.
 {% endhint %}
 
-_List:_ The `Concepts` most frequently applied to works hosted by this source. Each is represented as a [dehydrated Concept](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
+*List:* The `Concepts` most frequently applied to works hosted by this source. Each is represented as a [dehydrated Concept](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
 
-`score` (_Float_): The strength of association between this source and the listed concept, from 0-100.
+`score` (*Float*): The strength of association between this source and the listed concept, from 0-100.
 
 ```json
 x_concepts: [
@@ -323,11 +325,11 @@ x_concepts: [
 
 The `DehydratedSource` is stripped-down `Source` object, with most of its properties removed to save weight. Its only remaining properties are:
 
-* [`display_name`](source-object.md#display\_name)
-* [`host_organization`](source-object.md#host\_organization)
-* [`host_organization_lineage`](source-object.md#host\_organization\_lineage)
-* [`host_organization_name`](source-object.md#host\_organization\_name)
-* [`id`](source-object.md#id)
-* [`issn`](source-object.md#issn)
-* [`issn_l`](source-object.md#issn\_l)
-* [`type`](source-object.md#type)
+*   [`display_name`](source-object.md#display_name)
+*   [`host_organization`](source-object.md#host_organization)
+*   [`host_organization_lineage`](source-object.md#host_organization_lineage)
+*   [`host_organization_name`](source-object.md#host_organization_name)
+*   [`id`](source-object.md#id)
+*   [`issn`](source-object.md#issn)
+*   [`issn_l`](source-object.md#issn_l)
+*   [`type`](source-object.md#type)

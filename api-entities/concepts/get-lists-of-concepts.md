@@ -2,8 +2,8 @@
 
 You can get lists of concepts:
 
-* Get _all_ concepts in OpenAlex\
-  [https://api.openalex.org/concepts](https://api.openalex.org/concepts)
+*   Get *all* concepts in OpenAlex\
+    <https://api.openalex.org/concepts>
 
 Which returns a response like this:
 
@@ -38,13 +38,13 @@ Which returns a response like this:
 
 By default we return 25 results per page. You can change this default and [page](../../how-to-use-the-api/get-lists-of-entities/paging.md) through concepts with the `per-page` and `page` parameters:
 
-* Get the second page of concepts results, with 50 results returned per page\
-  [https://api.openalex.org/concepts?per-page=50\&page=2](https://api.openalex.org/concepts?per-page=50\&page=2)
+*   Get the second page of concepts results, with 50 results returned per page\
+    <https://api.openalex.org/concepts?per-page=50&page=2>
 
 You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-entity-lists.md) with the `sort` parameter:
 
-* Sort concepts by cited by count, descending\
-  [https://api.openalex.org/concepts?sort=cited\_by\_count:desc](https://api.openalex.org/concepts?sort=cited\_by\_count:desc)
+*   Sort concepts by cited by count, descending\
+    <https://api.openalex.org/concepts?sort=cited_by_count:desc>
 
 Continue on to learn how you can [filter](filter-concepts.md) and [search](search-concepts.md) lists of concepts.
 
@@ -52,12 +52,12 @@ Continue on to learn how you can [filter](filter-concepts.md) and [search](searc
 
 You can use `sample` to get a random batch of concepts. Read more about sampling and how to add a `seed` value [here](../../how-to-use-the-api/get-lists-of-entities/sample-entity-lists.md).
 
-* Get 10 random concepts\
-  [https://api.openalex.org/concepts?sample=10](https://api.openalex.org/concepts?sample=10)
+*   Get 10 random concepts\
+    <https://api.openalex.org/concepts?sample=10>
 
 ## Select fields
 
 You can use `select` to limit the fields that are returned in a list of concepts. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
 
-* Display only the `id`, `display_name`, and `description` within concepts results\
-  [https://api.openalex.org/concepts?select=id,display\_name,description](https://api.openalex.org/concepts?select=id,display\_name,description)
+*   Display only the `id`, `display_name`, and `description` within concepts results\
+    <https://api.openalex.org/concepts?select=id,display_name,description>

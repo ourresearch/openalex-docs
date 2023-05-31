@@ -4,21 +4,21 @@ In many data warehouse and document store applications, you can load the OpenAle
 
 We'll show you how to do this in 4 steps:
 
-1. Create a BigQuery Project and Dataset to hold your tables
-2. Create the tables that will hold your entity JSON records
-3. Copy the data files to the tables you created
-4. Run some queries on the data you loaded
+1.  Create a BigQuery Project and Dataset to hold your tables
+2.  Create the tables that will hold your entity JSON records
+3.  Copy the data files to the tables you created
+4.  Run some queries on the data you loaded
 
 {% hint style="info" %}
 This guide will have you load each entity to a single text column, then use BigQuery's JSON functions to parse them when you run your queries. This is convenient but inefficient since each object has to be parsed every time you run a query.
 
-This project, kindly shared by [@DShvadron](https://twitter.com/DShvadron), takes a more efficient approach: [https://github.com/DrorSh/openalex\_to\_gbq](https://github.com/DrorSh/openalex\_to\_gbq)
+This project, kindly shared by [@DShvadron](https://twitter.com/DShvadron), takes a more efficient approach: <https://github.com/DrorSh/openalex_to_gbq>
 
-Separating the Entity data into multiple columns takes more work up front but lets you write queries that are faster, simpler, and often [cheaper](https://cloud.google.com/bigquery/pricing#on\_demand\_pricing).&#x20;
+Separating the Entity data into multiple columns takes more work up front but lets you write queries that are faster, simpler, and often [cheaper](https://cloud.google.com/bigquery/pricing#on_demand_pricing).&#x20;
 {% endhint %}
 
 {% hint style="info" %}
-[Snowflake](https://www.snowflake.com/) users can connect to a ready-to-query data set on the marketplace, helpfully maintained by [Util](https://www.util.co/) - [https://app.snowflake.com/marketplace/listing/GZT0ZOMX4O7](https://app.snowflake.com/marketplace/listing/GZT0ZOMX4O7)
+[Snowflake](https://www.snowflake.com/) users can connect to a ready-to-query data set on the marketplace, helpfully maintained by [Util](https://www.util.co/) - <https://app.snowflake.com/marketplace/listing/GZT0ZOMX4O7>
 {% endhint %}
 
 ## **Step 1: Create a BigQuery Project and Dataset**
@@ -53,8 +53,8 @@ and so on for `sources`, `institutions`, `concepts,` and `publishers`.
 
 We’ll load each table’s data from the JSON Lines files we downloaded earlier. For `works`, the files were:&#x20;
 
-* openalex-snapshot/data/works/updated\_date=2021-12-28/0000\_part\_00.gz&#x20;
-* openalex-snapshot/data/works/updated\_date=2021-12-28/0001\_part\_00.gz&#x20;
+*   openalex-snapshot/data/works/updated\_date=2021-12-28/0000\_part\_00.gz&#x20;
+*   openalex-snapshot/data/works/updated\_date=2021-12-28/0001\_part\_00.gz&#x20;
 
 Here’s a command to load one `works` file (don’t run it yet):
 
@@ -68,14 +68,14 @@ openalex.works \
 ```
 
 {% hint style="info" %}
-See the full documentation for the `bq load` command here: [https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_load](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_load)
+See the full documentation for the `bq load` command here: <https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq_load>
 {% endhint %}
 
 This part of the command may need some explanation:
 
 > `--source_format=CSV -F '\t' --schema 'work:string'`
 
-Bigquery is expecting multiple columns with predefined datatypes (a “schema”). We’re tricking it into accepting a single text column (`--schema 'work:string'`) by specifying [CSV](https://en.wikipedia.org/wiki/Comma-separated\_values) format (`--source_format=CSV`) with a column delimiter that isn’t present in the file (`-F '\t')`  (\t means “tab”).
+Bigquery is expecting multiple columns with predefined datatypes (a “schema”). We’re tricking it into accepting a single text column (`--schema 'work:string'`) by specifying [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) format (`--source_format=CSV`) with a column delimiter that isn’t present in the file (`-F '\t')`  (\t means “tab”).
 
 `bq load` can only handle one file at a time, so you must run this command once per file. But remember that the real dataset will have many more files than this example does, so it's impractical to copy, edit, and rerun the command each time. It's easier to handle all the files in a loop, like this:
 
@@ -90,7 +90,7 @@ done
 ```
 
 {% hint style="info" %}
-This step is slow. _How_ slow depends on your upload speed, but for `Author` and `Work` we're talking hours, not minutes.
+This step is slow. *How* slow depends on your upload speed, but for `Author` and `Work` we're talking hours, not minutes.
 
 You can speed this up by using [`parallel`](https://www.gnu.org/software/parallel/) or other tools to run multiple upload commands at once. If you do, watch out for errors caused by hitting [BigQuery quota](https://cloud.google.com/bigquery/docs/troubleshoot-quotas) limits.
 {% endhint %}
@@ -101,7 +101,7 @@ Do this once per entity type, substituting each entity name for `work`/`works` a
 
 ## **Step 4: Run your queries!**
 
-Now you have the all the OpenAlex data in a place where you can do anything you want with it using [BigQuery JSON functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/json\_functions) through [bq query](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_query) or the BigQuery [console](https://console.cloud.google.com/bigquery).&#x20;
+Now you have the all the OpenAlex data in a place where you can do anything you want with it using [BigQuery JSON functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/json_functions) through [bq query](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq_query) or the BigQuery [console](https://console.cloud.google.com/bigquery).&#x20;
 
 Here’s a simple one, extracting the OpenAlex ID and OA status for each work:
 
@@ -117,9 +117,9 @@ It will give you a list of IDs (this is a truncated sample, the real result will
 
 |                                                                      |       |
 | -------------------------------------------------------------------- | ----- |
-| [https://openalex.org/W2741809807](https://openalex.org/W2741809807) | TRUE  |
-| [https://openalex.org/W1491283979](https://openalex.org/W1491283979) | FALSE |
-| [https://openalex.org/W1491315632](https://openalex.org/W1491315632) | FALSE |
+| <https://openalex.org/W2741809807> | TRUE  |
+| <https://openalex.org/W1491283979> | FALSE |
+| <https://openalex.org/W1491315632> | FALSE |
 
 You can run queries like this directly in your shell:
 
@@ -160,4 +160,4 @@ We get one result:
 | -------------------------------- | -------------- |
 | https://openalex.org/A2798520857 | 3297           |
 
-Checking out [https://api.openalex.org/authors/A2798520857](https://api.openalex.org/authors/A2798520857), we see that this is Ashok Kumar at Manipal University Jaipur.
+Checking out <https://api.openalex.org/authors/A2798520857>, we see that this is Ashok Kumar at Manipal University Jaipur.

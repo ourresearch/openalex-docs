@@ -1,9 +1,9 @@
 # Search publishers
 
-The best way to search for publishers is to use the `search` query parameter, which searches the [`display_name`](publisher-object.md#display\_name) and [`alternate_titles`](publisher-object.md#alternate\_titles) fields. Example:
+The best way to search for publishers is to use the `search` query parameter, which searches the [`display_name`](publisher-object.md#display_name) and [`alternate_titles`](publisher-object.md#alternate_titles) fields. Example:
 
-* Search publishers' `display_name` and `alternate_titles` for "springer":\
-  [https://api.openalex.org/publishers?search=springer](https://api.openalex.org/publishers?search=springer)
+*   Search publishers' `display_name` and `alternate_titles` for "springer":\
+    <https://api.openalex.org/publishers?search=springer>
 
 {% hint style="info" %}
 You can read more about search [here](../../how-to-use-the-api/get-lists-of-entities/search-entities.md). It will show you how relevance score is calculated and how words are stemmed to improve search results.
@@ -13,14 +13,14 @@ You can read more about search [here](../../how-to-use-the-api/get-lists-of-enti
 
 You can also use search as a [filter](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md), allowing you to fine-tune the fields you're searching over. To do this, you append `.search` to the end of the property you are filtering for:
 
-* Get publishers with "elsevier" in the `display_name`:\
-  https://api.openalex.org/publishers?filter=display\_name.search:elsevier
+*   Get publishers with "elsevier" in the `display_name`:\
+    https://api.openalex.org/publishers?filter=display\_name.search:elsevier
 
 The following field can be searched as a filter within publishers:
 
 | Search filter                                                      | Field that is searched                              |
 | ------------------------------------------------------------------ | --------------------------------------------------- |
-| [`display_name.search`](filter-publishers.md#display\_name.search) | [`display_name`](publisher-object.md#display\_name) |
+| [`display_name.search`](filter-publishers.md#display_name.search) | [`display_name`](publisher-object.md#display_name) |
 
 You can also use the filter `default.search`, which works the same as using the [`search` parameter](#search-publishers).
 
@@ -28,8 +28,8 @@ You can also use the filter `default.search`, which works the same as using the 
 
 You can autocomplete publishers to create a very fast type-ahead style search function:
 
-* Autocomplete publishers with "els" in the `display_name`:\
-  [https://api.openalex.org/autocomplete/publishers?q=els](https://api.openalex.org/autocomplete/publishers?q=els)
+*   Autocomplete publishers with "els" in the `display_name`:\
+    <https://api.openalex.org/autocomplete/publishers?q=els>
 
 This returns a list of publishers:
 

@@ -2,7 +2,7 @@
 
 It's easy to get a work from from the API with: `/works/<entity_id>` Here's an example:
 
-* Get the work with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
+*   Get the work with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
 
 That will return a [`Work`](work-object/) object, describing everything OpenAlex knows about the work with that ID.
 
@@ -26,13 +26,13 @@ You can make up to 50 of these queries at once by requesting a list of entities 
 
 You can look up works using external IDs such as a DOI:
 
-* Get the work with this DOI: `https://doi.org/10.7717/peerj.4375`:\
-  [https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375](https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375)
+*   Get the work with this DOI: `https://doi.org/10.7717/peerj.4375`:\
+    <https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375>
 
 You can use the full ID or a shorter Uniform Resource Name (URN) format like so:
 
-* Get the work with PubMed ID: `https://pubmed.ncbi.nlm.nih.gov/14907713`:\
-  [https://api.openalex.org/works/pmid:14907713](https://api.openalex.org/works/pmid:14907713)
+*   Get the work with PubMed ID: `https://pubmed.ncbi.nlm.nih.gov/14907713`:\
+    <https://api.openalex.org/works/pmid:14907713>
 
 Available external IDs for works are:
 
@@ -51,5 +51,5 @@ You must make sure that the ID(s) you supply are valid and correct. If an ID you
 
 You can use `select` to limit the fields that are returned in a work object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
 
-* Display only the `id` and `display_name` for a work object\
-  [https://api.openalex.org/works/W2741809807?select=id,display\_name](https://api.openalex.org/works/W2741809807?select=id,display\_name)
+*   Display only the `id` and `display_name` for a work object\
+    <https://api.openalex.org/works/W2741809807?select=id,display_name>

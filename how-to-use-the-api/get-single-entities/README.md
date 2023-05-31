@@ -1,6 +1,6 @@
----
-description: Get a single entity, based on an ID
----
+***
+
+## description: Get a single entity, based on an ID
 
 # Get single entities
 
@@ -8,7 +8,7 @@ This is a more detailed guide to single entities in OpenAlex. If you're just get
 
 It's easy to get a singleton entity object from from the API:`/<entity_name>/<entity_id>.` Here's an example:
 
-* Get the work with the [OpenAlex ID](./#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
+*   Get the work with the [OpenAlex ID](./#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
 
 That will return a [`Work`](../../api-entities/works/work-object/) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
 
@@ -17,7 +17,7 @@ You can make up to 50 of these queries at once by [requesting a list of entities
 {% endhint %}
 
 {% hint style="info" %}
-To get a single entity, you need a single _unambiguous_ identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name), you'll want to  [search](../get-lists-of-entities/search-entities.md) instead.
+To get a single entity, you need a single *unambiguous* identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name), you'll want to  [search](../get-lists-of-entities/search-entities.md) instead.
 {% endhint %}
 
 ## The OpenAlex ID
@@ -46,44 +46,44 @@ HTTP/1.1 301 MOVED PERMANENTLY
 Location: https://api.openalex.org/authors/A2208157607
 ```
 
-Most clients will handle this transparently; you'll get the data for author A2208157607 without knowing the redirect even happened. If you have stored Entity ID lists and _do_ notice the redirect, you might as well replace the merged-away ID to skip the redirect next time.
+Most clients will handle this transparently; you'll get the data for author A2208157607 without knowing the redirect even happened. If you have stored Entity ID lists and *do* notice the redirect, you might as well replace the merged-away ID to skip the redirect next time.
 
 ## Supported IDs
 
 For each entity type, you can retrieve the entity using by any of the external IDs we support--not just the native OpenAlex IDs. So for example:
 
-* Get the work with this doi: `https://doi.org/10.7717/peerj.4375`:\
-  [https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375](https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375)
+*   Get the work with this doi: `https://doi.org/10.7717/peerj.4375`:\
+    <https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375>
 
 This works with DOIs, ISSNs, ORCIDs, and lots of other IDs...in fact, you can use any ID listed in an entity's `ids` property, as listed below:
 
-* [`Work.ids`](../../api-entities/works/work-object/#ids)
-* [`Author.ids`](../../api-entities/authors/author-object.md#ids)
-* [`Source.ids`](../../api-entities/sources/source-object.md#ids)
-* [`Institution.ids`](../../api-entities/institutions/institution-object.md#ids)
-* [`Concept.ids`](../../api-entities/concepts/concept-object.md#ids)
-* [`Publisher.ids`](../../api-entities/publishers/publisher-object.md#ids)
+*   [`Work.ids`](../../api-entities/works/work-object/#ids)
+*   [`Author.ids`](../../api-entities/authors/author-object.md#ids)
+*   [`Source.ids`](../../api-entities/sources/source-object.md#ids)
+*   [`Institution.ids`](../../api-entities/institutions/institution-object.md#ids)
+*   [`Concept.ids`](../../api-entities/concepts/concept-object.md#ids)
+*   [`Publisher.ids`](../../api-entities/publishers/publisher-object.md#ids)
 
 ## ID formats
 
 Most of the external IDs OpenAlex supports are canonically expressed as URLs...for example, [the canonical form of a DOI](https://www.crossref.org/display-guidelines/) always starts with `https://doi.org/`. You can always use these URL-style IDs in the entity endpoints. Examples:
 
-* Get the institution with the ROR [https://ror.org/02y3ad647](https://ror.org/02y3ad647) (University of Florida):\
-  [`https://api.openalex.org/institutions/https://ror.org/02y3ad647`](https://api.openalex.org/institutions/https://ror.org/02y3ad647)
-* Get the author with the ORCID [https://orcid.org/0000-0003-1613-5981](https://orcid.org/0000-0003-1613-5981) (Heather Piwowar):\
-  [`https://api.openalex.org/authors/https://orcid.org/0000-0003-1613-5981`](https://api.openalex.org/authors/https://orcid.org/0000-0003-1613-5981)
+*   Get the institution with the ROR <https://ror.org/02y3ad647> (University of Florida):\
+    [`https://api.openalex.org/institutions/https://ror.org/02y3ad647`](https://api.openalex.org/institutions/https://ror.org/02y3ad647)
+*   Get the author with the ORCID <https://orcid.org/0000-0003-1613-5981> (Heather Piwowar):\
+    [`https://api.openalex.org/authors/https://orcid.org/0000-0003-1613-5981`](https://api.openalex.org/authors/https://orcid.org/0000-0003-1613-5981)
 
 For simplicity and clarity, you may also want to express those IDs in a simpler, URN-style format, and that's supported as well; you just write the namespace of the ID, followed by the ID itself. Here are the same examples from above, but in the namespace:id format:
 
-* Get the institution with the ROR [https://ror.org/02y3ad647](https://ror.org/02y3ad647) (University of Florida):\
-  [`https://api.openalex.org/institutions/ror:02y3ad647`](https://api.openalex.org/institutions/ror:02y3ad647)
-* Get the author with the ORCID [https://orcid.org/0000-0003-1613-5981](https://orcid.org/0000-0003-1613-5981) (Heather Piwowar):\
-  [`https://api.openalex.org/authors/orcid:0000-0003-1613-5981`](https://api.openalex.org/authors/orcid:0000-0003-1613-5981)
+*   Get the institution with the ROR <https://ror.org/02y3ad647> (University of Florida):\
+    [`https://api.openalex.org/institutions/ror:02y3ad647`](https://api.openalex.org/institutions/ror:02y3ad647)
+*   Get the author with the ORCID <https://orcid.org/0000-0003-1613-5981> (Heather Piwowar):\
+    [`https://api.openalex.org/authors/orcid:0000-0003-1613-5981`](https://api.openalex.org/authors/orcid:0000-0003-1613-5981)
 
 Finally, if you're using an OpenAlex ID, you can be even more succinct, and just use the [Key](./#the-openalex-key) part of the ID all by itself, the part that looks like `w1234567`:
 
-* Get the work with OpenAlex ID https://openalex.org/W2741809807:\
-  [https://api.openalex.org/works/W2741809807](https://api.openalex.org/works/W2741809807)
+*   Get the work with OpenAlex ID https://openalex.org/W2741809807:\
+    <https://api.openalex.org/works/W2741809807>
 
 ## Canonical External IDs
 
@@ -91,15 +91,15 @@ Every entity has an OpenAlex ID. Most entities also have IDs in other systems, t
 
 These are the Canonical External IDs:
 
-* Works: [DOI](../../api-entities/works/work-object/#title)
-* Authors: [ORCID](../../api-entities/authors/author-object.md#orcid)
-* Sources: [ISSN-L](../../api-entities/sources/source-object.md#issn\_l)
-* Institutions: [ROR ID](../../api-entities/institutions/institution-object.md#ror)
-* Concepts: [Wikidata ID](../../api-entities/concepts/concept-object.md#wikidata)
-* Publishers: [Wikidata ID](../../api-entities/publishers/publisher-object.md#ids)
+*   Works: [DOI](../../api-entities/works/work-object/#title)
+*   Authors: [ORCID](../../api-entities/authors/author-object.md#orcid)
+*   Sources: [ISSN-L](../../api-entities/sources/source-object.md#issn_l)
+*   Institutions: [ROR ID](../../api-entities/institutions/institution-object.md#ror)
+*   Concepts: [Wikidata ID](../../api-entities/concepts/concept-object.md#wikidata)
+*   Publishers: [Wikidata ID](../../api-entities/publishers/publisher-object.md#ids)
 
 ## Dehydrated entity objects
 
 The full entity objects can get pretty unwieldy, especially when you're embedding a list of them in another object (for instance, a list of `Concept`s in a `Work`). For these cases, all the entities except `Work`s have a dehydrated version. This is a stripped-down representation of the entity that carries only its most essential properties. These properties are documented individually on their respective entity pages.
 
-\
+\\

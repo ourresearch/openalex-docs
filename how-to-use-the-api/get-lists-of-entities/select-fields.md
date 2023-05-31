@@ -2,8 +2,8 @@
 
 You can use `select` to limit the fields that are returned in results.&#x20;
 
-* Display works with only the `id`, `doi`, and `display_name` returned in the results\
-  [https://api.openalex.org/works?select=id,doi,display\_name](https://api.openalex.org/works?select=id,doi,display\_name)
+*   Display works with only the `id`, `doi`, and `display_name` returned in the results\
+    <https://api.openalex.org/works?select=id,doi,display_name>
 
 ```json
 "results": [
@@ -27,14 +27,12 @@ The fields you choose must exist within the entity (of course). You can only sel
 
 So if we have a record like so:
 
-```
-"id": "https://openalex.org/W2138270253",
-"open_access": {
-  "is_oa": true,
-  "oa_status": "bronze",
-  "oa_url": "http://www.pnas.org/content/74/12/5463.full.pdf"
-}
-```
+    "id": "https://openalex.org/W2138270253",
+    "open_access": {
+      "is_oa": true,
+      "oa_status": "bronze",
+      "oa_url": "http://www.pnas.org/content/74/12/5463.full.pdf"
+    }
 
 You can choose to display `id` and `open_access`, but you will get an error if you try to choose `open_access.is_oa`.
 

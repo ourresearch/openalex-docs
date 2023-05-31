@@ -2,9 +2,9 @@
 
 The `Location` object describes the location of a given work. It's only found as part of the `Work` object.
 
-Locations are meant to capture the way that a work exists in different versions. So, for example, a work may have a version that has been peer-reviewed and published in a journal (the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)). This would be one of the work's locations. It may have another version available on a preprint server like [bioRxiv](https://www.biorxiv.org/)—this version having been posted before it was accepted for publication. This would be another one of the work's locations.
+Locations are meant to capture the way that a work exists in different versions. So, for example, a work may have a version that has been peer-reviewed and published in a journal (the [version of record](https://en.wikipedia.org/wiki/Version_of_record)). This would be one of the work's locations. It may have another version available on a preprint server like [bioRxiv](https://www.biorxiv.org/)—this version having been posted before it was accepted for publication. This would be another one of the work's locations.
 
-Below is an example of a work in OpenAlex ([https://openalex.org/W2807749226](https://openalex.org/W2807749226)) that has multiple locations with different properties. The version of record, published in a peer-reviewed journal, is listed first, and is not open-access. The second location is a university repository, where one can find an open-access copy of the published version of the work. Other locations are listed below.
+Below is an example of a work in OpenAlex (<https://openalex.org/W2807749226>) that has multiple locations with different properties. The version of record, published in a peer-reviewed journal, is listed first, and is not open-access. The second location is a university repository, where one can find an open-access copy of the published version of the work. Other locations are listed below.
 
 <figure><img src="../../../.gitbook/assets/locations_screenshot_annotate.png" alt=""><figcaption><p>One work can have multiple locations. These locations can differ in properties such as version and open-access status.</p></figcaption></figure>
 
@@ -12,13 +12,13 @@ Locations are meant to cover anywhere that a given work can be found. This can i
 
 There are three places in the `Work` object where you can find locations:
 
-* [`primary_location`](./#primary\_location): The best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work.
-* [`best_oa_location`](./#best\_oa\_location): The best available open access location of this work.
-* [`locations`](./#locations): A list of all of the locations where this work lives. This will include the two locations above if availabe, and can also include other locations.
+*   [`primary_location`](./#primary_location): The best (closest to the [version of record](https://en.wikipedia.org/wiki/Version_of_record)) copy of this work.
+*   [`best_oa_location`](./#best_oa_location): The best available open access location of this work.
+*   [`locations`](./#locations): A list of all of the locations where this work lives. This will include the two locations above if availabe, and can also include other locations.
 
 ### `is_oa`
 
-_Boolean:_ `True` if this work is Open Access (OA).
+*Boolean:* `True` if this work is Open Access (OA).
 
 There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in.
 
@@ -28,7 +28,7 @@ is_oa: true
 
 ### landing\_page\_url
 
-_String:_ The landing page URL for this location.
+*String:* The landing page URL for this location.
 
 ```json
 landing_page_url: "https://doi.org/10.1590/s1678-77572010000100010"
@@ -36,7 +36,7 @@ landing_page_url: "https://doi.org/10.1590/s1678-77572010000100010"
 
 ### license
 
-_String:_ The location's publishing license. This can be a [Create Commons](https://creativecommons.org/about/cclicenses/) license such as cc0 or cc-by, a publisher-specific license, or null which means we are not able to determine a license for this location.
+*String:* The location's publishing license. This can be a [Create Commons](https://creativecommons.org/about/cclicenses/) license such as cc0 or cc-by, a publisher-specific license, or null which means we are not able to determine a license for this location.
 
 ```json
 license: "cc-by"
@@ -44,7 +44,7 @@ license: "cc-by"
 
 ### source
 
-_Object:_ Information about the source of this location, as a [`DehydratedSource`](../../sources/source-object.md#the-dehydratedsource-object) object.
+*Object:* Information about the source of this location, as a [`DehydratedSource`](../../sources/source-object.md#the-dehydratedsource-object) object.
 
 The concept of a source is meant to capture a certain social relationship between the host organization and a version of a work. When an organization puts the work on the internet, there is an understanding that they have, at some level, endorsed the work. This level varies, and can be very different depending on the source!
 
@@ -61,7 +61,7 @@ source {
 
 ### pdf\_url
 
-_String:_ A URL where you can find this location as a PDF.
+*String:* A URL where you can find this location as a PDF.
 
 ```json
 pdf_url: "http://www.scielo.br/pdf/jaos/v18n1/a10v18n1.pdf"
@@ -69,11 +69,11 @@ pdf_url: "http://www.scielo.br/pdf/jaos/v18n1/a10v18n1.pdf"
 
 ### version
 
-_String:_ The version of the work, based on the [DRIVER Guidelines versioning scheme.](https://wiki.surfnet.nl/display/DRIVERguidelines/DRIVER-VERSION+Mappings) Possible values are:.
+*String:* The version of the work, based on the [DRIVER Guidelines versioning scheme.](https://wiki.surfnet.nl/display/DRIVERguidelines/DRIVER-VERSION+Mappings) Possible values are:.
 
-* `publishedVersion`: The document’s version of record. This is the most authoritative version.
-* `acceptedVersion`: The document after having completed peer review and being officially accepted for publication. It will lack publisher formatting, but the _content_ should be interchangeable with the that of the `publishedVersion`.
-* `submittedVersion`: the document as submitted to the publisher by the authors, but _before_ peer-review. Its content may differ significantly from that of the accepted article.
+*   `publishedVersion`: The document’s version of record. This is the most authoritative version.
+*   `acceptedVersion`: The document after having completed peer review and being officially accepted for publication. It will lack publisher formatting, but the *content* should be interchangeable with the that of the `publishedVersion`.
+*   `submittedVersion`: the document as submitted to the publisher by the authors, but *before* peer-review. Its content may differ significantly from that of the accepted article.
 
 ```json
 version: "publishedVersion"

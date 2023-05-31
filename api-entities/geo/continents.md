@@ -24,8 +24,8 @@ Available values for the `<continent>` filter are:
 
 You can group by continent.
 
-* Group institutions by continent\
-  [https://api.openalex.org/institutions?group-by=continent](https://api.openalex.org/institutions?group-by=continent)
+*   Group institutions by continent\
+    <https://api.openalex.org/institutions?group-by=continent>
 
 Response:
 

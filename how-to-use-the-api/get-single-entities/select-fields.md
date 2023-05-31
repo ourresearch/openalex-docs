@@ -2,8 +2,8 @@
 
 You can use `select` to choose top-level fields you want to see in a result.
 
-* Display `id` and `display_name` for a work\
-  [https://api.openalex.org/works/W2138270253?select=id,display\_name](https://api.openalex.org/works/W2138270253?select=id,display\_name)
+*   Display `id` and `display_name` for a work\
+    <https://api.openalex.org/works/W2138270253?select=id,display_name>
 
 ```json
 {
