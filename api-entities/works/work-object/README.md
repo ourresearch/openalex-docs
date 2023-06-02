@@ -1,7 +1,5 @@
 # Work object
 
-There's a lot of useful data inside a work. When you use the API to get a [single work](../get-a-single-work.md) or [lists of works](../get-lists-of-works.md), this is what's returned.
-
 ### `abstract_inverted_index`
 
 _Object:_ The abstract of the work, as an [inverted index](https://en.wikipedia.org/wiki/Inverted\_index), which encodes information about the abstract's words and their positions within the text. [Like Microsoft Academic Graph](https://docs.microsoft.com/en-us/academic-services/graph/resources-faq#what-format-are-paper-abstracts-published-in), OpenAlex doesn't include plaintext abstracts due to legal constraints.
