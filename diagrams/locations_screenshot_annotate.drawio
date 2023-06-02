@@ -10,35 +10,23 @@
                 <mxCell id="4" value="&lt;span style=&quot;font-family: &amp;quot;Rock Salt&amp;quot;; font-size: 21px;&quot;&gt;One Work, Many Locations&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fontColor=#000000;strokeWidth=2;" parent="1" vertex="1">
                     <mxGeometry x="110" width="400" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Rock+Salt&quot; face=&quot;Rock Salt&quot; style=&quot;font-size: 17px;&quot;&gt;&lt;b&gt;Primary Location (version of record)&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#5E4DFF;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#5E4DFF;" parent="1" vertex="1">
-                    <mxGeometry x="300" y="525" width="225" height="85" as="geometry"/>
+                <mxCell id="8" value="&lt;font size=&quot;1&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Rock+Salt&quot; face=&quot;Rock Salt&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;Primary Location (version of record)&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#5E4DFF;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="607" width="250" height="85" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="" style="endArrow=block;html=1;fontFamily=Helvetica;fontSize=15;fontColor=#000000;exitX=0.123;exitY=1.018;exitDx=0;exitDy=0;endFill=1;strokeWidth=2;strokeColor=#5E4DFF;sketch=1;curveFitting=1;jiggle=2;exitPerimeter=0;entryX=0.963;entryY=0.221;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8" target="29" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="400" y="500" as="sourcePoint"/>
-                        <mxPoint x="229" y="633" as="targetPoint"/>
-                    </mxGeometry>
+                <mxCell id="15" value="&lt;span style=&quot;font-family: &amp;quot;Rock Salt&amp;quot;;&quot;&gt;&lt;font size=&quot;1&quot; color=&quot;#23b023&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;Best OA Location&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#2BD62B;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="692.5" width="225" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="&lt;span style=&quot;font-family: &amp;quot;Rock Salt&amp;quot;;&quot;&gt;&lt;font color=&quot;#23b023&quot; style=&quot;font-size: 17px;&quot;&gt;&lt;b&gt;Best OA Location&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#23B023;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#2BD62B;" parent="1" vertex="1">
-                    <mxGeometry x="300" y="630" width="225" height="80" as="geometry"/>
+                <mxCell id="23" value="&lt;font style=&quot;font-size: 20px;&quot; color=&quot;#4c0099&quot; face=&quot;Rock Salt&quot;&gt;Other Locations&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#000000;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="796" width="225" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="" style="endArrow=block;html=1;fontFamily=Helvetica;fontSize=15;fontColor=#000000;exitX=0.15;exitY=1.044;exitDx=0;exitDy=0;endFill=1;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;entryX=0.997;entryY=0.388;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#23B023;exitPerimeter=0;" parent="1" source="15" target="36" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="710" y="310" as="sourcePoint"/>
-                        <mxPoint x="622.2887955348015" y="392.50689071647685" as="targetPoint"/>
-                    </mxGeometry>
+                <mxCell id="29" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;strokeColor=#5E4DFF;strokeWidth=4;fillColor=none;perimeterSpacing=0;imageAspect=1;arcSize=55;absoluteArcSize=0;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="613" width="225" height="81" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" value="&lt;font color=&quot;#4c0099&quot; face=&quot;Rock Salt&quot;&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;Other Locations&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#4C0099;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="300" y="830" width="225" height="70" as="geometry"/>
+                <mxCell id="36" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;strokeColor=#23B023;strokeWidth=4;fillColor=none;perimeterSpacing=0;imageAspect=1;arcSize=55;absoluteArcSize=0;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="700" width="225" height="73" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;strokeColor=#5E4DFF;strokeWidth=4;fillColor=none;perimeterSpacing=0;imageAspect=1;arcSize=55;absoluteArcSize=0;" vertex="1" parent="1">
-                    <mxGeometry x="15" y="613" width="214" height="81" as="geometry"/>
-                </mxCell>
-                <mxCell id="36" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;strokeColor=#23B023;strokeWidth=4;fillColor=none;perimeterSpacing=0;imageAspect=1;arcSize=55;absoluteArcSize=0;" vertex="1" parent="1">
-                    <mxGeometry x="15" y="700" width="210" height="81" as="geometry"/>
-                </mxCell>
-                <mxCell id="37" value="" style="labelPosition=right;align=left;strokeWidth=3;shape=mxgraph.mockup.markup.curlyBrace;html=1;shadow=0;dashed=0;strokeColor=#4C0099;direction=north;sketch=0;fontColor=#2BD62B;fillColor=none;rotation=-180;" vertex="1" parent="1">
-                    <mxGeometry x="250" y="790" width="30" height="230" as="geometry"/>
+                <mxCell id="38" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;strokeColor=#4C0099;strokeWidth=4;fillColor=none;perimeterSpacing=0;imageAspect=1;arcSize=21;absoluteArcSize=0;" vertex="1" parent="1">
+                    <mxGeometry x="15" y="778" width="225" height="242" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
