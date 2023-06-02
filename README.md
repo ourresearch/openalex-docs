@@ -4,19 +4,31 @@
 
 **OpenAlex** is a free and open catalog of the global research system. It's named after the [ancient Library of Alexandria](https://en.wikipedia.org/wiki/Library\_of\_Alexandria) and made by the nonprofit [OurResearch](https://ourresearch.org/).
 
-This is the technical documentation for the **OpenAlex API.** Here, you can learn how to set up your code to access OpenAlex's data. If you want to explore the data as a human, you may be more interested in **OpenAlex Web.** This web interface is currently in the alpha stage of development, with a beta launch coming in July, 2023 ([sign up here to be notified when the launch happens!](https://forms.gle/NDoXAQVKGQLpkF5U8)).
+The heart of OpenAlex is the [OpenAlex dataset](broken-reference), which describes scholarly [_entities_ ](api-entities/entities-overview.md)and how those entities are connected to each other. Types of entities include [works](api-entities/works/), [authors](api-entities/authors/), [sources](api-entities/sources/), [institutions](api-entities/institutions/), [concepts](api-entities/concepts/), [publishers](api-entities/publishers/), and [funders](api-entities/funders/).
+
+Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of hundreds of millions of entities and billions of connections between them all.
+
+We offer three ways to make use of this dataset:
+
+1. [**The web interface** ](broken-reference)is the quickest way to get started. It lets you explore, search, and analyze the data with an intuitive visual app.
+2. [**The API** ](broken-reference)offers a more powerful way to access the data, but requires some coding experience. It is a fast, modern REST API with generous limits and no authentication requirements. The web interface is built entirely on the API.
+3. [**The data snapshot** ](broken-reference)is a full dump of the dataset available to download, which we update about once per month.
+
+**All three of these options are free.**
+
+We also offer [**OpenAlex Premium,** ](https://openalex.org/pricing)which includes services above and beyond the free tier, such as a higher daily limit for the API, and more frequent data updates. This is also a great way to support our mission and help keep us sustainable, so please check it out if you enjoy OpenAlex.
 
 ## Data
 
-The OpenAlex dataset describes scholarly [_entities_ ](the-data/entities-overview.md)and how those entities are connected to each other. Types of entities include [works](the-data/works/), [authors](the-data/authors/), [sources](the-data/sources/), [institutions](the-data/institutions/), [concepts](the-data/concepts/), [publishers](the-data/publishers/), and [funders](the-data/funders/).
+The OpenAlex dataset describes scholarly [_entities_ ](api-entities/entities-overview.md)and how those entities are connected to each other. Types of entities include [works](api-entities/works/), [authors](api-entities/authors/), [sources](api-entities/sources/), [institutions](api-entities/institutions/), [concepts](api-entities/concepts/), [publishers](api-entities/publishers/), and [funders](api-entities/funders/).
 
 Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of hundreds of millions of entities and billions of connections between them all.
 
 ## Access
 
-The API is the primary way to get OpenAlex data. It's free and requires no authentication. The daily limit for API calls is 100,000 requests per user per day. For best performance, [add your email](the-api/rate-limits-and-authentication.md#the-polite-pool) to all API requests, like `mailto=example@domain.com`. [Learn more](the-api/api-overview.md)
+The API is the primary way to get OpenAlex data. It's free and requires no authentication. The daily limit for API calls is 100,000 requests per user per day. For best performance, [add your email](how-to-use-the-api/rate-limits-and-authentication.md#the-polite-pool) to all API requests, like `mailto=example@domain.com`. [Learn more](how-to-use-the-api/api-overview.md)
 
-There is also a complete database snapshot available to download. [Learn more about the data snapshot here.](the-data-snapshot/openalex-snapshot.md)
+There is also a complete database snapshot available to download. [Learn more about the data snapshot here.](download-all-data/openalex-snapshot.md)
 
 The API has a limit of 100,000 calls per day, and the snapshot is updated monthly. If you need a higher limit, or more frequent updates, please look into [**OpenAlex Premium.**](https://openalex.org/pricing)
 

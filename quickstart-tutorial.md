@@ -14,7 +14,7 @@ If you open these examples in a web browser, they will look _much_ better if you
 
 #### 1. Find the institution
 
-You can use the [institutions](the-data/institutions/) endpoint to learn about universities and research centers. OpenAlex has a powerful search feature that searches across 108,000 institutions.
+You can use the [institutions](api-entities/institutions/) endpoint to learn about universities and research centers. OpenAlex has a powerful search feature that searches across 108,000 institutions.
 
 Lets use it to search for Stanford University:
 
@@ -39,7 +39,7 @@ We can use the ID `https://openalex.org/I97018004` in that result to find out mo
 
 #### 2. Find articles (works) associated with Stanford University
 
-The [works](the-data/works/) endpoint contains over 240 million articles, books, and theses :astonished:. We can filter to show works associated with Stanford.
+The [works](api-entities/works/) endpoint contains over 240 million articles, books, and theses :astonished:. We can filter to show works associated with Stanford.
 
 * Show works where at least one author is associated with Stanford University\
   [`https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I97018004`](https://api.openalex.org/works?filter=institutions.id:https://openalex.org/I97018004)
@@ -89,12 +89,12 @@ There you have it! This same technique can be applied to hundreds of questions a
 
 Jump into an area of OpenAlex that interests you:
 
-* [Works](the-data/works/)
-* [Authors](the-data/authors/)
-* [Sources](the-data/sources/)
-* [Institutions](the-data/institutions/)
-* [Concepts](the-data/concepts/)
-* [Publishers](the-data/publishers/)
-* [Funders](the-data/funders/)
+* [Works](api-entities/works/)
+* [Authors](api-entities/authors/)
+* [Sources](api-entities/sources/)
+* [Institutions](api-entities/institutions/)
+* [Concepts](api-entities/concepts/)
+* [Publishers](api-entities/publishers/)
+* [Funders](api-entities/funders/)
 
 And check out our [tutorials](additional-help/tutorials.md) page for some hands-on examples!
