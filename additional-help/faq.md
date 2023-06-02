@@ -28,38 +28,38 @@ Yes. We automatically gather and normalize author affiliations from both structu
 
 OpenAlex is not doing this alone! Rather, we're aggregating and standardizing data from a whole bunch of other great projects, like a river fed by many tributaries. Our two most important data sources are [MAG](https://aka.ms/msracad) and [Crossref.](https://www.crossref.org/) Other key sources include:
 
-*   [ORCID](https://orcid.org/)
-*   [ROR](https://ror.org/)
-*   [DOAJ](https://doaj.org/)
-*   [Unpaywall](https://unpaywall.org/)
-*   [Pubmed](https://pubmed.ncbi.nlm.nih.gov/)
-*   [Pubmed Central](https://www.ncbi.nlm.nih.gov/pmc/)
-*   [The ISSN International Centre](https://www.issn.org/)
-*   [Internet Archive](https://archive.org/details/GeneralIndex)
-*   Web crawls
-*   Subject-area and institutional repositories from [arXiv](https://arxiv.org/) to [Zenodo](https://zenodo.org/) and everywhere in between
+* [ORCID](https://orcid.org/)
+* [ROR](https://ror.org/)
+* [DOAJ](https://doaj.org/)
+* [Unpaywall](https://unpaywall.org/)
+* [Pubmed](https://pubmed.ncbi.nlm.nih.gov/)
+* [Pubmed Central](https://www.ncbi.nlm.nih.gov/pmc/)
+* [The ISSN International Centre](https://www.issn.org/)
+* [Internet Archive](https://archive.org/details/GeneralIndex)
+* Web crawls
+* Subject-area and institutional repositories from [arXiv](https://arxiv.org/) to [Zenodo](https://zenodo.org/) and everywhere in between
 
 ### How often is the data updated?
 
-For now, the database snapshot is updated about once per month. However, in the future we will probably offer a much faster update cadence (approximately daily) as an optional, [paid upgrade](faq.md#whats-your-sustainability-plan). If you're interested in that, drop us a line at <team@ourresearch.org>.
+For now, the database snapshot is updated about once per month. However, in the future we will probably offer a much faster update cadence (approximately daily) as an optional, [paid upgrade](faq.md#whats-your-sustainability-plan). If you're interested in that, drop us a line at [team@ourresearch.org](mailto:team@ourresearch.org).
 
 ### Is your data quality better than \_\_\_\_?
 
-Our dataset is still very young, so there's not a lot of systematic research comparing OpenAlex to peer databases like MAG, Scopus, Dimensions, etc. We're currently working on publishing some research like that ourselves. Our initial finding are very encouraging...we believe OpenAlex is already comparable in coverage and accuracy to the more established players--but OpenAlex is 100% open data, built on 100% open-source code. We think that's a really important feature. We will also continue improving the data quality in the days, weeks, months, and years ahead!&#x20;
+Our dataset is still very young, so there's not a lot of systematic research comparing OpenAlex to peer databases like MAG, Scopus, Dimensions, etc. We're currently working on publishing some research like that ourselves. Our initial finding are very encouraging...we believe OpenAlex is already comparable in coverage and accuracy to the more established players--but OpenAlex is 100% open data, built on 100% open-source code. We think that's a really important feature. We will also continue improving the data quality in the days, weeks, months, and years ahead!
 
-### How is OpenAlex licensed?&#x20;
+### How is OpenAlex licensed?
 
 OpenAlex data is licensed as [CC0](https://creativecommons.org/publicdomain/zero/1.0/) so it is free to use and distribute.
 
 ### How much does OpenAlex cost?
 
-It's free! The [website](https://explore.openalex.org), the [API](../), and the [database snapshot](../download-all-data/openalex-snapshot.md) are all available at no charge. As a nonprofit, making this data free and open is part of our mission.
+It's free! The [website](https://explore.openalex.org), the [API](../), and the [database snapshot](../the-data-snapshot/openalex-snapshot.md) are all available at no charge. As a nonprofit, making this data free and open is part of our mission.
 
 For those who would like a higher level of service and to provide direct financial support for our mission, we offer [OpenAlex Premium. Click here to learn more.](https://openalex.org/pricing)
 
 ### What's your sustainability plan?
 
-Our nonprofit (OurResearch) has a ten-year track record of building sustainable scholarly infrastructure, and a formal commitment to sustainability as part of [our adoption of the POSI principles.](https://blog.ourresearch.org/posi/)&#x20;
+Our nonprofit (OurResearch) has a ten-year track record of building sustainable scholarly infrastructure, and a formal commitment to sustainability as part of [our adoption of the POSI principles.](https://blog.ourresearch.org/posi/)
 
 We're currently still exploring our options for OpenAlex's sustainability plan. Thanks to a generous grant from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk/), we've got lots of runway, and we don't need to roll anything out in a rush.
 
