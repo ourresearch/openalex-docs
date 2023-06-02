@@ -65,7 +65,7 @@
 
 ## The Website
 
-* [Page 1](the-website/page-1.md)
+* [Website Overview](the-website/page-1.md)
 
 ## The API
 
