@@ -2,8 +2,8 @@
 
 It's easy to get an institution from from the API with: `/institutions/<entity_id>`. Here's an example:
 
-*   Get the institution with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `I27837315`: \
-    <https://api.openalex.org/institutions/I27837315>
+* Get the institution with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `I27837315`:\
+  [https://api.openalex.org/institutions/I27837315](https://api.openalex.org/institutions/I27837315)
 
 That will return an [`Institution`](institution-object.md) object, describing everything OpenAlex knows about the institution with that ID:
 
@@ -26,8 +26,8 @@ You can make up to 50 of these queries at once by [requesting a list of entities
 
 You can look up institutions using external IDs such as a [ROR ID](https://ror.org/):
 
-*   Get the institution with ROR ID `https://ror.org/00cvxb145`:\
-    <https://api.openalex.org/institutions/ror:https://ror.org/00cvxb145>
+* Get the institution with ROR ID `https://ror.org/00cvxb145`:\
+  [https://api.openalex.org/institutions/ror:https://ror.org/00cvxb145](https://api.openalex.org/institutions/ror:https://ror.org/00cvxb145)
 
 Available external IDs for institutions are:
 
@@ -37,5 +37,5 @@ Available external IDs for institutions are:
 
 You can use `select` to limit the fields that are returned in an institution object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
 
-*   Display only the `id` and `display_name` for an institution object\
-    <https://api.openalex.org/institutions/I27837315?select=id,display_name>
+* Display only the `id` and `display_name` for an institution object\
+  [https://api.openalex.org/institutions/I27837315?select=id,display\_name](https://api.openalex.org/institutions/I27837315?select=id,display\_name)

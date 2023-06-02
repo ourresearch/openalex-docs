@@ -1,6 +1,6 @@
 # Continents
 
-Countries are mapped to continents using data from the [United Nations Statistics Division](https://unstats.un.org/unsd/methodology/m49/). You can see the actual mapping used by the API [here](https://github.com/ourresearch/openalex-elastic-api/blob/master/countries.py).&#x20;
+Countries are mapped to continents using data from the [United Nations Statistics Division](https://unstats.un.org/unsd/methodology/m49/). You can see the actual mapping used by the API [here](https://github.com/ourresearch/openalex-elastic-api/blob/master/countries.py).
 
 #### **Filter by continent**
 
@@ -24,8 +24,8 @@ Available values for the `<continent>` filter are:
 
 You can group by continent.
 
-*   Group institutions by continent\
-    <https://api.openalex.org/institutions?group-by=continent>
+* Group institutions by continent\
+  [https://api.openalex.org/institutions?group-by=continent](https://api.openalex.org/institutions?group-by=continent)
 
 Response:
 

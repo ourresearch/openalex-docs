@@ -2,7 +2,7 @@
 
 ### **Global South**
 
-The Global South is a term used to identify regions within Latin America, Asia, Africa, and Oceania. Our source for this group of countries is the [United Nations Finance Center for South-South Cooperation](http://www.fc-ssc.org/en/partnership_program/south_south_countries).&#x20;
+The Global South is a term used to identify regions within Latin America, Asia, Africa, and Oceania. Our source for this group of countries is the [United Nations Finance Center for South-South Cooperation](http://www.fc-ssc.org/en/partnership\_program/south\_south\_countries).
 
 #### Filter by Global South
 
@@ -20,8 +20,8 @@ You can also group by the Global South:
 
 To see country-by-country details for a geographic region, filter by region, then group by `country_code`.
 
-*   Get number of authors with last known institution in the Global South, by country\
-    <https://api.openalex.org/authors?filter=last_known_institution.is_global_south:true&group-by=last_known_institution.country_code>
+* Get number of authors with last known institution in the Global South, by country\
+  [https://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true\&group-by=last\_known\_institution.country\_code](https://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true\&group-by=last\_known\_institution.country\_code)
 
 Response:
 

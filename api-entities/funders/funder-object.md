@@ -4,7 +4,7 @@ These are the fields in a funder object. When you use the API to get a single fu
 
 ### `alternate_titles`
 
-*List:* A list of alternate titles for this funder.
+_List:_ A list of alternate titles for this funder.
 
 ```json
 alternate_titles: [
@@ -16,7 +16,7 @@ alternate_titles: [
 
 ### `cited_by_count`
 
-*Integer:* The total number [`Works`](../works/work-object/) that cite a work linked to this funder.
+_Integer:_ The total number [`Works`](../works/work-object/) that cite a work linked to this funder.
 
 ```json
 cited_by_count: 7823467
@@ -24,7 +24,7 @@ cited_by_count: 7823467
 
 ### `country_code`
 
-*String:* The country where this funder is located, represented as an [ISO two-letter country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+_String:_ The country where this funder is located, represented as an [ISO two-letter country code](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2).
 
 ```json
 country_code: "US"
@@ -32,7 +32,7 @@ country_code: "US"
 
 ### `counts_by_year`
 
-*List:* The values of [`works_count`](funder-object.md#works_count) and [`cited_by_count`](funder-object.md#cited_by_count) for *each* of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works are linked to this funder, and how many times *any* work linked to this funder was cited.
+_List:_ The values of [`works_count`](funder-object.md#works\_count) and [`cited_by_count`](funder-object.md#cited\_by\_count) for _each_ of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works are linked to this funder, and how many times _any_ work linked to this funder was cited.
 
 Years with zero citations and zero works have been removed so you will need to add those back in if you need them.
 
@@ -55,7 +55,7 @@ counts_by_year: [
 
 ### `created_date`
 
-*String:* The date this `Funder` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date string.
+_String:_ The date this `Funder` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
 
 ```json
 created_date: "2023-02-13"
@@ -63,7 +63,7 @@ created_date: "2023-02-13"
 
 ### `description`
 
-*String:* A short description of this funder, taken from [Wikidata](funder-object.md#ids).
+_String:_ A short description of this funder, taken from [Wikidata](funder-object.md#ids).
 
 ```json
 description: "medical research organization in the United States"
@@ -71,7 +71,7 @@ description: "medical research organization in the United States"
 
 ### `display_name`
 
-*String:* The primary name of the funder.
+_String:_ The primary name of the funder.
 
 ```json
 display_name: "National Institutes of Health"
@@ -79,7 +79,7 @@ display_name: "National Institutes of Health"
 
 ### `grants_count`
 
-*Integer:* The number of grants linked to this funder.
+_Integer:_ The number of grants linked to this funder.
 
 ```json
 grants_count: 7109
@@ -87,7 +87,7 @@ grants_count: 7109
 
 ### `homepage_url`
 
-*String:* The URL for this funder's primary homepage.
+_String:_ The URL for this funder's primary homepage.
 
 ```json
 homepage_url: "http://www.nih.gov/"
@@ -95,7 +95,7 @@ homepage_url: "http://www.nih.gov/"
 
 ### `id`
 
-*String:* The OpenAlex ID for this funder.
+_String:_ The OpenAlex ID for this funder.
 
 ```json
 id: "https://openalex.org/F4320332161"
@@ -103,11 +103,11 @@ id: "https://openalex.org/F4320332161"
 
 ### `ids`
 
-*Object:* All the external identifiers that we know about for this funder. IDs are expressed as URIs whenever possible. Possible ID types:
+_Object:_ All the external identifiers that we know about for this funder. IDs are expressed as URIs whenever possible. Possible ID types:
 
-*   `openalex` *String:* this funder's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id)
-*   `ror` *String:* this funder's ROR ID
-*   `wikidata` *String:* this funder's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers)
+* `openalex` _String:_ this funder's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id)
+* `ror` _String:_ this funder's ROR ID
+* `wikidata` _String:_ this funder's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers)
 
 ```json
 ids: {
@@ -119,7 +119,7 @@ ids: {
 
 ### `image_thumbnail_url`
 
-*String:* Same as [`image_url`](#image_url), but it's a smaller image.
+_String:_ Same as [`image_url`](funder-object.md#image\_url), but it's a smaller image.
 
 This is usually a hotlink to a wikimedia image. You can change the `width=300` parameter in the URL if you want a different thumbnail size.
 
@@ -129,7 +129,7 @@ image_thumbnail_url: "https://commons.wikimedia.org/w/index.php?title=Special:Re
 
 ### `image_url`
 
-*String:* URL where you can get an image representing this funder. Usually this a hotlink to a Wikimedia image, and usually it's a seal or logo.
+_String:_ URL where you can get an image representing this funder. Usually this a hotlink to a Wikimedia image, and usually it's a seal or logo.
 
 ```json
 image_url: "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/NIH 2013 logo vertical.svg"
@@ -137,7 +137,7 @@ image_url: "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/fil
 
 ### `roles`
 
-*List:* List of role objects, which include the `role` (one of `institution`, `funder`, or `publisher`), the `id` ([OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id)), and the `works_count`.
+_List:_ List of role objects, which include the `role` (one of `institution`, `funder`, or `publisher`), the `id` ([OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id)), and the `works_count`.
 
 In many cases, a single organization does not fit neatly into one role. For example, Yale University is a single organization that is a research university, funds research studies, and publishes an academic journal. The `roles` property links the OpenAlex entities together for a single organization, and includes counts for the works associated with each role.
 
@@ -165,13 +165,13 @@ roles: [
 
 ### `summary_stats`
 
-*Object:* Citation metrics for this funder
+_Object:_ Citation metrics for this funder
 
-*   `2yr_mean_citedness` *Float*: The 2-year mean citedness for this funder. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact_factor).
-*   `h_index` *Integer*: The [*h*-index](https://en.wikipedia.org/wiki/H-index) for this funder.
-*   `i10_index` *Integer*: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this funder.
+* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this funder. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor).
+* `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this funder.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level\_metrics#i-10-index) for this funder.
 
-While the *h*-index and the i-10 index are normally author-level metrics and the 2-year mean citedness is normally a journal-level metric, they can be calculated for any set of papers, so we include them for funders.
+While the _h_-index and the i-10 index are normally author-level metrics and the 2-year mean citedness is normally a journal-level metric, they can be calculated for any set of papers, so we include them for funders.
 
 ```json
 summary_stats: {
@@ -183,7 +183,7 @@ summary_stats: {
 
 ### `updated_date`
 
-*String:* The last time anything in this funder object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date string. This date is updated for *any change at all*, including increases in various counts.
+_String:_ The last time anything in this funder object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
 
 ```json
 updated_date: "2023-04-21T16:54:19.012138"
@@ -191,7 +191,7 @@ updated_date: "2023-04-21T16:54:19.012138"
 
 ### `works_count`
 
-*Integer:* The number of works linked to this funder.
+_Integer:_ The number of works linked to this funder.
 
 ```json
 works_count: 260210
