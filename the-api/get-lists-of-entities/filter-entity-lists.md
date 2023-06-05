@@ -72,7 +72,7 @@ You can use OR for values _within_ a given filter, but not _between_ different f
 The filters for each entity can be found here:
 
 * [Works](../filters/filter-works.md)
-* [Authors](../../the-data/authors/filter-authors.md)
+* [Authors](../filters/filter-authors.md)
 * [sources](../filters/filter-sources.md)
-* [Institutions](../../the-data/institutions/filter-institutions.md)
-* [Concepts](../../the-data/concepts/filter-concepts.md)
+* [Institutions](../filters/filter-institutions.md)
+* [Concepts](../filters/filter-concepts.md)

@@ -46,7 +46,7 @@ You also can [sort results](../../the-api/get-lists-of-entities/sort-entity-list
 * Sort authors by cited by count, descending\
   [https://api.openalex.org/authors?sort=cited\_by\_count:desc](https://api.openalex.org/authors?sort=cited\_by\_count:desc)
 
-Continue on to learn how you can [filter](filter-authors.md) and [search](search-authors.md) lists of authors.
+Continue on to learn how you can [filter](../../the-api/filters/filter-authors.md) and [search](search-authors.md) lists of authors.
 
 ## Sample authors
 

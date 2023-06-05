@@ -8,7 +8,7 @@ You can group publishers with the `group_by` parameter:
 Or you can group using one the attributes below.
 
 {% hint style="info" %}
-It's best to [read about group by](../../the-api/get-groups-of-entities.md) before trying these out. It will show you how results are formatted, the number of results returned, and how to sort results.
+It's best to [read about group by](../../the-api/get-groups-of-entities/) before trying these out. It will show you how results are formatted, the number of results returned, and how to sort results.
 {% endhint %}
 
 ### `/publishers` group\_by attributes

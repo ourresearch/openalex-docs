@@ -44,7 +44,7 @@ You also can [sort results](../../the-api/get-lists-of-entities/sort-entity-list
 * Sort publishers by display name, descending\
   [https://api.openalex.org/publishers?sort=display\_name:desc](https://api.openalex.org/publishers?sort=display\_name:desc)
 
-Continue on to learn how you can [filter](filter-publishers.md) and [search](search-publishers.md) lists of publishers.
+Continue on to learn how you can [filter](../../the-api/filters/filter-publishers.md) and [search](search-publishers.md) lists of publishers.
 
 ## Sample publishers
 

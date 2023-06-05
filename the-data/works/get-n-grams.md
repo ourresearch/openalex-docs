@@ -6,7 +6,7 @@
 
 ## Get N-grams
 
-N-grams list the words and phrases that occur in the full text of a [`Work`](work-object/). We obtain them from Internet Archive's publicly (and generously :clap:) available [General Index](https://archive.org/details/GeneralIndex) and use them to enable fulltext searches on the Works that have them, through both the [`fulltext.search`](../../the-api/filters/filter-works.md#fulltext.search) _filter_, and as an element of the more holistic [`search`](search-works.md#works-full-search) _parameter_.
+N-grams list the words and phrases that occur in the full text of a [`Work`](work-object/). We obtain them from Internet Archive's publicly (and generously :clap:) available [General Index](https://archive.org/details/GeneralIndex) and use them to enable fulltext searches on the Works that have them, through both the [`fulltext.search`](../../the-api/filters/filter-works.md#fulltext.search) _filter_, and as an element of the more holistic [`search`](../../the-api/search/search-works.md#works-full-search) _parameter_.
 
 Note that while n-grams are derived from the fulltext of a Work, the presence of n-grams for a given Work doesn't imply that the fulltext is available to you, the reader. It only means the fulltext was available to Internet Archive for indexing. [`Work.open_access`](work-object/#open\_access) is the place to go for information on public fulltext availability.
 

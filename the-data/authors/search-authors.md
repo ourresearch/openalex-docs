@@ -22,9 +22,9 @@ You can also use search as a [filter](../../the-api/get-lists-of-entities/filter
 
 When searching for authors, there is no difference when using the `search` parameter or the filter `display_name.search`, since display\_name is the only field searched when finding authors.
 
-| Search filter                                                   | Field that is searched                           |
-| --------------------------------------------------------------- | ------------------------------------------------ |
-| [`display_name.search`](filter-authors.md#display\_name.search) | [`display_name`](author-object.md#display\_name) |
+| Search filter                                                                         | Field that is searched                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| [`display_name.search`](../../the-api/filters/filter-authors.md#display\_name.search) | [`display_name`](author-object.md#display\_name) |
 
 You can also use the filter `default.search`, which works the same as using the [`search` parameter](search-authors.md#search-authors).
 

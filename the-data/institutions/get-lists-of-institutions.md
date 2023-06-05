@@ -46,7 +46,7 @@ You also can [sort results](../../the-api/get-lists-of-entities/sort-entity-list
 * Sort institutions by cited by count, descending\
   [https://api.openalex.org/institutions?sort=cited\_by\_count:desc](https://api.openalex.org/institutions?sort=cited\_by\_count:desc)
 
-Continue on to learn how you can [filter](filter-institutions.md) and [search](search-institutions.md) lists of institutions.
+Continue on to learn how you can [filter](../../the-api/filters/filter-institutions.md) and [search](search-institutions.md) lists of institutions.
 
 ## Sample institutions
 

@@ -28,6 +28,6 @@ Learn more about what you can do with institutions:
 * [The Institution object](institution-object.md)
 * [Get a single institution](get-a-single-institution.md)
 * [Get lists of institutions](get-lists-of-institutions.md)
-* [Filter institutions](filter-institutions.md)
+* [Filter institutions](../../the-api/filters/filter-institutions.md)
 * [Search institutions](search-institutions.md)
 * [Group institutions](group-institutions.md)

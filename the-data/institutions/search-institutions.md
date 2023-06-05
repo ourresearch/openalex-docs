@@ -18,9 +18,9 @@ You can also use search as a [filter](../../the-api/get-lists-of-entities/filter
 
 The following field can be searched as a filter within institutions:
 
-| Search filter                                                        | Field that is searched                                |
-| -------------------------------------------------------------------- | ----------------------------------------------------- |
-| [`display_name.search`](filter-institutions.md#display\_name.search) | [`display_name`](institution-object.md#display\_name) |
+| Search filter                                                                              | Field that is searched                                |
+| ------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
+| [`display_name.search`](../../the-api/filters/filter-institutions.md#display\_name.search) | [`display_name`](institution-object.md#display\_name) |
 
 You can also use the filter `default.search`, which works the same as using the [`search` parameter](search-institutions.md#search-institutions).
 

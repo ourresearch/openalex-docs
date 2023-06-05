@@ -1,6 +1,6 @@
 # OpenAlex snapshot
 
-For most use cases, the REST API is your best option. However, you can also download and install a complete copy of the OpenAlex database on your own server, using the database snapshot. The snapshot consists of five files (split into smaller files for convenience), with one file for each of our five entity types. The files are in the [JSON Lines](https://jsonlines.org/) format; each line is a JSON object, exactly the same as [you'd get from our API](../the-data/works/get-a-single-work.md). The properties of these JSON objects are documented in each entity's object section (for example, the [`Work`](../the-data/works/work-object/) object).
+For most use cases, the REST API is your best option. However, you can also download and install a complete copy of the OpenAlex database on your own server, using the database snapshot. The snapshot consists of five files (split into smaller files for convenience), with one file for each of our five entity types. The files are in the [JSON Lines](https://jsonlines.org/) format; each line is a JSON object, exactly the same as [you'd get from our API](../the-api/get-single-entities/get-a-single-work.md). The properties of these JSON objects are documented in each entity's object section (for example, the [`Work`](../the-data/works/work-object/) object).
 
 The snapshot is updated about once per month; you can read [release notes for each new update here.](https://github.com/ourresearch/openalex-guts/blob/main/files-for-datadumps/standard-format/RELEASE\_NOTES.txt)
 

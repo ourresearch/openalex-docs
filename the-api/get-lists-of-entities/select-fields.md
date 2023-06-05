@@ -38,4 +38,4 @@ So if we have a record like so:
 
 You can choose to display `id` and `open_access`, but you will get an error if you try to choose `open_access.is_oa`.
 
-You can use select fields when getting lists of entities or a [single entity](../get-single-entities/select-fields.md). It does not work with [group-by](../get-groups-of-entities.md) or [autocomplete](autocomplete-entities.md).
+You can use select fields when getting lists of entities or a [single entity](../get-single-entities/select-fields.md). It does not work with [group-by](../get-groups-of-entities/) or [autocomplete](autocomplete-entities.md).

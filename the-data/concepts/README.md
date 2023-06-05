@@ -32,6 +32,6 @@ Learn more about what you can do with concepts:
 * [The Concept object](concept-object.md)
 * [Get a single concept](get-a-single-concept.md)
 * [Get lists of concepts](get-lists-of-concepts.md)
-* [Filter concepts](filter-concepts.md)
+* [Filter concepts](../../the-api/filters/filter-concepts.md)
 * [Search concepts](search-concepts.md)
 * [Group concepts](group-concepts.md)

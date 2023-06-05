@@ -6,7 +6,7 @@ The API is the primary way to get OpenAlex data. It's free and requires no authe
 
 * [Get single entities](get-single-entities/)
 * [Get lists of entities](get-lists-of-entities/) — Learn how to use [paging](get-lists-of-entities/paging.md), [filtering](get-lists-of-entities/filter-entity-lists.md), and [sorting](get-lists-of-entities/sort-entity-lists.md)
-* [Get groups of entities](get-groups-of-entities.md) — Group and count entities in different ways
+* [Get groups of entities](get-groups-of-entities/) — Group and count entities in different ways
 * [Rate limits and authentication](rate-limits-and-authentication.md) — Learn about joining the [polite pool](rate-limits-and-authentication.md#the-polite-pool)
 * [Tutorials ](../additional-help/tutorials.md)— Hands-on examples with code
 

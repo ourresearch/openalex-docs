@@ -22,6 +22,6 @@ Learn more about what you can do with publishers:
 * [The Publisher object](publisher-object.md)
 * [Get a single publisher](get-a-single-publisher.md)
 * [Get lists of publishers](get-lists-of-publishers.md)
-* [Filter publishers](filter-publishers.md)
+* [Filter publishers](../../the-api/filters/filter-publishers.md)
 * [Search publishers](search-publishers.md)
 * [Group publishers](group-publishers.md)

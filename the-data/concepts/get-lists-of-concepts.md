@@ -46,7 +46,7 @@ You also can [sort results](../../the-api/get-lists-of-entities/sort-entity-list
 * Sort concepts by cited by count, descending\
   [https://api.openalex.org/concepts?sort=cited\_by\_count:desc](https://api.openalex.org/concepts?sort=cited\_by\_count:desc)
 
-Continue on to learn how you can [filter](filter-concepts.md) and [search](search-concepts.md) lists of concepts.
+Continue on to learn how you can [filter](../../the-api/filters/filter-concepts.md) and [search](search-concepts.md) lists of concepts.
 
 ## Sample concepts
 

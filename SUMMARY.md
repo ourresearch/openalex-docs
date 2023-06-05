@@ -10,10 +10,6 @@
   * [Work object](the-data/works/work-object/README.md)
     * [Authorship object](the-data/works/work-object/authorship-object.md)
     * [Location object](the-data/works/work-object/location-object.md)
-  * [Get a single work](the-data/works/get-a-single-work.md)
-  * [Get lists of works](the-data/works/get-lists-of-works.md)
-  * [Search works](the-data/works/search-works.md)
-  * [Group works](the-data/works/group-works.md)
   * [Get N-grams](the-data/works/get-n-grams.md)
 * [👩 Authors](the-data/authors/README.md)
   * [Author object](the-data/authors/author-object.md)
@@ -68,9 +64,11 @@
 ## The API
 
 * [API Overview](the-api/api-overview.md)
+* [Rate limits and authentication](the-api/rate-limits-and-authentication.md)
 * [Get single entities](the-api/get-single-entities/README.md)
   * [Random result](the-api/get-single-entities/random-result.md)
   * [Select fields](the-api/get-single-entities/select-fields.md)
+  * [Get a single work](the-api/get-single-entities/get-a-single-work.md)
 * [Get lists of entities](the-api/get-lists-of-entities/README.md)
   * [Paging](the-api/get-lists-of-entities/paging.md)
   * [Filter entity lists](the-api/get-lists-of-entities/filter-entity-lists.md)
@@ -79,6 +77,9 @@
   * [Select fields](the-api/get-lists-of-entities/select-fields.md)
   * [Sample entity lists](the-api/get-lists-of-entities/sample-entity-lists.md)
   * [Autocomplete entities](the-api/get-lists-of-entities/autocomplete-entities.md)
+  * [Get lists of works](the-api/get-lists-of-entities/get-lists-of-works.md)
+* [Get groups of entities](the-api/get-groups-of-entities/README.md)
+  * [Group works](the-api/get-groups-of-entities/group-works.md)
 * [Filters](the-api/filters/README.md)
   * [Filter works](the-api/filters/filter-works.md)
   * [Filter authors](the-api/filters/filter-authors.md)
@@ -86,9 +87,9 @@
   * [Filter institutions](the-api/filters/filter-institutions.md)
   * [Filter concepts](the-api/filters/filter-concepts.md)
   * [Filter publishers](the-api/filters/filter-publishers.md)
-  * [Filter funders](the-api/filters/filter-sources.md)
-* [Get groups of entities](the-api/get-groups-of-entities.md)
-* [Rate limits and authentication](the-api/rate-limits-and-authentication.md)
+  *
+* [Search](the-api/search/README.md)
+  * [Search works](the-api/search/search-works.md)
 
 ## The Data Snapshot
 

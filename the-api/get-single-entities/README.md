@@ -6,7 +6,7 @@
 
 ## Get single entities
 
-This is a more detailed guide to single entities in OpenAlex. If you're just getting started, check out [get a single work](../../the-data/works/get-a-single-work.md).
+This is a more detailed guide to single entities in OpenAlex. If you're just getting started, check out [get a single work](get-a-single-work.md).
 
 It's easy to get a singleton entity object from from the API:`/<entity_name>/<entity_id>.` Here's an example:
 

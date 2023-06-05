@@ -19,9 +19,9 @@ Works are linked to other works via the [`referenced_works`](work-object/#refere
 Learn more about what you can do with works:
 
 * [The Work object](work-object/)
-* [Get a single work](get-a-single-work.md)
-* [Get lists of works](get-lists-of-works.md)
+* [Get a single work](../../the-api/get-single-entities/get-a-single-work.md)
+* [Get lists of works](../../the-api/get-lists-of-entities/get-lists-of-works.md)
 * [Filter works](../../the-api/filters/filter-works.md)
-* [Search for works](search-works.md)
-* [Group works](group-works.md)
+* [Search for works](../../the-api/search/search-works.md)
+* [Group works](../../the-api/get-groups-of-entities/group-works.md)
 * [Get N-grams](get-n-grams.md)

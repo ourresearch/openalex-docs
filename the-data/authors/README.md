@@ -25,6 +25,6 @@ Learn more about what you can with authors:
 * [The Author object](author-object.md)
 * [Get a single author](get-a-single-author.md)
 * [Get lists of authors](get-lists-of-authors.md)
-* [Filter authors](filter-authors.md)
+* [Filter authors](../../the-api/filters/filter-authors.md)
 * [Search authors](search-authors.md)
 * [Group authors](group-authors.md)

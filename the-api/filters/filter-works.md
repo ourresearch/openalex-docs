@@ -75,7 +75,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`type`](../../the-data/works/work-object/#type)
 
 {% hint style="info" %}
-Want to filter by the `display_name` of an associated entity (author, institution, source, etc.)? [See here.](../../the-data/works/search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)
+Want to filter by the `display_name` of an associated entity (author, institution, source, etc.)? [See here.](../search/search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)
 {% endhint %}
 
 ## `/works` convenience filters
@@ -163,7 +163,7 @@ Returns: works with the chosen number of [`concepts`](../../the-data/works/work-
 
 Value: a search string
 
-This works the same as using the [`search` parameter](../../the-data/works/search-works.md#search-works) for Works.
+This works the same as using the [`search` parameter](../search/search-works.md#search-works) for Works.
 
 #### `display_name.search` (alias: `title.search`)
 
@@ -175,7 +175,7 @@ Returns: works whose[`display_name`](../../the-data/works/work-object/#display\_
   [`https://api.openalex.org/works?filter=title.search:wombat`](https://api.openalex.org/works?filter=title.search:wombat)
 
 {% hint style="info" %}
-For most cases, you should use the [`search`](../../the-data/works/search-works.md#works-full-search) parameter instead of this filter, because it uses a better search algorithm and searches over abstracts as well as titles.
+For most cases, you should use the [`search`](../search/search-works.md#works-full-search) parameter instead of this filter, because it uses a better search algorithm and searches over abstracts as well as titles.
 {% endhint %}
 
 #### `from_created_date`
@@ -242,7 +242,7 @@ Returns: works that have or lack an abstract, depending on the given value.
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works that have or lack a DOI, depending on the given value. It's especially useful for [grouping](../../the-data/works/group-works.md).
+Returns: works that have or lack a DOI, depending on the given value. It's especially useful for [grouping](../get-groups-of-entities/group-works.md).
 
 * Get the works that have no DOI assigned:\
   [`https://api.openalex.org/works?filter=has_doi:false`](https://api.openalex.org/works?filter=has\_doi:false) \`\`
@@ -296,7 +296,7 @@ Returns: works that have or lack a PubMed identifier ([`pmid`](../../the-data/au
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works for which n-grams are available or unavailable, depending on the given value. N-grams power fulltext searches through the [`fulltext.search`](filter-works.md#fulltext.search) filter and the [`search`](../../the-data/works/search-works.md#works-full-search) parameter.
+Returns: works for which n-grams are available or unavailable, depending on the given value. N-grams power fulltext searches through the [`fulltext.search`](filter-works.md#fulltext.search) filter and the [`search`](../search/search-works.md#works-full-search) parameter.
 
 * Get the works that have n-grams:\
   [`https://api.openalex.org/works?filter=has_ngrams:true`](https://api.openalex.org/works?filter=has\_ngrams:true)

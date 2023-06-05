@@ -38,7 +38,7 @@ Want to filter by `host_organization.display_name`? This is a two-step process:
 1. Find the host organization's ID by searching by `display_name` in Publishers or Institutions, depending on which type you are looking for.
 2. Filter works by `host_organization.id`.
 
-To learn more about why we do it this way, [see here.](../../the-data/works/search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)
+To learn more about why we do it this way, [see here.](../search/search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)
 {% endhint %}
 
 ### `/sources` convenience filters
