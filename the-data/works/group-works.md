@@ -8,7 +8,7 @@ You can group works with the `group_by` parameter:
 Or you can group using one the attributes below.
 
 {% hint style="info" %}
-It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entities.md) before trying these out. It will show you how results are formatted, the number of results returned, and how to sort results.
+It's best to [read about group by](../../the-api/get-groups-of-entities.md) before trying these out. It will show you how results are formatted, the number of results returned, and how to sort results.
 {% endhint %}
 
 ### `/works` group\_by attributes
@@ -17,12 +17,12 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 The `host_venue` and `alternate_host_venues` properties have been deprecated in favor of [`primary_location`](work-object/#primary\_location) and [`locations`](work-object/#locations). `host_venue` and `alternate_host_venues` are no longer available in the Work object, and trying to access them in filters or group-bys will return an error.
 {% endhint %}
 
-* [`authors_count`](filter-works.md#authors\_count)
+* [`authors_count`](../../the-api/filters/filter-works.md#authors\_count)
 * [`authorships.author.id`](work-object/#author) (alias `author.id`)
 * [`authorships.author.orcid`](work-object/#author) (alias `author.orcid`)
 * [`authorships.institutions.country_code`](work-object/#institutions) (alias `institutions.country_code`)
-* [`authorships.institutions.continent`](filter-works.md#authorships.institutions.continent-alias-institutions.continent) (alias `institutions.continent`)
-* [`authorships.institutions.is_global_south`](filter-works.md#authorships.institutions.is\_global\_south-alias-institutions.is\_global\_south)
+* [`authorships.institutions.continent`](../../the-api/filters/filter-works.md#authorships.institutions.continent-alias-institutions.continent) (alias `institutions.continent`)
+* [`authorships.institutions.is_global_south`](../../the-api/filters/filter-works.md#authorships.institutions.is\_global\_south-alias-institutions.is\_global\_south)
 * [`authorships.institutions.id`](work-object/#institutions) (alias `institutions.id`)
 * [`authorships.institutions.ror`](work-object/#institutions) (alias `institutions.ror`)
 * [`authorships.institutions.type`](work-object/#institutions) (alias `institutions.type`)
@@ -38,29 +38,29 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`best_oa_location.source.issn`](work-object/#best\_oa\_location)
 * [`best_oa_location.source.type`](work-object/#best\_oa\_location)
 * [`best_oa_location.version`](work-object/#best\_oa\_location)
-* [`best_open_version`](filter-works.md#best\_open\_version)
+* [`best_open_version`](../../the-api/filters/filter-works.md#best\_open\_version)
 * [`cited_by_count`](work-object/#cited\_by\_count)
-* [`cites`](filter-works.md#cites)
-* [`concepts_count`](filter-works.md#concepts\_count)
+* [`cites`](../../the-api/filters/filter-works.md#cites)
+* [`concepts_count`](../../the-api/filters/filter-works.md#concepts\_count)
 * [`concepts.id`](work-object/#concepts)
 * [`concepts.wikidata`](work-object/#concepts)
 * [`corresponding_author_ids`](work-object/#corresponding\_author\_ids)
 * [`corresponding_institution_ids`](work-object/#corresponding\_institution\_ids)
 * [`grants.award_id`](work-object/#grants)
 * [`grants.funder`](work-object/#grants)
-* [`has_abstract`](filter-works.md#has\_abstract)
-* [`has_doi`](filter-works.md#has\_doi)
-* [`has_orcid`](filter-works.md#has\_orcid)
-* [`has_pmid`](filter-works.md#has\_pmid)
-* [`has_pmcid`](filter-works.md#has\_pmcid)
-* [`has_ngrams`](filter-works.md#has\_ngrams)
-* [`has_references`](filter-works.md#has\_references)
+* [`has_abstract`](../../the-api/filters/filter-works.md#has\_abstract)
+* [`has_doi`](../../the-api/filters/filter-works.md#has\_doi)
+* [`has_orcid`](../../the-api/filters/filter-works.md#has\_orcid)
+* [`has_pmid`](../../the-api/filters/filter-works.md#has\_pmid)
+* [`has_pmcid`](../../the-api/filters/filter-works.md#has\_pmcid)
+* [`has_ngrams`](../../the-api/filters/filter-works.md#has\_ngrams)
+* [`has_references`](../../the-api/filters/filter-works.md#has\_references)
 * [`is_retracted`](work-object/#is\_retracted)
 * [`is_paratext`](work-object/#is\_paratext)
-* [`journal`](filter-works.md#journal)
+* [`journal`](../../the-api/filters/filter-works.md#journal)
 * [`language`](work-object/#language)
-* [`locations.source.host_institutions_lineage`](filter-works.md#locations.source.host\_institution\_lineage)
-* [`locations.source.publisher_lineage`](filter-works.md#locations.source.publisher\_lineage)
+* [`locations.source.host_institutions_lineage`](../../the-api/filters/filter-works.md#locations.source.host\_institution\_lineage)
+* [`locations.source.publisher_lineage`](../../the-api/filters/filter-works.md#locations.source.publisher\_lineage)
 * [`locations_count`](work-object/#locations\_count)
 * [`open_access.any_repository_has_fulltext`](work-object/#open\_access)
 * [`open_access.is_oa`](work-object/#is\_oa-1) (alias `is_oa`)
@@ -74,5 +74,5 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`primary_location.source.type`](work-object/#primary\_location)
 * [`primary_location.version`](work-object/#primary\_location)
 * [`publication_year`](work-object/#publication\_year)
-* [`repository`](filter-works.md#repository)
+* [`repository`](../../the-api/filters/filter-works.md#repository)
 * [`version`](work-object/#version)

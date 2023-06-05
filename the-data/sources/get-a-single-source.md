@@ -2,7 +2,7 @@
 
 It's easy to get a source from from the API with: `/sources/<entity_id>`. Here's an example:
 
-* Get the source with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `S137773608`:\
+* Get the source with the [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id) `S137773608`:\
   [https://api.openalex.org/sources/S137773608](https://api.openalex.org/sources/S137773608)
 
 That will return an [`Source`](source-object.md) object, describing everything OpenAlex knows about the source with that ID:
@@ -21,7 +21,7 @@ That will return an [`Source`](source-object.md) object, describing everything O
 ```
 
 {% hint style="info" %}
-You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md#addition-or).
+You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax](../../the-api/get-lists-of-entities/filter-entity-lists.md#addition-or).
 {% endhint %}
 
 {% hint style="info" %}
@@ -46,7 +46,7 @@ Available external IDs for sources are:
 
 ### Select fields
 
-You can use `select` to limit the fields that are returned in a source object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+You can use `select` to limit the fields that are returned in a source object. More details are [here](../../the-api/get-lists-of-entities/select-fields.md).
 
 * Display only the `id` and `display_name` for a source object\
   [https://api.openalex.org/sources/S137773608?select=id,display\_name](https://api.openalex.org/sources/S137773608?select=id,display\_name)

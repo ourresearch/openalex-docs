@@ -2,7 +2,7 @@
 
 It's easy to get a work from from the API with: `/works/<entity_id>` Here's an example:
 
-* Get the work with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
+* Get the work with the [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
 
 That will return a [`Work`](work-object/) object, describing everything OpenAlex knows about the work with that ID.
 
@@ -19,7 +19,7 @@ That will return a [`Work`](work-object/) object, describing everything OpenAlex
 ```
 
 {% hint style="info" %}
-You can make up to 50 of these queries at once by requesting a list of entities and filtering on IDs [using OR syntax](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md#addition-or) ([tutorial](https://blog.ourresearch.org/fetch-multiple-dois-in-one-openalex-api-request/)).
+You can make up to 50 of these queries at once by requesting a list of entities and filtering on IDs [using OR syntax](../../the-api/get-lists-of-entities/filter-entity-lists.md#addition-or) ([tutorial](https://blog.ourresearch.org/fetch-multiple-dois-in-one-openalex-api-request/)).
 {% endhint %}
 
 ## External IDs
@@ -49,7 +49,7 @@ You must make sure that the ID(s) you supply are valid and correct. If an ID you
 
 ### Select fields
 
-You can use `select` to limit the fields that are returned in a work object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+You can use `select` to limit the fields that are returned in a work object. More details are [here](../../the-api/get-lists-of-entities/select-fields.md).
 
 * Display only the `id` and `display_name` for a work object:\
   [https://api.openalex.org/works/W2741809807?select=id,display\_name](https://api.openalex.org/works/W2741809807?select=id,display\_name)

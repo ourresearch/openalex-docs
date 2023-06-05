@@ -13,7 +13,7 @@ You can get a concept from the OpenAlex API like this:
 * Get the concept with OpenAlex ID `C41008148`\
   [https://api.openalex.org/concepts/C41008148](https://api.openalex.org/concepts/C41008148)
 
-The [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for OpenAlex concepts is the Wikidata ID, and each of our concepts has one, because all OpenAlex concepts are also Wikidata concepts.
+The [Canonical External ID](../../the-api/get-single-entities/#canonical-external-ids) for OpenAlex concepts is the Wikidata ID, and each of our concepts has one, because all OpenAlex concepts are also Wikidata concepts.
 
 Concepts are hierarchical, like a tree. There are 19 root-level concepts, and six layers of descendants branching out from them, containing about 65 thousand concepts all told. This concept tree is a modified version of [the one created by MAG](https://arxiv.org/abs/1805.12216). You can view all the concepts and their position in the tree [as a spreadsheet here](https://docs.google.com/spreadsheets/d/1LBFHjPt4rj\_9r0t0TTAlT68NwOtNH8Z21lBMsJDMoZg/edit#gid=1473310811). About 85% of works are tagged with at least one concept (here's the [breakdown of concept counts per work](https://docs.google.com/spreadsheets/d/17DoJjyl1XVNZdVWs7fUy91z69U2tD8qtnBsaqJ-Zigo/edit#gid=0)).
 
@@ -23,7 +23,7 @@ Each work is tagged with multiple concepts, based on the title, abstract, and th
 
 A score is available for each [concept in a work](../works/work-object/#concepts), showing the classifier's confidence in choosing that concept. However, when assigning a lower-level child concept, we also assign all of its parent concepts all the way up to the root. This means that some concept assignment scores will be 0.0. The tagger adds concepts to works written in different languages, but it is optimized for English.
 
-Concepts are linked to works via the [`concepts`](../works/work-object/#concepts) property. They’re also linked to [authors](../authors/author-object.md), [sources](../sources/sources-object.md), and [institutions](../institutions/institution-object.md) via the `x_concepts` property, and to other concepts via the [`ancestors`](./#ancestors) and [`related_concepts`](./#related\_concepts) properties.
+Concepts are linked to works via the [`concepts`](../works/work-object/#concepts) property. They’re also linked to [authors](../authors/author-object.md), [sources](../../api-entities/sources/sources-object.md), and [institutions](../institutions/institution-object.md) via the `x_concepts` property, and to other concepts via the [`ancestors`](./#ancestors) and [`related_concepts`](./#related\_concepts) properties.
 
 ### What's next
 

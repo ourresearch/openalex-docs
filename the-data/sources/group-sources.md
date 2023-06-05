@@ -8,7 +8,7 @@ You can group sources with the `group_by` parameter:
 Or you can group using one the attributes below.
 
 {% hint style="info" %}
-It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entities.md) before trying these out. It will show you how results are formatted, the number of results returned, and how to sort results.
+It's best to [read about group by](../../the-api/get-groups-of-entities.md) before trying these out. It will show you how results are formatted, the number of results returned, and how to sort results.
 {% endhint %}
 
 ### `/sources` group\_by attributes
@@ -16,7 +16,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`apc_prices.currency`](source-object.md#apc\_prices)
 * [`apc_usd`](source-object.md#apc\_usd)
 * [`cited_by_count`](source-object.md#cited\_by\_count)
-* [`has_issn`](filter-sources.md#has\_issn)
+* [`has_issn`](../../the-api/filters/filter-sources.md#has\_issn)
 * [`continent`](../geo/continents.md#group-by-continent)
 * [`country_code`](source-object.md#country\_code)
 * [`host_organization`](source-object.md#host\_organization) (alias: `host_organization.id`)

@@ -1,17 +1,17 @@
 # Search funders
 
-The best way to search for funders is to use the `search` query parameter, which searches the [`display_name`](funder-object.md#display\_name), the [`alternate_titles`](funder-object.md#alternate\_titles), and the [`description`](funder\_object.md#description) fields. Example:
+The best way to search for funders is to use the `search` query parameter, which searches the [`display_name`](funder-object.md#display\_name), the [`alternate_titles`](funder-object.md#alternate\_titles), and the [`description`](../../api-entities/funders/funder\_object.md#description) fields. Example:
 
 * Search funders' `display_name`, `alternate_titles`, and `description` for "health":\
   [`https://api.openalex.org/funders?search=health`](https://api.openalex.org/funders?search=health)
 
 {% hint style="info" %}
-You can read more about search [here](../../how-to-use-the-api/get-lists-of-entities/search-entities.md). It will show you how relevance score is calculated and how words are stemmed to improve search results.
+You can read more about search [here](../../the-api/get-lists-of-entities/search-entities.md). It will show you how relevance score is calculated and how words are stemmed to improve search results.
 {% endhint %}
 
 ## Search a specific field
 
-You can also use search as a [filter](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md), allowing you to fine-tune the fields you're searching over. To do this, you append `.search` to the end of the property you are filtering for:
+You can also use search as a [filter](../../the-api/get-lists-of-entities/filter-entity-lists.md), allowing you to fine-tune the fields you're searching over. To do this, you append `.search` to the end of the property you are filtering for:
 
 * Get funders with "florida" in the `display_name`:\
   [`https://api.openalex.org/funders?filter=display_name.search:florida`](https://api.openalex.org/funders?filter=display\_name.search:florida)
@@ -50,5 +50,5 @@ This returns a list of funders with the funder location set as the hint:
 ```
 
 {% hint style="info" %}
-Read more in the [autocomplete page](../../how-to-use-the-api/get-lists-of-entities/autocomplete-entities.md) in the API guide.
+Read more in the [autocomplete page](../../the-api/get-lists-of-entities/autocomplete-entities.md) in the API guide.
 {% endhint %}

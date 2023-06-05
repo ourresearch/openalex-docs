@@ -105,7 +105,7 @@ id: "https://openalex.org/F4320332161"
 
 _Object:_ All the external identifiers that we know about for this funder. IDs are expressed as URIs whenever possible. Possible ID types:
 
-* `openalex` _String:_ this funder's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id)
+* `openalex` _String:_ this funder's [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id)
 * `ror` _String:_ this funder's ROR ID
 * `wikidata` _String:_ this funder's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers)
 
@@ -137,7 +137,7 @@ image_url: "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/fil
 
 ### `roles`
 
-_List:_ List of role objects, which include the `role` (one of `institution`, `funder`, or `publisher`), the `id` ([OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id)), and the `works_count`.
+_List:_ List of role objects, which include the `role` (one of `institution`, `funder`, or `publisher`), the `id` ([OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id)), and the `works_count`.
 
 In many cases, a single organization does not fit neatly into one role. For example, Yale University is a single organization that is a research university, funds research studies, and publishes an academic journal. The `roles` property links the OpenAlex entities together for a single organization, and includes counts for the works associated with each role.
 

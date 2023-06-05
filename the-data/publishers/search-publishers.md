@@ -6,12 +6,12 @@ The best way to search for publishers is to use the `search` query parameter, wh
   [https://api.openalex.org/publishers?search=springer](https://api.openalex.org/publishers?search=springer)
 
 {% hint style="info" %}
-You can read more about search [here](../../how-to-use-the-api/get-lists-of-entities/search-entities.md). It will show you how relevance score is calculated and how words are stemmed to improve search results.
+You can read more about search [here](../../the-api/get-lists-of-entities/search-entities.md). It will show you how relevance score is calculated and how words are stemmed to improve search results.
 {% endhint %}
 
 ## Search a specific field
 
-You can also use search as a [filter](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md), allowing you to fine-tune the fields you're searching over. To do this, you append `.search` to the end of the property you are filtering for:
+You can also use search as a [filter](../../the-api/get-lists-of-entities/filter-entity-lists.md), allowing you to fine-tune the fields you're searching over. To do this, you append `.search` to the end of the property you are filtering for:
 
 * Get publishers with "elsevier" in the `display_name`:\
   https://api.openalex.org/publishers?filter=display\_name.search:elsevier
@@ -50,5 +50,5 @@ This returns a list of publishers:
 </strong></code></pre>
 
 {% hint style="info" %}
-Read more in the [autocomplete page](../../how-to-use-the-api/get-lists-of-entities/autocomplete-entities.md) in the API guide.
+Read more in the [autocomplete page](../../the-api/get-lists-of-entities/autocomplete-entities.md) in the API guide.
 {% endhint %}

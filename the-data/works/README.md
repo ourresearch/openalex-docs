@@ -21,7 +21,7 @@ Learn more about what you can do with works:
 * [The Work object](work-object/)
 * [Get a single work](get-a-single-work.md)
 * [Get lists of works](get-lists-of-works.md)
-* [Filter works](filter-works.md)
+* [Filter works](../../the-api/filters/filter-works.md)
 * [Search for works](search-works.md)
 * [Group works](group-works.md)
 * [Get N-grams](get-n-grams.md)

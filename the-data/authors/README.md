@@ -10,7 +10,7 @@ Authors are people who create works. OpenAlex indexes about 213M authors, with t
 
 * Get the author with ORCID `https://orcid.org/0000-0002-1298-3089` [https://api.openalex.org/authors/https://orcid.org/0000-0002-1298-3089](https://api.openalex.org/authors/https://orcid.org/0000-0002-1298-3089)
 
-The [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for authors is ORCID; only a small percentage of authors have one, but the percentage is higher for more recent works.
+The [Canonical External ID](../../the-api/get-single-entities/#canonical-external-ids) for authors is ORCID; only a small percentage of authors have one, but the percentage is higher for more recent works.
 
 Our information about authors comes from MAG, Crossref, PubMed, ORCID, and publisher websites. We use an algorithm to [disambiguate](https://en.wikipedia.org/wiki/Author\_name\_disambiguation) authors; this uses an author’s name, their publication record, their citation patterns, and (where available) their ORCID.
 

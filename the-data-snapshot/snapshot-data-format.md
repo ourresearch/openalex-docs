@@ -5,13 +5,13 @@ Here are the details on where the OpenAlex data lives and how it's structured.
 * All the data is stored in [Amazon S3](https://aws.amazon.com/s3/), in the [`openalex`](https://openalex.s3.amazonaws.com/browse.html) bucket.
 * The data files are gzip-compressed [JSON Lines](https://jsonlines.org/), one row per entity.
 * The bucket contains one prefix (folder) for each entity type: [work](https://openalex.s3.amazonaws.com/browse.html#data/works/), [author](https://openalex.s3.amazonaws.com/browse.html#data/authors/), [source](https://openalex.s3.amazonaws.com/browse.html#data/sources/), [institution](https://openalex.s3.amazonaws.com/browse.html#data/institutions/), [concept](https://openalex.s3.amazonaws.com/browse.html#data/concepts/), and [publisher](https://openalex.s3.amazonaws.com/browse.html#data/publishers/).
-* Records are partitioned by [updated\_date](../api-entities/works/work-object/#updated\_date). Within each entity type prefix, each object (file) is further prefixed by this date. For example, if an [`Author`](../api-entities/authors/author-object.md) has an updated\_date of 2021-12-30 it will be prefixed`/data/authors/updated_date=2021-12-30/`.
+* Records are partitioned by [updated\_date](../the-data/works/work-object/#updated\_date). Within each entity type prefix, each object (file) is further prefixed by this date. For example, if an [`Author`](../the-data/authors/author-object.md) has an updated\_date of 2021-12-30 it will be prefixed`/data/authors/updated_date=2021-12-30/`.
   * If you're initializing a fresh snapshot, the `updated_date` partitions aren't important yet. You need all the entities, so for `Authors` you would get [`/data/authors`](https://openalex.s3.amazonaws.com/browse.html#data/authors/)`/*/*.gz`
 * There are multiple objects under each `updated_date` partition. Each is under 2GB.
 * The manifest file is JSON (in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-files-using-manifest.html) format) and lists all the data files for each object type - [`/data/works/manifest`](https://openalex.s3.amazonaws.com/data/works/manifest) lists all the works.
 * The gzip-compressed snapshot takes up about 330 GB and decompresses to about 1.6 TB.
 
-The structure of each entity type is documented here: [Work](../api-entities/works/work-object/), [Author](../api-entities/authors/author-object.md), [Source](../api-entities/sources/source-object.md), [Institution](../api-entities/institutions/institution-object.md), [Concept](../api-entities/concepts/concept-object.md), and [Publisher](../api-entities/publishers/publisher-object.md).
+The structure of each entity type is documented here: [Work](../the-data/works/work-object/), [Author](../the-data/authors/author-object.md), [Source](../the-data/sources/source-object.md), [Institution](../the-data/institutions/institution-object.md), [Concept](../the-data/concepts/concept-object.md), and [Publisher](../the-data/publishers/publisher-object.md).
 
 #### Visualization of the entity\_type/updated\_date folder structure
 
@@ -84,7 +84,7 @@ This reflects the creation of the dataset on 2021-12-30 and 145,678,664 combined
 ### Merged Entities
 
 {% hint style="info" %}
-See [Merged Entities](../how-to-use-the-api/get-single-entities/#merged-entity-ids) for an explanation of what Entity merging is and why we do it.
+See [Merged Entities](../the-api/get-single-entities/#merged-entity-ids) for an explanation of what Entity merging is and why we do it.
 {% endhint %}
 
 Alongside the folders for the six Entity types - work, author, source, institution, concept, and publisher - you'll find a seventh folder: [merged\_ids](https://openalex.s3.amazonaws.com/browse.html#data/merged\_ids/). Within this folder you'll find the IDs of Entities that have been merged away, along with the Entity IDs they were merged into.
@@ -126,6 +126,6 @@ The file is in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/d
 2. Get the file list from the `url` property of each item in the `entries` list.
 3. Download any objects with an `updated_date` you haven't seen before.
 4. Download [`s3://openalex/data/authors/manifest`](https://openalex.s3.amazonaws.com/data/authors/manifest) again. If it hasn't changed since (1), no records moved around and any date partitions you downloaded are valid.
-5. Decompress the files you downloaded and parse one JSON `Author` per line. Insert or update into your database of choice, using [each entity's ID](../how-to-use-the-api/get-single-entities/#the-openalex-id) as a primary key.
+5. Decompress the files you downloaded and parse one JSON `Author` per line. Insert or update into your database of choice, using [each entity's ID](../the-api/get-single-entities/#the-openalex-id) as a primary key.
 
 If you’ve worked with dataset like this before and have a toolchain picked out, this may be all you need to know. If you want more detailed steps, proceed to [download the data](download-to-your-machine.md).

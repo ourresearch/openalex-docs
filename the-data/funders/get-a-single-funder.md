@@ -2,7 +2,7 @@
 
 It's easy to get a funder from from the API with: `/funders/<entity_id>`. Here's an example:
 
-* Get the funder with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `F4320332161`:\
+* Get the funder with the [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id) `F4320332161`:\
   [https://api.openalex.org/funders/F4320332161](https://api.openalex.org/funders/F4320332161)
 
 That will return a [`Funder`](funder-object.md) object, describing everything OpenAlex knows about the funder with that ID:
@@ -21,7 +21,7 @@ That will return a [`Funder`](funder-object.md) object, describing everything Op
 ```
 
 {% hint style="info" %}
-You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md#addition-or).
+You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax](../../the-api/get-lists-of-entities/filter-entity-lists.md#addition-or).
 {% endhint %}
 
 ### External IDs
@@ -40,7 +40,7 @@ Available external IDs for funders are:
 
 ### Select fields
 
-You can use `select` to limit the fields that are returned in a funder object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+You can use `select` to limit the fields that are returned in a funder object. More details are [here](../../the-api/get-lists-of-entities/select-fields.md).
 
 * Display only the `id` and `display_name` for a funder object\
   [`https://api.openalex.org/funders/F4320332161?select=id,display_name`](https://api.openalex.org/funders/F4320332161?select=id,display\_name)

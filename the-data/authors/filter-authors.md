@@ -6,7 +6,7 @@ You can filter authors with the `filter` parameter:
   [https://api.openalex.org/authors?filter=has\_orcid:true](https://api.openalex.org/authors?filter=has\_orcid:true)
 
 {% hint style="info" %}
-It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md) before trying these out. It will show you how to combine filters and build an AND, OR, or negation query.
+It's best to [read about filters](../../the-api/get-lists-of-entities/filter-entity-lists.md) before trying these out. It will show you how to combine filters and build an AND, OR, or negation query.
 {% endhint %}
 
 ### `/authors` attribute filters

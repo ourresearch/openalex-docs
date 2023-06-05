@@ -54,5 +54,5 @@ This second page of results will have a new value for `meta.next_cursor`. You'll
 * It's bad for you because it will take many days to page through a long list like /works or /authors.
 * It's bad for us (and other users!) because it puts a massive load on our servers.
 
-Instead, download everything at once, using the [OpenAlex snapshot](../../download-all-data/openalex-snapshot.md). It's free, easy, fast, and you get all the results in same format you'd get from the API.
+Instead, download everything at once, using the [OpenAlex snapshot](../../the-data-snapshot/openalex-snapshot.md). It's free, easy, fast, and you get all the results in same format you'd get from the API.
 {% endhint %}

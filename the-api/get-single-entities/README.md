@@ -6,13 +6,13 @@
 
 ## Get single entities
 
-This is a more detailed guide to single entities in OpenAlex. If you're just getting started, check out [get a single work](../../api-entities/works/get-a-single-work.md).
+This is a more detailed guide to single entities in OpenAlex. If you're just getting started, check out [get a single work](../../the-data/works/get-a-single-work.md).
 
 It's easy to get a singleton entity object from from the API:`/<entity_name>/<entity_id>.` Here's an example:
 
 * Get the work with the [OpenAlex ID](./#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
 
-That will return a [`Work`](../../api-entities/works/work-object/) object, describing everything OpenAlex knows about the work with that ID. You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
+That will return a [`Work`](../../the-data/works/work-object/) object, describing everything OpenAlex knows about the work with that ID. You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
 
 {% hint style="info" %}
 You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax](../get-lists-of-entities/filter-entity-lists.md#addition-or).
@@ -38,7 +38,7 @@ Because OpenAlex was launched as a replacement for [Microsoft Academic Graph (MA
 
 ### Merged Entity IDs
 
-At times we need to merge two Entities, effectively deleting one of them. This usually happens when we discover two Entities that represent the same real-world entity - for example, two [`Authors`](../../api-entities/authors/) that are really the same person.
+At times we need to merge two Entities, effectively deleting one of them. This usually happens when we discover two Entities that represent the same real-world entity - for example, two [`Authors`](../../the-data/authors/) that are really the same person.
 
 If you request an Entity using its OpenAlex ID, and that Entity has been merged into another Entity, you will be redirected to the Entity it has been merged into. For example, https://openalex.org/A2224836008 has been merged into https://openalex.org/A2208157607, so in the API the former will redirect to the latter:
 
@@ -59,12 +59,12 @@ For each entity type, you can retrieve the entity using by any of the external I
 
 This works with DOIs, ISSNs, ORCIDs, and lots of other IDs...in fact, you can use any ID listed in an entity's `ids` property, as listed below:
 
-* [`Work.ids`](../../api-entities/works/work-object/#ids)
-* [`Author.ids`](../../api-entities/authors/author-object.md#ids)
-* [`Source.ids`](../../api-entities/sources/source-object.md#ids)
-* [`Institution.ids`](../../api-entities/institutions/institution-object.md#ids)
-* [`Concept.ids`](../../api-entities/concepts/concept-object.md#ids)
-* [`Publisher.ids`](../../api-entities/publishers/publisher-object.md#ids)
+* [`Work.ids`](../../the-data/works/work-object/#ids)
+* [`Author.ids`](../../the-data/authors/author-object.md#ids)
+* [`Source.ids`](../../the-data/sources/source-object.md#ids)
+* [`Institution.ids`](../../the-data/institutions/institution-object.md#ids)
+* [`Concept.ids`](../../the-data/concepts/concept-object.md#ids)
+* [`Publisher.ids`](../../the-data/publishers/publisher-object.md#ids)
 
 ### ID formats
 
@@ -93,12 +93,12 @@ Every entity has an OpenAlex ID. Most entities also have IDs in other systems, t
 
 These are the Canonical External IDs:
 
-* Works: [DOI](../../api-entities/works/work-object/#title)
-* Authors: [ORCID](../../api-entities/authors/author-object.md#orcid)
-* Sources: [ISSN-L](../../api-entities/sources/source-object.md#issn\_l)
-* Institutions: [ROR ID](../../api-entities/institutions/institution-object.md#ror)
-* Concepts: [Wikidata ID](../../api-entities/concepts/concept-object.md#wikidata)
-* Publishers: [Wikidata ID](../../api-entities/publishers/publisher-object.md#ids)
+* Works: [DOI](../../the-data/works/work-object/#title)
+* Authors: [ORCID](../../the-data/authors/author-object.md#orcid)
+* Sources: [ISSN-L](../../the-data/sources/source-object.md#issn\_l)
+* Institutions: [ROR ID](../../the-data/institutions/institution-object.md#ror)
+* Concepts: [Wikidata ID](../../the-data/concepts/concept-object.md#wikidata)
+* Publishers: [Wikidata ID](../../the-data/publishers/publisher-object.md#ids)
 
 ### Dehydrated entity objects
 

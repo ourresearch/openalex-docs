@@ -10,12 +10,12 @@ Searching without a middle initial returns names with _and_ without middle initi
 Names with diacritics are flexible as well. So a search for David Tarrago can return David Tarragó, and a search for David Tarragó can return David Tarrago. When searching with a diacritic, diacritic versions of the names are prioritized in order to honor the original form of the author's name. Read more about our handling of diacritics [here](https://blog.ourresearch.org/author-search-in-openalex-improved-handling-of-diacritics-within-names/).
 
 {% hint style="info" %}
-You can read more in the [search page](../../how-to-use-the-api/get-lists-of-entities/search-entities.md) in the API Guide. It will show you how relevance score is calculated and how words are stemmed to improve search results.
+You can read more in the [search page](../../the-api/get-lists-of-entities/search-entities.md) in the API Guide. It will show you how relevance score is calculated and how words are stemmed to improve search results.
 {% endhint %}
 
 ## Search a specific field
 
-You can also use search as a [filter](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md), by appending `.search` to the end of the property you are filtering for:
+You can also use search as a [filter](../../the-api/get-lists-of-entities/filter-entity-lists.md), by appending `.search` to the end of the property you are filtering for:
 
 * Get authors with the name "john smith" in the display\_name:\
   [https://api.openalex.org/authors?filter=display\_name.search:john smith](https://api.openalex.org/authors?filter=display\_name.search:john%20smith)
@@ -59,5 +59,5 @@ The author hint is set to the author's most highly cited work by default. You ca
   [https://api.openalex.org/autocomplete/authors?q=carl%20s\&author\_hint=institution](https://api.openalex.org/autocomplete/authors?q=carl%20s\&author\_hint=institution)
 
 {% hint style="info" %}
-Read more about [autocomplete](../../how-to-use-the-api/get-lists-of-entities/autocomplete-entities.md).
+Read more about [autocomplete](../../the-api/get-lists-of-entities/autocomplete-entities.md).
 {% endhint %}

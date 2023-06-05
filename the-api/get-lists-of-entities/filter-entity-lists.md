@@ -4,7 +4,7 @@ Filters narrow the list down to just entities that meet a particular condition--
 
 A list of filters are set using the `filter` parameter, formatted like this: `filter=attribute:value,attribute2:value2`. Examples:
 
-* Get the works whose [type](../../api-entities/works/work-object/#type) is `book`:\
+* Get the works whose [type](../../the-data/works/work-object/#type) is `book`:\
   [`https://api.openalex.org/works?filter=type:book`](https://api.openalex.org/works?filter=type:book)
 * Get the authors whose name is Einstein:\
   [`https://api.openalex.org/authors?filter=display_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)\`\`
@@ -71,8 +71,8 @@ You can use OR for values _within_ a given filter, but not _between_ different f
 
 The filters for each entity can be found here:
 
-* [Works](../../api-entities/works/filter-works.md)
-* [Authors](../../api-entities/authors/filter-authors.md)
-* [sources](../../api-entities/sources/filter-sources.md)
-* [Institutions](../../api-entities/institutions/filter-institutions.md)
-* [Concepts](../../api-entities/concepts/filter-concepts.md)
+* [Works](../filters/filter-works.md)
+* [Authors](../../the-data/authors/filter-authors.md)
+* [sources](../filters/filter-sources.md)
+* [Institutions](../../the-data/institutions/filter-institutions.md)
+* [Concepts](../../the-data/concepts/filter-concepts.md)

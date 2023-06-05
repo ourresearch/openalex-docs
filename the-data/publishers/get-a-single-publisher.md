@@ -2,7 +2,7 @@
 
 It's easy to get a publisher from from the API with: `/publishers/<entity_id>`. Here's an example:
 
-* Get the publisher with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `P4310319965`:\
+* Get the publisher with the [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id) `P4310319965`:\
   [https://api.openalex.org/publishers/P4310319965](https://api.openalex.org/publishers/P4310319965)
 
 That will return a [`Publisher`](publisher-object.md) object, describing everything OpenAlex knows about the publisher with that ID:
@@ -22,7 +22,7 @@ That will return a [`Publisher`](publisher-object.md) object, describing everyth
 ```
 
 {% hint style="info" %}
-You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md#addition-or).
+You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax](../../the-api/get-lists-of-entities/filter-entity-lists.md#addition-or).
 {% endhint %}
 
 ### External IDs
@@ -41,7 +41,7 @@ Available external IDs for publishers are:
 
 ### Select fields
 
-You can use `select` to limit the fields that are returned in a publisher object. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+You can use `select` to limit the fields that are returned in a publisher object. More details are [here](../../the-api/get-lists-of-entities/select-fields.md).
 
 * Display only the `id` and `display_name` for a publisher object\
   [https://api.openalex.org/publishers/P4310319965?select=id,display\_name](https://api.openalex.org/publishers/P4310319965?select=id,display\_name)

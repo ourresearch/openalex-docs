@@ -38,28 +38,28 @@ Which returns a response like this:
 
 ## Page and sort sources
 
-By default we return 25 results per page. You can change this default and [page](../../how-to-use-the-api/get-lists-of-entities/paging.md) through sources with the `per-page` and `page` parameters:
+By default we return 25 results per page. You can change this default and [page](../../the-api/get-lists-of-entities/paging.md) through sources with the `per-page` and `page` parameters:
 
 * Get the second page of sources results, with 50 results returned per page\
   [https://api.openalex.org/sources?per-page=50\&page=2](https://api.openalex.org/sources?per-page=50\&page=2)
 
-You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-entity-lists.md) with the `sort` parameter:
+You also can [sort results](../../the-api/get-lists-of-entities/sort-entity-lists.md) with the `sort` parameter:
 
 * Sort sources by cited by count, descending\
   https://api.openalex.org/sources?sort=cited\_by\_count:desc
 
-Continue on to learn how you can [filter](filter-sources.md) and [search](search-sources.md) lists of sources.
+Continue on to learn how you can [filter](../../the-api/filters/filter-sources.md) and [search](search-sources.md) lists of sources.
 
 ## Sample sources
 
-You can use `sample` to get a random batch of sources. Read more about sampling and how to add a `seed` value [here](../../how-to-use-the-api/get-lists-of-entities/sample-entity-lists.md).
+You can use `sample` to get a random batch of sources. Read more about sampling and how to add a `seed` value [here](../../the-api/get-lists-of-entities/sample-entity-lists.md).
 
 * Get 10 random sources\
   [https://api.openalex.org/sources?sample=10](https://api.openalex.org/sources?sample=10)
 
 ## Select fields
 
-You can use `select` to limit the fields that are returned in a list of sources. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+You can use `select` to limit the fields that are returned in a list of sources. More details are [here](../../the-api/get-lists-of-entities/select-fields.md).
 
 * Display only the `id`, `display_name` and `issn` within sources results\
   [https://api.openalex.org/sources?select=id,display\_name,issn](https://api.openalex.org/sources?select=id,display\_name,issn)

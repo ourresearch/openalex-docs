@@ -34,12 +34,12 @@ Which returns a response like this:
 
 ## Page and sort publishers
 
-By default we return 25 results per page. You can change this default and [page](../../how-to-use-the-api/get-lists-of-entities/paging.md) through publishers with the `per-page` and `page` parameters:
+By default we return 25 results per page. You can change this default and [page](../../the-api/get-lists-of-entities/paging.md) through publishers with the `per-page` and `page` parameters:
 
 * Get the second page of publishers results, with 50 results returned per page\
   [https://api.openalex.org/publishers?per-page=50\&page=2](https://api.openalex.org/publishers?per-page=50\&page=2)
 
-You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-entity-lists.md) with the `sort` parameter:
+You also can [sort results](../../the-api/get-lists-of-entities/sort-entity-lists.md) with the `sort` parameter:
 
 * Sort publishers by display name, descending\
   [https://api.openalex.org/publishers?sort=display\_name:desc](https://api.openalex.org/publishers?sort=display\_name:desc)
@@ -48,14 +48,14 @@ Continue on to learn how you can [filter](filter-publishers.md) and [search](sea
 
 ## Sample publishers
 
-You can use `sample` to get a random batch of publishers. Read more about sampling and how to add a `seed` value [here](../../how-to-use-the-api/get-lists-of-entities/sample-entity-lists.md).
+You can use `sample` to get a random batch of publishers. Read more about sampling and how to add a `seed` value [here](../../the-api/get-lists-of-entities/sample-entity-lists.md).
 
 * Get 10 random publishers\
   [https://api.openalex.org/publishers?sample=10](https://api.openalex.org/publishers?sample=10)
 
 ## Select fields
 
-You can use `select` to limit the fields that are returned in a list of publishers. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
+You can use `select` to limit the fields that are returned in a list of publishers. More details are [here](../../the-api/get-lists-of-entities/select-fields.md).
 
 * Display only the `id`, `display_name`, and `alternate_titles` within publishers results\
   [https://api.openalex.org/publishers?select=id,display\_name,alternate\_titles](https://api.openalex.org/publishers?select=id,display\_name,alternate\_titles)

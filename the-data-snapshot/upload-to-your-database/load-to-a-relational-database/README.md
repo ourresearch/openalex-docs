@@ -17,13 +17,13 @@ We’re going to use [PostgreSQL](https://www.postgresql.org/) as an example and
 
 Running [this SQL](https://github.com/ourresearch/openalex-documentation-scripts/blob/main/openalex-pg-schema.sql) on your database (in the [psql](https://www.postgresql.org/docs/13/app-psql.html) client, for example) will initialize a schema for you.
 
-Run it and you'll be set up to follow the next steps. To show you what it's doing, we'll explain some excerpts here, using the [concept](../../../api-entities/concepts/) entity as an example.
+Run it and you'll be set up to follow the next steps. To show you what it's doing, we'll explain some excerpts here, using the [concept](../../../the-data/concepts/) entity as an example.
 
 {% hint style="warning" %}
 SQL in this section isn't anything additional you need to run. It's part of the schema we already defined in the file above.
 {% endhint %}
 
-The key thing we're doing is "flattening" the nested JSON data. Some parts of this are easy. [Concept.id](../../../api-entities/concepts/concept-object.md#id) is just a string, so it goes in a text column called "id":
+The key thing we're doing is "flattening" the nested JSON data. Some parts of this are easy. [Concept.id](../../../the-data/concepts/concept-object.md#id) is just a string, so it goes in a text column called "id":
 
 ```sql
 CREATE TABLE openalex.concepts (
@@ -32,7 +32,7 @@ CREATE TABLE openalex.concepts (
 );
 ```
 
-But [Concept.related\_concepts](../../../api-entities/concepts/concept-object.md#related\_concepts) isn't so simple. You could store the JSON array intact in a postgres [JSON or JSONB](https://www.postgresql.org/docs/9.4/datatype-json.html) column, but you would lose much of the benefit of a relational database. It would be hard to answer questions about related concepts with more than one degree of separation, for example. So we make a separate table to hold these relationships:
+But [Concept.related\_concepts](../../../the-data/concepts/concept-object.md#related\_concepts) isn't so simple. You could store the JSON array intact in a postgres [JSON or JSONB](https://www.postgresql.org/docs/9.4/datatype-json.html) column, but you would lose much of the benefit of a relational database. It would be hard to answer questions about related concepts with more than one degree of separation, for example. So we make a separate table to hold these relationships:
 
 ```sql
 CREATE TABLE openalex.concepts_related_concepts (
@@ -42,7 +42,7 @@ CREATE TABLE openalex.concepts_related_concepts (
 );
 ```
 
-We can preserve `score` in this relationship table and look up any other attributes of the [dehydrated related concepts](../../../api-entities/concepts/concept-object.md#the-dehydratedconcept-object) in the main table `concepts`. Creating indexes on `concept_id` and `related_concept_id` lets us look up concepts on both sides of the relationship quickly.
+We can preserve `score` in this relationship table and look up any other attributes of the [dehydrated related concepts](../../../the-data/concepts/concept-object.md#the-dehydratedconcept-object) in the main table `concepts`. Creating indexes on `concept_id` and `related_concept_id` lets us look up concepts on both sides of the relationship quickly.
 
 ## Step 2: Convert the JSON Lines files to CSV
 

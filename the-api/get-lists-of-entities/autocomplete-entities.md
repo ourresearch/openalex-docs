@@ -70,9 +70,9 @@ The content of the `hint` property varies depending on what kind of entity you'r
 * `Author`: The title and year of the Author's most cited work, e.g. "Touch screen car dashboards as serious danger for causing traffic accidents (2019)"
 * `Source`: The `host_organization`, e.g. "Oxford University Press"
 * `Institution`: The institution's location, e.g. "Gainesville, USA"
-* `Concept`: The Concept's [description](../../api-entities/concepts/concept-object.md#description), e.g. "the study of relation between plant species and genera"
+* `Concept`: The Concept's [description](../../the-data/concepts/concept-object.md#description), e.g. "the study of relation between plant species and genera"
 
-You can change the author hint to the author's [last known institution](../../api-entities/authors/author-object.md#last\_known\_institution) by adding the `author_hint` parameter with value set to `institution` ([read more](../../api-entities/authors/search-authors.md#autocomplete-authors)).
+You can change the author hint to the author's [last known institution](../../the-data/authors/author-object.md#last\_known\_institution) by adding the `author_hint` parameter with value set to `institution` ([read more](../../the-data/authors/search-authors.md#autocomplete-authors)).
 
 ## IDs in autocomplete
 

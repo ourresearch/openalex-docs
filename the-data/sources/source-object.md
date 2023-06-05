@@ -110,7 +110,7 @@ homepage_url: "http://www.peerj.com/"
 
 ### `host_organization`
 
-_String:_ The host organization for this source as an [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). This will be an [`Institution.id`](../institutions/institution-object.md#id) if the source is a repository, and a [`Publisher.id`](../publishers/publisher-object.md#id) if the source is a journal, conference, or eBook platform (based on the [`type`](source-object.md#type) field).
+_String:_ The host organization for this source as an [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id). This will be an [`Institution.id`](../institutions/institution-object.md#id) if the source is a repository, and a [`Publisher.id`](../publishers/publisher-object.md#id) if the source is a journal, conference, or eBook platform (based on the [`type`](source-object.md#type) field).
 
 ```json
 id: "https://openalex.org/P4310320595"
@@ -118,7 +118,7 @@ id: "https://openalex.org/P4310320595"
 
 ### `host_organization_lineage`
 
-_List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) — See [`Publisher.lineage`](../publishers/publisher-object.md#lineage). This will only be included if the [`host_organization`](source-object.md#host\_organization) is a publisher (and not if the `host_organization` is an institution).
+_List:_ [OpenAlex IDs](../../the-api/get-single-entities/#the-openalex-id) — See [`Publisher.lineage`](../publishers/publisher-object.md#lineage). This will only be included if the [`host_organization`](source-object.md#host\_organization) is a publisher (and not if the `host_organization` is an institution).
 
 ```json
 host_organization_lineage: [
@@ -138,7 +138,7 @@ host_organization_name: "Elsevier BV"
 
 ### `id`
 
-_String:_ The [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for this source.
+_String:_ The [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id) for this source.
 
 ```json
 id: "https://openalex.org/S1983995261"
@@ -152,7 +152,7 @@ _Object:_ All the external identifiers that we know about for this source. IDs a
 * `issn` (_List:_ a list of this source's ISSNs. Same as [`Source.issn`](source-object.md#issn))
 * `issn_l` (_String:_ this source's ISSN-L. Same as [`Source.issn_l`](source-object.md#issn\_l))
 * `mag` (_Integer:_ this source's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `openalex` (_String:_ this source's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Source.id`](source-object.md#id))
+* `openalex` (_String:_ this source's [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id). Same as [`Source.id`](source-object.md#id))
 * `wikidata` (_String_: this source's [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main\_Page) ID)
 
 {% hint style="info" %}
@@ -208,7 +208,7 @@ issn: ["2167-8359"]
 
 ### `issn_l`
 
-_String:_ The [ISSN-L](https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number#Linking\_ISSN) identifying this source. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for sources.
+_String:_ The [ISSN-L](https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number#Linking\_ISSN) identifying this source. This is the [Canonical External ID](../../the-api/get-single-entities/#canonical-external-ids) for sources.
 
 ISSN is a global and unique ID for serial publications. However, different media versions of a given publication (e.g., print and electronic) often have _different_ ISSNs. This is why we can't have nice things. The ISSN-L or Linking ISSN solves the problem by designating a single canonical ISSN for all media versions of the title. It's _usually_ the same as the print ISSN.
 
