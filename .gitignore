@@ -1,2 +1,3 @@
 diagrams/*.png
 node_modules/
+venv/
