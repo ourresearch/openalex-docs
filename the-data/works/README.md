@@ -1,8 +1,8 @@
+---
+description: Journal articles, books, datasets, and theses
+---
+
 # 📄 Works
-
-***
-
-### description: Journal articles, books, datasets, and theses
 
 ## 📄 Works
 
