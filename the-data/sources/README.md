@@ -1,8 +1,8 @@
+---
+description: Journals and repositories that host works
+---
+
 # 📚 Sources
-
-***
-
-### description: Journals and repositories that host works
 
 ## 📚 Sources
 

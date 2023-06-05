@@ -1,8 +1,8 @@
+---
+description: Companies and organizations that distribute works
+---
+
 # 🏢 Publishers
-
-***
-
-### description: Companies and organizations that distribute works
 
 ## 🏢 Publishers
 

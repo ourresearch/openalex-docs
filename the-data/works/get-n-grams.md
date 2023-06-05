@@ -1,8 +1,8 @@
+---
+description: N-grams are groups of sequential words that occur in the text of a Work.
+---
+
 # Get N-grams
-
-***
-
-### description: N-grams are groups of sequential words that occur in the text of a Work.
 
 ## Get N-grams
 

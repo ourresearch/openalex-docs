@@ -1,8 +1,8 @@
+---
+description: People who create works
+---
+
 # 👩 Authors
-
-***
-
-### description: People who create works
 
 ## 👩 Authors
 

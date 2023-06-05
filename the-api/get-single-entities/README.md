@@ -1,8 +1,8 @@
+---
+description: Get a single entity, based on an ID
+---
+
 # Get single entities
-
-***
-
-### description: Get a single entity, based on an ID
 
 ## Get single entities
 

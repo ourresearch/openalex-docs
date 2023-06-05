@@ -1,8 +1,8 @@
+---
+description: Organizations that fund research
+---
+
 # 💰 Funders
-
-***
-
-### description: Organizations that fund research
 
 ## 💰 Funders
 

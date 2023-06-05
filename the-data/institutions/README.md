@@ -1,8 +1,8 @@
+---
+description: Universities and other organizations to which authors claim affiliations
+---
+
 # 🏫 Institutions
-
-***
-
-### description: Universities and other organizations to which authors claim affiliations
 
 ## 🏫 Institutions
 

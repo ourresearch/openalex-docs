@@ -1,8 +1,8 @@
+---
+description: Query the OpenAlex dataset using the magic of The Internet
+---
+
 # Quickstart tutorial
-
-***
-
-### description: Query the OpenAlex dataset using the magic of The Internet
 
 ## Quickstart tutorial
 

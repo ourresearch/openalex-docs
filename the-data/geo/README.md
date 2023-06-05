@@ -1,8 +1,8 @@
+---
+description: Where things are in the world
+---
+
 # 🌎 Geo
-
-***
-
-### description: Where things are in the world
 
 ## 🌎 Geo
 
