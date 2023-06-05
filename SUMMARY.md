@@ -12,7 +12,6 @@
     * [Location object](the-data/works/work-object/location-object.md)
   * [Get N-grams](the-data/works/get-n-grams.md)
 * [👩 Authors](the-data/authors/README.md)
-  * [Author object](the-data/authors/author-object.md)
   * [Limitations](the-data/authors/limitations.md)
 * [📚 Sources](the-data/sources/README.md)
   * [Source object](the-data/sources/source-object.md)
