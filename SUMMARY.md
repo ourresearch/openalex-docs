@@ -30,6 +30,7 @@
 ## The Website
 
 * [Website Overview](the-website/page-1.md)
+* [Author profiles and accounts](the-website/author-profiles-and-accounts.md)
 
 ## The API
 
