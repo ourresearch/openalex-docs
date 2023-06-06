@@ -29,7 +29,7 @@
 
 ## The Website
 
-* [Website Overview](the-website/page-1.md)
+* [Website Overview](the-website/website-overview.md)
 * [Author profiles and accounts](the-website/author-profiles-and-accounts.md)
 
 ## The API
@@ -48,7 +48,6 @@
   * [Get a single funder](the-api/get-single-entities/get-a-single-funder.md)
 * [Get lists of entities](the-api/get-lists-of-entities/README.md)
   * [Paging](the-api/get-lists-of-entities/paging.md)
-  * [Filter entity lists](the-api/get-lists-of-entities/filter-entity-lists.md)
   * [Search entities](the-api/get-lists-of-entities/search-entities.md)
   * [Sort entity lists](the-api/get-lists-of-entities/sort-entity-lists.md)
   * [Select fields](the-api/get-lists-of-entities/select-fields.md)
