@@ -9,7 +9,7 @@ import {
   type IntegrationBlockProps = { url: string };
   // type IntegrationBlockState = { url: string };
   type IntegrationBlockState = {};
-  type IntegrationAction = {};
+  type IntegrationAction = { action: "@link.unfurl", url: string };
   
   const handleFetchEvent: FetchEventCallback<IntegrationContext> = async (
     request,
@@ -34,15 +34,15 @@ import {
     //     url: props.url,
     //   };
     // },
-    // action: async (element, action, context) => {
-    //   switch (action.action) {
-    //     case "@link.unfurl":
-    //       const { url } = action;
-    //       console.log("@link.unfurl -- url: " + url);
-    //       element.state.url = url;
-    //       return {};
-    //   }
-    // },
+    action: async (element, action, context) => {
+      switch (action.action) {
+        case "@link.unfurl":
+          const { url } = action;
+          console.log("@link.unfurl -- url: " + url);
+          element.props.url = url;
+          return {};
+      }
+    },
     render: async (element, context) => {
       return (
         <block>
