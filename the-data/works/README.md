@@ -14,6 +14,8 @@ That will return a [`Work`](work-object/) object, describing everything OpenAlex
 
 Works are linked to other works via the [`referenced_works`](work-object/#referenced\_works) (outgoing citations), [`cited_by_api_url`](work-object/#cited\_by\_api\_url) (incoming citations), and [`related_works`](work-object/#related\_works) properties.
 
+\{% @test-integration/test-integration url="https://alpha.openalex.org/works?filter=ids.openalex:W4229010617\&page=1" %\}
+
 {% @test-integration/test-integration url="https://alpha.openalex.org/works?filter=ids.openalex:W4229010617&page=1" %}
 
 ## Work attributes
