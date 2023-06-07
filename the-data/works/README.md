@@ -16,6 +16,8 @@ Works are linked to other works via the [`referenced_works`](work-object/#refere
 
 {% @test-integration/test-integration url="https://alpha.openalex.org/works?filter=ids.openalex:W4229010617&page=1" %}
 
+{% @test-integration/test-integration url="https://alpha.openalex.org/works?filter=ids.openalex:W4229010617&page=1" %}
+
 ## Work attributes
 
 ### `abstract_inverted_index`
@@ -55,7 +57,7 @@ abstract_inverted_index: {
 
 Newer works are more likely to have an abstract inverted index. For example, over 60% of works in 2022 have abstract data, compared to 45% for works older than 2000. Full chart is below:
 
-![](<../../../.gitbook/assets/OpenAlex works with abstracts by year (percent) (1).svg>)
+![](<../../.gitbook/assets/OpenAlex works with abstracts by year (percent) (1).svg>)
 
 ### `alternate_host_venues` (deprecated)
 
@@ -162,7 +164,7 @@ biblio: {
 
 ### `cited_by_api_url`
 
-_String:_ A URL that uses the [`cites`](../../../the-api/filters/filter-works.md#cites) filter to display a list of works that cite this work. This is a way to expand [`cited_by_count`](./#cited\_by\_count) into an actual list of works.
+_String:_ A URL that uses the [`cites`](../../the-api/filters/filter-works.md#cites) filter to display a list of works that cite this work. This is a way to expand [`cited_by_count`](./#cited\_by\_count) into an actual list of works.
 
 ### `cited_by_count`
 
@@ -207,7 +209,7 @@ concepts: [
 
 ### `corresponding_author_ids`
 
-_List:_ [OpenAlex IDs](../../../the-api/get-single-entities/#the-openalex-id) of any authors for which [authorships.is\_corresponding](authorship-object.md#is\_corresponding) is `true`.
+_List:_ [OpenAlex IDs](../../the-api/get-single-entities/#the-openalex-id) of any authors for which [authorships.is\_corresponding](authorship-object.md#is\_corresponding) is `true`.
 
 ```json
 corresponding_author_ids: ["https://openalex.org/A2109306456"]
@@ -215,7 +217,7 @@ corresponding_author_ids: ["https://openalex.org/A2109306456"]
 
 ### `corresponding_institution_ids`
 
-_List:_ [OpenAlex IDs](../../../the-api/get-single-entities/#the-openalex-id) of any institutions found within an `authorship` for which [authorships.is\_corresponding](authorship-object.md#is\_corresponding) is `true`.
+_List:_ [OpenAlex IDs](../../the-api/get-single-entities/#the-openalex-id) of any institutions found within an `authorship` for which [authorships.is\_corresponding](authorship-object.md#is\_corresponding) is `true`.
 
 ```json
 corresponding_institution_ids: ["https://openalex.org/I4210123613"]
@@ -263,7 +265,7 @@ display_name: "The state of OA: a large-scale analysis of the prevalence and imp
 
 ### `doi`
 
-_String:_ The DOI for the work. This is the [Canonical External ID](../../../the-api/get-single-entities/#canonical-external-ids) for works.
+_String:_ The DOI for the work. This is the [Canonical External ID](../../the-api/get-single-entities/#canonical-external-ids) for works.
 
 Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on [bioRxiv](https://www.biorxiv.org/), and another DOI for the [published version](./#version). However, this field always has just one DOI, the DOI for the published work.
 
@@ -300,7 +302,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 
 ### `id`
 
-_String:_ The [OpenAlex ID](../../../the-api/get-single-entities/#the-openalex-id) for this work.
+_String:_ The [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id) for this work.
 
 ```json
 id: "https://openalex.org/W2741809807"
@@ -312,7 +314,7 @@ _Object:_ All the external identifiers that we know about for this work. IDs are
 
 * `doi` (_String:_ The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). Same as [`Work.doi`](./#title))
 * `mag` (_Integer:_ the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
-* `openalex` (_String:_ The [OpenAlex ID](../../../api-entities/how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Work.id`](./#id))
+* `openalex` (_String:_ The [OpenAlex ID](../../api-entities/how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Work.id`](./#id))
 * `pmid` (_String:_ The [Pubmed Identifier](https://en.wikipedia.org/wiki/PubMed#PubMed\_identifier))
 * `pmcid` (_String_: the [Pubmed Central identifier](https://www.ncbi.nlm.nih.gov/pmc/about/public-access-info/))
 
@@ -437,7 +439,7 @@ mesh: [
 ### `ngrams_url`
 
 {% hint style="info" %}
-`ngrams_url` is only displayed in the API and is not included in the [OpenAlex snapshot](../../../the-data-snapshot/openalex-snapshot.md).
+`ngrams_url` is only displayed in the API and is not included in the [OpenAlex snapshot](../../the-data-snapshot/openalex-snapshot.md).
 {% endhint %}
 
 _String:_ It lists groups of words and phrases (n-grams) that make up a work, as obtained from the [Internet Archive](https://archive.org/details/GeneralIndex). See [The Ngram object](./#the-ngram-object) and [Get N-grams](../get-n-grams.md) for background on n-grams, how we use them, and what this API call returns.
@@ -507,7 +509,7 @@ publication_year: 2018
 
 ### `referenced_works`
 
-_List:_ [OpenAlex IDs](../../../the-api/get-single-entities/#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.
+_List:_ [OpenAlex IDs](../../the-api/get-single-entities/#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.
 
 ```json
 referenced_works: [
@@ -521,7 +523,7 @@ referenced_works: [
 
 ### `related_works`
 
-_List:_ [OpenAlex IDs](../../../the-api/get-single-entities/#the-openalex-id) for works related to this work. Related works are computed algorithmically; the algorithm finds recent papers with the most concepts in common with the current paper.
+_List:_ [OpenAlex IDs](../../the-api/get-single-entities/#the-openalex-id) for works related to this work. Related works are computed algorithmically; the algorithm finds recent papers with the most concepts in common with the current paper.
 
 ```json
 related_works: [
@@ -600,7 +602,7 @@ version: "publishedVersion"
 ## The `Ngram` object
 
 {% hint style="info" %}
-Ngram objects are only available in the API and are not included in the [OpenAlex snapshot](../../../the-data-snapshot/openalex-snapshot.md).
+Ngram objects are only available in the API and are not included in the [OpenAlex snapshot](../../the-data-snapshot/openalex-snapshot.md).
 {% endhint %}
 
 ### ngram
@@ -688,7 +690,6 @@ This URL might be a direct link to a PDF, or it might be to a landing page that 
 ```json
 oa_url: "https://peerj.com/articles/4375.pdf"
 ```
-
 
 ### What's next
 
