@@ -27,7 +27,7 @@ Check out the [Japanese Sources tutorial](https://github.com/ourresearch/openale
 
 \{% @test-integration/test-integration url="https://alpha.openalex.org/works?filter=primary\_location.source.id:S49861241\&page=1" %\}
 
-{% @test-integration/test-integration %}
+{% @test-integration/test-integration url="https://alpha.openalex.org/works?filter=primary_location.source.id:S49861241\&page=1" %}
 
 ### What's next
 

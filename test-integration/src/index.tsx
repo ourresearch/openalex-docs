@@ -6,9 +6,10 @@ import {
   } from "@gitbook/runtime";
   
   type IntegrationContext = {} & RuntimeContext;
-  type IntegrationBlockProps = {};
-  type IntegrationBlockState = { url: string };
-  type IntegrationAction = { action: "@link.unfurl", url?: string };
+  type IntegrationBlockProps = { url: string };
+  // type IntegrationBlockState = { url: string };
+  type IntegrationBlockState = {};
+  type IntegrationAction = {};
   
   const handleFetchEvent: FetchEventCallback<IntegrationContext> = async (
     request,
@@ -28,25 +29,25 @@ import {
      IntegrationContext
   >({
     componentId: "test-integration",
-    initialState: (props) => {
-      return {
-        url: "https://alpha.openalex.org",
-      };
-    },
-    action: async (element, action, context) => {
-      switch (action.action) {
-        case "@link.unfurl":
-          const { url } = action;
-          console.log("@link.unfurl -- url: " + url);
-          element.state.url = url;
-          return {};
-      }
-    },
+    // initialState: (props) => {
+    //   return {
+    //     url: props.url,
+    //   };
+    // },
+    // action: async (element, action, context) => {
+    //   switch (action.action) {
+    //     case "@link.unfurl":
+    //       const { url } = action;
+    //       console.log("@link.unfurl -- url: " + url);
+    //       element.state.url = url;
+    //       return {};
+    //   }
+    // },
     render: async (element, context) => {
       return (
         <block>
           <webframe
-            source={{ url: element.state.url }}
+            source={{ url: element.props.url }}
             aspectRatio={16 / 9}
           />
         </block>
