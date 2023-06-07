@@ -16,8 +16,6 @@ Works are linked to other works via the [`referenced_works`](work-object/#refere
 
 {% @test-integration/test-integration url="https://alpha.openalex.org/works?filter=ids.openalex:W4229010617&page=1" %}
 
-{% @test-integration/test-integration url="https://alpha.openalex.org/works?filter=ids.openalex:W4229010617&page=1" %}
-
 ## Work attributes
 
 ### `abstract_inverted_index`
