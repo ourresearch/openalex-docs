@@ -25,7 +25,9 @@ Sources are linked to works via the [`works.primary_location`](../works/work-obj
 Check out the [Japanese Sources tutorial](https://github.com/ourresearch/openalex-api-tutorials/blob/main/notebooks/institutions/japan\_sources.ipynb), a Jupyter notebook showing how to use Python and the API to learn about all of the sources in a country.
 {% endhint %}
 
-{% @test-integration/test-integration url="https://alpha.openalex.org/works?filter=primary_location.source.id:S49861241&page=1" %}
+\{% @test-integration/test-integration url="https://alpha.openalex.org/works?filter=primary\_location.source.id:S49861241\&page=1" %\}
+
+{% @test-integration/test-integration %}
 
 ### What's next
 
