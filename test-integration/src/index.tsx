@@ -55,7 +55,7 @@ import {
               aspectRatio={16 / 9}
             />
           ) : (
-            <button label="Click to see" onPress={{ action: 'clicked' }} />
+            <button label={`Click to open ${element.props.url}`} onPress={{ action: 'clicked' }} />
           )}
         </block>
       );
