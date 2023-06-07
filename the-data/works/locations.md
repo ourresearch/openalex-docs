@@ -1,4 +1,4 @@
-# Location object
+# Locations
 
 The `Location` object describes the location of a given work. It's only found as part of the `Work` object.
 
@@ -15,6 +15,8 @@ There are three places in the `Work` object where you can find locations:
 * [`primary_location`](./#primary\_location): The best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work.
 * [`best_oa_location`](./#best\_oa\_location): The best available open access location of this work.
 * [`locations`](./#locations): A list of all of the locations where this work lives. This will include the two locations above if availabe, and can also include other locations.
+
+## Location attributes
 
 ### `is_oa`
 

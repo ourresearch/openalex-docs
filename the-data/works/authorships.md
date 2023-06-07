@@ -1,6 +1,8 @@
-# Authorship object
+# Authorships
 
 The Authorship object represents a single author and her institutional affiliations in the context of a given work. It is only found as part of a `Work` object, in the [`work.authorships`](./#authorships) property.
+
+## Authorship attributes
 
 ### `author`
 
