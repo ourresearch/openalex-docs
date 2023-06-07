@@ -31,7 +31,7 @@ import {
     componentId: "test-integration",
     initialState: (props) => {
       return {
-        url: props.url,
+        url: "",
       };
     },
     action: async (element, action, context) => {
@@ -49,7 +49,7 @@ import {
     render: async (element, context) => {
       return (
         <block>
-          {element.state.url ? (
+          {element.state.url!== "" ? (
             <webframe
               source={{ url: element.props.url }}
               aspectRatio={16 / 9}
