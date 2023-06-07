@@ -14,4 +14,6 @@ blocks:
   - id: test-integration
     title: test-integration
     description: My GitBook Integration
+    urlUnfurl:
+      - https://alpha.openalex.org/
 secrets: {}

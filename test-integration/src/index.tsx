@@ -8,7 +8,7 @@ import {
   type IntegrationContext = {} & RuntimeContext;
   type IntegrationBlockProps = {};
   type IntegrationBlockState = { url: string };
-  type IntegrationAction = { action: "click" };
+  type IntegrationAction = { action: "@link.unfurl", url?: string };
   
   const handleFetchEvent: FetchEventCallback<IntegrationContext> = async (
     request,
@@ -33,13 +33,15 @@ import {
         url: "https://alpha.openalex.org",
       };
     },
-    // action: async (element, action, context) => {
-    //   switch (action.action) {
-    //     case "click":
-    //       console.log("Button Clicked");
-    //       return {};
-    //   }
-    // },
+    action: async (element, action, context) => {
+      switch (action.action) {
+        case "@link.unfurl":
+          const { url } = action;
+          console.log("@link.unfurl -- url: " + url);
+          element.state.url = url;
+          return {};
+      }
+    },
     render: async (element, context) => {
       return (
         <block>
