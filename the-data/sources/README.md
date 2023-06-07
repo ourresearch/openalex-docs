@@ -25,13 +25,15 @@ Sources are linked to works via the [`works.primary_location`](../works/work-obj
 Check out the [Japanese Sources tutorial](https://github.com/ourresearch/openalex-api-tutorials/blob/main/notebooks/institutions/japan\_sources.ipynb), a Jupyter notebook showing how to use Python and the API to learn about all of the sources in a country.
 {% endhint %}
 
+{% embed url="https://alpha.openalex.org/works?filter=primary_location.source.id:S49861241&page=1" %}
+
 ### What's next
 
 Learn more about what you can do with sources:
 
 * [The Source object](source-object.md)
-* [Get a single source](get-a-single-source.md)
-* [Get lists of sources](get-lists-of-sources.md)
+* [Get a single source](../../the-api/get-single-entities/get-a-single-source.md)
+* [Get lists of sources](../../the-api/get-lists-of-entities/get-lists-of-sources.md)
 * [Filter sources](../../the-api/filters/filter-sources.md)
 * [Search sources](search-sources.md)
 * [Group sources](group-sources.md)
