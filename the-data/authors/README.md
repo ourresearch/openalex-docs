@@ -22,7 +22,7 @@ Authors are linked to works via the [`works.authorships`](../works/work-object/#
 
 ### `cited_by_count`
 
-_Integer:_ The total number :page\_facing\_up: [Works](../works/work-object/) that cite a work this author has created.
+The total number of works that cite a work this author has created.
 
 ```json
 cited_by_count: 38 
@@ -30,7 +30,9 @@ cited_by_count: 38
 
 ### `counts_by_year`
 
-_List:_ [`Author.works_count`](author-object.md#works\_count) and [`Author.cited_by_count`](author-object.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many works this author published, and how many times they got cited.
+The works count and cited-by count of this author for the last ten years, binned by year.
+
+To put it another way: each year, you can see how many works this author published, and how many times they got cited.
 
 Any works or citations older than ten years old aren't included. Years with zero works and zero citations have been removed so you will need to add those in if you need them.
 
@@ -57,7 +59,9 @@ counts_by_year: [
 
 ### `created_date`
 
-_String:_ The date this `Author` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
+The date this author was created in the OpenAlex dataset.
+
+Expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
 
 ```json
 created_date: "2017-08-08"
@@ -65,7 +69,7 @@ created_date: "2017-08-08"
 
 ### `display_name`
 
-_String:_ The name of the author as a single string.
+The name of the author.
 
 ```json
 display_name: "Jason Priem"
@@ -73,7 +77,7 @@ display_name: "Jason Priem"
 
 ### `display_name_alternatives`
 
-_List:_ Other ways that we've found this author's name displayed.
+Other ways that we've found this author's name displayed.
 
 ```json
 display_name_alternatives: [
@@ -83,7 +87,7 @@ display_name_alternatives: [
 
 ### `id`
 
-_String:_ The OpenAlex ID for this author.
+The OpenAlex ID for this author.
 
 ```json
 id: "https://openalex.org/A2208157607"
@@ -91,7 +95,9 @@ id: "https://openalex.org/A2208157607"
 
 ### `ids`
 
-_Object:_ All the external identifiers that we know about for this author. IDs are expressed as URIs whenever possible. Possible ID types:
+All the external identifiers that we know about for this author. 
+
+IDs are expressed as URIs whenever possible. Possible ID types:
 
 * `mag` (_Integer:_ this author's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `openalex` (_String:_ this author's [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id). Same as [`Author.id`](author-object.md#id))
@@ -115,7 +121,9 @@ ids: {
 
 ### `last_known_institution`
 
-_Object:_ This author's last known institutional affiliation. In this context "last known" means that we took all the [Works](../works/work-object/) where this author has an institutional affiliation, sorted them by publication date, and selected the most recent one.
+This author's last known institutional affiliation. 
+
+In this context "last known" means that we took all the [Works](../works/work-object/) where this author has an institutional affiliation, sorted them by publication date, and selected the most recent one.
 
 This is a [dehydrated `Institution`](../institutions/institution-object.md#the-dehydratedinstitution-object) object, and you can find more documentation on the [Institution](../institutions/institution-object.md) page.
 
@@ -131,7 +139,9 @@ last_known_institution: {
 
 ### `orcid`
 
-_String:_ The [ORCID](https://en.wikipedia.org/wiki/ORCID) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome) for this author. ORCID is a global and unique ID for authors. This is the [Canonical external ID](../../the-api/get-single-entities/#canonical-external-ids) for authors.
+The ORCID ID for this author. 
+
+ORCID is a global and unique ID for authors. This is the [Canonical external ID](../../the-api/get-single-entities/#canonical-external-ids) for authors.
 
 {% hint style="warning" %}
 Compared to other Canonical IDs, ORCID coverage is relatively low in OpenAlex, because ORCID adoption in the wild has been slow compared with DOI, for example. This is particularly an issue when dealing with older works and authors.
@@ -143,7 +153,7 @@ orcid: "https://orcid.org/0000-0001-6187-6610"
 
 ### `summary_stats`
 
-_Object:_ Citation metrics for this author
+Citation metrics for this author
 
 * `2yr_mean_citedness` _Float_: The 2-year mean citedness for this author. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor).
 * `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this author.
@@ -161,7 +171,9 @@ summary_stats: {
 
 ### `updated_date`
 
-_String:_ The last time anything in this author object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
+The last time anything in this author's data changed (any change at all, including increases in various counts).
+
+Expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. 
 
 ```json
 updated_date: "2022-01-02T00:00:00"
@@ -169,7 +181,7 @@ updated_date: "2022-01-02T00:00:00"
 
 ### `works_api_url`
 
-_String:_ A URL that will get you a list of all this author's works.
+A URL that will get you a list of all this author's works via the OpenAlex API.
 
 We express this as an API URL (instead of just listing the works themselves) because sometimes an author's publication list is too long to reasonably fit into a single author object.
 
@@ -179,7 +191,7 @@ works_api_url: "https://api.openalex.org/works?filter=author.id:A2208157607",
 
 ### `works_count`
 
-_Integer:_ The number of :page\_facing\_up: [Works](../works/work-object/) this this author has created.
+The number of Works that this author has created.
 
 ```json
 works_count: 38 
@@ -191,11 +203,13 @@ This is updated a couple times per day. So the count may be slightly different t
 
 ### `x_concepts`
 
+The concepts most frequently applied to works created by this author. 
+
 {% hint style="danger" %}
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.
 {% endhint %}
 
-_List:_ The concepts most frequently applied to works created by this author. Each is represented as a [dehydrated `Concept`](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
+Each concept is represented as a [dehydrated `Concept`](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
 
 * `score` (_Float_): The strength of association between this author and the listed concept, from 0-100.
 
