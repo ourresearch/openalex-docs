@@ -6,9 +6,9 @@ description: Universities and other organizations to which authors claim affilia
 
 ## 🏫 Institutions
 
-Institutions are universities and other organizations to which authors claim affiliations. OpenAlex indexes about 109,000 institutions.
+Institutions are universities and other organizations to which authors claim affiliations. 
 
-You can get an institution from the OpenAlex API like this:
+OpenAlex indexes about 109,000 institutions. You can get an institution from the OpenAlex API like this:
 
 * Get the institution with ROR ID `https://ror.org/00jmfr291`\
   [https://api.openalex.org/institutions/https://ror.org/00jmfr291](https://api.openalex.org/institutions/https://ror.org/00jmfr291)
@@ -25,7 +25,9 @@ Institutions are linked to works via the [`works.authorships`](../works/work-obj
 
 ### `associated_institutions`
 
-_List:_ `Institutions` related to this one. Each associated institution is represented as a [dehydrated Institution](institution-object.md#the-dehydratedinstitution-object) object, with one extra property:
+Institutions related to this one by one of three relationships: parent, child, or related.
+
+Each associated institution is represented as a [dehydrated Institution](institution-object.md#the-dehydratedinstitution-object) object, with one extra property:
 
 * `relationship` (_String_): The type of relationship between this institution and the listed institution. Possible values: `parent`, `child`, and `related`.
 
