@@ -6,7 +6,9 @@ description: People who create works
 
 ## 👩 Authors
 
-Authors are people who create works. OpenAlex indexes about 213M authors, with thousands added daily. You can get an author from the API like this:
+Authors are people who create works. 
+
+OpenAlex indexes about 213M authors, with thousands added daily. You can get an author from the API like this:
 
 * Get the author with ORCID `https://orcid.org/0000-0002-1298-3089` [https://api.openalex.org/authors/https://orcid.org/0000-0002-1298-3089](https://api.openalex.org/authors/https://orcid.org/0000-0002-1298-3089)
 
