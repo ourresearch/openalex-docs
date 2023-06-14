@@ -76,22 +76,41 @@ authorships: [
 ]
 ```
 
-### `apc_payment`
+### `apc_list`
 
-_Object:_ Objects containing information about the APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)) for this work. The object contains:
-+ `price`: _Integer_
+_Object:_ Object containing information about the list-price APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)) for this work, taken from the [DOAJ](https://doaj.org/). The object contains:
++ `value`: _Integer_
 + `currency`: _String_
 + `provenance`: _String_ — either `openapc` or `doaj`, see below
-+ `price_usd`: _Integer_ — the APC converted into USD
++ `value_usd`: _Integer_ — the APC converted into USD
 
-If we can get the APC price from [OpenAPC](https://openapc.net/), we use that. Those APCs are specific to an article and are the actual APC paid by an author or institution to publish the article. As a fallback, we use the [DOAJ](https://doaj.org/) APC prices that are available in [sources](../../sources/README.md). Those are an estimate of what authors would have had to pay to publish the article, since the DOAJ apc prices apply to an entire journal.
+DOAJ APC prices apply to the entire journal. In some cases, we have more specific information about how much was actually paid. See [`apc_paid`](#apc_paid) for more.
 
 ```json
 apc_payment: {
-    price: 1889,
+    value: 3200,
+    currency: "USD",
+    value_usd: 3200,
+    provenance: "doaj"
+}
+```
+
+### `apc_paid`
+
+_Object:_ Objects containing information about the paid APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)) for this work. The object contains:
++ `value`: _Integer_
++ `currency`: _String_
++ `provenance`: _String_ — either `openapc` or `doaj`, see below
++ `value_usd`: _Integer_ — the APC converted into USD
+
+This will always be the same as [`apc_list`](#apc_list) _except_ for when we have data from [OpenAPC](https://openapc.net/), in which case the `apc_list` will reflect the journal list-price from DOAJ, and the `apc_paid` will reflect the price paid as reported in OpenAPC.
+
+```json
+apc_payment: {
+    value: 2250,
     currency: "EUR",
-    provenance: "openapc",
-    price_usd: 2037
+    value_usd: 2426,
+    provenance: "openapc"
 }
 ```
 
