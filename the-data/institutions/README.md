@@ -58,7 +58,7 @@ associated_institutions: [
 
 ### `cited_by_count`
 
-_Integer:_ The total number [`Works`](../works/work-object/) that cite a work created by an author affiliated with this institution. Or less formally: the number of citations this institution has collected.
+The number of citations this institution has collected (or more formally, the total number of works that cite a work by an author affiliated with this institution).
 
 ```json
 cited_by_count: 21199844 
@@ -66,7 +66,9 @@ cited_by_count: 21199844
 
 ### `country_code`
 
-_String:_ The country where this institution is located, represented as an [ISO two-letter country code](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2).
+The country where this institution is located.
+
+The country is represented as an [ISO two-letter country code](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2).
 
 ```json
 country_code: "US"
@@ -74,9 +76,11 @@ country_code: "US"
 
 ### `counts_by_year`
 
-_List:_ [`works_count`](institution-object.md#works\_count) and [`cited_by_count`](institution-object.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many new works this institution put out, and how many times _any_ work affiliated with this institution got cited.
+The works count and cited-by count of this institution for the last ten years, binned by year.
 
-Years with zero citations and zero works have been removed so you will need to add those in if you need them.
+To put it another way: each year, you can see how many new works this institution put out, and how many times _any_ work affiliated with this institution got cited.
+
+Years with zero citations and zero works have been removed so you will need to add those back in if you need them.
 
 ```json
 counts_by_year: [
@@ -97,7 +101,9 @@ counts_by_year: [
 
 ### `created_date`
 
-_String:_ The date this `Institution` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
+The date this institution was created in the OpenAlex dataset.
+
+Expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
 
 ```json
 created_date: "2017-08-08"
@@ -105,7 +111,7 @@ created_date: "2017-08-08"
 
 ### `display_name`
 
-_String:_ The primary name of the institution.
+The primary name of the institution.
 
 ```json
 display_name: "University of North Carolina at Chapel Hill"
@@ -121,7 +127,7 @@ display_name_acronyms:["UNC"]
 
 ### `display_name_alternatives`
 
-_List:_ Other names people may use for this institution.
+Other names people may use for this institution.
 
 ```json
 display_name_alternatives: [
@@ -131,7 +137,7 @@ display_name_alternatives: [
 
 ### `geo`
 
-_Object:_ A bunch of stuff we know about the location of this institution:
+A bunch of stuff we know about the location of this institution:
 
 * `city` (_String_): The city where this institution lives.
 * `geonames_city_id` (_String_): The city where this institution lives, as a [GeoNames database](http://www.geonames.org/) ID.
@@ -155,7 +161,7 @@ geo: {
 
 ### `homepage_url`
 
-_String:_ The URL for institution's primary homepage.
+The URL for institution's primary homepage.
 
 ```json
 homepage_url: "http://www.unc.edu/"
@@ -163,7 +169,7 @@ homepage_url: "http://www.unc.edu/"
 
 ### `id`
 
-_String:_ The [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id) for this institution.
+The OpenAlex ID for this institution.
 
 ```json
 id: "https://openalex.org/I114027177"
@@ -171,7 +177,9 @@ id: "https://openalex.org/I114027177"
 
 ### `ids`
 
-_Object:_ All the external identifiers that we know about for this institution. IDs are expressed as URIs whenever possible. Possible ID types:
+All the external identifiers that we know about for this institution.
+
+IDs are expressed as URIs whenever possible. Possible ID types:
 
 * `grid` (_String:_ this institution's [GRID](https://www.grid.ac/) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome))
 * `mag` (_Integer:_ this institution's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
@@ -197,7 +205,7 @@ ids: {
 
 ### `image_thumbnail_url`
 
-_String:_ Same as [`image_url`](institution-object.md#image\_url-1), but it's a smaller image.
+URL where you can get a thumbnail image representing this institution.
 
 ```json
 image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/University_of_North_Carolina_at_Chapel_Hill_seal.svg/100px-University_of_North_Carolina_at_Chapel_Hill_seal.svg.png"
@@ -205,7 +213,9 @@ image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Unive
 
 ### `image_url`
 
-_String:_ URL where you can get an image representing this institution. Usually this is hosted on Wikipedia, and usually it's a seal or logo.
+URL where you can get an image representing this institution.
+
+Usually this is hosted on Wikipedia, and usually it's a seal or logo.
 
 ```json
 image_url: "https://upload.wikimedia.org/wikipedia/en/5/5c/University_of_North_Carolina_at_Chapel_Hill_seal.svg"
@@ -213,7 +223,7 @@ image_url: "https://upload.wikimedia.org/wikipedia/en/5/5c/University_of_North_C
 
 ### `international`
 
-_Object:_ The institution's display name in different languages. Derived from the wikipedia page for the institution in the given language.
+The institution's display name in different languages, derived from the wikipedia page for the institution in the given language.
 
 * `display_name` (_Object_)
   * `key` (String): language code in [wikidata language code](https://www.wikidata.org/wiki/Property:P9753) format. Full list of languages is [here](https://doc.wikimedia.org/mediawiki-core/master/php/Names\_8php\_source.html).
@@ -233,7 +243,9 @@ international: {
 
 ### `repositories`
 
-_List:_ Repositories ([`Sources`](../sources/) with `type: repository`) that have this institution as their [`host_organization`](../sources/source-object.md#host\_organization)
+Repositories that this institutions hosts.
+
+Defined as [`Sources`](../sources/) with `type: repository` that have this institution as their [`host_organization`](../sources/source-object.md#host\_organization).
 
 ```json
 repositories: [
@@ -250,11 +262,13 @@ repositories: [
 
 ### `roles`
 
-_List:_ List of role objects, which include the `role` (one of `institution`, `funder`, or `publisher`), the `id` ([OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id)), and the `works_count`.
+List of roles that this organization has, such as Institution, Funder, and Publisher.
 
 In many cases, a single organization does not fit neatly into one role. For example, Yale University is a single organization that is a research university, funds research studies, and publishes an academic journal. The `roles` property links the OpenAlex entities together for a single organization, and includes counts for the works associated with each role.
 
-The `roles` list of an entity ([Funder](../funders/), [Publisher](../publishers/), or [Institution](./)) always includes itself. In the case where an organization only has one role, the `roles` will be a list of length one, with itself as the only item.
+Each `role` object in the list includes the `role` (one of `institution`, `funder`, or `publisher`), the `id` ([OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id)), and the `works_count`.
+
+The `roles` list of an entity ([Funder](./), [Publisher](../publishers/), or [Institution](../institutions/)) always includes itself. In the case where an organization only has one role, the `roles` will be a list of length one, with itself as the only item.
 
 ```json
 roles: [
@@ -278,9 +292,11 @@ roles: [
 
 ### `ror`
 
-_String:_ The [ROR](https://ror.org/) ID for this institution. This is the [Canonical External ID](../../the-api/get-single-entities/#canonical-external-ids) for institutions.
+The ROR ID for this institution. 
 
-The ROR (Research Organization Registry) identifier is a globally unique ID for research organization. [ROR is the successor to GRiD](https://www.digital-science.com/press-release/grid-passes-torch-to-ror/), which is no longer being updated.
+The [ROR (Research Organization Registry)](https://ror.org/) identifier is a globally unique ID for research organization. [ROR is the successor to GRiD](https://www.digital-science.com/press-release/grid-passes-torch-to-ror/), which is no longer being updated.
+
+The ROR ID is the [Canonical External ID](../../the-api/get-single-entities/#canonical-external-ids) for institutions.
 
 ```json
 ror: "https://ror.org/0130frc33"
@@ -288,7 +304,7 @@ ror: "https://ror.org/0130frc33"
 
 ### `summary_stats`
 
-_Object:_ Citation metrics for this institution
+Citation metrics for this institution.
 
 * `2yr_mean_citedness` _Float_: The 2-year mean citedness for this institution. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor).
 * `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this institution.
@@ -306,9 +322,9 @@ summary_stats: {
 
 ### `type`
 
-_String:_ The institution's primary type, using the [ROR "type" controlled vocabulary](https://ror.readme.io/docs/ror-data-structure).
+The institution's primary type, one of: Education, Healthcare, Company, Archive, Nonprofit, Government, Facility, and Other
 
-Possible values are: `Education`, `Healthcare`, `Company`, `Archive`, `Nonprofit`, `Government`, `Facility`, and `Other`.
+We use the [ROR "type" controlled vocabulary](https://ror.readme.io/docs/ror-data-structure).
 
 ```json
 type: "education"
@@ -316,7 +332,9 @@ type: "education"
 
 ### `updated_date`
 
-_String:_ The last time anything in this `Institution` changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. This date is updated for _any change at all_, including increases in various counts.
+The last time anything in this institution's data changed (any change at all, including increases in various counts).
+
+Expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. 
 
 ```json
 updated_date: "2022-01-02T00:27:23.088909"
@@ -324,9 +342,9 @@ updated_date: "2022-01-02T00:27:23.088909"
 
 ### `works_api_url`
 
-_String:_ A URL that will get you a list of all the [`Works`](../works/work-object/) affiliated with this institution.
+A URL that will get you a list of all the works affiliated with this institution.
 
-We express this as an API URL (instead of just listing the `Works` themselves) because most institutions have way too many works to reasonably fit into a single return object.
+We express this as an API URL (instead of just listing the works themselves) because most institutions have way too many works to reasonably fit into a single return object.
 
 ```json
 works_api_url: "https://api.openalex.org/works?filter=institutions.id:I114027177"
@@ -334,7 +352,7 @@ works_api_url: "https://api.openalex.org/works?filter=institutions.id:I114027177
 
 ### `works_count`
 
-_Integer:_ The number of [`Works`](../works/work-object/) created by authors affiliated with this institution. Or less formally: the number of works coming out of this institution.
+The number of works coming out of this institution (or more formally, the number of works created by authors affiliated with this institution).
 
 ```json
 works_count: 202704    
@@ -342,13 +360,15 @@ works_count: 202704    
 
 ### `x_concepts`
 
+The concepts most frequently applied to works affiliated with this institution.
+
+Each is represented as a [dehydrated Concept](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
+
+* `score` (_Float_): The strength of association between this institution and the listed concept, from 0-100.
+
 {% hint style="danger" %}
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.
 {% endhint %}
-
-_List:_ The [`Concepts`](../concepts/concept-object.md) most frequently applied to works affiliated with this institution. Each is represented as a [dehydrated Concept](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
-
-* `score` (_Float_): The strength of association between this institution and the listed concept, from 0-100.
 
 ```json
 x_concepts: [
