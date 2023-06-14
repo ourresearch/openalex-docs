@@ -328,6 +328,7 @@ The `DehydratedSource` is stripped-down `Source` object, with most of its proper
 * [`host_organization_lineage`](source-object.md#host\_organization\_lineage)
 * [`host_organization_name`](source-object.md#host\_organization\_name)
 * [`id`](source-object.md#id)
+* [`is_in_doaj`](#is_in_doaj)
 * [`issn`](source-object.md#issn)
 * [`issn_l`](source-object.md#issn\_l)
 * [`type`](source-object.md#type)
