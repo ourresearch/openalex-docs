@@ -1,6 +1,6 @@
 # Locations
 
-The `Location` object describes the location of a given work. It's only found as part of the `Work` object.
+The locations online where a work lives, often in different versions.
 
 Locations are meant to capture the way that a work exists in different versions. So, for example, a work may have a version that has been peer-reviewed and published in a journal (the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)). This would be one of the work's locations. It may have another version available on a preprint server like [bioRxiv](https://www.biorxiv.org/)—this version having been posted before it was accepted for publication. This would be another one of the work's locations.
 
@@ -20,9 +20,7 @@ There are three places in the `Work` object where you can find locations:
 
 ### `is_oa`
 
-_Boolean:_ `True` if this work is Open Access (OA).
-
-There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in.
+Whether this work is Open Access (OA), defined as: having a URL where you can read the full text of the work without needing to pay money or log in.
 
 ```json
 is_oa: true
@@ -30,7 +28,7 @@ is_oa: true
 
 ### landing\_page\_url
 
-_String:_ The landing page URL for this location.
+The landing page URL for this location.
 
 ```json
 landing_page_url: "https://doi.org/10.1590/s1678-77572010000100010"
@@ -38,7 +36,9 @@ landing_page_url: "https://doi.org/10.1590/s1678-77572010000100010"
 
 ### license
 
-_String:_ The location's publishing license. This can be a [Create Commons](https://creativecommons.org/about/cclicenses/) license such as cc0 or cc-by, a publisher-specific license, or null which means we are not able to determine a license for this location.
+The location's publishing license. 
+
+This can be a [Create Commons](https://creativecommons.org/about/cclicenses/) license such as cc0 or cc-by, a publisher-specific license, or null which means we are not able to determine a license for this location.
 
 ```json
 license: "cc-by"
@@ -46,7 +46,9 @@ license: "cc-by"
 
 ### source
 
-_Object:_ Information about the source of this location, as a [`DehydratedSource`](../../sources/source-object.md#the-dehydratedsource-object) object.
+Information about the source of this location (such as a journal or repository).
+
+This is represented as a [`DehydratedSource`](../../sources/source-object.md#the-dehydratedsource-object) object.
 
 The concept of a source is meant to capture a certain social relationship between the host organization and a version of a work. When an organization puts the work on the internet, there is an understanding that they have, at some level, endorsed the work. This level varies, and can be very different depending on the source!
 
@@ -63,7 +65,7 @@ source {
 
 ### pdf\_url
 
-_String:_ A URL where you can find this location as a PDF.
+A URL where you can find this location as a PDF.
 
 ```json
 pdf_url: "http://www.scielo.br/pdf/jaos/v18n1/a10v18n1.pdf"
@@ -71,7 +73,9 @@ pdf_url: "http://www.scielo.br/pdf/jaos/v18n1/a10v18n1.pdf"
 
 ### version
 
-_String:_ The version of the work, based on the [DRIVER Guidelines versioning scheme.](https://wiki.surfnet.nl/display/DRIVERguidelines/DRIVER-VERSION+Mappings) Possible values are:.
+The version of the work—one of: "publishedVersion," "acceptedVersion," or "submittedVersion".
+
+Based on the [DRIVER Guidelines versioning scheme.](https://wiki.surfnet.nl/display/DRIVERguidelines/DRIVER-VERSION+Mappings) Possible values:
 
 * `publishedVersion`: The document’s version of record. This is the most authoritative version.
 * `acceptedVersion`: The document after having completed peer review and being officially accepted for publication. It will lack publisher formatting, but the _content_ should be interchangeable with the that of the `publishedVersion`.

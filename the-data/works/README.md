@@ -6,9 +6,11 @@ description: Journal articles, books, datasets, and theses
 
 ## 📄 Works
 
-Works are scholarly documents like journal articles, books, datasets, and theses. OpenAlex indexes over 240M works, with about 50,000 added daily. You can access a work in the OpenAlex API like this:
+Works are scholarly documents like journal articles, books, datasets, and theses. 
 
-* Get the work with the DOI `https://doi.org/10.7717/peerj.4375` [https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375](https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375)
+OpenAlex indexes over 240M works, with about 50,000 added daily. You can access a work in the OpenAlex API like this:
+
+* Get the work with the DOI `https://doi.org/10.7717/peerj.4375` [`https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375`](https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375)
 
 That will return a [`Work`](work-object/) object, describing everything OpenAlex knows about the work with that ID. We collect new works from many sources, including Crossref, PubMed, institutional and discipline-specific repositories (eg, arXiv). Many older works come from the now-defunct Microsoft Academic Graph.
 
@@ -22,7 +24,9 @@ Works are linked to other works via the [`referenced_works`](work-object/#refere
 
 ### `abstract_inverted_index`
 
-_Object:_ The abstract of the work, as an [inverted index](https://en.wikipedia.org/wiki/Inverted\_index), which encodes information about the abstract's words and their positions within the text. [Like Microsoft Academic Graph](https://docs.microsoft.com/en-us/academic-services/graph/resources-faq#what-format-are-paper-abstracts-published-in), OpenAlex doesn't include plaintext abstracts due to legal constraints.
+The abstract of the work, as an inverted index.
+
+The [inverted index](https://en.wikipedia.org/wiki/Inverted\_index) encodes information about the abstract's words and their positions within the text. [Like Microsoft Academic Graph](https://docs.microsoft.com/en-us/academic-services/graph/resources-faq#what-format-are-paper-abstracts-published-in), OpenAlex doesn't include plaintext abstracts due to legal constraints.
 
 ```json
 abstract_inverted_index: {
@@ -67,7 +71,11 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 
 ### `authorships`
 
-_List:_ List of [`Authorship`](authorship-object.md) objects, each representing an author and their institution. [Limited to](../../authors/limitations.md) the first 100 authors to maintain API performance.
+List of authorships for this work, each representing an author and their institution(s).
+
+[Limited to](../../authors/limitations.md) the first 100 authors to maintain API performance.
+
+See [`Authorship`](authorship-object.md) for more information. 
 
 ```json
 authorships: [
@@ -94,31 +102,56 @@ authorships: [
 ]
 ```
 
-### `apc_payment`
+### `apc_list`
 
-_Object:_ Objects containing information about the APC ([article processing charge](https://en.wikipedia.org/wiki/Article\_processing\_charge)) for this work. The object contains:
+The list-price APC (article processing charge) for this work.
 
-* `price`: _Integer_
-* `currency`: _String_
-* `provenance`: _String_ — either `openapc` or `doaj`, see below
-* `price_usd`: _Integer_ — the APC converted into USD
+Taken from the [DOAJ](https://doaj.org/).
 
-If we can get the APC price from [OpenAPC](https://openapc.net/), we use that. Those APCs are specific to an article and are the actual APC paid by an author or institution to publish the article. As a fallback, we use the [DOAJ](https://doaj.org/) APC prices that are available in [sources](../../sources/). Those are an estimate of what authors would have had to pay to publish the article, since the DOAJ apc prices apply to an entire journal.
+The properties of the APC object are:
+
++ `value`: _Integer_
++ `currency`: _String_
++ `provenance`: _String_ — either `openapc` or `doaj`, see below
++ `value_usd`: _Integer_ — the APC converted into USD
+
+DOAJ APC prices apply to the entire journal. In some cases, we have more specific information about how much was actually paid. See [`apc_paid`](#apc_paid) for more.
 
 ```json
 apc_payment: {
-    price: 1889,
-    currency: "EUR",
-    provenance: "openapc",
-    price_usd: 2037
+    value: 3200,
+    currency: "USD",
+    value_usd: 3200,
+    provenance: "doaj"
 }
 ```
 
+### `apc_paid`
+
+The paid APC (article processing charge) for this work.
+
+The properties of the APC object are:
+
++ `value`: _Integer_
++ `currency`: _String_
++ `provenance`: _String_ — either `openapc` or `doaj`, see below
++ `value_usd`: _Integer_ — the APC converted into USD
+
+This will always be the same as [`apc_list`](#apc_list) _except_ for when we have data from [OpenAPC](https://openapc.net/), in which case the `apc_list` will reflect the journal list-price from DOAJ, and the `apc_paid` will reflect the price paid as reported in OpenAPC.
+
+```json
+apc_payment: {
+    value: 2250,
+    currency: "EUR",
+    value_usd: 2426,
+    provenance: "openapc"
+}
+```
 ### `best_oa_location`
 
-_Object:_ A [`Location`](location-object.md) object with the best available open access location for this work.
+The best available open access location for this work.
 
-We score open locations to determine which is best using these factors:
+We score open [`Locations`](location-object.md) to determine which is best using these factors:
 
 1. Must have is\_oa: true
 2. type\_:\_ "publisher" is better than "repository".
@@ -146,7 +179,9 @@ best_oa_location: {
 
 ### `biblio`
 
-_Object:_ Old-timey bibliographic info for this work. This is mostly useful only in citation/reference contexts. These are all strings because sometimes you'll get fun values like "Spring" and "Inside cover."
+Old-timey bibliographic info for this work. 
+
+This is mostly useful only in citation/reference contexts. These are all strings because sometimes you'll get fun values like "Spring" and "Inside cover."
 
 * `volume` (_String_)
 * `issue` (_String_)
@@ -164,11 +199,13 @@ biblio: {
 
 ### `cited_by_api_url`
 
-_String:_ A URL that uses the [`cites`](../../the-api/filters/filter-works.md#cites) filter to display a list of works that cite this work. This is a way to expand [`cited_by_count`](./#cited\_by\_count) into an actual list of works.
+A URL that returns a list of works that cite this work.
 
 ### `cited_by_count`
 
-_Integer:_ The number of citations to this work. These are the times that other works have cited this work: Other works ➞ This work.
+The number of citations to this work. 
+
+These are the times that other works have cited this work: Other works ➞ This work.
 
 ```json
 cited_by_count: 382
@@ -176,9 +213,9 @@ cited_by_count: 382
 
 ### `concepts`
 
-_List:_ List of dehydrated [`Concept` objects](../../concepts/concept-object.md).
+The concepts associated with this work.
 
-Each `Concept` object in the list also has one additional property:
+Each item in the is a dehydrated [`Concept` objects](../../concepts/concept-object.md), with one additional property:
 
 * `score` (_Float_): The strength of the connection between the work and this concept (higher is stronger). This number is produced by AWS Sagemaker, in the last layer of the [machine learning model](https://github.com/ourresearch/openalex-concept-tagging) that assigns concepts.
 
@@ -209,7 +246,9 @@ concepts: [
 
 ### `corresponding_author_ids`
 
-_List:_ [OpenAlex IDs](../../the-api/get-single-entities/#the-openalex-id) of any authors for which [authorships.is\_corresponding](authorship-object.md#is\_corresponding) is `true`.
+The corresponding authors for this work.
+
+This is a list of the [OpenAlex IDs](../../the-api/get-single-entities/#the-openalex-id) of any authors for which [authorships.is\_corresponding](authorship-object.md#is\_corresponding) is `true`.
 
 ```json
 corresponding_author_ids: ["https://openalex.org/A2109306456"]
@@ -217,7 +256,9 @@ corresponding_author_ids: ["https://openalex.org/A2109306456"]
 
 ### `corresponding_institution_ids`
 
-_List:_ [OpenAlex IDs](../../the-api/get-single-entities/#the-openalex-id) of any institutions found within an `authorship` for which [authorships.is\_corresponding](authorship-object.md#is\_corresponding) is `true`.
+The institutions of the corresponding authors for this work.
+
+This is a list of the [OpenAlex IDs](../../the-api/get-single-entities/#the-openalex-id) of any institutions found within an `authorship` for which [authorships.is\_corresponding](authorship-object.md#is\_corresponding) is `true`.
 
 ```json
 corresponding_institution_ids: ["https://openalex.org/I4210123613"]
@@ -225,7 +266,9 @@ corresponding_institution_ids: ["https://openalex.org/I4210123613"]
 
 ### `counts_by_year`
 
-_List:_ [`Works.cited_by_count`](./#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many times this work was cited.
+The cited-by count of this work for the last ten years, binned by year.
+
+To put it another way: each year, you can see how many times this work was cited.
 
 Any citations older than ten years old aren't included. Years with zero citations have been removed so you will need to add those in if you need them.
 
@@ -249,7 +292,9 @@ counts_by_year: [
 
 ### `created_date`
 
-_String:_ The date this `Work` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
+The date this work was created in the OpenAlex dataset.
+
+Expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
 
 ```json
 created_date: "2017-08-08"
@@ -257,7 +302,9 @@ created_date: "2017-08-08"
 
 ### `display_name`
 
-_String:_ Exactly the same as [`Work.title`](./#title). It's useful for `Work`s to include a `display_name` property, since all the other entities have one.
+The title of this work.
+
+This exactly the same as [`Work.title`](./#title). It's useful for `Work`s to include a `display_name` property, since all the other entities have one.
 
 ```json
 display_name: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
@@ -265,7 +312,9 @@ display_name: "The state of OA: a large-scale analysis of the prevalence and imp
 
 ### `doi`
 
-_String:_ The DOI for the work. This is the [Canonical External ID](../../the-api/get-single-entities/#canonical-external-ids) for works.
+The DOI (digital object identifier) for the work. 
+
+This is the [Canonical External ID](../../the-api/get-single-entities/#canonical-external-ids) for works.
 
 Occasionally, a work has more than one DOI--for example, there might be one DOI for a preprint version hosted on [bioRxiv](https://www.biorxiv.org/), and another DOI for the [published version](./#version). However, this field always has just one DOI, the DOI for the published work.
 
@@ -275,7 +324,9 @@ doi: "https://doi.org/10.7717/peerj.4375"
 
 ### `grants`
 
-_List:_ List of grant objects, which include the [`Funder`](../../funders/) and the award ID, if available. Our grants data comes from Crossref, and is currently fairly limited.
+The grants that contributed funding to this work.
+
+This is a list of grant objects, which include the [`Funder`](../../funders/) and the award ID, if available. Our grants data comes from Crossref, and is currently fairly limited.
 
 ```json
 grants: [
@@ -302,7 +353,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 
 ### `id`
 
-_String:_ The [OpenAlex ID](../../the-api/get-single-entities/#the-openalex-id) for this work.
+The OpenAlex ID for this work.
 
 ```json
 id: "https://openalex.org/W2741809807"
@@ -310,7 +361,9 @@ id: "https://openalex.org/W2741809807"
 
 ### `ids`
 
-_Object:_ All the external identifiers that we know about for this work. IDs are expressed as URIs whenever possible. Possible ID types:
+All the external identifiers that we know about for this work. 
+
+IDs are expressed as URIs whenever possible. Possible ID types:
 
 * `doi` (_String:_ The [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier). Same as [`Work.doi`](./#title))
 * `mag` (_Integer:_ the [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
@@ -333,9 +386,9 @@ ids: {
 
 ### `is_paratext`
 
-_Boolean:_ True if we think this work is [paratext](https://en.wikipedia.org/wiki/Paratext).
+Whether this work is paratext—things like front cover, editorial board, or issue information.
 
-In our context, paratext is stuff that's in scholarly venue (like a journal) but is _about the venue_ rather than a scholarly work properly speaking. Some examples and nonexamples:
+In our context, [paratext](https://en.wikipedia.org/wiki/Paratext) is stuff that's in scholarly venue (like a journal) but is _about the venue_ rather than a scholarly work properly speaking. Some examples and nonexamples:
 
 * **yep it's paratext**: front cover, back cover, table of contents, editorial board listing, issue information, masthead.
 * **no, not paratext**: research paper, dataset, letters to the editor, figures
@@ -350,7 +403,7 @@ is_paratext: false
 
 ### `is_retracted`
 
-_Boolean:_ True if we know this work has been retracted.
+Whether this work has been retracted (as far as we are aware).
 
 This field has high precision but low recall. In other words, if `is_retracted` is `true`, the article is definitely retracted. But if `is_retracted` is `False`, it still might be retracted, but we just don't know. This is because unfortunately, the [open sources for retraction data](https://www.crossref.org/blog/encouraging-even-greater-reporting-of-corrections-and-retractions/) aren't currently very comprehensive, and [the more comprehensive ones](https://retractionwatch.com/) aren't sufficiently open for us to use here.
 
@@ -360,7 +413,9 @@ is_retracted: false
 
 ### `language`
 
-_String:_ The language of the work in [ISO 639-1 format](https://en.wikipedia.org/wiki/List\_of\_ISO\_639-1\_codes). The language is automatically detected using the information we have about the work. We use the [langdetect](https://pypi.org/project/langdetect/) software library on the words in the work's abstract, or the title if we do not have the abstract. The source code for this procedure is [here.](https://github.com/ourresearch/openalex-guts/blob/54471c6c8e3c59662c4a4d9c37320af7b1667b2b/models/work.py#LL1102C1-L1102C1) Keep in mind that this method is not perfect, and that in some cases the language of the title or abstract could be different from the body of the work.
+The language of this work.
+
+The language is represented in [ISO 639-1 format](https://en.wikipedia.org/wiki/List\_of\_ISO\_639-1\_codes). The language is automatically detected using the information we have about the work. We use the [langdetect](https://pypi.org/project/langdetect/) software library on the words in the work's abstract, or the title if we do not have the abstract. The source code for this procedure is [here.](https://github.com/ourresearch/openalex-guts/blob/54471c6c8e3c59662c4a4d9c37320af7b1667b2b/models/work.py#LL1102C1-L1102C1) Keep in mind that this method is not perfect, and that in some cases the language of the title or abstract could be different from the body of the work.
 
 ```json
 language: "en"
@@ -368,7 +423,9 @@ language: "en"
 
 ### `locations`
 
-_List:_ A list of [`Location`](location-object.md) objects describing all unique places where this work lives.
+All of the unique places where this work lives.
+
+The work's locations are represented as a list of [`Location`](location-object.md) objects.
 
 ```json
 locations: [ 
@@ -407,7 +464,7 @@ locations: [
 
 ### `locations_count`
 
-_Integer:_ Number of [`locations`](./#locations) for this work.
+Number of locations we have for this work.
 
 ```json
 locations_count: 3
@@ -415,7 +472,9 @@ locations_count: 3
 
 ### `mesh`
 
-_List:_ List of [MeSH](https://www.nlm.nih.gov/mesh/meshhome.html) tag objects. Only works found in [PubMed](https://pubmed.ncbi.nlm.nih.gov/) have MeSH tags; for all other works, this is an empty list.
+The MeSH tags for this work (only found in PubMed works).
+
+This is a list of [MeSH](https://www.nlm.nih.gov/mesh/meshhome.html) tag objects. Only works found in [PubMed](https://pubmed.ncbi.nlm.nih.gov/) have MeSH tags; for all other works, this is an empty list.
 
 ```json
 mesh: [
@@ -438,11 +497,13 @@ mesh: [
 
 ### `ngrams_url`
 
+A URL that will get you the groups of words and phrases (n-grams) that make up a work.
+
+This information is obtained from the [Internet Archive](https://archive.org/details/GeneralIndex). See [The Ngram object](./#the-ngram-object) and [Get N-grams](../get-n-grams.md) for background on n-grams, how we use them, and what this API call returns.
+
 {% hint style="info" %}
 `ngrams_url` is only displayed in the API and is not included in the [OpenAlex snapshot](../../the-data-snapshot/openalex-snapshot.md).
 {% endhint %}
-
-_String:_ It lists groups of words and phrases (n-grams) that make up a work, as obtained from the [Internet Archive](https://archive.org/details/GeneralIndex). See [The Ngram object](./#the-ngram-object) and [Get N-grams](../get-n-grams.md) for background on n-grams, how we use them, and what this API call returns.
 
 ```json
 ngrams_url: "https://api.openalex.org/works/W2023271753/ngrams"
@@ -450,7 +511,9 @@ ngrams_url: "https://api.openalex.org/works/W2023271753/ngrams"
 
 ### `open_access`
 
-_Object:_ Information about the access status of this work, as an [`OpenAccess`](./#the-openaccess-object) object.
+Information about the access status of this work.
+
+Represented as an [`OpenAccess`](./#the-openaccess-object) object.
 
 ```json
 open_access: {
@@ -463,9 +526,9 @@ open_access: {
 
 ### `primary_location`
 
-_Object:_ A [`Location`](location-object.md) object with the primary location of this work.
+The the best (closest to the version of record) copy of this work.
 
-The `primary_location` is where you can find the best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work. For a peer-reviewed journal article, this would be a full text published version, hosted by the publisher at the article's DOI URL.
+The `primary_location` is the [location](#locations) where you can find the best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work. For a peer-reviewed journal article, this would be a full text published version, hosted by the publisher at the article's DOI URL.
 
 ```json
 primary_location: {
@@ -487,7 +550,9 @@ primary_location: {
 
 ### `publication_date`
 
-_String:_ The day when this work was published, formatted as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date.
+The day when this work was published
+
+Formatted as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date.
 
 Where different publication dates exist, we select the earliest available date of electronic publication.
 
@@ -499,7 +564,7 @@ publication_date: "2018-02-13"
 
 ### `publication_year`
 
-_Integer:_ The year this work was published.
+The year this work was published.
 
 This year applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.locations`](./#locations), may have been published in different (earlier) years.
 
@@ -509,7 +574,9 @@ publication_year: 2018
 
 ### `referenced_works`
 
-_List:_ [OpenAlex IDs](../../the-api/get-single-entities/#the-openalex-id) for works that this work cites. These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.
+Works that this work cites.
+
+These are citations that go _from_ this work out _to_ another work: This work ➞ Other works.
 
 ```json
 referenced_works: [
@@ -523,7 +590,7 @@ referenced_works: [
 
 ### `related_works`
 
-_List:_ [OpenAlex IDs](../../the-api/get-single-entities/#the-openalex-id) for works related to this work. Related works are computed algorithmically; the algorithm finds recent papers with the most concepts in common with the current paper.
+Works related to this work—recent papers with the most concepts in common.
 
 ```json
 related_works: [
@@ -537,7 +604,7 @@ related_works: [
 
 ### `title`
 
-_String:_ The title of this work.
+The title of this work.
 
 ```json
 title: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
@@ -545,7 +612,7 @@ title: "The state of OA: a large-scale analysis of the prevalence and impact of 
 
 ### `type`
 
-_String:_ The type or genre of the work.
+The type or genre of the work (such as "journal article," "book-chapter," or "dissertation").
 
 This field uses Crossref's "type" controlled vocabulary; you can see all possible values via the Crossref api here: [https://api.crossref.org/types](https://api.crossref.org/types).
 
@@ -557,7 +624,9 @@ type: "journal-article"
 
 ### `updated_date`
 
-_String:_ The last time anything in this `Work` object changed, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string (in UTC). This date is updated for _any change at all_, including increases in various counts.
+The last time anything in this work's data changed (any change at all, including increases in various counts).
+
+Expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string. 
 
 ```json
 updated_date: "2022-01-02T00:22:35.180390"
@@ -565,7 +634,7 @@ updated_date: "2022-01-02T00:22:35.180390"
 
 ### `is_oa`
 
-_Boolean:_ Set to `true` if the work hosted here can be read for free, without registration.
+Whether this work can be read for free, without registration.
 
 ```json
 is_oa: true
@@ -573,7 +642,9 @@ is_oa: true
 
 ### `license`
 
-_String:_ The license applied to this work at this host. Most toll-access works don't have an explicit license (they're under "all rights reserved" copyright), so this field generally has content only if `is_oa` is `true`.
+The license applied to this work at this host. 
+
+Most toll-access works don't have an explicit license (they're under "all rights reserved" copyright), so this field generally has content only if `is_oa` is `true`.
 
 ```json
 license: "cc-by"
@@ -581,7 +652,7 @@ license: "cc-by"
 
 ### `url`
 
-_String:_ The URL where you can access this work.
+The URL where you can access this work.
 
 ```json
 id: "https://doi.org/10.7717/peerj.4375"
@@ -589,7 +660,9 @@ id: "https://doi.org/10.7717/peerj.4375"
 
 ### `version`
 
-_String:_ The version of the work, based on the [DRIVER Guidelines versioning scheme.](https://wiki.surfnet.nl/display/DRIVERguidelines/DRIVER-VERSION+Mappings) Possible values are:.
+The version of the work—one of: "publishedVersion," "acceptedVersion," or "submittedVersion".
+
+Based on the [DRIVER Guidelines versioning scheme.](https://wiki.surfnet.nl/display/DRIVERguidelines/DRIVER-VERSION+Mappings) Possible values:
 
 * `publishedVersion`: The document’s version of record. This is the most authoritative version.
 * `acceptedVersion`: The document after having completed peer review and being officially accepted for publication. It will lack publisher formatting, but the _content_ should be interchangeable with the that of the `publishedVersion`.
@@ -645,7 +718,9 @@ The `OpenAccess` object describes access options for a given work. It's only fou
 
 ### `any_repository_has_fulltext`
 
-_Boolean:_ `True` if any of this work's [`locations`](./#locations) has `location.is_oa=true` and `location.source.type=repository`.
+Whether any of this work's locations is a repository with open access to the full text.
+
+Technically, this is represented as a _Boolean_: `true` if any of this work's [`locations`](./#locations) has `location.is_oa=true` and `location.source.type=repository`.
 
 Use case: researchers want to track Green OA, using a definition of "any repository hosts this." OpenAlex's definition (as used in [`oa_status`](./#oa\_status)) doesn't support this, because as soon as there's a publisher-hosted copy (bronze, hybrid, or gold), oa\_status is set to that publisher-hosted status.
 
@@ -657,9 +732,9 @@ any_repository_has_fulltext: true
 
 ### `is_oa`
 
-_Boolean:_ `True` if this work is Open Access (OA).
+Whether this work is Open Access (OA), defined as: having a URL where you can read the full text of the work without needing to pay money or log in.
 
-There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in. You can use the [`locations`](./#locations) and [`oa_status`](./#oa\_status) fields to narrow your results further, accommodating any definition of OA you like.
+There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition; you can use the [`locations`](./#locations) and [`oa_status`](./#oa\_status) fields to narrow your results further, accommodating any definition of OA you like.
 
 ```json
 is_oa: true
@@ -667,7 +742,9 @@ is_oa: true
 
 ### `oa_status`
 
-_String:_ The Open Access (OA) status of this work. Possible values are:
+The Open Access (OA) status of this work, such as "gold," "green," "hybrid," "bronze," or "closed".
+
+The possible values:
 
 * **`gold`**: Published in an OA journal that is indexed by the [DOAJ](https://doaj.org/).
 * **`green`**: Toll-access on the publisher landing page, but there is a free copy in an [OA repository](https://en.wikipedia.org/wiki/Open-access\_repository).
@@ -681,7 +758,7 @@ oa_status: "gold"
 
 ### `oa_url`
 
-_String:_ The best Open Access (OA) URL for this work.
+The best Open Access (OA) URL for this work.
 
 Although there are [many ways to define OA](https://peerj.com/articles/4375/#literature-review), in this context an OA URL is one where you can read the fulltext of this work without needing to pay money or log in. The "best" such URL is the one closest to the version of record.
 
