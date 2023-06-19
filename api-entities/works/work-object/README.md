@@ -78,13 +78,20 @@ authorships: [
 
 ### `apc_list`
 
-_Object:_ Object containing information about the list-price APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)) for this work, taken from the [DOAJ](https://doaj.org/). The object contains:
+_Object:_ Information about this work's APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)). The object contains:
 + `value`: _Integer_
 + `currency`: _String_
-+ `provenance`: _String_ — either `openapc` or `doaj`, see below
++ `provenance`: _String_ — the source of this data. Currently the only value is “doaj” (DOAJ)
 + `value_usd`: _Integer_ — the APC converted into USD
 
-DOAJ APC prices apply to the entire journal. In some cases, we have more specific information about how much was actually paid. See [`apc_paid`](#apc_paid) for more.
+This value is the APC list price–the price as listed by the journal’s publisher. That’s not always the price _actually_ paid, because publishers may offer various discounts to authors. Unfortunately we don’t always know this discounted price, but when we do you can find it in  [`apc_paid`](#apc_paid).
+
+Currently our only source for this data is [DOAJ](https://doaj.org/), and so `doaj` is the only value for `apc_list.provenance`, but we’ll add other sources over time.
+
+We currently don’t have information on the list price for hybrid journals (toll-access journals that also provide an open-access option), but we will add this at some point. We do have [`apc_paid`](#apc_paid) information for hybrid OA works occasionally.
+
+You can use this attribute to find works published in [Diamond open access](https://en.wikipedia.org/wiki/Diamond_open_access) journals by looking at works where `apc_list.value` is zero. 
+
 
 ```json
 apc_payment: {
@@ -97,13 +104,15 @@ apc_payment: {
 
 ### `apc_paid`
 
-_Object:_ Objects containing information about the paid APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)) for this work. The object contains:
+_Object:_ Information about the *paid* APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)) for this work. The object contains:
 + `value`: _Integer_
 + `currency`: _String_
-+ `provenance`: _String_ — either `openapc` or `doaj`, see below
++ `provenance`: _String_ — currently either `openapc` or `doaj`, but more will be added; see below for details.
 + `value_usd`: _Integer_ — the APC converted into USD
 
-This will always be the same as [`apc_list`](#apc_list) _except_ for when we have data from [OpenAPC](https://openapc.net/), in which case the `apc_list` will reflect the journal list-price from DOAJ, and the `apc_paid` will reflect the price paid as reported in OpenAPC.
+You can find the _listed_ APC price (when we know it) for a given work using [`apc_list`](#apc_list). However, authors don’t always pay the listed price; often they get a discounted price from publishers. So it’s useful to know the APC actually paid by authors, as distinct from the list price. This is our effort to provide this.
+
+Our best source for the actually paid price is the [OpenAPC](https://openapc.net/) project. Where available, we use that data, and so `apc_paid.provenance` is `openapc`. Where OpenAPC data is unavailable (and unfortunately this is common) we make our best guess by assuming the author paid the APC list price, and apc_paid.provenance will be set to wherever we got the list price from.
 
 ```json
 apc_payment: {
