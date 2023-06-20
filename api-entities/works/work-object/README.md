@@ -90,7 +90,7 @@ Currently our only source for this data is [DOAJ](https://doaj.org/), and so `do
 
 We currently don’t have information on the list price for hybrid journals (toll-access journals that also provide an open-access option), but we will add this at some point. We do have [`apc_paid`](#apc_paid) information for hybrid OA works occasionally.
 
-You can use this attribute to find works published in [Diamond open access](https://en.wikipedia.org/wiki/Diamond_open_access) journals by looking at works where `apc_list.value` is zero. 
+You can use this attribute to find works published in [Diamond open access](https://en.wikipedia.org/wiki/Diamond_open_access) journals by looking at works where `apc_list.value` is zero. See [`open_access.oa_status`](#oa_status) for more info.
 
 
 ```json
@@ -688,9 +688,9 @@ _String:_ The Open Access (OA) status of this work. Possible values are:
 oa_status: "gold"
 ```
 
-<!-- [Diamond open access](https://en.wikipedia.org/wiki/Diamond_open_access) is another more recent designation that refers to works which are free for both readers and authors. In OpenAlex, there is no "diamond" `oa_status`, but diamond OA works can be identified using a combination of the [`is_oa`](#is_oa) and [`apc_payment.price`](#apc_payment):
+[Diamond open access](https://en.wikipedia.org/wiki/Diamond_open_access) is another more recent designation that refers to works which are free for both readers and authors. In OpenAlex, there is no "diamond" `oa_status`, but diamond OA works can be identified using a combination of the [`is_oa`](#is_oa) and [`apc_list.value`](#apc_list):
 
-* Get Diamond open access works: [`https://api.openalex.org/works?filter=apc_payment.price:0,is_oa:true`](https://api.openalex.org/works?filter=apc_payment.price:0,is_oa:true) -->
+* Get Diamond open access works: [`https://api.openalex.org/works?filter=apc_list.value:0,is_oa:true`](https://api.openalex.org/works?filter=apc_list.value:0,is_oa:true)
 
 ### `oa_url`
 
