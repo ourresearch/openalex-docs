@@ -94,3 +94,4 @@
 * [Tutorials](additional-help/tutorials.md)
 * [Report bugs](additional-help/report-bugs.md)
 * [FAQ](additional-help/faq.md)
+* [Glossary](glossary.md)
