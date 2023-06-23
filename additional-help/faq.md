@@ -6,9 +6,11 @@ See our [citation section here.](../#citation)
 
 ### Are OpenAlex IDs stable?
 
-Yes! The work associated with ID W1234 will keep the ID W1234.
+Yes!\* The work associated with ID W1234 will keep the ID W1234.
 
 At some point we might merge duplicated works, authors, etc that already have assigned IDs. At that point we will expand the schema to include synonym ID data.
+
+\*In July 2023, OpenAlex will switch to a new, more accurate, author identification system, and will be replacing all OpenAlex Author IDs with new ones. This is a very rare case in which we violate the rule of having stable IDs, which is needed to make the improvements. Old IDs and their connections to works will still be avaiable in the historical OpenAlex data.
 
 ### Can you index my journal?
 
@@ -45,9 +47,9 @@ For now, the database snapshot is updated about once per month. However, in the 
 
 ### Is your data quality better than \_\_\_\_?
 
-Our dataset is still very young, so there's not a lot of systematic research comparing OpenAlex to peer databases like MAG, Scopus, Dimensions, etc. We're currently working on publishing some research like that ourselves. Our initial finding are very encouraging...we believe OpenAlex is already comparable in coverage and accuracy to the more established players--but OpenAlex is 100% open data, built on 100% open-source code. We think that's a really important feature. We will also continue improving the data quality in the days, weeks, months, and years ahead!&#x20;
+Our dataset is still very young, so there's not a lot of systematic research comparing OpenAlex to peer databases like MAG, Scopus, Dimensions, etc. We're currently working on publishing some research like that ourselves. Our initial finding are very encouraging...we believe OpenAlex is already comparable in coverage and accuracy to the more established players--but OpenAlex is 100% open data, built on 100% open-source code. We think that's a really important feature. We will also continue improving the data quality in the days, weeks, months, and years ahead!
 
-### How is OpenAlex licensed?&#x20;
+### How is OpenAlex licensed?
 
 OpenAlex data is licensed as [CC0](https://creativecommons.org/publicdomain/zero/1.0/) so it is free to use and distribute.
 
@@ -59,9 +61,8 @@ For those who would like a higher level of service and to provide direct financi
 
 ### What's your sustainability plan?
 
-Our nonprofit (OurResearch) has a ten-year track record of building sustainable scholarly infrastructure, and a formal commitment to sustainability as part of [our adoption of the POSI principles.](https://blog.ourresearch.org/posi/)&#x20;
+Our nonprofit (OurResearch) has a ten-year track record of building sustainable scholarly infrastructure, and a formal commitment to sustainability as part of [our adoption of the POSI principles.](https://blog.ourresearch.org/posi/)
 
 We're currently still exploring our options for OpenAlex's sustainability plan. Thanks to a generous grant from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk/), we've got lots of runway, and we don't need to roll anything out in a rush.
 
 Our Unpaywall project (a free index of the world's open-access research literature) has been self-sustaining via a freemium revenue model for nearly five years, and we have recently introduced a similar model in [OpenAlex Premium. ](https://openalex.org/pricing)Access to the data will always be free for everyone, but OpenAlex Premium offers several benefits in service above the services we offer for free.
-
