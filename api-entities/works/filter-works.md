@@ -25,16 +25,15 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`authorships.institutions.id`](work-object/#institutions) (alias `institutions.id`)
 * [`authorships.institutions.ror`](work-object/#institutions) (alias: `institutions.ror`)
 * [`authorships.institutions.type`](work-object/#institutions)
-* [`authorships.is_corresponding`](./work-object/authorship-object.md#is_corresponding) (alias: `is_corresponding`): this filter marks whether or not we have corresponding author information for a given work
-* [`apc_list.value`](./work-object/README.md#apc_list)
-* [`apc_list.currency`](./work-object/README.md#apc_list)
-* [`apc_list.provenance`](./work-object/README.md#apc_list)
-* [`apc_list.value_usd`](./work-object/README.md#apc_list)
-* [`apc_paid.value`](./work-object/README.md#apc_paid)
-* [`apc_paid.currency`](./work-object/README.md#apc_paid)
-* [`apc_paid.provenance`](./work-object/README.md#apc_paid)
-* [`apc_paid.value_usd`](./work-object/README.md#apc_paid)
-* [`best_oa_location.is_oa`](work-object/#best\_oa\_location)
+* [`authorships.is_corresponding`](work-object/authorship-object.md#is\_corresponding) (alias: `is_corresponding`): this filter marks whether or not we have corresponding author information for a given work
+* [`apc_list.value`](work-object/#apc\_list)
+* [`apc_list.currency`](work-object/#apc\_list)
+* [`apc_list.provenance`](work-object/#apc\_list)
+* [`apc_list.value_usd`](work-object/#apc\_list)
+* [`apc_paid.value`](work-object/#apc\_paid)
+* [`apc_paid.currency`](work-object/#apc\_paid)
+* [`apc_paid.provenance`](work-object/#apc\_paid)
+* [`apc_paid.value_usd`](work-object/#apc\_paid)
 * [`best_oa_location.license`](work-object/#best\_oa\_location)
 * [`best_oa_location.source.id`](work-object/#best\_oa\_location)
 * [`best_oa_location.source.is_in_doaj`](work-object/#best\_oa\_location)
@@ -45,8 +44,8 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`cited_by_count`](work-object/#cited\_by\_count)
 * [`concepts.id`](work-object/#concepts) (alias: `concept.id`)
 * [`concepts.wikidata`](work-object/#concepts)
-* [`corresponding_author_ids`](work-object/#corresponding_author_ids)
-* [`corresponding_institution_ids`](work-object/#corresponding_institution_ids)
+* [`corresponding_author_ids`](work-object/#corresponding\_author\_ids)
+* [`corresponding_institution_ids`](work-object/#corresponding\_institution\_ids)
 * [`doi`](work-object/#title)
 * [`grants.award_id`](work-object/#grants)
 * [`grants.funder`](work-object/#grants)
@@ -65,7 +64,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`locations.source.host_organization`](work-object/#locations)
 * [`locations.source.type`](work-object/#locations)
 * [`locations.version`](work-object/#locations)
-* [`locations_count`](work-object/#locations_count)
+* [`locations_count`](work-object/#locations\_count)
 * [`open_access.any_repository_has_fulltext`](work-object/#open\_access)
 * [`open_access.is_oa`](work-object/#open\_access) (alias: `is_oa`)
 * [`open_access.oa_status`](work-object/#open\_access) (alias: `oa_status`)
@@ -170,7 +169,7 @@ Returns: works with the chosen number of [`concepts`](work-object/#concepts).
 
 Value: a search string
 
-This works the same as using the [`search` parameter](./search-works.md#search-works) for Works.
+This works the same as using the [`search` parameter](search-works.md#search-works) for Works.
 
 #### `display_name.search` (alias: `title.search`)
 
@@ -321,31 +320,31 @@ Returns: works that have or lack [`referenced_works`](work-object/#referenced\_w
 
 Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a given [source](../sources/source-object.md), where the source is [`type: journal`](../sources/source-object.md#type)
 
-Returns: works where the chosen [source ID](../sources/source-object.md#id) is the [`primary_location.source`](work-object/#primary_location).
+Returns: works where the chosen [source ID](../sources/source-object.md#id) is the [`primary_location.source`](work-object/#primary\_location).
 
 #### `locations.source.host_institution_lineage`
 
-Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for an [`Institution`](../institutions/README.md)
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for an [`Institution`](../institutions/)
 
-Returns: works where the given institution ID is in [`locations.source.host_organization_lineage`](../sources/source-object.md#host_organization_lineage)
+Returns: works where the given institution ID is in [`locations.source.host_organization_lineage`](../sources/source-object.md#host\_organization\_lineage)
 
 * Get the works that have `https://openalex.org/I205783295` in their `host_organization_lineage`:\
-  [`https://api.openalex.org/works?filter=locations.source.host_institution_lineage:https://openalex.org/I205783295`](https://api.openalex.org/works?filter=locations.source.host_institution_lineage:https://openalex.org/I205783295)
+  [`https://api.openalex.org/works?filter=locations.source.host_institution_lineage:https://openalex.org/I205783295`](https://api.openalex.org/works?filter=locations.source.host\_institution\_lineage:https://openalex.org/I205783295)
 
 #### `locations.source.publisher_lineage`
 
-Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a [`Publisher`](../publishers/README.md)
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a [`Publisher`](../publishers/)
 
-Returns: works where the given publisher ID is in [`locations.source.host_organization_lineage`](../sources/source-object.md#host_organization_lineage)
+Returns: works where the given publisher ID is in [`locations.source.host_organization_lineage`](../sources/source-object.md#host\_organization\_lineage)
 
 * Get the works that have `https://openalex.org/P4310320547` in their `publisher_lineage`:\
-  [`https://api.openalex.org/works?filter=locations.source.publisher_lineage:https://openalex.org/P4310320547`](https://api.openalex.org/works?filter=locations.source.publisher_lineage:https://openalex.org/P4310320547)
+  [`https://api.openalex.org/works?filter=locations.source.publisher_lineage:https://openalex.org/P4310320547`](https://api.openalex.org/works?filter=locations.source.publisher\_lineage:https://openalex.org/P4310320547)
 
 #### `primary_location.source.has_issn`
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works where the [`primary_location`](work-object/#primary_location) has at least one ISSN assigned.
+Returns: works where the [`primary_location`](work-object/#primary\_location) has at least one ISSN assigned.
 
 * Get the works that have an ISSN within the primary location:\
   [`https://api.openalex.org/works?filter=primary_location.source.has_issn:true`](https://api.openalex.org/works?filter=primary\_location.source.has\_issn:true)
