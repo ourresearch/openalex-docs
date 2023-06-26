@@ -49,12 +49,10 @@ institutions: [
 
 ### `is_corresponding`
 
-_Boolean or null:_ If `true`, this is the corresponding author for this work. If `false`, this is not the corresponding author. If `null`, either this work has no corresponding author, or we are not aware of it.
+_Boolean:_ If `true`, this is a corresponding author for this work.
 
 {% hint style="warning" %}
 This is a new feature, and the information may be missing for many works. We are working on this, and coverage will improve soon.
-
-If we have corresponding author data for a given work, then the authorships should all have either `true` or `false` values for their `is_corresponding` fields. If there is a mix of `true`/`false` and `null`—this is a bug. Please bear with us while we fix it.
 {% endhint %}
 
 ### `raw_affiliation_string`
