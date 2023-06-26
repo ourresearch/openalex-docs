@@ -349,6 +349,15 @@ Returns: works where the [`primary_location`](work-object/#primary\_location) ha
 * Get the works that have an ISSN within the primary location:\
   [`https://api.openalex.org/works?filter=primary_location.source.has_issn:true`](https://api.openalex.org/works?filter=primary\_location.source.has\_issn:true)
 
+#### `primary_location.source.publisher_lineage`
+
+Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) for a [`Publisher`](../publishers/)
+
+Returns: works where the given publisher ID is in [`primary_location.source.host_organization_lineage`](../sources/source-object.md#host\_organization\_lineage)
+
+* Get the works that have `https://openalex.org/P4310320547` in their `publisher_lineage`:\
+  [`https://api.openalex.org/works?filter=primary_location.source.publisher_lineage:https://openalex.org/P4310320547`](https://api.openalex.org/works?filter=primary_location.source.publisher\_lineage:https://openalex.org/P4310320547)
+
 #### `raw_affiliation_string.search`
 
 Value: a search string
