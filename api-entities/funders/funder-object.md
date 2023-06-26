@@ -105,6 +105,8 @@ id: "https://openalex.org/F4320332161"
 
 _Object:_ All the external identifiers that we know about for this funder. IDs are expressed as URIs whenever possible. Possible ID types:
 
+* `crossref` _String:_ this funder's Crossref ID
+* `doi` _String:_ this funder's DOI
 * `openalex` _String:_ this funder's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id)
 * `ror` _String:_ this funder's ROR ID
 * `wikidata` _String:_ this funder's [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers)
@@ -113,13 +115,15 @@ _Object:_ All the external identifiers that we know about for this funder. IDs a
 ids: {
     openalex: "https://openalex.org/F4320332161",
     ror: "https://ror.org/01cwqze88",
-    wikidata: "https://www.wikidata.org/entity/Q390551"
+    wikidata: "https://www.wikidata.org/entity/Q390551",
+    crossref: "100000002",
+    doi: "https://doi.org/10.13039/100000002"
 }
 ```
 
 ### `image_thumbnail_url`
 
-_String:_ Same as [`image_url`](#image_url), but it's a smaller image.
+_String:_ Same as [`image_url`](funder-object.md#image\_url), but it's a smaller image.
 
 This is usually a hotlink to a wikimedia image. You can change the `width=300` parameter in the URL if you want a different thumbnail size.
 
