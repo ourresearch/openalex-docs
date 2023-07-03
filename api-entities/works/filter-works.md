@@ -16,16 +16,16 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 You can filter using these attributes of the [`Work`](work-object/) object (click each one to view their documentation on the `Work` object page):
 
 {% hint style="danger" %}
-The `host_venue` and `alternate_host_venues` properties have been deprecated in favor of [`primary_location`](work-object/#primary\_location) and [`locations`](work-object/#locations). `host_venue` and `alternate_host_venues` are no longer available in the Work object, and trying to access them in filters or group-bys will return an error.
+The `host_venue` and `alternate_host_venues` properties have been deprecated in favor of [`primary_location`](work-object/#primary\_location) and [`locations`](work-object/#locations). The attributes `host_venue` and `alternate_host_venues` are no longer available in the Work object, and trying to access them in filters or group-bys will return an error.
 {% endhint %}
 
-* [`authorships.author.id`](work-object/#author) (alias: `author.id`)
-* [`authorships.author.orcid`](work-object/#author) (alias: `author.orcid`)
-* [`authorships.institutions.country_code`](work-object/#institutions) (alias: `institutions.country_code`)
-* [`authorships.institutions.id`](work-object/#institutions) (alias `institutions.id`)
-* [`authorships.institutions.ror`](work-object/#institutions) (alias: `institutions.ror`)
-* [`authorships.institutions.type`](work-object/#institutions)
-* [`authorships.is_corresponding`](work-object/authorship-object.md#is\_corresponding) (alias: `is_corresponding`): this filter marks whether or not we have corresponding author information for a given work
+* [`authorships.author.id`](work-object/authorship-object.md#author) (alias: `author.id`)
+* [`authorships.author.orcid`](work-object/authorship-object.md#author) (alias: `author.orcid`)
+* [`authorships.institutions.country_code`](work-object/authorship-object.md#institutions) (alias: `institutions.country_code`)
+* [`authorships.institutions.id`](work-object/authorship-object.md#institutions) (alias `institutions.id`)
+* [`authorships.institutions.ror`](work-object/authorship-object.md#institutions) (alias: `institutions.ror`)
+* [`authorships.institutions.type`](work-object/authorship-object.md#institutions)
+* [`authorships.is_corresponding`](work-object/authorship-object.md#is_corresponding) (alias: `is_corresponding`): this filter marks whether or not we have corresponding author information for a given work
 * [`apc_list.value`](work-object/#apc\_list)
 * [`apc_list.currency`](work-object/#apc\_list)
 * [`apc_list.provenance`](work-object/#apc\_list)
