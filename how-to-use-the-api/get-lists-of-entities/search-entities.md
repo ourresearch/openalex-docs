@@ -5,13 +5,21 @@
 The `search` query parameter finds results that match a given text search. Example:
 
 * Get works with search term "dna" in the title, abstract, or fulltext:\
-  [https://api.openalex.org/works?search=dna](https://api.openalex.org/works?search=dna)
+  [`https://api.openalex.org/works?search=dna`](https://api.openalex.org/works?search=dna)
 
 When you [search `works`](../../api-entities/works/search-works.md), the API looks for matches in titles, abstracts, and fulltext. When you [search `concepts`](../../api-entities/concepts/search-concepts.md), we look in each concept's `display_name` and `description` fields. When you [search `sources`](../../api-entities/sources/search-sources.md), we look at the `display_name`_,_ `alternate_titles`, and `abbreviated_title` fields. Searching [`authors`](../../api-entities/authors/search-authors.md) or [`institutions`](../../api-entities/institutions/search-institutions.md) will looks for matches within each entities' `display_name` field.
 
 For most text search we remove [stop words](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-stop-tokenfilter.html) and use [stemming](https://en.wikipedia.org/wiki/Stemming) to improve results. So words like "the" and "an" are transparently removed, and a search for "possums" will also return records using the word "possum." With the except of raw affiliation strings, we do not search within words but rather try to match whole words. So a search with "lun" will not match the word "lunar".
 
-Currently, we do not allow searches with boolean expressions, such as `OR` and `NOT`. If you include those terms, they will be removed as stop words. When using the `search` parameter, we disallow searches using the pipe (`|`) operator, and also the exclamation mark (`!`) `NOT` operator at the beginning of words. (The pipe (`|`) operator is allowed if using a filter search, such as `/works?filter=display_name.search:term1|term2`.)&#x20;
+### Boolean searches
+
+Including any of the words `AND`, `OR`, or `NOT` in any of your searches will enable boolean search. Those words must be UPPERCASE. You can use this in all searches, including using the `search` parameter, and using [search filters](#the-search-filter).
+
+This allows you to craft complex queries using those boolean operators along with parentheses and quotation marks. Surrounding a phrase with quotation marks will search for an exact match of that phrase. Using parentheses will specify order of operations for the boolean operators.
+
+Behind the scenes, the boolean search is using Elasticsearch's [query string query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html) on the searchable fields (such as title, abstract, and fulltext for works; see each individual entity page for specifics about that entity). Wildcard and fuzzy searches using `*`, `?` or `~` are not allowed; these characters will be removed from any searches. These searches, even when using quotation marks, will go through the same cleaning as desscribed above, including stemming and removal of stop words.
+
+* Search for works that mention "elmo" and "sesame street," but not the words "cookie" or "monster": [`https://api.openalex.org/works?search="elmo" AND "sesame street" NOT (cookie OR monster)`](https://api.openalex.org/works?search="elmo" AND "sesame street" NOT (cookie OR monster))
 
 ## Relevance score
 
@@ -32,8 +40,6 @@ You can also use search as a [filter](./filter-entity-lists.md), allowing you to
   [`https://api.openalex.org/authors?filter=display_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)
 * Get works with "cubist" in the title:\
   [`https://api.openalex.org/works?filter=title.search:cubist`](https://api.openalex.org/works?filter=title.search:cubist)
-
-You can read more about which filters support the `.search` suffix on the [Filter entity lists](./filter-entity-lists.md) page.
 
 Additionally, the filter `default.search` is available on all entities; this works the same as the [`search` parameter](#the-search-parameter).
 

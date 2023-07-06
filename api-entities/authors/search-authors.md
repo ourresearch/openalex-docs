@@ -10,7 +10,7 @@ Searching without a middle initial returns names with _and_ without middle initi
 Names with diacritics are flexible as well. So a search for David Tarrago can return David Tarragó, and a search for David Tarragó can return David Tarrago. When searching with a diacritic, diacritic versions of the names are prioritized in order to honor the original form of the author's name. Read more about our handling of diacritics [here](https://blog.ourresearch.org/author-search-in-openalex-improved-handling-of-diacritics-within-names/).
 
 {% hint style="info" %}
-You can read more in the [search page](../../how-to-use-the-api/get-lists-of-entities/search-entities.md) in the API Guide. It will show you how relevance score is calculated and how words are stemmed to improve search results.
+You can read more in the [search page](../../how-to-use-the-api/get-lists-of-entities/search-entities.md) in the API Guide. It will show you how relevance score is calculated, how words are stemmed to improve search results, and how to do complex boolean searches.
 {% endhint %}
 
 ## Search a specific field

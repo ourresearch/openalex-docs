@@ -6,7 +6,7 @@ The best way to search for publishers is to use the `search` query parameter, wh
   [https://api.openalex.org/publishers?search=springer](https://api.openalex.org/publishers?search=springer)
 
 {% hint style="info" %}
-You can read more about search [here](../../how-to-use-the-api/get-lists-of-entities/search-entities.md). It will show you how relevance score is calculated and how words are stemmed to improve search results.
+You can read more about search [here](../../how-to-use-the-api/get-lists-of-entities/search-entities.md). It will show you how relevance score is calculated, how words are stemmed to improve search results, and how to do complex boolean searches.
 {% endhint %}
 
 ## Search a specific field
