@@ -340,6 +340,14 @@ ids: {
 }
 ```
 
+### `is_oa`
+
+_Boolean:_ Set to `true` if the work hosted here can be read for free, without registration.
+
+```json
+is_oa: true
+```
+
 ### `is_paratext`
 
 _Boolean:_ True if we think this work is [paratext](https://en.wikipedia.org/wiki/Paratext).
@@ -373,6 +381,14 @@ _String:_ The language of the work in [ISO 639-1 format](https://en.wikipedia.or
 
 ```json
 language: "en"
+```
+
+### `license`
+
+_String:_ The license applied to this work at this host. Most toll-access works don't have an explicit license (they're under "all rights reserved" copyright), so this field generally has content only if `is_oa` is `true`.
+
+```json
+license: "cc-by"
 ```
 
 ### `locations`
@@ -570,22 +586,6 @@ _String:_ The last time anything in this `Work` object changed, expressed as an 
 
 ```json
 updated_date: "2022-01-02T00:22:35.180390"
-```
-
-### `is_oa`
-
-_Boolean:_ Set to `true` if the work hosted here can be read for free, without registration.
-
-```json
-is_oa: true
-```
-
-### `license`
-
-_String:_ The license applied to this work at this host. Most toll-access works don't have an explicit license (they're under "all rights reserved" copyright), so this field generally has content only if `is_oa` is `true`.
-
-```json
-license: "cc-by"
 ```
 
 ### `url`
