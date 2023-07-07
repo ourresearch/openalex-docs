@@ -43,7 +43,7 @@ OpenAlex is not doing this alone! Rather, we're aggregating and standardizing da
 
 ### How often is the data updated?
 
-For now, the database snapshot is updated about once per month. However, in the future we will probably offer a much faster update cadence (approximately daily) as an optional, [paid upgrade](faq.md#whats-your-sustainability-plan). If you're interested in that, drop us a line at [team@ourresearch.org](mailto:team@ourresearch.org).
+For now, the database snapshot is updated about once per month. However, in the future we will probably offer a much faster update cadence (approximately daily) as an optional, [paid upgrade](faq.md#whats-your-sustainability-plan). If you're interested in that, drop us a line at [team@ourresearch.org](mailto:team@ourresearch.org). We also offer a much faster update cadence—as often as once every few hours—through [OpenAlex Premium.](https://openalex.org/pricing)
 
 ### Is your data quality better than \_\_\_\_?
 
