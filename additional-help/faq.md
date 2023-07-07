@@ -8,9 +8,9 @@ See our [citation section here.](../#citation)
 
 Yes!\* The work associated with ID W1234 will keep the ID W1234.
 
-At some point we might merge duplicated works, authors, etc that already have assigned IDs. At that point we will expand the schema to include synonym ID data.
+When we find duplicated works, authors, etc that already have assigned IDs, we merge them. Merged entities will redirect to the proper entity in the API. In the data snapshot, there is a directory which lists the IDs that have been merged.
 
-\*In July 2023, OpenAlex will switch to a new, more accurate, author identification system, and will be replacing all OpenAlex Author IDs with new ones. This is a very rare case in which we violate the rule of having stable IDs, which is needed to make the improvements. Old IDs and their connections to works will still be avaiable in the historical OpenAlex data.
+\*In July 2023, OpenAlex will switch to a new, more accurate, author identification system, and will be replacing all OpenAlex Author IDs with new ones. This is a very rare case in which we violate the rule of having stable IDs, which is needed to make the improvements. Old IDs and their connections to works will still be available in the historical OpenAlex data.
 
 ### Can you index my journal?
 
@@ -43,7 +43,7 @@ OpenAlex is not doing this alone! Rather, we're aggregating and standardizing da
 
 ### How often is the data updated?
 
-For now, the database snapshot is updated about once per month. However, in the future we will probably offer a much faster update cadence (approximately daily) as an optional, [paid upgrade](faq.md#whats-your-sustainability-plan). If you're interested in that, drop us a line at [team@ourresearch.org](mailto:team@ourresearch.org).
+For now, the free database snapshot is updated about once per month. However, in the future we will probably offer a much faster update cadence (approximately daily) as an optional, [paid upgrade](faq.md#whats-your-sustainability-plan). If you're interested in that, drop us a line at [team@ourresearch.org](mailto:team@ourresearch.org).
 
 ### Is your data quality better than \_\_\_\_?
 
