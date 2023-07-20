@@ -574,7 +574,7 @@ _String:_ The type of the work.
 
 You can see all of the different types along with their counts in the OpenAlex api here: [`https://api.openalex.org/works?group_by=type`](https://api.openalex.org/works?group_by=type).
 
-Most works are type `article`. This includes what was formerly (and currently in [`type_crossref`](#type_crossref)) `journal-article`, `proceedings-article`, and `posted-content`. We consider all of these to be `article` type works, and the distinctions between them to be more about where they are published or hosted:
+Most works are type `article`. This includes what was formerly (and currently in [`type_crossref`](#type_crossref)) labeled as `journal-article`, `proceedings-article`, and `posted-content`. We consider all of these to be `article` type works, and the distinctions between them to be more about where they are published or hosted:
 
 - Journal articles will have a [`primary_location.source.type`](./location-object.md#source) of `journal`
 - Conference proceedings will have a [`primary_location.source.type`](./location-object.md#source) of `conference`
