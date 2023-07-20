@@ -588,26 +588,6 @@ _String:_ The last time anything in this `Work` object changed, expressed as an 
 updated_date: "2022-01-02T00:22:35.180390"
 ```
 
-### `url`
-
-_String:_ The URL where you can access this work.
-
-```json
-id: "https://doi.org/10.7717/peerj.4375"
-```
-
-### `version`
-
-_String:_ The version of the work, based on the [DRIVER Guidelines versioning scheme.](https://wiki.surfnet.nl/display/DRIVERguidelines/DRIVER-VERSION+Mappings) Possible values are:.
-
-* `publishedVersion`: The document’s version of record. This is the most authoritative version.
-* `acceptedVersion`: The document after having completed peer review and being officially accepted for publication. It will lack publisher formatting, but the _content_ should be interchangeable with the that of the `publishedVersion`.
-* `submittedVersion`: the document as submitted to the publisher by the authors, but _before_ peer-review. Its content may differ significantly from that of the accepted article.
-
-```json
-version: "publishedVersion"
-```
-
 ## The `Ngram` object
 
 {% hint style="info" %}
