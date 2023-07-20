@@ -570,14 +570,42 @@ title: "The state of OA: a large-scale analysis of the prevalence and impact of 
 
 ### `type`
 
-_String:_ The type or genre of the work.
+_String:_ The type of the work.
 
-This field uses Crossref's "type" controlled vocabulary; you can see all possible values via the Crossref api here: [https://api.crossref.org/types](https://api.crossref.org/types).
+You can see all of the different types along with their counts in the OpenAlex api here: [`https://api.openalex.org/works?group_by=type`](https://api.openalex.org/works?group_by=type).
 
-Where possible, we just pass along Crossref's `type` value for each work. When that's impossible (eg the work isn't in Crossref), we do our best to figure out the `type` ourselves. Unfortunately the accuracy of Crossref's data for this isn't great, and ours isn't much better. We're working to develop better type classification.
+Most works are type `article`. This includes what was formerly (and currently in [`type_crossref`](#type_crossref)) `journal-article`, `proceedings-article`, and `posted-content`. We consider all of these to be `article` type works, and the distinctions between them to be more about where they are published or hosted:
+
+- Journal articles will have a [`primary_location.source.type`](./location-object.md#source) of `journal`
+- Conference proceedings will have a [`primary_location.source.type`](./location-object.md#source) of `conference`
+- Preprints or "posted content" will have a [`primary_location.version`](./location-object.md#version) of `submittedVersion`
+
+(Note that distinguishing between journals and conferences is a hard problem, one we often get wrong. We are working on improving this, but we also point out that the two have a lot of overlap in terms of their roles as hosts of research publications.)
+
+Works that represent stuff that is _about_ the venue (such as a journal)—rather than a scholarly work properly speaking—have type `paratext`. These include things like front-covers, back-covers, tables of contents, and the journal itself (e.g., `https://openalex.org/W4232230324`).
+
+Works that are errata (corrections) are type: `erratum`. Coverage is low on this but will improve.
+
+We also have types for `letter` and `editorial` (COMING SOON).
+
+Other work types follow the Crossref "type" controlled vocabulary—see [`type_crossref`](#type_crossref).
 
 ```json
-type: "journal-article"
+type: "article"
+```
+
+### `type_crossref`
+
+_String:_ Legacy type information, using Crossref's "type" controlled vocabulary.
+
+These are the work types that we used to use, before switching to our current system (see [`type`](#type)).
+
+You can see all possible values of Crossref's "type" controlled vocabulary via the Crossref api here: [`https://api.crossref.org/types`](https://api.crossref.org/types).
+
+Where possible, we just pass along Crossref's `type` value for each work. When that's impossible (eg the work isn't in Crossref), we do our best to figure out the `type` ourselves. 
+
+```json
+type_crossref: "journal-article"
 ```
 
 ### `updated_date`
