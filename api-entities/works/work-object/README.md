@@ -78,20 +78,20 @@ authorships: [
 
 ### `apc_list`
 
-_Object:_ Information about this work's APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)). The object contains:
-+ `value`: _Integer_
-+ `currency`: _String_
-+ `provenance`: _String_ — the source of this data. Currently the only value is “doaj” (DOAJ)
-+ `value_usd`: _Integer_ — the APC converted into USD
+_Object:_ Information about this work's APC ([article processing charge](https://en.wikipedia.org/wiki/Article\_processing\_charge)). The object contains:
 
-This value is the APC list price–the price as listed by the journal’s publisher. That’s not always the price _actually_ paid, because publishers may offer various discounts to authors. Unfortunately we don’t always know this discounted price, but when we do you can find it in  [`apc_paid`](#apc_paid).
+* `value`: _Integer_
+* `currency`: _String_
+* `provenance`: _String_ — the source of this data. Currently the only value is “doaj” (DOAJ)
+* `value_usd`: _Integer_ — the APC converted into USD
+
+This value is the APC list price–the price as listed by the journal’s publisher. That’s not always the price _actually_ paid, because publishers may offer various discounts to authors. Unfortunately we don’t always know this discounted price, but when we do you can find it in [`apc_paid`](./#apc\_paid).
 
 Currently our only source for this data is [DOAJ](https://doaj.org/), and so `doaj` is the only value for `apc_list.provenance`, but we’ll add other sources over time.
 
-We currently don’t have information on the list price for hybrid journals (toll-access journals that also provide an open-access option), but we will add this at some point. We do have [`apc_paid`](#apc_paid) information for hybrid OA works occasionally.
+We currently don’t have information on the list price for hybrid journals (toll-access journals that also provide an open-access option), but we will add this at some point. We do have [`apc_paid`](./#apc\_paid) information for hybrid OA works occasionally.
 
-You can use this attribute to find works published in [Diamond open access](https://en.wikipedia.org/wiki/Diamond_open_access) journals by looking at works where `apc_list.value` is zero. See [`open_access.oa_status`](#oa_status) for more info.
-
+You can use this attribute to find works published in [Diamond open access](https://en.wikipedia.org/wiki/Diamond\_open\_access) journals by looking at works where `apc_list.value` is zero. See [`open_access.oa_status`](./#oa\_status) for more info.
 
 ```json
 apc_payment: {
@@ -104,15 +104,16 @@ apc_payment: {
 
 ### `apc_paid`
 
-_Object:_ Information about the *paid* APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)) for this work. The object contains:
-+ `value`: _Integer_
-+ `currency`: _String_
-+ `provenance`: _String_ — currently either `openapc` or `doaj`, but more will be added; see below for details.
-+ `value_usd`: _Integer_ — the APC converted into USD
+_Object:_ Information about the _paid_ APC ([article processing charge](https://en.wikipedia.org/wiki/Article\_processing\_charge)) for this work. The object contains:
 
-You can find the _listed_ APC price (when we know it) for a given work using [`apc_list`](#apc_list). However, authors don’t always pay the listed price; often they get a discounted price from publishers. So it’s useful to know the APC actually paid by authors, as distinct from the list price. This is our effort to provide this.
+* `value`: _Integer_
+* `currency`: _String_
+* `provenance`: _String_ — currently either `openapc` or `doaj`, but more will be added; see below for details.
+* `value_usd`: _Integer_ — the APC converted into USD
 
-Our best source for the actually paid price is the [OpenAPC](https://openapc.net/) project. Where available, we use that data, and so `apc_paid.provenance` is `openapc`. Where OpenAPC data is unavailable (and unfortunately this is common) we make our best guess by assuming the author paid the APC list price, and apc_paid.provenance will be set to wherever we got the list price from.
+You can find the _listed_ APC price (when we know it) for a given work using [`apc_list`](./#apc\_list). However, authors don’t always pay the listed price; often they get a discounted price from publishers. So it’s useful to know the APC actually paid by authors, as distinct from the list price. This is our effort to provide this.
+
+Our best source for the actually paid price is the [OpenAPC](https://openapc.net/) project. Where available, we use that data, and so `apc_paid.provenance` is `openapc`. Where OpenAPC data is unavailable (and unfortunately this is common) we make our best guess by assuming the author paid the APC list price, and apc\_paid.provenance will be set to wherever we got the list price from.
 
 ```json
 apc_payment: {
@@ -377,7 +378,7 @@ is_retracted: false
 
 ### `language`
 
-_String:_ The language of the work in [ISO 639-1 format](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). The language is automatically detected using the information we have about the work. We use the [langdetect](https://pypi.org/project/langdetect/) software library on the words in the work's abstract, or the title if we do not have the abstract. The source code for this procedure is [here.](https://github.com/ourresearch/openalex-guts/blob/54471c6c8e3c59662c4a4d9c37320af7b1667b2b/models/work.py#LL1102C1-L1102C1) Keep in mind that this method is not perfect, and that in some cases the language of the title or abstract could be different from the body of the work.
+_String:_ The language of the work in [ISO 639-1 format](https://en.wikipedia.org/wiki/List\_of\_ISO\_639-1\_codes). The language is automatically detected using the information we have about the work. We use the [langdetect](https://pypi.org/project/langdetect/) software library on the words in the work's abstract, or the title if we do not have the abstract. The source code for this procedure is [here.](https://github.com/ourresearch/openalex-guts/blob/54471c6c8e3c59662c4a4d9c37320af7b1667b2b/models/work.py#LL1102C1-L1102C1) Keep in mind that this method is not perfect, and that in some cases the language of the title or abstract could be different from the body of the work.
 
 ```json
 language: "en"
@@ -432,7 +433,7 @@ locations: [
 
 ### `locations_count`
 
-_Integer:_ Number of [`locations`](#locations) for this work.
+_Integer:_ Number of [`locations`](./#locations) for this work.
 
 ```json
 locations_count: 3
@@ -526,7 +527,7 @@ publication_date: "2018-02-13"
 
 _Integer:_ The year this work was published.
 
-This year applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.locations`](#locations), may have been published in different (earlier) years.
+This year applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.locations`](./#locations), may have been published in different (earlier) years.
 
 ```json
 publication_year: 2018
@@ -572,23 +573,21 @@ title: "The state of OA: a large-scale analysis of the prevalence and impact of 
 
 _String:_ The type of the work.
 
-You can see all of the different types along with their counts in the OpenAlex api here: [`https://api.openalex.org/works?group_by=type`](https://api.openalex.org/works?group_by=type).
+You can see all of the different types along with their counts in the OpenAlex api here: [`https://api.openalex.org/works?group_by=type`](https://api.openalex.org/works?group\_by=type).
 
-Most works are type `article`. This includes what was formerly (and currently in [`type_crossref`](#type_crossref)) labeled as `journal-article`, `proceedings-article`, and `posted-content`. We consider all of these to be `article` type works, and the distinctions between them to be more about where they are published or hosted:
+Most works are type `article`. This includes what was formerly (and currently in [`type_crossref`](./#type\_crossref)) labeled as `journal-article`, `proceedings-article`, and `posted-content`. We consider all of these to be `article` type works, and the distinctions between them to be more about where they are published or hosted:
 
-- Journal articles will have a [`primary_location.source.type`](./location-object.md#source) of `journal`
-- Conference proceedings will have a [`primary_location.source.type`](./location-object.md#source) of `conference`
-- Preprints or "posted content" will have a [`primary_location.version`](./location-object.md#version) of `submittedVersion`
+* Journal articles will have a [`primary_location.source.type`](location-object.md#source) of `journal`
+* Conference proceedings will have a [`primary_location.source.type`](location-object.md#source) of `conference`
+* Preprints or "posted content" will have a [`primary_location.version`](location-object.md#version) of `submittedVersion`
 
 (Note that distinguishing between journals and conferences is a hard problem, one we often get wrong. We are working on improving this, but we also point out that the two have a lot of overlap in terms of their roles as hosts of research publications.)
 
 Works that represent stuff that is _about_ the venue (such as a journal)—rather than a scholarly work properly speaking—have type `paratext`. These include things like front-covers, back-covers, tables of contents, and the journal itself (e.g., `https://openalex.org/W4232230324`).
 
-Works that are errata (corrections) are type: `erratum`. Coverage is low on this but will improve.
+We also have types for `letter` , `editorial` ,  and `erratum` (corrections). Coverage is low on these but will improve.
 
-We also have types for `letter` and `editorial` (COMING SOON).
-
-Other work types follow the Crossref "type" controlled vocabulary—see [`type_crossref`](#type_crossref).
+Other work types follow the Crossref "type" controlled vocabulary—see [`type_crossref`](./#type\_crossref).
 
 ```json
 type: "article"
@@ -598,11 +597,11 @@ type: "article"
 
 _String:_ Legacy type information, using Crossref's "type" controlled vocabulary.
 
-These are the work types that we used to use, before switching to our current system (see [`type`](#type)).
+These are the work types that we used to use, before switching to our current system (see [`type`](./#type)).
 
 You can see all possible values of Crossref's "type" controlled vocabulary via the Crossref api here: [`https://api.crossref.org/types`](https://api.crossref.org/types).
 
-Where possible, we just pass along Crossref's `type` value for each work. When that's impossible (eg the work isn't in Crossref), we do our best to figure out the `type` ourselves. 
+Where possible, we just pass along Crossref's `type` value for each work. When that's impossible (eg the work isn't in Crossref), we do our best to figure out the `type` ourselves.
 
 ```json
 type_crossref: "journal-article"
@@ -696,9 +695,9 @@ _String:_ The Open Access (OA) status of this work. Possible values are:
 oa_status: "gold"
 ```
 
-[Diamond open access](https://en.wikipedia.org/wiki/Diamond_open_access) is another more recent designation that refers to works which are free for both readers and authors. In OpenAlex, there is no "diamond" `oa_status`, but diamond OA works can be identified using a combination of the [`is_oa`](#is_oa) and [`apc_list.value`](#apc_list):
+[Diamond open access](https://en.wikipedia.org/wiki/Diamond\_open\_access) is another more recent designation that refers to works which are free for both readers and authors. In OpenAlex, there is no "diamond" `oa_status`, but diamond OA works can be identified using a combination of the [`is_oa`](./#is\_oa) and [`apc_list.value`](./#apc\_list):
 
-* Get Diamond open access works: [`https://api.openalex.org/works?filter=apc_list.value:0,is_oa:true`](https://api.openalex.org/works?filter=apc_list.value:0,is_oa:true)
+* Get Diamond open access works: [`https://api.openalex.org/works?filter=apc_list.value:0,is_oa:true`](https://api.openalex.org/works?filter=apc\_list.value:0,is\_oa:true)
 
 ### `oa_url`
 
