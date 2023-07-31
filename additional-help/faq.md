@@ -20,7 +20,7 @@ If your example DOI is in Crossref but not in OpenAlex, please send us a [suppor
 
 ### Do you disambiguate authors?
 
-Yes. Using coauthors, references, and other features of the data, we can tell that the same Jane Smith wrote both "Frog behavior" and "Frogs: A retrospective," but it's a different Jane Smith who wrote "Oats before boats: The breakfast customs of 17th-Century Dutch bargemen."
+Yes. Using coauthors, references, and other features of the data, we can tell that the same Jane Smith wrote both "Frog behavior" and "Frogs: A retrospective," but it's a different Jane Smith who wrote "Oats before boats: The breakfast customs of 17th-Century Dutch bargemen." For more details on this, see the page on [author-disambiguation.md](../api-entities/authors/author-disambiguation.md "mention").
 
 ### Do you gather author affiliations?
 
@@ -43,7 +43,7 @@ OpenAlex is not doing this alone! Rather, we're aggregating and standardizing da
 
 ### How often is the data updated?
 
-For now, the database snapshot is updated about once per month.  We also offer a much faster update cadence—as often as once every few hours—through [OpenAlex Premium.](https://openalex.org/pricing)
+For now, the database snapshot is updated about once per month. We also offer a much faster update cadence—as often as once every few hours—through [OpenAlex Premium.](https://openalex.org/pricing)
 
 ### Is your data quality better than \_\_\_\_?
 

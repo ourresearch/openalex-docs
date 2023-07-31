@@ -24,6 +24,7 @@
   * [Search authors](api-entities/authors/search-authors.md)
   * [Group authors](api-entities/authors/group-authors.md)
   * [Limitations](api-entities/authors/limitations.md)
+  * [Author disambiguation](api-entities/authors/author-disambiguation.md)
 * [📚 Sources](api-entities/sources/README.md)
   * [Source object](api-entities/sources/source-object.md)
   * [Get a single source](api-entities/sources/get-a-single-source.md)

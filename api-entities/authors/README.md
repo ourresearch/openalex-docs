@@ -10,9 +10,7 @@ Authors are people who create works. OpenAlex indexes about 213M authors, with t
 
 The [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for authors is ORCID; only a small percentage of authors have one, but the percentage is higher for more recent works.
 
-Our information about authors comes from MAG, Crossref, PubMed, ORCID, and publisher websites. We use an algorithm to [disambiguate](https://en.wikipedia.org/wiki/Author\_name\_disambiguation) authors; this uses an author’s name, their publication record, their citation patterns, and (where available) their ORCID.
-
-So for example, if J. Schmidt and John Jacob Jingleheimer Schmidt both write about 19th-century ketchup production, we’ll treat them as one author–but we won’t include the JJJ Schmidt who writes about weasel migration (even though his name is their name, too).
+Our information about authors comes from MAG, Crossref, PubMed, ORCID, and publisher websites. To learn more about how we combine this information to get OpenAlex Authors, see [author-disambiguation.md](author-disambiguation.md "mention").&#x20;
 
 Authors are linked to works via the [`works.authorships`](../works/work-object/#authorships) property.
 
