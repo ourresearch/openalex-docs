@@ -583,6 +583,10 @@ Most works are type `article`. This includes what was formerly (and currently in
 
 (Note that distinguishing between journals and conferences is a hard problem, one we often get wrong. We are working on improving this, but we also point out that the two have a lot of overlap in terms of their roles as hosts of research publications.)
 
+So, here is how you can filter for only non-preprint articles:
+
+* [https://api.openalex.org/works?filter=type:article,primary_location.version:!submittedVersion]
+
 Works that represent stuff that is _about_ the venue (such as a journal)—rather than a scholarly work properly speaking—have type `paratext`. These include things like front-covers, back-covers, tables of contents, and the journal itself (e.g., `https://openalex.org/W4232230324`).
 
 We also have types for `letter` , `editorial` ,  and `erratum` (corrections). Coverage is low on these but will improve.
