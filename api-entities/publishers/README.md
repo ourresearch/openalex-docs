@@ -6,10 +6,8 @@ description: Companies and organizations that distribute works
 
 Publishers are companies and organizations that distribute journal articles, books, and theses. OpenAlex indexes about 10,000 publishers.
 
-You can get a publisher from the OpenAlex API like this:
-
-* Get the publisher Elsevier with OpenAlex ID `P4310311775`\
-  [https://api.openalex.org/publishers/P4310311775](https://api.openalex.org/publishers/P4310311775)
+* Get a list of OpenAlex publishers:\
+  [`https://api.openalex.org/publishers`](https://api.openalex.org/publishers)
 
 Our publisher data is closely tied to the publisher information in Wikidata. So the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for OpenAlex publishers is a Wikidata ID, and almost every publisher has one. Publishers are linked to sources through the [`host_organization`](../sources/source-object.md#host\_organization) field.
 

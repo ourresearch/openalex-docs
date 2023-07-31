@@ -6,10 +6,8 @@ description: Journals and repositories that host works
 
 Sources are where works are hosted. OpenAlex indexes about 226,000 sources. There are several types, including journals, conferences, preprint repositories, and institutional repositories.
 
-You can get sources from the OpenAlex API like this:
-
-* Search for the journal Nature\
-  [https://api.openalex.org/sources?search=nature](https://api.openalex.org/sources?search=nature)
+* Get a list of OpenAlex sources:\
+  [`https://api.openalex.org/sources`](https://api.openalex.org/sources)
 
 The [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for sources is ISSN-L, which is a special "main" ISSN assigned to every sources (sources tend to have multiple ISSNs). About 90% of sources in OpenAlex have an ISSN-L or ISSN.
 

@@ -6,10 +6,8 @@ description: Organizations that fund research
 
 Funders are organizations that fund research. OpenAlex indexes about 32,000 funders. Funder data comes from Crossref, and is enhanced with data from Wikidata and ROR.
 
-You can get a funder from the OpenAlex API like this:
-
-* Get the funder National Institutes of Health (NIH) with OpenAlex ID `F4320332161`\
-  [`https://api.openalex.org/funders/F4320332161`](https://api.openalex.org/funders/F4320332161)
+* Get a list of OpenAlex funders:\
+  [`https://api.openalex.org/funders`](https://api.openalex.org/funders)
 
 Funders are connected to works through [grants.](../works/work-object/#grants)
 

@@ -6,9 +6,10 @@ description: Journal articles, books, datasets, and theses
 
 Works are scholarly documents like journal articles, books, datasets, and theses. OpenAlex indexes over 240M works, with about 50,000 added daily. You can access a work in the OpenAlex API like this:
 
-* Get the work with the DOI `https://doi.org/10.7717/peerj.4375` [https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375](https://api.openalex.org/works/https://doi.org/10.7717/peerj.4375)
+* Get a list of OpenAlex works:\
+  [`https://api.openalex.org/works`](https://api.openalex.org/works)
 
-That will return a [`Work`](work-object/) object, describing everything OpenAlex knows about the work with that ID.  We collect new works from many sources, including Crossref, PubMed, institutional and discipline-specific repositories (eg, arXiv). Many older works come from the now-defunct Microsoft Academic Graph. &#x20;
+That will return a list of [`Work`](work-object/) object, describing everything OpenAlex knows about each work.  We collect new works from many sources, including Crossref, PubMed, institutional and discipline-specific repositories (eg, arXiv). Many older works come from the now-defunct Microsoft Academic Graph (MAG).
 
 Works are linked to other works via the [`referenced_works`](work-object/#referenced\_works) (outgoing citations), [`cited_by_api_url`](work-object/#cited\_by\_api\_url) (incoming citations), and [`related_works`](work-object/#related\_works) properties.
 

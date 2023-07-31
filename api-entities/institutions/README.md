@@ -6,10 +6,8 @@ description: Universities and other organizations to which authors claim affilia
 
 Institutions are universities and other organizations to which authors claim affiliations. OpenAlex indexes about 109,000 institutions.&#x20;
 
-You can get an institution from the OpenAlex API like this:
-
-* Get the institution with ROR ID `https://ror.org/00jmfr291`\
-  [https://api.openalex.org/institutions/https://ror.org/00jmfr291](https://api.openalex.org/institutions/https://ror.org/00jmfr291)
+* Get a list of OpenAlex institutions:\
+  [`https://api.openalex.org/institutions`](https://api.openalex.org/institutions)
 
 The [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for institutions is the ROR ID. All institutions in OpenAlex have ROR IDs.
 
