@@ -249,14 +249,7 @@ summary_stats: {
 
 ### `type`
 
-_String:_ The type of source, which will be one of the following from the Type column:
-
-| Type             | Wikidata ID                                          | How it's assigned                                                                                                                  |
-| ---------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `journal`        | [Q737498](https://www.wikidata.org/wiki/Q737498)     | The source is an academic journal with an [ISSN](source-object.md#issn).                                                           |
-| `repository`     | [Q66656823](https://www.wikidata.org/wiki/Q66656823) | The source is a disciplinary or institutional repository.                                                                          |
-| `conference`     | [Q47258130](https://www.wikidata.org/wiki/Q47258130) | The source publishes Works with [`type`](../works/work-object/#type) "Proceedings", "Proceedings Series" or "Proceedings Article". |
-| `ebook platform` | [Q1294318](https://www.wikidata.org/wiki/Q1294318)   | The source publishes Works with [`type`](../works/work-object/#type) containing "book", e.g. "Book Chapter".                       |
+_String:_ The type of source, which will be one of: `journal`, `repository`, `conference`, `ebook platform`, or `book series`.
 
 ```json
 type: "journal" 
