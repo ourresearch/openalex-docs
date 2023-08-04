@@ -585,7 +585,7 @@ Most works are type `article`. This includes what was formerly (and currently in
 
 So, here is how you can filter for only non-preprint articles:
 
-* [https://api.openalex.org/works?filter=type:article,primary_location.version:!submittedVersion]
+* [https://api.openalex.org/works?filter=type:article,primary_location.version:!submittedVersion](https://api.openalex.org/works?filter=type:article,primary_location.version:!submittedVersion)
 
 Works that represent stuff that is _about_ the venue (such as a journal)—rather than a scholarly work properly speaking—have type `paratext`. These include things like front-covers, back-covers, tables of contents, and the journal itself (e.g., `https://openalex.org/W4232230324`).
 
