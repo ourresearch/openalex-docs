@@ -82,4 +82,6 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`primary_location.version`](work-object/#primary\_location)
 * [`publication_year`](work-object/#publication\_year)
 * [`repository`](filter-works.md#repository)
-* [`version`](work-object/#version)
+* [`sustainable_development_goals.id`](work-object/README.md#sustainable_development_goals)
+* [`type`](work-object/README.md#type)
+* [`type_crossref`](work-object/README.md#type_crossref)

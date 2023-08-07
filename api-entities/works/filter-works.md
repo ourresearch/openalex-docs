@@ -78,7 +78,9 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`primary_location.version`](work-object/#primary\_location)
 * [`publication_year`](work-object/#publication\_year)
 * [`publication_date`](work-object/#publication\_date)
-* [`type`](work-object/#type)
+* [`sustainable_development_goals.id`](work-object/README.md#sustainable_development_goals)
+* [`type`](work-object/README.md#type)
+* [`type_crossref`](work-object/README.md#type_crossref)
 
 {% hint style="info" %}
 Want to filter by the `display_name` of an associated entity (author, institution, source, etc.)? [See here.](search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)

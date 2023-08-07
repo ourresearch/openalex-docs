@@ -561,6 +561,22 @@ related_works: [
 ]
 ```
 
+### `sustainable_development_goals`
+
+_List:_ List of objects
+
+The United Nations' [17 Sustainable Development Goals](https://sdgs.un.org/goals) are a collection of goals at the heart of a global "shared blueprint for peace and prosperity for people and the planet." We use a machine learning model to tag works with their relevance to these goals based on our [OpenAlex SDG Classifier](https://github.com/ourresearch/openalex-sdg-classifier), an mBERT machine learning model developed by the Aurora Universities Network, trained on Elsevier data. The `score` represents the model's predicted probability of the work's relevance for a particular goal.
+
+```json
+sustainable_development_goals: [
+    {
+        id: "https://metadata.un.org/sdg/3",
+        display_name: "Good health and well-being",
+        score: 	0.95
+    }
+]
+```
+
 ### `title`
 
 _String:_ The title of this work.
