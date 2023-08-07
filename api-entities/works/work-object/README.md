@@ -341,6 +341,14 @@ ids: {
 }
 ```
 
+### `institutions_distinct_count`
+
+_Integer:_ Number of distinct [`institutions`](../../institutions/README.md) among the [`authorships`](./authorship-object.md#institutions) for this work.
+
+```json
+institutions_distinct_count: 4
+```
+
 ### `is_oa`
 
 _Boolean:_ Set to `true` if the work hosted here can be read for free, without registration.

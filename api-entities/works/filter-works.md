@@ -53,6 +53,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`ids.pmid`](work-object/#ids) (alias: `pmid`)
 * [`ids.openalex`](work-object/#ids) (alias: `openalex`)
 * [`ids.mag`](work-object/#ids) (alias: `mag`)
+* [`institutions_distinct_count`](work-object/README.md#institutions_distinct_count)
 * [`is_paratext`](work-object/#is\_paratext)
 * [`is_retracted`](work-object/#is\_retracted)
 * [`language`](work-object/#language)
