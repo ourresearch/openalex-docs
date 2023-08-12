@@ -1,8 +1,17 @@
 # Rate limits and authentication
 
-The API is limited to 100,000 calls per day. If you need more, simply drop us a line at [support@openalex.org](mailto:support@openalex.org). There is a burst rate limit of 10 requests per second. So calling multiple requests at the same time could lead to errors with code 429.&#x20;
+The API is rate-limited. The limits are:
 
-If you're calling the API with a list of IDs, using the [OR syntax](get-lists-of-entities/filter-entity-lists.md#addition-or) will save a lot of time and likely reduce any 429 errors. [Check out our tutorial](https://blog.ourresearch.org/fetch-multiple-dois-in-one-openalex-api-request/) on how to do that with DOIs.
+* max 100,000 calls every day, and also
+* max 10 requests every second.
+
+If you hit the API more than 100k times in a day or more than 10 in a second, you'll get `429` errors instead of useful data.
+
+Are those rate limits too low for you? No problem! We can raise those limits as high as you need if you subscribe to [our Premium plan](https://openalex.org/pricing). And for most academic researchers we can do it for free; just drop us a line at [support@openalex.org](mailto:support@openalex.org).&#x20;
+
+{% hint style="info" %}
+Are you scrolling through a list of entities, calling the API for each? You can go way faster by squishing 50 requests into one using our [OR syntax](get-lists-of-entities/filter-entity-lists.md#addition-or). Here's [a tutorial](https://blog.ourresearch.org/fetch-multiple-dois-in-one-openalex-api-request/) showing how.
+{% endhint %}
 
 ## Authentication
 
