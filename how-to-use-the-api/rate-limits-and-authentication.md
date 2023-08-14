@@ -7,7 +7,7 @@ The API is rate-limited. The limits are:
 
 If you hit the API more than 100k times in a day or more than 10 in a second, you'll get `429` errors instead of useful data.
 
-Are those rate limits too low for you? No problem! We can raise those limits as high as you need if you subscribe to [our Premium plan](https://openalex.org/pricing). And for most academic researchers we can do it for free; just drop us a line at [support@openalex.org](mailto:support@openalex.org).&#x20;
+Are those rate limits too low for you? No problem! We can raise those limits as high as you need if you subscribe to [our Premium plan](https://openalex.org/pricing). And if you're an academic researcher we can likely do it for free; just drop us a line at [support@openalex.org](mailto:support@openalex.org).&#x20;
 
 {% hint style="info" %}
 Are you scrolling through a list of entities, calling the API for each? You can go way faster by squishing 50 requests into one using our [OR syntax](get-lists-of-entities/filter-entity-lists.md#addition-or). Here's [a tutorial](https://blog.ourresearch.org/fetch-multiple-dois-in-one-openalex-api-request/) showing how.
@@ -28,7 +28,7 @@ The polite pool has much faster and more consistent response times. It's a good 
 
 To get into the polite pool, you just have to give us an email where we can contact you. You can give us this email in one of two ways:
 
-* Add the `mailto=you@example.com` parameter in your API request, like this: [https://api.openalex.org/works?mailto=you@example.com](https://api.openalex.org/works?mailto=you@example.com)
+* Add the `mailto=you@example.com` parameter in your API request, like this: [`https://api.openalex.org/works?mailto=you@example.com`](https://api.openalex.org/works?mailto=you@example.com)
 * Add `mailto:you@example.com` somewhere in your User-Agent request header.
 
 ### The common pool
