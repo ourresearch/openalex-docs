@@ -201,18 +201,42 @@ Because all ancestor concepts are assigned to the work, you may see concepts in 
 ```json
 concepts: [
     {
-        id: "https://openalex.org/C2778793908",
-        wikidata: "https://www.wikidata.org/wiki/Q5122404",
-        display_name: "Citation impact",
-        level: 3,
-        score: 0.459309
+        id: "https://openalex.org/C71924100",
+        wikidata: "https://www.wikidata.org/wiki/Q11190",
+        display_name: "Medicine",
+        level: 0,
+        score: 0.9187037
     },
     {
-        id: "https://openalex.org/C2778805511",
-        wikidata: "https://www.wikidata.org/wiki/Q1713",
-        display_name: "Citation",
+        id: "https://openalex.org/C3007834351",
+        wikidata: "https://www.wikidata.org/wiki/Q82069695",
+        display_name: "Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
+        level: 5,
+        score: 0.8070164
+    },
+    ...
+    {
+        id: "https://openalex.org/C191935318",
+        wikidata: "https://www.wikidata.org/wiki/Q148",
+        display_name: "China",
         level: 2,
-        score: 0.447306
+        score: 0.5948172
+    },
+    ...
+    {
+        id: "https://openalex.org/C121608353",
+        wikidata: "https://www.wikidata.org/wiki/Q12078",
+        display_name: "Cancer",
+        level: 2,
+        score: 0.46887803
+    },
+    ...
+    {
+        id: "https://openalex.org/C17744445",
+        wikidata: "https://www.wikidata.org/wiki/Q36442",
+        display_name: "Political science",
+        level: 0,
+        score: 0
     }
 ]
 ```
