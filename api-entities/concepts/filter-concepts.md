@@ -3,7 +3,7 @@
 You can filter concepts with the `filter` parameter:
 
 * Get concepts that are at level 0 (top level)\
-  [https://api.openalex.org/concepts?filter=level:0](https://api.openalex.org/concepts?filter=level:0)
+  [`https://api.openalex.org/concepts?filter=level:0`](https://api.openalex.org/concepts?filter=level:0)
 
 {% hint style="info" %}
 It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md) before trying these out. It will show you how to combine filters and build an AND, OR, or negation query
