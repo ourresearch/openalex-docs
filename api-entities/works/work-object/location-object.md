@@ -16,6 +16,14 @@ There are three places in the `Work` object where you can find locations:
 * [`best_oa_location`](./#best\_oa\_location): The best available open access location of this work.
 * [`locations`](./#locations): A list of all of the locations where this work lives. This will include the two locations above if availabe, and can also include other locations.
 
+### `is_accepted`
+
+_Boolean:_ `true` if this location's [`version`](#version) is either `acceptedVersion` or `publishedVersion`; otherwise `false`.
+
+```json
+is_accepted: true
+```
+
 ### `is_oa`
 
 _Boolean:_ `True` if this work is Open Access (OA).
@@ -24,6 +32,14 @@ There are [many ways to define OA](https://peerj.com/articles/4375/#literature-r
 
 ```json
 is_oa: true
+```
+
+### `is_published`
+
+_Boolean:_ `true` if this location's [`version`](#version) is `publishedVersion`; otherwise `false`.
+
+```json
+is_published: true
 ```
 
 ### landing\_page\_url
