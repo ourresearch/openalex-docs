@@ -21,6 +21,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 
 * [`authorships.author.id`](work-object/authorship-object.md#author) (alias: `author.id`)
 * [`authorships.author.orcid`](work-object/authorship-object.md#author) (alias: `author.orcid`)
+* [`authorships.countries`](work-object/authorship-object.md#countries)
 * [`authorships.institutions.country_code`](work-object/authorship-object.md#institutions) (alias: `institutions.country_code`)
 * [`authorships.institutions.id`](work-object/authorship-object.md#institutions) (alias `institutions.id`)
 * [`authorships.institutions.ror`](work-object/authorship-object.md#institutions) (alias: `institutions.ror`)

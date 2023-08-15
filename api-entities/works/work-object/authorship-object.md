@@ -24,6 +24,18 @@ It's not strictly necessary, because author order is already implicitly recorded
 author_position: "first"
 ```
 
+### `countries`
+
+_List:_ The country or countries for this author.
+
+We determine the countries using a combination of matched institutions and parsing of the raw affiliation strings, so we can have this information for some authors even if we do not have a specific institutional affiliation.
+
+```json
+countries: [
+    "US"
+]
+```
+
 ### `institutions`
 
 _List:_ The institutional affiliations this author claimed in the context of this work, as dehydrated `Institution` objects.
