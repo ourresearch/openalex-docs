@@ -67,7 +67,7 @@ Value: a search string
 Returns: sources with a [`display_name`](source-object.md#display\_name) containing the given string; see the [search page](search-sources.md) for details.
 
 * Get sources with names containing "Neurology":\
-  [`https://api.openalex.org/sources?filter=display_name.search:Neurology`](https://api.openalex.org/sources?filter=display\_name.search:Neurology)``
+  [`https://api.openalex.org/sources?filter=display_name.search:Neurology`](https://api.openalex.org/sources?filter=display\_name.search:Neurology)
 
 {% hint style="info" %}
 In most cases, you should use the [`search`](search-sources.md#sources-full-search) parameter instead of this filter because it uses a better search algorithm.
@@ -80,7 +80,7 @@ Value: a Boolean (`true` or `false`)
 Returns: sources that have or lack an [ISSN](./source-object.md#issn), depending on the given value.
 
 * Get sources without ISSNs:\
-  [`https://api.openalex.org/sources?filter=has_issn:false`](https://api.openalex.org/sources?filter=has\_issn:false)``
+  [`https://api.openalex.org/sources?filter=has_issn:false`](https://api.openalex.org/sources?filter=has\_issn:false)
 
 #### `is_global_south`
 

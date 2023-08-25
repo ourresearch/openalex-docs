@@ -1,6 +1,6 @@
 # Get lists of entities
 
-It's easy to get a list of entity objects from from the API:`/<entity_name>.` Here's an example:
+It's easy to get a list of entity objects from the API:`/<entity_name>.` Here's an example:
 
 * Get a list of _all_ the concepts in OpenAlex:\
   [`https://api.openalex.org/concepts`](https://api.openalex.org/concepts)

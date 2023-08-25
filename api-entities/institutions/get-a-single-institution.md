@@ -1,6 +1,6 @@
 # Get a single institution
 
-It's easy to get an institution from from the API with: `/institutions/<entity_id>`. Here's an example:
+It's easy to get an institution from the API with: `/institutions/<entity_id>`. Here's an example:
 
 * Get the institution with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `I27837315`: \
   [https://api.openalex.org/institutions/I27837315](https://api.openalex.org/institutions/I27837315)

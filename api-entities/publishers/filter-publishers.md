@@ -52,7 +52,7 @@ Value: a search string
 Returns: publishers with a [`display_name`](publisher-object.md#display\_name) containing the given string; see the [search page](search-publishers.md#search-a-specific-field) for details.
 
 * Get publishers with names containing "elsevier":\
-  [`https://api.openalex.org/publishers?filter=display_name.search:elsevier`](https://api.openalex.org/publishers?filter=display\_name.search:elsevier)``
+  [`https://api.openalex.org/publishers?filter=display_name.search:elsevier`](https://api.openalex.org/publishers?filter=display\_name.search:elsevier)
 
 {% hint style="info" %}
 In most cases, you should use the [`search` parameter](search-publishers.md) instead of this filter because it uses a better search algorithm.

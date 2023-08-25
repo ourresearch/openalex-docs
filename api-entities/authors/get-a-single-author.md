@@ -1,6 +1,6 @@
 # Get a single author
 
-It's easy to get an author from from the API with: `/authors/<entity_id>`. Here's an example:
+It's easy to get an author from the API with: `/authors/<entity_id>`. Here's an example:
 
 * Get the author with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `A2208157607`: \
   [https://api.openalex.org/authors/A2208157607](https://api.openalex.org/authors/A2208157607)

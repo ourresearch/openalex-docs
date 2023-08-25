@@ -160,7 +160,7 @@ Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-opena
 
 Returns: works that cite the given work. This is works that have the given OpenAlex ID in the [`referenced_works`](work-object/#referenced\_works) section. You can think of this as **incoming citations**.
 
-* Get works that cite [`https://openalex.org/W2741809807`](https://openalex.org/W2741809807): [`https://api.openalex.org/works?filter=cites:W2741809807`](https://api.openalex.org/works?filter=cites:W2741809807)\`\`
+* Get works that cite [`https://openalex.org/W2741809807`](https://openalex.org/W2741809807): [`https://api.openalex.org/works?filter=cites:W2741809807`](https://api.openalex.org/works?filter=cites:W2741809807)
 
 {% hint style="info" %}
 The number of results returned by this filter may be slightly higher than the work's[`cited_by_count`](work-object/#cited\_by\_count)due to a timing lag in updating that field.
@@ -203,7 +203,7 @@ Returns: works with [`created_date`](work-object/#created\_date) greater than or
 This field requires an [OpenAlex Premium subscription to access. Click here to learn more.](https://openalex.org/pricing)
 
 * Get works created on or _after_ January 12th, 2023 (does not work without valid API key):\
-  [`https://api.openalex.org/works?filter=from_created_date:2023-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=from\_created\_date:2023-01-12\&api\_key=myapikey)\`\`
+  [`https://api.openalex.org/works?filter=from_created_date:2023-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=from\_created\_date:2023-01-12\&api\_key=myapikey)
 
 #### `from_publication_date`
 
@@ -239,7 +239,7 @@ Value: a search string
 
 Returns: works whose fulltext includes the given string. Fulltext search is powered by an index of word sequences called n-grams - see [Get N-grams](get-n-grams.md) for coverage details.
 
-* Get works with fulltext that mention "climate change": [`https://api.openalex.org/works?filter=fulltext.search:climate%20change`](https://api.openalex.org/works?filter=fulltext.search:climate%20change)\`\`
+* Get works with fulltext that mention "climate change": [`https://api.openalex.org/works?filter=fulltext.search:climate%20change`](https://api.openalex.org/works?filter=fulltext.search:climate%20change)
 
 {% hint style="info" %}
 We combined some n-grams before storing them in our search database, so querying for an exact phrase using quotes does not always work well.
@@ -261,7 +261,7 @@ Value: a Boolean (`true` or `false`)
 Returns: works that have or lack a DOI, depending on the given value. It's especially useful for [grouping](group-works.md).
 
 * Get the works that have no DOI assigned:\
-  [`https://api.openalex.org/works?filter=has_doi:false`](https://api.openalex.org/works?filter=has\_doi:false) \`\`
+  [`https://api.openalex.org/works?filter=has_doi:false`](https://api.openalex.org/works?filter=has\_doi:false) 
 
 #### `has_oa_accepted_or_published_version`
 
@@ -279,7 +279,7 @@ Value: a Boolean (`true` or `false`)
 Returns: works with at least one of the [`locations`](work-object/#locations) has [`is_oa`](work-object/#is\_oa)= true and [`version`](work-object/#version) is submittedVersion. This is useful for finding works with preprints deposited somewhere.
 
 * Get works with an OA submitted copy:\
-  [`https://api.openalex.org/works?filter=has_oa_submitted_version:true`](https://api.openalex.org/works?filter=has\_oa\_submitted\_version:true)\`\`
+  [`https://api.openalex.org/works?filter=has_oa_submitted_version:true`](https://api.openalex.org/works?filter=has\_oa\_submitted\_version:true)
 
 #### `has_orcid`
 
@@ -288,7 +288,7 @@ Value: a Boolean (`true` or `false`)
 Returns: if `true` it returns works where at least one author or has an [ORCID ID](work-object/#ids). If `false`, it returns works where no authors have an ORCID ID. This is based on the `orcid` field within [`authorships.author`](work-object/#author).
 
 * Get the works where at least one author has an ORCID ID:\
-  [`https://api.openalex.org/works?filter=has_orcid:true`](https://api.openalex.org/works?filter=has\_orcid:true) \`\`
+  [`https://api.openalex.org/works?filter=has_orcid:true`](https://api.openalex.org/works?filter=has\_orcid:true) 
 
 #### `has_pmcid`
 
@@ -297,7 +297,7 @@ Value: a Boolean (`true` or `false`)
 Returns: works that have or lack a PubMed Central identifier ([`pmcid`](work-object/#ids)) depending on the given value.
 
 * Get the works that have a `pmcid`:\
-  [`https://api.openalex.org/works?filter=has_pmcid:true`](https://api.openalex.org/works?filter=has\_pmcid:true)\`\`
+  [`https://api.openalex.org/works?filter=has_pmcid:true`](https://api.openalex.org/works?filter=has\_pmcid:true)
 
 #### `has_pmid`
 
@@ -306,7 +306,7 @@ Value: a Boolean (`true` or `false`)
 Returns: works that have or lack a PubMed identifier ([`pmid`](../authors/author-object.md#ids)), depending on the given value.
 
 * Get the works that have a `pmid`:\
-  [`https://api.openalex.org/works?filter=has_pmid:true`](https://api.openalex.org/works?filter=has\_pmid:true)\`\`
+  [`https://api.openalex.org/works?filter=has_pmid:true`](https://api.openalex.org/works?filter=has\_pmid:true)
 
 #### `has_ngrams`
 
@@ -374,7 +374,7 @@ Value: a search string
 
 Returns: works that have at least one [`raw_affiliation_string`](work-object/#raw\_affiliation\_string) which includes the given string. See the [search page](../../how-to-use-the-api/get-lists-of-entities/search-entities.md) for details on the search algorithm used.
 
-* Get works with the words _Department of Political Science, University of Amsterdam_ somewhere in at least one author's `raw_affiliation_string`: [`https://api.openalex.org/works?filter=raw_affiliation_string.search:department%20of%20political%20science%20university%20of%amsterdam`](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)\`\`
+* Get works with the words _Department of Political Science, University of Amsterdam_ somewhere in at least one author's `raw_affiliation_string`: [`https://api.openalex.org/works?filter=raw_affiliation_string.search:department%20of%20political%20science%20university%20of%amsterdam`](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)
 
 #### `related_to`
 
@@ -409,7 +409,7 @@ Value: a date, formatted as `yyyy-mm-dd`
 Returns: works with [`publication_date`](work-object/#publication\_date) less than or equal to the given date.
 
 * Get works published on or _before_ March 14th, 2001:\
-  [`https://api.openalex.org/works?filter=to_publication_date:2001-03-14`](https://api.openalex.org/works?filter=to\_publication\_date:2001-03-14)\`\`
+  [`https://api.openalex.org/works?filter=to_publication_date:2001-03-14`](https://api.openalex.org/works?filter=to\_publication\_date:2001-03-14)
 
 #### `version`
 

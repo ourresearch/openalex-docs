@@ -6,7 +6,7 @@ description: Get a single entity, based on an ID
 
 This is a more detailed guide to single entities in OpenAlex. If you're just getting started, check out [get a single work](../../api-entities/works/get-a-single-work.md).
 
-It's easy to get a singleton entity object from from the API:`/<entity_name>/<entity_id>.` Here's an example:
+It's easy to get a singleton entity object from the API:`/<entity_name>/<entity_id>.` Here's an example:
 
 * Get the work with the [OpenAlex ID](./#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
 

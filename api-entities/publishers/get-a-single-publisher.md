@@ -1,6 +1,6 @@
 # Get a single publisher
 
-It's easy to get a publisher from from the API with: `/publishers/<entity_id>`. Here's an example:
+It's easy to get a publisher from the API with: `/publishers/<entity_id>`. Here's an example:
 
 * Get the publisher with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `P4310319965`: \
   [https://api.openalex.org/publishers/P4310319965](https://api.openalex.org/publishers/P4310319965)

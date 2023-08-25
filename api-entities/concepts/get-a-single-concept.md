@@ -1,6 +1,6 @@
 # Get a single concept
 
-It's easy to get a concept from from the API with: `/concepts/<entity_id>`. Here's an example:
+It's easy to get a concept from the API with: `/concepts/<entity_id>`. Here's an example:
 
 * Get the concept with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `C71924100`: \
   [https://api.openalex.org/concepts/C71924100](https://api.openalex.org/concepts/C71924100)
