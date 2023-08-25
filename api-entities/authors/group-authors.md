@@ -3,7 +3,7 @@
 You can group authors with the `group_by` parameter:
 
 * Get counts of authors by the last known institution continent:\
-  [`https://api.openalex.org/authors?group_by=last_known_institution.continent`](https://api.openalex.org/authors?group\_by=last\_known\_institution.continent)``
+  [`https://api.openalex.org/authors?group_by=last_known_institution.continent`](https://api.openalex.org/authors?group\_by=last\_known\_institution.continent)
 
 Or you can group using one the attributes below.
 

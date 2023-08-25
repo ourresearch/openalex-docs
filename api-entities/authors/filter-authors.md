@@ -62,7 +62,7 @@ Value: a Boolean (`true` or `false`)
 Returns: authors that have or lack an [orcid](author-object.md#orcid), depending on the given value.
 
 * Get the authors that have an ORCID:\
-  ``[`https://api.openalex.org/authors?filter=has_orcid:true`](https://api.openalex.org/authors?filter=has\_orcid:true)
+  [`https://api.openalex.org/authors?filter=has_orcid:true`](https://api.openalex.org/authors?filter=has\_orcid:true)
 
 #### `last_known_institution.continent`
 
