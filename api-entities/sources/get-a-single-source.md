@@ -1,6 +1,6 @@
 # Get a single source
 
-It's easy to get a source from from the API with: `/sources/<entity_id>`. Here's an example:
+It's easy to get a source from the API with: `/sources/<entity_id>`. Here's an example:
 
 * Get the source with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `S137773608`: \
   [https://api.openalex.org/sources/S137773608](https://api.openalex.org/sources/S137773608)

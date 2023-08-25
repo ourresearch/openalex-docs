@@ -1,6 +1,6 @@
 # Get a single funder
 
-It's easy to get a funder from from the API with: `/funders/<entity_id>`. Here's an example:
+It's easy to get a funder from the API with: `/funders/<entity_id>`. Here's an example:
 
 * Get the funder with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `F4320332161`: \
   [https://api.openalex.org/funders/F4320332161](https://api.openalex.org/funders/F4320332161)
