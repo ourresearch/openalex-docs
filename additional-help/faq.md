@@ -10,7 +10,7 @@ Yes!\* The work associated with ID W1234 will keep the ID W1234.
 
 When we find duplicated works, authors, etc that already have assigned IDs, we merge them. Merged entities will redirect to the proper entity in the API. In the data snapshot, there is a directory which lists the IDs that have been merged.
 
-\*In July 2023, OpenAlex will switch to a new, more accurate, author identification system, and will be replacing all OpenAlex Author IDs with new ones. This is a very rare case in which we violate the rule of having stable IDs, which is needed to make the improvements. Old IDs and their connections to works will still be available in the historical OpenAlex data.
+\*In July 2023, OpenAlex switched to a [new, more accurate, author identification system](../api-entities/authors/author-disambiguation.md), replaced all OpenAlex Author IDs with new ones. This is a very rare case in which we violate the rule of having stable IDs, which is needed to make the improvements. Old IDs and their connections to works remain available in the historical OpenAlex data.
 
 ### Can you index my journal?
 

@@ -20,7 +20,7 @@ There is also a complete database snapshot available to download. [Learn more ab
 
 The API has a limit of 100,000 calls per day, and the snapshot is updated monthly. If you need a higher limit, or more frequent updates, please look into [**OpenAlex Premium.**](https://openalex.org/pricing)
 
-The web interface for OpenAlex is currently in development, with a beta launch coming in July. [Sign up to be notified about the launch here.](https://forms.gle/NDoXAQVKGQLpkF5U8)
+The web interface for OpenAlex is currently in development, with a beta launch coming in late 2023. [Sign up to be notified about the launch here.](https://forms.gle/NDoXAQVKGQLpkF5U8)
 
 ## Why OpenAlex?
 
