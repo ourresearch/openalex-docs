@@ -8,7 +8,7 @@ _String:_ An author of this work, as a dehydrated [`Author`](../../authors/autho
 
 ```json
 author: {
-    id: "https://openalex.org/A2790141563",
+    id: "https://openalex.org/A5085171399",
     display_name: "Juan Pablo Alperin",
     orcid: "https://orcid.org/0000-0002-9344-7439"
 }
@@ -73,4 +73,12 @@ _String:_ This author's affiliation as it originally came to us (on a webpage or
 
 ```json
 raw_affiliation_string: "Canadian Institute for Studies in Publishing, Simon Fraser University,
+```
+
+### `raw_author_name`
+
+_String:_ This author's name as it originally came to us (on a webpage or in an API), as a raw unformatted string.
+
+```json
+raw_author_name: "Juan Pablo Alperin"
 ```
