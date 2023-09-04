@@ -19,7 +19,7 @@ This allows you to craft complex queries using those boolean operators along wit
 
 Behind the scenes, the boolean search is using Elasticsearch's [query string query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html) on the searchable fields (such as title, abstract, and fulltext for works; see each individual entity page for specifics about that entity). Wildcard and fuzzy searches using `*`, `?` or `~` are not allowed; these characters will be removed from any searches. These searches, even when using quotation marks, will go through the same cleaning as desscribed above, including stemming and removal of stop words.
 
-* Search for works that mention "elmo" and "sesame street," but not the words "cookie" or "monster": [`https://api.openalex.org/works?search="elmo" AND "sesame street" NOT (cookie OR monster)`](https://api.openalex.org/works?search="elmo" AND "sesame street" NOT (cookie OR monster))
+* Search for works that mention "elmo" and "sesame street," but not the words "cookie" or "monster": [`https://api.openalex.org/works?search="elmo" AND "sesame street" NOT (cookie OR monster)`](https://api.openalex.org/works?search="elmo" AND "sesame street" NOT \(cookie OR monster\))
 
 ## Relevance score
 
