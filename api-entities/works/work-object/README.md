@@ -257,6 +257,14 @@ _List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-open
 corresponding_institution_ids: ["https://openalex.org/I4210123613"]
 ```
 
+### `countries_distinct_count`
+
+_Integer:_ Number of distinct `country_codes` among the [`authorships`](./authorship-object.md#institutions) for this work.
+
+```json
+countries_distinct_count: 4
+```
+
 ### `counts_by_year`
 
 _List:_ [`Works.cited_by_count`](./#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many times this work was cited.

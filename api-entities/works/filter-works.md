@@ -49,6 +49,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`concepts.wikidata`](work-object/#concepts)
 * [`corresponding_author_ids`](work-object/#corresponding\_author\_ids)
 * [`corresponding_institution_ids`](work-object/#corresponding\_institution\_ids)
+* [`countries_distinct_count`](work-object/README.md#countries_distinct_count)
 * [`doi`](work-object/#title)
 * [`grants.award_id`](work-object/#grants)
 * [`grants.funder`](work-object/#grants)
