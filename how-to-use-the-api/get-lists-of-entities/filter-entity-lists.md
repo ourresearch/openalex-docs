@@ -41,7 +41,7 @@ By default, the returned result set includes only records that satisfy _all_ the
 
 To create an AND query within a single attribute, you can either repeat a filter, or use the plus symbol (`+`):
 
-* Get all the works that have an author from France _and_ an author from the UK:\
+* Get all the works that have an author from France _and_ an author from the UK:
   *  Using repeating filters: [`https://api.openalex.org/works?filter=institutions.country_code:fr,institutions.country_code:gb`](https://api.openalex.org/works?filter=institutions.country\_code:fr,institutions.country\_code:gb)
   *  Using the plus symbol (`+`): [`https://api.openalex.org/works?filter=institutions.country_code:fr+gb`](https://api.openalex.org/works?filter=institutions.country_code:fr+gb)
 
