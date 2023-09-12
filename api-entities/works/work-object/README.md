@@ -259,7 +259,7 @@ corresponding_institution_ids: ["https://openalex.org/I4210123613"]
 
 ### `countries_distinct_count`
 
-_Integer:_ Number of distinct `country_codes` among the [`authorships`](./authorship-object.md#institutions) for this work.
+_Integer:_ Number of distinct `country_codes` among the [`authorships`](authorship-object.md#institutions) for this work.
 
 ```json
 countries_distinct_count: 4
@@ -375,7 +375,7 @@ ids: {
 
 ### `institutions_distinct_count`
 
-_Integer:_ Number of distinct [`institutions`](../../institutions/README.md) among the [`authorships`](./authorship-object.md#institutions) for this work.
+_Integer:_ Number of distinct [`institutions`](../../institutions/) among the [`authorships`](authorship-object.md#institutions) for this work.
 
 ```json
 institutions_distinct_count: 4
@@ -421,9 +421,10 @@ is_retracted: false
 _String:_ The language of the work in [ISO 639-1 format](https://en.wikipedia.org/wiki/List\_of\_ISO\_639-1\_codes). The language is automatically detected using the information we have about the work. We use the [langdetect](https://pypi.org/project/langdetect/) software library on the words in the work's abstract, or the title if we do not have the abstract. The source code for this procedure is [here.](https://github.com/ourresearch/openalex-guts/blob/54471c6c8e3c59662c4a4d9c37320af7b1667b2b/models/work.py#LL1102C1-L1102C1) Keep in mind that this method is not perfect, and that in some cases the language of the title or abstract could be different from the body of the work.
 
 A few things to keep in mind about this:
-- We don't always assign a language if we do not have enough words available to accurately guess.
-- We report the language of the metadata, not the full text. For example, if a work is in French, but the title and abstract are in English, we report the language as English.
-- In some cases, abstracts are in two different languages. Unfortunately, when this happens, what we report will not be accurate.
+
+* We don't always assign a language if we do not have enough words available to accurately guess.
+* We report the language of the metadata, not the full text. For example, if a work is in French, but the title and abstract are in English, we report the language as English.
+* In some cases, abstracts are in two different languages. Unfortunately, when this happens, what we report will not be accurate.
 
 ```json
 language: "en"
@@ -610,7 +611,9 @@ related_works: [
 
 _List:_ List of objects
 
-The United Nations' [17 Sustainable Development Goals](https://sdgs.un.org/goals) are a collection of goals at the heart of a global "shared blueprint for peace and prosperity for people and the planet." We use a machine learning model to tag works with their relevance to these goals based on our [OpenAlex SDG Classifier](https://github.com/ourresearch/openalex-sdg-classifier), an mBERT machine learning model developed by the Aurora Universities Network, trained on Elsevier data. The `score` represents the model's predicted probability of the work's relevance for a particular goal.
+The United Nations' [17 Sustainable Development Goals](https://sdgs.un.org/goals) are a collection of goals at the heart of a global "shared blueprint for peace and prosperity for people and the planet." We use a machine learning model to tag works with their relevance to these goals based on our [OpenAlex SDG Classifier](https://github.com/ourresearch/openalex-sdg-classifier), an mBERT machine learning model developed by the [Aurora Universities Network](https://aurora-universities.eu/sdg-research/). The `score` represents the model's predicted probability of the work's relevance for a particular goal.
+
+We display all of the SDGs with a prediction score higher than 0.1.
 
 ```json
 sustainable_development_goals: [
@@ -646,11 +649,11 @@ Most works are type `article`. This includes what was formerly (and currently in
 
 So, here is how you can filter for only non-preprint articles:
 
-* [https://api.openalex.org/works?filter=type:article,primary_location.version:!submittedVersion](https://api.openalex.org/works?filter=type:article,primary_location.version:!submittedVersion)
+* [https://api.openalex.org/works?filter=type:article,primary\_location.version:!submittedVersion](https://api.openalex.org/works?filter=type:article,primary\_location.version:!submittedVersion)
 
 Works that represent stuff that is _about_ the venue (such as a journal)—rather than a scholarly work properly speaking—have type `paratext`. These include things like front-covers, back-covers, tables of contents, and the journal itself (e.g., `https://openalex.org/W4232230324`).
 
-We also have types for `letter` , `editorial` ,  and `erratum` (corrections). Coverage is low on these but will improve.
+We also have types for `letter` , `editorial` , and `erratum` (corrections). Coverage is low on these but will improve.
 
 Other work types follow the Crossref "type" controlled vocabulary—see [`type_crossref`](./#type\_crossref).
 
