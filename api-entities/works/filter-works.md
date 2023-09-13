@@ -24,6 +24,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`authorships.countries`](work-object/authorship-object.md#countries)
 * [`authorships.institutions.country_code`](work-object/authorship-object.md#institutions) (alias: `institutions.country_code`)
 * [`authorships.institutions.id`](work-object/authorship-object.md#institutions) (alias `institutions.id`)
+* [`authorships.institutions.lineage`](work-object/authorship-object.md#institutions)
 * [`authorships.institutions.ror`](work-object/authorship-object.md#institutions) (alias: `institutions.ror`)
 * [`authorships.institutions.type`](work-object/authorship-object.md#institutions)
 * [`authorships.is_corresponding`](work-object/authorship-object.md#is_corresponding) (alias: `is_corresponding`): this filter marks whether or not we have corresponding author information for a given work

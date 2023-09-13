@@ -38,7 +38,7 @@ countries: [
 
 ### `institutions`
 
-_List:_ The institutional affiliations this author claimed in the context of this work, as dehydrated `Institution` objects.
+_List:_ The institutional affiliations this author claimed in the context of this work, as [dehydrated `Institution`](../../institutions/institution-object.md#the-dehydratedinstitution-object) objects.
 
 ```json
 institutions: [
@@ -47,14 +47,8 @@ institutions: [
         display_name: "Simon Fraser University",
         ror: "https://ror.org/0213rcc28",
         country_code: "CA",
-        type: "education"
-    },
-    {
-        id: "https://openalex.org/I209863525",
-        display_name: "Public Knowledge Project",
-        ror: null,
-        country_code: null,
-        type: null
+        type: "education",
+        lineage: ["https://openalex.org/I18014758"]
     }
 ]
 ```

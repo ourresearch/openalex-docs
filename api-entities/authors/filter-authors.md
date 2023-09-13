@@ -17,6 +17,7 @@ You can filter using these attributes of the `Author` entity object (click each 
 * [`ids.openalex`](author-object.md#ids) (alias: `openalex`)
 * [`last_known_institution.country_code`](author-object.md#last\_known\_institution)
 * [`last_known_institution.id`](author-object.md#last\_known\_institution)
+* [`last_known_institution.lineage`](author-object.md#last\_known\_institution)
 * [`last_known_institution.ror`](author-object.md#last\_known\_institution)
 * [`last_known_institution.type`](author-object.md#last\_known\_institution)
 * [`orcid`](author-object.md#orcid)

@@ -208,6 +208,23 @@ international: {
 }
 ```
 
+### `lineage`
+
+_List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) of institutions. The list will include this institution's ID, as well as any parent institutions. If this institution has no parent institutions, this list will only contain its own ID.
+
+This information
+
+This information comes from [ROR's `relationships`](https://ror.readme.io/docs/ror-data-structure#relationships), specifically the Parent/Child relationships.
+
+```json
+id: "https://openalex.org/I170203145",
+...
+lineage: [
+    "https://openalex.org/I170203145",
+    "https://openalex.org/I90344618"
+]
+```
+
 ### `repositories`
 
 _List:_ Repositories ([`Sources`](../sources/) with `type: repository`) that have this institution as their [`host_organization`](../sources/source-object.md#host\_organization)
@@ -350,10 +367,11 @@ x_concepts: [
 
 ## The `DehydratedInstitution` object
 
-The `DehydratedInstitution` is stripped-down [`Institution`](institution-object.md#the-institution-object) object, with most of its properties removed to save weight. Its only remaining properties are:
+The `DehydratedInstitution` is a stripped-down [`Institution`](./institution-object.md) object, with most of its properties removed to save weight. Its only remaining properties are:
 
-* ``[`country_code`](institution-object.md#country\_code)``
-* ``[`display_name`](institution-object.md#display\_name)``
-* ``[`id`](institution-object.md#id)``
-* ``[`ror`](institution-object.md#ror)``
-* ``[`type`](institution-object.md#type)``
+* [`country_code`](./institution-object.md#country_code)
+* [`display_name`](./institution-object.md#display_name)
+* [`id`](./institution-object.md#id)
+* [`lineage`](./institution-object.md#lineage)
+* [`ror`](./institution-object.md#ror)
+* [`type`](./institution-object.md#type)

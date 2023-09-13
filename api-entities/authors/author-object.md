@@ -107,7 +107,8 @@ last_known_institution: {
     ror: "https://ror.org/02nr0ka47",
     display_name: "OurResearch",
     country_code: "CA",
-    type: "nonprofit"
+    type: "nonprofit",
+    lineage: ["https://openalex.org/I4200000001"]
 },
 ```
 
