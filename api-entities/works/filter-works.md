@@ -23,11 +23,11 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`authorships.author.orcid`](work-object/authorship-object.md#author) (alias: `author.orcid`)
 * [`authorships.countries`](work-object/authorship-object.md#countries)
 * [`authorships.institutions.country_code`](work-object/authorship-object.md#institutions) (alias: `institutions.country_code`)
-* [`authorships.institutions.id`](work-object/authorship-object.md#institutions) (alias `institutions.id`)
+* [`authorships.institutions.id`](work-object/authorship-object.md#institutions) (alias: `institutions.id`)
 * [`authorships.institutions.lineage`](work-object/authorship-object.md#institutions)
 * [`authorships.institutions.ror`](work-object/authorship-object.md#institutions) (alias: `institutions.ror`)
 * [`authorships.institutions.type`](work-object/authorship-object.md#institutions)
-* [`authorships.is_corresponding`](work-object/authorship-object.md#is_corresponding) (alias: `is_corresponding`): this filter marks whether or not we have corresponding author information for a given work
+* [`authorships.is_corresponding`](work-object/authorship-object.md#is_corresponding) (alias: `is_corresponding`) — This filter marks whether or not we have corresponding author information for a given work
 * [`apc_list.value`](work-object/#apc\_list)
 * [`apc_list.currency`](work-object/#apc\_list)
 * [`apc_list.provenance`](work-object/#apc\_list)
@@ -46,17 +46,17 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`best_oa_location.source.type`](work-object/#best\_oa\_location)
 * [`best_oa_location.version`](work-object/#best\_oa\_location)
 * [`cited_by_count`](work-object/#cited\_by\_count)
-* [`concepts.id`](work-object/#concepts) (alias: `concept.id`)
+* [`concepts.id`](work-object/#concepts) (alias: `concept.id`) — The concepts associated with a work
 * [`concepts.wikidata`](work-object/#concepts)
 * [`corresponding_author_ids`](work-object/#corresponding\_author\_ids)
 * [`corresponding_institution_ids`](work-object/#corresponding\_institution\_ids)
 * [`countries_distinct_count`](work-object/README.md#countries_distinct_count)
-* [`doi`](work-object/#title)
+* [`doi`](work-object/#title) — The DOI (Digital Object Identifier) of a work
 * [`grants.award_id`](work-object/#grants)
-* [`grants.funder`](work-object/#grants)
+* [`grants.funder`](work-object/#grants) — OpenAlex ID for a funder associated with
 * [`ids.pmcid`](work-object/#ids)
 * [`ids.pmid`](work-object/#ids) (alias: `pmid`)
-* [`ids.openalex`](work-object/#ids) (alias: `openalex`)
+* [`ids.openalex`](work-object/#ids) (alias: `openalex`) — The OpenAlex ID for a work
 * [`ids.mag`](work-object/#ids) (alias: `mag`)
 * [`institutions_distinct_count`](work-object/README.md#institutions_distinct_count)
 * [`is_paratext`](work-object/#is\_paratext)
