@@ -19,13 +19,13 @@ You can filter using these attributes of the [`Work`](work-object/) object (clic
 The `host_venue` and `alternate_host_venues` properties have been deprecated in favor of [`primary_location`](work-object/#primary\_location) and [`locations`](work-object/#locations). The attributes `host_venue` and `alternate_host_venues` are no longer available in the Work object, and trying to access them in filters or group-bys will return an error.
 {% endhint %}
 
-* [`authorships.author.id`](work-object/authorship-object.md#author) (alias: `author.id`)
-* [`authorships.author.orcid`](work-object/authorship-object.md#author) (alias: `author.orcid`)
+* [`authorships.author.id`](work-object/authorship-object.md#author) (alias: `author.id`) — Authors for a work (OpenAlex ID)
+* [`authorships.author.orcid`](work-object/authorship-object.md#author) (alias: `author.orcid`) — Authors for a work (ORCID)
 * [`authorships.countries`](work-object/authorship-object.md#countries)
 * [`authorships.institutions.country_code`](work-object/authorship-object.md#institutions) (alias: `institutions.country_code`)
-* [`authorships.institutions.id`](work-object/authorship-object.md#institutions) (alias: `institutions.id`)
+* [`authorships.institutions.id`](work-object/authorship-object.md#institutions) (alias: `institutions.id`) — Institutions affiliated with the authors of a work (OpenAlex ID)
 * [`authorships.institutions.lineage`](work-object/authorship-object.md#institutions)
-* [`authorships.institutions.ror`](work-object/authorship-object.md#institutions) (alias: `institutions.ror`)
+* [`authorships.institutions.ror`](work-object/authorship-object.md#institutions) (alias: `institutions.ror`) — Institutions affiliated with the authors of a work (ROR ID)
 * [`authorships.institutions.type`](work-object/authorship-object.md#institutions)
 * [`authorships.is_corresponding`](work-object/authorship-object.md#is_corresponding) (alias: `is_corresponding`) — This filter marks whether or not we have corresponding author information for a given work
 * [`apc_list.value`](work-object/#apc\_list)
@@ -38,7 +38,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`apc_paid.value_usd`](work-object/#apc\_paid)
 * [`best_oa_location.is_accepted`](work-object/#best\_oa\_location)
 * [`best_oa_location.is_published`](work-object/#best\_oa\_location)
-* [`best_oa_location.license`](work-object/#best\_oa\_location)
+* [`best_oa_location.license`](work-object/#best\_oa\_location) — The Open Acess license for a work
 * [`best_oa_location.source.id`](work-object/#best\_oa\_location)
 * [`best_oa_location.source.is_in_doaj`](work-object/#best\_oa\_location)
 * [`best_oa_location.source.issn`](work-object/#best\_oa\_location)
@@ -48,12 +48,12 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`cited_by_count`](work-object/#cited\_by\_count)
 * [`concepts.id`](work-object/#concepts) (alias: `concept.id`) — The concepts associated with a work
 * [`concepts.wikidata`](work-object/#concepts)
-* [`corresponding_author_ids`](work-object/#corresponding\_author\_ids)
+* [`corresponding_author_ids`](work-object/#corresponding\_author\_ids) — Corresponding authors for a work (OpenAlex ID)
 * [`corresponding_institution_ids`](work-object/#corresponding\_institution\_ids)
 * [`countries_distinct_count`](work-object/README.md#countries_distinct_count)
 * [`doi`](work-object/#title) — The DOI (Digital Object Identifier) of a work
-* [`grants.award_id`](work-object/#grants)
-* [`grants.funder`](work-object/#grants) — OpenAlex ID for a funder associated with
+* [`grants.award_id`](work-object/#grants) — Award IDs for grants
+* [`grants.funder`](work-object/#grants) — Funding organizations linked to grants for a work
 * [`ids.pmcid`](work-object/#ids)
 * [`ids.pmid`](work-object/#ids) (alias: `pmid`)
 * [`ids.openalex`](work-object/#ids) (alias: `openalex`) — The OpenAlex ID for a work
@@ -74,8 +74,8 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`locations.version`](work-object/#locations)
 * [`locations_count`](work-object/#locations\_count)
 * [`open_access.any_repository_has_fulltext`](work-object/#open\_access)
-* [`open_access.is_oa`](work-object/#open\_access) (alias: `is_oa`)
-* [`open_access.oa_status`](work-object/#open\_access) (alias: `oa_status`)
+* [`open_access.is_oa`](work-object/#open\_access) (alias: `is_oa`) — Whether a work is Open Access
+* [`open_access.oa_status`](work-object/#open\_access) (alias: `oa_status`) — The Open Access status for a work (e.g., gold, green, hybrid, etc.)
 * [`primary_location.is_accepted`](work-object/#primary\_location)
 * [`primary_location.is_oa`](work-object/#primary\_location)
 * [`primary_location.is_published`](work-object/#primary\_location)
@@ -102,6 +102,8 @@ These filters aren't attributes of the [`Work`](work-object/) object, but they'r
 
 #### `abstract.search`
 
+Text search using abstracts
+
 Value: a search string
 
 Returns: works whose abstract includes the given string. See the [search page](../../how-to-use-the-api/get-lists-of-entities/search-entities.md) for details on the search algorithm used.
@@ -109,6 +111,8 @@ Returns: works whose abstract includes the given string. See the [search page](.
 * Get works with abstracts that mention "artificial intelligence": [`https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence`](https://api.openalex.org/works?filter=abstract.search:artificial%20intelligence)
 
 #### `authors_count`
+
+Number of authors for a work
 
 Value: an Integer
 
@@ -179,11 +183,15 @@ Returns: works with the chosen number of [`concepts`](work-object/#concepts).
 
 #### `default.search`
 
+Text search across titles, abstracts, and full text of works
+
 Value: a search string
 
 This works the same as using the [`search` parameter](search-works.md#search-works) for Works.
 
 #### `display_name.search` (alias: `title.search`)
+
+Text search across titles for works
 
 Value: a search string
 
@@ -249,6 +257,8 @@ We combined some n-grams before storing them in our search database, so querying
 
 #### `has_abstract`
 
+Works that have an abstract available
+
 Value: a Boolean (`true` or `false`)
 
 Returns: works that have or lack an abstract, depending on the given value.
@@ -311,6 +321,8 @@ Returns: works that have or lack a PubMed identifier ([`pmid`](../authors/author
   [`https://api.openalex.org/works?filter=has_pmid:true`](https://api.openalex.org/works?filter=has\_pmid:true)\`\`
 
 #### `has_ngrams`
+
+Works that have n-grams available to enable full-text search in OpenAlex.
 
 Value: a Boolean (`true` or `false`)
 
