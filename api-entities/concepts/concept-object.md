@@ -4,7 +4,7 @@ These are the fields in a concept object. When you use the API to get a [single 
 
 ### `ancestors`
 
-_List:_ List of concepts that this concept descends from, as [dehydrated Concept](concept-object.md#the-dehydratedconcept-object) objects. See the [concept tree section](concept-object.md#the-concept-tree) for more details on how the different layers of concepts work together.
+_List:_ List of concepts that this concept descends from, as [dehydrated Concept](concept-object.md#the-dehydratedconcept-object) objects. See the [concept tree section](./README.md) for more details on how the different layers of concepts work together.
 
 ```json
 ancestors: [
