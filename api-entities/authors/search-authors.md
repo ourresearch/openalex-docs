@@ -18,7 +18,7 @@ You can read more in the [search page](../../how-to-use-the-api/get-lists-of-ent
 You can also use search as a [filter](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md), by appending `.search` to the end of the property you are filtering for:
 
 * Get authors with the name "john smith" in the display\_name:\
-  [https://api.openalex.org/authors?filter=display\_name.search:john smith](https://api.openalex.org/authors?filter=display\_name.search:john%20smith)
+  [`https://api.openalex.org/authors?filter=display\_name.search:john smith`](https://api.openalex.org/authors?filter=display\_name.search:john%20smith)
 
 When searching for authors, there is no difference when using the `search` parameter or the filter `display_name.search`, since display\_name is the only field searched when finding authors.
 
@@ -33,7 +33,7 @@ You can also use the filter `default.search`, which works the same as using the 
 You can autocomplete authors to create a very fast type-ahead style search function:
 
 * Autocomplete authors with "ronald sw" in the display name:\
-  [https://api.openalex.org/autocomplete/authors?q=ronald sw](https://api.openalex.org/autocomplete/authors?q=ronald%20sw)
+  [`https://api.openalex.org/autocomplete/authors?q=ronald sw`](https://api.openalex.org/autocomplete/authors?q=ronald%20sw)
 
 This returns a list of authors with their most cited work title as the hint:
 
@@ -56,7 +56,7 @@ This returns a list of authors with their most cited work title as the hint:
 The author hint is set to the author's most highly cited work by default. You can change that by adding the parameter `author_hint`  which accepts values `highly_cited_work` (default) or `institution`.  When set to `institution`, the hint displays the author's [last known institution](author-object.md#last\_known\_institution) in format \<display\_name>, \<country\_code>.
 
 * Autocomplete authors with the hint set to the author's last known institution\
-  [https://api.openalex.org/autocomplete/authors?q=carl%20s\&author\_hint=institution](https://api.openalex.org/autocomplete/authors?q=carl%20s\&author\_hint=institution)
+  [`https://api.openalex.org/autocomplete/authors?q=carl%20s\&author\_hint=institution`](https://api.openalex.org/autocomplete/authors?q=carl%20s\&author\_hint=institution)
 
 {% hint style="info" %}
 Read more about [autocomplete](../../how-to-use-the-api/get-lists-of-entities/autocomplete-entities.md).
