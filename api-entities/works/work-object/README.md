@@ -637,7 +637,7 @@ title: "The state of OA: a large-scale analysis of the prevalence and impact of 
 
 _String:_ The type of the work.
 
-You can see all of the different types along with their counts in the OpenAlex api here: [`https://api.openalex.org/works?group_by=type`](https://api.openalex.org/works?group\_by=type).
+You can see all of the different types along with their counts in the OpenAlex API here: [`https://api.openalex.org/works?group_by=type`](https://api.openalex.org/works?group\_by=type).
 
 Most works are type `article`. This includes what was formerly (and currently in [`type_crossref`](./#type\_crossref)) labeled as `journal-article`, `proceedings-article`, and `posted-content`. We consider all of these to be `article` type works, and the distinctions between them to be more about where they are published or hosted:
 
@@ -649,7 +649,7 @@ Most works are type `article`. This includes what was formerly (and currently in
 
 So, here is how you can filter for only non-preprint articles:
 
-* [https://api.openalex.org/works?filter=type:article,primary\_location.version:!submittedVersion](https://api.openalex.org/works?filter=type:article,primary\_location.version:!submittedVersion)
+* [`https://api.openalex.org/works?filter=type:article,primary\_location.version:!submittedVersion`](https://api.openalex.org/works?filter=type:article,primary\_location.version:!submittedVersion)
 
 Works that represent stuff that is _about_ the venue (such as a journal)—rather than a scholarly work properly speaking—have type `paratext`. These include things like front-covers, back-covers, tables of contents, and the journal itself (e.g., `https://openalex.org/W4232230324`).
 

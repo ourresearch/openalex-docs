@@ -33,7 +33,7 @@ Sources are also available via an alias: `/journals`
 You can look up journals using external IDs such as an ISSN:
 
 * Get the source with ISSN: `2041-1723`:\
-  [https://api.openalex.org/sources/issn:2041-1723](https://api.openalex.org/sources/issn:2041-1723)
+  [`https://api.openalex.org/sources/issn:2041-1723`](https://api.openalex.org/sources/issn:2041-1723)
 
 Available external IDs for sources are:
 

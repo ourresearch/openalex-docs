@@ -182,7 +182,7 @@ ids: {
 
 ### `is_in_doaj`
 
-_Boolean:_ Whether this is a journal listed in the [Directory of Open Access Journals](https://doaj.org/) (DOAJ). \*\*\*\*
+_Boolean:_ Whether this is a journal listed in the [Directory of Open Access Journals](https://doaj.org/) (DOAJ).
 
 ```json
 is_in_doaj: true 

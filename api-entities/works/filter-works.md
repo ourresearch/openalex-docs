@@ -51,7 +51,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`corresponding_author_ids`](work-object/#corresponding\_author\_ids) — Corresponding authors for a work (OpenAlex ID)
 * [`corresponding_institution_ids`](work-object/#corresponding\_institution\_ids)
 * [`countries_distinct_count`](work-object/README.md#countries_distinct_count)
-* [`doi`](work-object/#title) — The DOI (Digital Object Identifier) of a work
+* [`doi`](./work-object/README.md#doi) — The DOI (Digital Object Identifier) of a work
 * [`grants.award_id`](work-object/#grants) — Award IDs for grants
 * [`grants.funder`](work-object/#grants) — Funding organizations linked to grants for a work
 * [`ids.pmcid`](work-object/#ids)
@@ -315,7 +315,7 @@ Returns: works that have or lack a PubMed Central identifier ([`pmcid`](work-obj
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works that have or lack a PubMed identifier ([`pmid`](../authors/author-object.md#ids)), depending on the given value.
+Returns: works that have or lack a PubMed identifier ([`pmid`](work-object/#ids)), depending on the given value.
 
 * Get the works that have a `pmid`:\
   [`https://api.openalex.org/works?filter=has_pmid:true`](https://api.openalex.org/works?filter=has\_pmid:true)\`\`
