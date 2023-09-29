@@ -1,9 +1,9 @@
 # Search authors
 
-The best way to search for authors is to use the `search` query parameter, which searches the [`display_name`](../works/work-object/#display\_name) field in a flexible way. Example:
+The best way to search for authors is to use the `search` query parameter, which searches the [`display_name`](./author-object.md#display_name) and the [`display_name_alternatives`](./author-object.md#display_name_alternatives) fields. Example:
 
 * Get works with the author name "Carl Sagan":\
-  [https://api.openalex.org/authors?search=carl sagan](https://api.openalex.org/authors?search=carl%20sagan)
+  [`https://api.openalex.org/authors?search=carl sagan`](https://api.openalex.org/authors?search=carl%20sagan)
 
 Searching without a middle initial returns names with _and_ without middle initials. So a search for "John Smith" will also return "John W. Smith".&#x20;
 
@@ -53,10 +53,10 @@ This returns a list of authors with their most cited work title as the hint:
 </strong><strong>}
 </strong></code></pre>
 
-The author hint is set to the author's most highly cited work by default. You can change that by adding the parameter `author_hint`  which accepts values `highly_cited_work` (default) or `institution`.  When set to `institution`, the hint displays the author's [last known institution](author-object.md#last\_known\_institution) in format \<display\_name>, \<country\_code>.
+The author hint is set to the author's most highly cited work by default. You can change that by adding the parameter `author_hint`  which accepts values `highly_cited_work` (default) or `institution`.  When set to `institution`, the hint displays the author's [`last known institution`](author-object.md#last\_known\_institution) in format \<display\_name>, \<country\_code>.
 
 * Autocomplete authors with the hint set to the author's last known institution\
-  [`https://api.openalex.org/autocomplete/authors?q=carl%20s\&author\_hint=institution`](https://api.openalex.org/autocomplete/authors?q=carl%20s\&author\_hint=institution)
+  [`https://api.openalex.org/autocomplete/authors?q=carl%20s\&author_hint=institution`](https://api.openalex.org/autocomplete/authors?q=carl%20s\&author\_hint=institution)
 
 {% hint style="info" %}
 Read more about [autocomplete](../../how-to-use-the-api/get-lists-of-entities/autocomplete-entities.md).

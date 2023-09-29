@@ -1,9 +1,9 @@
 # Search institutions
 
-The best way to search for institutions is to use the `search` query parameter, which searches the [`display_name`](institution-object.md#display\_name). Example:
+The best way to search for institutions is to use the `search` query parameter, which searches the [`display_name`](institution-object.md#display\_name), the [`display_name_alternatives`](./institution-object.md#display_name_alternatives), and the [`display_name_acronyms`](./institution-object.md#display_name_acronyms). Example:
 
 * Search institutions for San Diego State University:\
-  [https://api.openalex.org/institutions?search=san diego state university](https://api.openalex.org/institutions?search=san%20diego%20state%20university)
+  [`https://api.openalex.org/institutions?search=san diego state university`](https://api.openalex.org/institutions?search=san%20diego%20state%20university)
 
 {% hint style="info" %}
 You can read more about search [here](../../how-to-use-the-api/get-lists-of-entities/search-entities.md). It will show you how relevance score is calculated, how words are stemmed to improve search results, and how to do complex boolean searches.
