@@ -3,7 +3,7 @@
 You can filter sources with the `filter` parameter:
 
 * Get sources that have an ISSN\
-  [https://api.openalex.org/sources?filter=has\_issn:true](https://api.openalex.org/sources?filter=has\_issn:true)
+  [`https://api.openalex.org/sources?filter=has_issn:true`](https://api.openalex.org/sources?filter=has\_issn:true)
 
 {% hint style="info" %}
 It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md) before trying these out. It will show you how to combine filters and build an AND, OR, or negation query
@@ -52,7 +52,7 @@ Value: a String with a valid [continent filter](../geo/continents.md#filter-by-c
 Returns: sources that are associated with the chosen continent.
 
 * Get sources that are associated with Asia\
-  [https://api.openalex.org/sources?filter=continent:asia](https://api.openalex.org/sources?filter=continent:asia)
+  [`https://api.openalex.org/sources?filter=continent:asia`](https://api.openalex.org/sources?filter=continent:asia)
 
 #### `default.search`
 
@@ -89,4 +89,4 @@ Value: a Boolean (`true` or `false`)
 Returns: sources that are associated with the [Global South](../geo/regions.md#global-south).
 
 * Get sources that are located in the Global South\
-  [https://api.openalex.org/sources?filter=is\_global\_south:true](https://api.openalex.org/sources?filter=is\_global\_south:true)
+  [`https://api.openalex.org/sources?filter=is\_global\_south:true`](https://api.openalex.org/sources?filter=is\_global\_south:true)
