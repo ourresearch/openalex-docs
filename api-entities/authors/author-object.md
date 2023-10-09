@@ -75,7 +75,6 @@ id: "https://openalex.org/A2208157607"
 
 _Object:_ All the external identifiers that we know about for this author. IDs are expressed as URIs whenever possible. Possible ID types:
 
-* `mag`  (_Integer:_ this author's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `openalex` (_String:_ this author's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Author.id`](author-object.md#id))
 * `orcid` (_String:_ this author's [ORCID](https://orcid.org/) [ID](https://en.wikipedia.org/wiki/RAS\_syndrome). Same as [`Author.orcid`](author-object.md#orcid))
 * `scopus` (_String_: this author's [Scopus author ID](https://utas.libguides.com/ManageID/Scopus))
@@ -88,10 +87,9 @@ Most authors are missing one or more ID types (either because we don't know the 
 
 ```json
 ids: {
-    openalex: "https://openalex.org/A2208157607",
+    openalex: "https://openalex.org/A5023888391",
     orcid: "https://orcid.org/0000-0001-6187-6610",
     scopus: "http://www.scopus.com/inward/authorDetails.url?authorID=36455008000&partnerID=MN8TOARS",
-    mag: 2208157607
 },
 ```
 

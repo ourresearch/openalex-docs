@@ -33,16 +33,13 @@ You can look up authors using external IDs such as an ORCID:
 * Get the author with this ORCID: `https://orcid.org/0000-0002-1298-3089`:\
   [`https://api.openalex.org/authors/https://orcid.org/0000-0002-1298-3089`](https://api.openalex.org/authors/https://orcid.org/0000-0002-1298-3089)
 
-You can use the full ID or a shorter Uniform Resource Name (URN) format like so:
-
-* Get the author with MAG ID: `2849421448`:\
-  [https://api.openalex.org/authors/orcid:0000-0002-1298-3089](https://api.openalex.org/authors/orcid:0000-0002-1298-3089)
+You can use the full ID or a shorter Uniform Resource Name (URN) format like so:\
+  [`https://api.openalex.org/authors/orcid:0000-0002-1298-3089`](https://api.openalex.org/authors/orcid:0000-0002-1298-3089)
 
 Available external IDs for authors are:
 
 | External ID                    | URN         |
 | ------------------------------ | ----------- |
-| Microsoft Academic Graph (MAG) | `mag`       |
 | ORCID                          | `orcid`     |
 | Scopus                         | `scopus`    |
 | Twitter                        | `twitter`   |
