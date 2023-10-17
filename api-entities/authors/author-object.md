@@ -203,7 +203,7 @@ x_concepts: [
 
 The `DehydratedAuthor` is stripped-down [`Author`](author-object.md#the-author-object) object, with most of its properties removed to save weight. Its only remaining properties are:
 
-* ``[`id`](author-object.md#id)``
-* ``[`display_name`](author-object.md#display\_name)``
-* ``[`orcid`](author-object.md#orcid)``
+* [`id`](author-object.md#id)
+* [`display_name`](author-object.md#display\_name)
+* [`orcid`](author-object.md#orcid)
 
