@@ -35,28 +35,24 @@ You can autocomplete authors to create a very fast type-ahead style search funct
 * Autocomplete authors with "ronald sw" in the display name:\
   [`https://api.openalex.org/autocomplete/authors?q=ronald sw`](https://api.openalex.org/autocomplete/authors?q=ronald%20sw)
 
-This returns a list of authors with their most cited work title as the hint:
+This returns a list of authors with their last known affiliated institution as the hint:
 
 <pre class="language-json"><code class="lang-json">{ 
   "results": [
       {
-          "id": "https://openalex.org/A2295942430",
+          "id": "https://openalex.org/A5007433649",
           "display_name": "Ronald Swanstrom",
-          "hint": "Identification and characterization of transmitted and early founder virus envelopes in primary HIV-1 infection (2008)",
-          "cited_by_count": 12287,
-          "works_count": 235,
+          "hint": "University of North Carolina at Chapel Hill, USA",
+          "cited_by_count": 19142,
+          "works_count": 339,
           "entity_type": "author",
-          "external_id": "https://orcid.org/0000-0001-7777-0773"
+          "external_id": "https://orcid.org/0000-0001-7777-0773",
+          "filter_key": "authorships.author.id"
        },
        ...
 <strong>  ]
 </strong><strong>}
 </strong></code></pre>
-
-The author hint is set to the author's most highly cited work by default. You can change that by adding the parameter `author_hint`  which accepts values `highly_cited_work` (default) or `institution`.  When set to `institution`, the hint displays the author's [`last known institution`](author-object.md#last\_known\_institution) in format \<display\_name>, \<country\_code>.
-
-* Autocomplete authors with the hint set to the author's last known institution\
-  [`https://api.openalex.org/autocomplete/authors?q=carl%20s\&author_hint=institution`](https://api.openalex.org/autocomplete/authors?q=carl%20s\&author\_hint=institution)
 
 {% hint style="info" %}
 Read more about [autocomplete](../../how-to-use-the-api/get-lists-of-entities/autocomplete-entities.md).

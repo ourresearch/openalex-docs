@@ -68,7 +68,7 @@ display_name_alternatives: [
 _String:_ The OpenAlex ID for this author.
 
 ```json
-id: "https://openalex.org/A2208157607"
+id: "https://openalex.org/A5023888391"
 ```
 
 ### `ids`
@@ -155,7 +155,7 @@ _String:_ A URL that will get you a list of all this author's works.
 We express this as an API URL (instead of just listing the works themselves) because sometimes an author's publication list is too long to reasonably fit into a single author object.
 
 ```json
-works_api_url: "https://api.openalex.org/works?filter=author.id:A2208157607",
+works_api_url: "https://api.openalex.org/works?filter=author.id:A5023888391",
 ```
 
 ### `works_count`
@@ -167,13 +167,13 @@ works_count: 38
 ```
 
 {% hint style="info" %}
-This is updated a couple times per day. So the count may be slightly different than what's in works when viewed [like this](https://api.openalex.org/works?filter=author.id:A2151238091).&#x20;
+This is updated a couple times per day. So the count may be slightly different than what's in works when viewed [like this](https://api.openalex.org/works?filter=author.id:A5023888391).
 {% endhint %}
 
 ### `x_concepts`
 
 {% hint style="danger" %}
-The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.&#x20;
+The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.
 {% endhint %}
 
 _List:_ The concepts most frequently applied to works created by this author. Each is represented as a [dehydrated `Concept`](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:

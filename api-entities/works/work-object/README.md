@@ -55,11 +55,11 @@ _List:_ List of [`Authorship`](authorship-object.md) objects, each representing 
 authorships: [
     // first authorship object:
     {
-        author_position: "first",
+        author_position: "middle",
         author: {
-            id: "https://openalex.org/A1969205032",
-            display_name: "Heather A. Piwowar",
-            orcid: "https://orcid.org/0000-0003-1613-5981"
+            id: "https://openalex.org/A5023888391",
+            display_name: "Jason Priem",
+            orcid: "https://orcid.org/0000-0001-6187-6610"
         },
         institutions: [
             {
@@ -246,7 +246,7 @@ concepts: [
 _List:_ [OpenAlex IDs](../../../how-to-use-the-api/get-single-entities/#the-openalex-id) of any authors for which [authorships.is\_corresponding](authorship-object.md#is\_corresponding) is `true`.
 
 ```json
-corresponding_author_ids: ["https://openalex.org/A2109306456"]
+corresponding_author_ids: ["https://openalex.org/A5004365451"]
 ```
 
 ### `corresponding_institution_ids`

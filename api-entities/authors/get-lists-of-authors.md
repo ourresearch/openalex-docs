@@ -10,22 +10,18 @@ Which returns a response like this:
 ```json
 {
     "meta": {
-        "count": 264762265,
-        "db_response_time_ms": 81,
+        "count": 93011659,
+        "db_response_time_ms": 150,
         "page": 1,
         "per_page": 25
     },
     "results": [
         {
-            "id": "https://openalex.org/A2479313101",
-            "orcid": "https://orcid.org/0000-0002-7436-3176",
-            "display_name": "Charles Thomas Parker",
+            "id": "https://openalex.org/A5053780153",
             // more fields (removed to save space)
         },
         {
-            "id": "https://openalex.org/A2307396757",
-            "orcid": "https://orcid.org/0000-0002-4465-7034",
-            "display_name": "George M. Garrity",
+            "id": "https://openalex.org/A5032245741",
             // more fields (removed to save space)
         },
         // more results (removed to save space)

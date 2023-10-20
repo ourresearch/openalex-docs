@@ -38,15 +38,15 @@ Because OpenAlex was launched as a replacement for [Microsoft Academic Graph (MA
 
 At times we need to merge two Entities, effectively deleting one of them. This usually happens when we discover two Entities that represent the same real-world entity - for example, two [`Authors`](../../api-entities/authors/) that are really the same person.
 
-If you request an Entity using its OpenAlex ID, and that Entity has been merged into another Entity, you will be redirected to the Entity it has been merged into. For example, https://openalex.org/A2224836008 has been merged into https://openalex.org/A2208157607, so in the API the former will redirect to the latter:
+If you request an Entity using its OpenAlex ID, and that Entity has been merged into another Entity, you will be redirected to the Entity it has been merged into. For example, https://openalex.org/A5092938886 has been merged into https://openalex.org/A5006060960, so in the API the former will redirect to the latter:
 
 ```bash
-$ curl -i https://api.openalex.org/authors/A2224836008
+$ curl -i https://api.openalex.org/authors/A5092938886
 HTTP/1.1 301 MOVED PERMANENTLY
-Location: https://api.openalex.org/authors/A2208157607
+Location: https://api.openalex.org/authors/A5006060960
 ```
 
-Most clients will handle this transparently; you'll get the data for author A2208157607 without knowing the redirect even happened. If you have stored Entity ID lists and _do_ notice the redirect, you might as well replace the merged-away ID to skip the redirect next time.
+Most clients will handle this transparently; you'll get the data for author A5006060960 without knowing the redirect even happened. If you have stored Entity ID lists and _do_ notice the redirect, you might as well replace the merged-away ID to skip the redirect next time.
 
 ## Supported IDs
 
