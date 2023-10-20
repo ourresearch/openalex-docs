@@ -48,6 +48,8 @@ To retrieve the next page of results, copy the `meta.next_cursor` value into the
 
 This second page of results will have a new value for `meta.next_cursor`. You'll use this new value the same way you did the first, and it'll give you the second page of results. To get _all_ the results, keep repeating this process until `meta.next_cursor` is null and the `results` set is empty.
 
+Besides using cursor paging to get entities, you can also use it in [`group_by` queries](../get-groups-of-entities.md).
+
 {% hint style="danger" %}
 **Don't use cursor paging to download the whole dataset.**
 
