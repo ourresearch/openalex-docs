@@ -315,6 +315,19 @@ Occasionally, a work has more than one DOI--for example, there might be one DOI 
 doi: "https://doi.org/10.7717/peerj.4375"
 ```
 
+### `fulltext_origin`
+
+_String:_ If a work's full text is searchable in OpenAlex ([`has_fulltext`](#has_fulltext) is `true`), this tells you how we got the text. This will be one of:
+
++ `pdf`: We used [Grobid](https://grobid.readthedocs.io) to get the text from an open-access PDF.
++ `ngrams`: Full text search is enabled using [N-grams obtained from the Internet Archive](../get-n-grams.md).
+
+This attribute is only available for works with `has_fulltext:true`.
+
+```json
+fulltext_origin: "pdf"
+```
+
 ### `grants`
 
 _List:_ List of grant objects, which include the [`Funder`](../../funders/) and the award ID, if available. Our grants data comes from Crossref, and is currently fairly limited.
@@ -334,6 +347,16 @@ grants: [
         award_id: null,
     },
 ]
+```
+
+### `has_fulltext`
+
+_Boolean:_ Set to `true` if the work's full text is searchable in OpenAlex. This does not necessarily mean that the full text is available to you, dear reader; rather, it means that we have indexed the full text and can use it to help power [searches](../search-works.md). If you are trying to find the full text for yourself, try looking in [`open_access.oa_url`](#open_access).
+
+We get access to the full text in one of two ways: either using an open-access PDF, or using [N-grams obtained from the Internet Archive](../get-n-grams.md). You can learn where a work's full text came from at [`fulltext_origin`](#fulltext_origin).
+
+```json
+has_fulltext: true
 ```
 
 ### `host_venue` (deprecated)

@@ -1,11 +1,11 @@
 # Search works
 
-The best way to search for works is to use the `search` query parameter, which searches across [titles](work-object/#title), [abstracts](work-object/#abstract\_inverted\_index), and [fulltext](work-object/#the-ngram-object). Example:
+The best way to search for works is to use the `search` query parameter, which searches across [titles](work-object/#title), [abstracts](work-object/#abstract\_inverted\_index), and [fulltext](work-object/README.md#has_fulltext). Example:
 
 * Get works with search term "dna" in the title, abstract, or fulltext:\
   [`https://api.openalex.org/works?search=dna`](https://api.openalex.org/works?search=dna)
 
-Fulltext search is powered by an index of word sequences called n-grams - see [Get N-grams](get-n-grams.md) for more details.
+Fulltext search is available for a subset of works, see [`Work.has_fulltext`](./work-object/README.md#has_fulltext) for more details.
 
 {% hint style="info" %}
 You can read more about search [here](../../how-to-use-the-api/get-lists-of-entities/search-entities.md). It will show you how relevance score is calculated, how words are stemmed to improve search results, and how to do complex boolean searches.

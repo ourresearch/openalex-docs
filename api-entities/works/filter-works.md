@@ -52,8 +52,10 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`corresponding_institution_ids`](work-object/#corresponding\_institution\_ids)
 * [`countries_distinct_count`](work-object/README.md#countries_distinct_count)
 * [`doi`](./work-object/README.md#doi) — The DOI (Digital Object Identifier) of a work
+* [`fulltext_origin`](work-object/README.md#fulltext_origin)
 * [`grants.award_id`](work-object/#grants) — Award IDs for grants
 * [`grants.funder`](work-object/#grants) — Funding organizations linked to grants for a work
+* [`has_fulltext`](work-object/README.md#has_fulltext)
 * [`ids.pmcid`](work-object/#ids)
 * [`ids.pmid`](work-object/#ids) (alias: `pmid`)
 * [`ids.openalex`](work-object/#ids) (alias: `openalex`) — The OpenAlex ID for a work
@@ -247,7 +249,7 @@ Learn more about using this filter to get the freshest data possible with our [P
 
 Value: a search string
 
-Returns: works whose fulltext includes the given string. Fulltext search is powered by an index of word sequences called n-grams - see [Get N-grams](get-n-grams.md) for coverage details.
+Returns: works whose fulltext includes the given string. Fulltext search is available for a subset of works, obtained either from PDFs or [n-grams](./get-n-grams.md), see [`Work.has_fulltext`](work-object/README.md#has_fulltext) for more details.
 
 * Get works with fulltext that mention "climate change": [`https://api.openalex.org/works?filter=fulltext.search:climate%20change`](https://api.openalex.org/works?filter=fulltext.search:climate%20change)\`\`
 
@@ -320,7 +322,7 @@ Returns: works that have or lack a PubMed identifier ([`pmid`](work-object/#ids)
 * Get the works that have a `pmid`:\
   [`https://api.openalex.org/works?filter=has_pmid:true`](https://api.openalex.org/works?filter=has\_pmid:true)\`\`
 
-#### `has_ngrams`
+#### `has_ngrams` (DEPRECATED)
 
 Works that have n-grams available to enable full-text search in OpenAlex.
 
