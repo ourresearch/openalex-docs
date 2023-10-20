@@ -1,9 +1,9 @@
 # Select fields
 
-You can use `select` to limit the fields that are returned in results.&#x20;
+You can use `select` to limit the fields that are returned in results.
 
 * Display works with only the `id`, `doi`, and `display_name` returned in the results\
-  [https://api.openalex.org/works?select=id,doi,display\_name](https://api.openalex.org/works?select=id,doi,display\_name)
+  [`https://api.openalex.org/works?select=id,doi,display\_name`](https://api.openalex.org/works?select=id,doi,display\_name)
 
 ```json
 "results": [
