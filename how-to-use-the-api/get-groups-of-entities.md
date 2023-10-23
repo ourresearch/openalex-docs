@@ -88,3 +88,5 @@ Otherwise, `key` is the same as `key_display_name`; both are the raw value of th
 ## Paging
 
 The maximum number of groups returned is 200. If you want to get more than 200 groups, you can use cursor pagination. This works the same as it does when getting lists of entities, so [head over to the section on paging through lists of results](./get-lists-of-entities/paging.md#cursor-paging) to learn how.
+
+Due to technical constraints, when paging, results are sorted by key, rather than by count.
