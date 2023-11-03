@@ -404,14 +404,6 @@ _Integer:_ Number of distinct [`institutions`](../../institutions/) among the [`
 institutions_distinct_count: 4
 ```
 
-### `is_oa`
-
-_Boolean:_ Set to `true` if the work hosted here can be read for free, without registration.
-
-```json
-is_oa: true
-```
-
 ### `is_paratext`
 
 _Boolean:_ True if we think this work is [paratext](https://en.wikipedia.org/wiki/Paratext).

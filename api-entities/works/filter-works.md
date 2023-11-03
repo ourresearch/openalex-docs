@@ -281,7 +281,7 @@ Returns: works that have or lack a DOI, depending on the given value. It's espec
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works with at least one of the [`locations`](work-object/#locations) has [`is_oa`](work-object/#is\_oa)= true and [`version`](work-object/#version) is acceptedVersion or publishedVersion. For Works that undergo peer review, like journal articles, this means there is a peer-reviewed OA copy somewhere. For some items, like books, a published version doesn't imply peer review, so they aren't quite synonymous.
+Returns: works with at least one of the [`locations`](work-object/#locations) has [`is_oa`](work-object/location-object.md#is_oa)= true and [`version`](work-object/#version) is acceptedVersion or publishedVersion. For Works that undergo peer review, like journal articles, this means there is a peer-reviewed OA copy somewhere. For some items, like books, a published version doesn't imply peer review, so they aren't quite synonymous.
 
 * Get works with an OA accepted or published copy\
   [`https://api.openalex.org/works?filter=has_oa_accepted_or_published_version:true`](https://api.openalex.org/works?filter=has\_oa\_accepted\_or\_published\_version:true)
@@ -290,7 +290,7 @@ Returns: works with at least one of the [`locations`](work-object/#locations) ha
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works with at least one of the [`locations`](work-object/#locations) has [`is_oa`](work-object/#is\_oa)= true and [`version`](work-object/#version) is submittedVersion. This is useful for finding works with preprints deposited somewhere.
+Returns: works with at least one of the [`locations`](work-object/#locations) has [`is_oa`](work-object/location-object.md#is_oa)= true and [`version`](work-object/#version) is submittedVersion. This is useful for finding works with preprints deposited somewhere.
 
 * Get works with an OA submitted copy:\
   [`https://api.openalex.org/works?filter=has_oa_submitted_version:true`](https://api.openalex.org/works?filter=has\_oa\_submitted\_version:true)\`\`
