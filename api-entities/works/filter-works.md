@@ -299,7 +299,7 @@ Returns: works with at least one of the [`locations`](work-object/#locations) ha
 
 Value: a Boolean (`true` or `false`)
 
-Returns: if `true` it returns works where at least one author or has an [ORCID ID](work-object/#ids). If `false`, it returns works where no authors have an ORCID ID. This is based on the `orcid` field within [`authorships.author`](work-object/#author).
+Returns: if `true` it returns works where at least one author or has an [ORCID ID](work-object/#ids). If `false`, it returns works where no authors have an ORCID ID. This is based on the `orcid` field within [`authorships.author`](work-object/authorship-object.md#author). Note that, sometimes, we assign ORCID using [author disambiguation](../authors/author-disambiguation.md), so this does not necessarily mean that the work itself has ORCID information.
 
 * Get the works where at least one author has an ORCID ID:\
   [`https://api.openalex.org/works?filter=has_orcid:true`](https://api.openalex.org/works?filter=has\_orcid:true) \`\`
@@ -325,6 +325,8 @@ Returns: works that have or lack a PubMed identifier ([`pmid`](work-object/#ids)
 #### `has_ngrams` (DEPRECATED)
 
 Works that have n-grams available to enable full-text search in OpenAlex.
+
+This filter has been deprecated. See instead: [`has_fulltext`](work-object/README.md#has_fulltext).
 
 Value: a Boolean (`true` or `false`)
 
