@@ -2,58 +2,49 @@
 
 Sometimes instead of just listing entities, you want to _group them_ into facets, and count how many entities are in each group. For example, maybe you want to count the number of `Works` by [open access status](../api-entities/works/work-object/#open\_access). To do that, you call the entity endpoint, adding the `group_by` parameter. Example:
 
-* Get counts of works by Open Access status:\
-  [`https://api.openalex.org/works?group_by=oa_status`](https://api.openalex.org/works?group\_by=oa\_status)
+* Get counts of works by type:\
+  [`https://api.openalex.org/works?group_by=type`](https://api.openalex.org/works?group_by=type)
 
-This returns a `meta` object with details about the query, an empty `results` object, and a `group_by` object with the groups you've asked for:
+This returns a `meta` object with details about the query, and a `group_by` object with the groups you've asked for:
 
 ```json
 {
     meta: {
-        count: 6,
-        db_response_time_ms: 26,
+        count: 246136992,
+        db_response_time_ms: 271,
         page: 1,
-        per_page: 200
+        per_page: 200,
+        groups_count: 15
     },
-    results: [ ],
     group_by: [
         {
-            key: "unknown",
-            key_display_name: "unknown",
-            count: 110691108
+            key: "article",
+            key_display_name: "article",
+            count: 202814957
         },
         {
-            key: "closed",
-            key_display_name: "closed",
-            count: 66862508
+            key: "book-chapter",
+            key_display_name: "book-chapter",
+            count: 21250659
         },
         {
-            key: "gold",
-            key_display_name: "gold",
-            count: 11087903
+            key: "dissertation",
+            key_display_name: "dissertation",
+            count: 6055973
         },
         {
-            key: "bronze",
-            key_display_name: "bronze",
-            count: 10499470
+            key: "book",
+            key_display_name: "book",
+            count: 5400871
         },
-        {
-            key: "green",
-            key_display_name: "green",
-            count: 6918466
-        },
-        {
-            key: "hybrid",
-            key_display_name: "hybrid",
-            count: 3277958
-        }
+        ...
     ]
 }
 ```
 
-So from this we can see that the majority of works (66,862,508 of them) are `closed`, with another 10,499,470 `bronze`, and so forth. &#x20;
+So from this we can see that the majority of works (202,814,957 of them) are type `article`, with another 21,250,659 `book-chapter`, and so forth.
 
-You can group by most of the same properties that you can [filter](get-lists-of-entities/filter-entity-lists.md) by, and you can combine grouping with filtering.&#x20;
+You can group by most of the same properties that you can [filter](get-lists-of-entities/filter-entity-lists.md) by, and you can combine grouping with filtering.
 
 ## Group properties
 
@@ -71,6 +62,15 @@ Value: a string; the `display_name` or raw value of the `group_by` parameter for
 
 Value: an integer; the number of entities in the group.&#x20;
 
+## "Unknown" groups
+
+The "unknown" group is hidden by default. If you want to include this group in the response, add `:include_unknown` after the group-by parameter.
+
+* Group works by [`authorships.countries](../api-entities/works/work-object/authorship-object.md#countries) (unknown group hidden):\
+  [https://api.openalex.org/works?group_by=authorships.countries](https://api.openalex.org/works?group_by=authorships.countries)
+* Group works by [`authorships.countries](../api-entities/works/work-object/authorship-object.md#countries) (includes unknown group):\
+  [https://api.openalex.org/works?group_by=authorships.countries:include_unknown](https://api.openalex.org/works?group_by=authorships.countries:include_unknown)
+
 ## `key` and `key_display_name`
 
 If the value being grouped by is an OpenAlex `Entity`, the [`key`](get-groups-of-entities.md#key) and [`key_display_name`](get-groups-of-entities.md#key\_display\_name) properties will be that `Entity`'s `id` and `display_name`, respectively.
@@ -84,6 +84,14 @@ Otherwise, `key` is the same as `key_display_name`; both are the raw value of th
 * Group `Concepts` by [`level`](../api-entities/concepts/concept-object.md#level):\
   [`https://api.openalex.org/concepts?group_by=level`](https://api.openalex.org/concepts?group\_by=level)
 * For one group, both `key` and `key_display_name` are "3".
+
+## Group-by `meta` properties
+
+`meta.count` is the total number of works (this will be all works if no filter is applied). `meta.groups_count` is the count of groups (in the current page).
+
+If there are no groups in the response, `meta.groups_count` is `null`.
+
+Due to a technical limitation, we can only report the number of groups *in the current page,* and not the total number of groups.
 
 ## Paging
 

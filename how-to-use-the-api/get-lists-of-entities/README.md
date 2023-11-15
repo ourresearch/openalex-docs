@@ -9,8 +9,8 @@ This query returns a `meta` object with details about the query, a `results` lis
 
 ```json
 meta: {
-    count: 64,843,
-    db_response_time_ms: 11,
+    count: 65073,
+    db_response_time_ms: 81,
     page: 1,
     per_page: 25
     },
