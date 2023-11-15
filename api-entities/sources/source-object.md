@@ -233,7 +233,7 @@ societies: [
 
 _Object:_ Citation metrics for this source
 
-* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this source. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor).
+* `2yr_mean_citedness` _Float_: The 2-year mean citedness for this source. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor). We use the year prior to the current year for the citations (the numerator) and the two years prior to that for the citation-receiving publications (the denominator).
 * `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this source.
 * `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level\_metrics#i-10-index) for this source.
 
