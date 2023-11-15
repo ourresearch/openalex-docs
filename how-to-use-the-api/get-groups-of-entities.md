@@ -66,10 +66,10 @@ Value: an integer; the number of entities in the group.&#x20;
 
 The "unknown" group is hidden by default. If you want to include this group in the response, add `:include_unknown` after the group-by parameter.
 
-* Group works by [`authorships.countries](../api-entities/works/work-object/authorship-object.md#countries) (unknown group hidden):\
-  [https://api.openalex.org/works?group_by=authorships.countries](https://api.openalex.org/works?group_by=authorships.countries)
-* Group works by [`authorships.countries](../api-entities/works/work-object/authorship-object.md#countries) (includes unknown group):\
-  [https://api.openalex.org/works?group_by=authorships.countries:include_unknown](https://api.openalex.org/works?group_by=authorships.countries:include_unknown)
+* Group works by [`authorships.countries`](../api-entities/works/work-object/authorship-object.md#countries) (unknown group hidden):\
+  [`https://api.openalex.org/works?group_by=authorships.countries`](https://api.openalex.org/works?group_by=authorships.countries)
+* Group works by [`authorships.countries`](../api-entities/works/work-object/authorship-object.md#countries) (includes unknown group):\
+  [`https://api.openalex.org/works?group_by=authorships.countries:include_unknown`](https://api.openalex.org/works?group_by=authorships.countries:include_unknown)
 
 ## `key` and `key_display_name`
 
