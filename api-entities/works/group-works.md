@@ -69,6 +69,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`is_retracted`](work-object/#is\_retracted)
 * [`is_paratext`](work-object/#is\_paratext)
 * [`journal`](filter-works.md#journal)
+* [`keywords.keyword`](work-object/#keywords)
 * [`language`](work-object/#language)
 * [`locations.is_accepted`](work-object/#locations)
 * [`locations.is_published`](work-object/#locations)

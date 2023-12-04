@@ -431,6 +431,29 @@ This field has high precision but low recall. In other words, if `is_retracted` 
 is_retracted: false 
 ```
 
+### `keywords`
+
+_List of objects:_ Keywords extracted from the work's title, along with confidence scores from the extraction model.
+
+We use a pretrained model to extract a list of keywords from the work's title. Not all works are assigned keywords. [See the model documentation for more details.](https://github.com/ourresearch/openalex-keywords/tree/main/v1)
+
+```json
+[
+    {
+        keyword: "coastal marine ecosystems",
+        score: 0.5626
+    },
+    {
+        keyword: "kelp detritus",
+        score: 0.5403
+    },
+    {
+        keyword: "secondary production",
+        score: 0.3469
+    }
+]
+```
+
 ### `language`
 
 _String:_ The language of the work in [ISO 639-1 format](https://en.wikipedia.org/wiki/List\_of\_ISO\_639-1\_codes). The language is automatically detected using the information we have about the work. We use the [langdetect](https://pypi.org/project/langdetect/) software library on the words in the work's abstract, or the title if we do not have the abstract. The source code for this procedure is [here.](https://github.com/ourresearch/openalex-guts/blob/54471c6c8e3c59662c4a4d9c37320af7b1667b2b/models/work.py#LL1102C1-L1102C1) Keep in mind that this method is not perfect, and that in some cases the language of the title or abstract could be different from the body of the work.

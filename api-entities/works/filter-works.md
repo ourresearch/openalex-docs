@@ -63,6 +63,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`institutions_distinct_count`](work-object/README.md#institutions_distinct_count)
 * [`is_paratext`](work-object/#is\_paratext)
 * [`is_retracted`](work-object/#is\_retracted)
+* [`keywords.keyword`](work-object/#keywords)
 * [`language`](work-object/#language)
 * [`locations.is_accepted`](work-object/#locations)
 * [`locations.is_oa`](work-object/#locations)
