@@ -200,7 +200,7 @@ is_oa: true
 
 ### `issn`
 
-_List:_ The [ISSNs](https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number) used by this source. Many publications have multiple ISSNs ([see above](source-object.md#issn\_l)), so [ISSN-L](source-object.md#issn\_l) should be used when possible.
+_List:_ The [ISSNs](https://en.wikipedia.org/wiki/International\_Standard\_Serial\_Number) used by this source. Many publications have multiple ISSNs , so [ISSN-L](source-object.md#issn\_l) should be used when possible.
 
 ```json
 issn: ["2167-8359"]
