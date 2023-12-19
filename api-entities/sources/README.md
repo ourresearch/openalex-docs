@@ -4,14 +4,14 @@ description: Journals and repositories that host works
 
 # 📚 Sources
 
-Sources are where works are hosted. OpenAlex indexes about 226,000 sources. There are several types, including journals, conferences, preprint repositories, and institutional repositories.
+Sources are where works are hosted. OpenAlex indexes about 249,000 sources. There are several types, including journals, conferences, preprint repositories, and institutional repositories.
 
 * Get a list of OpenAlex sources:\
   [`https://api.openalex.org/sources`](https://api.openalex.org/sources)
 
 The [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for sources is ISSN-L, which is a special "main" ISSN assigned to every sources (sources tend to have multiple ISSNs). About 90% of sources in OpenAlex have an ISSN-L or ISSN.
 
-Our information about sources comes from Crossref, the ISSN Network, and MAG. These datasets are joined automatically where possible, but there’s also a lot of manual combining involved. We do not curate journals, so any journal that is available in the data sources should make its way into OpenAlex.&#x20;
+Our information about sources comes from Crossref, the ISSN Network, and MAG. These datasets are joined automatically where possible, but there’s also a lot of manual combining involved. We do not curate journals, so any journal that is available in the data sources should make its way into OpenAlex.
 
 Several sources may host the same work. OpenAlex reports both the primary host source (generally wherever the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record) lives), and alternate host sources (like preprint repositories).
 
