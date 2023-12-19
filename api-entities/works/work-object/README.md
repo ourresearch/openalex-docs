@@ -667,6 +667,8 @@ sustainable_development_goals: [
 
 _String:_ The title of this work.
 
+This is exactly the same as [`Work.display_name`](./README.md#display_name). We include both attributes with the same information because we want all entities to have a `display_name`, but there's a longstanding tradition of calling this the "title," so we figured you'll be expecting works to have it as a property.
+
 ```json
 title: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
 ```
