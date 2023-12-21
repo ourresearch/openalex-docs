@@ -95,9 +95,13 @@ ids: {
 
 ### `last_known_institution`
 
+**Will be deprecated**
+
 _Object:_ This author's last known institutional affiliation. In this context "last known" means that we took all the [Works](../works/work-object/) where this author has an institutional affiliation, sorted them by publication date, and selected the most recent one.
 
 This is a [dehydrated `Institution`](../institutions/institution-object.md#the-dehydratedinstitution-object) object, and you can find more documentation on the [Institution](../institutions/institution-object.md) page.
+
+This will be deprecated in the future in favor of [`last_known_institutions`](./author-object.md#last_known_institutions).
 
 ```json
 last_known_institution: {
@@ -108,6 +112,23 @@ last_known_institution: {
     type: "nonprofit",
     lineage: ["https://openalex.org/I4200000001"]
 },
+```
+
+### `last_known_institutions`
+
+_List:_ List of Institution objects. This author's last known institutional affiliations. In this context "last known" means that we took all the author's [Works](../works/work-object/), sorted them by publication date, and selected the most recent one. If there is only one affiliated institution for this author for the work, this will be a list of length 1; if there are multiple affiliations, they will all be included in the list.
+
+Each item in the list is a [dehydrated `Institution`](../institutions/institution-object.md#the-dehydratedinstitution-object) object, and you can find more documentation on the [Institution](../institutions/institution-object.md) page.
+
+```json
+last_known_institutions: [{
+    id: "https://openalex.org/I4200000001",
+    ror: "https://ror.org/02nr0ka47",
+    display_name: "OurResearch",
+    country_code: "CA",
+    type: "nonprofit",
+    lineage: ["https://openalex.org/I4200000001"]
+}],
 ```
 
 ### `orcid`
