@@ -2,6 +2,34 @@
 
 When you use the API to get a [single author](get-a-single-author.md) or [lists of authors](get-lists-of-authors.md), this is what's returned.&#x20;
 
+### `affiliations`
+
+_List:_ List of objects, representing the affiliations this author has claimed in their publications. Each object in the list has two properties:
+
+* `institution`: a [dehydrated `Institution`](../institutions/institution-object.md#the-dehydratedinstitution-object) object
+* `years`: a list of the years in which this author claimed an affiliation with this institution
+
+```json
+affiliations: [
+    {
+        institution: {
+            id: "https://openalex.org/I201448701",
+            ror: "https://ror.org/00cvxb145",
+            ...
+        },
+        years: [2018, 2019, 2020]
+    },
+    {
+        institution: {
+            id: "https://openalex.org/I74973139",
+            ror: "https://ror.org/05x2bcf33",
+            ...
+        },
+        years: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019]
+    }
+]
+```
+
 ### `cited_by_count`
 
 _Integer:_ The total number :page\_facing\_up: [Works](../works/work-object/) that cite a work this author has created.

@@ -13,6 +13,11 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 
 ### `/authors` group\_by attributes
 
+* [`affiliations.institution.country_code`](./author-object.md#affiliations)
+* [`affiliations.institution.id`](./author-object.md#affiliations)
+* [`affiliations.institution.lineage`](./author-object.md#affiliations)
+* [`affiliations.institution.ror`](./author-object.md#affiliations)
+* [`affiliations.institution.type`](./author-object.md#affiliations)
 * [`cited_by_count`](author-object.md#cited\_by\_count)
 * [`has_orcid`](filter-authors.md#has\_orcid)
 * [`last_known_institution.continent`](filter-authors.md#last\_known\_institution.continent)

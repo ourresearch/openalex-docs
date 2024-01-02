@@ -13,6 +13,11 @@ It's best to [read about filters](../../how-to-use-the-api/get-lists-of-entities
 
 You can filter using these attributes of the `Author` entity object (click each one to view their documentation on the [`Author`](author-object.md) object page):
 
+* [`affiliations.institution.country_code`](./author-object.md#affiliations)
+* [`affiliations.institution.id`](./author-object.md#affiliations)
+* [`affiliations.institution.lineage`](./author-object.md#affiliations)
+* [`affiliations.institution.ror`](./author-object.md#affiliations)
+* [`affiliations.institution.type`](./author-object.md#affiliations)
 * [`cited_by_count`](author-object.md#cited\_by\_count)
 * [`ids.openalex`](author-object.md#ids) (alias: `openalex`)
 * [`last_known_institution.country_code`](author-object.md#last\_known\_institution)
