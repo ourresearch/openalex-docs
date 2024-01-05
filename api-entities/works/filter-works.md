@@ -124,7 +124,7 @@ Returns: works with the chosen number of [`authorships`](work-object/#authorship
 * Get works that have exactly one author\
   [`https://api.openalex.org/works?filter=authors\_count:1`](https://api.openalex.org/works?filter=authors\_count:1)
 
-#### `authorships.institutions.continent` \_\_ (alias: `institutions.continent`)
+#### `authorships.institutions.continent` (alias: `institutions.continent`)
 
 Value: a String with a valid [continent filter](../geo/continents.md#filter-by-continent)
 
@@ -133,7 +133,7 @@ Returns: works where at least _one_ of the author's institutions is in the chose
 * Get works where at least one author's institution in each work is located in Europe\
   [`https://api.openalex.org/works?filter=authorships.institutions.continent:europe`](https://api.openalex.org/works?filter=authorships.institutions.continent:europe)
 
-#### `authorships.institutions.is_global_south` \_\_ (alias: `institutions.is_global_south`)
+#### `authorships.institutions.is_global_south` (alias: `institutions.is_global_south`)
 
 Value: a Boolean (`true` or `false`)
 
@@ -252,7 +252,7 @@ Value: a search string
 
 Returns: works whose fulltext includes the given string. Fulltext search is available for a subset of works, obtained either from PDFs or [n-grams](./get-n-grams.md), see [`Work.has_fulltext`](work-object/README.md#has_fulltext) for more details.
 
-* Get works with fulltext that mention "climate change": [`https://api.openalex.org/works?filter=fulltext.search:climate%20change`](https://api.openalex.org/works?filter=fulltext.search:climate%20change)\`\`
+* Get works with fulltext that mention "climate change": [`https://api.openalex.org/works?filter=fulltext.search:climate%20change`](https://api.openalex.org/works?filter=fulltext.search:climate%20change)
 
 {% hint style="info" %}
 We combined some n-grams before storing them in our search database, so querying for an exact phrase using quotes does not always work well.
@@ -420,6 +420,16 @@ You can use this to find works where authors are associated with your university
 You can also use this as a `group_by` to learn things about repositories:
 
 * Learn which repositories have the most open access works [`https://api.openalex.org/works?filter=is_oa:true&group_by=repository`](https://api.openalex.org/works?filter=is\_oa:true\&group\_by=repository)
+
+#### `title_and_abstract.search`
+
+Text search across titles and abstracts for works
+
+Value: a search string
+
+Returns: works whose [`display_name`](work-object/#display\_name) (title) or abstract includes the given string; see the [search page](../../how-to-use-the-api/get-lists-of-entities/search-entities.md) for details.
+
+* Get works with title or abstract mentioning "gum disease": [`https://api.openalex.org/works?filter=title_and_abstract.search:gum%20disease`](https://api.openalex.org/works?filter=title_and_abstract.search:gum%20disease)
 
 #### `to_publication_date`
 
