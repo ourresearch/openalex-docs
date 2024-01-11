@@ -27,7 +27,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`authorships.institutions.lineage`](work-object/authorship-object.md#institutions)
 * [`authorships.institutions.ror`](work-object/authorship-object.md#institutions) (alias: `institutions.ror`) — Institutions affiliated with the authors of a work (ROR ID)
 * [`authorships.institutions.type`](work-object/authorship-object.md#institutions)
-* [`authorships.is_corresponding`](work-object/authorship-object.md#is_corresponding) (alias: `is_corresponding`) — This filter marks whether or not we have corresponding author information for a given work
+* [`authorships.is_corresponding`](work-object/authorship-object.md#is\_corresponding) (alias: `is_corresponding`) — This filter marks whether or not we have corresponding author information for a given work
 * [`apc_list.value`](work-object/#apc\_list)
 * [`apc_list.currency`](work-object/#apc\_list)
 * [`apc_list.provenance`](work-object/#apc\_list)
@@ -50,17 +50,17 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`concepts.wikidata`](work-object/#concepts)
 * [`corresponding_author_ids`](work-object/#corresponding\_author\_ids) — Corresponding authors for a work (OpenAlex ID)
 * [`corresponding_institution_ids`](work-object/#corresponding\_institution\_ids)
-* [`countries_distinct_count`](work-object/README.md#countries_distinct_count)
-* [`doi`](./work-object/README.md#doi) — The DOI (Digital Object Identifier) of a work
-* [`fulltext_origin`](work-object/README.md#fulltext_origin)
+* [`countries_distinct_count`](work-object/#countries\_distinct\_count)
+* [`doi`](work-object/#doi) — The DOI (Digital Object Identifier) of a work
+* [`fulltext_origin`](work-object/#fulltext\_origin)
 * [`grants.award_id`](work-object/#grants) — Award IDs for grants
 * [`grants.funder`](work-object/#grants) — Funding organizations linked to grants for a work
-* [`has_fulltext`](work-object/README.md#has_fulltext)
+* [`has_fulltext`](work-object/#has\_fulltext)
 * [`ids.pmcid`](work-object/#ids)
 * [`ids.pmid`](work-object/#ids) (alias: `pmid`)
 * [`ids.openalex`](work-object/#ids) (alias: `openalex`) — The OpenAlex ID for a work
 * [`ids.mag`](work-object/#ids) (alias: `mag`)
-* [`institutions_distinct_count`](work-object/README.md#institutions_distinct_count)
+* [`institutions_distinct_count`](work-object/#institutions\_distinct\_count)
 * [`is_paratext`](work-object/#is\_paratext)
 * [`is_retracted`](work-object/#is\_retracted)
 * [`keywords.keyword`](work-object/#keywords)
@@ -91,9 +91,9 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`primary_location.version`](work-object/#primary\_location)
 * [`publication_year`](work-object/#publication\_year)
 * [`publication_date`](work-object/#publication\_date)
-* [`sustainable_development_goals.id`](work-object/README.md#sustainable_development_goals)
-* [`type`](work-object/README.md#type)
-* [`type_crossref`](work-object/README.md#type_crossref)
+* [`sustainable_development_goals.id`](work-object/#sustainable\_development\_goals)
+* [`type`](work-object/#type)
+* [`type_crossref`](work-object/#type\_crossref)
 
 {% hint style="info" %}
 Want to filter by the `display_name` of an associated entity (author, institution, source, etc.)? [See here.](search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)
@@ -250,7 +250,7 @@ Learn more about using this filter to get the freshest data possible with our [P
 
 Value: a search string
 
-Returns: works whose fulltext includes the given string. Fulltext search is available for a subset of works, obtained either from PDFs or [n-grams](./get-n-grams.md), see [`Work.has_fulltext`](work-object/README.md#has_fulltext) for more details.
+Returns: works whose fulltext includes the given string. Fulltext search is available for a subset of works, obtained either from PDFs or [n-grams](get-n-grams.md), see [`Work.has_fulltext`](work-object/#has\_fulltext) for more details.
 
 * Get works with fulltext that mention "climate change": [`https://api.openalex.org/works?filter=fulltext.search:climate%20change`](https://api.openalex.org/works?filter=fulltext.search:climate%20change)
 
@@ -282,7 +282,7 @@ Returns: works that have or lack a DOI, depending on the given value. It's espec
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works with at least one of the [`locations`](work-object/#locations) has [`is_oa`](work-object/location-object.md#is_oa)= true and [`version`](work-object/#version) is acceptedVersion or publishedVersion. For Works that undergo peer review, like journal articles, this means there is a peer-reviewed OA copy somewhere. For some items, like books, a published version doesn't imply peer review, so they aren't quite synonymous.
+Returns: works with at least one of the [`locations`](work-object/#locations) has [`is_oa`](work-object/location-object.md#is\_oa)= true and [`version`](work-object/#version) is acceptedVersion or publishedVersion. For Works that undergo peer review, like journal articles, this means there is a peer-reviewed OA copy somewhere. For some items, like books, a published version doesn't imply peer review, so they aren't quite synonymous.
 
 * Get works with an OA accepted or published copy\
   [`https://api.openalex.org/works?filter=has_oa_accepted_or_published_version:true`](https://api.openalex.org/works?filter=has\_oa\_accepted\_or\_published\_version:true)
@@ -291,7 +291,7 @@ Returns: works with at least one of the [`locations`](work-object/#locations) ha
 
 Value: a Boolean (`true` or `false`)
 
-Returns: works with at least one of the [`locations`](work-object/#locations) has [`is_oa`](work-object/location-object.md#is_oa)= true and [`version`](work-object/#version) is submittedVersion. This is useful for finding works with preprints deposited somewhere.
+Returns: works with at least one of the [`locations`](work-object/#locations) has [`is_oa`](work-object/location-object.md#is\_oa)= true and [`version`](work-object/#version) is submittedVersion. This is useful for finding works with preprints deposited somewhere.
 
 * Get works with an OA submitted copy:\
   [`https://api.openalex.org/works?filter=has_oa_submitted_version:true`](https://api.openalex.org/works?filter=has\_oa\_submitted\_version:true)\`\`
@@ -303,7 +303,7 @@ Value: a Boolean (`true` or `false`)
 Returns: if `true` it returns works where at least one author or has an [ORCID ID](work-object/#ids). If `false`, it returns works where no authors have an ORCID ID. This is based on the `orcid` field within [`authorships.author`](work-object/authorship-object.md#author). Note that, sometimes, we assign ORCID using [author disambiguation](../authors/author-disambiguation.md), so this does not necessarily mean that the work itself has ORCID information.
 
 * Get the works where at least one author has an ORCID ID:\
-  [`https://api.openalex.org/works?filter=has_orcid:true`](https://api.openalex.org/works?filter=has\_orcid:true) \`\`
+  [`https://api.openalex.org/works?filter=has_orcid:true`](https://api.openalex.org/works?filter=has\_orcid:true)&#x20;
 
 #### `has_pmcid`
 
@@ -327,7 +327,7 @@ Returns: works that have or lack a PubMed identifier ([`pmid`](work-object/#ids)
 
 Works that have n-grams available to enable full-text search in OpenAlex.
 
-This filter has been deprecated. See instead: [`has_fulltext`](work-object/README.md#has_fulltext).
+This filter has been deprecated. See instead: [`has_fulltext`](work-object/#has\_fulltext).
 
 Value: a Boolean (`true` or `false`)
 
@@ -385,7 +385,7 @@ Value: the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-opena
 Returns: works where the given publisher ID is in [`primary_location.source.host_organization_lineage`](../sources/source-object.md#host\_organization\_lineage)
 
 * Get the works that have `https://openalex.org/P4310320547` in their `publisher_lineage`:\
-  [`https://api.openalex.org/works?filter=primary_location.source.publisher_lineage:https://openalex.org/P4310320547`](https://api.openalex.org/works?filter=primary_location.source.publisher\_lineage:https://openalex.org/P4310320547)
+  [`https://api.openalex.org/works?filter=primary_location.source.publisher_lineage:https://openalex.org/P4310320547`](https://api.openalex.org/works?filter=primary\_location.source.publisher\_lineage:https://openalex.org/P4310320547)
 
 #### `raw_affiliation_string.search`
 
@@ -429,7 +429,7 @@ Value: a search string
 
 Returns: works whose [`display_name`](work-object/#display\_name) (title) or abstract includes the given string; see the [search page](../../how-to-use-the-api/get-lists-of-entities/search-entities.md) for details.
 
-* Get works with title or abstract mentioning "gum disease": [`https://api.openalex.org/works?filter=title_and_abstract.search:gum%20disease`](https://api.openalex.org/works?filter=title_and_abstract.search:gum%20disease)
+* Get works with title or abstract mentioning "gum disease": [`https://api.openalex.org/works?filter=title_and_abstract.search:gum%20disease`](https://api.openalex.org/works?filter=title\_and\_abstract.search:gum%20disease)
 
 #### `to_publication_date`
 
