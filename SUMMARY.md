@@ -93,7 +93,6 @@
 
 ## Additional Help
 
-* [Open houses](additional-help/open-houses.md)
 * [Tutorials](additional-help/tutorials.md)
 * [Report bugs](additional-help/report-bugs.md)
 * [FAQ](additional-help/faq.md)
