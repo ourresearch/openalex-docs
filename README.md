@@ -2,9 +2,9 @@
 
 <figure><img src=".gitbook/assets/openalex_logo_text_transparent_20240117.png" alt=""><figcaption></figcaption></figure>
 
-**OpenAlex** is a fully open catalog of the global research system. It's named after the [ancient Library of Alexandria](https://en.wikipedia.org/wiki/Library\_of\_Alexandria) and made by the nonprofit [OurResearch](https://ourresearch.org/).
+[**OpenAlex**](https://openalex.org) is a fully open catalog of the global research system. It's named after the [ancient Library of Alexandria](https://en.wikipedia.org/wiki/Library\_of\_Alexandria) and made by the nonprofit [OurResearch](https://ourresearch.org/).
 
-This is the technical documentation for the **OpenAlex API.** Here, you can learn how to set up your code to access OpenAlex's data. If you want to explore the data as a human, you may be more interested in **OpenAlex Web.** This web interface is currently in the alpha stage of development, with a beta launch coming soon ([sign up here to be notified when the launch happens!](https://forms.gle/NDoXAQVKGQLpkF5U8)).
+This is the technical documentation for the **OpenAlex API.** Here, you can learn how to set up your code to access OpenAlex's data. If you want to explore the data as a human, you may be more interested in [**OpenAlex Web**](https://help.openalex.org)**.**
 
 ## Data
 
