@@ -317,10 +317,10 @@ doi: "https://doi.org/10.7717/peerj.4375"
 
 ### `fulltext_origin`
 
-_String:_ If a work's full text is searchable in OpenAlex ([`has_fulltext`](#has_fulltext) is `true`), this tells you how we got the text. This will be one of:
+_String:_ If a work's full text is searchable in OpenAlex ([`has_fulltext`](./#has\_fulltext) is `true`), this tells you how we got the text. This will be one of:
 
-+ `pdf`: We used [Grobid](https://grobid.readthedocs.io) to get the text from an open-access PDF.
-+ `ngrams`: Full text search is enabled using [N-grams obtained from the Internet Archive](../get-n-grams.md).
+* `pdf`: We used [Grobid](https://grobid.readthedocs.io) to get the text from an open-access PDF.
+* `ngrams`: Full text search is enabled using [N-grams obtained from the Internet Archive](../get-n-grams.md).
 
 This attribute is only available for works with `has_fulltext:true`.
 
@@ -351,9 +351,9 @@ grants: [
 
 ### `has_fulltext`
 
-_Boolean:_ Set to `true` if the work's full text is searchable in OpenAlex. This does not necessarily mean that the full text is available to you, dear reader; rather, it means that we have indexed the full text and can use it to help power [searches](../search-works.md). If you are trying to find the full text for yourself, try looking in [`open_access.oa_url`](#open_access).
+_Boolean:_ Set to `true` if the work's full text is searchable in OpenAlex. This does not necessarily mean that the full text is available to you, dear reader; rather, it means that we have indexed the full text and can use it to help power [searches](../search-works.md). If you are trying to find the full text for yourself, try looking in [`open_access.oa_url`](./#open\_access).
 
-We get access to the full text in one of two ways: either using an open-access PDF, or using [N-grams obtained from the Internet Archive](../get-n-grams.md). You can learn where a work's full text came from at [`fulltext_origin`](#fulltext_origin).
+We get access to the full text in one of two ways: either using an open-access PDF, or using [N-grams obtained from the Internet Archive](../get-n-grams.md). You can learn where a work's full text came from at [`fulltext_origin`](./#fulltext\_origin).
 
 ```json
 has_fulltext: true
@@ -651,7 +651,7 @@ _List:_ List of objects
 
 The United Nations' [17 Sustainable Development Goals](https://sdgs.un.org/goals) are a collection of goals at the heart of a global "shared blueprint for peace and prosperity for people and the planet." We use a machine learning model to tag works with their relevance to these goals based on our [OpenAlex SDG Classifier](https://github.com/ourresearch/openalex-sdg-classifier), an mBERT machine learning model developed by the [Aurora Universities Network](https://aurora-universities.eu/sdg-research/). The `score` represents the model's predicted probability of the work's relevance for a particular goal.
 
-We display all of the SDGs with a prediction score higher than 0.1.
+We display all of the SDGs with a prediction score higher than 0.4.
 
 ```json
 sustainable_development_goals: [
@@ -667,7 +667,7 @@ sustainable_development_goals: [
 
 _String:_ The title of this work.
 
-This is exactly the same as [`Work.display_name`](./README.md#display_name). We include both attributes with the same information because we want all entities to have a `display_name`, but there's a longstanding tradition of calling this the "title," so we figured you'll be expecting works to have it as a property.
+This is exactly the same as [`Work.display_name`](./#display\_name). We include both attributes with the same information because we want all entities to have a `display_name`, but there's a longstanding tradition of calling this the "title," so we figured you'll be expecting works to have it as a property.
 
 ```json
 title: "The state of OA: a large-scale analysis of the prevalence and impact of Open Access articles",
