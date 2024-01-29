@@ -393,7 +393,7 @@ Value: a search string
 
 Returns: works that have at least one [`raw_affiliation_string`](work-object/#raw\_affiliation\_string) which includes the given string. See the [search page](../../how-to-use-the-api/get-lists-of-entities/search-entities.md) for details on the search algorithm used.
 
-* Get works with the words _Department of Political Science, University of Amsterdam_ somewhere in at least one author's `raw_affiliation_string`: [`https://api.openalex.org/works?filter=raw_affiliation_string.search:department%20of%20political%20science%20university%20of%amsterdam`](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)\`\`
+* Get works with the words _Department of Political Science, University of Amsterdam_ somewhere in at least one author's `raw_affiliation_string`: [`https://api.openalex.org/works?filter=raw_affiliation_string.search:department%20of%20political%20science%20university%20of%20amsterdam`](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)\`\`
 
 #### `related_to`
 
