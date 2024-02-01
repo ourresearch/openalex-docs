@@ -425,7 +425,7 @@ is_paratext: false
 
 _Boolean:_ True if we know this work has been retracted.
 
-This field has high precision but low recall. In other words, if `is_retracted` is `true`, the article is definitely retracted. But if `is_retracted` is `False`, it still might be retracted, but we just don't know. This is because unfortunately, the [open sources for retraction data](https://www.crossref.org/blog/encouraging-even-greater-reporting-of-corrections-and-retractions/) aren't currently very comprehensive, and [the more comprehensive ones](https://retractionwatch.com/) aren't sufficiently open for us to use here.
+We identify works that have been retracted using the public [Retraction Watch database](https://doi.org/10.13003/c23rw1d9), a public resource made possible by a partnership between Crossref and The Center for Scientific Integrity.
 
 ```json
 is_retracted: false 
