@@ -66,6 +66,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`has_pmcid`](filter-works.md#has\_pmcid)
 * [`has_ngrams`](filter-works.md#has\_ngrams) (DEPRECATED)
 * [`has_references`](filter-works.md#has\_references)
+* [`indexed_in`](./work-object/README.md#indexed_in)
 * [`is_retracted`](work-object/#is\_retracted)
 * [`is_paratext`](work-object/#is\_paratext)
 * [`journal`](filter-works.md#journal)

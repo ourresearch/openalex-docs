@@ -396,6 +396,16 @@ ids: {
 }
 ```
 
+### `indexed_in`
+
+_List:_ The sources this work is indexed in. Possible values: `arxiv`, `crossref`, `doaj`, `pubmed`.
+
+```json
+indexed_in: [
+    "arxiv", "crossref", "pubmed"
+] 
+```
+
 ### `institutions_distinct_count`
 
 _Integer:_ Number of distinct [`institutions`](../../institutions/) among the [`authorships`](authorship-object.md#institutions) for this work.
