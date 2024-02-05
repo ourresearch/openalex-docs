@@ -65,10 +65,24 @@ This is a new feature, and the information may be missing for many works. We are
 
 ### `raw_affiliation_string`
 
+**Will be deprecated**
+
 _String:_ This author's affiliation as it originally came to us (on a webpage or in an API), as a raw unformatted string. Multiple affiliations are separated by a semicolon.
+
+This will be deprecated in the future in favor of [`raw_affiliation_strings`](#raw_affiliation_strings).
 
 ```json
 raw_affiliation_string: "Canadian Institute for Studies in Publishing, Simon Fraser University,
+```
+
+### `raw_affiliation_strings`
+
+_List:_ This author's affiliation as it originally came to us (on a webpage or in an API), as a list of raw unformatted strings. If there is only one affiliation, it will be a list of length one.
+
+```json
+raw_affiliation_strings: [
+    "Canadian Institute for Studies in Publishing, Simon Fraser University"
+],
 ```
 
 ### `raw_author_name`
