@@ -45,6 +45,10 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`best_oa_location.source.host_organization`](work-object/#best\_oa\_location)
 * [`best_oa_location.source.type`](work-object/#best\_oa\_location)
 * [`best_oa_location.version`](work-object/#best\_oa\_location)
+* [`biblio.first_page`](./work-object/README.md#biblio)
+* [`biblio.issue`](./work-object/README.md#biblio)
+* [`biblio.last_page`](./work-object/README.md#biblio)
+* [`biblio.volume`](./work-object/README.md#biblio)
 * [`cited_by_count`](work-object/#cited\_by\_count)
 * [`concepts.id`](work-object/#concepts) (alias: `concept.id`) — The concepts associated with a work
 * [`concepts.wikidata`](work-object/#concepts)
