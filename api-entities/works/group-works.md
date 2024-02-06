@@ -94,7 +94,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`primary_location.source.id`](work-object/#primary\_location)
 * [`primary_location.source.is_in_doaj`](work-object/#primary\_location)
 * [`primary_location.source.issn`](work-object/#primary\_location)
-* [`locations.source.publisher_lineage`](filter-works.md#primary_location.source.publisher\_lineage)
+* [`primary_location.source.publisher_lineage`](filter-works.md#primary_location.source.publisher\_lineage)
 * [`primary_location.source.type`](work-object/#primary\_location)
 * [`primary_location.version`](work-object/#primary\_location)
 * [`publication_year`](work-object/#publication\_year)
