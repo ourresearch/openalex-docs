@@ -7,13 +7,13 @@ The `search` query parameter finds results that match a given text search. Examp
 * Get works with search term "dna" in the title, abstract, or fulltext:\
   [`https://api.openalex.org/works?search=dna`](https://api.openalex.org/works?search=dna)
 
-When you [search `works`](../../api-entities/works/search-works.md), the API looks for matches in titles, abstracts, and fulltext. When you [search `concepts`](../../api-entities/concepts/search-concepts.md), we look in each concept's `display_name` and `description` fields. When you [search `sources`](../../api-entities/sources/search-sources.md), we look at the `display_name`_,_ `alternate_titles`, and `abbreviated_title` fields. When you [search `authors`](../../api-entities/authors/search-authors.md), we look at the `display_name` and `display_name_alternatives` fields. When you [search `institutions`](../../api-entities/institutions/search-institutions.md), we look at the `display_name`, `display_name_alternatives`, and `display_name_acronyms` fields.
+When you [search `works`](../../api-entities/works/search-works.md), the API looks for matches in titles, abstracts, and fulltext. When you [search `concepts`](../../api-entities/concepts-1/search-concepts.md), we look in each concept's `display_name` and `description` fields. When you [search `sources`](../../api-entities/sources/search-sources.md), we look at the `display_name`_,_ `alternate_titles`, and `abbreviated_title` fields. When you [search `authors`](../../api-entities/authors/search-authors.md), we look at the `display_name` and `display_name_alternatives` fields. When you [search `institutions`](../../api-entities/institutions/search-institutions.md), we look at the `display_name`, `display_name_alternatives`, and `display_name_acronyms` fields.
 
 For most text search we remove [stop words](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-stop-tokenfilter.html) and use [stemming](https://en.wikipedia.org/wiki/Stemming) (specifically, the [Kstem token filter](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-kstem-tokenfilter.html)) to improve results. So words like "the" and "an" are transparently removed, and a search for "possums" will also return records using the word "possum." With the exception of raw affiliation strings, we do not search within words but rather try to match whole words. So a search with "lun" will not match the word "lunar".
 
 ### Boolean searches
 
-Including any of the words `AND`, `OR`, or `NOT` in any of your searches will enable boolean search. Those words must be UPPERCASE. You can use this in all searches, including using the `search` parameter, and using [search filters](#the-search-filter).
+Including any of the words `AND`, `OR`, or `NOT` in any of your searches will enable boolean search. Those words must be UPPERCASE. You can use this in all searches, including using the `search` parameter, and using [search filters](search-entities.md#the-search-filter).
 
 This allows you to craft complex queries using those boolean operators along with parentheses and quotation marks. Surrounding a phrase with quotation marks will search for an exact match of that phrase, after stemming and stop-word removal (be sure to use **double quotation marks** — `"`). Using parentheses will specify order of operations for the boolean operators. Words that are not separated by one of the boolean operators will be interpreted as `AND`.
 
@@ -34,14 +34,14 @@ If you search for a multiple-word phrase, the algorithm will treat each word sep
 
 ## The search filter
 
-You can also use search as a [filter](./filter-entity-lists.md), allowing you to fine-tune the fields you're searching over. To do this, you append `.search` to the end of the property you are filtering for:
+You can also use search as a [filter](filter-entity-lists.md), allowing you to fine-tune the fields you're searching over. To do this, you append `.search` to the end of the property you are filtering for:
 
 * Get authors who have "Einstein" as part of their name:\
   [`https://api.openalex.org/authors?filter=display_name.search:einstein`](https://api.openalex.org/authors?filter=display\_name.search:einstein)
 * Get works with "cubist" in the title:\
   [`https://api.openalex.org/works?filter=title.search:cubist`](https://api.openalex.org/works?filter=title.search:cubist)
 
-Additionally, the filter `default.search` is available on all entities; this works the same as the [`search` parameter](#the-search-parameter).
+Additionally, the filter `default.search` is available on all entities; this works the same as the [`search` parameter](search-entities.md#the-search-parameter).
 
 {% hint style="info" %}
 You might be tempted to use the search filter to power an autocomplete or typeahead. Instead, we recommend you use the [autocomplete endpoint](autocomplete-entities.md), which is much faster.\

@@ -1,6 +1,6 @@
 # Autocomplete entities
 
-The autocomplete endpoint lets you add autocomplete or typeahead components to your applications, without the overhead of hosting your own API endpoint.&#x20;
+The autocomplete endpoint lets you add autocomplete or typeahead components to your applications, without the overhead of hosting your own API endpoint.
 
 Each endpoint takes a string, and (very quickly) returns a list of entities that match that string.
 
@@ -56,7 +56,7 @@ Each object in the `results` list includes these properties:
 * `external_id` (string): The [Canonical External ID](../get-single-entities/#canonical-external-ids) for this result entity.
 * `display_name` (string): The entity's `display_name` property.
 * `entity_type` (string): The entity's type: `author`, `concept`, `institution`, `source`, `publisher`, `funder`, or `work`.
-* `cited_by_count` (integer): The entity's `cited_by_count` property. For works this is simply the number of incoming citations. For other entities, it's the _sum_ of incoming citations for all the works linked to that entity.&#x20;
+* `cited_by_count` (integer): The entity's `cited_by_count` property. For works this is simply the number of incoming citations. For other entities, it's the _sum_ of incoming citations for all the works linked to that entity.
 * `works_count` (integer): The number of works associated with the entity. For entity type `work` it's always null.
 * `hint`: Some extra information that can help identify the right item. Differs by entity type.
 
@@ -70,7 +70,7 @@ The content of the `hint` property varies depending on what kind of entity you'r
 * `Author`: The author's [last known institution](../../api-entities/authors/author-object.md#last\_known\_institution), e.g. "University of North Carolina at Chapel Hill, USA"
 * `Source`: The `host_organization`, e.g. "Oxford University Press"
 * `Institution`: The institution's location, e.g. "Gainesville, USA"
-* `Concept`: The Concept's [description](../../api-entities/concepts/concept-object.md#description), e.g. "the study of relation between plant species and genera"
+* `Concept`: The Concept's [description](../../api-entities/concepts-1/concept-object.md#description), e.g. "the study of relation between plant species and genera"
 
 ## IDs in autocomplete
 

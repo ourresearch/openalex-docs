@@ -10,7 +10,7 @@ Learn more about the OpenAlex entities:
 * [Authors](authors/): People who create works
 * [Sources](sources/): Where works are hosted (such as journals, conferences, and repositories)
 * [Institutions](institutions/): Universities and other organizations to which authors claim affiliations
-* [Concepts](concepts/): Topics assigned to works
+* [Concepts](concepts-1/): Topics assigned to works
 * [Publishers](publishers/): Companies and organizations that distribute works
 * [Funders](funders/): Organizations that fund research
 * [Geo](geo/): Where things are in the world

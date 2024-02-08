@@ -3,7 +3,7 @@
 Sometimes instead of just listing entities, you want to _group them_ into facets, and count how many entities are in each group. For example, maybe you want to count the number of `Works` by [open access status](../api-entities/works/work-object/#open\_access). To do that, you call the entity endpoint, adding the `group_by` parameter. Example:
 
 * Get counts of works by type:\
-  [`https://api.openalex.org/works?group_by=type`](https://api.openalex.org/works?group_by=type)
+  [`https://api.openalex.org/works?group_by=type`](https://api.openalex.org/works?group\_by=type)
 
 This returns a `meta` object with details about the query, and a `group_by` object with the groups you've asked for:
 
@@ -60,16 +60,16 @@ Value: a string; the `display_name` or raw value of the `group_by` parameter for
 
 #### `count`
 
-Value: an integer; the number of entities in the group.&#x20;
+Value: an integer; the number of entities in the group.
 
 ## "Unknown" groups
 
 The "unknown" group is hidden by default. If you want to include this group in the response, add `:include_unknown` after the group-by parameter.
 
 * Group works by [`authorships.countries`](../api-entities/works/work-object/authorship-object.md#countries) (unknown group hidden):\
-  [`https://api.openalex.org/works?group_by=authorships.countries`](https://api.openalex.org/works?group_by=authorships.countries)
+  [`https://api.openalex.org/works?group_by=authorships.countries`](https://api.openalex.org/works?group\_by=authorships.countries)
 * Group works by [`authorships.countries`](../api-entities/works/work-object/authorship-object.md#countries) (includes unknown group):\
-  [`https://api.openalex.org/works?group_by=authorships.countries:include_unknown`](https://api.openalex.org/works?group_by=authorships.countries:include_unknown)
+  [`https://api.openalex.org/works?group_by=authorships.countries:include_unknown`](https://api.openalex.org/works?group\_by=authorships.countries:include\_unknown)
 
 ## `key` and `key_display_name`
 
@@ -81,7 +81,7 @@ If the value being grouped by is an OpenAlex `Entity`, the [`key`](get-groups-of
 
 Otherwise, `key` is the same as `key_display_name`; both are the raw value of the `group_by` parameter for this group.
 
-* Group `Concepts` by [`level`](../api-entities/concepts/concept-object.md#level):\
+* Group `Concepts` by [`level`](../api-entities/concepts-1/concept-object.md#level):\
   [`https://api.openalex.org/concepts?group_by=level`](https://api.openalex.org/concepts?group\_by=level)
 * For one group, both `key` and `key_display_name` are "3".
 
@@ -91,10 +91,10 @@ Otherwise, `key` is the same as `key_display_name`; both are the raw value of th
 
 If there are no groups in the response, `meta.groups_count` is `null`.
 
-Due to a technical limitation, we can only report the number of groups *in the current page,* and not the total number of groups.
+Due to a technical limitation, we can only report the number of groups _in the current page,_ and not the total number of groups.
 
 ## Paging
 
-The maximum number of groups returned is 200. If you want to get more than 200 groups, you can use cursor pagination. This works the same as it does when getting lists of entities, so [head over to the section on paging through lists of results](./get-lists-of-entities/paging.md#cursor-paging) to learn how.
+The maximum number of groups returned is 200. If you want to get more than 200 groups, you can use cursor pagination. This works the same as it does when getting lists of entities, so [head over to the section on paging through lists of results](get-lists-of-entities/paging.md#cursor-paging) to learn how.
 
 Due to technical constraints, when paging, results are sorted by key, rather than by count.
