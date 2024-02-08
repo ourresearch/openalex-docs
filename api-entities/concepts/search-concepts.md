@@ -1,4 +1,8 @@
-# Search topics
+# Search concepts
+
+{% hint style="warning" %}
+These are the original OpenAlex Concepts, which are being deprecated in favor of Topics. We will continue to provide these Concepts for Works, but we will not be actively maintaining, updating, or providing support for these concepts. Unless you have a good reason to be relying on them, we encourage you to look into Topics instead.
+{% endhint %}
 
 The best way to search for concepts is to use the `search` query parameter, which searches the [`display_name`](../concepts-1/concept-object.md#display\_name) and [`description`](../concepts-1/concept-object.md#description) fields. Example:
 

@@ -1,4 +1,8 @@
-# Filter topics
+# Filter concepts
+
+{% hint style="warning" %}
+These are the original OpenAlex Concepts, which are being deprecated in favor of Topics. We will continue to provide these Concepts for Works, but we will not be actively maintaining, updating, or providing support for these concepts. Unless you have a good reason to be relying on them, we encourage you to look into Topics instead.
+{% endhint %}
 
 You can filter concepts with the `filter` parameter:
 

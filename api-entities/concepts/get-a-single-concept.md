@@ -1,4 +1,8 @@
-# Get a single topic
+# Get a single concept
+
+{% hint style="warning" %}
+These are the original OpenAlex Concepts, which are being deprecated in favor of Topics. We will continue to provide these Concepts for Works, but we will not be actively maintaining, updating, or providing support for these concepts. Unless you have a good reason to be relying on them, we encourage you to look into Topics instead.
+{% endhint %}
 
 It's easy to get a concept from from the API with: `/concepts/<entity_id>`. Here's an example:
 

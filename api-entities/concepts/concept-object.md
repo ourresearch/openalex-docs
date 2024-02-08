@@ -1,4 +1,8 @@
-# Topic object
+# Concept object
+
+{% hint style="warning" %}
+These are the original OpenAlex Concepts, which are being deprecated in favor of Topics. We will continue to provide these Concepts for Works, but we will not be actively maintaining, updating, or providing support for these concepts. Unless you have a good reason to be relying on them, we encourage you to look into Topics instead.
+{% endhint %}
 
 These are the fields in a concept object. When you use the API to get a [single concept](../concepts-1/get-a-single-concept.md) or [lists of concepts](../concepts-1/get-lists-of-concepts.md), this is what's returned.
 
