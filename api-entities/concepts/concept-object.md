@@ -1,14 +1,14 @@
 # Concept object
 
 {% hint style="warning" %}
-These are the original OpenAlex Concepts, which are being deprecated in favor of Topics. We will continue to provide these Concepts for Works, but we will not be actively maintaining, updating, or providing support for these concepts. Unless you have a good reason to be relying on them, we encourage you to look into Topics instead.
+These are the original OpenAlex Concepts, which are being deprecated in favor of [Topics](../topics/README.md). We will continue to provide these Concepts for Works, but we will not be actively maintaining, updating, or providing support for these concepts. Unless you have a good reason to be relying on them, we encourage you to look into [Topics](../topics/README.md) instead.
 {% endhint %}
 
-These are the fields in a concept object. When you use the API to get a [single concept](../concepts-1/get-a-single-concept.md) or [lists of concepts](../concepts-1/get-lists-of-concepts.md), this is what's returned.
+These are the fields in a concept object. When you use the API to get a [single concept](../concepts/get-a-single-concept.md) or [lists of concepts](../concepts/get-lists-of-concepts.md), this is what's returned.
 
 ### `ancestors`
 
-_List:_ List of concepts that this concept descends from, as [dehydrated Concept](concept-object.md#the-dehydratedconcept-object) objects. See the [concept tree section](../concepts-1/) for more details on how the different layers of concepts work together.
+_List:_ List of concepts that this concept descends from, as [dehydrated Concept](concept-object.md#the-dehydratedconcept-object) objects. See the [concept tree section](../concepts/) for more details on how the different layers of concepts work together.
 
 ```json
 ancestors: [

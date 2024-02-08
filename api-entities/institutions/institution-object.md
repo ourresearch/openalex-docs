@@ -340,7 +340,7 @@ works_count: 202704    
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.
 {% endhint %}
 
-_List:_ The [`Concepts`](../concepts-1/concept-object.md) most frequently applied to works affiliated with this institution. Each is represented as a [dehydrated Concept](../concepts-1/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
+_List:_ The [`Concepts`](../concepts/concept-object.md) most frequently applied to works affiliated with this institution. Each is represented as a [dehydrated Concept](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
 
 * `score` (_Float_): The strength of association between this institution and the listed concept, from 0-100.
 

@@ -70,7 +70,7 @@ The content of the `hint` property varies depending on what kind of entity you'r
 * `Author`: The author's [last known institution](../../api-entities/authors/author-object.md#last\_known\_institution), e.g. "University of North Carolina at Chapel Hill, USA"
 * `Source`: The `host_organization`, e.g. "Oxford University Press"
 * `Institution`: The institution's location, e.g. "Gainesville, USA"
-* `Concept`: The Concept's [description](../../api-entities/concepts-1/concept-object.md#description), e.g. "the study of relation between plant species and genera"
+* `Concept`: The Concept's [description](../../api-entities/concepts/concept-object.md#description), e.g. "the study of relation between plant species and genera"
 
 ## IDs in autocomplete
 

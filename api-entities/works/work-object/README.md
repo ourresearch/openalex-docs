@@ -186,7 +186,7 @@ cited_by_count: 382
 
 ### `concepts`
 
-_List:_ List of dehydrated [`Concept` objects](../../concepts-1/concept-object.md).
+_List:_ List of dehydrated [`Concept` objects](../../concepts/concept-object.md).
 
 Each `Concept` object in the list also has one additional property:
 

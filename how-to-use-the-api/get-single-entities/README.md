@@ -61,7 +61,7 @@ This works with DOIs, ISSNs, ORCIDs, and lots of other IDs...in fact, you can us
 * [`Author.ids`](../../api-entities/authors/author-object.md#ids)
 * [`Source.ids`](../../api-entities/sources/source-object.md#ids)
 * [`Institution.ids`](../../api-entities/institutions/institution-object.md#ids)
-* [`Concept.ids`](../../api-entities/concepts-1/concept-object.md#ids)
+* [`Concept.ids`](../../api-entities/concepts/concept-object.md#ids)
 * [`Publisher.ids`](../../api-entities/publishers/publisher-object.md#ids)
 
 ## ID formats
@@ -95,7 +95,7 @@ These are the Canonical External IDs:
 * Authors: [ORCID](../../api-entities/authors/author-object.md#orcid)
 * Sources: [ISSN-L](../../api-entities/sources/source-object.md#issn\_l)
 * Institutions: [ROR ID](../../api-entities/institutions/institution-object.md#ror)
-* Concepts: [Wikidata ID](../../api-entities/concepts-1/concept-object.md#wikidata)
+* Concepts: [Wikidata ID](../../api-entities/concepts/concept-object.md#wikidata)
 * Publishers: [Wikidata ID](../../api-entities/publishers/publisher-object.md#ids)
 
 ## Dehydrated entity objects

@@ -1,10 +1,10 @@
 # Search concepts
 
 {% hint style="warning" %}
-These are the original OpenAlex Concepts, which are being deprecated in favor of Topics. We will continue to provide these Concepts for Works, but we will not be actively maintaining, updating, or providing support for these concepts. Unless you have a good reason to be relying on them, we encourage you to look into Topics instead.
+These are the original OpenAlex Concepts, which are being deprecated in favor of [Topics](../topics/README.md). We will continue to provide these Concepts for Works, but we will not be actively maintaining, updating, or providing support for these concepts. Unless you have a good reason to be relying on them, we encourage you to look into [Topics](../topics/README.md) instead.
 {% endhint %}
 
-The best way to search for concepts is to use the `search` query parameter, which searches the [`display_name`](../concepts-1/concept-object.md#display\_name) and [`description`](../concepts-1/concept-object.md#description) fields. Example:
+The best way to search for concepts is to use the `search` query parameter, which searches the [`display_name`](../concepts/concept-object.md#display\_name) and [`description`](../concepts/concept-object.md#description) fields. Example:
 
 * Search concepts' `display_name` and `description` for "artificial intelligence":\
   [https://api.openalex.org/concepts?search=artificial intelligence](https://api.openalex.org/concepts?search=artificial%20intelligence)
@@ -24,7 +24,7 @@ The following field can be searched as a filter within concepts:
 
 | Search filter                                                                  | Field that is searched                                          |
 | ------------------------------------------------------------------------------ | --------------------------------------------------------------- |
-| [`display_name.search`](../concepts-1/filter-concepts.md#display\_name.search) | [`display_name`](../concepts-1/concept-object.md#display\_name) |
+| [`display_name.search`](../concepts/filter-concepts.md#display\_name.search) | [`display_name`](../concepts/concept-object.md#display\_name) |
 
 You can also use the filter `default.search`, which works the same as using the [`search` parameter](search-concepts.md#search-concepts).
 
