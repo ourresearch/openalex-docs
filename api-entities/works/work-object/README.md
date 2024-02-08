@@ -673,6 +673,33 @@ sustainable_development_goals: [
 ]
 ```
 
+### `topics`
+
+_List:_ List of objects
+
+```json
+topics: [
+    {
+        id: "https://openalex.org/T12419",
+        display_name: "Analysis of Cardiac and Respiratory Sounds",
+        score: 	0.9997,
+        subfield: {
+            id: 2740,
+            display_name: "Pulmonary and Respiratory Medicine"
+        }
+        field: {
+            id: 27,
+            display_name: "Medicine"
+        }
+        domain: {
+            id: 4,
+            display_name: "Health Sciences"
+        }
+    }
+    ...
+]
+```
+
 ### `title`
 
 _String:_ The title of this work.
