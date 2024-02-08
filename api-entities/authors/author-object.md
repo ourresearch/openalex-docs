@@ -1,6 +1,6 @@
 # Author object
 
-When you use the API to get a [single author](get-a-single-author.md) or [lists of authors](get-lists-of-authors.md), this is what's returned.&#x20;
+When you use the API to get a [single author](get-a-single-author.md) or [lists of authors](get-lists-of-authors.md), this is what's returned.
 
 ### `affiliations`
 
@@ -40,7 +40,7 @@ cited_by_count: 38
 
 ### `counts_by_year`
 
-_List:_ [`Author.works_count`](author-object.md#works\_count) and [`Author.cited_by_count`](author-object.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many works this author published, and how many times they got cited.&#x20;
+_List:_ [`Author.works_count`](author-object.md#works\_count) and [`Author.cited_by_count`](author-object.md#cited\_by\_count) for each of the last ten years, binned by year. To put it another way: each year, you can see how many works this author published, and how many times they got cited.
 
 Any works or citations older than ten years old aren't included. Years with zero works and zero citations have been removed so you will need to add those in if you need them.
 
@@ -67,7 +67,7 @@ counts_by_year: [
 
 ### `created_date`
 
-_String:_ The date this `Author` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.&#x20;
+_String:_ The date this `Author` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
 
 ```json
 created_date: "2017-08-08"
@@ -129,7 +129,7 @@ _Object:_ This author's last known institutional affiliation. In this context "l
 
 This is a [dehydrated `Institution`](../institutions/institution-object.md#the-dehydratedinstitution-object) object, and you can find more documentation on the [Institution](../institutions/institution-object.md) page.
 
-This will be deprecated in the future in favor of [`last_known_institutions`](./author-object.md#last_known_institutions).
+This will be deprecated in the future in favor of [`last_known_institutions`](author-object.md#last\_known\_institutions).
 
 ```json
 last_known_institution: {
@@ -177,7 +177,7 @@ _Object:_ Citation metrics for this author
 
 * `2yr_mean_citedness` _Float_: The 2-year mean citedness for this source. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor). We use the year prior to the current year for the citations (the numerator) and the two years prior to that for the citation-receiving publications (the denominator).
 * `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this author.
-* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this author.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level\_metrics#i-10-index) for this author.
 
 While the 2-year mean citedness is normally a journal-level metric, it can be calculated for any set of papers, so we include it for authors.
 
@@ -225,7 +225,7 @@ This is updated a couple times per day. So the count may be slightly different t
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.
 {% endhint %}
 
-_List:_ The concepts most frequently applied to works created by this author. Each is represented as a [dehydrated `Concept`](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
+_List:_ The concepts most frequently applied to works created by this author. Each is represented as a [dehydrated `Concept`](../concepts-1/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
 
 * `score` (_Float_): The strength of association between this author and the listed concept, from 0-100.
 
@@ -255,4 +255,3 @@ The `DehydratedAuthor` is stripped-down [`Author`](author-object.md#the-author-o
 * [`id`](author-object.md#id)
 * [`display_name`](author-object.md#display\_name)
 * [`orcid`](author-object.md#orcid)
-

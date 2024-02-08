@@ -1,10 +1,10 @@
-# Topic object
+# Concept object
 
-These are the fields in a concept object. When you use the API to get a [single concept](../concepts-1/get-a-single-concept.md) or [lists of concepts](../concepts-1/get-lists-of-concepts.md), this is what's returned.
+These are the fields in a concept object. When you use the API to get a [single concept](get-a-single-concept.md) or [lists of concepts](get-lists-of-concepts.md), this is what's returned.&#x20;
 
 ### `ancestors`
 
-_List:_ List of concepts that this concept descends from, as [dehydrated Concept](concept-object.md#the-dehydratedconcept-object) objects. See the [concept tree section](../concepts-1/) for more details on how the different layers of concepts work together.
+_List:_ List of concepts that this concept descends from, as [dehydrated Concept](concept-object.md#the-dehydratedconcept-object) objects. See the [concept tree section](./README.md) for more details on how the different layers of concepts work together.
 
 ```json
 ancestors: [
@@ -39,7 +39,7 @@ cited_by_count: 20248
 
 _List:_ The values of [`works_count`](concept-object.md#works\_count) and [`cited_by_count`](concept-object.md#cited\_by\_count) for _each_ of the last ten years, binned by year. To put it another way: for every listed year, you can see how many new works were tagged with this concept, and how many times _any_ work tagged with this concept got cited.
 
-Years with zero citations and zero works have been removed so you will need to add those back in if you need them.
+Years with zero citations and zero works have been removed so you will need to add those back in  if you need them.
 
 ```json
 counts_by_year: [
@@ -60,7 +60,7 @@ counts_by_year: [
 
 ### `created_date`
 
-_String:_ The date this `Concept` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.
+_String:_ The date this `Concept` object was created in the OpenAlex dataset, expressed as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date string.&#x20;
 
 ```json
 created_date: "2017-08-08"
@@ -94,7 +94,7 @@ id: "https://openalex.org/C2778407487"
 
 _Object:_ All the external identifiers that we know about for this institution. IDs are expressed as URIs whenever possible. Possible ID types:
 
-* `mag` (_Integer:_ this concept's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
+* `mag`  (_Integer:_ this concept's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `openalex` (_String:_ this concept's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Concept.id`](concept-object.md#id))
 * `umls_cui` (_List:_ this concept's [Unified Medical Language System](https://www.nlm.nih.gov/research/umls/index.html) [Concept Unique Identifiers](https://www.nlm.nih.gov/research/umls/new\_users/online\_learning/Meta\_005.html))
 * `umls_aui` (_List:_ this concept's [Unified Medical Language System](https://www.nlm.nih.gov/research/umls/index.html) [Atom Unique Identifiers](https://www.nlm.nih.gov/research/umls/new\_users/online\_learning/Meta\_005.html))
@@ -188,7 +188,7 @@ _Object:_ Citation metrics for this concept
 
 * `2yr_mean_citedness` _Float_: The 2-year mean citedness for this source. Also known as [impact factor](https://en.wikipedia.org/wiki/Impact\_factor). We use the year prior to the current year for the citations (the numerator) and the two years prior to that for the citation-receiving publications (the denominator).
 * `h_index` _Integer_: The [_h_-index](https://en.wikipedia.org/wiki/H-index) for this concept.
-* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level\_metrics#i-10-index) for this concept.
+* `i10_index` _Integer_: The [i-10 index](https://en.wikipedia.org/wiki/Author-level_metrics#i-10-index) for this concept.
 
 While the _h_-index and the i-10 index are normally author-level metrics and the 2-year mean citedness is normally a journal-level metric, they can be calculated for any set of papers, so we include them for concepts.
 
@@ -210,10 +210,10 @@ updated_date: "2021-12-25T14:04:30.578837"
 
 ### `wikidata`
 
-_String:_ The [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers) for this concept. This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for concepts.
+_String:_ The [Wikidata ID](https://www.wikidata.org/wiki/Wikidata:Identifiers) for this concept.  This is the [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for concepts.
 
 {% hint style="info" %}
-_All_ OpenAlex concepts have a Wikidata ID, because all OpenAlex concepts are also Wikidata concepts.
+_All_ OpenAlex concepts have a Wikidata ID, because all OpenAlex concepts are also Wikidata concepts.&#x20;
 {% endhint %}
 
 ```json

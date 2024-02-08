@@ -10,19 +10,19 @@ It's easy to get a singleton entity object from from the API:`/<entity_name>/<en
 
 * Get the work with the [OpenAlex ID](./#the-openalex-id) `W2741809807`: [`https://api.openalex.org/works/W2741809807`](https://api.openalex.org/works/W2741809807)
 
-That will return a [`Work`](../../api-entities/works/work-object/) object, describing everything OpenAlex knows about the work with that ID.    You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
+That will return a [`Work`](../../api-entities/works/work-object/) object, describing everything OpenAlex knows about the work with that ID. You can use IDs other than OpenAlex IDs, and you can also format the IDs in different ways. Read below to learn more.
 
 {% hint style="info" %}
 You can make up to 50 of these queries at once by [requesting a list of entities and filtering on IDs using OR syntax](../get-lists-of-entities/filter-entity-lists.md#addition-or).
 {% endhint %}
 
 {% hint style="info" %}
-To get a single entity, you need a single _unambiguous_ identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name), you'll want to  [search](../get-lists-of-entities/search-entities.md) instead.
+To get a single entity, you need a single _unambiguous_ identifier, like an ORCID or an OpenAlex ID. If you've got an ambiguous identifier (like an author's name), you'll want to [search](../get-lists-of-entities/search-entities.md) instead.
 {% endhint %}
 
 ## The OpenAlex ID
 
-The OpenAlex ID is the primary key for all entities. It's a URL shaped like this: `https://openalex.org/<OpenAlex_key>`. Here's a real-world example:&#x20;
+The OpenAlex ID is the primary key for all entities. It's a URL shaped like this: `https://openalex.org/<OpenAlex_key>`. Here's a real-world example:
 
 [`https://openalex.org/W2741809807`](https://openalex.org/W2741809807)
 
@@ -61,7 +61,7 @@ This works with DOIs, ISSNs, ORCIDs, and lots of other IDs...in fact, you can us
 * [`Author.ids`](../../api-entities/authors/author-object.md#ids)
 * [`Source.ids`](../../api-entities/sources/source-object.md#ids)
 * [`Institution.ids`](../../api-entities/institutions/institution-object.md#ids)
-* [`Concept.ids`](../../api-entities/concepts/concept-object.md#ids)
+* [`Concept.ids`](../../api-entities/concepts-1/concept-object.md#ids)
 * [`Publisher.ids`](../../api-entities/publishers/publisher-object.md#ids)
 
 ## ID formats
@@ -87,7 +87,7 @@ Finally, if you're using an OpenAlex ID, you can be even more succinct, and just
 
 ## Canonical External IDs
 
-Every entity has an OpenAlex ID. Most entities also have IDs in other systems, too. There are hundreds of different ID systems, but we've selected a single external ID system for each entity to provide the **Canonical External ID**--this is the ID in the system that's been most fully adopted by the community, and is most frequently used in the wild. We support other external IDs as well, but the canonical ones get a privileged spot in the API and dataset.&#x20;
+Every entity has an OpenAlex ID. Most entities also have IDs in other systems, too. There are hundreds of different ID systems, but we've selected a single external ID system for each entity to provide the **Canonical External ID**--this is the ID in the system that's been most fully adopted by the community, and is most frequently used in the wild. We support other external IDs as well, but the canonical ones get a privileged spot in the API and dataset.
 
 These are the Canonical External IDs:
 
@@ -95,11 +95,11 @@ These are the Canonical External IDs:
 * Authors: [ORCID](../../api-entities/authors/author-object.md#orcid)
 * Sources: [ISSN-L](../../api-entities/sources/source-object.md#issn\_l)
 * Institutions: [ROR ID](../../api-entities/institutions/institution-object.md#ror)
-* Concepts: [Wikidata ID](../../api-entities/concepts/concept-object.md#wikidata)
+* Concepts: [Wikidata ID](../../api-entities/concepts-1/concept-object.md#wikidata)
 * Publishers: [Wikidata ID](../../api-entities/publishers/publisher-object.md#ids)
 
 ## Dehydrated entity objects
 
 The full entity objects can get pretty unwieldy, especially when you're embedding a list of them in another object (for instance, a list of `Concept`s in a `Work`). For these cases, all the entities except `Work`s have a dehydrated version. This is a stripped-down representation of the entity that carries only its most essential properties. These properties are documented individually on their respective entity pages.
 
-\
+\\

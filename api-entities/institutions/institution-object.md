@@ -340,7 +340,7 @@ works_count: 202704    
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.
 {% endhint %}
 
-_List:_ The [`Concepts`](../concepts/concept-object.md) most frequently applied to works affiliated with this institution. Each is represented as a [dehydrated Concept](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
+_List:_ The [`Concepts`](../concepts-1/concept-object.md) most frequently applied to works affiliated with this institution. Each is represented as a [dehydrated Concept](../concepts-1/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
 
 * `score` (_Float_): The strength of association between this institution and the listed concept, from 0-100.
 
@@ -367,11 +367,11 @@ x_concepts: [
 
 ## The `DehydratedInstitution` object
 
-The `DehydratedInstitution` is a stripped-down [`Institution`](./institution-object.md) object, with most of its properties removed to save weight. Its only remaining properties are:
+The `DehydratedInstitution` is a stripped-down [`Institution`](institution-object.md) object, with most of its properties removed to save weight. Its only remaining properties are:
 
-* [`country_code`](./institution-object.md#country_code)
-* [`display_name`](./institution-object.md#display_name)
-* [`id`](./institution-object.md#id)
-* [`lineage`](./institution-object.md#lineage)
-* [`ror`](./institution-object.md#ror)
-* [`type`](./institution-object.md#type)
+* [`country_code`](institution-object.md#country\_code)
+* [`display_name`](institution-object.md#display\_name)
+* [`id`](institution-object.md#id)
+* [`lineage`](institution-object.md#lineage)
+* [`ror`](institution-object.md#ror)
+* [`type`](institution-object.md#type)

@@ -9,13 +9,13 @@ Here are the details on where the OpenAlex data lives and how it's structured.
   * If you're initializing a fresh snapshot, the `updated_date` partitions aren't important yet. You need all the entities, so for `Authors` you would get [`/data/authors`](https://openalex.s3.amazonaws.com/browse.html#data/authors/)`/*/*.gz`
 * There are multiple objects under each `updated_date` partition. Each is under 2GB.
 * The manifest file is JSON (in [redshift manifest](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-files-using-manifest.html) format) and lists all the data files for each object type - [`/data/works/manifest`](https://openalex.s3.amazonaws.com/data/works/manifest) lists all the works.
-* The gzip-compressed snapshot takes up about 330 GB and decompresses to about 1.6 TB.&#x20;
+* The gzip-compressed snapshot takes up about 330 GB and decompresses to about 1.6 TB.
 
-The structure of each entity type is documented here: [Work](../api-entities/works/work-object/), [Author](../api-entities/authors/author-object.md), [Source](../api-entities/sources/source-object.md), [Institution](../api-entities/institutions/institution-object.md), [Concept](../api-entities/concepts/concept-object.md), and [Publisher](../api-entities/publishers/publisher-object.md).
+The structure of each entity type is documented here: [Work](../api-entities/works/work-object/), [Author](../api-entities/authors/author-object.md), [Source](../api-entities/sources/source-object.md), [Institution](../api-entities/institutions/institution-object.md), [Concept](../api-entities/concepts-1/concept-object.md), and [Publisher](../api-entities/publishers/publisher-object.md).
 
 #### Visualization of the entity\_type/updated\_date folder structure
 
-This is a screenshot showing the "leaf" nodes of one _entity type_, _updated date_ folder. You can also click around the browser links above to get a sense of the snapshot's structure.&#x20;
+This is a screenshot showing the "leaf" nodes of one _entity type_, _updated date_ folder. You can also click around the browser links above to get a sense of the snapshot's structure.
 
 ![](<../.gitbook/assets/Screen Shot 2022-07-12 at 12.42.43 PM.png>)
 
@@ -74,9 +74,9 @@ You never need to go back for a partition you've already downloaded. Anything th
 
 At the time of writing, these are the `Author` partitions and the number of records in each (in the actual dataset):
 
-* `updated_date=2021-12-30/` - 62,573,099&#x20;
-* `updated_date=2022-12-31/` - 97,559,192&#x20;
-* `updated_date=2022-01-01/` - 46,766,699&#x20;
+* `updated_date=2021-12-30/` - 62,573,099
+* `updated_date=2022-12-31/` - 97,559,192
+* `updated_date=2022-01-01/` - 46,766,699
 * `updated_date=2022-01-02/` - 1,352,773
 
 This reflects the creation of the dataset on 2021-12-30 and 145,678,664 combined updates and inserts since then - 1,352,773 of which were on 2022-01-02. Over time, the number of partitions will grow. If we make a change that affects all records, the partitions before the date of the change will disappear.
@@ -84,14 +84,14 @@ This reflects the creation of the dataset on 2021-12-30 and 145,678,664 combined
 ### Merged Entities
 
 {% hint style="info" %}
-See [Merged Entities](../how-to-use-the-api/get-single-entities/README.md#merged-entity-ids) for an explanation of what Entity merging is and why we do it.&#x20;
+See [Merged Entities](../how-to-use-the-api/get-single-entities/#merged-entity-ids) for an explanation of what Entity merging is and why we do it.
 {% endhint %}
 
 Alongside the folders for the six Entity types - work, author, source, institution, concept, and publisher - you'll find a seventh folder: [merged\_ids](https://openalex.s3.amazonaws.com/browse.html#data/merged\_ids/). Within this folder you'll find the IDs of Entities that have been merged away, along with the Entity IDs they were merged into.
 
 Keep in mind that merging an Entity ID is a way of deleting the Entity while persisting its ID in OpenAlex. In practice, you can just delete the Entity it belongs to. It's not necessary to keep track of the date or which entity it was merged into.
 
-Merge operations are separated into files by date. Each file lists the IDs of Entities that were merged on that date, and names the Entities they were merged into.&#x20;
+Merge operations are separated into files by date. Each file lists the IDs of Entities that were merged on that date, and names the Entities they were merged into.
 
 ```
 /data/merged_ids/
@@ -116,7 +116,7 @@ When processing this file, all you need to do is delete A2257618939. The effects
 
 Like the Entities' _updated\_date_ partitions, you only ever need to download merged\_ids files that are new to you. Any later merges will appear in new files with later dates.
 
-### The `manifest` file&#x20;
+### The `manifest` file
 
 When we start writing a new `updated_date` partition for an entity, we'll delete that entity's `manifest` file. When we finish writing the partition, we'll recreate the manifest, including the newly-created objects. So if `manifest` is there, all the entities are there too.
 

@@ -287,7 +287,7 @@ works_count: 20184
 The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.
 {% endhint %}
 
-_List:_ The `Concepts` most frequently applied to works hosted by this source. Each is represented as a [dehydrated Concept](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
+_List:_ The `Concepts` most frequently applied to works hosted by this source. Each is represented as a [dehydrated Concept](../concepts-1/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
 
 `score` (_Float_): The strength of association between this source and the listed concept, from 0-100.
 
@@ -321,8 +321,8 @@ The `DehydratedSource` is stripped-down `Source` object, with most of its proper
 * [`host_organization_lineage`](source-object.md#host\_organization\_lineage)
 * [`host_organization_name`](source-object.md#host\_organization\_name)
 * [`id`](source-object.md#id)
-* [`is_in_doaj`](#is_in_doaj)
-* [`is_oa`](#is_oa)
+* [`is_in_doaj`](source-object.md#is\_in\_doaj)
+* [`is_oa`](source-object.md#is\_oa)
 * [`issn`](source-object.md#issn)
 * [`issn_l`](source-object.md#issn\_l)
 * [`type`](source-object.md#type)

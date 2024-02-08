@@ -1,4 +1,4 @@
-# Get lists of topics
+# Get lists of concepts
 
 You can get lists of concepts:
 
@@ -46,7 +46,7 @@ You also can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-
 * Sort concepts by cited by count, descending\
   [https://api.openalex.org/concepts?sort=cited\_by\_count:desc](https://api.openalex.org/concepts?sort=cited\_by\_count:desc)
 
-Continue on to learn how you can [filter](../concepts-1/filter-concepts.md) and [search](../concepts-1/search-concepts.md) lists of concepts.
+Continue on to learn how you can [filter](filter-concepts.md) and [search](search-concepts.md) lists of concepts.
 
 ## Sample concepts
 

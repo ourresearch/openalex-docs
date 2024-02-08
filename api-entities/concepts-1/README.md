@@ -1,13 +1,7 @@
----
-description: Topics assigned to works
----
-
-# 💡 Topics
-
-
+# Concepts
 
 {% hint style="warning" %}
-
+These are the original OpenAlex Concepts, which are being deprecated in favor of Topics. We will continue to provide these Concepts for Works, but we will not be actively maintaining, updating, or providing support for these concepts. Unless you have a good reason to be relying on them, we encourage you to look into Topics instead.
 {% endhint %}
 
 Concepts are abstract ideas that works are about. OpenAlex indexes about 65k concepts.
@@ -27,15 +21,15 @@ Each work is tagged with multiple concepts, based on the title, abstract, and th
 
 A score is available for each [concept in a work](../works/work-object/#concepts), showing the classifier's confidence in choosing that concept. However, when assigning a lower-level child concept, we also assign all of its parent concepts all the way up to the root. This means that some concept assignment scores will be 0.0. The tagger adds concepts to works written in different languages, but it is optimized for English.
 
-Concepts are linked to works via the [`concepts`](../works/work-object/#concepts) property. They’re also linked to [authors](../authors/author-object.md), [sources](../sources/sources-object.md), and [institutions](../institutions/institution-object.md) via the `x_concepts` property, and to other concepts via the [`ancestors`](../concepts-1/concept-object.md#ancestors) and [`related_concepts`](../concepts-1/concept-object.md#related\_concepts) properties.
+Concepts are linked to works via the [`concepts`](../works/work-object/#concepts) property. They’re also linked to [authors](../authors/author-object.md), [sources](../sources/sources-object.md), and [institutions](../institutions/institution-object.md) via the `x_concepts` property, and to other concepts via the [`ancestors`](concept-object.md#ancestors) and [`related_concepts`](concept-object.md#related\_concepts) properties.
 
 ## What's next
 
 Learn more about what you can do with concepts:
 
-* [The Concept object](../concepts-1/concept-object.md)
-* [Get a single concept](../concepts-1/get-a-single-concept.md)
-* [Get lists of concepts](../concepts-1/get-lists-of-concepts.md)
-* [Filter concepts](../concepts-1/filter-concepts.md)
-* [Search concepts](../concepts-1/search-concepts.md)
-* [Group concepts](../concepts-1/group-concepts.md)
+* [The Concept object](concept-object.md)
+* [Get a single concept](get-a-single-concept.md)
+* [Get lists of concepts](get-lists-of-concepts.md)
+* [Filter concepts](filter-concepts.md)
+* [Search concepts](search-concepts.md)
+* [Group concepts](group-concepts.md)

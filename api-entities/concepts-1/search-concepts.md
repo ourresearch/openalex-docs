@@ -1,6 +1,6 @@
-# Search topics
+# Search concepts
 
-The best way to search for concepts is to use the `search` query parameter, which searches the [`display_name`](../concepts-1/concept-object.md#display\_name) and [`description`](../concepts-1/concept-object.md#description) fields. Example:
+The best way to search for concepts is to use the `search` query parameter, which searches the [`display_name`](concept-object.md#display\_name) and [`description`](concept-object.md#description) fields. Example:
 
 * Search concepts' `display_name` and `description` for "artificial intelligence":\
   [https://api.openalex.org/concepts?search=artificial intelligence](https://api.openalex.org/concepts?search=artificial%20intelligence)
@@ -18,11 +18,11 @@ You can also use search as a [filter](../../how-to-use-the-api/get-lists-of-enti
 
 The following field can be searched as a filter within concepts:
 
-| Search filter                                                                  | Field that is searched                                          |
-| ------------------------------------------------------------------------------ | --------------------------------------------------------------- |
-| [`display_name.search`](../concepts-1/filter-concepts.md#display\_name.search) | [`display_name`](../concepts-1/concept-object.md#display\_name) |
+| Search filter                                                    | Field that is searched                            |
+| ---------------------------------------------------------------- | ------------------------------------------------- |
+| [`display_name.search`](filter-concepts.md#display\_name.search) | [`display_name`](concept-object.md#display\_name) |
 
-You can also use the filter `default.search`, which works the same as using the [`search` parameter](search-concepts.md#search-concepts).
+You can also use the filter `default.search`, which works the same as using the [`search` parameter](#search-concepts).
 
 ## Autocomplete concepts
 

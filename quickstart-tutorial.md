@@ -10,7 +10,7 @@ Lets use the OpenAlex API to get journal articles and books published by authors
 If you open these examples in a web browser, they will look _much_ better if you have a browser plug-in such as [JSONVue](https://chrome.google.com/webstore/detail/jsonvue/chklaanhfefbnpoihckbnefhakgolnmc) installed.
 {% endhint %}
 
-### 1. Find the institution&#x20;
+### 1. Find the institution
 
 You can use the [institutions](api-entities/institutions/) endpoint to learn about universities and research centers. OpenAlex has a powerful search feature that searches across 108,000 institutions.
 
@@ -35,7 +35,7 @@ Our first result looks correct (yeah!):
 
 We can use the ID `https://openalex.org/I97018004` in that result to find out more.
 
-### &#x20;2. Find articles (works) associated with Stanford University
+### 2. Find articles (works) associated with Stanford University
 
 The [works](api-entities/works/) endpoint contains over 240 million articles, books, and theses :astonished:. We can filter to show works associated with Stanford.
 
@@ -91,7 +91,7 @@ Jump into an area of OpenAlex that interests you:
 * [Authors](api-entities/authors/)
 * [Sources](api-entities/sources/)
 * [Institutions](api-entities/institutions/)
-* [Concepts](api-entities/concepts/)
+* [Concepts](api-entities/concepts-1/)
 * [Publishers](api-entities/publishers/)
 * [Funders](api-entities/funders/)
 
