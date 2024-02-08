@@ -33,7 +33,3 @@ Learn more about what you can do with concepts:
 * [Filter concepts](filter-concepts.md)
 * [Search concepts](search-concepts.md)
 * [Group concepts](group-concepts.md)
-
----
-description: Topics assigned to works
----
