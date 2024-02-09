@@ -91,7 +91,7 @@ Jump into an area of OpenAlex that interests you:
 * [Authors](api-entities/authors/)
 * [Sources](api-entities/sources/)
 * [Institutions](api-entities/institutions/)
-* [Concepts](api-entities/concepts/)
+* [Topics](api-entities/topics/)
 * [Publishers](api-entities/publishers/)
 * [Funders](api-entities/funders/)
 

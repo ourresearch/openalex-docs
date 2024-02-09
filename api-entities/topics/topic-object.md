@@ -9,7 +9,7 @@ _Integer:_ The number of citations to works that have been tagged with this topi
 For example, if there are just two works tagged with this topic and one of them has been cited 10 times, and the other has been cited 1 time, `cited_by_count` for this topic would be `11`.
 
 ```json
-cited_by_count: concept 
+cited_by_count: 141754 
 ```
 
 ### `created_date`
