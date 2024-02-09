@@ -4,7 +4,7 @@
 These are the original OpenAlex Concepts, which are being deprecated in favor of [Topics](../topics/README.md). We will continue to provide these Concepts for Works, but we will not be actively maintaining, updating, or providing support for these concepts. Unless you have a good reason to be relying on them, we encourage you to look into [Topics](../topics/README.md) instead.
 {% endhint %}
 
-It's easy to get a concept from from the API with: `/concepts/<entity_id>`. Here's an example:
+It's easy to get a concept from the API with: `/concepts/<entity_id>`. Here's an example:
 
 * Get the concept with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `C71924100`:\
   [https://api.openalex.org/concepts/C71924100](https://api.openalex.org/concepts/C71924100)

@@ -96,7 +96,7 @@ id: "https://openalex.org/C2778407487"
 
 ### `ids`
 
-_Object:_ All the external identifiers that we know about for this institution. IDs are expressed as URIs whenever possible. Possible ID types:
+_Object:_ All the external identifiers that we know about for this concept. IDs are expressed as URIs whenever possible. Possible ID types:
 
 * `mag` (_Integer:_ this concept's [Microsoft Academic Graph](https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/) ID)
 * `openalex` (_String:_ this concept's [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id). Same as [`Concept.id`](concept-object.md#id))
@@ -114,7 +114,7 @@ ids: {
     openalex: "https://openalex.org/C2778407487",
     wikidata: "https://www.wikidata.org/wiki/Q14565201",
     wikipedia: "https://en.wikipedia.org/wiki/Altmetrics",
-    mag: 2778407487114027177
+    mag: 2778407487
 }
 ```
 
