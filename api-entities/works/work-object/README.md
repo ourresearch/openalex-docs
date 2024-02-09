@@ -605,6 +605,32 @@ primary_location: {
 }
 ```
 
+### `primary_topic`
+
+_List:_ Object
+
+The top ranked [`Topic`](../../topics/README.md) for this work. This is the same as the first item in [`topics`](#topics).
+
+```json
+primary_topic: {
+    id: "https://openalex.org/T12419",
+    display_name: "Analysis of Cardiac and Respiratory Sounds",
+    score: 	0.9997,
+    subfield: {
+        id: 2740,
+        display_name: "Pulmonary and Respiratory Medicine"
+    }
+    field: {
+        id: 27,
+        display_name: "Medicine"
+    }
+    domain: {
+        id: 4,
+        display_name: "Health Sciences"
+    }
+}
+```
+
 ### `publication_date`
 
 _String:_ The day when this work was published, formatted as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date.
@@ -676,6 +702,8 @@ sustainable_development_goals: [
 ### `topics`
 
 _List:_ List of objects
+
+The top ranked [`Topics`](../../topics/README.md) for this work. We provide up to 3 topics per work.
 
 ```json
 topics: [
