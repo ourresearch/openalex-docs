@@ -609,7 +609,7 @@ primary_location: {
 
 _List:_ Object
 
-The top ranked [`Topic`](../../topics/README.md) for this work. This is the same as the first item in [`topics`](#topics).
+The top ranked [`Topic`](../../topics/README.md) for this work. This is the same as the first item in [`Work.topics`](#topics).
 
 ```json
 primary_topic: {
