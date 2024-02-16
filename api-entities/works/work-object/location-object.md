@@ -52,7 +52,7 @@ landing_page_url: "https://doi.org/10.1590/s1678-77572010000100010"
 
 ### license
 
-_String:_ The location's publishing license. This can be a [Create Commons](https://creativecommons.org/about/cclicenses/) license such as cc0 or cc-by, a publisher-specific license, or null which means we are not able to determine a license for this location.
+_String:_ The location's publishing license. This can be a [Creative Commons](https://creativecommons.org/about/cclicenses/) license such as cc0 or cc-by, a publisher-specific license, or null which means we are not able to determine a license for this location.
 
 ```json
 license: "cc-by"
