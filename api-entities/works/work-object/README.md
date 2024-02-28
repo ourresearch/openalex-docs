@@ -418,7 +418,7 @@ institutions_distinct_count: 4
 
 _Boolean:_ True if we think this work is [paratext](https://en.wikipedia.org/wiki/Paratext).
 
-In our context, paratext is stuff that's in scholarly venue (like a journal) but is _about the venue_ rather than a scholarly work properly speaking. Some examples and nonexamples:
+In our context, paratext is stuff that's in a scholarly venue (like a journal) but is _about the venue_ rather than a scholarly work properly speaking. Some examples and nonexamples:
 
 * **yep it's paratext**: front cover, back cover, table of contents, editorial board listing, issue information, masthead.
 * **no, not paratext**: research paper, dataset, letters to the editor, figures
