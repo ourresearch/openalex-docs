@@ -63,6 +63,6 @@ For those who would like a higher level of service and to provide direct financi
 
 Our nonprofit (OurResearch) has a ten-year track record of building sustainable scholarly infrastructure, and a formal commitment to sustainability as part of [our adoption of the POSI principles.](https://blog.ourresearch.org/posi/)
 
-We're currently still exploring our options for OpenAlex's sustainability plan. Thanks to a generous grant from [Arcadia—a charitable fund of Lisbet Rausing and Peter Baldwin](https://www.arcadiafund.org.uk/), we've got lots of runway, and we don't need to roll anything out in a rush.
+We're currently still exploring our options for OpenAlex's sustainability plan. Thanks to a generous grant from [Arcadia](https://www.arcadiafund.org.uk/), we've got lots of runway, and we don't need to roll anything out in a rush.
 
 Our Unpaywall project (a free index of the world's open-access research literature) has been self-sustaining via a freemium revenue model for nearly five years, and we have recently introduced a similar model in [OpenAlex Premium. ](https://openalex.org/pricing)Access to the data will always be free for everyone, but OpenAlex Premium offers several benefits in service above the services we offer for free.
