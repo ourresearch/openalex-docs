@@ -21,7 +21,7 @@ Each work is tagged with multiple concepts, based on the title, abstract, and th
 
 A score is available for each [concept in a work](../works/work-object/#concepts), showing the classifier's confidence in choosing that concept. However, when assigning a lower-level child concept, we also assign all of its parent concepts all the way up to the root. This means that some concept assignment scores will be 0.0. The tagger adds concepts to works written in different languages, but it is optimized for English.
 
-Concepts are linked to works via the [`concepts`](../works/work-object/#concepts) property. They’re also linked to [authors](../authors/author-object.md), [sources](../sources/sources-object.md), and [institutions](../institutions/institution-object.md) via the `x_concepts` property, and to other concepts via the [`ancestors`](concept-object.md#ancestors) and [`related_concepts`](concept-object.md#related\_concepts) properties.
+Concepts are linked to works via the [`concepts`](../works/work-object/#concepts) property, and to other concepts via the [`ancestors`](concept-object.md#ancestors) and [`related_concepts`](concept-object.md#related\_concepts) properties.
 
 ## What's next
 

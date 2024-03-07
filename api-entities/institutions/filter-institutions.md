@@ -26,7 +26,7 @@ You can filter using these attributes of the `Institution` entity object (click 
 * [`summary_stats.i10_index`](institution-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
 * [`type`](institution-object.md#type)
 * [`works_count`](institution-object.md#works\_count)
-* [`x_concepts.id`](institution-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
+* [`x_concepts.id`](institution-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`) -- will be deprecated soon
 
 ### `/institutions` convenience filters
 

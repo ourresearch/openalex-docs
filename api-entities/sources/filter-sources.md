@@ -30,7 +30,7 @@ You can filter using these attributes of the `Source` entity object (click each 
 * [`summary_stats.i10_index`](source-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
 * [`type`](source-object.md#type)
 * [`works_count`](source-object.md#works\_count)
-* [`x_concepts.id`](source-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
+* [`x_concepts.id`](source-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`) -- will be deprecated soon
 
 {% hint style="info" %}
 Want to filter by `host_organization.display_name`? This is a two-step process:

@@ -31,7 +31,7 @@ You can filter using these attributes of the `Author` entity object (click each 
 * [`summary_stats.h_index`](author-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
 * [`summary_stats.i10_index`](author-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
 * [`works_count`](author-object.md#works\_count)
-* [`x_concepts.id`](author-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`)
+* [`x_concepts.id`](author-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`) -- will be deprecated soon
 
 {% hint style="info" %}
 Want to filter by `last_known_institution.display_name`? This is a two-step process:

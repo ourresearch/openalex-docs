@@ -222,7 +222,7 @@ This is updated a couple times per day. So the count may be slightly different t
 ### `x_concepts`
 
 {% hint style="danger" %}
-The "x" in `x_concepts` is because it's experimental and subject to removal with very little warning. We plan to replace it with a custom link to the Concepts API endpoint.
+`x_concepts` will be deprecated and removed soon. We will be replacing this functionality with [`Topics`](../topics/README.md) instead.
 {% endhint %}
 
 _List:_ The concepts most frequently applied to works created by this author. Each is represented as a [dehydrated `Concept`](../concepts/concept-object.md#the-dehydratedconcept-object) object, with one additional attribute:
