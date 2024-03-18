@@ -453,6 +453,17 @@ Returns: works with [`publication_date`](work-object/#publication\_date) less th
 * Get works published on or _before_ March 14th, 2001:\
   [`https://api.openalex.org/works?filter=to_publication_date:2001-03-14`](https://api.openalex.org/works?filter=to\_publication\_date:2001-03-14)\`\`
 
+#### `to_updated_date`
+
+Value: a date, formatted as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date or date-time string (for example: "2020-05-17", "2020-05-17T15:30", or "2020-01-02T00:22:35.180390").
+
+Returns: works with [`updated_date`](work-object/#updated\_date) less than or equal to the given date.
+
+This field requires an [OpenAlex Premium subscription to access. Click here to learn more.](https://openalex.org/pricing)
+
+* Get works updated before or on January 12th, 2023 (does not work without valid API key):\
+  [`https://api.openalex.org/works?filter=to_updated_date:2023-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=to\_updated\_date:2023-01-12\&api\_key=myapikey)
+
 #### `version`
 
 Value: a String with value `publishedVersion`, `submittedVersion`, `acceptedVersion`, or `null`
@@ -460,4 +471,4 @@ Value: a String with value `publishedVersion`, `submittedVersion`, `acceptedVers
 Returns: works where the chosen version exists within the [`locations`](work-object/#locations). If `null`, it returns works where no version is found in any of the locations.
 
 * Get works where a published version is available in at least one of the locations:\
-  ``[`https://api.openalex.org/works?filter=version:publishedVersion`](https://api.openalex.org/works?filter=version:publishedVersion)``
+  [`https://api.openalex.org/works?filter=version:publishedVersion`](https://api.openalex.org/works?filter=version:publishedVersion)
