@@ -26,7 +26,7 @@ is_accepted: true
 
 ### `is_oa`
 
-_Boolean:_ `True` if this work is Open Access (OA).
+_Boolean:_ `True` if an Open Access (OA) version of this work is available at this location.
 
 There are [many ways to define OA](https://peerj.com/articles/4375/#literature-review). OpenAlex uses a broad definition: having a URL where you can read the fulltext of this work without needing to pay money or log in.
 
