@@ -635,7 +635,7 @@ primary_topic: {
 
 _String:_ The day when this work was published, formatted as an [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) date.
 
-Where different publication dates exist, we select the earliest available date of electronic publication.
+Where different publication dates exist, we usually select the earliest available date of electronic publication.
 
 This date applies to the version found at [`Work.url`](./#url). The other versions, found in [`Work.locations`](./#locations), may have been published at different (earlier) dates.
 
