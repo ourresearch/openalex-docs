@@ -400,13 +400,17 @@ Returns: works where the given publisher ID is in [`primary_location.source.host
 * Get the works that have `https://openalex.org/P4310320547` in their `publisher_lineage`:\
   [`https://api.openalex.org/works?filter=primary_location.source.publisher_lineage:https://openalex.org/P4310320547`](https://api.openalex.org/works?filter=primary\_location.source.publisher\_lineage:https://openalex.org/P4310320547)
 
-#### `raw_affiliation_string.search`
+#### `raw_affiliation_strings.search`
+
+{% hint style="info" %}
+This filter used to be named `raw_affiliation_string.search`, but it is now `raw_affiliation_strings.search` (i.e., plural, with an 's').
+{% endhint %}
 
 Value: a search string
 
-Returns: works that have at least one [`raw_affiliation_string`](work-object/#raw\_affiliation\_string) which includes the given string. See the [search page](../../how-to-use-the-api/get-lists-of-entities/search-entities.md) for details on the search algorithm used.
+Returns: works that have at least one [`raw_affiliation_strings`](./work-object/authorship-object.md#raw_affiliation_strings) which includes the given string. See the [search page](../../how-to-use-the-api/get-lists-of-entities/search-entities.md) for details on the search algorithm used.
 
-* Get works with the words _Department of Political Science, University of Amsterdam_ somewhere in at least one author's `raw_affiliation_string`: [`https://api.openalex.org/works?filter=raw_affiliation_string.search:department%20of%20political%20science%20university%20of%amsterdam`](https://api.openalex.org/works?filter=raw\_affiliation\_string.search:department%20of%20political%20science%20university%20of%20amsterdam)\`\`
+* Get works with the words _Department of Political Science, University of Amsterdam_ somewhere in at least one author's `raw_affiliation_strings`: [`https://api.openalex.org/works?filter=raw_affiliation_strings.search:department%20of%20political%20science%20university%20of%amsterdam`](https://api.openalex.org/works?filter=raw\_affiliation\_strings.search:department%20of%20political%20science%20university%20of%20amsterdam)
 
 #### `related_to`
 

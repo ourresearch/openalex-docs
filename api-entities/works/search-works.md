@@ -25,7 +25,7 @@ The following fields can be searched within works:
 | [`abstract.search`](filter-works.md#abstract.search)                                 | [`abstract_inverted_index`](work-object/#abstract\_inverted\_index)     |
 | [`display_name.search`](filter-works.md#display\_name.search-alias-title.search)     | [`display_name`](work-object/#display\_name)                            |
 | [`fulltext.search`](filter-works.md#fulltext.search)                                 | fulltext via [`n-grams`](get-n-grams.md)                                |
-| [`raw_affiliation_string.search`](filter-works.md#raw_affiliation_stringsearch)      | [`authorships.raw_affiliation_strings`](work-object/authorship-object.md#raw_affiliation_string)  |
+| [`raw_affiliation_strings.search`](filter-works.md#raw_affiliation_stringssearch)      | [`authorships.raw_affiliation_strings`](./work-object/authorship-object.md#raw_affiliation_strings)  |
 | [`title.search`](filter-works.md#display\_name.search-alias-title.search)            | [`display_name`](work-object/#display\_name)                            |
 | [`title_and_abstract.search`](filter-works.md#title_and_abstractsearch)            | [`display_name`](work-object/#display\_name) and [`abstract_inverted_index`](work-object/#abstract\_inverted\_index)  |
 
