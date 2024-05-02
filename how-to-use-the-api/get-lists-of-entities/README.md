@@ -1,21 +1,21 @@
 # Get lists of entities
 
-It's easy to get a list of entity objects from from the API:`/<entity_name>.` Here's an example:
+It's easy to get a list of entity objects from from the API:`/<entity_name>`. Here's an example:
 
-* Get a list of _all_ the concepts in OpenAlex:\
-  [`https://api.openalex.org/concepts`](https://api.openalex.org/concepts)
+* Get a list of _all_ the topics in OpenAlex:\
+  [`https://api.openalex.org/topics`](https://api.openalex.org/topics)
 
-This query returns a `meta` object with details about the query, a `results` list of [`Concept`](../../api-entities/concepts/concept-object.md) objects, and an empty [`group_by`](../get-groups-of-entities.md) list:
+This query returns a `meta` object with details about the query, a `results` list of [`Topic`](../../api-entities/topics/topic-object.md) objects, and an empty [`group_by`](../get-groups-of-entities.md) list:
 
 ```json
 meta: {
-    count: 65073,
+    count: 4516,
     db_response_time_ms: 81,
     page: 1,
     per_page: 25
     },
 results: [
-    // long list of Concept entities
+    // long list of Topic entities
  ],
 group_by: [] // empty
 ```
