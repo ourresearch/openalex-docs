@@ -13,6 +13,10 @@ Here are the details on where the OpenAlex data lives and how it's structured.
 
 The structure of each entity type is documented here: [Work](../api-entities/works/work-object/), [Author](../api-entities/authors/author-object.md), [Source](../api-entities/sources/source-object.md), [Institution](../api-entities/institutions/institution-object.md), [Concept](../api-entities/concepts/concept-object.md), and [Publisher](../api-entities/publishers/publisher-object.md).
 
+{% hint style="info" %}
+We have recently added folders for new entities `topics`, `fields`, `subfields`, and `domains`, and we will be adding others soon. This documentation will soon be updated to reflect these changes.
+{% endhint %}
+
 #### Visualization of the entity\_type/updated\_date folder structure
 
 This is a screenshot showing the "leaf" nodes of one _entity type_, _updated date_ folder. You can also click around the browser links above to get a sense of the snapshot's structure.
