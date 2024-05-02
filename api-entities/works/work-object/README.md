@@ -443,23 +443,28 @@ is_retracted: false
 
 ### `keywords`
 
-_List of objects:_ Keywords extracted from the work's title, along with confidence scores from the extraction model.
+_List of objects:_ Short phrases identified based on works' Topics. For background on how Keywords are identified, see [the Keywords page at OpenAlex help pages](https://docs.openalex.org/api-entities/topics).
 
-We use a pretrained model to extract a list of keywords from the work's title. Not all works are assigned keywords. [See the model documentation for more details.](https://github.com/ourresearch/openalex-keywords/tree/main/v1)
+The score for each keyword represents the similarity score of that keyword to the title and abstract text of the work.
+
+We provide up to 5 keywords per work, for all keywords with scores above a certain threshold.
 
 ```json
 [
     {
-        keyword: "coastal marine ecosystems",
-        score: 0.5626
+        id: "https://openalex.org/keywords/global-seaweed-distribution",
+        display_name: "Global Seaweed Distribution",
+        score: 0.559386
     },
     {
-        keyword: "kelp detritus",
-        score: 0.5403
+        id: "https://openalex.org/keywords/climate-change-impacts",
+        display_name: "Climate Change Impacts",
+        score: 0.535795
     },
     {
-        keyword: "secondary production",
-        score: 0.3469
+        id: "https://openalex.org/keywords/ecosystem-resilience",
+        display_name: "Ecosystem Resilience",
+        score: 0.502789
     }
 ]
 ```
