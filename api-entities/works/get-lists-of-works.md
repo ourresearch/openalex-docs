@@ -3,7 +3,7 @@
 You can get lists of works:
 
 * Get _all_ of the works in OpenAlex\
-  [https://api.openalex.org/works](https://api.openalex.org/works)
+  [`https://api.openalex.org/works`](https://api.openalex.org/works)
 
 Which returns a response like this:
 
@@ -39,12 +39,12 @@ Which returns a response like this:
 You can [page through](../../how-to-use-the-api/get-lists-of-entities/paging.md) works and change the default number of results returned with the `page` and `per-page` parameters:
 
 * Get a second page of results with 50 results per page\
-  [https://api.openalex.org/works?per-page=50\&page=2](https://api.openalex.org/works?per-page=50\&page=2)
+  [`https://api.openalex.org/works?per-page=50\&page=2`](https://api.openalex.org/works?per-page=50\&page=2)
 
 You can [sort results](../../how-to-use-the-api/get-lists-of-entities/sort-entity-lists.md) with the `sort` parameter:
 
 * Sort works by publication year\
-  [https://api.openalex.org/works?sort=publication\_year](https://api.openalex.org/works?sort=publication\_year)
+  [`https://api.openalex.org/works?sort=publication\_year`](https://api.openalex.org/works?sort=publication\_year)
 
 Continue on to learn how you can [filter](filter-works.md) and [search](search-works.md) lists of works.
 
@@ -53,11 +53,11 @@ Continue on to learn how you can [filter](filter-works.md) and [search](search-w
 You can use `sample` to get a random batch of works. Read more about sampling and how to add a `seed` value [here](../../how-to-use-the-api/get-lists-of-entities/sample-entity-lists.md).
 
 * Get 20 random works\
-  [https://api.openalex.org/works?sample=20](https://api.openalex.org/works?sample=20)
+  [`https://api.openalex.org/works?sample=20`](https://api.openalex.org/works?sample=20)
 
 ## Select fields
 
 You can use `select` to limit the fields that are returned in a list of works. More details are [here](../../how-to-use-the-api/get-lists-of-entities/select-fields.md).
 
 * Display only the `id` and `display_name` within works results\
-  [https://api.openalex.org/works?select=id,display\_name](https://api.openalex.org/works?select=id,display\_name)
+  [`https://api.openalex.org/works?select=id,display\_name`](https://api.openalex.org/works?select=id,display\_name)
