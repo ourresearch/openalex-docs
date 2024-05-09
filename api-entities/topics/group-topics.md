@@ -11,7 +11,7 @@ Or you can group using one the attributes below.
 It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entities.md) before trying these out. It will show you how results are formatted, the number of results returned, and how to sort results.
 {% endhint %}
 
-### `/topics` group\_by \_\_ attributes
+### Topics group_by attributes
 
 * [`cited_by_count`](./topic-object.md#cited_by_count)
 * [`domain.id`](./topic-object.md#domain)
