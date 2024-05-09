@@ -46,7 +46,7 @@
   * [Filter topics](api-entities/topics/filter-topics.md)
   * [Search topics](api-entities/topics/search-topics.md)
   * [Group topics](api-entities/topics/group-topics.md)
-* [🗝️ Keywords](api-entities/topics-1/README.md)
+* [🗝️ Keywords](api-entities/keywords/README.md)
   * [Topic object](api-entities/topics-1/topic-object.md)
   * [Get a single topic](api-entities/topics-1/get-a-single-topic.md)
   * [Get lists of topics](api-entities/topics-1/get-lists-of-topics.md)
