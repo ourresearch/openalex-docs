@@ -11,7 +11,7 @@ Authors are people who create works. OpenAlex indexes about 213M authors, with t
 
 The [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for authors is ORCID; only a small percentage of authors have one, but the percentage is higher for more recent works.
 
-Our information about authors comes from MAG, Crossref, PubMed, ORCID, and publisher websites. To learn more about how we combine this information to get OpenAlex Authors, see [author-disambiguation.md](author-disambiguation.md "mention").&#x20;
+Our information about authors comes from MAG, Crossref, PubMed, ORCID, and publisher websites, among other sources. To learn more about how we combine this information to get OpenAlex Authors, see [author-disambiguation.md](author-disambiguation.md "mention").&#x20;
 
 Authors are linked to works via the [`works.authorships`](../works/work-object/#authorships) property.
 
