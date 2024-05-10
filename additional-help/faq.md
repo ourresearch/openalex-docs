@@ -1,6 +1,6 @@
 # FAQ
 
-### How do I cite OpenAlex
+### How do I cite OpenAlex?
 
 See our [citation section here.](../#citation)
 
@@ -69,4 +69,4 @@ Our Unpaywall project (a free index of the world's open-access research literatu
 
 ### I have a question about the openalexR library. Could you help me?
 
-We do not maintain the [openalexR](https://docs.ropensci.org/openalexR/) package. Please direct any questions you have to them instead.
+The [openalexR](https://docs.ropensci.org/openalexR/) package is a great way to work with the OpenAlex API using the R programming language, but it is third-party software that we do not maintain ourselves. Please direct any questions you have to them instead.
