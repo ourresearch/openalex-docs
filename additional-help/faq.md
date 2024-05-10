@@ -59,6 +59,10 @@ It's free! The [website](https://explore.openalex.org), the [API](../), and the 
 
 For those who would like a higher level of service and to provide direct financial support for our mission, we offer [OpenAlex Premium. Click here to learn more.](https://openalex.org/pricing)
 
+### I've noticed incorrect data in an OpenAlex author profile. How can I correct it?
+
+Please see the help section on [Author profile curation](https://help.openalex.org/how-it-works/authors#author-profile-curation).
+
 ### What's your sustainability plan?
 
 Our nonprofit (OurResearch) has a ten-year track record of building sustainable scholarly infrastructure, and a formal commitment to sustainability as part of [our adoption of the POSI principles.](https://blog.ourresearch.org/posi/)
