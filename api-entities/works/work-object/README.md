@@ -443,7 +443,7 @@ is_retracted: false
 
 ### `keywords`
 
-_List of objects:_ Short phrases identified based on works' Topics. For background on how Keywords are identified, see [the Keywords page at OpenAlex help pages](https://docs.openalex.org/api-entities/topics).
+_List of objects:_ Short phrases identified based on works' Topics. For background on how Keywords are identified, see [the Keywords page at OpenAlex help pages](https://docs.openalex.org/api-entities/keywords).
 
 The score for each keyword represents the similarity score of that keyword to the title and abstract text of the work.
 
