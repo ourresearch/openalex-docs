@@ -249,7 +249,7 @@ summary_stats: {
 
 ### `type`
 
-_String:_ The type of source, which will be one of: `journal`, `repository`, `conference`, `ebook platform`, or `book series`.
+_String:_ The type of source, which will be one of: `journal`, `repository`, `conference`, `ebook platform`, `book series`, `metadata`, or `other`.
 
 ```json
 type: "journal" 
