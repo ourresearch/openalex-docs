@@ -31,6 +31,8 @@ The following fields can be searched within works:
 
 You can also use the filter `default.search`, which works the same as using the [`search` parameter](#search-works).
 
+These searches make use of stemming and stop-word removal. You can disable this for searches on titles and abstracts. Learn how to do this [here](../../how-to-use-the-api/get-lists-of-entities/search-entities.md#search-without-stemming).
+
 ### Why can't I search by name of related entity (author name, institution name, etc.)?
 
 Rather than searching for the _names_ of entities related to works—such as authors, institutions, and sources—you need to search by a more unique identifier for that entity, like the OpenAlex ID. This means that there is a 2 step process:
