@@ -13,7 +13,7 @@ Use the `page` query parameter to control which page of results you want (eg `pa
 * Get 200 results on the second page:\
   [`https://api.openalex.org/works?page=2&per-page=200`](https://api.openalex.org/works?page=2\&per-page=200)
 
-Basic paging only works for to read the first 10,000 results of any list. If you want to see more than 10,000 results, you'll need to use [cursor paging](paging.md#cursor-paging).
+Basic paging only works to get the first 10,000 results of any list. If you want to see more than 10,000 results, you'll need to use [cursor paging](paging.md#cursor-paging).
 
 ### Cursor paging
 
