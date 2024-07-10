@@ -861,7 +861,8 @@ is_oa: true
 
 _String:_ The Open Access (OA) status of this work. Possible values are:
 
-* **`gold`**: Published in an OA journal that is indexed by the [DOAJ](https://doaj.org/).
+* [**`diamond`**](https://en.wikipedia.org/wiki/Diamond\_open\_access): Published in a fully OA journal—one that is indexed by the [DOAJ](https://doaj.org/) or that we have determined to be OA—with no article processing charges (i.e., free for both readers and authors).
+* **`gold`**: Published in a fully OA journal.
 * **`green`**: Toll-access on the publisher landing page, but there is a free copy in an [OA repository](https://en.wikipedia.org/wiki/Open-access\_repository).
 * **`hybrid`**: Free under an [open license](https://support.unpaywall.org/support/solutions/articles/44002063718-what-is-an-oa-license-) in a toll-access journal.
 * **`bronze`**: Free to read on the publisher landing page, but without any identifiable license.
@@ -870,10 +871,6 @@ _String:_ The Open Access (OA) status of this work. Possible values are:
 ```json
 oa_status: "gold"
 ```
-
-[Diamond open access](https://en.wikipedia.org/wiki/Diamond\_open\_access) is another more recent designation that refers to works which are free for both readers and authors. In OpenAlex, there is no "diamond" `oa_status`, but diamond OA works can be identified using a combination of the [`is_oa`](./#is\_oa) and [`apc_list.value`](./#apc\_list):
-
-* Get Diamond open access works: [`https://api.openalex.org/works?filter=apc_list.value:0,is_oa:true`](https://api.openalex.org/works?filter=apc\_list.value:0,is\_oa:true)
 
 ### `oa_url`
 
