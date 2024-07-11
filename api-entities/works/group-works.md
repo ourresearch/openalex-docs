@@ -84,6 +84,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`locations.source.is_in_doaj`](work-object/#locations)
 * [`locations.source.publisher_lineage`](filter-works.md#locations.source.publisher\_lineage)
 * [`locations_count`](work-object/#locations\_count)
+* [`mag_only`](filter-works.md#mag_only)
 * [`open_access.any_repository_has_fulltext`](work-object/#open\_access)
 * [`open_access.is_oa`](work-object/#is\_oa-1) (alias `is_oa`)
 * [`open_access.oa_status`](work-object/#oa\_status) (alias `oa_status`)

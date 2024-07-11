@@ -385,6 +385,17 @@ Returns: works where the given publisher ID is in [`locations.source.host_organi
 * Get the works that have `https://openalex.org/P4310320547` in their `publisher_lineage`:\
   [`https://api.openalex.org/works?filter=locations.source.publisher_lineage:https://openalex.org/P4310320547`](https://api.openalex.org/works?filter=locations.source.publisher\_lineage:https://openalex.org/P4310320547)
 
+#### `mag_only`
+
+Value: a Boolean (`true` or `false`)
+
+Returns: works which came from MAG (Microsoft Academic Graph), and no other data sources.
+
+MAG was a project by Microsoft Research to catalog all of the scholarly content on the internet. When it was discontinued in 2021, OpenAlex built upon the data MAG had accumulated, connecting and expanding it using [a variety of other source](https://help.openalex.org/hc/en-us/articles/24347019383191-Where-do-works-in-OpenAlex-come-from). The methods that MAG used to identify and aggregate scholarly content were quite different from most of our other sources, and so the content inherited from MAG, especially works that we did not connect with data from other sources, can look different from other works. While it's great to have these MAG-only works available, you may not always want to include them in your results or analyses. This filter allows you to include or exclude any works that came from MAG and only MAG.
+
+* Get all MAG-only works:\
+  [`https://api.openalex.org/works?filter=mag_only:true`](https://api.openalex.org/works?filter=mag_only:true)
+
 #### `primary_location.source.has_issn`
 
 Value: a Boolean (`true` or `false`)
