@@ -18,6 +18,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`country_code`](institution-object.md#country\_code)
 * [`has_ror`](filter-institutions.md#has\_ror)
 * [`is_global_south`](filter-institutions.md#is\_global\_south)
+* [`is_super_system`](institution-object.md#is_super_system)
 * [`lineage`](institution-object.md#lineage)
 * [`repositories.host_organization`](institution-object.md#repositories)
 * [`summary_stats.2yr_mean_citedness`](institution-object.md#summary_stats)

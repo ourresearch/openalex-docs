@@ -15,8 +15,9 @@ You can filter using these attributes of the `Institution` entity object (click 
 
 * [`cited_by_count`](institution-object.md#cited\_by\_count)
 * [`country_code`](institution-object.md#country\_code)
-* [`openalex`](institution-object.md#id): the OpenAlex ID of the Institution
+* [`is_super_system`](institution-object.md#is_super_system)
 * [`lineage`](institution-object.md#lineage): OpenAlex ID for an [`Institution`](README.md)
+* [`openalex`](institution-object.md#id): the OpenAlex ID of the Institution
 * [`repositories.host_organization`](institution-object.md#repositories): OpenAlex ID for an [`Institution`](README.md)
 * [`repositories.host_organization_lineage`](institution-object.md#repositories): OpenAlex ID for an [`Institution`](README.md)
 * [`repositories.id`](institution-object.md#repositories): the OpenAlex ID of a repository (a [`Source`](../sources/README.md))

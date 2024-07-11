@@ -4,7 +4,7 @@ The Authorship object represents a single author and her institutional affiliati
 
 ### `affiliations`
 
-__List:__ List of objects
+_List:_ List of objects
 
 Each institutional affiliation that this author has claimed will be listed here: the raw affiliation string that we found, along with the OpenAlex [`Institution`](../../institutions/README.md) ID or IDs that we matched it to.
 

@@ -180,6 +180,14 @@ _String:_ Same as [`image_url`](institution-object.md#image\_url-1), but it's a 
 image_thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/University_of_North_Carolina_at_Chapel_Hill_seal.svg/100px-University_of_North_Carolina_at_Chapel_Hill_seal.svg.png"
 ```
 
+### `is_super_system`
+
+_Boolean:_ True if this institution is a "super system". This includes large university systems such as the University of California System ([`https://openalex.org/I2803209242`](https://openalex.org/I2803209242)), as well as some governments and multinational companies.
+
+We have this special flag for these institutions so that we can exclude them from other institutions' [`lineage`](#lineage), which we do because these super systems are not generally relevant in group-by results when you're looking at ranked lists of institutions.
+
+The list of institution IDs marked as super systems can be found in [this file](https://github.com/ourresearch/openalex-guts/blob/main/const.py).
+
 ### `image_url`
 
 _String:_ URL where you can get an image representing this institution. Usually this is hosted on Wikipedia, and usually it's a seal or logo.
@@ -212,9 +220,9 @@ international: {
 
 _List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) of institutions. The list will include this institution's ID, as well as any parent institutions. If this institution has no parent institutions, this list will only contain its own ID.
 
-This information
-
 This information comes from [ROR's `relationships`](https://ror.readme.io/docs/ror-data-structure#relationships), specifically the Parent/Child relationships.
+
+Super systems are excluded from the lineage. See [`is_super_system`](#is_super_system) above.
 
 ```json
 id: "https://openalex.org/I170203145",
