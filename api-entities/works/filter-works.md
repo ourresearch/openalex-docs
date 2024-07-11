@@ -19,6 +19,7 @@ You can filter using these attributes of the [`Work`](work-object/) object (clic
 The `host_venue` and `alternate_host_venues` properties have been deprecated in favor of [`primary_location`](work-object/#primary\_location) and [`locations`](work-object/#locations). The attributes `host_venue` and `alternate_host_venues` are no longer available in the Work object, and trying to access them in filters or group-bys will return an error.
 {% endhint %}
 
+* [`authorships.affiliations.institution_ids`](work-object/authorship-object.md#affiliations)
 * [`authorships.author.id`](work-object/authorship-object.md#author) (alias: `author.id`) — Authors for a work (OpenAlex ID)
 * [`authorships.author.orcid`](work-object/authorship-object.md#author) (alias: `author.orcid`) — Authors for a work (ORCID)
 * [`authorships.countries`](work-object/authorship-object.md#countries)

@@ -18,6 +18,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 {% endhint %}
 
 * [`authors_count`](filter-works.md#authors\_count)
+* [`authorships.affiliations.institution_ids`](work-object/authorship-object.md#affiliations)
 * [`authorships.author.id`](work-object/#author) (alias `author.id`)
 * [`authorships.author.orcid`](work-object/#author) (alias `author.orcid`)
 * [`authorships.countries`](work-object/authorship-object.md#countries)
