@@ -180,6 +180,14 @@ ids: {
 
 </details>
 
+### `is_core`
+
+_Boolean:_ Whether this source is identified as a "core source" by [CWTS](https://www.cwts.nl/), used in the [Open Leiden Ranking](https://open.leidenranking.com/) of universities around the world. The list of core sources can be found [here](https://zenodo.org/records/10949671).
+
+```json
+is_core: true 
+```
+
 ### `is_in_doaj`
 
 _Boolean:_ Whether this is a journal listed in the [Directory of Open Access Journals](https://doaj.org/) (DOAJ).
@@ -321,6 +329,7 @@ The `DehydratedSource` is stripped-down `Source` object, with most of its proper
 * [`host_organization_lineage`](source-object.md#host\_organization\_lineage)
 * [`host_organization_name`](source-object.md#host\_organization\_name)
 * [`id`](source-object.md#id)
+* [`is_core`](#is_core)
 * [`is_in_doaj`](source-object.md#is\_in\_doaj)
 * [`is_oa`](source-object.md#is\_oa)
 * [`issn`](source-object.md#issn)

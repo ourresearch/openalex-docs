@@ -21,6 +21,7 @@ You can filter using these attributes of the `Source` entity object (click each 
 * [`host_organization`](source-object.md#host\_organization) (alias: `host_organization.id`)
 * [`host_organization_lineage`](source-object.md#host_organization_lineage) — Use this with a publisher ID to find works from that publisher and all of its children.
 * [`ids.openalex`](source-object.md#ids) (alias: `openalex`)
+* [`is_core`](source-object.md#is_core)
 * [`is_in_doaj`](source-object.md#is\_in\_doaj)
 * [`is_oa`](source-object.md#is\_oa)
 * [`issn`](source-object.md#issn)

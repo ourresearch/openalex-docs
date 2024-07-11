@@ -22,6 +22,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`host_organization`](source-object.md#host\_organization) (alias: `host_organization.id`)
 * [`host_organization_lineage`](source-object.md#host_organization_lineage) (alias: `host_organization.id`)
 * [`is_global_south`](../geo/regions.md#group-by-global-south)
+* [`is_core`](source-object.md#is_core)
 * [`is_in_doaj`](source-object.md#is\_in\_doaj)
 * [`is_oa`](source-object.md#is\_oa)
 * [`issn`](source-object.md#issn)
