@@ -69,10 +69,11 @@ authorships: [
                 country_code: "US",
                 type: "nonprofit"
             }
-        ]
+        ],
+        // other fields removed for brevity. See the Authorship object documentation
     },
     
-    // more authorship objects go here, omited for space.
+    // more authorship objects go here
 ]
 ```
 

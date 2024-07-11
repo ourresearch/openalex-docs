@@ -2,6 +2,25 @@
 
 The Authorship object represents a single author and her institutional affiliations in the context of a given work. It is only found as part of a `Work` object, in the [`work.authorships`](./#authorships) property.
 
+### `affiliations`
+
+__List:__ List of objects
+
+Each institutional affiliation that this author has claimed will be listed here: the raw affiliation string that we found, along with the OpenAlex [`Institution`](../../institutions/README.md) ID or IDs that we matched it to.
+
+This information will be redundant with [`institutions`](#institutions) below, but is useful if you need to know about what we used to match institutions.
+
+```json
+affiliations: [
+    {
+        raw_affiliation_string: "Scholarly Communications Lab, Simon Fraser University, Vancouver, Canada",
+        institution_ids: [
+            "https://openalex.org/I18014758"
+        ]
+    }
+]
+```
+
 ### `author`
 
 _String:_ An author of this work, as a dehydrated [`Author`](../../authors/author-object.md) object.
