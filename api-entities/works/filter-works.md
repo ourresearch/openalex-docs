@@ -232,7 +232,7 @@ Returns: works with [`created_date`](work-object/#created\_date) greater than or
 This field requires an [OpenAlex Premium subscription to access. Click here to learn more.](https://openalex.org/pricing)
 
 * Get works created on or _after_ January 12th, 2023 (does not work without valid API key):\
-  [`https://api.openalex.org/works?filter=from_created_date:2023-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=from\_created\_date:2023-01-12\&api\_key=myapikey)\`\`
+  [`https://api.openalex.org/works?filter=from_created_date:2023-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=from\_created\_date:2023-01-12\&api\_key=myapikey)
 
 #### `from_publication_date`
 
@@ -462,6 +462,17 @@ Returns: works whose [`display_name`](work-object/#display\_name) (title) or abs
 
 * Get works with title or abstract mentioning "gum disease": [`https://api.openalex.org/works?filter=title_and_abstract.search:gum%20disease`](https://api.openalex.org/works?filter=title\_and\_abstract.search:gum%20disease)
 
+#### `to_created_date`
+
+Value: a date, formatted as `yyyy-mm-dd`
+
+Returns: works with [`created_date`](work-object/#created\_date) less than or equal to the given date.
+
+This field requires an [OpenAlex Premium subscription to access. Click here to learn more.](https://openalex.org/pricing)
+
+* Get works created on or _after_ January 12th, 2023 (does not work without valid API key):\
+  [`https://api.openalex.org/works?filter=to_created_date:2024-01-12&api_key=myapikey`](https://api.openalex.org/works?filter=to_created_date:2024-01-12&api_key=myapikey)
+
 #### `to_publication_date`
 
 Value: a date, formatted as `yyyy-mm-dd`
@@ -469,7 +480,7 @@ Value: a date, formatted as `yyyy-mm-dd`
 Returns: works with [`publication_date`](work-object/#publication\_date) less than or equal to the given date.
 
 * Get works published on or _before_ March 14th, 2001:\
-  [`https://api.openalex.org/works?filter=to_publication_date:2001-03-14`](https://api.openalex.org/works?filter=to\_publication\_date:2001-03-14)\`\`
+  [`https://api.openalex.org/works?filter=to_publication_date:2001-03-14`](https://api.openalex.org/works?filter=to\_publication\_date:2001-03-14)
 
 #### `to_updated_date`
 
