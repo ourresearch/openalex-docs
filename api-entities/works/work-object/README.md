@@ -613,7 +613,7 @@ primary_location: {
 
 ### `primary_topic`
 
-_List:_ Object
+_Object_
 
 The top ranked [`Topic`](../../topics/README.md) for this work. This is the same as the first item in [`Work.topics`](#topics).
 
