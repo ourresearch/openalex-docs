@@ -49,6 +49,10 @@ The ID-based link is provided in [`Work.ngrams_url`](work-object/#ngrams\_url) i
 
 ## Fulltext Coverage
 
+You can see which works we have full-text for using the [`has_fulltext`](./work-object/README.md#has_fulltext) filter. This does not necessarily mean that the full text is available to you, dear reader; rather, it means that we have indexed the full text and can use it to help power [searches](../search-works.md). If you are trying to find the full text for yourself, try looking in [`open_access.oa_url`](./#open\_access).
+
+We get access to the full text in one of two ways: either using an open-access PDF, or using [N-grams obtained from the Internet Archive](../get-n-grams.md). You can learn where a work's full text came from at [`fulltext_origin`](./#fulltext\_origin).
+
 About 57 million works have n-grams coverage through [Internet Archive](https://archive.org/details/GeneralIndex). OurResearch is the first organization to host this data in a highly usable way, and we are proud to integrate it into OpenAlex!
 
 Curious about n-grams used in search? [Browse them all](work-object/#ngrams\_url) via the API. Highly-cited works and less recent works are more likely to have n-grams, as shown by the coverage charts below:

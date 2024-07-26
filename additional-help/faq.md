@@ -78,3 +78,7 @@ The [openalexR](https://docs.ropensci.org/openalexR/) package is a great way to 
 ### How can I count self-citations between works?
 
 If you want to count self-citations—or, inversely independent citations where citing and the cited work do not have any authors in common—you can check each citation for whether they share any Author IDs in common in their [`authorships`](../api-entities/works/work-object/authorship-object.md) field. See [here](../api-entities/works/work-object/README.md#authorships) for more information.
+
+### Do you provide access to full-text papers?
+
+We provide links to the full-text PDFs for open-access works whenever possible. In addition, we have access to raw full-text for many works either through PDF parsing we have done, or using the Internet Archive's general index, which we use to power our [search](../how-to-use-the-api/get-lists-of-entities/search-entities.md). You can learn more about this [here](../api-entities/works/work-object/README.md#has_fulltext). We do not currently offer direct access to raw full-text through the API or data snapshot.
