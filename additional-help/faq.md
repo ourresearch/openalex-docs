@@ -74,3 +74,7 @@ Our Unpaywall project (a free index of the world's open-access research literatu
 ### I have a question about the openalexR library. Could you help me?
 
 The [openalexR](https://docs.ropensci.org/openalexR/) package is a great way to work with the OpenAlex API using the R programming language, but it is third-party software that we do not maintain ourselves. Please direct any questions you have to them instead.
+
+### How can I count self-citations between works?
+
+If you want to count self-citations—or, inversely independent citations where citing and the cited work do not have any authors in common—you can check each citation for whether they share any Author IDs in common in their [`authorships`](../api-entities/works/work-object/authorship-object.md) field. See [here](../api-entities/works/work-object/README.md#authorships) for more information.

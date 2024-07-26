@@ -51,6 +51,8 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 
 _List:_ List of [`Authorship`](authorship-object.md) objects, each representing an author and their institution. [Limited to](../../authors/limitations.md) the first 100 authors to maintain API performance.
 
+For more information, see the [Authorship object](./authorship-object.md) page.
+
 ```json
 authorships: [
     // first authorship object:
