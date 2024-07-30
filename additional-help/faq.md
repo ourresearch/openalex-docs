@@ -41,6 +41,8 @@ OpenAlex is not doing this alone! Rather, we're aggregating and standardizing da
 * Web crawls
 * Subject-area and institutional repositories from [arXiv](https://arxiv.org/) to [Zenodo](https://zenodo.org/) and everywhere in between
 
+Learn more at our general help center article: [About the data](https://help.openalex.org/hc/en-us/articles/24397285563671-About-the-data)
+
 ### How often is the data updated?
 
 For now, the database snapshot is updated about once per month. We also offer a much faster update cadence—as often as once every few hours—through [OpenAlex Premium.](https://openalex.org/pricing)

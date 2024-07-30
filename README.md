@@ -12,6 +12,8 @@ The OpenAlex dataset describes scholarly [_entities_ ](api-entities/entities-ove
 
 Together, these make a huge web (or more technically, heterogeneous directed [graph](https://en.wikipedia.org/wiki/Graph\_theory)) of hundreds of millions of entities and billions of connections between them all.
 
+Learn more at our general help center article: [About the data](https://help.openalex.org/hc/en-us/articles/24397285563671-About-the-data)
+
 ## Access
 
 We offer a fast, modern REST API to get OpenAlex data programmatically. It's free and requires no authentication. The daily limit for API calls is 100,000 requests per user per day. For best performance, [add your email](how-to-use-the-api/rate-limits-and-authentication.md#the-polite-pool) to all API requests, like `mailto=example@domain.com`. [Learn more](how-to-use-the-api/api-overview.md)
