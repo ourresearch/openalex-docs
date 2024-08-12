@@ -331,6 +331,14 @@ This attribute is only available for works with `has_fulltext:true`.
 fulltext_origin: "pdf"
 ```
 
+### `fwci`
+
+_Float:_ The Field-weighted Citation Impact (FWCI), calculated for a work as the ratio of citations received / citations expected in the year of publications and three following years. Learn more in the reference article: [Field Weighted Citation Impact (FWCI)](https://help.openalex.org/hc/en-us/articles/24735753007895-Field-Weighted-Citation-Impact-FWCI).
+
+```json
+fwci: 76.992
+```
+
 ### `grants`
 
 _List:_ List of grant objects, which include the [`Funder`](../../funders/) and the award ID, if available. Our grants data comes from Crossref, and is currently fairly limited.

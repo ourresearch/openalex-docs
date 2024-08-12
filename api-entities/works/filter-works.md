@@ -58,6 +58,7 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`countries_distinct_count`](work-object/#countries\_distinct\_count)
 * [`doi`](work-object/#doi) — The DOI (Digital Object Identifier) of a work
 * [`fulltext_origin`](work-object/#fulltext\_origin)
+* [`fwci`](./work-object/README.md#fwci)
 * [`grants.award_id`](work-object/#grants) — Award IDs for grants
 * [`grants.funder`](work-object/#grants) — Funding organizations linked to grants for a work
 * [`has_fulltext`](work-object/#has\_fulltext)
