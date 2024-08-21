@@ -123,24 +123,9 @@ ids: {
 
 ### `last_known_institution`
 
-**Will be deprecated**
-
-_Object:_ This author's last known institutional affiliation. In this context "last known" means that we took all the [Works](../works/work-object/) where this author has an institutional affiliation, sorted them by publication date, and selected the most recent one.
-
-This is a [dehydrated `Institution`](../institutions/institution-object.md#the-dehydratedinstitution-object) object, and you can find more documentation on the [Institution](../institutions/institution-object.md) page.
-
-This will be deprecated in the future in favor of [`last_known_institutions`](author-object.md#last\_known\_institutions).
-
-```json
-last_known_institution: {
-    id: "https://openalex.org/I4200000001",
-    ror: "https://ror.org/02nr0ka47",
-    display_name: "OurResearch",
-    country_code: "CA",
-    type: "nonprofit",
-    lineage: ["https://openalex.org/I4200000001"]
-},
-```
+{% hint style="danger" %}
+This field has been deprecated. Its replacement is [`last_known_institutions`](author-object.md#last\_known\_institutions).
+{% endhint %}
 
 ### `last_known_institutions`
 
