@@ -121,11 +121,12 @@ ids: {
 },
 ```
 
-### `last_known_institution`
+### `last_known_institution` (deprecated)
 
 {% hint style="danger" %}
 This field has been deprecated. Its replacement is [`last_known_institutions`](author-object.md#last\_known\_institutions).
 {% endhint %}
+
 
 ### `last_known_institutions`
 
