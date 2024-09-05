@@ -10,42 +10,9 @@ Note that while n-grams are derived from the fulltext of a Work, the presence of
 
 ## API Endpoint
 
-In addition to enabling fulltext search capabilities, a Work's n-grams are viewable directly through an endpoint that accepts either an [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) or a DOI.
-
-Unlike other API endpoints, n-grams are cached via CDN, which means this one is super fast, and you can call it as fast as you want - [rate limits](../../how-to-use-the-api/rate-limits-and-authentication.md) don't apply.
-
-* Get n-grams for [W2023271753](https://openalex.org/W2023271753):\
-  [`https://api.openalex.org/works/W2023271753/ngrams`](https://api.openalex.org/works/W2023271753/ngrams)\
-  [`https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams`](https://api.openalex.org/works/10.1103/physrevb.37.785/ngrams)
-
-The response is a list of [Ngram objects](get-n-grams.md#the-ngram-object), sorted from 5-grams down to unigrams:
-
-```
-{
-  meta: {
-    count: 1068,
-    doi: "https://doi.org/10.1103/physrevb.37.785",
-    openalex_id: "https://openalex.org/W2023271753"
-  },
-  ngrams: [
-    {
-      ngram: "energy formula into a functional",
-      ngram_tokens: 5,
-      ngram_count: 1,
-      term_frequency: 0.0005452562704471102
-    },
-    {
-      ngram: "functional of the electron density",
-      ngram_tokens: 5,
-      ngram_count: 1,
-      term_frequency: 0.0005452562704471102
-    },
-    ...
-  ]
-}
-```
-
-The ID-based link is provided in [`Work.ngrams_url`](work-object/#ngrams\_url) if n-grams are available. Works with n-grams can be found using the [`Work.has_ngrams`](filter-works.md#has\_ngrams) filter, which can be [combined with other filters](../../how-to-use-the-api/get-lists-of-entities/filter-entity-lists.md) using logical expressions.
+{% hint style="danger" %}
+The n-gram API endpoint is not currently in service. The n-grams are still used on our backend to help power fulltext search. If you have any questions about this, please [submit a support ticket](https://openalex.org/feedback).
+{% endhint %}
 
 ## Fulltext Coverage
 

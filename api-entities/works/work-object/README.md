@@ -572,18 +572,6 @@ mesh: [
 ]
 ```
 
-### `ngrams_url`
-
-{% hint style="info" %}
-`ngrams_url` is only displayed in the API and is not included in the [OpenAlex snapshot](../../../download-all-data/openalex-snapshot.md).
-{% endhint %}
-
-_String:_ It lists groups of words and phrases (n-grams) that make up a work, as obtained from the [Internet Archive](https://archive.org/details/GeneralIndex). See [The Ngram object](./#the-ngram-object) and [Get N-grams](../get-n-grams.md) for background on n-grams, how we use them, and what this API call returns.
-
-```json
-ngrams_url: "https://api.openalex.org/works/W2023271753/ngrams"
-```
-
 ### `open_access`
 
 _Object:_ Information about the access status of this work, as an [`OpenAccess`](./#the-openaccess-object) object.
@@ -800,46 +788,6 @@ _String:_ The last time anything in this `Work` object changed, expressed as an 
 
 ```json
 updated_date: "2022-01-02T00:22:35.180390"
-```
-
-## The `Ngram` object
-
-{% hint style="info" %}
-Ngram objects are only available in the API and are not included in the [OpenAlex snapshot](../../../download-all-data/openalex-snapshot.md).
-{% endhint %}
-
-### ngram
-
-_String:_ Group of words (or numbers, letters, etc) that exist together in the work. This can be a five-gram, four-gram, trigram, bigram, or unigram.
-
-```json
-ngram: "energy formula into a functional"
-```
-
-### ngram\_count
-
-_Integer:_ How many times this ngram occurred in the work.
-
-```json
-ngram_count: 1
-```
-
-### ngram\_tokens
-
-_Integer:_ How many tokens are in the ngram.
-
-```json
-ngram_tokens: 5
-```
-
-### term\_frequency
-
-_Float:_ How often the ngram occurred in the work.
-
-**Caution:** This data was taken directly from the General Index and we've not tested `term_frequency` against actual articles. You can read about their data extraction process on the [Internet Archive](https://archive.org/details/GeneralIndex) website. If you compare `term_frequency` against articles we would [like to hear](mailto:support@openalex.org) how it went!
-
-```json
-term_frequency: 0.0005452562704471102
 ```
 
 ## The `OpenAccess` object
