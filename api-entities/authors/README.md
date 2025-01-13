@@ -11,7 +11,7 @@ Authors are people who create works. You can get an author from the API like thi
 
 The [Canonical External ID](../../how-to-use-the-api/get-single-entities/#canonical-external-ids) for authors is ORCID; only a small percentage of authors have one, but the percentage is higher for more recent works.
 
-Our information about authors comes from MAG, Crossref, PubMed, ORCID, and publisher websites, among other sources. To learn more about how we combine this information to get OpenAlex Authors, see [author-disambiguation.md](author-disambiguation.md "mention")
+Our information about authors comes from MAG, Crossref, PubMed, ORCID, and publisher websites, among other sources. To learn more about how we combine this information to get OpenAlex Authors, see [Author Disambiguation](https://help.openalex.org/hc/en-us/articles/24347048891543-Author-disambiguation).
 
 Authors are linked to works via the [`works.authorships`](../works/work-object/#authorships) property.
 

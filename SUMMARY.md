@@ -64,7 +64,7 @@
 * [🌎 Geo](api-entities/geo/README.md)
   * [Continents](api-entities/geo/continents.md)
   * [Regions](api-entities/geo/regions.md)
-* [💡 Concepts](api-entities/concepts/README.md)
+* [Concepts](api-entities/concepts/README.md)
   * [Concept object](api-entities/concepts/concept-object.md)
   * [Get a single concept](api-entities/concepts/get-a-single-concept.md)
   * [Get lists of concepts](api-entities/concepts/get-lists-of-concepts.md)

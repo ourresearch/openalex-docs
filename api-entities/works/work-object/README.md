@@ -175,6 +175,18 @@ biblio: {
 }
 ```
 
+### `citation_normalized_percentile`
+
+_Object:_ The percentile of this work's citation count normalized by work type, publication year, and subfield. This field represents the same information as the FWCI expressed as a percentile. Learn more in the reference article: [Field Weighted Citation Impact (FWCI)](https://help.openalex.org/hc/en-us/articles/24735753007895-Field-Weighted-Citation-Impact-FWCI).
+
+```
+citation_normalized_percentile: {
+        value: 0.999948,
+        is_in_top_1_percent: true,
+        is_in_top_10_percent": true
+}
+```
+
 ### `cited_by_api_url`
 
 _String:_ A URL that uses the [`cites`](../filter-works.md#cites) filter to display a list of works that cite this work. This is a way to expand [`cited_by_count`](./#cited_by_count) into an actual list of works.
@@ -186,18 +198,6 @@ _Integer:_ The number of citations to this work. These are the times that other 
 ```json
 cited_by_count: 382
 ```
-
-### `citation_normalized_percentile`
-
-```
-citation_normalized_percentile: {
-        value: 0.999948,
-        is_in_top_1_percent: true,
-        is_in_top_10_percent": true
-}
-```
-
-_Object:_ The percentile of this work's citation count normalized by work type, publication year, and subfield. This field represents the same information as the FWCI expressed as a percentile. Learn more in the reference article: [Field Weighted Citation Impact (FWCI)](https://help.openalex.org/hc/en-us/articles/24735753007895-Field-Weighted-Citation-Impact-FWCI).
 
 ### `concepts`
 
