@@ -20,7 +20,7 @@ If your example DOI is in Crossref but not in OpenAlex, please send us a [suppor
 
 ### Do you disambiguate authors?
 
-Yes. Using coauthors, references, and other features of the data, we can tell that the same Jane Smith wrote both "Frog behavior" and "Frogs: A retrospective," but it's a different Jane Smith who wrote "Oats before boats: The breakfast customs of 17th-Century Dutch bargemen." For more details on this, see the page on [Author Disambiguation](https://help.openalex.org/hc/en-us/articles/24347048891543-Author-disambiguation).
+Yes. Using coauthors, references, and other features of the data, we can tell that the same Jane Smith wrote both "Frog behavior" and "Frogs: A retrospective," but it's a different Jane Smith who wrote "Oats before boats: The breakfast customs of 17th-Century Dutch bargemen." For more details on this, see the page on [author-disambiguation.md](../api-entities/authors/author-disambiguation.md "mention").
 
 ### Do you gather author affiliations?
 
@@ -63,7 +63,7 @@ For those who would like a higher level of service and to provide direct financi
 
 ### I've noticed incorrect data in an OpenAlex author profile. How can I correct it?
 
-Please see the help section on [Author profile curation](https://help.openalex.org/hc/en-us/articles/27283405287319-How-can-I-fix-errors-in-an-OpenAlex-author-profile).
+Please see the help section on [Author profile curation](https://help.openalex.org/how-it-works/authors#author-profile-curation).
 
 ### What's your sustainability plan?
 
@@ -79,8 +79,8 @@ The [openalexR](https://docs.ropensci.org/openalexR/) package is a great way to 
 
 ### How can I count self-citations between works?
 
-If you want to count self-citations—or, inversely independent citations where citing and the cited work do not have any authors in common—you can check each citation for whether they share any Author IDs in common in their [`authorships`](../api-entities/works/work-object/authorship-object.md) field. See [here](../api-entities/works/work-object/#authorships) for more information.
+If you want to count self-citations—or, inversely independent citations where citing and the cited work do not have any authors in common—you can check each citation for whether they share any Author IDs in common in their [`authorships`](../api-entities/works/work-object/authorship-object.md) field. See [here](../api-entities/works/work-object/README.md#authorships) for more information.
 
 ### Do you provide access to full-text papers?
 
-We provide links to the full-text PDFs for open-access works whenever possible. In addition, we have access to raw full-text for many works either through PDF parsing we have done, or using the Internet Archive's general index, which we use to power our [search](../how-to-use-the-api/get-lists-of-entities/search-entities.md). You can learn more about this [here](../api-entities/works/work-object/#has_fulltext). We do not currently offer direct access to raw full-text through the API or data snapshot.
+We provide links to the full-text PDFs for open-access works whenever possible. In addition, we have access to raw full-text for many works either through PDF parsing we have done, or using the Internet Archive's general index, which we use to power our [search](../how-to-use-the-api/get-lists-of-entities/search-entities.md). You can learn more about this [here](../api-entities/works/work-object/README.md#has_fulltext). We do not currently offer direct access to raw full-text through the API or data snapshot.
