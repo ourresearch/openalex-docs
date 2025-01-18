@@ -15,10 +15,12 @@ The API is the primary way to get OpenAlex data. It's free and requires no authe
 There are several third-party libraries you can use to get data from OpenAlex:
 
 * [openalexR](https://github.com/ropensci/openalexR) (R)
+* [OpenAlex2Pajek](https://github.com/bavla/OpenAlex/tree/main/OpenAlex2Pajek) (R)
 * [KtAlex](https://github.com/benedekh/KtAlex) (Kotlin)
 * [PyAlex](https://github.com/J535D165/pyalex) (Python)
 * [diophila](https://pypi.org/project/diophila/) (Python)
 * [OpenAlexAPI](https://pypi.org/project/openalexapi/) (Python)
+*
 
 If you're looking for a visual interface, you can also check out the free [VOSviewer](https://www.vosviewer.com/), which lets you make network visualizations based on OpenAlex data:
 
