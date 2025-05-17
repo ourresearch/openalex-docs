@@ -1,6 +1,6 @@
 # Load to a data warehouse
 
-In many data warehouse and document store applications, you can load the OpenAlex entities as-is and query them directly. We’ll use [BigQuery](https://cloud.google.com/bigquery) as an example here. ([Elasticsearch](https://www.elastic.co/elasticsearch/) docs coming soon). To follow along you’ll need the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install). You’ll also need a Google account that can make BigQuery tables that are, well…  big. Which means it probably won’t be free.
+In many data warehouse and document store applications, you can load the OpenAlex entities as-is and query them directly. We’ll use [BigQuery](https://cloud.google.com/bigquery) as an example here. ([Elasticsearch](https://www.elastic.co/elasticsearch/) docs coming soon). To follow along you’ll need the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install). You’ll also need a Google account that can make BigQuery tables that are, well… big. Which means it probably won’t be free.
 
 We'll show you how to do this in 4 steps:
 
@@ -9,12 +9,12 @@ We'll show you how to do this in 4 steps:
 3. Copy the data files to the tables you created
 4. Run some queries on the data you loaded
 
+
+
 {% hint style="info" %}
-This guide will have you load each entity to a single text column, then use BigQuery's JSON functions to parse them when you run your queries. This is convenient but inefficient since each object has to be parsed every time you run a query.
-
-This project, kindly shared by [@DShvadron](https://twitter.com/DShvadron), takes a more efficient approach: [https://github.com/DrorSh/openalex\_to\_gbq](https://github.com/DrorSh/openalex\_to\_gbq)
-
-Separating the Entity data into multiple columns takes more work up front but lets you write queries that are faster, simpler, and often [cheaper](https://cloud.google.com/bigquery/pricing#on\_demand\_pricing).&#x20;
+Several users have contributed more self-contained scripts for this. We haven't tested these but they may be easier options:\
+\* [https://github.com/naustica/openalex](https://github.com/naustica/openalex)\
+\* [https://github.com/DrorSh/openalex\_to\_gbq](https://github.com/DrorSh/openalex_to_gbq)
 {% endhint %}
 
 {% hint style="info" %}
@@ -51,10 +51,10 @@ and so on for `sources`, `institutions`, `concepts,` and `publishers`.
 
 ## Step 3: Load the data files
 
-We’ll load each table’s data from the JSON Lines files we downloaded earlier. For `works`, the files were:&#x20;
+We’ll load each table’s data from the JSON Lines files we downloaded earlier. For `works`, the files were:
 
-* openalex-snapshot/data/works/updated\_date=2021-12-28/0000\_part\_00.gz&#x20;
-* openalex-snapshot/data/works/updated\_date=2021-12-28/0001\_part\_00.gz&#x20;
+* openalex-snapshot/data/works/updated\_date=2021-12-28/0000\_part\_00.gz
+* openalex-snapshot/data/works/updated\_date=2021-12-28/0001\_part\_00.gz
 
 Here’s a command to load one `works` file (don’t run it yet):
 
@@ -68,14 +68,14 @@ openalex.works \
 ```
 
 {% hint style="info" %}
-See the full documentation for the `bq load` command here: [https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_load](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_load)
+See the full documentation for the `bq load` command here: [https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_load](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq_load)
 {% endhint %}
 
 This part of the command may need some explanation:
 
 > `--source_format=CSV -F '\t' --schema 'work:string'`
 
-Bigquery is expecting multiple columns with predefined datatypes (a “schema”). We’re tricking it into accepting a single text column (`--schema 'work:string'`) by specifying [CSV](https://en.wikipedia.org/wiki/Comma-separated\_values) format (`--source_format=CSV`) with a column delimiter that isn’t present in the file (`-F '\t')`  (\t means “tab”).
+Bigquery is expecting multiple columns with predefined datatypes (a “schema”). We’re tricking it into accepting a single text column (`--schema 'work:string'`) by specifying [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) format (`--source_format=CSV`) with a column delimiter that isn’t present in the file (`-F '\t')` (\t means “tab”).
 
 `bq load` can only handle one file at a time, so you must run this command once per file. But remember that the real dataset will have many more files than this example does, so it's impractical to copy, edit, and rerun the command each time. It's easier to handle all the files in a loop, like this:
 
@@ -101,7 +101,7 @@ Do this once per entity type, substituting each entity name for `work`/`works` a
 
 ## **Step 4: Run your queries!**
 
-Now you have the all the OpenAlex data in a place where you can do anything you want with it using [BigQuery JSON functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/json\_functions) through [bq query](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq\_query) or the BigQuery [console](https://console.cloud.google.com/bigquery).&#x20;
+Now you have the all the OpenAlex data in a place where you can do anything you want with it using [BigQuery JSON functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/json_functions) through [bq query](https://cloud.google.com/bigquery/docs/reference/bq-cli-reference#bq_query) or the BigQuery [console](https://console.cloud.google.com/bigquery).
 
 Here’s a simple one, extracting the OpenAlex ID and OA status for each work:
 
