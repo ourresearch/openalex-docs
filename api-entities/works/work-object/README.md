@@ -92,8 +92,6 @@ This value is the APC list price–the price as listed by the journal’s publis
 
 Currently our only source for this data is [DOAJ](https://doaj.org/), and so `doaj` is the only value for `apc_list.provenance`, but we’ll add other sources over time.
 
-We currently don’t have information on the list price for hybrid journals (toll-access journals that also provide an open-access option), but we will add this at some point. We do have [`apc_paid`](./#apc_paid) information for hybrid OA works occasionally.
-
 You can use this attribute to find works published in [Diamond open access](https://en.wikipedia.org/wiki/Diamond_open_access) journals by looking at works where `apc_list.value` is zero. See [`open_access.oa_status`](./#oa_status) for more info.
 
 ```json
@@ -107,16 +105,23 @@ apc_payment: {
 
 ### `apc_paid`
 
-_Object:_ Information about the _paid_ APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)) for this work. The object contains:
+_Object:_ Estimate of  the _paid_ APC ([article processing charge](https://en.wikipedia.org/wiki/Article_processing_charge)) for this work. The object contains:
 
 * `value`: _Integer_
 * `currency`: _String_
 * `provenance`: _String_ — currently either `openapc` or `doaj`, but more will be added; see below for details.
 * `value_usd`: _Integer_ — the APC converted into USD
 
-You can find the _listed_ APC price (when we know it) for a given work using [`apc_list`](./#apc_list). However, authors don’t always pay the listed price; often they get a discounted price from publishers. So it’s useful to know the APC actually paid by authors, as distinct from the list price. This is our effort to provide this.
+You can find the _listed_ APC price (when we know it) for a given work using [`apc_list`](./#apc_list). However, authors don’t always pay the listed price; often they get a discounted price from publishers.  This property is our best estimate of the APC actually paid.
 
-Our best source for the actually paid price is the [OpenAPC](https://openapc.net/) project. Where available, we use that data, and so `apc_paid.provenance` is `openapc`. Where OpenAPC data is unavailable (and unfortunately this is common) we make our best guess by assuming the author paid the APC list price, and apc\_paid.provenance will be set to wherever we got the list price from.
+Our best source for this is the excellent [OpenAPC](https://openapc.net/) project. So, when we have it, we use that data. In this case, `apc_paid.provenance` is set to `openapc`.&#x20;
+
+However, unfortunately OpenAPC data is often unavailable, and so then our best estimate of the paid price is simply the list price. In this case  `apc_paid.provenance` will be set to wherever we got the list price from (usually DOAJ).
+
+{% hint style="danger" %}
+`apc_paid` is an _**estimate**_ using the best available data; often this is simply the journal list price. To use only  article-level data, filter using:\
+&#x20;`apc_paid.provenance == "openapc"`.&#x20;
+{% endhint %}
 
 ```json
 apc_payment: {
