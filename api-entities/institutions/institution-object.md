@@ -8,7 +8,7 @@ _List:_ `Institutions` related to this one. Each associated institution is repre
 
 * `relationship` (_String_): The type of relationship between this institution and the listed institution. Possible values: `parent`, `child`, and `related`.
 
-Institution associations and the _relationship_ vocabulary come from [ROR's `relationships`](https://ror.readme.io/docs/ror-data-structure#relationships).
+Institution associations and the _relationship_ vocabulary come from [ROR's `relationships`](https://ror.readme.io/docs/data-structure#relationships).
 
 ```json
 associated_institutions: [
@@ -220,7 +220,7 @@ international: {
 
 _List:_ [OpenAlex IDs](../../how-to-use-the-api/get-single-entities/#the-openalex-id) of institutions. The list will include this institution's ID, as well as any parent institutions. If this institution has no parent institutions, this list will only contain its own ID.
 
-This information comes from [ROR's `relationships`](https://ror.readme.io/docs/ror-data-structure#relationships), specifically the Parent/Child relationships.
+This information comes from [ROR's `relationships`](https://ror.readme.io/docs/data-structure#relationships), specifically the Parent/Child relationships.
 
 Super systems are excluded from the lineage. See [`is_super_system`](#is_super_system) above.
 
@@ -308,7 +308,7 @@ summary_stats: {
 
 ### `type`
 
-_String:_ The institution's primary type, using the [ROR "type" controlled vocabulary](https://ror.readme.io/docs/ror-data-structure).
+_String:_ The institution's primary type, using the [ROR "type" controlled vocabulary](https://ror.readme.io/docs/data-structure).
 
 Possible values are: `Education`, `Healthcare`, `Company`, `Archive`, `Nonprofit`, `Government`, `Facility`, and `Other`.
 
