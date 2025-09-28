@@ -6,7 +6,7 @@ Countries are mapped to continents using data from the [United Nations Statistic
 
 There are three ways to use continent filters:
 
-<table><thead><tr><th width="192">Endpoint</th><th width="617">Format</th></tr></thead><tbody><tr><td>Authors</td><td><code>/authors?filter=last_known_institution.continent:&#x3C;continent></code></td></tr><tr><td>Institutions</td><td><code>/institutions?filter=continent:&#x3C;continent></code></td></tr><tr><td>Works</td><td><code>/works?filter=institutions.continent:&#x3C;continent></code></td></tr></tbody></table>
+<table><thead><tr><th width="192">Endpoint</th><th width="617">Format</th></tr></thead><tbody><tr><td>Authors</td><td><code>/authors?filter=last_known_institutions.continent:&#x3C;continent></code></td></tr><tr><td>Institutions</td><td><code>/institutions?filter=continent:&#x3C;continent></code></td></tr><tr><td>Works</td><td><code>/works?filter=institutions.continent:&#x3C;continent></code></td></tr></tbody></table>
 
 Available values for the `<continent>` filter are:
 
@@ -49,4 +49,4 @@ Response:
 
 Groups are available in these endpoints:
 
-<table><thead><tr><th width="164">Endpoint</th><th width="617">Format</th></tr></thead><tbody><tr><td>Authors</td><td><code>/authors?group-by=last_known_institution.continent</code></td></tr><tr><td>Institutions</td><td><code>/institutions?group-by=continent</code></td></tr><tr><td>Works</td><td><code>/works?group-by=institutions.continent</code></td></tr></tbody></table>
+<table><thead><tr><th width="164">Endpoint</th><th width="617">Format</th></tr></thead><tbody><tr><td>Authors</td><td><code>/authors?group-by=last_known_institutions.continent</code></td></tr><tr><td>Institutions</td><td><code>/institutions?group-by=continent</code></td></tr><tr><td>Works</td><td><code>/works?group-by=institutions.continent</code></td></tr></tbody></table>
