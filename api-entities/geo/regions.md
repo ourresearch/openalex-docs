@@ -14,14 +14,14 @@ You can filter Global South countries by using the boolean filter `is_global_sou
 
 You can also group by the Global South:
 
-<table><thead><tr><th width="159">Endpoint</th><th width="617">Format</th></tr></thead><tbody><tr><td>Authors</td><td><code>/authors?group-by=last_known_institutions.is_global_south</code></td></tr><tr><td>Institutions</td><td><code>/institutions?group-by=is_global_south</code></td></tr><tr><td>Works</td><td><code>/works?group-by=institutions.is_global_south</code></td></tr></tbody></table>
+<table><thead><tr><th width="159">Endpoint</th><th width="617">Format</th></tr></thead><tbody><tr><td>Authors</td><td><code>/authors?group_by=last_known_institutions.is_global_south</code></td></tr><tr><td>Institutions</td><td><code>/institutions?group_by=is_global_south</code></td></tr><tr><td>Works</td><td><code>/works?group_by=institutions.is_global_south</code></td></tr></tbody></table>
 
 ### Tips & Tricks
 
 To see country-by-country details for a geographic region, filter by region, then group by `country_code`.
 
 * Get number of authors with last known institution in the Global South, by country\
-  [https://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true\&group-by=last\_known\_institution.country\_code](https://api.openalex.org/authors?filter=last\_known\_institution.is\_global\_south:true\&group-by=last\_known\_institution.country\_code)
+  [https://api.openalex.org/authors?filter=last\_known\_institutions.is\_global\_south:true\&group\_by=last\_known\_institutions.country\_code](https://api.openalex.org/authors?filter=last\_known\_institutions.is\_global\_south:true\&group\_by=last\_known\_institutions.country\_code)
 
 Response:
 
