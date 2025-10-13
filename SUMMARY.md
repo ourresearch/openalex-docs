@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Overview](README.md)
+* [API Guide for LLMs](api-guide-for-llms.md)
 * [Quickstart tutorial](quickstart-tutorial.md)
 
 ## API Entities
