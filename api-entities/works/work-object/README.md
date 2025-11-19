@@ -335,18 +335,7 @@ Occasionally, a work has more than one DOI--for example, there might be one DOI 
 doi: "https://doi.org/10.7717/peerj.4375"
 ```
 
-### `fulltext_origin`
 
-_String:_ If a work's full text is searchable in OpenAlex ([`has_fulltext`](./#has_fulltext) is `true`), this tells you how we got the text. This will be one of:
-
-* `pdf`: We used [Grobid](https://grobid.readthedocs.io) to get the text from an open-access PDF.
-* `ngrams`: Full text search is enabled using [N-grams obtained from the Internet Archive](../get-n-grams.md).
-
-This attribute is only available for works with `has_fulltext:true`.
-
-```json
-fulltext_origin: "pdf"
-```
 
 ### `fwci`
 
@@ -375,16 +364,6 @@ grants: [
         award_id: null,
     },
 ]
-```
-
-### `has_fulltext`
-
-_Boolean:_ Set to `true` if the work's full text is searchable in OpenAlex. This does not necessarily mean that the full text is available to you, dear reader; rather, it means that we have indexed the full text and can use it to help power [searches](../search-works.md). If you are trying to find the full text for yourself, try looking in [`open_access.oa_url`](./#open_access).
-
-We get access to the full text in one of two ways: either using an open-access PDF, or using [N-grams obtained from the Internet Archive](../get-n-grams.md). You can learn where a work's full text came from at [`fulltext_origin`](./#fulltext_origin).
-
-```json
-has_fulltext: true
 ```
 
 ### `host_venue` (deprecated)
@@ -765,7 +744,7 @@ _String:_ The type of the work.
 
 You can see all of the different types along with their counts in the OpenAlex API here: [`https://api.openalex.org/works?group_by=type`](https://api.openalex.org/works?group_by=type).
 
-Most works are type `article`. This includes what was formerly (and currently in [`type_crossref`](./#type_crossref)) labeled as `journal-article`, `proceedings-article`, and `posted-content`. We consider all of these to be `article` type works, and the distinctions between them to be more about where they are published or hosted:
+Most works are type `article`. This includes what was Crossref calls `journal-article`, `proceedings-article`, and `posted-content`. We consider all of these to be `article` type works, and the distinctions between them to be more about where they are published or hosted:
 
 * Journal articles will have a [`primary_location.source.type`](location-object.md#source) of `journal`
 * Conference proceedings will have a [`primary_location.source.type`](location-object.md#source) of `conference`
@@ -783,20 +762,6 @@ Other work types follow the Crossref "type" controlled vocabulary—see [`type_c
 
 ```json
 type: "article"
-```
-
-### `type_crossref`
-
-_String:_ Legacy type information, using Crossref's "type" controlled vocabulary.
-
-These are the work types that we used to use, before switching to our current system (see [`type`](./#type)).
-
-You can see all possible values of Crossref's "type" controlled vocabulary via the Crossref api here: [`https://api.crossref.org/types`](https://api.crossref.org/types).
-
-Where possible, we just pass along Crossref's `type` value for each work. When that's impossible (eg the work isn't in Crossref), we do our best to figure out the `type` ourselves.
-
-```json
-type_crossref: "journal-article"
 ```
 
 ### `updated_date`
