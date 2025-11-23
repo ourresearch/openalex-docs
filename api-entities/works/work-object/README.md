@@ -192,9 +192,7 @@ citation_normalized_percentile: {
 }
 ```
 
-### `cited_by_api_url`
 
-_String:_ A URL that uses the [`cites`](../filter-works.md#cites) filter to display a list of works that cite this work. This is a way to expand [`cited_by_count`](./#cited_by_count) into an actual list of works.
 
 ### `cited_by_count`
 

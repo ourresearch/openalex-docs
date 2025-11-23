@@ -2,7 +2,7 @@
 
 The `Location` object describes the location of a given work. It's only found as part of the `Work` object.
 
-Locations are meant to capture the way that a work exists in different versions. So, for example, a work may have a version that has been peer-reviewed and published in a journal (the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)). This would be one of the work's locations. It may have another version available on a preprint server like [bioRxiv](https://www.biorxiv.org/)—this version having been posted before it was accepted for publication. This would be another one of the work's locations.
+Locations are meant to capture the way that a work exists in different versions. So, for example, a work may have a version that has been peer-reviewed and published in a journal (the [version of record](https://en.wikipedia.org/wiki/Version_of_record)). This would be one of the work's locations. It may have another version available on a preprint server like [bioRxiv](https://www.biorxiv.org/)—this version having been posted before it was accepted for publication. This would be another one of the work's locations.
 
 Below is an example of a work in OpenAlex ([https://openalex.org/W2807749226](https://openalex.org/W2807749226)) that has multiple locations with different properties. The version of record, published in a peer-reviewed journal, is listed first, and is not open-access. The second location is a university repository, where one can find an open-access copy of the published version of the work. Other locations are listed below.
 
@@ -12,13 +12,13 @@ Locations are meant to cover anywhere that a given work can be found. This can i
 
 There are three places in the `Work` object where you can find locations:
 
-* [`primary_location`](./#primary\_location): The best (closest to the [version of record](https://en.wikipedia.org/wiki/Version\_of\_record)) copy of this work.
-* [`best_oa_location`](./#best\_oa\_location): The best available open access location of this work.
+* [`primary_location`](./#primary_location): The best (closest to the [version of record](https://en.wikipedia.org/wiki/Version_of_record)) copy of this work.
+* [`best_oa_location`](./#best_oa_location): The best available open access location of this work.
 * [`locations`](./#locations): A list of all of the locations where this work lives. This will include the two locations above if availabe, and can also include other locations.
 
 ### `is_accepted`
 
-_Boolean:_ `true` if this location's [`version`](#version) is either `acceptedVersion` or `publishedVersion`; otherwise `false`.
+_Boolean:_ `true` if this location's [`version`](location-object.md#version) is either `acceptedVersion` or `publishedVersion`; otherwise `false`.
 
 ```json
 is_accepted: true
@@ -36,7 +36,7 @@ is_oa: true
 
 ### `is_published`
 
-_Boolean:_ `true` if this location's [`version`](#version) is `publishedVersion`; otherwise `false`.
+_Boolean:_ `true` if this location's [`version`](location-object.md#version) is `publishedVersion`; otherwise `false`.
 
 ```json
 is_published: true
@@ -93,4 +93,12 @@ _String:_ The version of the work, based on the [DRIVER Guidelines versioning sc
 
 ```json
 version: "publishedVersion"
+```
+
+### raw\_type
+
+_String:_ The type, _according to this location's source_. This uses whatever controlled vocabulary that source happens to fancy. So for example: if the location is from from Crossref, you'll see a term from [the Crossref type vocabulary](https://api.crossref.org/types) in the `location.raw_type` field.
+
+```json
+raw_type: "journal-article"
 ```
