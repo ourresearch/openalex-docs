@@ -49,7 +49,7 @@ For now, the database snapshot is updated about once per month. We also offer a 
 
 ### Is your data quality better than \_\_\_\_?
 
-Our dataset is still very young, so there's not a lot of systematic research comparing OpenAlex to peer databases like MAG, Scopus, Dimensions, etc. We're currently working on publishing some research like that ourselves. Our initial finding are very encouraging...we believe OpenAlex is already comparable in coverage and accuracy to the more established players--but OpenAlex is 100% open data, built on 100% open-source code. We think that's a really important feature. We will also continue improving the data quality in the days, weeks, months, and years ahead!
+Our dataset is still very young, so there's not a lot of systematic research comparing OpenAlex to peer databases like MAG, Scopus, Dimensions, etc. We're currently working on publishing some research like that ourselves. Our initial findings are very encouraging...we believe OpenAlex is already comparable in coverage and accuracy to the more established players--but OpenAlex is 100% open data, built on 100% open-source code. We think that's a really important feature. We will also continue improving the data quality in the days, weeks, months, and years ahead!
 
 ### How is OpenAlex licensed?
 
@@ -71,7 +71,7 @@ Our nonprofit (OurResearch) has a ten-year track record of building sustainable 
 
 We're currently still exploring our options for OpenAlex's sustainability plan. Thanks to a generous grant from [Arcadia](https://www.arcadiafund.org.uk/), we've got lots of runway, and we don't need to roll anything out in a rush.
 
-Our Unpaywall project (a free index of the world's open-access research literature) has been self-sustaining via a freemium revenue model for nearly five years, and we have recently introduced a similar model in [OpenAlex Premium. ](https://openalex.org/pricing)Access to the data will always be free for everyone, but OpenAlex Premium offers several benefits in service above the services we offer for free.
+Our Unpaywall project (a free index of the world's open-access research literature) has been self-sustaining via a freemium revenue model for nearly five years, and we have recently introduced a similar model in [OpenAlex Premium. ](https://openalex.org/pricing) Access to the data will always be free for everyone, but OpenAlex Premium offers several benefits in service above the services we offer for free.
 
 ### I have a question about the openalexR library. Could you help me?
 
@@ -84,3 +84,17 @@ If you want to count self-citations—or, inversely independent citations where 
 ### Do you provide access to full-text papers?
 
 We provide links to the full-text PDFs for open-access works whenever possible. In addition, we have access to raw full-text for many works either through PDF parsing we have done, or using the Internet Archive's general index, which we use to power our [search](../how-to-use-the-api/get-lists-of-entities/search-entities.md). You can learn more about this [here](../api-entities/works/work-object/#has_fulltext). We do not currently offer direct access to raw full-text through the API or data snapshot.
+
+### How to contribute
+
+We welcome contributions to improve OpenAlex documentation.  
+You can help by:
+
+1. Forking this repository.
+2. Editing Markdown files directly (for example, `faq.md`, `quickstart-tutorial.md`, `api-guide-for-llms.md`).
+3. Committing your changes with a clear message describing what you fixed or added.
+4. Opening a Pull Request to merge your changes into the main repository.
+
+All contributions that improve clarity, fix typos, or add useful examples are highly appreciated!
+
+
