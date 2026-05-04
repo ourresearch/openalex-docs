@@ -18,7 +18,7 @@ We offer a fast, modern REST API to get OpenAlex data programmatically. It's fre
 
 There is also a complete database snapshot available to download. [Learn more about the data snapshot here.](download-all-data/openalex-snapshot.md)
 
-The API has a limit of 100,000 calls per day, and the snapshot is updated monthly. If you need a higher limit, or more frequent updates, please look into [**OpenAlex Premium.**](https://openalex.org/pricing)
+The API has a limit of 100,000 calls per day, and the free snapshot is updated monthly. If you need a higher API limit, or **daily change files** to keep a local copy in sync with ours, you'll need [**OpenAlex Premium**](https://openalex.org/pricing). Need daily updates? Contact [sales@openalex.org](mailto:sales@openalex.org).
 
 The web interface for OpenAlex, built directly on top of the API, is the quickest and easiest way to [get started with OpenAlex](https://help.openalex.org/getting-started).
 

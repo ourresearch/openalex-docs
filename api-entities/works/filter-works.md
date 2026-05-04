@@ -110,7 +110,6 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`topics.field.id`](./work-object/README.md#topics)
 * [`topics.subfield.id`](./work-object/README.md#topics)
 * [`type`](work-object/#type)
-* [`type_crossref`](work-object/#type\_crossref)
 
 {% hint style="info" %}
 Want to filter by the `display_name` of an associated entity (author, institution, source, etc.)? [See here.](search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)

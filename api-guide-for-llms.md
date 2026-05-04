@@ -693,11 +693,12 @@ With 100k/day limit:
 If you need:
 
 * More than 100k requests/day
+* Daily change files (incremental snapshot updates) — the free public snapshot is monthly only
 * Faster than daily snapshot updates
 * Commercial support
 * SLA guarantees
 
-See: https://openalex.org/pricing
+See: https://openalex.org/pricing or contact sales@openalex.org
 
 ***
 

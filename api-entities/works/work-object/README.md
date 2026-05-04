@@ -756,10 +756,20 @@ Works that represent stuff that is _about_ the venue (such as a journal)—rathe
 
 We also have types for `letter` , `editorial` , `erratum` (corrections), `libguides` , `supplementary-materials` , and `review` (currently, articles that come from journals that exclusively publish review articles). Coverage is low on these but will improve.
 
-Other work types follow the Crossref "type" controlled vocabulary—see [`type_crossref`](./#type_crossref).
+For the original type string assigned by the source where we harvested the record, see [`raw_type`](./#raw_type).
 
 ```json
 type: "article"
+```
+
+### `raw_type`
+
+_String:_ The work's type as reported by the source where OpenAlex harvested the record. OpenAlex ingests metadata from many sources beyond Crossref (DataCite, PubMed, repositories, ROR-registered institutions, and more), and each source has its own type taxonomy. The `raw_type` field preserves that original, unnormalized type string so you can see what the upstream source called the work before we mapped it to OpenAlex's [`type`](./#type) vocabulary.
+
+For records harvested from Crossref, `raw_type` contains the value that used to be exposed as `type_crossref` (e.g. `journal-article`, `proceedings-article`, `posted-content`). For records from other sources, `raw_type` reflects that source's taxonomy.
+
+```json
+raw_type: "journal-article"
 ```
 
 ### `updated_date`

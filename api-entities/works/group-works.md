@@ -113,4 +113,3 @@ The `host_venue` and `alternate_host_venues` properties have been deprecated in 
 * [`topics.field.id`](./work-object/README.md#topics)
 * [`topics.subfield.id`](./work-object/README.md#topics)
 * [`type`](work-object/README.md#type)
-* [`type_crossref`](work-object/README.md#type_crossref)
