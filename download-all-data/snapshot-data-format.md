@@ -26,9 +26,9 @@ This is a screenshot showing the "leaf" nodes of one _entity type_, _updated dat
 ### Downloading updated Entities
 
 {% hint style="warning" %}
-**Need daily updates? → [sales@openalex.org](mailto:sales@openalex.org)**
+**Need more frequent updates? → [sales@openalex.org](mailto:sales@openalex.org)**
 
-The free public snapshot is refreshed on a monthly cadence. The daily `updated_date=YYYY-MM-DD` change-file partitions described below are only published for **OpenAlex Premium** subscribers. If you need to keep your copy in sync with ours on a daily (or sub-daily) basis, contact [sales@openalex.org](mailto:sales@openalex.org) or see [pricing](https://openalex.org/pricing).
+The free public snapshot is refreshed **quarterly**. **Monthly snapshots** and the **daily `updated_date=YYYY-MM-DD` change-file partitions** described below are only published for **OpenAlex Premium** subscribers. Contact [sales@openalex.org](mailto:sales@openalex.org) or see [pricing](https://openalex.org/pricing).
 {% endhint %}
 
 Once you have a copy of the snapshot, you'll probably want to keep it up to date. The `updated_date` partitions make this easy, but the way they work may be unfamiliar. Unlike a set of dated snapshots that each contain the full dataset as of a certain date, each partition contains the records that last changed on that date.

@@ -2,12 +2,12 @@
 
 For most use cases, the REST API is your best option. However, you can also download ([instructions here](download-to-your-machine.md)) and install a complete copy of the OpenAlex database on your own server, using the database snapshot. The snapshot consists of seven files (split into smaller files for convenience), with one file for each of our seven entity types. The files are in the [JSON Lines](https://jsonlines.org/) format; each line is a JSON object, exactly the same as [you'd get from our API](../api-entities/works/get-a-single-work.md). The properties of these JSON objects are documented in each entity's object section (for example, the [`Work`](../api-entities/works/work-object/) object).
 
-The free public snapshot is updated about once per month; you can read [release notes for each new update here.](https://github.com/ourresearch/openalex-guts/blob/main/files-for-datadumps/standard-format/RELEASE\_NOTES.txt)
+The free public snapshot is updated quarterly; you can read [release notes for each new update here.](https://github.com/ourresearch/openalex-guts/blob/main/files-for-datadumps/standard-format/RELEASE\_NOTES.txt)
 
 {% hint style="warning" %}
-**Need daily updates? → [sales@openalex.org](mailto:sales@openalex.org)**
+**Need more frequent updates? → [sales@openalex.org](mailto:sales@openalex.org)**
 
-The daily change files (the `updated_date=YYYY-MM-DD` partitions in S3) are only available to **OpenAlex Premium** subscribers. The free monthly snapshot is unrestricted. For daily change-file access, contact [sales@openalex.org](mailto:sales@openalex.org) or see [pricing](https://openalex.org/pricing).
+The free public snapshot is refreshed **quarterly**. **Monthly snapshots** and **daily change files** (the `updated_date=YYYY-MM-DD` partitions in S3) are only available to **OpenAlex Premium** subscribers. Contact [sales@openalex.org](mailto:sales@openalex.org) or see [pricing](https://openalex.org/pricing).
 {% endhint %}
 
 If you've worked with a dataset like this before, the [snapshot data format](snapshot-data-format.md) may be all you need to get going. If not, read on.

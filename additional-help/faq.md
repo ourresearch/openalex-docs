@@ -45,7 +45,7 @@ Learn more at our general help center article: [About the data](https://help.ope
 
 ### How often is the data updated?
 
-The free database snapshot is updated about once per month. **Daily change files** (and faster cadences, as often as once every few hours) are available to [OpenAlex Premium](https://openalex.org/pricing) subscribers. Need daily updates? Contact [sales@openalex.org](mailto:sales@openalex.org) for details.
+The free public database snapshot is updated quarterly. [OpenAlex Premium](https://openalex.org/pricing) subscribers get **monthly snapshots** and **daily change files** (and faster cadences, as often as once every few hours). Contact [sales@openalex.org](mailto:sales@openalex.org) for details.
 
 ### Is your data quality better than \_\_\_\_?
 

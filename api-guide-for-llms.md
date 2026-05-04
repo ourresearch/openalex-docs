@@ -693,7 +693,8 @@ With 100k/day limit:
 If you need:
 
 * More than 100k requests/day
-* Daily change files (incremental snapshot updates) — the free public snapshot is monthly only
+* Monthly snapshots (the free public snapshot is updated quarterly)
+* Daily change files (incremental snapshot updates)
 * Faster than daily snapshot updates
 * Commercial support
 * SLA guarantees
