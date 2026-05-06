@@ -2,8 +2,8 @@
 
 You can group sources with the `group_by` parameter:
 
-* Get counts of sources by publisher:\
-  [https://api.openalex.org/sources?group\_by=publisher](https://api.openalex.org/sources?group\_by=publisher)
+* Get counts of sources by host organization:\
+  [https://api.openalex.org/sources?group\_by=host\_organization](https://api.openalex.org/sources?group\_by=host\_organization)
 
 Or you can group using one the attributes below.
 
@@ -26,7 +26,7 @@ It's best to [read about group by](../../how-to-use-the-api/get-groups-of-entiti
 * [`is_in_doaj`](source-object.md#is\_in\_doaj)
 * [`is_oa`](source-object.md#is\_oa)
 * [`issn`](source-object.md#issn)
-* [`publisher`](source-object.md#publisher)
+* [`host_organization`](source-object.md#host_organization)
 * [`summary_stats.2yr_mean_citedness`](source-object.md#summary_stats)
 * [`summary_stats.h_index`](source-object.md#summary_stats)
 * [`summary_stats.i10_index`](source-object.md#summary_stats)

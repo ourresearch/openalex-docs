@@ -25,7 +25,7 @@ You can filter using these attributes of the `Source` entity object (click each 
 * [`is_in_doaj`](source-object.md#is\_in\_doaj)
 * [`is_oa`](source-object.md#is\_oa)
 * [`issn`](source-object.md#issn)
-* [`publisher`](source-object.md#publisher) — Requires exact match. Use the [`host_organization_lineage`](source-object.md#host_organization_lineage) filter instead if you want to find works from a publisher and all of its children.
+* [`host_organization`](source-object.md#host_organization) — Requires exact match. Use the [`host_organization_lineage`](source-object.md#host_organization_lineage) filter instead if you want to find works from a publisher and all of its children.
 * [`summary_stats.2yr_mean_citedness`](source-object.md#summary_stats) (accepts float, null, !null, can use range queries such as < >)
 * [`summary_stats.h_index`](source-object.md#summary_stats) (accepts integer, null, !null, can use range queries)
 * [`summary_stats.i10_index`](source-object.md#summary_stats) (accepts integer, null, !null, can use range queries)

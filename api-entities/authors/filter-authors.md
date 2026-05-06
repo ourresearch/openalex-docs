@@ -20,11 +20,11 @@ You can filter using these attributes of the `Author` entity object (click each 
 * [`affiliations.institution.type`](./author-object.md#affiliations)
 * [`cited_by_count`](author-object.md#cited\_by\_count)
 * [`ids.openalex`](author-object.md#ids) (alias: `openalex`)
-* [`last_known_institution.country_code`](author-object.md#last\_known\_institution)
-* [`last_known_institution.id`](author-object.md#last\_known\_institution)
-* [`last_known_institution.lineage`](author-object.md#last\_known\_institution)
-* [`last_known_institution.ror`](author-object.md#last\_known\_institution)
-* [`last_known_institution.type`](author-object.md#last\_known\_institution)
+* [`last_known_institutions.country_code`](author-object.md#last\_known\_institution)
+* [`last_known_institutions.id`](author-object.md#last\_known\_institution)
+* [`last_known_institutions.lineage`](author-object.md#last\_known\_institution)
+* [`last_known_institutions.ror`](author-object.md#last\_known\_institution)
+* [`last_known_institutions.type`](author-object.md#last\_known\_institution)
 * [`orcid`](author-object.md#orcid)
 * [`scopus`](author-object.md#ids) (the author's scopus ID, as an integer)
 * [`summary_stats.2yr_mean_citedness`](author-object.md#summary_stats) (accepts float, null, !null, can use range queries such as < >)
@@ -34,10 +34,10 @@ You can filter using these attributes of the `Author` entity object (click each 
 * [`x_concepts.id`](author-object.md#x\_concepts) (alias: `concepts.id` or `concept.id`) -- will be deprecated soon
 
 {% hint style="info" %}
-Want to filter by `last_known_institution.display_name`? This is a two-step process:
+Want to filter by `last_known_institutions.display_name`? This is a two-step process:
 
 1. Find the `institution.id` by searching institutions by `display_name`.
-2. Filter works by `last_known_institution.id`.
+2. Filter works by `last_known_institutions.id`.
 
 To learn more about why we do it this way, [see here.](../works/search-works.md#why-cant-i-search-by-name-of-related-entity-author-name-institution-name-etc.)
 {% endhint %}
@@ -70,7 +70,7 @@ Returns: authors that have or lack an [orcid](author-object.md#orcid), depending
 * Get the authors that have an ORCID:\
   ``[`https://api.openalex.org/authors?filter=has_orcid:true`](https://api.openalex.org/authors?filter=has\_orcid:true)
 
-#### `last_known_institution.continent`
+#### `last_known_institutions.continent`
 
 Value: a String with a valid [continent filter](../geo/continents.md#filter-by-continent)
 
@@ -79,7 +79,7 @@ Returns: authors where where the last known institution is in the chosen contine
 * Get authors where the last known institution is located in Africa\
   [https://api.openalex.org/authors?filter=last\_known\_institution.continent:africa](https://api.openalex.org/authors?filter=last\_known\_institution.continent:africa)
 
-#### `last_known_institution.is_global_south`
+#### `last_known_institutions.is_global_south`
 
 Value: a Boolean (`true` or `false`)
 
