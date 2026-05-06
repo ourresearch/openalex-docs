@@ -2,7 +2,7 @@
 
 It's easy to get a topic from the API with: `/topics/<entity_id>`. Here's an example:
 
-* Get the topic with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `C71924100`:\
+* Get the topic with the [OpenAlex ID](../../how-to-use-the-api/get-single-entities/#the-openalex-id) `T11636`:\
   [`https://api.openalex.org/topics/T11636`](https://api.openalex.org/topics/T11636)
 
 That will return a [`Topic`](../topics/topic-object.md) object, describing everything OpenAlex knows about the topic with that ID:
