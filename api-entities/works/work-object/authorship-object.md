@@ -25,7 +25,7 @@ affiliations: [
 
 _String:_ An author of this work, as a dehydrated [`Author`](../../authors/author-object.md) object.
 
-Note that, sometimes, we assign ORCID using [author disambiguation](../authors/author-disambiguation.md), so the ORCID we associate with an author was not necessarily included with this work.
+Note that, sometimes, we assign ORCID using [author disambiguation](../../authors/author-disambiguation.md), so the ORCID we associate with an author was not necessarily included with this work.
 
 ```json
 author: {
