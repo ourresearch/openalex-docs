@@ -310,7 +310,7 @@ summary_stats: {
 
 _String:_ The institution's primary type, using the [ROR "type" controlled vocabulary](https://ror.readme.io/docs/ror-data-structure).
 
-Possible values are: `Education`, `Healthcare`, `Company`, `Archive`, `Nonprofit`, `Government`, `Facility`, and `Other`.
+Possible values are: `Education`, `Funder`, `Healthcare`, `Company`, `Archive`, `Nonprofit`, `Government`, `Facility`, and `Other`.
 
 ```json
 type: "education"
