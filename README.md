@@ -20,7 +20,7 @@ There is also a complete database snapshot available to download. [Learn more ab
 
 The API has a limit of 100,000 calls per day, and the free snapshot is updated quarterly. If you need a higher API limit, **monthly snapshots**, or **daily change files** to keep a local copy in sync with ours, you'll need [**OpenAlex Premium**](https://openalex.org/pricing). Contact [sales@openalex.org](mailto:sales@openalex.org).
 
-The web interface for OpenAlex, built directly on top of the API, is the quickest and easiest way to [get started with OpenAlex](https://help.openalex.org/getting-started).
+The web interface for OpenAlex, built directly on top of the API, is the quickest and easiest way to [get started with OpenAlex](https://developers.openalex.org/quickstart).
 
 ## Why OpenAlex?
 
